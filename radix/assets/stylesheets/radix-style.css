@@ -11209,3 +11209,15 @@ html.js fieldset.collapsed {
 div.views-tooltip {
     width: 30px;
 }
+
+td.views-field:first-child, th.views-field:first-child {
+    width: 20%;
+}
+
+td.views-field, th.views-field {
+    font-size: 12px;
+}
+
+td.views-field, th.views-field {
+    width: 10%;
+}

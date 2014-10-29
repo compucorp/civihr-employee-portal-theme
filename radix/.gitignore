@@ -1,0 +1,5 @@
+# Ignore SASS files
+/.sass-cache
+.DS_Store
+/extensions
+*.codekit

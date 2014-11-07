@@ -44,10 +44,15 @@
 <div id="main-wrapper">
   <div id="main" class="main">
     <div class="container">
-      <?php if ($breadcrumb): ?>
+        
+        <!--
+        Remove double breadcrumbs
+            <?php if ($breadcrumb): ?>
         <div id="breadcrumb" class="visible-desktop">
-          <?php print $breadcrumb; ?>
+          <?php //print $breadcrumb; ?>
         </div>
+        -->
+        
       <?php endif; ?>
       <?php if ($messages): ?>
         <div id="messages">

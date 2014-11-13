@@ -63,15 +63,19 @@
             <div class="form-group">
                 <div class="input-group">
                     <div class="btn input-group-addon"><img src="http://findicons.com/files/icons/1389/g5_system/32/toolbar_find.png" height="16px" width="16px" class="img-rounded" /></div>
-                    <input class="form-control" type="manager-approval-search" placeholder="Enter name">
+                    <input class="form-control" id="manager-approval-search" placeholder="Enter name">
                 </div>
             </div>
             
         </div>
     </div>
     
-    <div class="view-content col-md-10-no-padding column2 panel-panel" style="overflow: scroll; height: 250px;">
-      <?php print $rows; ?>
+    <div class="view-content col-md-10-no-padding column2 panel-panel">
+        
+        <div class ="approval-overflow-content" style="overflow: scroll; height: 250px;">
+            <?php print $rows; ?>
+        </div>
+      
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">

@@ -30,7 +30,7 @@ $approval_table_class = 'manager-approval-main-table';
     <thead>
       <tr>
         <?php foreach ($header as $field => $label): ?>
-          <th <?php if ($header_classes[$field]) { print 'class="'. $header_classes[$field] . '" '; } ?>>
+          <th <?php if ($header_classes[$field]) { print 'class="header-class '. $header_classes[$field] . '" '; } ?>>
             <?php print $label; ?>
           </th>
         <?php endforeach; ?>
@@ -39,7 +39,7 @@ $approval_table_class = 'manager-approval-main-table';
   <?php endif; ?>
   <tbody>
     <?php foreach ($rows as $row_count => $row): ?>
-      <tr <?php if ($row_classes[$row_count]) { print 'class="' . $row['absence_title'] . ' ' . implode(' ', $row_classes[$row_count]) .'"';  } ?>>
+      <tr <?php if ($row_classes[$row_count]) { print 'class="' . $row['absence_title'] . ' ' . $row['absence_status'] . ' ' . implode(' ', $row_classes[$row_count]) .'"';  } ?>>
         <?php foreach ($row as $field => $content): ?>
           <td <?php if ($field_classes[$field][$row_count]) { print 'class="'. $field_classes[$field][$row_count] . '" '; } ?><?php print drupal_attributes($field_attributes[$field][$row_count]); ?>>
             <?php print $content; ?>

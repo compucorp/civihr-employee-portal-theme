@@ -19,18 +19,28 @@
  * @ingroup views_templates
  */
 
-$approval_table_class = 'manager-approval-main-table';
+$approval_table_class = 'manager-approval-main-table tablesaw tablesaw-swipe';
 
 ?>
-<table <?php if ($classes) { print 'class="'. $classes . ' ' . $approval_table_class . '" '; } ?><?php print $attributes; ?>>
+
+<table <?php if ($classes) { print 'class="'. $classes . ' ' . $approval_table_class . '"'; } ?>data-mode="columntoggle" data-minimap<?php print $attributes; ?>>
    <?php if (!empty($title) || !empty($caption)) : ?>
      <caption><?php print $caption . $title; ?></caption>
   <?php endif; ?>
   <?php if (!empty($header)) : ?>
     <thead>
       <tr>
+         
+        <?php $data_priority = 0; ?>
         <?php foreach ($header as $field => $label): ?>
-          <th <?php if ($header_classes[$field]) { print 'class="header-class '. $header_classes[$field] . '" '; } ?>>
+          
+          <?php //print $field; 
+            $data_priority += 1; 
+          ?>
+          
+          <?php if ($field == 'tooltip') { $sortable = ''; $persist = 'data-priority="persist"'; } else { $persist = ''; } ?>
+          
+          <th <?php if ($header_classes[$field]) { print $persist . ' data-priority=' . "'$data_priority'"; } ?>>
             <?php print $label; ?>
           </th>
         <?php endforeach; ?>

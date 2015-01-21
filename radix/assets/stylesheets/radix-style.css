@@ -11221,7 +11221,7 @@ html.js fieldset.collapsed {
 
 /* Tooltip settings */
 div.views-tooltip {
-    width: 30px;
+    float: right;
 }
 
 td.views-field:first-child, th.views-field:first-child {
@@ -11260,6 +11260,10 @@ table.manager-approval-main-table th.headerSortDown {
     background-repeat: no-repeat;
     background-position: right center;
     
+}
+
+#quick-approve {
+    display: inline;
 }
 
 /* Manager approval custom filters bootstrap button style */

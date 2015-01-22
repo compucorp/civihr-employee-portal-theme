@@ -49,7 +49,7 @@ $approval_table_class = 'manager-approval-main-table tablesaw tablesaw-swipe';
   <?php endif; ?>
   <tbody>
     <?php foreach ($rows as $row_count => $row): ?>
-      <tr <?php if ($row_classes[$row_count]) { print 'class="' . $row['absence_title'] . ' ' . $row['absence_status'] . ' ' . implode(' ', $row_classes[$row_count]) .'"';  } ?>>
+      <tr <?php if ($row_classes[$row_count]) { print 'data="approvals-table@' . strip_tags($row['absence_title']) . '@' . strip_tags($row['absence_status']) . '" class="' . implode(' ', $row_classes[$row_count]) .'"';  } ?>>
         <?php foreach ($row as $field => $content): ?>
           <td <?php if ($field_classes[$field][$row_count]) { print 'class="'. $field_classes[$field][$row_count] . '" '; } ?><?php print drupal_attributes($field_attributes[$field][$row_count]); ?>>
             <?php print $content; ?>

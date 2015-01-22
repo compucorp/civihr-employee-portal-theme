@@ -53,7 +53,7 @@
 
   <?php if ($rows): ?>
     
-    <div class="approval-filters col-md-2 column1 panel-panel">
+    <div class="approval-filters col-sm-2-no-padding column1 panel-panel">
         
     </div>
     

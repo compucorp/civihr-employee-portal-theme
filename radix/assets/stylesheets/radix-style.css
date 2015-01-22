@@ -944,6 +944,20 @@ pre code {
   padding-right: 0px;
 }
 
+/* Compucorp - No padding div */ 
+.col-sm-2-no-padding {
+  min-height: 20px;
+  margin-bottom: 5px;
+  background-color: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
+  position: relative;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
 /* line 734, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1 {
   float: left;
@@ -1467,7 +1481,7 @@ pre code {
 }
 @media (min-width: 992px) {
   /* line 734, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-md-12, .calendar-calendar, .view .row > .list-group, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-md-10-no-padding {
+  .col-md-12, .calendar-calendar, .view .row > .list-group, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-md-10-no-padding, .col-sm-2-no-padding {
     float: left;
   }
 
@@ -1524,6 +1538,10 @@ pre code {
   /* Compucorp - Set width */
   .col-md-10-no-padding {
     width: 83.3333333333%;
+  }
+  
+  .col-sm-2-no-padding {
+    width: 16.6666666667%;
   }
 
   /* line 742, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2695,8 +2713,8 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
+  padding: 6px 6px;
+  font-size: 12px;
   line-height: 1.428571429;
   border-radius: 4px;
   -webkit-user-select: none;

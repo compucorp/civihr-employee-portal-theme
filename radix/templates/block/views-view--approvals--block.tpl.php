@@ -58,7 +58,7 @@
     </div>
     
     <div class="view-content col-md-10-no-padding column2 panel-panel">
-        <div class="well well-small">
+        <div class="well-small">
             
             <div class="form-group">
                 <div class="input-group">

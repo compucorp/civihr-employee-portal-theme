@@ -11357,4 +11357,77 @@ div._58 {
 
 /**
  * Hr resource page custom styles end
-*/
+ */
+
+/**
+ * Hr reports page custom styles start
+ */
+
+/**
+ * Hr reports page gender report
+ */
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;	/* Gets overriden by D3-assigned height below */
+    margin-right: 2px;
+    background-color: teal;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 6px;
+}
+
+/**
+ * Hr reports page custom styles end
+ */
+
+/**
+ * Styling for the relationship report start
+ */
+.link {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1.5px;
+}
+
+#civihr_staff {
+    fill: green;
+}
+
+.link.civihr_staff {
+    stroke: green;
+}
+
+.link.civihr_manager {
+    stroke-dasharray: 0,2 1;
+}
+
+#civihr_admin {
+    fill: red;
+}
+
+.link.civihr_admin {
+    stroke: red;
+}
+
+circle {
+    fill: #ccc;
+    stroke: #333;
+    stroke-width: 1.5px;
+}
+
+text {
+    font: 10px sans-serif;
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+

@@ -11431,3 +11431,19 @@ text {
     text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
 }
 
+/**
+ * Styling for the relationship report end
+ */
+
+/**
+ * Vacancy list styling
+ */
+.vacancy-wrapper {
+    width: 18%;
+    margin: 1%;
+    float: left;
+}
+
+.fieldset-wrapper {
+    border-bottom: 1px dotted #000;
+}

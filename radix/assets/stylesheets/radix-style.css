@@ -11331,7 +11331,7 @@ div._58 {
 /* jCarousel styles end */
 
 .footer {
-    height: 300px;
+    height: 580px;
 }
 
 .hr-documents-title-block {
@@ -11460,4 +11460,14 @@ text {
         display: block;
         width: 100%;
     }
+}
+
+.footer-slider-block {
+    min-height: 280px;
+}
+
+#civihr-employee-portal-directory-block-form .form-control {
+    width: 80%;
+    margin-left: 5%;
+    display: inline;
 }

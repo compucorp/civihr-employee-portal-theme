@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-Feb-2015, 11:36:56
+    Author     : gergelymeszaros
+*/
+
+$wrapper-width:   18%;
+
+/**
+ * Vacancy list default styling
+ */
+.vacancy-wrapper {
+    width: $wrapper-width;
+    margin: 1%;
+    float: left;
+}

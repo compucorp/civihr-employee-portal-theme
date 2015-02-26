@@ -3377,3 +3377,49 @@ table.manager-approval-main-table th.headerSortDown {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
   -webkit-font-smoothing: antialiased;
 }
+
+/**
+ * Hr resource page custom styles
+ */
+/* jCarousel styles */
+/* line 128, ../sass/civihr_default/_custom.scss */
+.jcarousel-skin-default .jcarousel-item {
+  min-height: 200px;
+  height: auto;
+}
+
+/* jCarousel styles end */
+/* line 135, ../sass/civihr_default/_custom.scss */
+.footer {
+  height: 580px;
+}
+
+/* line 139, ../sass/civihr_default/_custom.scss */
+.hr-documents-title-block {
+  min-height: 40px;
+}
+
+/* line 143, ../sass/civihr_default/_custom.scss */
+.hr-documents-body-block {
+  min-height: 120px;
+}
+
+/* line 147, ../sass/civihr_default/_custom.scss */
+.row-hr-resource {
+  margin-bottom: 10px;
+}
+
+/* line 151, ../sass/civihr_default/_custom.scss */
+.hr-resouce-download-all {
+  word-spacing: -8px;
+  font-weight: bolder;
+}
+
+/* line 156, ../sass/civihr_default/_custom.scss */
+.footer-slider-block {
+  min-height: 280px;
+}
+
+/**
+ * Hr resource page custom styles end
+ */

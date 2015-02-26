@@ -3423,3 +3423,13 @@ table.manager-approval-main-table th.headerSortDown {
 /**
  * Hr resource page custom styles end
  */
+/**
+ * CiviHR dashboard block profile image size
+ */
+/* line 167, ../sass/civihr_default/_custom.scss */
+.custom-scale-image {
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+}

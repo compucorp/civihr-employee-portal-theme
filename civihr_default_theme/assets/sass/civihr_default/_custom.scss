@@ -8,13 +8,114 @@ and open the template in the editor.
     Author     : gergelymeszaros
 */
 
-$wrapper-width:   18%;
+$wrapper-width:     18%;
+$max-tablet-size:   767px;
+$images-icons-path: "../images/icon/";
+$icon-asc-path:     "asc.gif";
+$icon-desc-path:    "desc.gif";
 
 /**
- * Vacancy list default styling
+ * Vacancy list view page default styling
  */
 .vacancy-wrapper {
     width: $wrapper-width;
     margin: 1%;
     float: left;
 }
+
+/**
+ * Staff directory dashboard block styling
+ */
+#civihr-employee-portal-directory-block-form input, #civihr-employee-portal-directory-block-form label {
+    width: 10%;
+}
+
+#civihr-employee-portal-directory-block-form .form-control {
+    width: 80%;
+    margin-left: 5%;
+    display: inline;
+}
+
+/**
+ * Views exposed form styling
+ */
+@mixin exposed-form-default-style($width) {
+    float: none;
+    display: block;
+    width: $width;
+}
+
+.views-exposed-form .views-exposed-widget {
+    @include exposed-form-default-style(50%);
+    
+    @media screen and (max-width: $max-tablet-size) {
+        @include exposed-form-default-style(100%);
+    }
+}
+
+/**
+ * Manager approval search highlight color 
+ */
+.manager-approval-main-table em {
+    background-color: yellow
+}
+
+/**
+ * Manager approval th header color 
+ */
+.header-class {
+    background: #c0c0c0;
+}
+
+/** 
+ * Manager approval search th icons default style
+ */
+@mixin manager-approval-main-table-sort($sort-image) {
+    background-image: url(#{$images-icons-path}#{$sort-image});
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/** 
+ * Manager approval search th icons -> UP
+ */
+table.manager-approval-main-table th.headerSortUp {
+    @include manager-approval-main-table-sort($icon-asc-path);
+}
+
+/**
+ * Manager approval search th icons -> DOWN
+ */
+table.manager-approval-main-table th.headerSortDown {
+    @include manager-approval-main-table-sort($icon-desc-path);   
+}
+
+/**
+ * Quick Approve / Reject buttons default style
+ */ 
+#quick-approve {
+    display: inline;
+}
+
+/** 
+ * Manager Approval Tooltip settings 
+ */
+.manager-approval-main-table .views-tooltip {
+    @media screen and (min-width: $screen-lg-desktop) {
+        float: right;
+    }
+    
+}
+
+/** 
+ * Manager AJAX filters block / inline settings 
+ */
+.btn-custom-block {
+    @media screen and (min-width: $screen-tablet) {
+        display: block; 
+    }
+    
+}
+
+/* Manager approval custom filters bootstrap button style */
+.btn-custom { margin-top: 5px; margin-right: 5px; background-color: hsl(0, 0%, 16%) !important; background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b5b5b", endColorstr="#282828"); background-image: -khtml-gradient(linear, left top, left bottom, from(#5b5b5b), to(#282828)); background-image: -moz-linear-gradient(top, #5b5b5b, #282828); background-image: -ms-linear-gradient(top, #5b5b5b, #282828); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b5b5b), color-stop(100%, #282828)); background-image: -webkit-linear-gradient(top, #5b5b5b, #282828); background-image: -o-linear-gradient(top, #5b5b5b, #282828); background-image: linear-gradient(#5b5b5b, #282828); border-color: #282828 #282828 hsl(0, 0%, 11%); color: #fff !important; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33); -webkit-font-smoothing: antialiased; }

@@ -107,6 +107,13 @@ table.manager-approval-main-table th.headerSortDown {
     
 }
 
+/**
+ * Set width so the tooltip shows up in the right location
+ */
+.views-tooltip {
+    width: 30px;
+}
+
 /** 
  * Manager AJAX filters block / inline settings 
  */

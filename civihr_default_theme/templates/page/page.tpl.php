@@ -11,7 +11,6 @@
  */
 ?>
 <header id="header" class="header" role="header">
-  <div class="container">
     <nav class="navbar navbar-default" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -21,8 +20,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="<?php print $front_page; ?>" id="logo" class="navbar-brand">
-          <?php print $site_name; ?>
+        <a href="<?php print $front_page; ?>" id="logo" class="navbar-brand" title="<?php print $site_name; ?>">
+          <i class="icon-logo"></i>
         </a>
       </div> <!-- /.navbar-header -->
 
@@ -38,7 +37,6 @@
         <?php endif; ?>
       </div><!-- /.navbar-collapse -->
     </nav><!-- /.navbar -->
-  </div> <!-- /.container -->
 </header>
 
 <div id="main-wrapper">
@@ -73,7 +71,9 @@
       </div>
     </div>
     <div id="content" class="container">
-      <?php print render($page['content']); ?>
+      <div class="main-container">
+        <?php print render($page['content']); ?>
+      </div>
     </div>
   </div> <!-- /#main -->
 </div> <!-- /#main-wrapper -->

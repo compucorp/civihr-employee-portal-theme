@@ -5174,35 +5174,47 @@ table.manager-approval-main-table th.headerSortDown {
   height: auto;
 }
 
-/* line 183, ../sass/civihr_default/_custom.scss */
+/* Overwrite inherited styles */
+/* line 185, ../sass/civihr_default/_custom.scss */
+.views-exposed-form .views-exposed-widget {
+  padding: 0;
+}
+
+/* line 192, ../sass/civihr_default/_custom.scss */
+.item-list ul li {
+  margin: 0;
+}
+
+/* General styles */
+/* line 198, ../sass/civihr_default/_custom.scss */
 body {
   font-family: "Lato", sans-serif;
   color: #767b8e;
 }
 
-/* line 187, ../sass/civihr_default/_custom.scss */
+/* line 202, ../sass/civihr_default/_custom.scss */
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 192, ../sass/civihr_default/_custom.scss */
+/* line 207, ../sass/civihr_default/_custom.scss */
 a {
   text-decoration: none;
   color: #41afcb;
 }
-/* line 196, ../sass/civihr_default/_custom.scss */
+/* line 211, ../sass/civihr_default/_custom.scss */
 a:hover {
   text-decoration: none;
   color: rgba(65, 175, 203, 0.8);
 }
-/* line 201, ../sass/civihr_default/_custom.scss */
+/* line 216, ../sass/civihr_default/_custom.scss */
 a:active, a:focus {
   text-decoration: none;
 }
 
-/* line 205, ../sass/civihr_default/_custom.scss */
+/* line 220, ../sass/civihr_default/_custom.scss */
 h1 {
   font-size: 3.6rem;
   font-weight: 300;
@@ -5210,13 +5222,20 @@ h1 {
   margin: 25px 0;
 }
 
-/* line 212, ../sass/civihr_default/_custom.scss */
+/* line 226, ../sass/civihr_default/_custom.scss */
+h4 {
+  font-size: 1.8rem;
+  color: #4c4c5d;
+  font-weight: 400;
+}
+
+/* line 232, ../sass/civihr_default/_custom.scss */
 .container.collapse {
   padding: 0;
 }
 
 /* Header */
-/* line 218, ../sass/civihr_default/_custom.scss */
+/* line 238, ../sass/civihr_default/_custom.scss */
 .header {
   background: #555862;
   font-size: 1.3rem;
@@ -5231,17 +5250,17 @@ h1 {
   clear: both;
 }
 
-/* line 227, ../sass/civihr_default/_custom.scss */
+/* line 247, ../sass/civihr_default/_custom.scss */
 .navbar-toggle {
   display: none;
 }
 
-/* line 230, ../sass/civihr_default/_custom.scss */
+/* line 250, ../sass/civihr_default/_custom.scss */
 .navbar-header {
   float: left;
 }
 
-/* line 233, ../sass/civihr_default/_custom.scss */
+/* line 253, ../sass/civihr_default/_custom.scss */
 .navbar-brand {
   display: block;
   font-size: 1.6rem;
@@ -5249,46 +5268,66 @@ h1 {
   padding: 0 16px;
   background: #41afcb;
 }
-/* line 240, ../sass/civihr_default/_custom.scss */
+/* line 260, ../sass/civihr_default/_custom.scss */
 .navbar-brand:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 244, ../sass/civihr_default/_custom.scss */
+/* line 264, ../sass/civihr_default/_custom.scss */
 .navbar-collapse {
   float: left;
 }
-/* line 248, ../sass/civihr_default/_custom.scss */
+/* line 268, ../sass/civihr_default/_custom.scss */
 .navbar-collapse .menu li {
   float: left;
 }
-/* line 251, ../sass/civihr_default/_custom.scss */
+/* line 271, ../sass/civihr_default/_custom.scss */
 .navbar-collapse .menu a {
   color: inherit;
   display: block;
   padding: 0 15px;
 }
-/* line 257, ../sass/civihr_default/_custom.scss */
+/* line 277, ../sass/civihr_default/_custom.scss */
 .navbar-collapse .menu .active,
 .navbar-collapse .menu a:hover {
   background: #767b8e;
   color: white;
 }
 
-/* line 263, ../sass/civihr_default/_custom.scss */
+/* line 283, ../sass/civihr_default/_custom.scss */
 .breadcrumb {
   display: none;
 }
 
 /* Main */
-/* line 270, ../sass/civihr_default/_custom.scss */
+/* line 290, ../sass/civihr_default/_custom.scss */
 .main {
   background: #ecedee;
 }
 
-/* line 273, ../sass/civihr_default/_custom.scss */
-.main-container {
+/* line 297, ../sass/civihr_default/_custom.scss */
+.pane-block,
+.view {
   background: white;
+  padding: 20px;
+  margin: 0 0 30px 0;
+}
+/* line 29, ../sass/civihr_default/_functions.scss */
+.pane-block:after,
+.view:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 303, ../sass/civihr_default/_custom.scss */
+.view {
+  margin: 0 15px;
+}
+
+/* line 307, ../sass/civihr_default/_custom.scss */
+.pane-title:first-child {
+  margin-top: 0;
 }
 
 /*

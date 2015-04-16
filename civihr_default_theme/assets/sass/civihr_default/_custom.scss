@@ -180,6 +180,21 @@ table.manager-approval-main-table th.headerSortDown {
 // Author: Cezar Derevlean
 // --------------------------------
 
+/* Overwrite inherited styles */
+
+.views-exposed-form .views-exposed-widget {
+    padding: 0;
+}
+// .jcarousel-skin-default .jcarousel-container-horizontal {
+//     height: auto;
+//     padding: 0;
+// }
+.item-list ul li {
+    margin: 0;
+}
+
+/* General styles */
+
 body {
     font-family: $sans;
     color: $gray;
@@ -207,6 +222,11 @@ h1 {
     font-weight: 300;
     color: $gray-darker-alt;
     margin: 25px 0;
+}
+h4 {
+    font-size: 1.8rem;
+    color: $gray-darker;
+    font-weight: 400;
 }
 
 .container.collapse {
@@ -271,8 +291,27 @@ h1 {
     background: $gray-light;
 }
 .main-container {
-    background: $light;
+    // background: $light;
 }
+.pane-block,
+.view {
+    background: $light;
+    padding: 20px;
+    margin: 0 0 30px 0;
+    @include clearfix;
+}
+.view {
+    margin: 0 15px;
+}
+.pane-title {
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+
+
 
 
 

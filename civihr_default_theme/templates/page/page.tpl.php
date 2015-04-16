@@ -70,7 +70,7 @@
         <?php endif; ?>
       </div>
     </div>
-    <div id="content" class="container">
+    <div id="content" class="container collapse">
       <div class="main-container">
         <?php print render($page['content']); ?>
       </div>

@@ -164,16 +164,6 @@ table.manager-approval-main-table th.headerSortDown {
  * Hr resource page custom styles end
  */
 
-/**
- * CiviHR dashboard block profile image size
- */
-.custom-scale-image {
-    max-width: 120px;
-    max-height: 120px;
-    width: auto;
-    height: auto;
-}
-
 
 // --------------------------------
 // Mockup design styles
@@ -185,12 +175,32 @@ table.manager-approval-main-table th.headerSortDown {
 .views-exposed-form .views-exposed-widget {
     padding: 0;
 }
-// .jcarousel-skin-default .jcarousel-container-horizontal {
-//     height: auto;
-//     padding: 0;
-// }
 .item-list ul li {
     margin: 0;
+}
+
+/* Helpers */
+
+.relative {
+    position: relative;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.nofloat {
+    float: none;
 }
 
 /* General styles */
@@ -228,9 +238,58 @@ h4 {
     color: $gray-darker;
     font-weight: 400;
 }
+h5 {
+    font-size: 1.6rem;
+    color: $gray-darker;
+    font-weight: 400;
+}
 
 .container.collapse {
     padding: 0;
+}
+
+/* Modal */
+
+.modal-content {
+    background: $light;
+}
+.modal-header,
+.modal-body {
+    padding: 40px;
+}
+.modal-body {
+    height: auto !important;
+}
+
+/* Splitters */
+
+.vertical-splitter {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    border-left: 1px solid $gray-light;
+}
+.splitter-top {
+    border-top: 1px solid $gray-light;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Buttons */
+
+.btn {
+    background: $brand-color;
+    color: $light;
+    font-size: 1.3rem;
+    padding: 0.8rem 1.2rem;
+    display: inline-block;
+    border: 0;
+    text-align: center;
+
+    &:hover {
+        color: $light;
+        background: rgba($brand-color, 0.8);
+    }
 }
 
 /* Header */
@@ -285,14 +344,14 @@ h4 {
 }
 
 
-/* Main */
+/* Main / Dashboard */
 
 .main {
     background: $gray-light;
 }
-.main-container {
-    // background: $light;
-}
+
+/* Panels / Dashboard Carousel */
+
 .pane-block,
 .view {
     background: $light;
@@ -300,21 +359,137 @@ h4 {
     margin: 0 0 30px 0;
     @include clearfix;
 }
+.pane-block[class*="absence-list"] {
+    margin: 0;
+}
 .view {
     margin: 0 15px;
 }
+.pane-block {
+    .view {
+        padding: 0;
+        margin: 0;
+    }
+    .jcarousel-container {
+        margin: 0 -10px;
+        padding: 0 26px;
+    }
+    .jcarousel-clip {
+        overflow: hidden;
+    }
+    .jcarousel-item {
+        width: 193px;
+        margin: 0 10px;
+        padding: 20px;
+        background: $gray-light-alt;
+    }
+    .jcarousel-prev,
+    .jcarousel-next {
+        position: absolute;
+        height: 100%;
+        width: 26px;
+        display: block;
+        left: 10px;
+        top: 0;
+        text-align: center;
+        color: $gray;
+        background: $light;
+
+        @include fa("\f104", 24);
+
+        &:before {
+            @include vertical-align;
+            display: block;
+        }
+    }
+    .jcarousel-next {
+        left: auto;
+        right: 10px;
+
+        @include fa("\f105", 24);
+    }
+}
+.views-exposed-form .views-exposed-widget {
+    width: auto;
+}
+.views-widget-filter-absence_start_date_period_filter label {
+    font-size: 1.8rem;
+    color: $gray-darker;
+    font-weight: 400;
+    width: auto;
+}
+.views-widget-filter-absence_start_date_period_filter label,
 .pane-title {
+    margin: 0 -20px 20px;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid $gray-light;
+    line-height: 1;
+
     &:first-child {
         margin-top: 0;
     }
 }
 
+/* My details */
 
+.profile-image {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.custom-scale-image {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-height: 140px;
+}
+.civihr-employee-portal-my-details-block {
+    position: relative;
 
+    h5 {
+        margin: 0;
+    }
+    .views-field {
+        @include clearfix;
 
+        font-size: 1.3rem;
+        margin-top: 1.4rem;
+    }
+    .views-label,
+    .field-content {
+        width: 50%;
+        display: block;
+        float: left;
+    }
+    .views-label {
+        color: $gray-darker;
+    }
+    .actions {
+        font-size: 0;
 
+        .btn {
+            margin-left: 10px;
 
+            @include fa('\f044');
 
-/*
-    Dashboard (Self Service Portal)
-*/
+            &:before {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.footer-slider-block {
+    .btn {
+        width: 100%;
+    }
+    .views-field {
+        margin-top: 1.4rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

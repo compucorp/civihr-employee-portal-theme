@@ -27,14 +27,13 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar-collapse">
+
         <?php if ($main_menu): ?>
           <ul id="main-menu" class="menu nav navbar-nav">
             <?php print render($main_menu); ?>
           </ul>
         <?php endif; ?>
-        <?php if ($search_form): ?>
-          <?php print $search_form; ?>
-        <?php endif; ?>
+
       </div><!-- /.navbar-collapse -->
     </nav><!-- /.navbar -->
 </header>

@@ -2635,277 +2635,6 @@ hr {
     margin-left: 100%;
   }
 }
-/* line 6, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-table {
-  background-color: transparent;
-}
-
-/* line 9, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-caption {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: #999999;
-  text-align: left;
-}
-
-/* line 15, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-th {
-  text-align: left;
-}
-
-/* line 22, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-/* line 32, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table > thead > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > th,
-.table > tbody > tr > td,
-.table > tfoot > tr > th,
-.table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.428571429;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
-/* line 41, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table > thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
-}
-/* line 51, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table > caption + thead > tr:first-child > th,
-.table > caption + thead > tr:first-child > td,
-.table > colgroup + thead > tr:first-child > th,
-.table > colgroup + thead > tr:first-child > td,
-.table > thead:first-child > tr:first-child > th,
-.table > thead:first-child > tr:first-child > td {
-  border-top: 0;
-}
-/* line 57, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table > tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-/* line 62, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table .table {
-  background-color: white;
-}
-
-/* line 76, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table-condensed > thead > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > th,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > th,
-.table-condensed > tfoot > tr > td {
-  padding: 5px;
-}
-
-/* line 88, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table-bordered {
-  border: 1px solid #dddddd;
-}
-/* line 95, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > th,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > th,
-.table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
-}
-/* line 102, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
-  border-bottom-width: 2px;
-}
-
-/* line 114, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table-striped > tbody > tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-/* line 125, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table-hover > tbody > tr:hover {
-  background-color: whitesmoke;
-}
-
-/* line 135, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-table col[class*="col-"] {
-  position: static;
-  float: none;
-  display: table-column;
-}
-
-/* line 143, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-table td[class*="col-"],
-table th[class*="col-"] {
-  position: static;
-  float: none;
-  display: table-cell;
-}
-
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table > thead > tr > td.active,
-.table > thead > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th,
-.table > tbody > tr > td.active,
-.table > tbody > tr > th.active,
-.table > tbody > tr.active > td,
-.table > tbody > tr.active > th,
-.table > tfoot > tr > td.active,
-.table > tfoot > tr > th.active,
-.table > tfoot > tr.active > td,
-.table > tfoot > tr.active > th {
-  background-color: whitesmoke;
-}
-
-/* line 24, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table-hover > tbody > tr > td.active:hover,
-.table-hover > tbody > tr > th.active:hover, .table-hover > tbody > tr.active:hover > td, .table-hover > tbody > tr:hover > .active, .table-hover > tbody > tr.active:hover > th {
-  background-color: #e8e8e8;
-}
-
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table > thead > tr > td.success,
-.table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th,
-.table > tbody > tr > td.success,
-.table > tbody > tr > th.success,
-.table > tbody > tr.success > td,
-.table > tbody > tr.success > th,
-.table > tfoot > tr > td.success,
-.table > tfoot > tr > th.success,
-.table > tfoot > tr.success > td,
-.table > tfoot > tr.success > th {
-  background-color: #dff0d8;
-}
-
-/* line 24, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table-hover > tbody > tr > td.success:hover,
-.table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
-  background-color: #d0e9c6;
-}
-
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table > thead > tr > td.info,
-.table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th,
-.table > tbody > tr > td.info,
-.table > tbody > tr > th.info,
-.table > tbody > tr.info > td,
-.table > tbody > tr.info > th,
-.table > tfoot > tr > td.info,
-.table > tfoot > tr > th.info,
-.table > tfoot > tr.info > td,
-.table > tfoot > tr.info > th {
-  background-color: #d9edf7;
-}
-
-/* line 24, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table-hover > tbody > tr > td.info:hover,
-.table-hover > tbody > tr > th.info:hover, .table-hover > tbody > tr.info:hover > td, .table-hover > tbody > tr:hover > .info, .table-hover > tbody > tr.info:hover > th {
-  background-color: #c4e3f3;
-}
-
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table > thead > tr > td.warning,
-.table > thead > tr > th.warning, .table > thead > tr.warning > td, .table > thead > tr.warning > th,
-.table > tbody > tr > td.warning,
-.table > tbody > tr > th.warning,
-.table > tbody > tr.warning > td,
-.table > tbody > tr.warning > th,
-.table > tfoot > tr > td.warning,
-.table > tfoot > tr > th.warning,
-.table > tfoot > tr.warning > td,
-.table > tfoot > tr.warning > th {
-  background-color: #fcf8e3;
-}
-
-/* line 24, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table-hover > tbody > tr > td.warning:hover,
-.table-hover > tbody > tr > th.warning:hover, .table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr:hover > .warning, .table-hover > tbody > tr.warning:hover > th {
-  background-color: #faf2cc;
-}
-
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table > thead > tr > td.danger,
-.table > thead > tr > th.danger, .table > thead > tr.danger > td, .table > thead > tr.danger > th,
-.table > tbody > tr > td.danger,
-.table > tbody > tr > th.danger,
-.table > tbody > tr.danger > td,
-.table > tbody > tr.danger > th,
-.table > tfoot > tr > td.danger,
-.table > tfoot > tr > th.danger,
-.table > tfoot > tr.danger > td,
-.table > tfoot > tr.danger > th {
-  background-color: #f2dede;
-}
-
-/* line 24, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_table-row.scss */
-.table-hover > tbody > tr > td.danger:hover,
-.table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr:hover > .danger, .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ebcccc;
-}
-
-/* line 171, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-.table-responsive {
-  overflow-x: auto;
-  min-height: 0.01%;
-}
-@media screen and (max-width: 767px) {
-  /* line 171, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-  .table-responsive {
-    width: 100%;
-    margin-bottom: 15px;
-    overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
-  }
-  /* line 183, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-  .table-responsive > .table {
-    margin-bottom: 0;
-  }
-  /* line 192, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-  .table-responsive > .table > thead > tr > th,
-  .table-responsive > .table > thead > tr > td,
-  .table-responsive > .table > tbody > tr > th,
-  .table-responsive > .table > tbody > tr > td,
-  .table-responsive > .table > tfoot > tr > th,
-  .table-responsive > .table > tfoot > tr > td {
-    white-space: nowrap;
-  }
-  /* line 200, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-  .table-responsive > .table-bordered {
-    border: 0;
-  }
-  /* line 209, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-  .table-responsive > .table-bordered > thead > tr > th:first-child,
-  .table-responsive > .table-bordered > thead > tr > td:first-child,
-  .table-responsive > .table-bordered > tbody > tr > th:first-child,
-  .table-responsive > .table-bordered > tbody > tr > td:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
-    border-left: 0;
-  }
-  /* line 213, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-  .table-responsive > .table-bordered > thead > tr > th:last-child,
-  .table-responsive > .table-bordered > thead > tr > td:last-child,
-  .table-responsive > .table-bordered > tbody > tr > th:last-child,
-  .table-responsive > .table-bordered > tbody > tr > td:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
-    border-right: 0;
-  }
-  /* line 226, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_tables.scss */
-  .table-responsive > .table-bordered > tbody > tr:last-child > th,
-  .table-responsive > .table-bordered > tbody > tr:last-child > td,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
-    border-bottom: 0;
-  }
-}
-
 /* line 5, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_responsive-embed.scss */
 .embed-responsive {
   position: relative;
@@ -6035,31 +5764,16 @@ and open the template in the editor.
 }
 
 /**
- * Staff directory dashboard block styling
- */
-/* line 29, ../sass/civihr_default/_custom.scss */
-#civihr-employee-portal-directory-block-form input, #civihr-employee-portal-directory-block-form label {
-  width: 10%;
-}
-
-/* line 33, ../sass/civihr_default/_custom.scss */
-#civihr-employee-portal-directory-block-form .form-control {
-  width: 80%;
-  margin-left: 5%;
-  display: inline;
-}
-
-/**
  * Views exposed form styling
  */
-/* line 48, ../sass/civihr_default/_custom.scss */
+/* line 35, ../sass/civihr_default/_custom.scss */
 .views-exposed-form .views-exposed-widget {
   float: none;
   display: block;
   width: 50%;
 }
 @media screen and (max-width: 767px) {
-  /* line 48, ../sass/civihr_default/_custom.scss */
+  /* line 35, ../sass/civihr_default/_custom.scss */
   .views-exposed-form .views-exposed-widget {
     float: none;
     display: block;
@@ -6070,7 +5784,7 @@ and open the template in the editor.
 /**
  * Manager approval search highlight color
  */
-/* line 59, ../sass/civihr_default/_custom.scss */
+/* line 46, ../sass/civihr_default/_custom.scss */
 .manager-approval-main-table em {
   background-color: yellow;
 }
@@ -6078,7 +5792,7 @@ and open the template in the editor.
 /**
  * Manager approval th header color
  */
-/* line 66, ../sass/civihr_default/_custom.scss */
+/* line 53, ../sass/civihr_default/_custom.scss */
 .header-class {
   background: #c0c0c0;
 }
@@ -6089,7 +5803,7 @@ and open the template in the editor.
 /**
  * Manager approval search th icons -> UP
  */
-/* line 82, ../sass/civihr_default/_custom.scss */
+/* line 69, ../sass/civihr_default/_custom.scss */
 table.manager-approval-main-table th.headerSortUp {
   background-image: url(../images/icon/asc.gif);
   background-repeat: no-repeat;
@@ -6099,7 +5813,7 @@ table.manager-approval-main-table th.headerSortUp {
 /**
  * Manager approval search th icons -> DOWN
  */
-/* line 89, ../sass/civihr_default/_custom.scss */
+/* line 76, ../sass/civihr_default/_custom.scss */
 table.manager-approval-main-table th.headerSortDown {
   background-image: url(../images/icon/desc.gif);
   background-repeat: no-repeat;
@@ -6109,7 +5823,7 @@ table.manager-approval-main-table th.headerSortDown {
 /**
  * Quick Approve / Reject buttons default style
  */
-/* line 96, ../sass/civihr_default/_custom.scss */
+/* line 83, ../sass/civihr_default/_custom.scss */
 #quick-approve {
   display: inline;
 }
@@ -6118,7 +5832,7 @@ table.manager-approval-main-table th.headerSortDown {
  * Manager Approval Tooltip settings
  */
 @media screen and (min-width: 1200px) {
-  /* line 103, ../sass/civihr_default/_custom.scss */
+  /* line 90, ../sass/civihr_default/_custom.scss */
   .manager-approval-main-table .views-tooltip {
     float: right;
   }
@@ -6127,7 +5841,7 @@ table.manager-approval-main-table th.headerSortDown {
 /**
  * Set width so the tooltip shows up in the right location
  */
-/* line 113, ../sass/civihr_default/_custom.scss */
+/* line 100, ../sass/civihr_default/_custom.scss */
 .views-tooltip {
   width: 30px;
 }
@@ -6136,7 +5850,7 @@ table.manager-approval-main-table th.headerSortDown {
  * Manager AJAX filters block / inline settings
  */
 @media screen and (min-width: 768px) {
-  /* line 120, ../sass/civihr_default/_custom.scss */
+  /* line 107, ../sass/civihr_default/_custom.scss */
   .btn-custom-block {
     display: block;
   }
@@ -6147,35 +5861,35 @@ table.manager-approval-main-table th.headerSortDown {
  * Hr resource page custom styles
  */
 /* jCarousel styles */
-/* line 135, ../sass/civihr_default/_custom.scss */
+/* line 122, ../sass/civihr_default/_custom.scss */
 .jcarousel-skin-default .jcarousel-item {
   min-height: 200px;
   height: auto;
 }
 
 /* jCarousel styles end */
-/* line 142, ../sass/civihr_default/_custom.scss */
+/* line 129, ../sass/civihr_default/_custom.scss */
 .hr-documents-title-block {
   min-height: 40px;
 }
 
-/* line 146, ../sass/civihr_default/_custom.scss */
+/* line 133, ../sass/civihr_default/_custom.scss */
 .hr-documents-body-block {
   min-height: 120px;
 }
 
-/* line 150, ../sass/civihr_default/_custom.scss */
+/* line 137, ../sass/civihr_default/_custom.scss */
 .row-hr-resource {
   margin-bottom: 10px;
 }
 
-/* line 154, ../sass/civihr_default/_custom.scss */
+/* line 141, ../sass/civihr_default/_custom.scss */
 .hr-resouce-download-all {
   word-spacing: -8px;
   font-weight: bolder;
 }
 
-/* line 159, ../sass/civihr_default/_custom.scss */
+/* line 146, ../sass/civihr_default/_custom.scss */
 .footer-slider-block {
   min-height: 280px;
 }
@@ -6184,82 +5898,85 @@ table.manager-approval-main-table th.headerSortDown {
  * Hr resource page custom styles end
  */
 /* Overwrite inherited styles */
-/* line 175, ../sass/civihr_default/_custom.scss */
+/* line 162, ../sass/civihr_default/_custom.scss */
 .views-exposed-form .views-exposed-widget {
   padding: 0;
 }
 
-/* line 178, ../sass/civihr_default/_custom.scss */
+/* line 165, ../sass/civihr_default/_custom.scss */
 .item-list ul li {
   margin: 0;
 }
 
 /* Helpers */
-/* line 184, ../sass/civihr_default/_custom.scss */
+/* line 171, ../sass/civihr_default/_custom.scss */
 .relative {
   position: relative;
 }
 
-/* line 187, ../sass/civihr_default/_custom.scss */
+/* line 174, ../sass/civihr_default/_custom.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 190, ../sass/civihr_default/_custom.scss */
+/* line 177, ../sass/civihr_default/_custom.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 193, ../sass/civihr_default/_custom.scss */
+/* line 180, ../sass/civihr_default/_custom.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 196, ../sass/civihr_default/_custom.scss */
+/* line 183, ../sass/civihr_default/_custom.scss */
 .left {
   float: left;
 }
 
-/* line 199, ../sass/civihr_default/_custom.scss */
+/* line 186, ../sass/civihr_default/_custom.scss */
 .right {
   float: right;
 }
 
-/* line 202, ../sass/civihr_default/_custom.scss */
+/* line 189, ../sass/civihr_default/_custom.scss */
 .nofloat {
   float: none;
 }
 
 /* General styles */
-/* line 208, ../sass/civihr_default/_custom.scss */
+/* line 195, ../sass/civihr_default/_custom.scss */
 body {
   font-family: "Lato", sans-serif;
   color: #767b8e;
 }
 
-/* line 212, ../sass/civihr_default/_custom.scss */
+/* Lists */
+/* line 202, ../sass/civihr_default/_custom.scss */
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 217, ../sass/civihr_default/_custom.scss */
+/* Links */
+/* line 210, ../sass/civihr_default/_custom.scss */
 a {
   text-decoration: none;
   color: #41afcb;
 }
-/* line 221, ../sass/civihr_default/_custom.scss */
+/* line 214, ../sass/civihr_default/_custom.scss */
 a:hover {
   text-decoration: none;
   color: rgba(65, 175, 203, 0.8);
 }
-/* line 226, ../sass/civihr_default/_custom.scss */
+/* line 219, ../sass/civihr_default/_custom.scss */
 a:active, a:focus {
   text-decoration: none;
 }
 
-/* line 230, ../sass/civihr_default/_custom.scss */
+/* Headings */
+/* line 226, ../sass/civihr_default/_custom.scss */
 h1 {
   font-size: 3.6rem;
   font-weight: 300;
@@ -6267,44 +5984,78 @@ h1 {
   margin: 25px 0;
 }
 
-/* line 236, ../sass/civihr_default/_custom.scss */
+/* line 232, ../sass/civihr_default/_custom.scss */
 h4 {
   font-size: 1.8rem;
   color: #4c4c5d;
   font-weight: 400;
 }
 
-/* line 241, ../sass/civihr_default/_custom.scss */
+/* line 237, ../sass/civihr_default/_custom.scss */
 h5 {
   font-size: 1.6rem;
   color: #4c4c5d;
   font-weight: 400;
 }
 
-/* line 247, ../sass/civihr_default/_custom.scss */
+/* Tables */
+/* line 245, ../sass/civihr_default/_custom.scss */
+.table-responsive {
+  margin: 0 -20px;
+}
+
+/* line 248, ../sass/civihr_default/_custom.scss */
+table {
+  font-size: 1.3rem;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* line 254, ../sass/civihr_default/_custom.scss */
+th,
+td {
+  border-bottom: 1px solid #ecedee;
+  padding: 8px 20px;
+}
+
+/* line 258, ../sass/civihr_default/_custom.scss */
+th {
+  color: #4c4c5d;
+}
+
+/* line 262, ../sass/civihr_default/_custom.scss */
+tr.odd {
+  background: #fbfbfc;
+}
+/* line 265, ../sass/civihr_default/_custom.scss */
+tr.even {
+  background: none;
+}
+
+/* line 270, ../sass/civihr_default/_custom.scss */
 .container.collapse {
   padding: 0;
 }
 
 /* Modal */
-/* line 253, ../sass/civihr_default/_custom.scss */
+/* line 276, ../sass/civihr_default/_custom.scss */
 .modal-content {
   background: white;
 }
 
-/* line 257, ../sass/civihr_default/_custom.scss */
+/* line 280, ../sass/civihr_default/_custom.scss */
 .modal-header,
 .modal-body {
   padding: 40px;
 }
 
-/* line 260, ../sass/civihr_default/_custom.scss */
+/* line 283, ../sass/civihr_default/_custom.scss */
 .modal-body {
   height: auto !important;
 }
 
 /* Splitters */
-/* line 266, ../sass/civihr_default/_custom.scss */
+/* line 289, ../sass/civihr_default/_custom.scss */
 .vertical-splitter {
   position: absolute;
   height: 100%;
@@ -6312,7 +6063,7 @@ h5 {
   border-left: 1px solid #ecedee;
 }
 
-/* line 272, ../sass/civihr_default/_custom.scss */
+/* line 295, ../sass/civihr_default/_custom.scss */
 .splitter-top {
   border-top: 1px solid #ecedee;
   margin-top: 20px;
@@ -6320,7 +6071,7 @@ h5 {
 }
 
 /* Buttons */
-/* line 280, ../sass/civihr_default/_custom.scss */
+/* line 303, ../sass/civihr_default/_custom.scss */
 .btn {
   background: #41afcb;
   color: white;
@@ -6330,14 +6081,41 @@ h5 {
   border: 0;
   text-align: center;
 }
-/* line 289, ../sass/civihr_default/_custom.scss */
+/* line 312, ../sass/civihr_default/_custom.scss */
 .btn:hover {
   color: white;
   background: rgba(65, 175, 203, 0.8);
 }
 
+/* Forms */
+/* line 321, ../sass/civihr_default/_custom.scss */
+form .form-item {
+  margin: 10px 0;
+}
+/* line 324, ../sass/civihr_default/_custom.scss */
+form .form-item label {
+  display: none;
+}
+/* line 328, ../sass/civihr_default/_custom.scss */
+form .form-text {
+  border: 1px solid #949caa;
+  font-size: 1.3rem;
+  color: #767b8e;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+}
+/* line 336, ../sass/civihr_default/_custom.scss */
+form hr {
+  margin-top: 40px;
+}
+/* line 339, ../sass/civihr_default/_custom.scss */
+form .btn {
+  float: right;
+}
+
 /* Header */
-/* line 297, ../sass/civihr_default/_custom.scss */
+/* line 346, ../sass/civihr_default/_custom.scss */
 .header {
   background: #555862;
   font-size: 1.3rem;
@@ -6352,17 +6130,17 @@ h5 {
   clear: both;
 }
 
-/* line 306, ../sass/civihr_default/_custom.scss */
+/* line 355, ../sass/civihr_default/_custom.scss */
 .navbar-toggle {
   display: none;
 }
 
-/* line 309, ../sass/civihr_default/_custom.scss */
+/* line 358, ../sass/civihr_default/_custom.scss */
 .navbar-header {
   float: left;
 }
 
-/* line 312, ../sass/civihr_default/_custom.scss */
+/* line 361, ../sass/civihr_default/_custom.scss */
 .navbar-brand {
   display: block;
   font-size: 1.6rem;
@@ -6370,45 +6148,45 @@ h5 {
   padding: 0 16px;
   background: #41afcb;
 }
-/* line 319, ../sass/civihr_default/_custom.scss */
+/* line 368, ../sass/civihr_default/_custom.scss */
 .navbar-brand:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 323, ../sass/civihr_default/_custom.scss */
+/* line 372, ../sass/civihr_default/_custom.scss */
 .navbar-collapse {
   float: left;
 }
-/* line 327, ../sass/civihr_default/_custom.scss */
+/* line 376, ../sass/civihr_default/_custom.scss */
 .navbar-collapse .menu li {
   float: left;
 }
-/* line 330, ../sass/civihr_default/_custom.scss */
+/* line 379, ../sass/civihr_default/_custom.scss */
 .navbar-collapse .menu a {
   color: inherit;
   display: block;
   padding: 0 15px;
 }
-/* line 336, ../sass/civihr_default/_custom.scss */
+/* line 385, ../sass/civihr_default/_custom.scss */
 .navbar-collapse .menu .active,
 .navbar-collapse .menu a:hover {
   background: #767b8e;
   color: white;
 }
 
-/* line 342, ../sass/civihr_default/_custom.scss */
+/* line 391, ../sass/civihr_default/_custom.scss */
 .breadcrumb {
   display: none;
 }
 
 /* Main / Dashboard */
-/* line 349, ../sass/civihr_default/_custom.scss */
+/* line 398, ../sass/civihr_default/_custom.scss */
 .main {
   background: #ecedee;
 }
 
 /* Panels / Dashboard Carousel */
-/* line 356, ../sass/civihr_default/_custom.scss */
+/* line 405, ../sass/civihr_default/_custom.scss */
 .pane-block,
 .view {
   background: white;
@@ -6423,38 +6201,38 @@ h5 {
   clear: both;
 }
 
-/* line 362, ../sass/civihr_default/_custom.scss */
+/* line 411, ../sass/civihr_default/_custom.scss */
 .pane-block[class*="absence-list"] {
   margin: 0;
 }
 
-/* line 365, ../sass/civihr_default/_custom.scss */
+/* line 414, ../sass/civihr_default/_custom.scss */
 .view {
   margin: 0 15px;
 }
 
-/* line 369, ../sass/civihr_default/_custom.scss */
+/* line 418, ../sass/civihr_default/_custom.scss */
 .pane-block .view {
   padding: 0;
   margin: 0;
 }
-/* line 373, ../sass/civihr_default/_custom.scss */
+/* line 422, ../sass/civihr_default/_custom.scss */
 .pane-block .jcarousel-container {
   margin: 0 -10px;
   padding: 0 26px;
 }
-/* line 377, ../sass/civihr_default/_custom.scss */
+/* line 426, ../sass/civihr_default/_custom.scss */
 .pane-block .jcarousel-clip {
   overflow: hidden;
 }
-/* line 380, ../sass/civihr_default/_custom.scss */
+/* line 429, ../sass/civihr_default/_custom.scss */
 .pane-block .jcarousel-item {
   width: 193px;
   margin: 0 10px;
   padding: 20px;
   background: #f0f1f4;
 }
-/* line 387, ../sass/civihr_default/_custom.scss */
+/* line 436, ../sass/civihr_default/_custom.scss */
 .pane-block .jcarousel-prev,
 .pane-block .jcarousel-next {
   position: absolute;
@@ -6478,7 +6256,7 @@ h5 {
   content: "\f104";
   font-size: 24px;
 }
-/* line 400, ../sass/civihr_default/_custom.scss */
+/* line 449, ../sass/civihr_default/_custom.scss */
 .pane-block .jcarousel-prev:before,
 .pane-block .jcarousel-next:before {
   position: relative;
@@ -6488,7 +6266,7 @@ h5 {
   transform: translateY(-50%);
   display: block;
 }
-/* line 405, ../sass/civihr_default/_custom.scss */
+/* line 454, ../sass/civihr_default/_custom.scss */
 .pane-block .jcarousel-next {
   left: auto;
   right: 10px;
@@ -6504,12 +6282,12 @@ h5 {
   font-size: 24px;
 }
 
-/* line 412, ../sass/civihr_default/_custom.scss */
+/* line 461, ../sass/civihr_default/_custom.scss */
 .views-exposed-form .views-exposed-widget {
   width: auto;
 }
 
-/* line 415, ../sass/civihr_default/_custom.scss */
+/* line 464, ../sass/civihr_default/_custom.scss */
 .views-widget-filter-absence_start_date_period_filter label {
   font-size: 1.8rem;
   color: #4c4c5d;
@@ -6517,7 +6295,7 @@ h5 {
   width: auto;
 }
 
-/* line 422, ../sass/civihr_default/_custom.scss */
+/* line 471, ../sass/civihr_default/_custom.scss */
 .views-widget-filter-absence_start_date_period_filter label,
 .pane-title {
   margin: 0 -20px 20px;
@@ -6525,14 +6303,14 @@ h5 {
   border-bottom: 1px solid #ecedee;
   line-height: 1;
 }
-/* line 428, ../sass/civihr_default/_custom.scss */
+/* line 477, ../sass/civihr_default/_custom.scss */
 .views-widget-filter-absence_start_date_period_filter label:first-child,
 .pane-title:first-child {
   margin-top: 0;
 }
 
 /* My details */
-/* line 435, ../sass/civihr_default/_custom.scss */
+/* line 484, ../sass/civihr_default/_custom.scss */
 .profile-image {
   width: 140px;
   height: 140px;
@@ -6540,7 +6318,7 @@ h5 {
   border-radius: 50%;
 }
 
-/* line 441, ../sass/civihr_default/_custom.scss */
+/* line 490, ../sass/civihr_default/_custom.scss */
 .custom-scale-image {
   position: relative;
   left: 50%;
@@ -6549,15 +6327,15 @@ h5 {
   max-height: 140px;
 }
 
-/* line 448, ../sass/civihr_default/_custom.scss */
+/* line 497, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block {
   position: relative;
 }
-/* line 451, ../sass/civihr_default/_custom.scss */
+/* line 500, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block h5 {
   margin: 0;
 }
-/* line 454, ../sass/civihr_default/_custom.scss */
+/* line 503, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block .views-field {
   font-size: 1.3rem;
   margin-top: 1.4rem;
@@ -6568,22 +6346,22 @@ h5 {
   display: table;
   clear: both;
 }
-/* line 461, ../sass/civihr_default/_custom.scss */
+/* line 510, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block .views-label,
 .civihr-employee-portal-my-details-block .field-content {
   width: 50%;
   display: block;
   float: left;
 }
-/* line 466, ../sass/civihr_default/_custom.scss */
+/* line 515, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block .views-label {
   color: #4c4c5d;
 }
-/* line 469, ../sass/civihr_default/_custom.scss */
+/* line 518, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block .actions {
   font-size: 0;
 }
-/* line 472, ../sass/civihr_default/_custom.scss */
+/* line 521, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block .actions .btn {
   margin-left: 10px;
 }
@@ -6597,20 +6375,147 @@ h5 {
   content: "\f044";
   font-size: inherit;
 }
-/* line 477, ../sass/civihr_default/_custom.scss */
+/* line 526, ../sass/civihr_default/_custom.scss */
 .civihr-employee-portal-my-details-block .actions .btn:before {
   margin-right: 8px;
 }
 
-/* line 485, ../sass/civihr_default/_custom.scss */
-.footer-slider-block .btn {
-  width: 100%;
+/* line 533, ../sass/civihr_default/_custom.scss */
+.footer-slider-block {
+  position: relative;
 }
-/* line 488, ../sass/civihr_default/_custom.scss */
+/* line 536, ../sass/civihr_default/_custom.scss */
 .footer-slider-block .views-field {
   margin-top: 1.4rem;
 }
-/* line 491, ../sass/civihr_default/_custom.scss */
+/* line 539, ../sass/civihr_default/_custom.scss */
 .footer-slider-block .views-field:first-child {
   margin-top: 0;
+}
+/* line 543, ../sass/civihr_default/_custom.scss */
+.footer-slider-block .view-header {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  font-size: 1.3rem;
+}
+/* line 549, ../sass/civihr_default/_custom.scss */
+.footer-slider-block .view-header a {
+  color: #767b8e;
+}
+/* line 554, ../sass/civihr_default/_custom.scss */
+.footer-slider-block .view-hr-vacancies .jcarousel-item {
+  position: relative;
+  padding-bottom: 55px;
+}
+/* line 558, ../sass/civihr_default/_custom.scss */
+.footer-slider-block .view-hr-vacancies .btn {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+/* line 566, ../sass/civihr_default/_custom.scss */
+.footer-slider-block .view-hr-documents .btn {
+  width: 100%;
+}
+
+/* Absencies */
+/* line 574, ../sass/civihr_default/_custom.scss */
+.block-civihr-employee-portal {
+  text-align: right;
+}
+/* line 577, ../sass/civihr_default/_custom.scss */
+.block-civihr-employee-portal .btn {
+  margin-left: 10px;
+}
+
+/* line 581, ../sass/civihr_default/_custom.scss */
+#absence-links {
+  height: auto !important;
+  border-top: 1px solid #ecedee;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+/* line 589, ../sass/civihr_default/_custom.scss */
+.pane-civihr-employee-portal-leave tr.odd {
+  background: none;
+}
+/* line 592, ../sass/civihr_default/_custom.scss */
+.pane-civihr-employee-portal-leave tr.even {
+  background: #fbfbfc;
+}
+
+/* line 601, ../sass/civihr_default/_custom.scss */
+.view-absence-list > .view-header tbody tr, .view-absence-list > .view-footer tbody tr {
+  font-weight: 700;
+  color: #4c4c5d;
+  background: #fbfbfc;
+}
+/* line 609, ../sass/civihr_default/_custom.scss */
+.view-absence-list > .view-content tbody {
+  border: 0;
+}
+/* line 615, ../sass/civihr_default/_custom.scss */
+.view-absence-list td:first-child,
+.view-absence-list th:first-child {
+  width: 28%;
+}
+
+/* line 620, ../sass/civihr_default/_custom.scss */
+[class*="pane-views-exp-absence-list-page"] {
+  padding-bottom: 0;
+}
+/* line 623, ../sass/civihr_default/_custom.scss */
+[class*="pane-views-exp-absence-list-page"] .views-exposed-widgets {
+  margin: 0;
+}
+/* line 626, ../sass/civihr_default/_custom.scss */
+[class*="pane-views-exp-absence-list-page"] .views-widget {
+  position: absolute;
+  top: 19px;
+  right: 35px;
+}
+
+/* line 632, ../sass/civihr_default/_custom.scss */
+label[for*="edit-absence-start-date-period-filter"] {
+  margin-bottom: 0;
+}
+
+/* line 636, ../sass/civihr_default/_custom.scss */
+.pane-views-exp-absence-list-page .views-widget {
+  right: 164px;
+}
+/* line 639, ../sass/civihr_default/_custom.scss */
+.pane-views-exp-absence-list-page .views-submit-button {
+  position: absolute;
+  top: 13px;
+  right: 35px;
+}
+/* line 644, ../sass/civihr_default/_custom.scss */
+.pane-views-exp-absence-list-page .views-submit-button .btn {
+  background: none;
+  color: #767b8e;
+  padding-right: 0;
+}
+/* line 11, ../sass/civihr_default/_functions.scss */
+.pane-views-exp-absence-list-page .views-submit-button .btn:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f073";
+  font-size: inherit;
+}
+/* line 651, ../sass/civihr_default/_custom.scss */
+.pane-views-exp-absence-list-page .views-submit-button .btn:before {
+  margin-right: 8px;
+}
+
+/* line 658, ../sass/civihr_default/_custom.scss */
+.pane-civihr-employee-portal-leave,
+.pane-civihr-employee-portal-sick {
+  padding-top: 0;
 }

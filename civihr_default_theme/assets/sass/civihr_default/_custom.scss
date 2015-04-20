@@ -24,19 +24,6 @@ $icon-desc-path:    "desc.gif";
 }
 
 /**
- * Staff directory dashboard block styling
- */
-#civihr-employee-portal-directory-block-form input, #civihr-employee-portal-directory-block-form label {
-    width: 10%;
-}
-
-#civihr-employee-portal-directory-block-form .form-control {
-    width: 80%;
-    margin-left: 5%;
-    display: inline;
-}
-
-/**
  * Views exposed form styling
  */
 @mixin exposed-form-default-style($width) {
@@ -209,11 +196,17 @@ body {
     font-family: $sans;
     color: $gray;
 }
+
+/* Lists */
+
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
+/* Links */
+
 a {
     text-decoration: none;
     color: $brand-color;
@@ -227,6 +220,9 @@ a {
         text-decoration: none;
     }
 }
+
+/* Headings */
+
 h1 {
     font-size: 3.6rem;
     font-weight: 300;
@@ -242,6 +238,33 @@ h5 {
     font-size: 1.6rem;
     color: $gray-darker;
     font-weight: 400;
+}
+
+/* Tables */
+
+.table-responsive {
+    margin: 0 -20px;
+}
+table {
+    font-size: 1.3rem;
+    width: 100%;
+    table-layout: fixed;
+}
+th,
+td {
+    border-bottom: 1px solid $gray-light;
+    padding: 8px 20px;
+}
+th {
+    color: $gray-darker;
+}
+tr {
+    &.odd {
+        background: $gray-lighter;
+    }
+    &.even {
+        background: none;
+    }
 }
 
 .container.collapse {
@@ -289,6 +312,32 @@ h5 {
     &:hover {
         color: $light;
         background: rgba($brand-color, 0.8);
+    }
+}
+
+/* Forms */
+
+form {
+    .form-item {
+        margin: 10px 0;
+
+        label {
+            display: none;
+        }
+    }
+    .form-text {
+        border: 1px solid $color-neutral;
+        font-size: 1.3rem;
+        color: $gray;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+    }
+    hr {
+        margin-top: 40px;
+    }
+    .btn {
+        float: right;
     }
 }
 
@@ -472,7 +521,7 @@ h5 {
         .btn {
             margin-left: 10px;
 
-            @include fa('\f044');
+            @include fa("\f044");
 
             &:before {
                 margin-right: 8px;
@@ -482,9 +531,8 @@ h5 {
 }
 
 .footer-slider-block {
-    .btn {
-        width: 100%;
-    }
+    position: relative;
+
     .views-field {
         margin-top: 1.4rem;
 
@@ -492,4 +540,121 @@ h5 {
             margin-top: 0;
         }
     }
+    .view-header {
+        position: absolute;
+        top: 7px;
+        right: 20px;
+        font-size: 1.3rem;
+
+        a {
+            color: $gray;
+        }
+    }
+    .view-hr-vacancies {
+        .jcarousel-item {
+            position: relative;
+            padding-bottom: 55px;
+        }
+        .btn {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+    .view-hr-documents {
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+/* Absencies */
+
+.block-civihr-employee-portal {
+    text-align: right;
+
+    .btn {
+        margin-left: 10px;
+    }
+}
+#absence-links {
+    height: auto !important;
+    border-top: 1px solid $gray-light;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+.pane-civihr-employee-portal-leave {
+    tr {
+        &.odd {
+            background: none;
+        }
+        &.even {
+            background: $gray-lighter;
+        }
+    }
+}
+.view-absence-list {
+    & > .view-header,
+    & > .view-footer {
+        tbody {
+            tr {
+                font-weight: 700;
+                color: $gray-darker;
+                background: $gray-lighter;
+            }
+        }
+    }
+    & > .view-content {
+        tbody {
+            border: 0;
+        }
+    }
+    td,
+    th {
+        &:first-child {
+            width: 28%;
+        }
+    }
+}
+[class*="pane-views-exp-absence-list-page"] {
+    padding-bottom: 0;
+
+    .views-exposed-widgets {
+        margin: 0;
+    }
+    .views-widget {
+        position: absolute;
+        top: 19px;
+        right: 35px;
+    }
+}
+label[for*="edit-absence-start-date-period-filter"] {
+    margin-bottom: 0;
+}
+.pane-views-exp-absence-list-page {
+    .views-widget {
+        right: 164px;
+    }
+    .views-submit-button {
+        position: absolute;
+        top: 13px;
+        right: 35px;
+
+        .btn {
+            background: none;
+            color: $gray;
+            padding-right: 0;
+
+            @include fa("\f073");
+
+            &:before {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+.pane-civihr-employee-portal-leave,
+.pane-civihr-employee-portal-sick {
+    padding-top: 0;
 }

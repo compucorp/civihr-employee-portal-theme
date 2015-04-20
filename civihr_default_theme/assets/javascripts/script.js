@@ -3,5 +3,9 @@
  * Custom scripts for theme.
  */
 (function ($) {
-  // code here
+  $(document).ready(function() {
+
+    $('.view-hr-vacancies li').matchHeight();
+
+  });
 })(jQuery);

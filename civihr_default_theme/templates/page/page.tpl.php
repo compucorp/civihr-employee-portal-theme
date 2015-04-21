@@ -35,6 +35,27 @@
         <?php endif; ?>
 
       </div><!-- /.navbar-collapse -->
+
+      <div class="user-options">
+        <div class="user-menu">
+          <div class="user-name">
+            <span class="value">Amy Anderson</span> <i class="fa fa-caret-down"></i>
+          </div>
+          <ul class="user-submenu">
+            <li>
+              <a href="#"><i class="fa fa-edit"></i>Edit Account</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-sign-out"></i>Log Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="user-picture">
+          <a href="#">
+            <img src="http://lorempicsum.com/rio/80/80/2" alt="">
+          </a>
+        </div>
+      </div>
     </nav><!-- /.navbar -->
 </header>
 
@@ -79,9 +100,13 @@
 
 <footer id="footer" class="footer" role="footer">
   <div class="container">
-    <?php if ($copyright): ?>
-      <small class="copyright pull-left"><?php print $copyright; ?></small>
-    <?php endif; ?>
-    <small class="pull-right"><a href="#"><?php print t('Back to Top'); ?></a></small>
+    <div class="text-center">
+      <div class="footer-logo">
+        <i class="icon-logo-full"></i>
+      </div>
+      <?php if ($copyright): ?>
+        <div class="copyright"><?php print $copyright; ?></div>
+      <?php endif; ?>
+    </div>
   </div>
 </footer>

@@ -287,6 +287,7 @@ tr {
 }
 .modal-content {
     background: $light;
+    min-height: 500px;
     border: 1px solid $color-neutral;
 }
 .modal-header,
@@ -531,6 +532,92 @@ tr {
 
 /* Modal my details */
 
+.modal-body {
+    article {
+        max-width: 640px;
+        margin: 0 auto;
+
+        h2 {
+            display: none;
+        }
+        fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0;
+
+            &:first-of-type {
+                .fieldset-legend {
+                    margin-top: 0;
+                }
+            }
+        }
+        .fieldset-legend {
+            font-size: 1.6rem;
+            margin: 40px 0 20px;
+
+            a {
+                color: $gray-darker;
+                margin-left: 10px;
+            }
+        }
+        .grippie {
+            display: none;
+        }
+        .form-item {
+            @include clearfix;
+
+            label {
+                display: block;
+                float: left;
+                width: 35%;
+                padding: 10px 0;
+                font-size: 1.3rem;
+                color: $gray-darker;
+            }
+        }
+        .form-control,
+        .form-managed-file,
+        .form-managed-file + .description {
+            display: block;
+            float: left;
+            width: 65%;
+        }
+        .webform-container-inline {
+            width: 65%;
+            float: left;
+
+            .form-item {
+                width: 100%;
+                max-width: 100px;
+                margin-right: 20px;
+                float: left;
+            }
+            .form-control {
+                width: 100%;
+                float: none;
+            }
+            .webform-calendar {
+                margin: 10px 0;
+            }
+        }
+        select {
+            &[id*="country"],
+            &[id*="state"],
+            &[id*="custom"] {
+                margin: 10px 0;
+            }
+        }
+        .form-actions {
+            border-top: 1px solid $gray-light;
+            padding-top: 10px;
+            margin-top: 30px;
+
+            .btn {
+                padding: 0.8rem 6rem;
+            }
+        }
+    }
+}
 
 
 /* Splitters */

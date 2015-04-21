@@ -95,13 +95,6 @@ table.manager-approval-main-table th.headerSortDown {
 }
 
 /**
- * Set width so the tooltip shows up in the right location
- */
-.views-tooltip {
-    width: 30px;
-}
-
-/**
  * Manager AJAX filters block / inline settings
  */
 .btn-custom-block {
@@ -318,27 +311,27 @@ tr {
 /* Forms */
 
 form {
-    .form-item {
-        margin: 10px 0;
-
-        label {
-            display: none;
-        }
-    }
-    .form-text {
-        border: 1px solid $color-neutral;
-        font-size: 1.3rem;
-        color: $gray;
-        padding: 10px;
-        margin: 0;
-        width: 100%;
-    }
     hr {
         margin-top: 40px;
     }
     .btn {
         float: right;
     }
+}
+.form-item {
+    margin: 10px 0;
+
+    label {
+        display: none;
+    }
+}
+.form-text {
+    border: 1px solid $color-neutral;
+    font-size: 1.3rem;
+    color: $gray;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
 }
 
 /* Header */
@@ -632,6 +625,21 @@ form {
 label[for*="edit-absence-start-date-period-filter"] {
     margin-bottom: 0;
 }
+.calendar-btn {
+    background: none;
+    color: $gray;
+    padding-right: 0;
+
+    @include fa("\f073");
+
+    &:before {
+        margin-right: 8px;
+    }
+    &:hover {
+        background: none;
+        color: $gray;
+    }
+}
 .pane-views-exp-absence-list-page {
     .views-widget {
         right: 164px;
@@ -642,19 +650,146 @@ label[for*="edit-absence-start-date-period-filter"] {
         right: 35px;
 
         .btn {
-            background: none;
-            color: $gray;
-            padding-right: 0;
-
-            @include fa("\f073");
-
-            &:before {
-                margin-right: 8px;
-            }
+            @extend .calendar-btn;
         }
     }
 }
 .pane-civihr-employee-portal-leave,
 .pane-civihr-employee-portal-sick {
     padding-top: 0;
+}
+
+/* Manager absence approval */
+
+.view-approvals {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 25%;
+        height: 100%;
+        border-left: 1px solid $gray-light;
+        margin-left: 14px;
+    }
+    .absence-approval-actions {
+        position: absolute;
+        top: 13px;
+        right: 35px;
+
+        .view-header,
+        .view-content {
+            display: inline-block;
+        }
+        .view-header {
+            p {
+                margin: 0;
+            }
+            .ctools-use-modal {
+                @extend .btn;
+                @extend .calendar-btn;
+            }
+        }
+        .view-content {
+            margin-left: 20px;
+
+            .input-group {
+                position: relative;
+            }
+            .btn {
+                position: absolute;
+                top: 0;
+                right: 2px;
+                padding: 6px;
+                font-size: 1.1rem;
+                line-height: 1;
+                background: none;
+                color: $color-neutral;
+                cursor: default;
+            }
+            .form-control {
+                @extend .form-text;
+                padding: 2px 8px;
+            }
+        }
+    }
+}
+.pane-views-approvals-block-1 {
+    h4 {
+        margin-bottom: 0;
+    }
+}
+.approval-filters {
+    ul {
+        margin: 0 -20px;
+        font-size: 1.3rem;
+        padding-top: 15px;
+    }
+    .badge {
+        float: right;
+        background: $brand-color;
+        color: $light;
+        border-radius: 100px;
+        padding: 0 7px;
+        min-width: 22px;
+    }
+    .btn {
+        width: 100%;
+        text-align: left;
+        background: none;
+        color: $brand-color;
+        padding: 10px 20px;
+
+        &.active,
+        &:hover {
+            background: $brand-color;
+            color: $light;
+
+            .badge {
+                background: $light;
+                color: $brand-color;
+            }
+        }
+    }
+}
+.approval-overflow-content {
+    margin: 0 -20px 0 -11px;
+    padding-bottom: 20px;
+    overflow: visible !important;
+    height: auto !important;
+
+    thead {
+        background: none;
+        border-top: 0;
+        border-right: 0;
+    }
+    th {
+        background: none;
+        text-shadow: none !important;
+        color: inherit;
+        border: none !important;
+        text-transform: none !important;
+        box-shadow: none;
+        font-family: $sans !important;
+        font-size: 1.3rem !important;
+        color: $gray-darker !important;
+    }
+    .mode-columntoggle {
+        display: none;
+    }
+    .views-tooltip {
+        width: 70px;
+        padding-right: 10px;
+    }
+    #quick-approve {
+        .glyphicon {
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+        [class*="ok-sign"] {
+            color: $color-safe;
+            margin-right: 10px;
+        }
+        [class*="remove-sign"] {
+            color: $color-danger;
+        }
+    }
 }

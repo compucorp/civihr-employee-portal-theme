@@ -266,18 +266,272 @@ tr {
     padding: 0;
 }
 
-/* Modal */
+/* Modals */
 
+#modalBackdrop {
+    display: none !important;
+}
+.modal-dialog {
+    .close {
+        color: $gray;
+        border: 0;
+        background: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-weight: bold;
+        line-height: 1;
+        font-size: 2.2rem;
+        padding: 0;
+    }
+}
 .modal-content {
     background: $light;
+    border: 1px solid $color-neutral;
 }
 .modal-header,
 .modal-body {
-    padding: 40px;
+    padding: 20px;
+}
+.modal-header {
+    border-bottom: 1px solid $gray-light;
+
+    h4 {
+        margin: 0;
+    }
 }
 .modal-body {
     height: auto !important;
 }
+
+/* Modal manager calendar */
+
+.civihr-employee-portal-manager-calendar-block {
+    font-size: 1.2rem;
+
+    h2 {
+        display: none;
+    }
+
+    .content > .views-tooltip {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $gray-darker-alt;
+        // background: $gray-lighter;
+        margin-bottom: 20px;
+    }
+    .table-responsive {
+        border-top: 1px solid $gray-light;
+        margin: 0 -43px 0 -20px;
+    }
+    thead {
+        background: $gray-lighter;
+    }
+    table:not(.calendar-legend) {
+        th,
+        td {
+            padding: 8px 10px;
+            border-right: 1px solid $gray-light;
+
+            &:first-child {
+                padding: 8px 20px;
+                width: 200px;
+                background: $gray-lighter;
+            }
+        }
+    }
+    // Highlight days in calendar
+    // td:not(:first-child):not(:empty) {
+    //     background: $tertiary-color;
+    //     color: $light;
+    // }
+}
+
+.calendar {
+    width: auto;
+    text-align: right;
+    margin-top: 20px;
+
+    .table-responsive {
+        border-top: 0;
+    }
+}
+.calendar-legend {
+
+    thead {
+        display: none;
+    }
+    tbody {
+        border-top: 0;
+    }
+    tr {
+        position: relative;
+
+        &:last-child {
+            td {
+                margin-right: 10px;
+            }
+        }
+        &.odd {
+            background: none;
+        }
+    }
+    tr,
+    th,
+    td {
+        border: 0;
+        display: inline-block;
+    }
+    td {
+        &:first-child {
+            margin-right: 40px;
+        }
+        &:not(:first-child) {
+            position: absolute;
+            left: -10px;
+        }
+    }
+    .stripe {
+        width: 10px;
+        height: 10px;
+        margin: 6px 0;
+    }
+}
+
+/* Modal calendar */
+
+.view-calendar-absence-list {
+    .view-header {
+        margin: -20px -43px 0 -20px;
+        padding: 20px;
+        background: $gray-lighter;
+
+        .date-nav-wrapper {
+            margin: 0;
+        }
+        .date-nav {
+            margin: 0;
+            padding: 0;
+        }
+        h3 {
+            font-size: 1.6rem;
+            color: $gray-darker;
+            font-weight: 400;
+        }
+        .pager {
+            margin: 0;
+        }
+        .date-prev,
+        .date-next {
+            margin-top: -8px;
+            left: -28px;
+
+            .btn {
+                font-size: 0;
+                background: none;
+                color: $gray-darker;
+                @include fa("\f104", 16);
+            }
+        }
+        .date-next {
+            left: auto;
+            right: -28px;
+
+            .btn {
+                @include fa("\f105", 16);
+            }
+        }
+    }
+    &.view {
+        margin: 0;
+        padding: 0;
+    }
+    .view-footer {
+        h2 {
+            display: none;
+        }
+    }
+}
+.calendar-calendar {
+    margin: 0 -44px 0 -20px;
+
+    th,
+    td {
+        border-right: 1px solid $gray-light;
+        padding: 15px;
+        text-align: right;
+
+        &.empty {
+            background: $gray-lighter;
+        }
+    }
+    .today {
+        .day {
+            display: inline-block;
+            background: $tertiary-color;
+            border-radius: 50px;
+            color: $light;
+            width: 2.2rem;
+            height: 2.2rem;
+            line-height: 2.2rem;
+            text-align: center;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+    thead {
+        border-top: 1px solid $gray-light;
+
+        th {
+            text-align: center;
+        }
+    }
+    .date-box,
+    .multi-day {
+        border-bottom: 0;
+    }
+    .multi-day,
+    .single-day {
+        padding: 0;
+    }
+    .date-box {
+        .inner {
+            min-height: 15px;
+        }
+    }
+    .single-day {
+        padding-bottom: 15px;
+    }
+}
+.view-item-calendar_absence_list {
+    position: relative;
+
+    .calendar {
+        margin: 0;
+    }
+    .stripe {
+        height: 30px;
+    }
+    .contents {
+        font-size: 1.1rem;
+        @include vertical-align(absolute);
+        padding: 0 10px;
+        color: $light;
+
+        .views-field:not(.views-field-absence-title) {
+            display: none;
+        }
+    }
+    .cutoff {
+        display: none;
+    }
+}
+
+/* Modal my details */
+
+
 
 /* Splitters */
 

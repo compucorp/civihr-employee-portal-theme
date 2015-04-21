@@ -339,6 +339,15 @@ tr {
                 width: 200px;
                 background: $gray-lighter;
             }
+            &:not(:first-child) {
+                padding: 8px 0;
+                text-align: center;
+            }
+        }
+        tbody {
+            .views-tooltip {
+                font-size: 1.1rem;
+            }
         }
     }
     // Highlight days in calendar
@@ -399,7 +408,7 @@ tr {
     }
 }
 
-/* Modal calendar */
+/* Modal: Calendar */
 
 .view-calendar-absence-list {
     .view-header {
@@ -454,7 +463,7 @@ tr {
     }
 }
 .calendar-calendar {
-    margin: 0 -44px 0 -20px;
+    margin: 0 -43px 0 -20px;
 
     th,
     td {
@@ -530,92 +539,143 @@ tr {
     }
 }
 
-/* Modal my details */
+/* Modal: My details, Emergency contact */
 
-.modal-body {
-    article {
-        max-width: 640px;
-        margin: 0 auto;
+.modal-body article,
+#civihr-employee-portal-absence-request-form {
+    max-width: 640px;
+    margin: 0 auto;
 
-        h2 {
-            display: none;
-        }
-        fieldset {
-            border: 0;
-            margin: 0;
-            padding: 0;
+    h2 {
+        display: none;
+    }
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
 
-            &:first-of-type {
-                .fieldset-legend {
-                    margin-top: 0;
-                }
+        &:first-of-type {
+            .fieldset-legend {
+                margin-top: 0;
             }
         }
-        .fieldset-legend {
-            font-size: 1.6rem;
-            margin: 40px 0 20px;
+    }
+    .fieldset-legend {
+        font-size: 1.6rem;
+        margin: 40px 0 20px;
 
-            a {
-                color: $gray-darker;
-                margin-left: 10px;
-            }
+        a {
+            color: $gray-darker;
+            margin-left: 10px;
         }
-        .grippie {
-            display: none;
-        }
-        .form-item {
-            @include clearfix;
+    }
+    .grippie {
+        display: none;
+    }
+    .form-item {
+        @include clearfix;
 
-            label {
-                display: block;
-                float: left;
-                width: 35%;
-                padding: 10px 0;
-                font-size: 1.3rem;
-                color: $gray-darker;
-            }
-        }
-        .form-control,
-        .form-managed-file,
-        .form-managed-file + .description {
+        label {
             display: block;
             float: left;
-            width: 65%;
+            width: 35%;
+            padding: 10px 0;
+            font-size: 1.3rem;
+            color: $gray-darker;
         }
-        .webform-container-inline {
-            width: 65%;
+    }
+    .form-control,
+    .form-managed-file,
+    .form-managed-file + .description {
+        display: block;
+        float: left;
+        width: 65%;
+    }
+    .webform-container-inline {
+        width: 65%;
+        float: left;
+
+        .form-item {
+            width: 100%;
+            max-width: 100px;
+            margin-right: 20px;
             float: left;
+        }
+        .form-control {
+            width: 100%;
+            float: none;
+        }
+        .webform-calendar {
+            margin: 10px 0;
+        }
+    }
+    select {
+        &[id*="country"],
+        &[id*="state"],
+        &[id*="custom"] {
+            margin: 10px 0;
+        }
+    }
+    .form-actions {
+        border-top: 1px solid $gray-light;
+        padding-top: 10px;
+        margin-top: 30px;
+
+        .btn {
+            padding: 0.8rem 6rem;
+        }
+    }
+}
+
+/* Modal: Request leave */
+
+#civihr-employee-portal-absence-request-form {
+    @include clearfix;
+
+    #absence-request-dates-selected {
+        @include clearfix;
+    }
+    .container-inline-date {
+        & > .form-item {
+            width: 100%;
+        }
+        .date-padding {
+            padding: 0;
+            width: 65%;
 
             .form-item {
                 width: 100%;
-                max-width: 100px;
-                margin-right: 20px;
-                float: left;
-            }
-            .form-control {
-                width: 100%;
-                float: none;
-            }
-            .webform-calendar {
-                margin: 10px 0;
-            }
-        }
-        select {
-            &[id*="country"],
-            &[id*="state"],
-            &[id*="custom"] {
-                margin: 10px 0;
-            }
-        }
-        .form-actions {
-            border-top: 1px solid $gray-light;
-            padding-top: 10px;
-            margin-top: 30px;
 
-            .btn {
-                padding: 0.8rem 6rem;
+                .form-control {
+                    width: 100%;
+                    float: none;
+                }
+            }
+
+            label {
+                display: none;
             }
         }
+        .help-block {
+            display: none;
+        }
+    }
+    #absence-request-dates-selected {
+        border-bottom: 1px solid $gray-light;
+        border-top: 1px solid $gray-light;
+        margin: 20px 0;
+        padding-top: 20px;
+    }
+    .form-type-textarea {
+        border-bottom: 1px solid $gray-light;
+        margin-bottom: 10px;
+        padding-bottom: 30px;
+    }
+    .form-submit {
+        padding: 0.8rem 6rem;
+    }
+    select {
+        margin: 10px 0;
     }
 }
 
@@ -662,7 +722,8 @@ form {
     }
 }
 .form-item {
-    margin: 10px 0;
+    padding: 10px 0;
+    margin: 0;
 
     label {
         display: none;
@@ -964,6 +1025,9 @@ form {
         top: 19px;
         right: 35px;
     }
+    .form-item {
+        padding: 0;
+    }
 }
 label[for*="edit-absence-start-date-period-filter"] {
     margin-bottom: 0;
@@ -1019,6 +1083,7 @@ label[for*="edit-absence-start-date-period-filter"] {
         height: 100%;
         border-left: 1px solid $gray-light;
         margin-left: 14px;
+        display: block;
     }
     .absence-approval-actions {
         position: absolute;

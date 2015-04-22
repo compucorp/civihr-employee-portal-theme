@@ -1333,107 +1333,286 @@ label[for*="edit-absence-start-date-period-filter"] {
 
 /* Page: HR Resources/Documents */
 
-.view-hr-documents {
-    background: none;
-    padding: 0;
+.content {
+    & > .view-hr-documents {
+        background: none;
+        padding: 0;
 
-    .view-filters,
-    .view-content {
-        @include clearfix;
-        background: $light;
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    .view-content {
-        margin-bottom: 0;
-    }
-    .view-filters {
-        label {
-            width: 120px;
-            float: left;
-            font-size: 1.3rem;
-            padding: 20px 0;
-        }
-        select {
-            margin: 10px 0;
-            width: 100%;
-        }
-        .views-exposed-widgets {
-            position: relative;
-        }
-        .views-widget {
-            float: left;
-        }
-        .views-widget-filter-combine,
-        .views-submit-button {
+        .view-filters,
+        .view-content {
             @include clearfix;
+            background: $light;
+            padding: 20px;
+            margin-bottom: 20px;
         }
-        .views-widget-filter-combine {
+        .view-content {
+            margin-bottom: 0;
+        }
+        .view-filters {
+            label {
+                width: 120px;
+                float: left;
+                font-size: 1.3rem;
+                padding: 20px 0;
+            }
+            select {
+                margin: 10px 0;
+                width: 100%;
+            }
+            .views-exposed-widgets {
+                position: relative;
+            }
+            .views-widget {
+                float: left;
+            }
+            .views-widget-filter-combine,
+            .views-submit-button {
+                @include clearfix;
+            }
+            .views-widget-filter-combine {
+                .views-widget {
+                    width: 40%;
+                }
+            }
+            .views-widget-filter-field_resource_type_tid {
+                .views-widget {
+                    width: 20%;
+                    padding-right: 10px;
+                }
+
+            }
+            .views-widget-per-page {
+                width: 20%;
+                float: left;
+                padding-left: 10px;
+
+                &:after {
+                    content: "";
+                    width: 100%;
+                    border-bottom: 1px solid $gray-light;
+                    bottom: 50px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+            .form-submit {
+                margin-top: 30px;
+            }
+        }
+        .row-hr-resource {
+            @extend .row;
+            margin: 0 -20px;
+            padding: 20px 5px;
+
+            &.views-row-odd {
+                background: $gray-lighter;
+                border-top: 1px solid $gray-light;
+                border-bottom: 1px solid $gray-light;
+            }
+            blockquote {
+                margin: 0;
+                font-size: 1.6rem;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+            .views-field-body {
+                .col-md-2 {
+                    display: none;
+                }
+                .col-md-10 {
+                    @extend .col-md-offset-2;
+                }
+                p {
+                    margin-top: 0;
+                }
+            }
+            #resource-modal {
+                a {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: $gray-darker;
+                }
+            }
+            .fieldset-legend {
+                margin-left: -5px;
+            }
+            .fieldset-title {
+                color: $gray;
+                font-size: 1.3rem;
+                margin-left: 5px;
+            }
+            fieldset {
+                padding: 0 15px;
+                border: 0;
+            }
+            .fieldset-wrapper {
+                margin-top: 20px;
+                background: $gray-light-alt;
+                padding: 15px 20px;
+
+                .hr-doc-label,
+                thead,
+                td:last-child {
+                    display: none;
+                }
+                tbody {
+                    border: none;
+                }
+                a {
+                    font-size: 1.3rem;
+                }
+                img {
+                    position: relative;
+                    top: -2px;
+                    margin-right: 4px;
+                }
+            }
+            tr.odd {
+                background: none;
+            }
+            th,
+            td,
+            tr {
+                border: 0;
+            }
+            .hr-resouce-download-all {
+                width: 100%;
+                font-family: $sans;
+                word-spacing: 0;
+                font-weight: 400;
+                font-size: 1.3rem;
+                text-align: right;
+
+                @include fa('\f019', 13);
+
+                &:before {
+                    margin-right: 4px;
+                }
+            }
+        }
+        .item-list {
+            background: $light;
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding: 0 20px 20px;
+            text-transform: capitalize;
+
+            &,
+            a {
+                color: $gray;
+            }
+            .page-current {
+                color: $gray-darker;
+                font-weight: 700;
+            }
+            .pager-current {
+                text-transform: none;
+            }
+            ul {
+                margin: 0;
+            }
+            li {
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+        .modal-body & {
+            margin: 0;
+
+            .view-content {
+                padding: 0;
+            }
+            .hr-resouce-download-all {
+                @extend .btn;
+
+                font-family: $sans;
+                word-spacing: 0;
+                font-weight: 400;
+                font-size: 1.3rem;
+                text-align: right;
+
+                @include fa('\f019', 13);
+
+                &:before {
+                    margin-right: 4px;
+                }
+            }
+            .hr-documents-body-block + .views-field-nothing {
+                text-align: right;
+                border-top: 1px solid $gray-light;
+                margin-top: 20px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+/* Page: HR Vacancies */
+
+.content {
+    & > .view-hr-vacancies {
+        @extend .view-hr-documents;
+
+        .view-filters {
             .views-widget {
                 width: 40%;
             }
         }
-        .views-widget-filter-field_resource_type_tid {
-            .views-widget {
-                width: 20%;
-                padding-right: 10px;
-            }
-
+        .views-exposed-widget {
+            @include clearfix;
         }
-        .views-widget-per-page {
-            width: 20%;
-            float: left;
-            padding-left: 10px;
+        .views-submit-button {
+            border-top: 1px solid $gray-light;
+            margin-top: 20px;
 
-            &:after {
-                content: "";
-                width: 100%;
-                border-bottom: 1px solid $gray-light;
-                bottom: 50px;
-                position: absolute;
-                left: 0;
+            .form-submit {
+                margin-top: 10px;
             }
         }
-        .form-submit {
-            margin-top: 30px;
+        .view-content {
+            font-size: 1.3rem;
         }
-    }
-    .row-hr-resource {
-        @extend .row;
-        margin: 0 -20px;
-        padding: 20px 5px;
+        .views-row {
+            @include clearfix;
 
-        &.views-row-odd {
+            margin: 0 -20px;
+            padding: 20px;
+
+            & > .views-field:first-of-type {
+                .field-content {
+                    color: $brand-color;
+                }
+            }
+        }
+        .views-row-odd {
             background: $gray-lighter;
             border-top: 1px solid $gray-light;
             border-bottom: 1px solid $gray-light;
         }
-        blockquote {
+        .field-content {
+            margin-top: 10px;
+
+            .btn {
+                background: none;
+                padding: 0;
+                color: $brand-color;
+            }
+        }
+        .vacancy-wrapper {
             margin: 0;
-            font-size: 1.6rem;
-            font-weight: 300;
-            text-transform: capitalize;
-        }
-        .views-field-body {
-            .col-md-2 {
-                display: none;
-            }
-            .col-md-10 {
-                @extend .col-md-offset-2;
-            }
-            p {
-                margin-top: 0;
+
+            &:last-of-type {
+                text-align: right;
+                float: right;
+
+                .field-content {
+                    margin-top: 0;
+                }
             }
         }
-        #resource-modal {
-            a {
-                font-size: 1.6rem;
-                font-weight: 700;
-                color: $gray-darker;
-            }
-        }
+
         .fieldset-legend {
-            margin-left: -5px;
+            margin-left: -6px;
         }
         .fieldset-title {
             color: $gray;
@@ -1441,118 +1620,113 @@ label[for*="edit-absence-start-date-period-filter"] {
             margin-left: 5px;
         }
         fieldset {
-            padding: 0 15px;
+            padding: 0;
             border: 0;
+            margin-top: 20px;
         }
         .fieldset-wrapper {
             margin-top: 20px;
             background: $gray-light-alt;
             padding: 15px 20px;
 
-            .hr-doc-label,
-            thead,
-            td:last-child {
-                display: none;
+            .views-field {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
-            tbody {
-                border: none;
+            .views-label {
+                width: 16.6%;
+                display: inline-block;
             }
-            a {
-                font-size: 1.3rem;
-            }
-            img {
-                position: relative;
-                top: -2px;
-                margin-right: 4px;
-            }
-        }
-        tr.odd {
-            background: none;
-        }
-        .hr-resouce-download-all {
-            width: 100%;
-            font-family: $sans;
-            word-spacing: 0;
-            font-weight: 400;
-            font-size: 1.3rem;
-            text-align: right;
-
-            @include fa('\f019', 13);
-
-            &:before {
-                margin-right: 4px;
-            }
-        }
-    }
-    .item-list {
-        background: $light;
-        font-size: 1.3rem;
-        font-weight: 400;
-        padding: 0 20px 20px;
-
-        &,
-        a {
-            color: $gray;
-        }
-        .page-current {
-            color: $gray-darker;
-            font-weight: 700;
-        }
-        ul {
-            margin: 0;
-        }
-        li {
-            display: inline-block;
-            margin-right: 5px;
-        }
-    }
-    .modal-body & {
-        margin: 0;
-
-        .view-content {
-            padding: 0;
-        }
-        .hr-resouce-download-all {
-            @extend .btn;
-
-            font-family: $sans;
-            word-spacing: 0;
-            font-weight: 400;
-            font-size: 1.3rem;
-            text-align: right;
-
-            @include fa('\f019', 13);
-
-            &:before {
-                margin-right: 4px;
-            }
-        }
-        .hr-documents-body-block + .views-field-nothing {
-            text-align: right;
-            border-top: 1px solid $gray-light;
-            margin-top: 20px;
-            padding-top: 10px;
         }
     }
 }
 
-.view-hr-vacancies {
-    @extend .view-hr-documents;
+/* Page: HR Staff Directory */
 
+.view-hr-staff-directory {
+    background: none;
+    padding: 0;
+
+    .view-filters,
+    .view-content,
+    .item-list {
+        background: $light;
+        padding: 20px;
+    }
     .view-filters {
-        .views-widget {
-            width: 40%;
-        }
-    }
-    .views-exposed-widget {
-        @include clearfix;
-    }
-    .views-submit-button {
-        border-top: 1px solid $gray-light;
-        margin-top: 20px;
+        margin-bottom: 20px;
 
+        .views-exposed-form {
+            position: relative;
+
+            &:after {
+                content: "";
+                border-bottom: 1px solid $gray-light;
+                width: 100%;
+                position: absolute;
+                bottom: 55px;
+            }
+        }
+        .views-exposed-widgets {
+            margin: 0 -10px;
+        }
+        .views-exposed-widget:not(.views-submit-button) {
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+            margin-bottom: 10px;
+        }
+        .views-submit-button {
+            padding: 0 10px;
+            @include clearfix;
+        }
         .form-submit {
-            margin-top: 10px;
+            margin-top: 30px;
         }
     }
+    .view-content {
+        .table-responsive {
+            margin-top: -20px;
+        }
+        th,
+        td {
+            padding: 15px 20px;
+        }
+    }
+    .item-list {
+        padding-top: 0;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+
+        .pager-current {
+            color: $gray-dark;
+            font-weight: 700;
+        }
+        &,
+        a {
+            color: $gray;
+            font-weight: 400;
+        }
+        .pagination {
+            margin-bottom: 0;
+            text-align: left;
+        }
+        .first {
+            padding-left: 0;
+        }
+    }
+}
+
+/* Login/Register page */
+
+.block-user {
+    padding: 0 20px;
+}
+#user-pass,
+#user-login,
+#user-register-form {
+    padding: 0 15px;
 }

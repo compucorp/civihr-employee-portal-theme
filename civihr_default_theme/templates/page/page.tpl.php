@@ -35,6 +35,37 @@
         <?php endif; ?>
 
       </div><!-- /.navbar-collapse -->
+
+      <?php if ($logged_in) { ?>
+
+      <div class="user-options">
+        <div class="user-menu">
+          <div class="user-name">
+            <span class="value"> <?php print $user_name; ?> </span>
+            <i class="fa fa-caret-down"></i>
+          </div>
+
+          <ul class="user-submenu">
+            <li>
+                <?php print $edit_account; ?>
+            </li>
+            <li>
+                <?php print $logout_link; ?>
+            </li>
+          </ul>
+        </div>
+
+        <?php if ($image_url != '') { ?>
+          <div class="user-picture">
+            <a href="#">
+              <img src="<?php print $image_url; ?>" alt="">
+            </a>
+          </div>
+        <?php } ?>
+
+      </div>
+
+      <?php } ?>
     </nav><!-- /.navbar -->
 </header>
 
@@ -79,9 +110,13 @@
 
 <footer id="footer" class="footer" role="footer">
   <div class="container">
-    <?php if ($copyright): ?>
-      <small class="copyright pull-left"><?php print $copyright; ?></small>
-    <?php endif; ?>
-    <small class="pull-right"><a href="#"><?php print t('Back to Top'); ?></a></small>
+    <div class="text-center">
+      <div class="footer-logo">
+        <i class="icon-logo-full"></i>
+      </div>
+      <?php if ($copyright): ?>
+        <div class="copyright"><?php print $copyright; ?></div>
+      <?php endif; ?>
+    </div>
   </div>
 </footer>

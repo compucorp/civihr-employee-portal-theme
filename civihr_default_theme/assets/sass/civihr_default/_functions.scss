@@ -1,9 +1,23 @@
 // Clearfix
-@mixin clearfix {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+@mixin cf-content {
+    content: "";
+    display: table;
+    clear: both;
+}
+@mixin clearfix($where: both) {
+    @if $where == 'before' {
+        &:before {
+            @include cf-content;
+        }
+    } @elseif $where == 'after' {
+        &:after {
+            @include cf-content;
+        }
+    } @else {
+        &:before,
+        &:after {
+            @include cf-content;
+        }
     }
 }
 

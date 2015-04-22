@@ -95,13 +95,6 @@ table.manager-approval-main-table th.headerSortDown {
 }
 
 /**
- * Set width so the tooltip shows up in the right location
- */
-.views-tooltip {
-    width: 30px;
-}
-
-/**
  * Manager AJAX filters block / inline settings
  */
 .btn-custom-block {
@@ -195,6 +188,7 @@ table.manager-approval-main-table th.headerSortDown {
 body {
     font-family: $sans;
     color: $gray;
+    background: $gray-light;
 }
 
 /* Lists */
@@ -254,6 +248,7 @@ th,
 td {
     border-bottom: 1px solid $gray-light;
     padding: 8px 20px;
+    line-height: 1.3;
 }
 th {
     color: $gray-darker;
@@ -271,18 +266,419 @@ tr {
     padding: 0;
 }
 
-/* Modal */
+/* Modals */
 
+#modalBackdrop {
+    display: none !important;
+}
+.modal-dialog {
+    .close {
+        color: $gray;
+        border: 0;
+        background: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-weight: bold;
+        line-height: 1;
+        font-size: 2.2rem;
+        padding: 0;
+    }
+}
 .modal-content {
     background: $light;
+    min-height: 500px;
+    border: 1px solid $color-neutral;
 }
 .modal-header,
 .modal-body {
-    padding: 40px;
+    padding: 20px;
+}
+.modal-header {
+    border-bottom: 1px solid $gray-light;
+
+    h4 {
+        margin: 0;
+    }
 }
 .modal-body {
     height: auto !important;
 }
+
+/* Modal manager calendar */
+
+.civihr-employee-portal-manager-calendar-block {
+    font-size: 1.2rem;
+
+    h2 {
+        display: none;
+    }
+
+    .content > .views-tooltip {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $gray-darker-alt;
+        // background: $gray-lighter;
+        margin-bottom: 20px;
+    }
+    .table-responsive {
+        border-top: 1px solid $gray-light;
+        margin: 0 -43px 0 -20px;
+    }
+    thead {
+        background: $gray-lighter;
+    }
+    table:not(.calendar-legend) {
+        th,
+        td {
+            padding: 8px 10px;
+            border-right: 1px solid $gray-light;
+
+            &:first-child {
+                padding: 8px 20px;
+                width: 200px;
+                background: $gray-lighter;
+            }
+            &:not(:first-child) {
+                padding: 8px 0;
+                text-align: center;
+            }
+        }
+        tbody {
+            .views-tooltip {
+                font-size: 1.1rem;
+            }
+        }
+    }
+    // Highlight days in calendar
+    // td:not(:first-child):not(:empty) {
+    //     background: $tertiary-color;
+    //     color: $light;
+    // }
+}
+
+.calendar {
+    width: auto;
+    text-align: right;
+    margin-top: 20px;
+
+    .table-responsive {
+        border-top: 0;
+    }
+}
+.calendar-legend {
+
+    thead {
+        display: none;
+    }
+    tbody {
+        border-top: 0;
+    }
+    tr {
+        position: relative;
+
+        &:last-child {
+            td {
+                margin-right: 10px;
+            }
+        }
+        &.odd {
+            background: none;
+        }
+    }
+    tr,
+    th,
+    td {
+        border: 0;
+        display: inline-block;
+    }
+    td {
+        &:first-child {
+            margin-right: 40px;
+        }
+        &:not(:first-child) {
+            position: absolute;
+            left: -10px;
+        }
+    }
+    .stripe {
+        width: 10px;
+        height: 10px;
+        margin: 6px 0;
+    }
+}
+
+/* Modal: Calendar */
+
+.view-calendar-absence-list {
+    .view-header {
+        margin: -20px -43px 0 -20px;
+        padding: 20px;
+        background: $gray-lighter;
+
+        .date-nav-wrapper {
+            margin: 0;
+        }
+        .date-nav {
+            margin: 0;
+            padding: 0;
+        }
+        h3 {
+            font-size: 1.6rem;
+            color: $gray-darker;
+            font-weight: 400;
+        }
+        .pager {
+            margin: 0;
+        }
+        .date-prev,
+        .date-next {
+            margin-top: -8px;
+            left: -28px;
+
+            .btn {
+                font-size: 0;
+                background: none;
+                color: $gray-darker;
+                @include fa("\f104", 16);
+            }
+        }
+        .date-next {
+            left: auto;
+            right: -28px;
+
+            .btn {
+                @include fa("\f105", 16);
+            }
+        }
+    }
+    &.view {
+        margin: 0;
+        padding: 0;
+    }
+    .view-footer {
+        h2 {
+            display: none;
+        }
+    }
+}
+.calendar-calendar {
+    margin: 0 -43px 0 -20px;
+
+    th,
+    td {
+        border-right: 1px solid $gray-light;
+        padding: 15px;
+        text-align: right;
+
+        &.empty {
+            background: $gray-lighter;
+        }
+    }
+    .today {
+        .day {
+            display: inline-block;
+            background: $tertiary-color;
+            border-radius: 50px;
+            color: $light;
+            width: 2.2rem;
+            height: 2.2rem;
+            line-height: 2.2rem;
+            text-align: center;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+    thead {
+        border-top: 1px solid $gray-light;
+
+        th {
+            text-align: center;
+        }
+    }
+    .date-box,
+    .multi-day {
+        border-bottom: 0;
+    }
+    .multi-day,
+    .single-day {
+        padding: 0;
+    }
+    .date-box {
+        .inner {
+            min-height: 15px;
+        }
+    }
+    .single-day {
+        padding-bottom: 15px;
+    }
+}
+.view-item-calendar_absence_list {
+    position: relative;
+
+    .calendar {
+        margin: 0;
+    }
+    .stripe {
+        height: 30px;
+    }
+    .contents {
+        font-size: 1.1rem;
+        @include vertical-align(absolute);
+        padding: 0 10px;
+        color: $light;
+
+        .views-field:not(.views-field-absence-title) {
+            display: none;
+        }
+    }
+    .cutoff {
+        display: none;
+    }
+}
+
+/* Modal: My details, Emergency contact */
+
+.modal-body article,
+#civihr-employee-portal-absence-request-form {
+    max-width: 640px;
+    margin: 0 auto;
+
+    h2 {
+        display: none;
+    }
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        &:first-of-type {
+            .fieldset-legend {
+                margin-top: 0;
+            }
+        }
+    }
+    .fieldset-legend {
+        font-size: 1.6rem;
+        margin: 40px 0 20px;
+
+        a {
+            color: $gray-darker;
+            margin-left: 10px;
+        }
+    }
+    .grippie {
+        display: none;
+    }
+    .form-item {
+        @include clearfix;
+
+        label {
+            display: block;
+            float: left;
+            width: 35%;
+            padding: 10px 0;
+            font-size: 1.3rem;
+            color: $gray-darker;
+        }
+    }
+    .form-control,
+    .form-managed-file,
+    .form-managed-file + .description {
+        display: block;
+        float: left;
+        width: 65%;
+    }
+    .webform-container-inline {
+        width: 65%;
+        float: left;
+
+        .form-item {
+            width: 100%;
+            max-width: 100px;
+            margin-right: 20px;
+            float: left;
+        }
+        .form-control {
+            width: 100%;
+            float: none;
+        }
+        .webform-calendar {
+            margin: 10px 0;
+        }
+    }
+    select {
+        &[id*="country"],
+        &[id*="state"],
+        &[id*="custom"] {
+            margin: 10px 0;
+        }
+    }
+    .form-actions {
+        border-top: 1px solid $gray-light;
+        padding-top: 10px;
+        margin-top: 30px;
+
+        .btn {
+            padding: 0.8rem 6rem;
+        }
+    }
+}
+
+/* Modal: Request leave */
+
+#civihr-employee-portal-absence-request-form {
+    @include clearfix;
+
+    #absence-request-dates-selected {
+        @include clearfix;
+    }
+    .container-inline-date {
+        & > .form-item {
+            width: 100%;
+        }
+        .date-padding {
+            padding: 0;
+            width: 65%;
+
+            .form-item {
+                width: 100%;
+
+                .form-control {
+                    width: 100%;
+                    float: none;
+                }
+            }
+
+            label {
+                display: none;
+            }
+        }
+        .help-block {
+            display: none;
+        }
+    }
+    #absence-request-dates-selected {
+        border-bottom: 1px solid $gray-light;
+        border-top: 1px solid $gray-light;
+        margin: 20px 0;
+        padding-top: 20px;
+    }
+    .form-type-textarea {
+        border-bottom: 1px solid $gray-light;
+        margin-bottom: 10px;
+        padding-bottom: 30px;
+    }
+    .form-submit {
+        padding: 0.8rem 6rem;
+    }
+    select {
+        margin: 10px 0;
+    }
+}
+
 
 /* Splitters */
 
@@ -318,27 +714,28 @@ tr {
 /* Forms */
 
 form {
-    .form-item {
-        margin: 10px 0;
-
-        label {
-            display: none;
-        }
-    }
-    .form-text {
-        border: 1px solid $color-neutral;
-        font-size: 1.3rem;
-        color: $gray;
-        padding: 10px;
-        margin: 0;
-        width: 100%;
-    }
     hr {
         margin-top: 40px;
     }
     .btn {
         float: right;
     }
+}
+.form-item {
+    padding: 10px 0;
+    margin: 0;
+
+    label {
+        display: none;
+    }
+}
+.form-text {
+    border: 1px solid $color-neutral;
+    font-size: 1.3rem;
+    color: $gray;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
 }
 
 /* Header */
@@ -628,9 +1025,27 @@ form {
         top: 19px;
         right: 35px;
     }
+    .form-item {
+        padding: 0;
+    }
 }
 label[for*="edit-absence-start-date-period-filter"] {
     margin-bottom: 0;
+}
+.calendar-btn {
+    background: none;
+    color: $gray;
+    padding-right: 0;
+
+    @include fa("\f073");
+
+    &:before {
+        margin-right: 8px;
+    }
+    &:hover {
+        background: none;
+        color: $gray;
+    }
 }
 .pane-views-exp-absence-list-page {
     .views-widget {
@@ -642,19 +1057,676 @@ label[for*="edit-absence-start-date-period-filter"] {
         right: 35px;
 
         .btn {
-            background: none;
-            color: $gray;
-            padding-right: 0;
-
-            @include fa("\f073");
-
-            &:before {
-                margin-right: 8px;
-            }
+            @extend .calendar-btn;
         }
     }
 }
 .pane-civihr-employee-portal-leave,
 .pane-civihr-employee-portal-sick {
     padding-top: 0;
+}
+
+.view-empty {
+    p {
+        margin: 0;
+        padding: 15px 0;
+    }
+}
+
+/* Manager absence approval */
+
+.view-approvals {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 25%;
+        height: 100%;
+        border-left: 1px solid $gray-light;
+        margin-left: 14px;
+        display: block;
+    }
+    .absence-approval-actions {
+        position: absolute;
+        top: 13px;
+        right: 35px;
+
+        .view-header,
+        .view-content {
+            display: inline-block;
+        }
+        .view-header {
+            p {
+                margin: 0;
+            }
+            .ctools-use-modal {
+                @extend .btn;
+                @extend .calendar-btn;
+            }
+        }
+        .view-content {
+            margin-left: 20px;
+
+            .input-group {
+                position: relative;
+            }
+            .btn {
+                position: absolute;
+                top: 0;
+                right: 2px;
+                padding: 6px;
+                font-size: 1.1rem;
+                line-height: 1;
+                background: none;
+                color: $color-neutral;
+                cursor: default;
+            }
+            .form-control {
+                @extend .form-text;
+                padding: 2px 8px;
+            }
+        }
+    }
+}
+.pane-views-approvals-block-1 {
+    h4 {
+        margin-bottom: 0;
+    }
+}
+.approval-filters {
+    ul {
+        margin: 0 -20px;
+        font-size: 1.3rem;
+        padding-top: 15px;
+    }
+    .badge {
+        float: right;
+        background: $brand-color;
+        color: $light;
+        border-radius: 100px;
+        padding: 0 7px;
+        min-width: 22px;
+    }
+    .btn {
+        width: 100%;
+        text-align: left;
+        background: none;
+        color: $brand-color;
+        padding: 10px 20px;
+
+        &.active,
+        &:hover {
+            background: $brand-color;
+            color: $light;
+
+            .badge {
+                background: $light;
+                color: $brand-color;
+            }
+        }
+    }
+}
+
+// !important here overwrites css from tablesaw.css
+.approval-overflow-content {
+    margin: 0 -20px 0 -10px;
+    padding-bottom: 20px;
+    overflow: visible !important;
+    height: auto !important;
+
+    thead {
+        background: none;
+        border: 0;
+    }
+    tbody {
+        border-top-color: $gray-light;
+    }
+    th,
+    td {
+        line-height: 1.3 !important;
+    }
+    th {
+        background: none;
+        text-shadow: none !important;
+        color: inherit;
+        border: none !important;
+        text-transform: none !important;
+        box-shadow: none;
+        font-family: $sans !important;
+        font-size: 1.3rem !important;
+        color: $gray-darker !important;
+    }
+    .mode-columntoggle {
+        display: none;
+    }
+    .views-tooltip {
+        width: 70px;
+        padding-right: 10px;
+    }
+    #quick-approve {
+        .glyphicon {
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+        [class*="ok-sign"] {
+            color: $color-safe;
+            margin-right: 10px;
+        }
+        [class*="remove-sign"] {
+            color: $color-danger;
+        }
+    }
+}
+
+/* User menu */
+
+.user-options {
+    float: right;
+    margin-right: 30px;
+
+    .user-name {
+        padding: 0 10px;
+
+        & > i {
+            margin-left: 4px;
+        }
+    }
+
+    .user-menu {
+        float: left;
+        margin-right: 10px;
+        color: $light-pale;
+        position: relative;
+        cursor: default;
+
+        &:hover {
+            color: $light;
+            background: $gray-darker-alt;
+
+            .user-submenu {
+                display: block;
+            }
+        }
+    }
+    .user-submenu {
+        display: none;
+        position: absolute;
+        right: 0;
+        background: $gray-darker-alt;
+
+        a {
+            display: block;
+            padding: 0 40px 0 20px;
+            white-space: nowrap;
+            color: $light-pale;
+
+            i {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: $light;
+                background: $secondary-color;
+            }
+        }
+    }
+
+
+    .user-picture {
+        float: left;
+        padding: 7px;
+
+        a {
+            width: 34px;
+            height: 34px;
+            display: block;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        img {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-height: 34px;
+            display: block;
+        }
+    }
+}
+
+/* Footer */
+
+.footer {
+    background: $gray-light;
+    color: $gray;
+    padding: 50px 0;
+
+    .footer-logo {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    .copyright {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}
+.page-dashboard {
+    .footer {
+        margin-top: -30px;
+    }
+}
+
+/* Page: My details */
+
+.page-hr-details {
+    .civihr-employee-portal-my-details-block {
+        background: $light;
+        padding: 20px;
+        margin: 0 15px;
+
+        .view {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+/* Page: HR Resources/Documents */
+
+.content {
+    & > .view-hr-documents {
+        background: none;
+        padding: 0;
+
+        .view-filters,
+        .view-content {
+            @include clearfix;
+            background: $light;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .view-content {
+            margin-bottom: 0;
+        }
+        .view-filters {
+            label {
+                width: 120px;
+                float: left;
+                font-size: 1.3rem;
+                padding: 20px 0;
+            }
+            select {
+                margin: 10px 0;
+                width: 100%;
+            }
+            .views-exposed-widgets {
+                position: relative;
+            }
+            .views-widget {
+                float: left;
+            }
+            .views-widget-filter-combine,
+            .views-submit-button {
+                @include clearfix;
+            }
+            .views-widget-filter-combine {
+                .views-widget {
+                    width: 40%;
+                }
+            }
+            .views-widget-filter-field_resource_type_tid {
+                .views-widget {
+                    width: 20%;
+                    padding-right: 10px;
+                }
+
+            }
+            .views-widget-per-page {
+                width: 20%;
+                float: left;
+                padding-left: 10px;
+
+                &:after {
+                    content: "";
+                    width: 100%;
+                    border-bottom: 1px solid $gray-light;
+                    bottom: 50px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+            .form-submit {
+                margin-top: 30px;
+            }
+        }
+        .row-hr-resource {
+            @extend .row;
+            margin: 0 -20px;
+            padding: 20px 5px;
+
+            &.views-row-odd {
+                background: $gray-lighter;
+                border-top: 1px solid $gray-light;
+                border-bottom: 1px solid $gray-light;
+            }
+            blockquote {
+                margin: 0;
+                font-size: 1.6rem;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+            .views-field-body {
+                .col-md-2 {
+                    display: none;
+                }
+                .col-md-10 {
+                    @extend .col-md-offset-2;
+                }
+                p {
+                    margin-top: 0;
+                }
+            }
+            #resource-modal {
+                a {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: $gray-darker;
+                }
+            }
+            .fieldset-legend {
+                margin-left: -5px;
+            }
+            .fieldset-title {
+                color: $gray;
+                font-size: 1.3rem;
+                margin-left: 5px;
+            }
+            fieldset {
+                padding: 0 15px;
+                border: 0;
+            }
+            .fieldset-wrapper {
+                margin-top: 20px;
+                background: $gray-light-alt;
+                padding: 15px 20px;
+
+                .hr-doc-label,
+                thead,
+                td:last-child {
+                    display: none;
+                }
+                tbody {
+                    border: none;
+                }
+                a {
+                    font-size: 1.3rem;
+                }
+                img {
+                    position: relative;
+                    top: -2px;
+                    margin-right: 4px;
+                }
+            }
+            tr.odd {
+                background: none;
+            }
+            th,
+            td,
+            tr {
+                border: 0;
+            }
+            .hr-resouce-download-all {
+                width: 100%;
+                font-family: $sans;
+                word-spacing: 0;
+                font-weight: 400;
+                font-size: 1.3rem;
+                text-align: right;
+
+                @include fa('\f019', 13);
+
+                &:before {
+                    margin-right: 4px;
+                }
+            }
+        }
+        .item-list {
+            background: $light;
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding: 0 20px 20px;
+            text-transform: capitalize;
+
+            &,
+            a {
+                color: $gray;
+            }
+            .page-current {
+                color: $gray-darker;
+                font-weight: 700;
+            }
+            .pager-current {
+                text-transform: none;
+            }
+            ul {
+                margin: 0;
+            }
+            li {
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+        .modal-body & {
+            margin: 0;
+
+            .view-content {
+                padding: 0;
+            }
+            .hr-resouce-download-all {
+                @extend .btn;
+
+                font-family: $sans;
+                word-spacing: 0;
+                font-weight: 400;
+                font-size: 1.3rem;
+                text-align: right;
+
+                @include fa('\f019', 13);
+
+                &:before {
+                    margin-right: 4px;
+                }
+            }
+            .hr-documents-body-block + .views-field-nothing {
+                text-align: right;
+                border-top: 1px solid $gray-light;
+                margin-top: 20px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+/* Page: HR Vacancies */
+
+.content {
+    & > .view-hr-vacancies {
+        @extend .view-hr-documents;
+
+        .view-filters {
+            .views-widget {
+                width: 40%;
+            }
+        }
+        .views-exposed-widget {
+            @include clearfix;
+        }
+        .views-submit-button {
+            border-top: 1px solid $gray-light;
+            margin-top: 20px;
+
+            .form-submit {
+                margin-top: 10px;
+            }
+        }
+        .view-content {
+            font-size: 1.3rem;
+        }
+        .views-row {
+            @include clearfix;
+
+            margin: 0 -20px;
+            padding: 20px;
+
+            & > .views-field:first-of-type {
+                .field-content {
+                    color: $brand-color;
+                }
+            }
+        }
+        .views-row-odd {
+            background: $gray-lighter;
+            border-top: 1px solid $gray-light;
+            border-bottom: 1px solid $gray-light;
+        }
+        .field-content {
+            margin-top: 10px;
+
+            .btn {
+                background: none;
+                padding: 0;
+                color: $brand-color;
+            }
+        }
+        .vacancy-wrapper {
+            margin: 0;
+
+            &:last-of-type {
+                text-align: right;
+                float: right;
+
+                .field-content {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .fieldset-legend {
+            margin-left: -6px;
+        }
+        .fieldset-title {
+            color: $gray;
+            font-size: 1.3rem;
+            margin-left: 5px;
+        }
+        fieldset {
+            padding: 0;
+            border: 0;
+            margin-top: 20px;
+        }
+        .fieldset-wrapper {
+            margin-top: 20px;
+            background: $gray-light-alt;
+            padding: 15px 20px;
+
+            .views-field {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .views-label {
+                width: 16.6%;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* Page: HR Staff Directory */
+
+.view-hr-staff-directory {
+    background: none;
+    padding: 0;
+
+    .view-filters,
+    .view-content,
+    .item-list {
+        background: $light;
+        padding: 20px;
+    }
+    .view-filters {
+        margin-bottom: 20px;
+
+        .views-exposed-form {
+            position: relative;
+
+            &:after {
+                content: "";
+                border-bottom: 1px solid $gray-light;
+                width: 100%;
+                position: absolute;
+                bottom: 55px;
+            }
+        }
+        .views-exposed-widgets {
+            margin: 0 -10px;
+        }
+        .views-exposed-widget:not(.views-submit-button) {
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+            margin-bottom: 10px;
+        }
+        .views-submit-button {
+            padding: 0 10px;
+            @include clearfix;
+        }
+        .form-submit {
+            margin-top: 30px;
+        }
+    }
+    .view-content {
+        .table-responsive {
+            margin-top: -20px;
+        }
+        th,
+        td {
+            padding: 15px 20px;
+        }
+    }
+    .item-list {
+        padding-top: 0;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+
+        .pager-current {
+            color: $gray-dark;
+            font-weight: 700;
+        }
+        &,
+        a {
+            color: $gray;
+            font-weight: 400;
+        }
+        .pagination {
+            margin-bottom: 0;
+            text-align: left;
+        }
+        .first {
+            padding-left: 0;
+        }
+    }
+}
+
+/* Login/Register page */
+
+.block-user {
+    padding: 0 20px;
+}
+#user-pass,
+#user-login,
+#user-register-form {
+    padding: 0 15px;
 }

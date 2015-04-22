@@ -342,9 +342,11 @@ th {
   }
 
   /* line 83, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  .btn > .caret, .view-approvals .absence-approval-actions .view-header .ctools-use-modal > .caret,
+  .btn > .caret, .view-approvals .absence-approval-actions .view-header .ctools-use-modal > .caret, .modal-body .view-hr-documents .hr-resouce-download-all > .caret, .modal-body .view-hr-vacancies .hr-resouce-download-all > .caret,
   .dropup > .btn > .caret,
-  .view-approvals .absence-approval-actions .view-header .dropup > .ctools-use-modal > .caret {
+  .view-approvals .absence-approval-actions .view-header .dropup > .ctools-use-modal > .caret,
+  .modal-body .view-hr-documents .dropup > .hr-resouce-download-all > .caret,
+  .modal-body .view-hr-vacancies .dropup > .hr-resouce-download-all > .caret {
     border-top-color: #000 !important;
   }
 
@@ -1571,17 +1573,17 @@ hr {
 }
 
 /* line 39, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_grid.scss */
-.row {
+.row, .view-hr-documents .row-hr-resource, .view-hr-vacancies .row-hr-resource {
   margin-left: -15px;
   margin-right: -15px;
 }
 /* line 15, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.row:before, .row:after {
+.row:before, .view-hr-documents .row-hr-resource:before, .view-hr-vacancies .row-hr-resource:before, .row:after, .view-hr-documents .row-hr-resource:after, .view-hr-vacancies .row-hr-resource:after {
   content: " ";
   display: table;
 }
 /* line 19, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.row:after {
+.row:after, .view-hr-documents .row-hr-resource:after, .view-hr-vacancies .row-hr-resource:after {
   clear: both;
 }
 
@@ -2321,7 +2323,7 @@ hr {
   }
 
   /* line 60, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-offset-2 {
+  .col-md-offset-2, .view-hr-documents .row-hr-resource .views-field-body .col-md-10, .view-hr-vacancies .row-hr-resource .views-field-body .col-md-10 {
     margin-left: 16.6666666667%;
   }
 
@@ -6215,19 +6217,27 @@ tr.even {
   left: -28px;
 }
 /* line 439, ../sass/civihr_default/_custom.scss */
-.view-calendar-absence-list .view-header .date-prev .btn, .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-prev .ctools-use-modal, .view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-prev .ctools-use-modal,
+.view-calendar-absence-list .view-header .date-prev .btn, .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-prev .ctools-use-modal, .view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-prev .ctools-use-modal, .view-calendar-absence-list .view-header .date-prev .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .view-calendar-absence-list .view-header .date-prev .hr-resouce-download-all, .view-calendar-absence-list .view-header .date-prev .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies .view-calendar-absence-list .view-header .date-prev .hr-resouce-download-all,
 .view-calendar-absence-list .view-header .date-next .btn,
 .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-next .ctools-use-modal,
-.view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-next .ctools-use-modal {
+.view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-next .ctools-use-modal,
+.view-calendar-absence-list .view-header .date-next .modal-body .view-hr-documents .hr-resouce-download-all,
+.modal-body .view-hr-documents .view-calendar-absence-list .view-header .date-next .hr-resouce-download-all,
+.view-calendar-absence-list .view-header .date-next .modal-body .view-hr-vacancies .hr-resouce-download-all,
+.modal-body .view-hr-vacancies .view-calendar-absence-list .view-header .date-next .hr-resouce-download-all {
   font-size: 0;
   background: none;
   color: #4c4c5d;
 }
-/* line 12, ../sass/civihr_default/_functions.scss */
-.view-calendar-absence-list .view-header .date-prev .btn:before, .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-prev .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-prev .ctools-use-modal:before,
+/* line 25, ../sass/civihr_default/_functions.scss */
+.view-calendar-absence-list .view-header .date-prev .btn:before, .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-prev .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-prev .ctools-use-modal:before, .view-calendar-absence-list .view-header .date-prev .modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-documents .view-calendar-absence-list .view-header .date-prev .hr-resouce-download-all:before, .view-calendar-absence-list .view-header .date-prev .modal-body .view-hr-vacancies .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .view-calendar-absence-list .view-header .date-prev .hr-resouce-download-all:before,
 .view-calendar-absence-list .view-header .date-next .btn:before,
 .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-next .ctools-use-modal:before,
-.view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-next .ctools-use-modal:before {
+.view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-next .ctools-use-modal:before,
+.view-calendar-absence-list .view-header .date-next .modal-body .view-hr-documents .hr-resouce-download-all:before,
+.modal-body .view-hr-documents .view-calendar-absence-list .view-header .date-next .hr-resouce-download-all:before,
+.view-calendar-absence-list .view-header .date-next .modal-body .view-hr-vacancies .hr-resouce-download-all:before,
+.modal-body .view-hr-vacancies .view-calendar-absence-list .view-header .date-next .hr-resouce-download-all:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;
@@ -6241,8 +6251,8 @@ tr.even {
   left: auto;
   right: -28px;
 }
-/* line 12, ../sass/civihr_default/_functions.scss */
-.view-calendar-absence-list .view-header .date-next .btn:before, .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-next .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-next .ctools-use-modal:before {
+/* line 25, ../sass/civihr_default/_functions.scss */
+.view-calendar-absence-list .view-header .date-next .btn:before, .view-calendar-absence-list .view-approvals .absence-approval-actions .view-header .date-next .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-calendar-absence-list .view-header .date-next .ctools-use-modal:before, .view-calendar-absence-list .view-header .date-next .modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-documents .view-calendar-absence-list .view-header .date-next .hr-resouce-download-all:before, .view-calendar-absence-list .view-header .date-next .modal-body .view-hr-vacancies .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .view-calendar-absence-list .view-header .date-next .hr-resouce-download-all:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;
@@ -6392,7 +6402,7 @@ tr.even {
 #civihr-employee-portal-absence-request-form .grippie {
   display: none;
 }
-/* line 4, ../sass/civihr_default/_functions.scss */
+/* line 18, ../sass/civihr_default/_functions.scss */
 .modal-body article .form-item:before, .modal-body article .form-item:after,
 #civihr-employee-portal-absence-request-form .form-item:before,
 #civihr-employee-portal-absence-request-form .form-item:after {
@@ -6461,21 +6471,25 @@ tr.even {
   margin-top: 30px;
 }
 /* line 624, ../sass/civihr_default/_custom.scss */
-.modal-body article .form-actions .btn, .modal-body article .form-actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .modal-body article .form-actions .ctools-use-modal,
+.modal-body article .form-actions .btn, .modal-body article .form-actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .modal-body article .form-actions .ctools-use-modal, .modal-body article .form-actions .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents article .form-actions .hr-resouce-download-all, .modal-body article .form-actions .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies article .form-actions .hr-resouce-download-all,
 #civihr-employee-portal-absence-request-form .form-actions .btn,
 #civihr-employee-portal-absence-request-form .form-actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal,
-.view-approvals .absence-approval-actions .view-header #civihr-employee-portal-absence-request-form .form-actions .ctools-use-modal {
+.view-approvals .absence-approval-actions .view-header #civihr-employee-portal-absence-request-form .form-actions .ctools-use-modal,
+#civihr-employee-portal-absence-request-form .form-actions .modal-body .view-hr-documents .hr-resouce-download-all,
+.modal-body .view-hr-documents #civihr-employee-portal-absence-request-form .form-actions .hr-resouce-download-all,
+#civihr-employee-portal-absence-request-form .form-actions .modal-body .view-hr-vacancies .hr-resouce-download-all,
+.modal-body .view-hr-vacancies #civihr-employee-portal-absence-request-form .form-actions .hr-resouce-download-all {
   padding: 0.8rem 6rem;
 }
 
 /* Modal: Request leave */
-/* line 4, ../sass/civihr_default/_functions.scss */
+/* line 18, ../sass/civihr_default/_functions.scss */
 #civihr-employee-portal-absence-request-form:before, #civihr-employee-portal-absence-request-form:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 4, ../sass/civihr_default/_functions.scss */
+/* line 18, ../sass/civihr_default/_functions.scss */
 #civihr-employee-portal-absence-request-form #absence-request-dates-selected:before, #civihr-employee-portal-absence-request-form #absence-request-dates-selected:after {
   content: "";
   display: table;
@@ -6547,7 +6561,7 @@ tr.even {
 
 /* Buttons */
 /* line 699, ../sass/civihr_default/_custom.scss */
-.btn, .view-approvals .absence-approval-actions .view-header .ctools-use-modal {
+.btn, .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-vacancies .hr-resouce-download-all {
   background: #41afcb;
   color: white;
   font-size: 1.3rem;
@@ -6557,7 +6571,7 @@ tr.even {
   text-align: center;
 }
 /* line 708, ../sass/civihr_default/_custom.scss */
-.btn:hover, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover {
+.btn:hover, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover, .modal-body .view-hr-documents .hr-resouce-download-all:hover, .modal-body .view-hr-vacancies .hr-resouce-download-all:hover {
   color: white;
   background: rgba(65, 175, 203, 0.8);
 }
@@ -6568,7 +6582,7 @@ form hr {
   margin-top: 40px;
 }
 /* line 720, ../sass/civihr_default/_custom.scss */
-form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header form .ctools-use-modal {
+form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header form .ctools-use-modal, form .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents form .hr-resouce-download-all, form .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies form .hr-resouce-download-all {
   float: right;
 }
 
@@ -6601,7 +6615,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   line-height: 5rem;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
 }
-/* line 4, ../sass/civihr_default/_functions.scss */
+/* line 18, ../sass/civihr_default/_functions.scss */
 .header:before, .header:after {
   content: "";
   display: table;
@@ -6671,7 +6685,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   padding: 20px;
   margin: 0 0 30px 0;
 }
-/* line 4, ../sass/civihr_default/_functions.scss */
+/* line 18, ../sass/civihr_default/_functions.scss */
 .pane-block:before, .pane-block:after,
 .view:before,
 .view:after {
@@ -6724,7 +6738,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   color: #767b8e;
   background: white;
 }
-/* line 12, ../sass/civihr_default/_functions.scss */
+/* line 25, ../sass/civihr_default/_functions.scss */
 .pane-block .jcarousel-prev:before,
 .pane-block .jcarousel-next:before {
   display: inline-block;
@@ -6750,7 +6764,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   left: auto;
   right: 10px;
 }
-/* line 12, ../sass/civihr_default/_functions.scss */
+/* line 25, ../sass/civihr_default/_functions.scss */
 .pane-block .jcarousel-next:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -6819,7 +6833,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   font-size: 1.3rem;
   margin-top: 1.4rem;
 }
-/* line 4, ../sass/civihr_default/_functions.scss */
+/* line 18, ../sass/civihr_default/_functions.scss */
 .civihr-employee-portal-my-details-block .views-field:before, .civihr-employee-portal-my-details-block .views-field:after {
   content: "";
   display: table;
@@ -6841,11 +6855,11 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   font-size: 0;
 }
 /* line 918, ../sass/civihr_default/_custom.scss */
-.civihr-employee-portal-my-details-block .actions .btn, .civihr-employee-portal-my-details-block .actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .civihr-employee-portal-my-details-block .actions .ctools-use-modal {
+.civihr-employee-portal-my-details-block .actions .btn, .civihr-employee-portal-my-details-block .actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .civihr-employee-portal-my-details-block .actions .ctools-use-modal, .civihr-employee-portal-my-details-block .actions .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .civihr-employee-portal-my-details-block .actions .hr-resouce-download-all, .civihr-employee-portal-my-details-block .actions .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies .civihr-employee-portal-my-details-block .actions .hr-resouce-download-all {
   margin-left: 10px;
 }
-/* line 12, ../sass/civihr_default/_functions.scss */
-.civihr-employee-portal-my-details-block .actions .btn:before, .civihr-employee-portal-my-details-block .actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-header .civihr-employee-portal-my-details-block .actions .ctools-use-modal:before {
+/* line 25, ../sass/civihr_default/_functions.scss */
+.civihr-employee-portal-my-details-block .actions .btn:before, .civihr-employee-portal-my-details-block .actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-header .civihr-employee-portal-my-details-block .actions .ctools-use-modal:before, .civihr-employee-portal-my-details-block .actions .modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-documents .civihr-employee-portal-my-details-block .actions .hr-resouce-download-all:before, .civihr-employee-portal-my-details-block .actions .modal-body .view-hr-vacancies .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .civihr-employee-portal-my-details-block .actions .hr-resouce-download-all:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;
@@ -6855,7 +6869,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   font-size: inherit;
 }
 /* line 923, ../sass/civihr_default/_custom.scss */
-.civihr-employee-portal-my-details-block .actions .btn:before, .civihr-employee-portal-my-details-block .actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-header .civihr-employee-portal-my-details-block .actions .ctools-use-modal:before {
+.civihr-employee-portal-my-details-block .actions .btn:before, .civihr-employee-portal-my-details-block .actions .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before, .view-approvals .absence-approval-actions .view-header .civihr-employee-portal-my-details-block .actions .ctools-use-modal:before, .civihr-employee-portal-my-details-block .actions .modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-documents .civihr-employee-portal-my-details-block .actions .hr-resouce-download-all:before, .civihr-employee-portal-my-details-block .actions .modal-body .view-hr-vacancies .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .civihr-employee-portal-my-details-block .actions .hr-resouce-download-all:before {
   margin-right: 8px;
 }
 
@@ -6888,14 +6902,14 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   padding-bottom: 55px;
 }
 /* line 955, ../sass/civihr_default/_custom.scss */
-.footer-slider-block .view-hr-vacancies .btn, .footer-slider-block .view-hr-vacancies .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .footer-slider-block .view-hr-vacancies .ctools-use-modal {
+.footer-slider-block .view-hr-vacancies .btn, .footer-slider-block .view-hr-vacancies .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .footer-slider-block .view-hr-vacancies .ctools-use-modal, .footer-slider-block .view-hr-vacancies .modal-body .view-hr-documents .hr-resouce-download-all, .footer-slider-block .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .footer-slider-block .view-hr-vacancies .hr-resouce-download-all {
   position: absolute;
   left: 20px;
   right: 20px;
   bottom: 20px;
 }
 /* line 963, ../sass/civihr_default/_custom.scss */
-.footer-slider-block .view-hr-documents .btn, .footer-slider-block .view-hr-documents .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .footer-slider-block .view-hr-documents .ctools-use-modal {
+.footer-slider-block .view-hr-documents .btn, .footer-slider-block .view-hr-vacancies .btn, .footer-slider-block .view-hr-documents .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .footer-slider-block .view-hr-documents .ctools-use-modal, .footer-slider-block .view-hr-vacancies .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .footer-slider-block .view-hr-vacancies .ctools-use-modal, .footer-slider-block .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .footer-slider-block .view-hr-documents .hr-resouce-download-all, .footer-slider-block .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .footer-slider-block .view-hr-vacancies .hr-resouce-download-all {
   width: 100%;
 }
 
@@ -6905,7 +6919,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
   text-align: right;
 }
 /* line 974, ../sass/civihr_default/_custom.scss */
-.block-civihr-employee-portal .btn, .block-civihr-employee-portal .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .block-civihr-employee-portal .ctools-use-modal {
+.block-civihr-employee-portal .btn, .block-civihr-employee-portal .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .block-civihr-employee-portal .ctools-use-modal, .block-civihr-employee-portal .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .block-civihr-employee-portal .hr-resouce-download-all, .block-civihr-employee-portal .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies .block-civihr-employee-portal .hr-resouce-download-all {
   margin-left: 10px;
 }
 
@@ -6967,13 +6981,13 @@ label[for*="edit-absence-start-date-period-filter"] {
 }
 
 /* line 1035, ../sass/civihr_default/_custom.scss */
-.calendar-btn, .pane-views-exp-absence-list-page .views-submit-button .btn, .view-approvals .absence-approval-actions .view-header .ctools-use-modal {
+.calendar-btn, .pane-views-exp-absence-list-page .views-submit-button .btn, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all, .view-approvals .absence-approval-actions .view-header .ctools-use-modal {
   background: none;
   color: #767b8e;
   padding-right: 0;
 }
-/* line 12, ../sass/civihr_default/_functions.scss */
-.calendar-btn:before, .pane-views-exp-absence-list-page .views-submit-button .btn:before, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before {
+/* line 25, ../sass/civihr_default/_functions.scss */
+.calendar-btn:before, .pane-views-exp-absence-list-page .views-submit-button .btn:before, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-documents .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all:before, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-vacancies .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all:before, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;
@@ -6983,11 +6997,11 @@ label[for*="edit-absence-start-date-period-filter"] {
   font-size: inherit;
 }
 /* line 1042, ../sass/civihr_default/_custom.scss */
-.calendar-btn:before, .pane-views-exp-absence-list-page .views-submit-button .btn:before, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before {
+.calendar-btn:before, .pane-views-exp-absence-list-page .views-submit-button .btn:before, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-documents .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all:before, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-vacancies .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all:before, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:before {
   margin-right: 8px;
 }
 /* line 1045, ../sass/civihr_default/_custom.scss */
-.calendar-btn:hover, .pane-views-exp-absence-list-page .views-submit-button .btn:hover, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover {
+.calendar-btn:hover, .pane-views-exp-absence-list-page .views-submit-button .btn:hover, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-documents .hr-resouce-download-all:hover, .modal-body .view-hr-documents .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all:hover, .pane-views-exp-absence-list-page .views-submit-button .modal-body .view-hr-vacancies .hr-resouce-download-all:hover, .modal-body .view-hr-vacancies .pane-views-exp-absence-list-page .views-submit-button .hr-resouce-download-all:hover, .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover {
   background: none;
   color: #767b8e;
 }
@@ -7050,7 +7064,7 @@ label[for*="edit-absence-start-date-period-filter"] {
   position: relative;
 }
 /* line 1112, ../sass/civihr_default/_custom.scss */
-.view-approvals .absence-approval-actions .view-content .btn, .view-approvals .absence-approval-actions .view-content .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .view-content .ctools-use-modal {
+.view-approvals .absence-approval-actions .view-content .btn, .view-approvals .absence-approval-actions .view-content .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .view-content .ctools-use-modal, .view-approvals .absence-approval-actions .view-content .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .view-approvals .absence-approval-actions .view-content .hr-resouce-download-all, .view-approvals .absence-approval-actions .view-content .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies .view-approvals .absence-approval-actions .view-content .hr-resouce-download-all {
   position: absolute;
   top: 0;
   right: 2px;
@@ -7087,7 +7101,7 @@ label[for*="edit-absence-start-date-period-filter"] {
   min-width: 22px;
 }
 /* line 1149, ../sass/civihr_default/_custom.scss */
-.approval-filters .btn, .approval-filters .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .approval-filters .ctools-use-modal {
+.approval-filters .btn, .approval-filters .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .approval-filters .ctools-use-modal, .approval-filters .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .approval-filters .hr-resouce-download-all, .approval-filters .modal-body .view-hr-vacancies .hr-resouce-download-all, .modal-body .view-hr-vacancies .approval-filters .hr-resouce-download-all {
   width: 100%;
   text-align: left;
   background: none;
@@ -7095,12 +7109,12 @@ label[for*="edit-absence-start-date-period-filter"] {
   padding: 10px 20px;
 }
 /* line 1157, ../sass/civihr_default/_custom.scss */
-.approval-filters .btn.active, .approval-filters .view-approvals .absence-approval-actions .view-header .active.ctools-use-modal, .view-approvals .absence-approval-actions .view-header .approval-filters .active.ctools-use-modal, .approval-filters .btn:hover, .approval-filters .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover, .view-approvals .absence-approval-actions .view-header .approval-filters .ctools-use-modal:hover {
+.approval-filters .btn.active, .approval-filters .view-approvals .absence-approval-actions .view-header .active.ctools-use-modal, .view-approvals .absence-approval-actions .view-header .approval-filters .active.ctools-use-modal, .approval-filters .modal-body .view-hr-documents .active.hr-resouce-download-all, .modal-body .view-hr-documents .approval-filters .active.hr-resouce-download-all, .approval-filters .modal-body .view-hr-vacancies .active.hr-resouce-download-all, .modal-body .view-hr-vacancies .approval-filters .active.hr-resouce-download-all, .approval-filters .btn:hover, .approval-filters .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover, .view-approvals .absence-approval-actions .view-header .approval-filters .ctools-use-modal:hover, .approval-filters .modal-body .view-hr-documents .hr-resouce-download-all:hover, .modal-body .view-hr-documents .approval-filters .hr-resouce-download-all:hover, .approval-filters .modal-body .view-hr-vacancies .hr-resouce-download-all:hover, .modal-body .view-hr-vacancies .approval-filters .hr-resouce-download-all:hover {
   background: #41afcb;
   color: white;
 }
 /* line 1161, ../sass/civihr_default/_custom.scss */
-.approval-filters .btn.active .badge, .approval-filters .view-approvals .absence-approval-actions .view-header .active.ctools-use-modal .badge, .view-approvals .absence-approval-actions .view-header .approval-filters .active.ctools-use-modal .badge, .approval-filters .btn:hover .badge, .approval-filters .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover .badge, .view-approvals .absence-approval-actions .view-header .approval-filters .ctools-use-modal:hover .badge {
+.approval-filters .btn.active .badge, .approval-filters .view-approvals .absence-approval-actions .view-header .active.ctools-use-modal .badge, .view-approvals .absence-approval-actions .view-header .approval-filters .active.ctools-use-modal .badge, .approval-filters .modal-body .view-hr-documents .active.hr-resouce-download-all .badge, .modal-body .view-hr-documents .approval-filters .active.hr-resouce-download-all .badge, .approval-filters .modal-body .view-hr-vacancies .active.hr-resouce-download-all .badge, .modal-body .view-hr-vacancies .approval-filters .active.hr-resouce-download-all .badge, .approval-filters .btn:hover .badge, .approval-filters .view-approvals .absence-approval-actions .view-header .ctools-use-modal:hover .badge, .view-approvals .absence-approval-actions .view-header .approval-filters .ctools-use-modal:hover .badge, .approval-filters .modal-body .view-hr-documents .hr-resouce-download-all:hover .badge, .modal-body .view-hr-documents .approval-filters .hr-resouce-download-all:hover .badge, .approval-filters .modal-body .view-hr-vacancies .hr-resouce-download-all:hover .badge, .modal-body .view-hr-vacancies .approval-filters .hr-resouce-download-all:hover .badge {
   background: white;
   color: #41afcb;
 }
@@ -7260,4 +7274,290 @@ label[for*="edit-absence-start-date-period-filter"] {
 /* line 1314, ../sass/civihr_default/_custom.scss */
 .page-dashboard .footer {
   margin-top: -30px;
+}
+
+/* Page: My details */
+/* line 1322, ../sass/civihr_default/_custom.scss */
+.page-hr-details .civihr-employee-portal-my-details-block {
+  background: white;
+  padding: 20px;
+  margin: 0 15px;
+}
+/* line 1327, ../sass/civihr_default/_custom.scss */
+.page-hr-details .civihr-employee-portal-my-details-block .view {
+  margin: 0;
+  padding: 0;
+}
+
+/* Page: HR Resources/Documents */
+/* line 1336, ../sass/civihr_default/_custom.scss */
+.view-hr-documents, .view-hr-vacancies {
+  background: none;
+  padding: 0;
+}
+/* line 1341, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters, .view-hr-vacancies .view-filters,
+.view-hr-documents .view-content,
+.view-hr-vacancies .view-content {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* line 18, ../sass/civihr_default/_functions.scss */
+.view-hr-documents .view-filters:before, .view-hr-vacancies .view-filters:before, .view-hr-documents .view-filters:after, .view-hr-vacancies .view-filters:after,
+.view-hr-documents .view-content:before,
+.view-hr-vacancies .view-content:before,
+.view-hr-documents .view-content:after,
+.view-hr-vacancies .view-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1347, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-content, .view-hr-vacancies .view-content {
+  margin-bottom: 0;
+}
+/* line 1351, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters label, .view-hr-vacancies .view-filters label {
+  width: 120px;
+  float: left;
+  font-size: 1.3rem;
+  padding: 20px 0;
+}
+/* line 1357, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters select, .view-hr-vacancies .view-filters select {
+  margin: 10px 0;
+  width: 100%;
+}
+/* line 1361, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters .views-exposed-widgets, .view-hr-vacancies .view-filters .views-exposed-widgets {
+  position: relative;
+}
+/* line 1364, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters .views-widget, .view-hr-vacancies .view-filters .views-widget {
+  float: left;
+}
+/* line 18, ../sass/civihr_default/_functions.scss */
+.view-hr-documents .view-filters .views-widget-filter-combine:before, .view-hr-vacancies .view-filters .views-widget-filter-combine:before, .view-hr-documents .view-filters .views-widget-filter-combine:after, .view-hr-vacancies .view-filters .views-widget-filter-combine:after,
+.view-hr-documents .view-filters .views-submit-button:before,
+.view-hr-vacancies .view-filters .views-submit-button:before,
+.view-hr-documents .view-filters .views-submit-button:after,
+.view-hr-vacancies .view-filters .views-submit-button:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1372, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters .views-widget-filter-combine .views-widget, .view-hr-vacancies .view-filters .views-widget-filter-combine .views-widget {
+  width: 40%;
+}
+/* line 1377, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters .views-widget-filter-field_resource_type_tid .views-widget, .view-hr-vacancies .view-filters .views-widget-filter-field_resource_type_tid .views-widget {
+  width: 20%;
+  padding-right: 10px;
+}
+/* line 1383, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters .views-widget-per-page, .view-hr-vacancies .view-filters .views-widget-per-page {
+  width: 20%;
+  float: left;
+  padding-left: 10px;
+}
+/* line 1388, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters .views-widget-per-page:after, .view-hr-vacancies .view-filters .views-widget-per-page:after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid #ecedee;
+  bottom: 50px;
+  position: absolute;
+  left: 0;
+}
+/* line 1397, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .view-filters .form-submit, .view-hr-vacancies .view-filters .form-submit {
+  margin-top: 30px;
+}
+/* line 1401, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource, .view-hr-vacancies .row-hr-resource {
+  margin: 0 -20px;
+  padding: 20px 5px;
+}
+/* line 1406, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource.views-row-odd, .view-hr-vacancies .row-hr-resource.views-row-odd {
+  background: #fbfbfc;
+  border-top: 1px solid #ecedee;
+  border-bottom: 1px solid #ecedee;
+}
+/* line 1411, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource blockquote, .view-hr-vacancies .row-hr-resource blockquote {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+/* line 1418, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .views-field-body .col-md-2, .view-hr-vacancies .row-hr-resource .views-field-body .col-md-2 {
+  display: none;
+}
+/* line 1424, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .views-field-body p, .view-hr-vacancies .row-hr-resource .views-field-body p {
+  margin-top: 0;
+}
+/* line 1429, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource #resource-modal a, .view-hr-vacancies .row-hr-resource #resource-modal a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4c4c5d;
+}
+/* line 1435, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .fieldset-legend, .view-hr-vacancies .row-hr-resource .fieldset-legend {
+  margin-left: -5px;
+}
+/* line 1438, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .fieldset-title, .view-hr-vacancies .row-hr-resource .fieldset-title {
+  color: #767b8e;
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+/* line 1443, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource fieldset, .view-hr-vacancies .row-hr-resource fieldset {
+  padding: 0 15px;
+  border: 0;
+}
+/* line 1447, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .fieldset-wrapper, .view-hr-vacancies .row-hr-resource .fieldset-wrapper {
+  margin-top: 20px;
+  background: #f0f1f4;
+  padding: 15px 20px;
+}
+/* line 1454, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .fieldset-wrapper .hr-doc-label, .view-hr-vacancies .row-hr-resource .fieldset-wrapper .hr-doc-label,
+.view-hr-documents .row-hr-resource .fieldset-wrapper thead,
+.view-hr-vacancies .row-hr-resource .fieldset-wrapper thead,
+.view-hr-documents .row-hr-resource .fieldset-wrapper td:last-child,
+.view-hr-vacancies .row-hr-resource .fieldset-wrapper td:last-child {
+  display: none;
+}
+/* line 1457, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .fieldset-wrapper tbody, .view-hr-vacancies .row-hr-resource .fieldset-wrapper tbody {
+  border: none;
+}
+/* line 1460, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .fieldset-wrapper a, .view-hr-vacancies .row-hr-resource .fieldset-wrapper a {
+  font-size: 1.3rem;
+}
+/* line 1463, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .fieldset-wrapper img, .view-hr-vacancies .row-hr-resource .fieldset-wrapper img {
+  position: relative;
+  top: -2px;
+  margin-right: 4px;
+}
+/* line 1469, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource tr.odd, .view-hr-vacancies .row-hr-resource tr.odd {
+  background: none;
+}
+/* line 1472, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .hr-resouce-download-all, .view-hr-vacancies .row-hr-resource .hr-resouce-download-all {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  word-spacing: 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: right;
+}
+/* line 25, ../sass/civihr_default/_functions.scss */
+.view-hr-documents .row-hr-resource .hr-resouce-download-all:before, .view-hr-vacancies .row-hr-resource .hr-resouce-download-all:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f019";
+  font-size: 13px;
+}
+/* line 1482, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .row-hr-resource .hr-resouce-download-all:before, .view-hr-vacancies .row-hr-resource .hr-resouce-download-all:before {
+  margin-right: 4px;
+}
+/* line 1487, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .item-list, .view-hr-vacancies .item-list {
+  background: white;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0 20px 20px;
+}
+/* line 1494, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .item-list, .view-hr-vacancies .item-list,
+.view-hr-documents .item-list a,
+.view-hr-vacancies .item-list a {
+  color: #767b8e;
+}
+/* line 1497, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .item-list .page-current, .view-hr-vacancies .item-list .page-current {
+  color: #4c4c5d;
+  font-weight: 700;
+}
+/* line 1501, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .item-list ul, .view-hr-vacancies .item-list ul {
+  margin: 0;
+}
+/* line 1504, ../sass/civihr_default/_custom.scss */
+.view-hr-documents .item-list li, .view-hr-vacancies .item-list li {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 1509, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents, .modal-body .view-hr-vacancies {
+  margin: 0;
+}
+/* line 1512, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .view-content, .modal-body .view-hr-vacancies .view-content {
+  padding: 0;
+}
+/* line 1515, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-vacancies .hr-resouce-download-all {
+  font-family: "Lato", sans-serif;
+  word-spacing: 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: right;
+}
+/* line 25, ../sass/civihr_default/_functions.scss */
+.modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .hr-resouce-download-all:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f019";
+  font-size: 13px;
+}
+/* line 1526, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .view-hr-vacancies .hr-resouce-download-all:before {
+  margin-right: 4px;
+}
+/* line 1530, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .hr-documents-body-block + .views-field-nothing, .modal-body .view-hr-vacancies .hr-documents-body-block + .views-field-nothing {
+  text-align: right;
+  border-top: 1px solid #ecedee;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+/* line 1543, ../sass/civihr_default/_custom.scss */
+.view-hr-vacancies .view-filters .views-widget {
+  width: 40%;
+}
+/* line 18, ../sass/civihr_default/_functions.scss */
+.view-hr-vacancies .views-exposed-widget:before, .view-hr-vacancies .views-exposed-widget:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1550, ../sass/civihr_default/_custom.scss */
+.view-hr-vacancies .views-submit-button {
+  border-top: 1px solid #ecedee;
+  margin-top: 20px;
+}
+/* line 1554, ../sass/civihr_default/_custom.scss */
+.view-hr-vacancies .views-submit-button .form-submit {
+  margin-top: 10px;
 }

@@ -36,26 +36,36 @@
 
       </div><!-- /.navbar-collapse -->
 
+      <?php if ($logged_in) { ?>
+
       <div class="user-options">
         <div class="user-menu">
           <div class="user-name">
-            <span class="value">Amy Anderson</span> <i class="fa fa-caret-down"></i>
+            <span class="value"> <?php print $user_name; ?> </span>
+            <i class="fa fa-caret-down"></i>
           </div>
+
           <ul class="user-submenu">
             <li>
-              <a href="#"><i class="fa fa-edit"></i>Edit Account</a>
+                <?php print $edit_account; ?>
             </li>
             <li>
-              <a href="#"><i class="fa fa-sign-out"></i>Log Out</a>
+                <?php print $logout_link; ?>
             </li>
           </ul>
         </div>
-        <div class="user-picture">
-          <a href="#">
-            <img src="http://lorempicsum.com/rio/80/80/2" alt="">
-          </a>
-        </div>
+
+        <?php if ($image_url != '') { ?>
+          <div class="user-picture">
+            <a href="#">
+              <img src="<?php print $image_url; ?>" alt="">
+            </a>
+          </div>
+        <?php } ?>
+
       </div>
+
+      <?php } ?>
     </nav><!-- /.navbar -->
 </header>
 

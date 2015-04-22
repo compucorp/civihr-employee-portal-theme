@@ -7178,7 +7178,7 @@ label[for*="edit-absence-start-date-period-filter"] {
 }
 /* line 1234, ../sass/civihr_default/_custom.scss */
 .user-options .user-menu {
-  display: inline-block;
+  float: left;
   margin-right: 10px;
   color: #c3cbd6;
   position: relative;
@@ -7218,36 +7218,46 @@ label[for*="edit-absence-start-date-period-filter"] {
 }
 /* line 1274, ../sass/civihr_default/_custom.scss */
 .user-options .user-picture {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
+  float: left;
+  padding: 7px;
 }
-/* line 1279, ../sass/civihr_default/_custom.scss */
+/* line 1278, ../sass/civihr_default/_custom.scss */
+.user-options .user-picture a {
+  width: 34px;
+  height: 34px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+/* line 1286, ../sass/civihr_default/_custom.scss */
 .user-options .user-picture img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 40px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-height: 34px;
+  display: block;
 }
 
 /* Footer */
-/* line 1289, ../sass/civihr_default/_custom.scss */
+/* line 1299, ../sass/civihr_default/_custom.scss */
 .footer {
   background: #ecedee;
   color: #767b8e;
   padding: 50px 0;
 }
-/* line 1294, ../sass/civihr_default/_custom.scss */
+/* line 1304, ../sass/civihr_default/_custom.scss */
 .footer .footer-logo {
   font-size: 2.2rem;
   margin-bottom: 20px;
 }
-/* line 1298, ../sass/civihr_default/_custom.scss */
+/* line 1308, ../sass/civihr_default/_custom.scss */
 .footer .copyright {
   font-size: 1.3rem;
   font-weight: 300;
 }
 
-/* line 1304, ../sass/civihr_default/_custom.scss */
+/* line 1314, ../sass/civihr_default/_custom.scss */
 .page-dashboard .footer {
   margin-top: -30px;
 }

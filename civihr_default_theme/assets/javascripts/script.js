@@ -6,17 +6,23 @@
     // on doc ready
     $(document).ready(function() {
 
-    $('.view-hr-vacancies li').matchHeight();
-
+        applyMatchHeight();
         applyCustomSelect();
+
     });
 
     // on ajax complete (ie: when opening modals)
     $(document).ajaxComplete(function() {
 
+        applyMatchHeight();
         applyCustomSelect();
 
     });
+
+    function applyMatchHeight() {
+        $('.view-hr-vacancies li').matchHeight();
+        $('.view-hr-documents li').matchHeight();
+    }
 
     function applyCustomSelect() {
         initCustomSelect();

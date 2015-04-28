@@ -104,46 +104,6 @@ table.manager-approval-main-table th.headerSortDown {
 
 }
 
-/* Manager approval custom filters bootstrap button style */
-// .btn-custom { margin-top: 5px; margin-right: 5px; background-color: hsl(0, 0%, 16%) !important; background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b5b5b", endColorstr="#282828"); background-image: -khtml-gradient(linear, left top, left bottom, from(#5b5b5b), to(#282828)); background-image: -moz-linear-gradient(top, #5b5b5b, #282828); background-image: -ms-linear-gradient(top, #5b5b5b, #282828); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b5b5b), color-stop(100%, #282828)); background-image: -webkit-linear-gradient(top, #5b5b5b, #282828); background-image: -o-linear-gradient(top, #5b5b5b, #282828); background-image: linear-gradient(#5b5b5b, #282828); border-color: #282828 #282828 hsl(0, 0%, 11%); color: #fff !important; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33); -webkit-font-smoothing: antialiased; }
-
-/**
- * Hr resource page custom styles
- */
-
-/* jCarousel styles */
-.jcarousel-skin-default .jcarousel-item {
-    min-height: 200px;
-    height: auto;
-}
-
-/* jCarousel styles end */
-
-.hr-documents-title-block {
-    min-height: 40px;
-}
-
-.hr-documents-body-block {
-    min-height: 120px;
-}
-
-.row-hr-resource {
-    margin-bottom: 10px;
-}
-
-.hr-resouce-download-all {
-    word-spacing: -8px;
-    font-weight: bolder;
-}
-
-.footer-slider-block {
-    min-height: 280px;
-}
-
-/**
- * Hr resource page custom styles end
- */
-
 
 // --------------------------------
 // Mockup design styles
@@ -266,10 +226,76 @@ tr {
     padding: 0;
 }
 
+/* Selects */
+
+.hasCustomSelect {
+    z-index: 10;
+}
+.customSelect {
+    @extend .form-text;
+    margin: 0;
+    position: relative;
+
+    @include fa('\f0d7');
+
+    &:before {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 37px;
+        height: 100%;
+        width: 0;
+        border-left: 1px solid $color-neutral;
+    }
+
+}
+
+/* Alerts/Messages */
+
+#messages {
+    padding: 15px;
+}
+.alert {
+    padding: 20px;
+    margin-bottom: 40px;
+    color: $light;
+    position: relative;
+
+    button {
+        color: $gray-dark !important;
+        margin-right: 10px;
+
+    }
+    .close {
+        color: $light !important;
+        border: 0;
+        background: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-weight: bold;
+        line-height: 1;
+        font-size: 2.2rem;
+        padding: 0;
+    }
+
+}
+.alert-danger {
+    background: $color-danger;
+}
+.alert-success {
+    background: $color-safe;
+}
+
 /* Modals */
 
 #modalBackdrop {
-    display: none !important;
+    // display: none !important;
 }
 .modal-dialog {
     .close {
@@ -575,13 +601,17 @@ tr {
     .form-item {
         @include clearfix;
 
-        label {
+        label:not(.element-invisible) {
             display: block;
             float: left;
             width: 35%;
             padding: 10px 0;
             font-size: 1.3rem;
             color: $gray-darker;
+
+            & + .hasCustomSelect {
+                left: 35%;
+            }
         }
     }
     .form-control,
@@ -606,13 +636,6 @@ tr {
             float: none;
         }
         .webform-calendar {
-            margin: 10px 0;
-        }
-    }
-    select {
-        &[id*="country"],
-        &[id*="state"],
-        &[id*="custom"] {
             margin: 10px 0;
         }
     }
@@ -674,8 +697,25 @@ tr {
     .form-submit {
         padding: 0.8rem 6rem;
     }
-    select {
-        margin: 10px 0;
+}
+
+/* Modal: Pick days */
+
+#civihr-employee-portal-manager-approval-pick-days-form {
+    .form-item {
+        label {
+            display: block;
+        }
+    }
+    .form-submit {
+        margin-left: 10px;
+    }
+    br {
+        display: none;
+    }
+    .table-responsive {
+        margin-bottom: 20px;
+        margin-right: -43px;
     }
 }
 
@@ -722,11 +762,16 @@ form {
     }
 }
 .form-item {
+    position: relative;
     padding: 10px 0;
     margin: 0;
 
     label {
         display: none;
+    }
+
+    .form-item {
+        padding: 0;
     }
 }
 .form-text {
@@ -883,6 +928,7 @@ form {
     height: 140px;
     overflow: hidden;
     border-radius: 50%;
+    margin-left: 10px;
 }
 .custom-scale-image {
     position: relative;
@@ -947,7 +993,8 @@ form {
             color: $gray;
         }
     }
-    .view-hr-vacancies {
+    .view-hr-vacancies,
+    .view-hr-documents {
         .jcarousel-item {
             position: relative;
             padding-bottom: 55px;
@@ -957,11 +1004,6 @@ form {
             left: 20px;
             right: 20px;
             bottom: 20px;
-        }
-    }
-    .view-hr-documents {
-        .btn {
-            width: 100%;
         }
     }
 }
@@ -1024,9 +1066,21 @@ form {
         position: absolute;
         top: 19px;
         right: 35px;
-    }
-    .form-item {
-        padding: 0;
+
+        .form-item {
+            padding: 0;
+            @include fa('\f0d7');
+            &:before {
+                float: right;
+                margin: 4px 0 0 4px;
+            }
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 0;
+
+        }
     }
 }
 label[for*="edit-absence-start-date-period-filter"] {
@@ -1053,7 +1107,7 @@ label[for*="edit-absence-start-date-period-filter"] {
     }
     .views-submit-button {
         position: absolute;
-        top: 13px;
+        top: 11px;
         right: 35px;
 
         .btn {
@@ -1356,7 +1410,7 @@ label[for*="edit-absence-start-date-period-filter"] {
                 padding: 20px 0;
             }
             select {
-                margin: 10px 0;
+                // margin: 10px 0;
                 width: 100%;
             }
             .views-exposed-widgets {
@@ -1516,34 +1570,39 @@ label[for*="edit-absence-start-date-period-filter"] {
                 margin-right: 5px;
             }
         }
-        .modal-body & {
-            margin: 0;
 
-            .view-content {
-                padding: 0;
-            }
-            .hr-resouce-download-all {
-                @extend .btn;
+    }
+}
+.modal-body .view-hr-documents {
+    margin: 0;
+    padding: 0;
 
-                font-family: $sans;
-                word-spacing: 0;
-                font-weight: 400;
-                font-size: 1.3rem;
-                text-align: right;
+    .view-content {
+        padding: 0;
+    }
+    .hr-resouce-download-all {
+        @extend .btn;
 
-                @include fa('\f019', 13);
+        font-family: $sans;
+        word-spacing: 0;
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-align: right;
 
-                &:before {
-                    margin-right: 4px;
-                }
-            }
-            .hr-documents-body-block + .views-field-nothing {
-                text-align: right;
-                border-top: 1px solid $gray-light;
-                margin-top: 20px;
-                padding-top: 10px;
-            }
+        @include fa('\f019', 13);
+
+        &:before {
+            margin-right: 4px;
         }
+    }
+    .hr-documents-body-block + .views-field-nothing {
+        text-align: right;
+        border-top: 1px solid $gray-light;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    p:first-child {
+        margin-top: 0;
     }
 }
 

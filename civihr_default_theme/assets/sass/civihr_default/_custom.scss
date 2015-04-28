@@ -1516,34 +1516,39 @@ label[for*="edit-absence-start-date-period-filter"] {
                 margin-right: 5px;
             }
         }
-        .modal-body & {
-            margin: 0;
 
-            .view-content {
-                padding: 0;
-            }
-            .hr-resouce-download-all {
-                @extend .btn;
+    }
+}
+.modal-body .view-hr-documents {
+    margin: 0;
+    padding: 0;
 
-                font-family: $sans;
-                word-spacing: 0;
-                font-weight: 400;
-                font-size: 1.3rem;
-                text-align: right;
+    .view-content {
+        padding: 0;
+    }
+    .hr-resouce-download-all {
+        @extend .btn;
 
-                @include fa('\f019', 13);
+        font-family: $sans;
+        word-spacing: 0;
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-align: right;
 
-                &:before {
-                    margin-right: 4px;
-                }
-            }
-            .hr-documents-body-block + .views-field-nothing {
-                text-align: right;
-                border-top: 1px solid $gray-light;
-                margin-top: 20px;
-                padding-top: 10px;
-            }
+        @include fa('\f019', 13);
+
+        &:before {
+            margin-right: 4px;
         }
+    }
+    .hr-documents-body-block + .views-field-nothing {
+        text-align: right;
+        border-top: 1px solid $gray-light;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    p:first-child {
+        margin-top: 0;
     }
 }
 

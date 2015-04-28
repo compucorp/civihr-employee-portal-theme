@@ -266,6 +266,35 @@ tr {
     padding: 0;
 }
 
+/* Selects */
+
+.hasCustomSelect {
+    z-index: 10;
+}
+.customSelect {
+    @extend .form-text;
+    margin: 0;
+    position: relative;
+
+    @include fa('\f0d7');
+
+    &:before {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 37px;
+        height: 100%;
+        width: 0;
+        border-left: 1px solid $color-neutral;
+    }
+
+}
+
 /* Modals */
 
 #modalBackdrop {
@@ -575,13 +604,17 @@ tr {
     .form-item {
         @include clearfix;
 
-        label {
+        label:not(.element-invisible) {
             display: block;
             float: left;
             width: 35%;
             padding: 10px 0;
             font-size: 1.3rem;
             color: $gray-darker;
+
+            & + .hasCustomSelect {
+                left: 35%;
+            }
         }
     }
     .form-control,
@@ -606,13 +639,6 @@ tr {
             float: none;
         }
         .webform-calendar {
-            margin: 10px 0;
-        }
-    }
-    select {
-        &[id*="country"],
-        &[id*="state"],
-        &[id*="custom"] {
             margin: 10px 0;
         }
     }
@@ -674,9 +700,6 @@ tr {
     .form-submit {
         padding: 0.8rem 6rem;
     }
-    select {
-        margin: 10px 0;
-    }
 }
 
 
@@ -722,11 +745,16 @@ form {
     }
 }
 .form-item {
+    position: relative;
     padding: 10px 0;
     margin: 0;
 
     label {
         display: none;
+    }
+
+    .form-item {
+        padding: 0;
     }
 }
 .form-text {
@@ -1024,9 +1052,21 @@ form {
         position: absolute;
         top: 19px;
         right: 35px;
-    }
-    .form-item {
-        padding: 0;
+
+        .form-item {
+            padding: 0;
+            @include fa('\f0d7');
+            &:before {
+                float: right;
+                margin: 4px 0 0 4px;
+            }
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 0;
+
+        }
     }
 }
 label[for*="edit-absence-start-date-period-filter"] {
@@ -1053,7 +1093,7 @@ label[for*="edit-absence-start-date-period-filter"] {
     }
     .views-submit-button {
         position: absolute;
-        top: 13px;
+        top: 11px;
         right: 35px;
 
         .btn {
@@ -1356,7 +1396,7 @@ label[for*="edit-absence-start-date-period-filter"] {
                 padding: 20px 0;
             }
             select {
-                margin: 10px 0;
+                // margin: 10px 0;
                 width: 100%;
             }
             .views-exposed-widgets {

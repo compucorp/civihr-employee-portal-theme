@@ -26,6 +26,7 @@ stylesheets-conditional[IE 8][all][] = assets/stylesheets/ie8.css
 ; Javascript
 scripts[] = assets/javascripts/script.js
 scripts[] = assets/javascripts/jquery.matchHeight-min.js
+scripts[] = assets/javascripts/jquery.customSelect.min.js
 
 ; Information added by Drupal.org packaging script on 2014-12-09
 version = "7.x-3.0-rc1"

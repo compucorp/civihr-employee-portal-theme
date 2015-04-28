@@ -6074,11 +6074,6 @@ tr.even {
 }
 
 /* Modals */
-/* line 297, ../sass/civihr_default/_custom.scss */
-#modalBackdrop {
-  display: none !important;
-}
-
 /* line 301, ../sass/civihr_default/_custom.scss */
 .modal-dialog .close {
   color: #767b8e;

@@ -1037,10 +1037,11 @@ form {
     & > .view-header,
     & > .view-footer {
         tbody {
+            border-top: 0;
+
             tr {
                 font-weight: 700;
                 color: $gray-darker;
-                background: $gray-lighter;
             }
         }
     }
@@ -1596,10 +1597,18 @@ label[for*="edit-absence-start-date-period-filter"] {
         }
     }
     .hr-documents-body-block + .views-field-nothing {
-        text-align: right;
         border-top: 1px solid $gray-light;
         margin-top: 20px;
         padding-top: 10px;
+    }
+    .resource-uploaded-date {
+        padding-top: 6px;
+        color: $light-pale;
+    }
+    .views-label-body {
+        color: $gray-darker;
+        margin-bottom: 20px;
+        display: inline-block;
     }
     p:first-child {
         margin-top: 0;

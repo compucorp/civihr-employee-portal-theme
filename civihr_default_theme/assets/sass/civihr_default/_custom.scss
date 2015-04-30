@@ -1090,6 +1090,7 @@ form {
             -webkit-appearance: none;
             -moz-appearance: none;
             border: 0;
+            background: none;
 
         }
     }
@@ -1393,6 +1394,9 @@ label[for*="edit-absence-start-date-period-filter"] {
             margin: 0;
             padding: 0;
         }
+    }
+    #modalContent {
+        overflow: visible !important;
     }
 }
 

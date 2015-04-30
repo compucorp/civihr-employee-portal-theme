@@ -1006,6 +1006,16 @@ form {
             bottom: 20px;
         }
     }
+    .view-hr-documents {
+        .views-field {
+            font-size: 1.3rem;
+
+            &:first-child {
+                font-size: 1.6rem;
+                color: $gray-darker;
+            }
+        }
+    }
 }
 
 /* Absencies */

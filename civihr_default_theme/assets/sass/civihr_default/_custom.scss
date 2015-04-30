@@ -1037,10 +1037,11 @@ form {
     & > .view-header,
     & > .view-footer {
         tbody {
+            border-top: 0;
+
             tr {
                 font-weight: 700;
                 color: $gray-darker;
-                background: $gray-lighter;
             }
         }
     }

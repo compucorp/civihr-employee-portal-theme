@@ -1831,3 +1831,16 @@ label[for*="edit-absence-start-date-period-filter"] {
 #user-register-form {
     padding: 0 15px;
 }
+
+/* Print leave report */
+.page-print-leave-report {
+    .view-absence-entitlement {
+        margin: 0;
+        padding: 0;
+    }
+    .table-responsive {
+    }
+    .entitlement-date-row + tr {
+        border-top: 1px solid $gray-light;
+    }
+}

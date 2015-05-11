@@ -260,117 +260,6 @@ th {
   padding: 0;
 }
 
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
-@media print {
-  /* line 11, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  /* line 19, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  /* line 23, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  /* line 27, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /* line 34, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  /* line 39, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /* line 44, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  thead {
-    display: table-header-group;
-  }
-
-  /* line 49, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  /* line 53, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  img {
-    max-width: 100% !important;
-  }
-
-  /* line 59, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  /* line 65, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  /* line 73, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  select {
-    background: #fff !important;
-  }
-
-  /* line 78, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  .navbar {
-    display: none;
-  }
-
-  /* line 83, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  .btn > .caret, .view-approvals .absence-approval-actions .view-header .ctools-use-modal > .caret, .modal-body .view-hr-documents .hr-resouce-download-all > .caret, .modal-body .content > .view-hr-vacancies .hr-resouce-download-all > .caret,
-  .dropup > .btn > .caret,
-  .view-approvals .absence-approval-actions .view-header .dropup > .ctools-use-modal > .caret,
-  .modal-body .view-hr-documents .dropup > .hr-resouce-download-all > .caret,
-  .modal-body .content > .view-hr-vacancies .dropup > .hr-resouce-download-all > .caret {
-    border-top-color: #000 !important;
-  }
-
-  /* line 87, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  .label {
-    border: 1px solid #000;
-  }
-
-  /* line 91, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  .table {
-    border-collapse: collapse !important;
-  }
-  /* line 95, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
-
-  /* line 101, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_print.scss */
-  .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #ddd !important;
-  }
-}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("../fonts/glyphicons-halflings-regular.eot");
@@ -7909,4 +7798,15 @@ label[for*="edit-absence-start-date-period-filter"] {
 #user-login,
 #user-register-form {
   padding: 0 15px;
+}
+
+/* Print leave report */
+/* line 1837, ../sass/civihr_default/_custom.scss */
+.page-print-leave-report .view-absence-entitlement {
+  margin: 0;
+  padding: 0;
+}
+/* line 1843, ../sass/civihr_default/_custom.scss */
+.page-print-leave-report .entitlement-date-row + tr {
+  border-top: 1px solid #ecedee;
 }

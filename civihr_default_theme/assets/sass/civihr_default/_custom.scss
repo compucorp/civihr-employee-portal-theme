@@ -1055,6 +1055,9 @@ form {
             }
         }
     }
+    & > .view-header {
+        margin: 0 -20px;
+    }
     & > .view-content {
         tbody {
             border: 0;
@@ -1064,6 +1067,13 @@ form {
     th {
         &:first-child {
             width: 28%;
+        }
+    }
+    .entitlement-date-row {
+        border-bottom: 1px solid $gray-light;
+
+        td {
+            border-bottom: 0;
         }
     }
 }
@@ -1115,7 +1125,7 @@ label[for*="edit-absence-start-date-period-filter"] {
 }
 .pane-views-exp-absence-list-page {
     .views-widget {
-        right: 164px;
+        right: 290px;
     }
     .views-submit-button {
         position: absolute;
@@ -1124,7 +1134,16 @@ label[for*="edit-absence-start-date-period-filter"] {
 
         .btn {
             @extend .calendar-btn;
+            float: left;
         }
+    }
+}
+#report-replace-div {
+    float: right;
+
+    .btn {
+        @include fa("\f02f");
+        float: none;
     }
 }
 .pane-civihr-employee-portal-leave,

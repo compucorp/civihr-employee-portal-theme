@@ -1844,3 +1844,8 @@ label[for*="edit-absence-start-date-period-filter"] {
         border-top: 1px solid $gray-light;
     }
 }
+
+/* hide slider nav arrows when inactive */
+.jcarousel-container [disabled] {
+    display: none;
+}

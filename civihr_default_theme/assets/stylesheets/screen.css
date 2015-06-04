@@ -7810,3 +7810,9 @@ label[for*="edit-absence-start-date-period-filter"] {
 .page-print-leave-report .entitlement-date-row + tr {
   border-top: 1px solid #ecedee;
 }
+
+/* hide slider nav arrows when inactive */
+/* line 1849, ../sass/civihr_default/_custom.scss */
+.jcarousel-container [disabled] {
+  display: none;
+}

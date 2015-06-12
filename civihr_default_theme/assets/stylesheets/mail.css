@@ -1,4 +1,390 @@
-/* line 1, ../sass/civihr_default/_mail.scss */
+/* ------------------------------------- 
+		GLOBAL 
+------------------------------------- */
+/* line 4, ../sass/civihr_default/_mail.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../sass/civihr_default/_mail.scss */
+* {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+/* line 10, ../sass/civihr_default/_mail.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 13, ../sass/civihr_default/_mail.scss */
+.collapse {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, ../sass/civihr_default/_mail.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  width: 100% !important;
+  height: 100%;
+}
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+/* line 28, ../sass/civihr_default/_mail.scss */
+a {
+  color: #2BA6CB;
+}
+
+/* line 30, ../sass/civihr_default/_mail.scss */
+.btn {
+  text-decoration: none;
+  color: #FFF;
+  background-color: #666;
+  padding: 10px 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* line 42, ../sass/civihr_default/_mail.scss */
+p.callout {
+  padding: 15px;
+  background-color: #ECF8FF;
+  margin-bottom: 15px;
+}
+
+/* line 47, ../sass/civihr_default/_mail.scss */
+.callout a {
+  font-weight: bold;
+  color: #2BA6CB;
+}
+
+/* line 52, ../sass/civihr_default/_mail.scss */
+table.social {
+  /* 	padding:15px; */
+  background-color: #ebebeb;
+}
+
+/* line 57, ../sass/civihr_default/_mail.scss */
+.social .soc-btn {
+  padding: 3px 7px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+/* line 66, ../sass/civihr_default/_mail.scss */
+a.fb {
+  background-color: #3b5998 !important;
+}
+
+/* line 67, ../sass/civihr_default/_mail.scss */
+a.tw {
+  background-color: #1daced !important;
+}
+
+/* line 68, ../sass/civihr_default/_mail.scss */
+a.gp {
+  background-color: #db4a39 !important;
+}
+
+/* line 69, ../sass/civihr_default/_mail.scss */
+a.ms {
+  background-color: black !important;
+}
+
+/* line 71, ../sass/civihr_default/_mail.scss */
+.sidebar .soc-btn {
+  display: block;
+  width: 100%;
+}
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+/* line 79, ../sass/civihr_default/_mail.scss */
+table.head-wrap {
+  width: 100%;
+}
+
+/* line 81, ../sass/civihr_default/_mail.scss */
+.header.container table td.logo {
+  padding: 15px;
+}
+
+/* line 82, ../sass/civihr_default/_mail.scss */
+.header.container table td.label {
+  padding: 15px;
+  padding-left: 0px;
+}
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+/* line 88, ../sass/civihr_default/_mail.scss */
+table.body-wrap {
+  width: 100%;
+}
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+/* line 94, ../sass/civihr_default/_mail.scss */
+table.footer-wrap {
+  width: 100%;
+  clear: both !important;
+}
+
+/* line 96, ../sass/civihr_default/_mail.scss */
+.footer-wrap .container td.content p {
+  border-top: 1px solid #d7d7d7;
+  padding-top: 15px;
+}
+
+/* line 97, ../sass/civihr_default/_mail.scss */
+.footer-wrap .container td.content p {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+/* line 107, ../sass/civihr_default/_mail.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  margin: 0px;
+  color: #000;
+}
+
+/* line 110, ../sass/civihr_default/_mail.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0;
+  text-transform: none;
+}
+
+/* line 112, ../sass/civihr_default/_mail.scss */
 h1 {
-  color: #00ff00;
+  font-weight: 200;
+  font-size: 44px;
+}
+
+/* line 113, ../sass/civihr_default/_mail.scss */
+h2 {
+  font-weight: 200;
+  font-size: 37px;
+}
+
+/* line 114, ../sass/civihr_default/_mail.scss */
+h3 {
+  font-weight: 500;
+  font-size: 27px;
+}
+
+/* line 115, ../sass/civihr_default/_mail.scss */
+h4 {
+  font-weight: 500;
+  font-size: 23px;
+}
+
+/* line 116, ../sass/civihr_default/_mail.scss */
+h5 {
+  font-weight: 900;
+  font-size: 17px;
+}
+
+/* line 117, ../sass/civihr_default/_mail.scss */
+h6 {
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #444;
+}
+
+/* line 119, ../sass/civihr_default/_mail.scss */
+.collapse {
+  margin: 0 !important;
+}
+
+/* line 121, ../sass/civihr_default/_mail.scss */
+ul {
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* line 128, ../sass/civihr_default/_mail.scss */
+p {
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* line 135, ../sass/civihr_default/_mail.scss */
+p.lead {
+  font-size: 17px;
+}
+
+/* line 136, ../sass/civihr_default/_mail.scss */
+p.last {
+  margin-bottom: 0px;
+}
+
+/* line 138, ../sass/civihr_default/_mail.scss */
+ul li {
+  margin-left: 5px;
+  list-style-position: inside;
+}
+
+/* ------------------------------------- 
+		SIDEBAR 
+------------------------------------- */
+/* line 146, ../sass/civihr_default/_mail.scss */
+ul.sidebar {
+  background: #ebebeb;
+  display: block;
+  list-style-type: none;
+}
+
+/* line 151, ../sass/civihr_default/_mail.scss */
+ul.sidebar li {
+  display: block;
+  margin: 0;
+}
+
+/* line 152, ../sass/civihr_default/_mail.scss */
+ul.sidebar li a {
+  text-decoration: none;
+  color: #666;
+  padding: 10px 16px;
+  /* 	font-weight:bold; */
+  margin-right: 10px;
+  /* 	text-align:center; */
+  cursor: pointer;
+  border-bottom: 1px solid #777777;
+  border-top: 1px solid #FFFFFF;
+  display: block;
+  margin: 0;
+}
+
+/* line 165, ../sass/civihr_default/_mail.scss */
+ul.sidebar li a.last {
+  border-bottom-width: 0px;
+}
+
+/* line 166, ../sass/civihr_default/_mail.scss */
+ul.sidebar li a h1, ul.sidebar li a h2, ul.sidebar li a h3, ul.sidebar li a h4, ul.sidebar li a h5, ul.sidebar li a h6, ul.sidebar li a p {
+  margin-bottom: 0 !important;
+}
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+/* line 176, ../sass/civihr_default/_mail.scss */
+.container {
+  display: block !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  /* makes it centered */
+  clear: both !important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+/* line 184, ../sass/civihr_default/_mail.scss */
+.content {
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+/* line 192, ../sass/civihr_default/_mail.scss */
+.content table {
+  width: 100%;
+}
+
+/* Odds and ends */
+/* line 196, ../sass/civihr_default/_mail.scss */
+.column {
+  width: 300px;
+  float: left;
+}
+
+/* line 200, ../sass/civihr_default/_mail.scss */
+.column tr td {
+  padding-top: 5px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 207, ../sass/civihr_default/_mail.scss */
+.column-wrap {
+  padding: 0 !important;
+  margin: 0 auto;
+  max-width: 600px !important;
+}
+
+/* line 212, ../sass/civihr_default/_mail.scss */
+.column table {
+  width: 100%;
+}
+
+/* line 213, ../sass/civihr_default/_mail.scss */
+.social .column {
+  width: 280px;
+  min-width: 279px;
+  float: left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+/* line 220, ../sass/civihr_default/_mail.scss */
+.clear {
+  display: block;
+  clear: both;
+}
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  /* line 230, ../sass/civihr_default/_mail.scss */
+  a[class="btn"] {
+    display: block !important;
+    margin-bottom: 10px !important;
+    background-image: none !important;
+    margin-right: 0 !important;
+  }
+
+  /* line 232, ../sass/civihr_default/_mail.scss */
+  div[class="column"] {
+    width: auto !important;
+    float: none !important;
+  }
+
+  /* line 234, ../sass/civihr_default/_mail.scss */
+  table.social div[class="column"] {
+    width: auto !important;
+  }
 }

@@ -28,11 +28,10 @@
                     <tr>
                         <td>
                             <h3>Dear, [current-user:assigned_manager_name]</h3>
-                            <p class="lead">Employee [current-user:name] has <b>requested</b> leave!</p>
+                            <p class="lead">Employee [current-user:contact_display_name] has <b>requested</b> leave!</p>
                             <p>
-                                Leave Type: [Leave Type] <br />
-                                Leave Start Date: [Leave Start Date] <br />
-                                Leave End Date: [Leave End Date]
+                                Leave Type: [leave-type:value] <br />
+                                Leave Date: [leave-date:value] <br />
                             </p>
 
                             <p class="callout">
@@ -49,7 +48,7 @@
                                                 <td>
                                                     <h5 class="">Manage the request here:</h5>
                                                     <p class="">
-                                                        <a href="http://google.com" class="soc-btn gp">Self Service Portal</a>
+                                                        <a href="[site:url]" class="soc-btn gp">Self Service Portal</a>
                                                     </p>
                                                 </td>
                                             </tr>
@@ -59,8 +58,8 @@
                                             <tr>
                                                 <td>
                                                     <h5 class="">Staff details:</h5>
-                                                    <p>Name: <strong>[current-user:name]</strong> <br />
-                                                        Phone: <strong>[current-user:phone] </strong> <br />
+                                                    <p>Name: <strong>[current-user:contact_display_name]</strong> <br />
+                                                        Phone: <strong>[current-user:contact_phone]</strong> <br />
                                                         Email: <strong><a href="mailto:[current-user:mail]"><span class="__cf_email__">[current-user:mail]</span></a></strong></p>
                                                 </td>
                                             </tr>

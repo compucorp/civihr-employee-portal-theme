@@ -27,12 +27,11 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>Dear, [target-user:name]</h3>
+                            <h3>Dear, [target-user:contact_display_name]</h3>
                             <p class="lead">Your leave has been <b>rejected!</b></p>
                             <p>
-                                Leave Type: [Leave Type] <br />
-                                Leave Start Date: [Leave Start Date] <br />
-                                Leave End Date: [Leave End Date]
+                                Leave Type: [leave-type:value] <br />
+                                Leave Date: [leave-date:value] <br />
                             </p>
 
                             <p class="callout">
@@ -49,7 +48,7 @@
                                                 <td>
                                                     <h5 class="">Check your request here:</h5>
                                                     <p class="">
-                                                        <a href="http://google.com" class="soc-btn gp">Self Service Portal</a>
+                                                        <a href="[site:url]" class="soc-btn gp">Self Service Portal</a>
                                                     </p>
                                                 </td>
                                             </tr>
@@ -60,7 +59,7 @@
                                                 <td>
                                                     <h5 class="">Your Manager details:</h5>
                                                     <p>Name: <strong>[target-user:assigned_manager_name]</strong>
-                                                        Phone: <strong>[manager:phone] </strong> <br />
+                                                        Phone: <strong>[target-user:assigned_manager_phone]</strong> <br />
                                                         Email: <strong><a href="mailto:[target-user:assigned_manager_email]"><span class="__cf_email__">[target-user:assigned_manager_email]</span></a></strong></p>
                                                 </td>
                                             </tr>

@@ -201,6 +201,7 @@ h5 {
 }
 table {
     font-size: 1.3rem;
+    width: 100%;
     table-layout: fixed;
 }
 th,
@@ -1754,6 +1755,12 @@ label[for*="edit-absence-start-date-period-filter"] {
 .view-hr-staff-directory {
     background: none;
     padding: 0;
+
+    table {
+        font-size: 1.3rem;
+        table-layout: fixed;
+        width: auto;
+    }
 
     .view-filters,
     .view-content,

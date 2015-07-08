@@ -1,0 +1,54 @@
+@import url(//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
+// Typography
+// -------------------------
+$sans            : 'Lato', sans-serif;
+
+// Iconography
+// -------------------------
+
+$icon-font-path:          "../fonts/";
+$icon-font-name:          "glyphicons-halflings-regular";
+
+// Brand colors
+// -------------------------
+$brand-primary:         #41afcb; // blue-green shade
+$brand-secondary:       #db6c86; // submenu hover
+$brand-tertiary:        $brand-primary; // calendar today
+
+// Grays
+// -------------------------
+$gray-lighter    : #fbfbfc; // table odd row
+$gray-light      : #ecedee; // body bg, table border
+$gray-light-alt  : #f0f1f4; // carousel item bg, hr resource bg
+$gray            : #767b8e; // main text/lighter, menu item bg hover, footer logo
+$gray-dark       : #555862; // menu bg
+$gray-darker     : #4c4c5d; // text darker
+$gray-darker-alt : #404454; // page title
+
+$light           : #fff; // well bg, text on dark bg hover
+$light-pale      : #c3cbd6; // text on dark bg
+
+$color-neutral   : #949caa; // gray shade
+$color-safe      : #7dc4a7; // green shade
+$color-danger    : #da6b86; // red shade
+$color-warning   : #DABB24; // red shade
+
+// Components
+// -------------------------
+$border-radius-base:             0;
+$border-radius-large:            0;
+$border-radius-small:            0;
+
+// Buttons
+// -------------------------
+$btn-default-color:              $light;
+$btn-default-bg:                 $brand-primary;
+
+// Badges
+// -------------------------
+$badge-bg:              $gray;
+
+// Navs
+// -------------------------
+$nav-link-hover-bg:     $gray-lighter

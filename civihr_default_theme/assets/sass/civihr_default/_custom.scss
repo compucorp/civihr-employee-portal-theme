@@ -170,11 +170,11 @@ ul {
 
 a {
     text-decoration: none;
-    color: $brand-color;
+    color: $brand-primary;
 
     &:hover {
         text-decoration: none;
-        color: rgba($brand-color, 0.8);
+        color: rgba($brand-primary, 0.8);
     }
     &:active,
     &:focus {
@@ -390,7 +390,7 @@ tr {
     }
     // Highlight days in calendar
     // td:not(:first-child):not(:empty) {
-    //     background: $tertiary-color;
+    //     background: $brand-tertiary;
     //     color: $light;
     // }
 }
@@ -516,7 +516,7 @@ tr {
     .today {
         .day {
             display: inline-block;
-            background: $tertiary-color;
+            background: $brand-tertiary;
             border-radius: 50px;
             color: $light;
             width: 2.2rem;
@@ -749,7 +749,7 @@ tr {
 /* Buttons */
 
 .btn {
-    background: $brand-color;
+    background: $brand-primary;
     color: $light;
     font-size: 1.3rem;
     padding: 0.8rem 1.2rem;
@@ -759,7 +759,7 @@ tr {
 
     &:hover {
         color: $light;
-        background: rgba($brand-color, 0.8);
+        background: rgba($brand-primary, 0.8);
     }
 }
 
@@ -817,7 +817,7 @@ form {
     font-size: 1.6rem;
     color: $light;
     padding: 0 16px;
-    background: $brand-color;
+    background: $brand-primary;
 
     &:hover {
         color: rgba($light, 0.8);
@@ -836,7 +836,8 @@ form {
             padding: 0 15px;
         }
         .active,
-        a:hover {
+        a:hover,
+        a:focus {
             background: $gray;
             color: $light;
         }
@@ -1237,7 +1238,7 @@ label[for*="edit-absence-start-date-period-filter"] {
     }
     .badge {
         float: right;
-        background: $brand-color;
+        background: $brand-primary;
         color: $light;
         border-radius: 100px;
         padding: 0 7px;
@@ -1247,17 +1248,17 @@ label[for*="edit-absence-start-date-period-filter"] {
         width: 100%;
         text-align: left;
         background: none;
-        color: $brand-color;
+        color: $brand-primary;
         padding: 10px 20px;
 
         &.active,
         &:hover {
-            background: $brand-color;
+            background: $brand-primary;
             color: $light;
 
             .badge {
                 background: $light;
-                color: $brand-color;
+                color: $brand-primary;
             }
         }
     }
@@ -1314,6 +1315,41 @@ label[for*="edit-absence-start-date-period-filter"] {
     }
 }
 
+/* Documents Upload */
+#civihr-employee-portal-document-form {
+  .drop-zone {
+    margin: 10px 0;
+    padding: 30px;
+  }
+
+  .table-upload {
+    table-layout: fixed;
+
+    .col-index {
+      width: 60px;
+    }
+
+    .col-name {
+      width: 45%;
+    }
+
+    .col-size {
+      width: 95px;
+    }
+
+    .col-action {
+      width: 130px;
+    }
+
+    td {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+/* Manager Documents Upload Approval */
+
 /* User menu */
 
 .user-options {
@@ -1362,7 +1398,7 @@ label[for*="edit-absence-start-date-period-filter"] {
 
             &:hover {
                 color: $light;
-                background: $secondary-color;
+                background: $brand-secondary;
             }
         }
     }
@@ -1693,7 +1729,7 @@ label[for*="edit-absence-start-date-period-filter"] {
 
             & > .views-field:first-of-type {
                 .field-content {
-                    color: $brand-color;
+                    color: $brand-primary;
                 }
             }
         }
@@ -1708,7 +1744,7 @@ label[for*="edit-absence-start-date-period-filter"] {
             .btn {
                 background: none;
                 padding: 0;
-                color: $brand-color;
+                color: $brand-primary;
             }
         }
         .vacancy-wrapper {

@@ -1,3577 +1,469 @@
-
-
-/* line 83, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-play:before {
-  content: "\f04b";
-}
-
-/* line 84, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pause:before {
-  content: "\f04c";
-}
-
-/* line 85, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-stop:before {
-  content: "\f04d";
-}
-
-/* line 86, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-forward:before {
-  content: "\f04e";
-}
-
-/* line 87, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-fast-forward:before {
-  content: "\f050";
-}
-
-/* line 88, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-step-forward:before {
-  content: "\f051";
-}
-
-/* line 89, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-eject:before {
-  content: "\f052";
-}
-
-/* line 90, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-left:before {
-  content: "\f053";
-}
-
-/* line 91, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-right:before {
-  content: "\f054";
-}
-
-/* line 92, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-plus-circle:before {
-  content: "\f055";
-}
-
-/* line 93, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-minus-circle:before {
-  content: "\f056";
-}
-
-/* line 94, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-times-circle:before {
-  content: "\f057";
-}
-
-/* line 95, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-check-circle:before {
-  content: "\f058";
-}
-
-/* line 96, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-question-circle:before {
-  content: "\f059";
-}
-
-/* line 97, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-info-circle:before {
-  content: "\f05a";
-}
-
-/* line 98, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-crosshairs:before {
-  content: "\f05b";
-}
-
-/* line 99, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-times-circle-o:before {
-  content: "\f05c";
-}
-
-/* line 100, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-check-circle-o:before {
-  content: "\f05d";
-}
-
-/* line 101, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ban:before {
-  content: "\f05e";
-}
-
-/* line 102, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-left:before {
-  content: "\f060";
-}
-
-/* line 103, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-right:before {
-  content: "\f061";
-}
-
-/* line 104, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-up:before {
-  content: "\f062";
-}
-
-/* line 105, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-down:before {
-  content: "\f063";
-}
-
-/* line 107, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-mail-forward:before,
-.fa-share:before {
-  content: "\f064";
-}
-
-/* line 108, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-expand:before {
-  content: "\f065";
-}
-
-/* line 109, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-compress:before {
-  content: "\f066";
-}
-
-/* line 110, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-plus:before {
-  content: "\f067";
-}
-
-/* line 111, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-minus:before {
-  content: "\f068";
-}
-
-/* line 112, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-asterisk:before {
-  content: "\f069";
-}
-
-/* line 113, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-exclamation-circle:before {
-  content: "\f06a";
-}
-
-/* line 114, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-gift:before {
-  content: "\f06b";
-}
-
-/* line 115, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-leaf:before {
-  content: "\f06c";
-}
-
-/* line 116, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-fire:before {
-  content: "\f06d";
-}
-
-/* line 117, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-eye:before {
-  content: "\f06e";
-}
-
-/* line 118, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-eye-slash:before {
-  content: "\f070";
-}
-
-/* line 120, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-warning:before,
-.fa-exclamation-triangle:before {
-  content: "\f071";
-}
-
-/* line 121, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-plane:before {
-  content: "\f072";
-}
-
-/* line 122, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-calendar:before {
-  content: "\f073";
-}
-
-/* line 123, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-random:before {
-  content: "\f074";
-}
-
-/* line 124, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-comment:before {
-  content: "\f075";
-}
-
-/* line 125, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-magnet:before {
-  content: "\f076";
-}
-
-/* line 126, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-up:before {
-  content: "\f077";
-}
-
-/* line 127, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-down:before {
-  content: "\f078";
-}
-
-/* line 128, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-retweet:before {
-  content: "\f079";
-}
-
-/* line 129, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-shopping-cart:before {
-  content: "\f07a";
-}
-
-/* line 130, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-folder:before {
-  content: "\f07b";
-}
-
-/* line 131, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-folder-open:before {
-  content: "\f07c";
-}
-
-/* line 132, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrows-v:before {
-  content: "\f07d";
-}
-
-/* line 133, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrows-h:before {
-  content: "\f07e";
-}
-
-/* line 135, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bar-chart-o:before,
-.fa-bar-chart:before {
-  content: "\f080";
-}
-
-/* line 136, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-twitter-square:before {
-  content: "\f081";
-}
-
-/* line 137, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-facebook-square:before {
-  content: "\f082";
-}
-
-/* line 138, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-camera-retro:before {
-  content: "\f083";
-}
-
-/* line 139, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-key:before {
-  content: "\f084";
-}
-
-/* line 141, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-gears:before,
-.fa-cogs:before {
-  content: "\f085";
-}
-
-/* line 142, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-comments:before {
-  content: "\f086";
-}
-
-/* line 143, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-thumbs-o-up:before {
-  content: "\f087";
-}
-
-/* line 144, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-thumbs-o-down:before {
-  content: "\f088";
-}
-
-/* line 145, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-star-half:before {
-  content: "\f089";
-}
-
-/* line 146, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-heart-o:before {
-  content: "\f08a";
-}
-
-/* line 147, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sign-out:before {
-  content: "\f08b";
-}
-
-/* line 148, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-linkedin-square:before {
-  content: "\f08c";
-}
-
-/* line 149, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-thumb-tack:before {
-  content: "\f08d";
-}
-
-/* line 150, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-external-link:before {
-  content: "\f08e";
-}
-
-/* line 151, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sign-in:before {
-  content: "\f090";
-}
-
-/* line 152, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-trophy:before {
-  content: "\f091";
-}
-
-/* line 153, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-github-square:before {
-  content: "\f092";
-}
-
-/* line 154, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-upload:before {
-  content: "\f093";
-}
-
-/* line 155, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-lemon-o:before {
-  content: "\f094";
-}
-
-/* line 156, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-phone:before {
-  content: "\f095";
-}
-
-/* line 157, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-square-o:before {
-  content: "\f096";
-}
-
-/* line 158, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bookmark-o:before {
-  content: "\f097";
-}
-
-/* line 159, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-phone-square:before {
-  content: "\f098";
-}
-
-/* line 160, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-twitter:before {
-  content: "\f099";
-}
-
-/* line 161, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-facebook:before {
-  content: "\f09a";
-}
-
-/* line 162, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-github:before {
-  content: "\f09b";
-}
-
-/* line 163, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-unlock:before {
-  content: "\f09c";
-}
-
-/* line 164, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-credit-card:before {
-  content: "\f09d";
-}
-
-/* line 165, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-rss:before {
-  content: "\f09e";
-}
-
-/* line 166, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-hdd-o:before {
-  content: "\f0a0";
-}
-
-/* line 167, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bullhorn:before {
-  content: "\f0a1";
-}
-
-/* line 168, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bell:before {
-  content: "\f0f3";
-}
-
-/* line 169, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-certificate:before {
-  content: "\f0a3";
-}
-
-/* line 170, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-hand-o-right:before {
-  content: "\f0a4";
-}
-
-/* line 171, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-hand-o-left:before {
-  content: "\f0a5";
-}
-
-/* line 172, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-hand-o-up:before {
-  content: "\f0a6";
-}
-
-/* line 173, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-hand-o-down:before {
-  content: "\f0a7";
-}
-
-/* line 174, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-circle-left:before {
-  content: "\f0a8";
-}
-
-/* line 175, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-circle-right:before {
-  content: "\f0a9";
-}
-
-/* line 176, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-circle-up:before {
-  content: "\f0aa";
-}
-
-/* line 177, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-circle-down:before {
-  content: "\f0ab";
-}
-
-/* line 178, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-globe:before {
-  content: "\f0ac";
-}
-
-/* line 179, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-wrench:before {
-  content: "\f0ad";
-}
-
-/* line 180, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-tasks:before {
-  content: "\f0ae";
-}
-
-/* line 181, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-filter:before {
-  content: "\f0b0";
-}
-
-/* line 182, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-briefcase:before {
-  content: "\f0b1";
-}
-
-/* line 183, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrows-alt:before {
-  content: "\f0b2";
-}
-
-/* line 185, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-group:before,
-.fa-users:before {
-  content: "\f0c0";
-}
-
-/* line 187, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chain:before,
-.fa-link:before {
-  content: "\f0c1";
-}
-
-/* line 188, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cloud:before {
-  content: "\f0c2";
-}
-
-/* line 189, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-flask:before {
-  content: "\f0c3";
-}
-
-/* line 191, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cut:before,
-.fa-scissors:before {
-  content: "\f0c4";
-}
-
-/* line 193, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-copy:before,
-.fa-files-o:before {
-  content: "\f0c5";
-}
-
-/* line 194, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-paperclip:before {
-  content: "\f0c6";
-}
-
-/* line 196, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-save:before,
-.fa-floppy-o:before {
-  content: "\f0c7";
-}
-
-/* line 197, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-square:before {
-  content: "\f0c8";
-}
-
-/* line 200, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-navicon:before,
-.fa-reorder:before,
-.fa-bars:before {
-  content: "\f0c9";
-}
-
-/* line 201, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-list-ul:before {
-  content: "\f0ca";
-}
-
-/* line 202, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-list-ol:before {
-  content: "\f0cb";
-}
-
-/* line 203, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-strikethrough:before {
-  content: "\f0cc";
-}
-
-/* line 204, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-underline:before {
-  content: "\f0cd";
-}
-
-/* line 205, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-table:before {
-  content: "\f0ce";
-}
-
-/* line 206, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-magic:before {
-  content: "\f0d0";
-}
-
-/* line 207, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-truck:before {
-  content: "\f0d1";
-}
-
-/* line 208, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pinterest:before {
-  content: "\f0d2";
-}
-
-/* line 209, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pinterest-square:before {
-  content: "\f0d3";
-}
-
-/* line 210, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-google-plus-square:before {
-  content: "\f0d4";
-}
-
-/* line 211, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-google-plus:before {
-  content: "\f0d5";
-}
-
-/* line 212, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-money:before {
-  content: "\f0d6";
-}
-
-/* line 213, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-caret-down:before {
-  content: "\f0d7";
-}
-
-/* line 214, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-caret-up:before {
-  content: "\f0d8";
-}
-
-/* line 215, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-caret-left:before {
-  content: "\f0d9";
-}
-
-/* line 216, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-caret-right:before {
-  content: "\f0da";
-}
-
-/* line 217, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-columns:before {
-  content: "\f0db";
-}
-
-/* line 219, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-unsorted:before,
-.fa-sort:before {
-  content: "\f0dc";
-}
-
-/* line 221, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-down:before,
-.fa-sort-desc:before {
-  content: "\f0dd";
-}
-
-/* line 223, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-up:before,
-.fa-sort-asc:before {
-  content: "\f0de";
-}
-
-/* line 224, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-envelope:before {
-  content: "\f0e0";
-}
-
-/* line 225, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-linkedin:before {
-  content: "\f0e1";
-}
-
-/* line 227, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-rotate-left:before,
-.fa-undo:before {
-  content: "\f0e2";
-}
-
-/* line 229, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-legal:before,
-.fa-gavel:before {
-  content: "\f0e3";
-}
-
-/* line 231, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-dashboard:before,
-.fa-tachometer:before {
-  content: "\f0e4";
-}
-
-/* line 232, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-comment-o:before {
-  content: "\f0e5";
-}
-
-/* line 233, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-comments-o:before {
-  content: "\f0e6";
-}
-
-/* line 235, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-flash:before,
-.fa-bolt:before {
-  content: "\f0e7";
-}
-
-/* line 236, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sitemap:before {
-  content: "\f0e8";
-}
-
-/* line 237, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-umbrella:before {
-  content: "\f0e9";
-}
-
-/* line 239, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-paste:before,
-.fa-clipboard:before {
-  content: "\f0ea";
-}
-
-/* line 240, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-lightbulb-o:before {
-  content: "\f0eb";
-}
-
-/* line 241, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-exchange:before {
-  content: "\f0ec";
-}
-
-/* line 242, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cloud-download:before {
-  content: "\f0ed";
-}
-
-/* line 243, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cloud-upload:before {
-  content: "\f0ee";
-}
-
-/* line 244, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-user-md:before {
-  content: "\f0f0";
-}
-
-/* line 245, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-stethoscope:before {
-  content: "\f0f1";
-}
-
-/* line 246, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-suitcase:before {
-  content: "\f0f2";
-}
-
-/* line 247, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bell-o:before {
-  content: "\f0a2";
-}
-
-/* line 248, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-coffee:before {
-  content: "\f0f4";
-}
-
-/* line 249, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cutlery:before {
-  content: "\f0f5";
-}
-
-/* line 250, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-text-o:before {
-  content: "\f0f6";
-}
-
-/* line 251, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-building-o:before {
-  content: "\f0f7";
-}
-
-/* line 252, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-hospital-o:before {
-  content: "\f0f8";
-}
-
-/* line 253, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ambulance:before {
-  content: "\f0f9";
-}
-
-/* line 254, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-medkit:before {
-  content: "\f0fa";
-}
-
-/* line 255, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-fighter-jet:before {
-  content: "\f0fb";
-}
-
-/* line 256, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-beer:before {
-  content: "\f0fc";
-}
-
-/* line 257, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-h-square:before {
-  content: "\f0fd";
-}
-
-/* line 258, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-plus-square:before {
-  content: "\f0fe";
-}
-
-/* line 259, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-double-left:before {
-  content: "\f100";
-}
-
-/* line 260, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-double-right:before {
-  content: "\f101";
-}
-
-/* line 261, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-double-up:before {
-  content: "\f102";
-}
-
-/* line 262, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-double-down:before {
-  content: "\f103";
-}
-
-/* line 263, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-left:before {
-  content: "\f104";
-}
-
-/* line 264, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-right:before {
-  content: "\f105";
-}
-
-/* line 265, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-up:before {
-  content: "\f106";
-}
-
-/* line 266, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angle-down:before {
-  content: "\f107";
-}
-
-/* line 267, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-desktop:before {
-  content: "\f108";
-}
-
-/* line 268, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-laptop:before {
-  content: "\f109";
-}
-
-/* line 269, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-tablet:before {
-  content: "\f10a";
-}
-
-/* line 271, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-mobile-phone:before,
-.fa-mobile:before {
-  content: "\f10b";
-}
-
-/* line 272, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-circle-o:before {
-  content: "\f10c";
-}
-
-/* line 273, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-quote-left:before {
-  content: "\f10d";
-}
-
-/* line 274, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-quote-right:before {
-  content: "\f10e";
-}
-
-/* line 275, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-spinner:before {
-  content: "\f110";
-}
-
-/* line 276, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-circle:before {
-  content: "\f111";
-}
-
-/* line 278, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-mail-reply:before,
-.fa-reply:before {
-  content: "\f112";
-}
-
-/* line 279, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-github-alt:before {
-  content: "\f113";
-}
-
-/* line 280, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-folder-o:before {
-  content: "\f114";
-}
-
-/* line 281, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-folder-open-o:before {
-  content: "\f115";
-}
-
-/* line 282, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-smile-o:before {
-  content: "\f118";
-}
-
-/* line 283, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-frown-o:before {
-  content: "\f119";
-}
-
-/* line 284, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-meh-o:before {
-  content: "\f11a";
-}
-
-/* line 285, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-gamepad:before {
-  content: "\f11b";
-}
-
-/* line 286, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-keyboard-o:before {
-  content: "\f11c";
-}
-
-/* line 287, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-flag-o:before {
-  content: "\f11d";
-}
-
-/* line 288, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-flag-checkered:before {
-  content: "\f11e";
-}
-
-/* line 289, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-terminal:before {
-  content: "\f120";
-}
-
-/* line 290, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-code:before {
-  content: "\f121";
-}
-
-/* line 292, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-mail-reply-all:before,
-.fa-reply-all:before {
-  content: "\f122";
-}
-
-/* line 295, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-star-half-empty:before,
-.fa-star-half-full:before,
-.fa-star-half-o:before {
-  content: "\f123";
-}
-
-/* line 296, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-location-arrow:before {
-  content: "\f124";
-}
-
-/* line 297, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-crop:before {
-  content: "\f125";
-}
-
-/* line 298, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-code-fork:before {
-  content: "\f126";
-}
-
-/* line 300, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-unlink:before,
-.fa-chain-broken:before {
-  content: "\f127";
-}
-
-/* line 301, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-question:before {
-  content: "\f128";
-}
-
-/* line 302, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-info:before {
-  content: "\f129";
-}
-
-/* line 303, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-exclamation:before {
-  content: "\f12a";
-}
-
-/* line 304, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-superscript:before {
-  content: "\f12b";
-}
-
-/* line 305, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-subscript:before {
-  content: "\f12c";
-}
-
-/* line 306, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-eraser:before {
-  content: "\f12d";
-}
-
-/* line 307, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-puzzle-piece:before {
-  content: "\f12e";
-}
-
-/* line 308, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-microphone:before {
-  content: "\f130";
-}
-
-/* line 309, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-microphone-slash:before {
-  content: "\f131";
-}
-
-/* line 310, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-shield:before {
-  content: "\f132";
-}
-
-/* line 311, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-calendar-o:before {
-  content: "\f133";
-}
-
-/* line 312, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-fire-extinguisher:before {
-  content: "\f134";
-}
-
-/* line 313, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-rocket:before {
-  content: "\f135";
-}
-
-/* line 314, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-maxcdn:before {
-  content: "\f136";
-}
-
-/* line 315, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-circle-left:before {
-  content: "\f137";
-}
-
-/* line 316, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-circle-right:before {
-  content: "\f138";
-}
-
-/* line 317, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-circle-up:before {
-  content: "\f139";
-}
-
-/* line 318, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-chevron-circle-down:before {
-  content: "\f13a";
-}
-
-/* line 319, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-html5:before {
-  content: "\f13b";
-}
-
-/* line 320, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-css3:before {
-  content: "\f13c";
-}
-
-/* line 321, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-anchor:before {
-  content: "\f13d";
-}
-
-/* line 322, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-unlock-alt:before {
-  content: "\f13e";
-}
-
-/* line 323, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bullseye:before {
-  content: "\f140";
-}
-
-/* line 324, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ellipsis-h:before {
-  content: "\f141";
-}
-
-/* line 325, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ellipsis-v:before {
-  content: "\f142";
-}
-
-/* line 326, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-rss-square:before {
-  content: "\f143";
-}
-
-/* line 327, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-play-circle:before {
-  content: "\f144";
-}
-
-/* line 328, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ticket:before {
-  content: "\f145";
-}
-
-/* line 329, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-minus-square:before {
-  content: "\f146";
-}
-
-/* line 330, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-minus-square-o:before {
-  content: "\f147";
-}
-
-/* line 331, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-level-up:before {
-  content: "\f148";
-}
-
-/* line 332, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-level-down:before {
-  content: "\f149";
-}
-
-/* line 333, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-check-square:before {
-  content: "\f14a";
-}
-
-/* line 334, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pencil-square:before {
-  content: "\f14b";
-}
-
-/* line 335, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-external-link-square:before {
-  content: "\f14c";
-}
-
-/* line 336, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-share-square:before {
-  content: "\f14d";
-}
-
-/* line 337, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-compass:before {
-  content: "\f14e";
-}
-
-/* line 339, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-toggle-down:before,
-.fa-caret-square-o-down:before {
-  content: "\f150";
-}
-
-/* line 341, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-toggle-up:before,
-.fa-caret-square-o-up:before {
-  content: "\f151";
-}
-
-/* line 343, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-toggle-right:before,
-.fa-caret-square-o-right:before {
-  content: "\f152";
-}
-
-/* line 345, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-euro:before,
-.fa-eur:before {
-  content: "\f153";
-}
-
-/* line 346, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-gbp:before {
-  content: "\f154";
-}
-
-/* line 348, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-dollar:before,
-.fa-usd:before {
-  content: "\f155";
-}
-
-/* line 350, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-rupee:before,
-.fa-inr:before {
-  content: "\f156";
-}
-
-/* line 354, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cny:before,
-.fa-rmb:before,
-.fa-yen:before,
-.fa-jpy:before {
-  content: "\f157";
-}
-
-/* line 357, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ruble:before,
-.fa-rouble:before,
-.fa-rub:before {
-  content: "\f158";
-}
-
-/* line 359, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-won:before,
-.fa-krw:before {
-  content: "\f159";
-}
-
-/* line 361, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bitcoin:before,
-.fa-btc:before {
-  content: "\f15a";
-}
-
-/* line 362, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file:before {
-  content: "\f15b";
-}
-
-/* line 363, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-text:before {
-  content: "\f15c";
-}
-
-/* line 364, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-alpha-asc:before {
-  content: "\f15d";
-}
-
-/* line 365, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-alpha-desc:before {
-  content: "\f15e";
-}
-
-/* line 366, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-amount-asc:before {
-  content: "\f160";
-}
-
-/* line 367, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-amount-desc:before {
-  content: "\f161";
-}
-
-/* line 368, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-numeric-asc:before {
-  content: "\f162";
-}
-
-/* line 369, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sort-numeric-desc:before {
-  content: "\f163";
-}
-
-/* line 370, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-thumbs-up:before {
-  content: "\f164";
-}
-
-/* line 371, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-thumbs-down:before {
-  content: "\f165";
-}
-
-/* line 372, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-youtube-square:before {
-  content: "\f166";
-}
-
-/* line 373, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-youtube:before {
-  content: "\f167";
-}
-
-/* line 374, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-xing:before {
-  content: "\f168";
-}
-
-/* line 375, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-xing-square:before {
-  content: "\f169";
-}
-
-/* line 376, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-youtube-play:before {
-  content: "\f16a";
-}
-
-/* line 377, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-dropbox:before {
-  content: "\f16b";
-}
-
-/* line 378, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-stack-overflow:before {
-  content: "\f16c";
-}
-
-/* line 379, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-instagram:before {
-  content: "\f16d";
-}
-
-/* line 380, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-flickr:before {
-  content: "\f16e";
-}
-
-/* line 381, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-adn:before {
-  content: "\f170";
-}
-
-/* line 382, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bitbucket:before {
-  content: "\f171";
-}
-
-/* line 383, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bitbucket-square:before {
-  content: "\f172";
-}
-
-/* line 384, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-tumblr:before {
-  content: "\f173";
-}
-
-/* line 385, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-tumblr-square:before {
-  content: "\f174";
-}
-
-/* line 386, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-long-arrow-down:before {
-  content: "\f175";
-}
-
-/* line 387, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-long-arrow-up:before {
-  content: "\f176";
-}
-
-/* line 388, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-long-arrow-left:before {
-  content: "\f177";
-}
-
-/* line 389, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-long-arrow-right:before {
-  content: "\f178";
-}
-
-/* line 390, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-apple:before {
-  content: "\f179";
-}
-
-/* line 391, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-windows:before {
-  content: "\f17a";
-}
-
-/* line 392, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-android:before {
-  content: "\f17b";
-}
-
-/* line 393, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-linux:before {
-  content: "\f17c";
-}
-
-/* line 394, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-dribbble:before {
-  content: "\f17d";
-}
-
-/* line 395, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-skype:before {
-  content: "\f17e";
-}
-
-/* line 396, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-foursquare:before {
-  content: "\f180";
-}
-
-/* line 397, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-trello:before {
-  content: "\f181";
-}
-
-/* line 398, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-female:before {
-  content: "\f182";
-}
-
-/* line 399, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-male:before {
-  content: "\f183";
-}
-
-/* line 400, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-gittip:before {
-  content: "\f184";
-}
-
-/* line 401, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sun-o:before {
-  content: "\f185";
-}
-
-/* line 402, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-moon-o:before {
-  content: "\f186";
-}
-
-/* line 403, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-archive:before {
-  content: "\f187";
-}
-
-/* line 404, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bug:before {
-  content: "\f188";
-}
-
-/* line 405, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-vk:before {
-  content: "\f189";
-}
-
-/* line 406, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-weibo:before {
-  content: "\f18a";
-}
-
-/* line 407, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-renren:before {
-  content: "\f18b";
-}
-
-/* line 408, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pagelines:before {
-  content: "\f18c";
-}
-
-/* line 409, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-stack-exchange:before {
-  content: "\f18d";
-}
-
-/* line 410, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-circle-o-right:before {
-  content: "\f18e";
-}
-
-/* line 411, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-arrow-circle-o-left:before {
-  content: "\f190";
-}
-
-/* line 413, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-toggle-left:before,
-.fa-caret-square-o-left:before {
-  content: "\f191";
-}
-
-/* line 414, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-dot-circle-o:before {
-  content: "\f192";
-}
-
-/* line 415, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-wheelchair:before {
-  content: "\f193";
-}
-
-/* line 416, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-vimeo-square:before {
-  content: "\f194";
-}
-
-/* line 418, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-turkish-lira:before,
-.fa-try:before {
-  content: "\f195";
-}
-
-/* line 419, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-plus-square-o:before {
-  content: "\f196";
-}
-
-/* line 420, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-space-shuttle:before {
-  content: "\f197";
-}
-
-/* line 421, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-slack:before {
-  content: "\f198";
-}
-
-/* line 422, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-envelope-square:before {
-  content: "\f199";
-}
-
-/* line 423, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-wordpress:before {
-  content: "\f19a";
-}
-
-/* line 424, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-openid:before {
-  content: "\f19b";
-}
-
-/* line 427, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-institution:before,
-.fa-bank:before,
-.fa-university:before {
-  content: "\f19c";
-}
-
-/* line 429, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-mortar-board:before,
-.fa-graduation-cap:before {
-  content: "\f19d";
-}
-
-/* line 430, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-yahoo:before {
-  content: "\f19e";
-}
-
-/* line 431, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-google:before {
-  content: "\f1a0";
-}
-
-/* line 432, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-reddit:before {
-  content: "\f1a1";
-}
-
-/* line 433, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-reddit-square:before {
-  content: "\f1a2";
-}
-
-/* line 434, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-stumbleupon-circle:before {
-  content: "\f1a3";
-}
-
-/* line 435, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-stumbleupon:before {
-  content: "\f1a4";
-}
-
-/* line 436, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-delicious:before {
-  content: "\f1a5";
-}
-
-/* line 437, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-digg:before {
-  content: "\f1a6";
-}
-
-/* line 438, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pied-piper:before {
-  content: "\f1a7";
-}
-
-/* line 439, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pied-piper-alt:before {
-  content: "\f1a8";
-}
-
-/* line 440, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-drupal:before {
-  content: "\f1a9";
-}
-
-/* line 441, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-joomla:before {
-  content: "\f1aa";
-}
-
-/* line 442, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-language:before {
-  content: "\f1ab";
-}
-
-/* line 443, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-fax:before {
-  content: "\f1ac";
-}
-
-/* line 444, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-building:before {
-  content: "\f1ad";
-}
-
-/* line 445, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-child:before {
-  content: "\f1ae";
-}
-
-/* line 446, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-paw:before {
-  content: "\f1b0";
-}
-
-/* line 447, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-spoon:before {
-  content: "\f1b1";
-}
-
-/* line 448, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cube:before {
-  content: "\f1b2";
-}
-
-/* line 449, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cubes:before {
-  content: "\f1b3";
-}
-
-/* line 450, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-behance:before {
-  content: "\f1b4";
-}
-
-/* line 451, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-behance-square:before {
-  content: "\f1b5";
-}
-
-/* line 452, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-steam:before {
-  content: "\f1b6";
-}
-
-/* line 453, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-steam-square:before {
-  content: "\f1b7";
-}
-
-/* line 454, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-recycle:before {
-  content: "\f1b8";
-}
-
-/* line 456, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-automobile:before,
-.fa-car:before {
-  content: "\f1b9";
-}
-
-/* line 458, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cab:before,
-.fa-taxi:before {
-  content: "\f1ba";
-}
-
-/* line 459, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-tree:before {
-  content: "\f1bb";
-}
-
-/* line 460, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-spotify:before {
-  content: "\f1bc";
-}
-
-/* line 461, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-deviantart:before {
-  content: "\f1bd";
-}
-
-/* line 462, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-soundcloud:before {
-  content: "\f1be";
-}
-
-/* line 463, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-database:before {
-  content: "\f1c0";
-}
-
-/* line 464, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-pdf-o:before {
-  content: "\f1c1";
-}
-
-/* line 465, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-word-o:before {
-  content: "\f1c2";
-}
-
-/* line 466, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-excel-o:before {
-  content: "\f1c3";
-}
-
-/* line 467, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-powerpoint-o:before {
-  content: "\f1c4";
-}
-
-/* line 470, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-photo-o:before,
-.fa-file-picture-o:before,
-.fa-file-image-o:before {
-  content: "\f1c5";
-}
-
-/* line 472, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-zip-o:before,
-.fa-file-archive-o:before {
-  content: "\f1c6";
-}
-
-/* line 474, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-sound-o:before,
-.fa-file-audio-o:before {
-  content: "\f1c7";
-}
-
-/* line 476, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-movie-o:before,
-.fa-file-video-o:before {
-  content: "\f1c8";
-}
-
-/* line 477, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-file-code-o:before {
-  content: "\f1c9";
-}
-
-/* line 478, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-vine:before {
-  content: "\f1ca";
-}
-
-/* line 479, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-codepen:before {
-  content: "\f1cb";
-}
-
-/* line 480, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-jsfiddle:before {
-  content: "\f1cc";
-}
-
-/* line 485, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-life-bouy:before,
-.fa-life-buoy:before,
-.fa-life-saver:before,
-.fa-support:before,
-.fa-life-ring:before {
-  content: "\f1cd";
-}
-
-/* line 486, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-circle-o-notch:before {
-  content: "\f1ce";
-}
-
-/* line 488, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ra:before,
-.fa-rebel:before {
-  content: "\f1d0";
-}
-
-/* line 490, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ge:before,
-.fa-empire:before {
-  content: "\f1d1";
-}
-
-/* line 491, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-git-square:before {
-  content: "\f1d2";
-}
-
-/* line 492, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-git:before {
-  content: "\f1d3";
-}
-
-/* line 493, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-hacker-news:before {
-  content: "\f1d4";
-}
-
-/* line 494, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-tencent-weibo:before {
-  content: "\f1d5";
-}
-
-/* line 495, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-qq:before {
-  content: "\f1d6";
-}
-
-/* line 497, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-wechat:before,
-.fa-weixin:before {
-  content: "\f1d7";
-}
-
-/* line 499, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-send:before,
-.fa-paper-plane:before {
-  content: "\f1d8";
-}
-
-/* line 501, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-send-o:before,
-.fa-paper-plane-o:before {
-  content: "\f1d9";
-}
-
-/* line 502, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-history:before {
-  content: "\f1da";
-}
-
-/* line 503, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-circle-thin:before {
-  content: "\f1db";
-}
-
-/* line 504, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-header:before {
-  content: "\f1dc";
-}
-
-/* line 505, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-paragraph:before {
-  content: "\f1dd";
-}
-
-/* line 506, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-sliders:before {
-  content: "\f1de";
-}
-
-/* line 507, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-share-alt:before {
-  content: "\f1e0";
-}
-
-/* line 508, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-share-alt-square:before {
-  content: "\f1e1";
-}
-
-/* line 509, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bomb:before {
-  content: "\f1e2";
-}
-
-/* line 511, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-soccer-ball-o:before,
-.fa-futbol-o:before {
-  content: "\f1e3";
-}
-
-/* line 512, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-tty:before {
-  content: "\f1e4";
-}
-
-/* line 513, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-binoculars:before {
-  content: "\f1e5";
-}
-
-/* line 514, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-plug:before {
-  content: "\f1e6";
-}
-
-/* line 515, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-slideshare:before {
-  content: "\f1e7";
-}
-
-/* line 516, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-twitch:before {
-  content: "\f1e8";
-}
-
-/* line 517, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-yelp:before {
-  content: "\f1e9";
-}
-
-/* line 518, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-newspaper-o:before {
-  content: "\f1ea";
-}
-
-/* line 519, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-wifi:before {
-  content: "\f1eb";
-}
-
-/* line 520, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-calculator:before {
-  content: "\f1ec";
-}
-
-/* line 521, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-paypal:before {
-  content: "\f1ed";
-}
-
-/* line 522, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-google-wallet:before {
-  content: "\f1ee";
-}
-
-/* line 523, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cc-visa:before {
-  content: "\f1f0";
-}
-
-/* line 524, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cc-mastercard:before {
-  content: "\f1f1";
-}
-
-/* line 525, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cc-discover:before {
-  content: "\f1f2";
-}
-
-/* line 526, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cc-amex:before {
-  content: "\f1f3";
-}
-
-/* line 527, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cc-paypal:before {
-  content: "\f1f4";
-}
-
-/* line 528, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cc-stripe:before {
-  content: "\f1f5";
-}
-
-/* line 529, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bell-slash:before {
-  content: "\f1f6";
-}
-
-/* line 530, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bell-slash-o:before {
-  content: "\f1f7";
-}
-
-/* line 531, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-trash:before {
-  content: "\f1f8";
-}
-
-/* line 532, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-copyright:before {
-  content: "\f1f9";
-}
-
-/* line 533, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-at:before {
-  content: "\f1fa";
-}
-
-/* line 534, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-eyedropper:before {
-  content: "\f1fb";
-}
-
-/* line 535, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-paint-brush:before {
-  content: "\f1fc";
-}
-
-/* line 536, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-birthday-cake:before {
-  content: "\f1fd";
-}
-
-/* line 537, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-area-chart:before {
-  content: "\f1fe";
-}
-
-/* line 538, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-pie-chart:before {
-  content: "\f200";
-}
-
-/* line 539, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-line-chart:before {
-  content: "\f201";
-}
-
-/* line 540, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-lastfm:before {
-  content: "\f202";
-}
-
-/* line 541, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-lastfm-square:before {
-  content: "\f203";
-}
-
-/* line 542, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-toggle-off:before {
-  content: "\f204";
-}
-
-/* line 543, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-toggle-on:before {
-  content: "\f205";
-}
-
-/* line 544, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bicycle:before {
-  content: "\f206";
-}
-
-/* line 545, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-bus:before {
-  content: "\f207";
-}
-
-/* line 546, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-ioxhost:before {
-  content: "\f208";
-}
-
-/* line 547, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-angellist:before {
-  content: "\f209";
-}
-
-/* line 548, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-cc:before {
-  content: "\f20a";
-}
-
-/* line 551, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-shekel:before,
-.fa-sheqel:before,
-.fa-ils:before {
-  content: "\f20b";
-}
-
-/* line 552, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/fontawesome/_icons.scss */
-.fa-meanpath:before {
-  content: "\f20c";
-}
-
-/* line 5, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_layout.scss */
-.container .container,
-.container .container-fluid {
-  width: auto;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_layout.scss */
-#footer {
-  margin: 36px 0;
-}
-
-/* line 6, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.page-header {
-  margin: 0 0 18px;
-}
-/* line 8, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.page-header h1 {
-  margin: 0;
-}
-
-/* line 13, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.page-title-hidden .page-header {
-  display: none;
-}
-
-/* line 22, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.breadcrumb a i {
-  display: none;
-}
-
-/* line 30, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.tabs, .nav-tabs {
-  margin: 0 0 18px;
-}
-
-/* line 36, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.action-links {
-  list-style: none outside none;
-  margin: 0 0 18px;
-  padding: 0;
-}
-/* line 15, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.action-links:before, .action-links:after {
-  content: " ";
-  display: table;
-}
-/* line 19, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.action-links:after {
-  clear: both;
-}
-/* line 41, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.action-links > li {
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-/* line 49, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs {
-  border: none;
-  border: 1px solid #DDD;
-  outline: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 54, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs ul.vertical-tabs-list {
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  outline: none;
-}
-/* line 59, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs ul.vertical-tabs-list li {
-  border: none;
-  background: none;
-  outline: none !important;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -ms-border-radius: 4px 0 0 4px;
-  -o-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-  border: 1px solid;
-  border-color: #fff #ddd #fff #fff;
-}
-/* line 66, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs ul.vertical-tabs-list li.selected {
-  border-color: #ddd #fff #ddd #ddd;
-}
-/* line 69, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs ul.vertical-tabs-list li a {
-  outline: none !important;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -ms-border-radius: 4px 0 0 4px;
-  -o-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-}
-/* line 72, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs ul.vertical-tabs-list li a:hover {
-  color: #fff;
-  background: #2fa4e7;
-  text-decoration: none;
-}
-/* line 76, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs ul.vertical-tabs-list li a:hover strong {
-  text-decoration: none;
-  color: #fff;
-}
-/* line 84, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs .vertical-tabs-panes {
-  padding: 20px 10px;
-}
-/* line 87, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-div.vertical-tabs .form-type-textfield input {
-  width: 90%;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-/* line 95, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table {
-  width: 100%;
-  margin-bottom: 1.428571429;
-}
-/* line 100, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table th,
-table td {
-  padding: 8px;
-  line-height: 1.428571429;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
-/* line 106, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table th.checkbox,
-table td.checkbox {
-  text-align: center;
-  display: table-cell;
-  min-height: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-/* line 112, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table th.checkbox input,
-table td.checkbox input {
-  float: none !important;
-  margin-left: 0 !important;
-}
-/* line 116, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table th.checkbox div.checkbox,
-table td.checkbox div.checkbox {
-  text-align: center;
-  min-height: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-/* line 124, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table th {
-  font-weight: bold;
-}
-/* line 128, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table thead th {
-  vertical-align: bottom;
-}
-/* line 137, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-/* line 141, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-table tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-
-/* line 148, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-ul.links {
-  padding: 0;
-  list-style: none outside none;
-}
-/* line 151, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-ul.links.inline {
-  margin: 0;
-}
-/* line 153, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-ul.links.inline li {
-  margin: 0 10px 0 0;
-  padding: 0;
-}
-
-/* line 163, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.carousel .carousel-control {
-  z-index: 100;
-}
-/* line 166, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.carousel .carousel-indicators li {
-  float: none;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-/* line 170, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.carousel .carousel-indicators li a {
-  display: none;
-}
-/* line 175, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.carousel .carousel-caption h1, .carousel .carousel-caption h2, .carousel .carousel-caption h3, .carousel .carousel-caption h4, .carousel .carousel-caption h5, .carousel .carousel-caption h6 {
-  color: white;
-}
-
-/* line 184, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.item-list ul.pagination {
-  margin: 20px 0;
-}
-/* line 186, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.item-list ul.pagination > li {
-  margin: 0;
-  display: inline-block;
-  padding: 0;
-  position: relative;
-}
-/* line 191, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.item-list ul.pagination > li > a, .item-list ul.pagination > li > span {
-  padding: 6px 12px;
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
-  border-radius: inherit;
-}
-/* line 194, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.item-list ul.pagination > li > a.progress-disabled, .item-list ul.pagination > li > span.progress-disabled {
+@charset "UTF-8";
+/* line 1514, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .view-filters .views-widget, .content > .view-hr-vacancies .view-filters .views-widget {
   float: left;
 }
-/* line 198, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.item-list ul.pagination > li .ajax-progress {
-  float: left;
-  padding: 6px 5px 6px 10px;
-}
-
-/* line 209, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.ctools-dropdown-container hr {
-  margin: 0;
-}
-
-/* line 217, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-ul.nav,
-ul.navl li,
-ul.dropdown-menu,
-ul.dropdown-menu li {
-  list-style: none outside none !important;
-}
-
-/* line 227, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.calendar-calendar table.mini td {
-  border: 1px solid #eeeeee !important;
-  padding: 5px;
-}
-
-/* line 235, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_structure.scss */
-.view-header .date-nav-wrapper h3 {
-  margin-top: 5px !important;
-  margin-bottom: 0;
-}
-
-/* line 3, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-body.ctools-modal-open {
-  overflow: hidden;
-}
-
-/* line 7, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .modal-content {
-  width: 100%;
-  overflow: hidden;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent #modal-content {
-  overflow: auto;
-  width: 100% !important;
-  background: white;
-}
-/* line 17, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-add-content-modal {
-  background: none;
-  padding: 0;
-  height: 100%;
-  margin: -20px -20px 0;
-  width: 100%;
-  position: absolute;
-}
-
-/* line 28, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-section-columns,
-#modalContent .panels-categories-description {
-  border: none;
-}
-/* line 31, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-section-column-categories {
-  margin-left: 0;
-  border-right: 1px solid #ccc;
-  height: 100%;
-  background: white;
-  overflow: auto;
-  padding-bottom: 20px;
-}
-/* line 38, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-section-column-categories .btn {
-  border: 1px solid #999999 !important;
-  line-height: inherit;
-  margin: 0;
-  text-align: left;
-}
-/* line 45, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-categories-box {
-  border: 0;
-}
-/* line 47, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-categories-box a.btn {
-  padding: 5px 10px;
-}
-/* line 50, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-categories-box a.active {
-  background: #eeeeee;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-/* line 56, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-root-content-box a.btn {
-  padding: 5px 10px;
-}
-/* line 60, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-categories-description {
-  padding: 20px;
-}
-/* line 63, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modalContent .panels-section-columns {
-  padding-bottom: 20px;
-}
-
-/* line 67, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content fieldset.widget-preview {
-  margin-top: 18px;
-  margin-bottom: 0;
-  position: static;
-  border: 1px solid #ddd;
-}
-/* line 72, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content fieldset.widget-preview .panel-heading {
-  position: relative;
-}
-/* line 74, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content fieldset.widget-preview .panel-heading .btn {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-}
-
-/* line 82, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content .ctools-auto-submit-full-form fieldset {
-  width: 48%;
-  display: block;
-}
-/* line 85, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content .ctools-auto-submit-full-form fieldset fieldset {
-  width: 100%;
-}
-/* line 88, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content .ctools-auto-submit-full-form fieldset.widget-preview-single {
-  float: right;
-  margin-left: 1em;
-  margin-top: 0;
-  width: 48%;
-  max-width: 48% !important;
-}
-/* line 96, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content .ctools-auto-submit-full-form .form-actions {
-  float: right;
-  clear: right;
-  width: 48%;
-  max-width: 48%;
-  text-align: right;
-}
-
-/* line 107, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content .form-item-view-settings {
-  display: block;
-}
-/* line 110, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content .form-item-exposed-use-pager {
-  display: block;
-}
-/* line 113, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content #panopoly-form-widget-preview {
-  width: 50%;
-  float: right;
-}
-/* line 116, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_modal.scss */
-#modal-content #panopoly-form-widget-preview .container {
-  width: auto;
-}
-
-/* line 5, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_navbar.scss */
-.drupal-navbar .navbar-bar,
-.drupal-navbar .navbar-tray-vertical > .navbar-lining:before,
-.drupal-navbar .navbar-tray-horizontal {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-/* line 9, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_navbar.scss */
-.drupal-navbar .navbar-tray-vertical,
-.drupal-navbar .navbar-tray-vertical > .navbar-lining:before {
-  bottom: 0;
-  width: 240px !important;
-}
-
-@media only screen and (min-width: 38.125em) {
-  /* line 14, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_navbar.scss */
-  body.navbar-tray-open.navbar-vertical {
-    margin-left: 240px !important;
-  }
-}
-/* line 22, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_navbar.scss */
-a#navbar-link-admin-panopoly:before {
-  background-image: url("../images/icon/icon-panopoly.png");
-}
-/* line 25, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_navbar.scss */
-a#navbar-link-admin-panopoly.active:before {
-  background-image: url("../images/icon/icon-panopoly-active.png");
-}
-
-/* line 30, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_navbar.scss */
-a#navbar-link-admin-apps:before {
-  background-image: url("../images/icon/icon-apps.png");
-}
-/* line 33, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_navbar.scss */
-a#navbar-link-admin-apps.active:before {
-  background-image: url("../images/icon/icon-apps-active.png");
-}
-
-/* line 9, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-ul.nav > li.dropdown:after {
-  width: 100%;
-  height: 2px;
-  background: none;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  content: '';
-}
-
-/* line 26, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded .caret {
-  display: none;
-}
-/* line 30, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li > a {
-  font-size: 1.2em;
-  text-align: left;
-  font-weight: 700;
-  color: #555555;
-}
-/* line 35, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li > a:hover, .nav-expanded > li > a:focus, .nav-expanded > li > a.active, .nav-expanded > li > a.active-trail {
-  color: #157ab5;
-  background: none;
-}
-/* line 40, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li ul.dropdown-menu {
-  background: none;
-  display: block;
-  border: 0;
-  padding: 0;
-  position: static;
-  float: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-/* line 50, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li ul.dropdown-menu li a {
-  padding: 3px 15px;
-  color: #555555;
-}
-/* line 53, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li ul.dropdown-menu li a:hover, .nav-expanded > li ul.dropdown-menu li a:focus, .nav-expanded > li ul.dropdown-menu li a.active, .nav-expanded > li ul.dropdown-menu li a.active-trail {
-  color: #157ab5;
-  background: none;
-}
-/* line 59, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li ul.dropdown-menu ul {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  /* line 29, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-  .nav-expanded > li {
-    float: none;
-    margin-bottom: 18px;
-  }
-}
-/* line 68, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li.open > a {
-  color: #555555;
-  background: none;
-}
-/* line 71, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_menu.scss */
-.nav-expanded > li.open > a:hover, .nav-expanded > li.open > a:focus, .nav-expanded > li.open > a.active, .nav-expanded > li.open > a.active-trail {
-  color: #157ab5;
-  background: none;
-}
-
-/* line 7, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-.panel-display > .row {
-  margin-bottom: 20px;
-}
-
-/* line 11, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-.panel-flexible .panel-separator {
-  display: none;
-}
-
-/* line 17, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container {
-  width: auto;
-  left: 0;
-  right: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-/* line 22, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container .panels-ipe-button-container {
-  text-align: center;
-}
-/* line 24, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container {
-  margin: 0 5px;
-}
-/* line 26, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a {
-  padding: 0px 10px 0px 34px;
-}
-/* line 28, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a:hover {
-  text-decoration: none;
-}
-/* line 36, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container .panels-ipe-form-container form > div {
-  text-align: center;
-}
-/* line 39, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container .panels-ipe-form-container form .form-submit {
-  margin: 0 5px;
-  padding: 0px 10px 0px 34px;
-}
-/* line 42, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-div#panels-ipe-control-container .panels-ipe-form-container form .form-submit:hover {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-/* line 50, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-ul.panels-ipe-linkbar {
-  list-style: none outside none;
-}
-/* line 52, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-ul.panels-ipe-linkbar > li {
-  display: inline-block;
-  margin: 0 0 0 5px;
-}
-/* line 55, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_panel.scss */
-ul.panels-ipe-linkbar > li a {
-  margin: 0 !important;
-}
-
-/* line 15, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_view.scss */
-.views-exposed-form .views-submit-button,
-.views-exposed-form .views-reset-button {
-  margin-top: 3px;
-}
-
-/* line 6, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.form-item {
-  margin-top: 0;
-}
-
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .form-managed-file input {
-  display: inline-block;
-  margin: 0 10px 0 0;
-}
-/* line 17, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .container-inline-date .date-padding {
-  padding: 0;
-  float: none;
-}
-/* line 22, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .form-actions .btn {
-  margin-right: 10px;
-}
-/* line 27, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .field-type-datetime select {
-  min-width: 80px;
-}
-/* line 31, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .format-toggle {
-  float: none;
-}
-
-/* line 39, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .field-multiple-table thead th {
-  padding: 10px !important;
-}
-/* line 41, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .field-multiple-table thead th label {
-  margin: 0;
-  font-weight: bold;
-}
-/* line 48, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-form .description {
-  margin: 2px 0;
-  color: #555555;
-}
-
-/* line 55, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.media-widget > a {
-  margin: 0 10px 0 0;
-  display: inline-block;
-}
-
-/* line 62, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-fieldset legend {
-  float: left;
-  line-height: 1em;
-  margin: 0;
-}
-/* line 67, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-fieldset .panel-body {
-  clear: both;
-}
-
-/* line 73, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-html.js input.form-autocomplete {
-  background: url('../images/throbber.gif?1428659119') no-repeat right 8px white !important;
-}
-/* line 76, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-html.js input.throbbing {
-  background-position: right -122px !important;
-}
-/* line 79, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-html.js fieldset.collapsed {
-  height: auto;
-  border-left-width: 1px;
-  border-right-width: 1px;
-}
-
-/* line 86, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.views-exposed-form .views-exposed-widget .form-submit {
-  margin-top: 1.8em;
-}
-
-@media (max-width: 767px) {
-  /* line 92, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-  form .btn {
-    width: 100%;
-    display: block;
-    clear: both;
-    margin: 0 0 5px;
-  }
-  /* line 100, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-  form input.form-text,
-  form textarea,
-  form select {
-    width: 100%;
-  }
-  /* line 105, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-  form .confirm-parent,
-  form .password-parent,
-  form .password-suggestions {
-    width: auto !important;
-  }
-  /* line 109, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-  form .password-parent div.password-strength {
-    width: 150px;
-    float: right;
-    margin-top: 0;
-    font-size: 10px;
-    margin-bottom: 5px;
-    margin-top: -5px;
-  }
-  /* line 119, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-  form .confirm-parent div.password-confirm {
-    width: 110px;
-    float: right;
-    margin-top: 0;
-    font-size: 10px;
-    margin-bottom: 5px;
-    margin-top: -5px;
-  }
-}
-/* line 134, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#node-edit #edit-title {
-  font-size: 1.6em;
-  line-height: 1.6em;
-  height: 45px;
-  width: 90%;
-}
-/* line 15, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-#node-edit .form-item-path-alias:before, #node-edit .form-item-path-alias:after {
-  content: " ";
-  display: table;
-}
-/* line 19, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-#node-edit .form-item-path-alias:after {
-  clear: both;
-}
-/* line 142, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
-  display: inline;
-}
-/* line 147, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#node-edit .burr-flipped-sidebar .panel-pane {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: whitesmoke;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 10px;
-}
-/* line 20, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_mixin.scss */
-#node-edit .burr-flipped-sidebar .panel-pane blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
-}
-/* line 150, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#node-edit .burr-flipped-sidebar .panel-pane .pane-title {
-  margin-top: 0;
-}
-/* line 154, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#node-edit .burr-flipped-sidebar .pane-node-form-buttons {
-  background: none;
-  padding: inherit;
-}
-/* line 157, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#node-edit .burr-flipped-sidebar .pane-node-form-buttons .form-actions {
-  margin: 0;
-  border-top: 0;
-}
-/* line 163, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#node-edit .pane-node-form-buttons {
-  clear: both;
-}
-
-/* line 168, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.filter-wrapper {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: whitesmoke;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  margin-top: 10px;
-}
-/* line 20, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_mixin.scss */
-.filter-wrapper blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
-}
-/* line 171, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.filter-wrapper .form-item {
-  margin: 0 0 10px;
-  padding: 0;
-}
-/* line 175, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.filter-wrapper .filter-guidelines {
-  padding: 0;
-}
-/* line 177, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.filter-wrapper .filter-guidelines .tips {
-  margin-left: 0;
-}
-
-/* line 189, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.page-admin form table select,
-.page-admin form table input.form-text {
-  width: 150px;
-}
-
-/* line 199, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#features-export-form .features-export-parent {
-  margin: 0 0 20px;
-}
-/* line 201, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#features-export-form .features-export-parent fieldset.collapsed {
-  min-height: 43px !important;
-  background: none;
-}
-/* line 205, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#features-export-form .features-export-parent .features-export-list {
-  padding: 10px;
-}
-/* line 207, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#features-export-form .features-export-parent .features-export-list .form-item {
-  float: none !important;
-}
-
-/* line 218, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#panels-panel-context-edit-move .container,
-#panels-panel-context-edit-content .container {
-  width: auto;
-  padding: 0;
-}
-/* line 221, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-#panels-panel-context-edit-move .container .row,
-#panels-panel-context-edit-content .container .row {
-  margin-bottom: 20px;
-}
-
-/* line 230, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.navbar-form .form-wrapper {
-  padding: 0;
-}
-/* line 234, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.navbar-form .form-item-keys,
-.navbar-form .form-item {
-  margin-top: 0 !important;
-}
-/* line 237, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.navbar-form .form-submit {
-  display: none;
-}
-
-/* line 247, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.pane-search-box form .form-wrapper .form-group {
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* line 257, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_form.scss */
-.tabledrag-handle .handle {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-/* line 6, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-.field-collection-container {
-  border: 0;
-}
-/* line 8, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-.field-collection-container .field-collection-view {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-/* line 20, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-.node-panopoly-page.node-teaser .panel-pane {
-  margin: 0 0 10px 260px;
-}
-/* line 23, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-.node-panopoly-page.node-teaser .pane-node-field-featured-image {
-  float: left;
-  margin-left: 0;
-}
-@media (max-width: 767px) {
-  /* line 29, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-  .node-panopoly-page .panel-pane {
-    float: none !important;
-    margin: 0 0 10px !important;
-  }
-}
-
-/* line 41, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-.node-panopoly-news-article.node-teaser .panel-pane {
-  margin: 0 0 10px 260px;
-}
-/* line 44, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-.node-panopoly-news-article.node-teaser .pane-node-field-featured-image {
-  float: left;
-  margin-left: 0;
-}
-@media (max-width: 767px) {
-  /* line 50, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_node.scss */
-  .node-panopoly-news-article .panel-pane {
-    float: none !important;
-    margin: 0 0 10px !important;
-  }
-}
-
-/* line 3, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment {
-  margin-top: 15px;
-}
-/* line 5, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment .user-picture {
-  float: left;
-  margin-right: 10px;
-}
-/* line 8, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment .user-picture a {
-  display: block;
-}
-/* line 12, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment .submitted {
-  font-size: 0.90em;
-}
-/* line 14, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment .submitted .permalink {
-  margin-left: 5px;
-}
-/* line 17, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment .submitted .new {
-  color: #c71c22;
-}
-/* line 21, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment .content {
-  margin: 10px 0;
-}
-/* line 24, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_comment.scss */
-.comment .links {
-  font-size: 0.80em;
-}
-
-/* line 3, ../../../../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass_radix-3.1.3/stylesheets/compass_radix/_admin.scss */
-.views-display-setting .views-admin-label {
-  display: inline-block;
-  float: left;
-  /* LTR */
-  margin-right: 3pt;
-  /* LTR */
-}
-
-/* line 13, ../sass/bootswatch/_bootswatch.scss */
-.navbar {
-  background-image: -webkit-linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
-  background-image: -o-linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
-  background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF54B4EB', endColorstr='#FF1D9CE5', GradientType=0);
-  border-bottom: 1px solid #178acc;
-  filter: none;
-  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-}
-/* line 18, ../sass/bootswatch/_bootswatch.scss */
-.navbar .navbar-nav > li > a {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-/* line 22, ../sass/bootswatch/_bootswatch.scss */
-.navbar-brand {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-/* line 26, ../sass/bootswatch/_bootswatch.scss */
-.navbar-inverse {
-  background-image: -webkit-linear-gradient(#04519b, #044687 60%, #033769);
-  background-image: -o-linear-gradient(#04519b, #044687 60%, #033769);
-  background-image: linear-gradient(#04519b, #044687 60%, #033769);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF04519B', endColorstr='#FF033769', GradientType=0);
-  filter: none;
-  border-bottom: 1px solid #022241;
-}
-
-/* line 34, ../sass/bootswatch/_bootswatch.scss */
-.btn {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-/* line 38, ../sass/bootswatch/_bootswatch.scss */
-.btn .caret {
-  border-top-color: #fff;
-}
-
-/* line 43, ../sass/bootswatch/_bootswatch.scss */
-.btn-default {
-  background-image: -webkit-linear-gradient(white, white 60%, whitesmoke);
-  background-image: -o-linear-gradient(white, white 60%, whitesmoke);
-  background-image: linear-gradient(#ffffff, #ffffff 60%, #f5f5f5);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF5F5F5', GradientType=0);
-  border-bottom: 1px solid #e6e6e6;
-}
-/* line 47, ../sass/bootswatch/_bootswatch.scss */
-.btn-default:hover {
-  color: #555555;
-}
-/* line 51, ../sass/bootswatch/_bootswatch.scss */
-.btn-default .caret {
-  border-top-color: #555555;
-}
-
-/* line 56, ../sass/bootswatch/_bootswatch.scss */
-.btn-default {
-  background-image: -webkit-linear-gradient(white, white 60%, whitesmoke);
-  background-image: -o-linear-gradient(white, white 60%, whitesmoke);
-  background-image: linear-gradient(#ffffff, #ffffff 60%, #f5f5f5);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF5F5F5', GradientType=0);
-  border-bottom: 1px solid #e6e6e6;
-}
-
-/* line 60, ../sass/bootswatch/_bootswatch.scss */
-.btn-primary {
-  background-image: -webkit-linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
-  background-image: -o-linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
-  background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF54B4EB', endColorstr='#FF1D9CE5', GradientType=0);
-  border-bottom: 1px solid #178acc;
-}
-
-/* line 64, ../sass/bootswatch/_bootswatch.scss */
-.btn-success {
-  background-image: -webkit-linear-gradient(#88c149, #73a839 60%, #699934);
-  background-image: -o-linear-gradient(#88c149, #73a839 60%, #699934);
-  background-image: linear-gradient(#88c149, #73a839 60%, #699934);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF88C149', endColorstr='#FF699934', GradientType=0);
-  border-bottom: 1px solid #59822c;
-}
-
-/* line 68, ../sass/bootswatch/_bootswatch.scss */
-.btn-info {
-  background-image: -webkit-linear-gradient(#04519b, #033c73 60%, #02325f);
-  background-image: -o-linear-gradient(#04519b, #033c73 60%, #02325f);
-  background-image: linear-gradient(#04519b, #033c73 60%, #02325f);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF04519B', endColorstr='#FF02325F', GradientType=0);
-  border-bottom: 1px solid #022241;
-}
-
-/* line 72, ../sass/bootswatch/_bootswatch.scss */
-.btn-warning {
-  background-image: -webkit-linear-gradient(#ff6707, #dd5600 60%, #c94e00);
-  background-image: -o-linear-gradient(#ff6707, #dd5600 60%, #c94e00);
-  background-image: linear-gradient(#ff6707, #dd5600 60%, #c94e00);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF6707', endColorstr='#FFC94E00', GradientType=0);
-  border-bottom: 1px solid #aa4200;
-}
-
-/* line 76, ../sass/bootswatch/_bootswatch.scss */
-.btn-danger {
-  background-image: -webkit-linear-gradient(#e12b31, #c71c22 60%, #b5191f);
-  background-image: -o-linear-gradient(#e12b31, #c71c22 60%, #b5191f);
-  background-image: linear-gradient(#e12b31, #c71c22 60%, #b5191f);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE12B31', endColorstr='#FFB5191F', GradientType=0);
-  border-bottom: 1px solid #9a161a;
-}
-
-/* line 82, ../sass/bootswatch/_bootswatch.scss */
-h1, h2, h3, h4, h5, h6 {
-  color: #317EAC;
-}
-
-/* line 95, ../sass/bootswatch/_bootswatch.scss */
-.pagination .active > a,
-.pagination .active > a:hover {
-  border-color: #ddd;
-}
-
-/* line 108, ../sass/bootswatch/_bootswatch.scss */
-.panel-primary .panel-title {
-  color: #fff;
-}
-
-/* line 115, ../sass/bootswatch/_bootswatch.scss */
-.panel-success .panel-heading {
-  background-color: #73a839;
-  color: #fff;
-}
-/* line 120, ../sass/bootswatch/_bootswatch.scss */
-.panel-success .panel-title {
-  color: #fff;
-}
-
-/* line 127, ../sass/bootswatch/_bootswatch.scss */
-.panel-warning .panel-heading {
-  background-color: #dd5600;
-  color: #fff;
-}
-/* line 132, ../sass/bootswatch/_bootswatch.scss */
-.panel-warning .panel-title {
-  color: #fff;
-}
-
-/* line 139, ../sass/bootswatch/_bootswatch.scss */
-.panel-danger .panel-heading {
-  background-color: #c71c22;
-  color: #fff;
-}
-/* line 144, ../sass/bootswatch/_bootswatch.scss */
-.panel-danger .panel-title {
-  color: #fff;
-}
-
-/* line 151, ../sass/bootswatch/_bootswatch.scss */
-.panel-info .panel-heading {
-  background-color: #033c73;
-  color: #fff;
-}
-/* line 156, ../sass/bootswatch/_bootswatch.scss */
-.panel-info .panel-title {
-  color: #fff;
-}
-
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?iqn065");
-  src: url("../fonts/icomoon.eot?#iefixiqn065") format("embedded-opentype"), url("../fonts/icomoon.woff?iqn065") format("woff"), url("../fonts/icomoon.ttf?iqn065") format("truetype"), url("../fonts/icomoon.svg?iqn065#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'icomoon';
-    src: url("../fonts/icomoon.svg?iqn065#icomoon") format("svg");
-}
-}
-/* line 20, ../sass/civihr_default/_icons.scss */
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* line 34, ../sass/civihr_default/_icons.scss */
-.icon-logo:before {
-  content: "\e600";
-}
-
-/* line 38, ../sass/civihr_default/_icons.scss */
-.icon-logo-full:before {
-  content: "\e601";
-}
-
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 25-Feb-2015, 11:36:56
-    Author     : gergelymeszaros
-*/
-/**
- * Vacancy list view page default styling
- */
-/* line 20, ../sass/civihr_default/_custom.scss */
-.vacancy-wrapper {
-  width: 18%;
-  margin: 1%;
-  float: left;
-}
-
-/**
- * Staff directory dashboard block styling
- */
-/* line 29, ../sass/civihr_default/_custom.scss */
-#civihr-employee-portal-directory-block-form input, #civihr-employee-portal-directory-block-form label {
-  width: 10%;
-}
-
-/* line 33, ../sass/civihr_default/_custom.scss */
-#civihr-employee-portal-directory-block-form .form-control {
-  width: 80%;
-  margin-left: 5%;
-  display: inline;
-}
-
-/**
- * Views exposed form styling
- */
-/* line 48, ../sass/civihr_default/_custom.scss */
-.views-exposed-form .views-exposed-widget {
-  float: none;
-  display: block;
-  width: 50%;
-}
-@media screen and (max-width: 767px) {
-  /* line 48, ../sass/civihr_default/_custom.scss */
-  .views-exposed-form .views-exposed-widget {
-    float: none;
-    display: block;
-    width: 100%;
-  }
-}
-
-/**
- * Manager approval search highlight color
- */
-/* line 59, ../sass/civihr_default/_custom.scss */
-.manager-approval-main-table em {
-  background-color: yellow;
-}
-
-/**
- * Manager approval th header color
- */
-/* line 66, ../sass/civihr_default/_custom.scss */
-.header-class {
-  background: #c0c0c0;
-}
-
-/**
- * Manager approval search th icons default style
- */
-/**
- * Manager approval search th icons -> UP
- */
-/* line 82, ../sass/civihr_default/_custom.scss */
-table.manager-approval-main-table th.headerSortUp {
-  background-image: url(../images/icon/asc.gif);
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-/**
- * Manager approval search th icons -> DOWN
- */
-/* line 89, ../sass/civihr_default/_custom.scss */
-table.manager-approval-main-table th.headerSortDown {
-  background-image: url(../images/icon/desc.gif);
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-/**
- * Quick Approve / Reject buttons default style
- */
-/* line 96, ../sass/civihr_default/_custom.scss */
-#quick-approve {
-  display: inline;
-}
-
-/**
- * Manager Approval Tooltip settings
- */
-@media screen and (min-width: 1200px) {
-  /* line 103, ../sass/civihr_default/_custom.scss */
-  .manager-approval-main-table .views-tooltip {
-    float: right;
-  }
-}
-
-/**
- * Set width so the tooltip shows up in the right location
- */
-/* line 113, ../sass/civihr_default/_custom.scss */
-.views-tooltip {
-  width: 30px;
-}
-
-/**
- * Manager AJAX filters block / inline settings
- */
-@media screen and (min-width: 768px) {
-  /* line 120, ../sass/civihr_default/_custom.scss */
-  .btn-custom-block {
-    display: block;
-  }
-}
-
-/* Manager approval custom filters bootstrap button style */
-/**
- * Hr resource page custom styles
- */
-/* jCarousel styles */
-/* line 135, ../sass/civihr_default/_custom.scss */
-.jcarousel-skin-default .jcarousel-item {
-  min-height: 200px;
-  height: auto;
-}
-
-/* jCarousel styles end */
-/* line 142, ../sass/civihr_default/_custom.scss */
-.hr-documents-title-block {
-  min-height: 40px;
-}
-
-/* line 146, ../sass/civihr_default/_custom.scss */
-.hr-documents-body-block {
-  min-height: 120px;
-}
-
-/* line 150, ../sass/civihr_default/_custom.scss */
-.row-hr-resource {
-  margin-bottom: 10px;
-}
-
-/* line 154, ../sass/civihr_default/_custom.scss */
-.hr-resouce-download-all {
-  word-spacing: -8px;
-  font-weight: bolder;
-}
-
-/* line 159, ../sass/civihr_default/_custom.scss */
-.footer-slider-block {
-  min-height: 280px;
-}
-
-/**
- * Hr resource page custom styles end
- */
-/**
- * CiviHR dashboard block profile image size
- */
-/* line 170, ../sass/civihr_default/_custom.scss */
-.custom-scale-image {
-  max-width: 120px;
-  max-height: 120px;
-  width: auto;
-  height: auto;
-}
-
-/* line 183, ../sass/civihr_default/_custom.scss */
-body {
-  font-family: "Lato", sans-serif;
-  color: #767b8e;
-}
-
-/* line 187, ../sass/civihr_default/_custom.scss */
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* line 192, ../sass/civihr_default/_custom.scss */
-a {
-  text-decoration: none;
-  color: #41afcb;
-}
-/* line 196, ../sass/civihr_default/_custom.scss */
-a:hover {
-  text-decoration: none;
-  color: rgba(65, 175, 203, 0.8);
-}
-/* line 201, ../sass/civihr_default/_custom.scss */
-a:active, a:focus {
-  text-decoration: none;
-}
-
-/* line 205, ../sass/civihr_default/_custom.scss */
-h1 {
-  font-size: 3.6rem;
-  font-weight: 300;
-  color: #404454;
-  margin: 25px 0;
-}
-
-/* line 212, ../sass/civihr_default/_custom.scss */
-.container.collapse {
-  padding: 0;
-}
-
-/* Header */
-/* line 218, ../sass/civihr_default/_custom.scss */
-.header {
-  background: #555862;
-  font-size: 1.3rem;
-  color: #c3cbd6;
-  line-height: 5rem;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
-}
-/* line 29, ../sass/civihr_default/_functions.scss */
-.header:after {
+/* line 17, ../sass/civihr_default/_functions.scss */
+.content > .view-hr-documents .view-filters .views-widget-filter-combine:before, .content > .view-hr-vacancies .view-filters .views-widget-filter-combine:before, .content > .view-hr-documents .view-filters .views-widget-filter-combine:after, .content > .view-hr-vacancies .view-filters .views-widget-filter-combine:after,
+.content > .view-hr-documents .view-filters .views-submit-button:before,
+.content > .view-hr-vacancies .view-filters .views-submit-button:before,
+.content > .view-hr-documents .view-filters .views-submit-button:after,
+.content > .view-hr-vacancies .view-filters .views-submit-button:after {
   content: "";
   display: table;
   clear: both;
 }
-
-/* line 227, ../sass/civihr_default/_custom.scss */
-.navbar-toggle {
+/* line 1522, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .view-filters .views-widget-filter-combine .views-widget, .content > .view-hr-vacancies .view-filters .views-widget-filter-combine .views-widget {
+  width: 40%;
+}
+/* line 1527, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .view-filters .views-widget-filter-field_resource_type_tid .views-widget, .content > .view-hr-vacancies .view-filters .views-widget-filter-field_resource_type_tid .views-widget {
+  width: 20%;
+  padding-right: 10px;
+}
+/* line 1533, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .view-filters .views-widget-per-page, .content > .view-hr-vacancies .view-filters .views-widget-per-page {
+  width: 20%;
+  float: left;
+  padding-left: 10px;
+}
+/* line 1538, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .view-filters .views-widget-per-page:after, .content > .view-hr-vacancies .view-filters .views-widget-per-page:after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid #ecedee;
+  bottom: 50px;
+  position: absolute;
+  left: 0;
+}
+/* line 1547, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .view-filters .form-submit, .content > .view-hr-vacancies .view-filters .form-submit {
+  margin-top: 30px;
+}
+/* line 1551, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource, .content > .view-hr-vacancies .row-hr-resource {
+  margin: 0 -20px;
+  padding: 20px 5px;
+}
+/* line 1556, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource.views-row-odd, .content > .view-hr-vacancies .row-hr-resource.views-row-odd {
+  background: #fbfbfc;
+  border-top: 1px solid #ecedee;
+  border-bottom: 1px solid #ecedee;
+}
+/* line 1561, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource blockquote, .content > .view-hr-vacancies .row-hr-resource blockquote {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+/* line 1568, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .views-field-body .col-md-2, .content > .view-hr-vacancies .row-hr-resource .views-field-body .col-md-2 {
   display: none;
 }
-
-/* line 230, ../sass/civihr_default/_custom.scss */
-.navbar-header {
-  float: left;
+/* line 1574, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .views-field-body p, .content > .view-hr-vacancies .row-hr-resource .views-field-body p {
+  margin-top: 0;
 }
-
-/* line 233, ../sass/civihr_default/_custom.scss */
-.navbar-brand {
-  display: block;
+/* line 1579, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource #resource-modal a, .content > .view-hr-vacancies .row-hr-resource #resource-modal a {
   font-size: 1.6rem;
-  color: white;
-  padding: 0 16px;
-  background: #41afcb;
+  font-weight: 700;
+  color: #4c4c5d;
 }
-/* line 240, ../sass/civihr_default/_custom.scss */
-.navbar-brand:hover {
-  color: rgba(255, 255, 255, 0.8);
+/* line 1585, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .fieldset-legend, .content > .view-hr-vacancies .row-hr-resource .fieldset-legend {
+  margin-left: -5px;
+}
+/* line 1588, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .fieldset-title, .content > .view-hr-vacancies .row-hr-resource .fieldset-title {
+  color: #767b8e;
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+/* line 1593, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource fieldset, .content > .view-hr-vacancies .row-hr-resource fieldset {
+  padding: 0 15px;
+  border: 0;
+}
+/* line 1597, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .fieldset-wrapper, .content > .view-hr-vacancies .row-hr-resource .fieldset-wrapper {
+  margin-top: 20px;
+  background: #f0f1f4;
+  padding: 15px 20px;
+}
+/* line 1602, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .fieldset-wrapper .hr-doc-label, .content > .view-hr-vacancies .row-hr-resource .fieldset-wrapper .hr-doc-label,
+.content > .view-hr-documents .row-hr-resource .fieldset-wrapper thead,
+.content > .view-hr-vacancies .row-hr-resource .fieldset-wrapper thead,
+.content > .view-hr-documents .row-hr-resource .fieldset-wrapper td:last-child,
+.content > .view-hr-vacancies .row-hr-resource .fieldset-wrapper td:last-child {
+  display: none;
+}
+/* line 1607, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .fieldset-wrapper tbody, .content > .view-hr-vacancies .row-hr-resource .fieldset-wrapper tbody {
+  border: none;
+}
+/* line 1610, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .fieldset-wrapper a, .content > .view-hr-vacancies .row-hr-resource .fieldset-wrapper a {
+  font-size: 1.3rem;
+}
+/* line 1613, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .fieldset-wrapper img, .content > .view-hr-vacancies .row-hr-resource .fieldset-wrapper img {
+  position: relative;
+  top: -2px;
+  margin-right: 4px;
+}
+/* line 1619, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource tr.odd, .content > .view-hr-vacancies .row-hr-resource tr.odd {
+  background: none;
+}
+/* line 1622, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource th, .content > .view-hr-vacancies .row-hr-resource th,
+.content > .view-hr-documents .row-hr-resource td,
+.content > .view-hr-vacancies .row-hr-resource td,
+.content > .view-hr-documents .row-hr-resource tr,
+.content > .view-hr-vacancies .row-hr-resource tr {
+  border: 0;
+}
+/* line 1627, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .hr-resouce-download-all, .content > .view-hr-vacancies .row-hr-resource .hr-resouce-download-all {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  word-spacing: 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: right;
+}
+/* line 25, ../sass/civihr_default/_functions.scss */
+.content > .view-hr-documents .row-hr-resource .hr-resouce-download-all:before, .content > .view-hr-vacancies .row-hr-resource .hr-resouce-download-all:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  font-size: 13px;
+}
+/* line 1637, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .row-hr-resource .hr-resouce-download-all:before, .content > .view-hr-vacancies .row-hr-resource .hr-resouce-download-all:before {
+  margin-right: 4px;
+}
+/* line 1642, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .item-list, .content > .view-hr-vacancies .item-list {
+  background: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0 20px 20px;
+  text-transform: capitalize;
+}
+/* line 1649, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .item-list, .content > .view-hr-vacancies .item-list,
+.content > .view-hr-documents .item-list a,
+.content > .view-hr-vacancies .item-list a {
+  color: #767b8e;
+}
+/* line 1653, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .item-list .page-current, .content > .view-hr-vacancies .item-list .page-current {
+  color: #4c4c5d;
+  font-weight: 700;
+}
+/* line 1657, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .item-list .pager-current, .content > .view-hr-vacancies .item-list .pager-current {
+  text-transform: none;
+}
+/* line 1660, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .item-list ul, .content > .view-hr-vacancies .item-list ul {
+  margin: 0;
+}
+/* line 1663, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-documents .item-list li, .content > .view-hr-vacancies .item-list li {
+  display: inline-block;
+  margin-right: 5px;
 }
 
-/* line 244, ../sass/civihr_default/_custom.scss */
-.navbar-collapse {
-  float: left;
+/* line 1671, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents, .modal-body .content > .view-hr-vacancies {
+  margin: 0;
+  padding: 0;
 }
-/* line 248, ../sass/civihr_default/_custom.scss */
-.navbar-collapse .menu li {
-  float: left;
+/* line 1675, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .view-content, .modal-body .content > .view-hr-vacancies .view-content {
+  padding: 0;
 }
-/* line 251, ../sass/civihr_default/_custom.scss */
-.navbar-collapse .menu a {
-  color: inherit;
-  display: block;
+/* line 1678, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .content > .view-hr-vacancies .hr-resouce-download-all {
+  font-family: "Lato", sans-serif;
+  word-spacing: 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: right;
+}
+/* line 25, ../sass/civihr_default/_functions.scss */
+.modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .content > .view-hr-vacancies .hr-resouce-download-all:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  font-size: 13px;
+}
+/* line 1689, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .hr-resouce-download-all:before, .modal-body .content > .view-hr-vacancies .hr-resouce-download-all:before {
+  margin-right: 4px;
+}
+/* line 1693, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .hr-documents-body-block + .views-field-nothing, .modal-body .content > .view-hr-vacancies .hr-documents-body-block + .views-field-nothing {
+  border-top: 1px solid #ecedee;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+/* line 1698, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .resource-uploaded-date, .modal-body .content > .view-hr-vacancies .resource-uploaded-date {
+  padding-top: 6px;
+  color: #c3cbd6;
+}
+/* line 1702, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents .views-label-body, .modal-body .content > .view-hr-vacancies .views-label-body {
+  color: #4c4c5d;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+/* line 1707, ../sass/civihr_default/_custom.scss */
+.modal-body .view-hr-documents p:first-child, .modal-body .content > .view-hr-vacancies p:first-child {
+  margin-top: 0;
+}
+
+/* Page: HR Vacancies */
+/* line 1719, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .view-filters .views-widget {
+  width: 40%;
+}
+/* line 17, ../sass/civihr_default/_functions.scss */
+.content > .view-hr-vacancies .views-exposed-widget:before, .content > .view-hr-vacancies .views-exposed-widget:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1726, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .views-submit-button {
+  border-top: 1px solid #ecedee;
+  margin-top: 20px;
+}
+/* line 1730, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .views-submit-button .form-submit {
+  margin-top: 10px;
+}
+/* line 1734, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .view-content {
+  font-size: 1.3rem;
+}
+/* line 1737, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .views-row {
+  margin: 0 -20px;
+  padding: 20px;
+}
+/* line 17, ../sass/civihr_default/_functions.scss */
+.content > .view-hr-vacancies .views-row:before, .content > .view-hr-vacancies .views-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1744, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .views-row > .views-field:first-of-type .field-content {
+  color: #41afcb;
+}
+/* line 1749, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .views-row-odd {
+  background: #fbfbfc;
+  border-top: 1px solid #ecedee;
+  border-bottom: 1px solid #ecedee;
+}
+/* line 1754, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .field-content {
+  margin-top: 10px;
+}
+/* line 1757, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .field-content .btn, .content > .view-hr-vacancies .field-content .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .content > .view-hr-vacancies .field-content .ctools-use-modal, .content > .view-hr-vacancies .field-content .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .content > .view-hr-vacancies .field-content .hr-resouce-download-all {
+  background: none;
+  padding: 0;
+  color: #41afcb;
+}
+/* line 1763, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .vacancy-wrapper {
+  margin: 0;
+}
+/* line 1766, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .vacancy-wrapper:last-of-type {
+  text-align: right;
+  float: right;
+}
+/* line 1770, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .vacancy-wrapper:last-of-type .field-content {
+  margin-top: 0;
+}
+/* line 1776, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .fieldset-legend {
+  margin-left: -6px;
+}
+/* line 1779, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .fieldset-title {
+  color: #767b8e;
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+/* line 1784, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies fieldset {
+  padding: 0;
+  border: 0;
+  margin-top: 20px;
+}
+/* line 1789, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .fieldset-wrapper {
+  margin-top: 20px;
+  background: #f0f1f4;
+  padding: 15px 20px;
+}
+/* line 1794, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .fieldset-wrapper .views-field {
+  margin-bottom: 15px;
+}
+/* line 1797, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .fieldset-wrapper .views-field:last-child {
+  margin-bottom: 0;
+}
+/* line 1801, ../sass/civihr_default/_custom.scss */
+.content > .view-hr-vacancies .fieldset-wrapper .views-label {
+  width: 16.6%;
+  display: inline-block;
+}
+
+/* Page: HR Staff Directory */
+/* line 1811, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory {
+  background: none;
+  padding: 0;
+}
+/* line 1815, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory table {
+  font-size: 1.3rem;
+  table-layout: fixed;
+  width: auto;
+}
+/* line 1821, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters,
+.view-hr-staff-directory .view-content,
+.view-hr-staff-directory .item-list {
+  background: #fff;
+  padding: 20px;
+  overflow-x: auto;
+}
+/* line 1828, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters {
+  margin-bottom: 20px;
+}
+/* line 1831, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .views-exposed-form {
+  position: relative;
+}
+/* line 1834, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .views-exposed-form:after {
+  content: "";
+  border-bottom: 1px solid #ecedee;
+  width: 100%;
+  position: absolute;
+  bottom: 55px;
+}
+/* line 1842, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .views-exposed-widgets {
+  margin: 0 -10px;
+}
+/* line 1845, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .views-exposed-widget:not(.views-submit-button) {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+/* line 1851, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .views-submit-button {
+  padding: 0 10px;
+}
+/* line 17, ../sass/civihr_default/_functions.scss */
+.view-hr-staff-directory .view-filters .views-submit-button:before, .view-hr-staff-directory .view-filters .views-submit-button:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1855, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .form-submit {
+  margin-top: 30px;
+}
+/* line 1860, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-content .table-responsive {
+  margin-top: -20px;
+}
+/* line 1863, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-content th,
+.view-hr-staff-directory .view-content td {
+  padding: 15px 20px;
+}
+/* line 1868, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list {
+  padding-top: 0;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+/* line 1873, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list .pager-current {
+  color: #555862;
+  font-weight: 700;
+}
+/* line 1877, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list,
+.view-hr-staff-directory .item-list a {
+  color: #767b8e;
+  font-weight: 400;
+}
+/* line 1882, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list .pagination {
+  margin-bottom: 0;
+  text-align: left;
+}
+/* line 1886, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list .first {
+  padding-left: 0;
+}
+
+/* Login/Register page */
+/* line 1894, ../sass/civihr_default/_custom.scss */
+.block-user {
+  padding: 0 20px;
+}
+
+/* line 1897, ../sass/civihr_default/_custom.scss */
+#user-pass,
+#user-login,
+#user-register-form {
   padding: 0 15px;
 }
-/* line 257, ../sass/civihr_default/_custom.scss */
-.navbar-collapse .menu .active,
-.navbar-collapse .menu a:hover {
-  background: #767b8e;
-  color: white;
+
+/* Print leave report */
+/* line 1905, ../sass/civihr_default/_custom.scss */
+.page-print-leave-report .view-absence-entitlement {
+  margin: 0;
+  padding: 0;
+}
+/* line 1911, ../sass/civihr_default/_custom.scss */
+.page-print-leave-report .entitlement-date-row + tr {
+  border-top: 1px solid #ecedee;
 }
 
-/* line 263, ../sass/civihr_default/_custom.scss */
-.breadcrumb {
+/* hide slider nav arrows when inactive */
+/* line 1917, ../sass/civihr_default/_custom.scss */
+.jcarousel-container [disabled] {
   display: none;
 }
-
-/* Main */
-/* line 270, ../sass/civihr_default/_custom.scss */
-.main {
-  background: #ecedee;
-}
-
-/* line 273, ../sass/civihr_default/_custom.scss */
-.main-container {
-  background: white;
-}
-
-/*
-    Dashboard (Self Service Portal)
-*/

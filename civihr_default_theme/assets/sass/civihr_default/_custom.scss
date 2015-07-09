@@ -295,13 +295,13 @@ tr {
     }
 }
 .alert-danger {
-    background: $color-danger;
+    background: $brand-danger;
 }
 .alert-success {
-    background: $color-safe;
+    background: $brand-success;
 }
 .alert-warning {
-    background: $color-warning;
+    background: $brand-warning;
 }
 
 /* Modals */
@@ -747,20 +747,53 @@ tr {
 }
 
 /* Buttons */
-
 .btn {
-    background: $brand-primary;
-    color: $light;
-    font-size: 1.3rem;
-    padding: 0.8rem 1.2rem;
-    display: inline-block;
-    border: 0;
-    text-align: center;
+  @include button-size(0.7rem, 1.1rem, 1.3rem, $line-height-base, $border-radius-base);
+}
 
-    &:hover {
-        color: $light;
-        background: rgba($brand-primary, 0.8);
-    }
+.btn-custom {
+  @include button-variant($light, $btn-primary-bg, transparent);
+}
+
+.btn-lg {
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+.btn-sm {
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+.context-menu-toggle {
+  box-shadow: none !important;
+  color: $gray;
+  padding: 0px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  padding: 0;
+
+  > li > a {
+    padding: 8px 14px;
+    line-height: 18px;
+  }
+
+  [class^="fa-"],
+  [class^="glyphicon-"],
+  [class*=" fa-"],
+  [class*=" glyphicon-"] {
+    text-align: center;
+    width: 1.25em;
+  }
 }
 
 /* Forms */
@@ -1306,11 +1339,11 @@ label[for*="edit-absence-start-date-period-filter"] {
             font-size: 1.4rem;
         }
         [class*="ok-sign"] {
-            color: $color-safe;
+            color: $brand-success;
             margin-right: 10px;
         }
         [class*="remove-sign"] {
-            color: $color-danger;
+            color: $brand-danger;
         }
     }
 }
@@ -1320,6 +1353,25 @@ label[for*="edit-absence-start-date-period-filter"] {
   .drop-zone {
     margin: 10px 0;
     padding: 30px;
+  }
+  .help-block {
+    clear: left;
+    font-size: 12px;
+    float: left;
+  }
+
+  .form-type-date-popup {
+    width: 100%;
+
+    .date-padding {
+      padding: 0;
+    }
+
+    .form-type-textfield {
+      label {
+        display: none;
+      }
+    }
   }
 
   .table-upload {

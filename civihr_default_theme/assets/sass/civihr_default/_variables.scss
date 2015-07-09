@@ -15,6 +15,9 @@ $icon-font-name:          "glyphicons-halflings-regular";
 $brand-primary:         #41afcb; // blue-green shade
 $brand-secondary:       #db6c86; // submenu hover
 $brand-tertiary:        $brand-primary; // calendar today
+$brand-success:         #7dc4a7; // green shade
+$brand-warning:         #DABB24;
+$brand-danger:          #da6b86; // red shade
 
 // Grays
 // -------------------------
@@ -30,9 +33,6 @@ $light           : #fff; // well bg, text on dark bg hover
 $light-pale      : #c3cbd6; // text on dark bg
 
 $color-neutral   : #949caa; // gray shade
-$color-safe      : #7dc4a7; // green shade
-$color-danger    : #da6b86; // red shade
-$color-warning   : #DABB24; // red shade
 
 // Components
 // -------------------------
@@ -42,8 +42,6 @@ $border-radius-small:            0;
 
 // Buttons
 // -------------------------
-$btn-default-color:              $light;
-$btn-default-bg:                 $brand-primary;
 
 // Badges
 // -------------------------

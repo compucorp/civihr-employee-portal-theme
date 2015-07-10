@@ -1,2 +1,47 @@
 // Styles for blocks.
 // --------------------------------------------------
+#block-user-login {
+
+  #messages {
+    padding: 0;
+    margin-bottom: 20px;
+
+    .alert {
+      padding: {
+        bottom: 15px;
+        top: 15px;
+      };
+    }
+  }
+
+  .btn {
+    min-width: 82px;
+  }
+
+  .panel-body {
+    padding-top: 0;
+
+    > .form-item:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .panel-heading {
+    padding: {
+      bottom: 13px;
+      top: 13px;
+    }
+  }
+
+  .panel-forgot-password {
+    background-color: #f0f1f4;
+
+    .alert {
+      margin-bottom: -21px;
+    }
+  }
+
+  .panel-login + .panel-forgot-password {
+    margin-top: -20px;
+  }
+}

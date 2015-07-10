@@ -1,2 +1,33 @@
 // Styles for panels and panes.
 // --------------------------------------------------
+
+.panel-body {
+  > .row:last-child .form-actions {
+    margin-bottom: 0;
+  }
+
+  .row {
+    margin: {
+      left: -($panel-body-padding+1px);
+      right: -($panel-body-padding+1px);
+    };
+  }
+
+  [class^="col-"],
+  [class*=" col-"] {
+    padding: {
+      left: ($panel-body-padding+1px);
+      right: ($panel-body-padding+1px);
+    }
+  }
+}
+
+.panel-heading {
+  width: 100%;
+}
+
+.panel-title {
+  color: $gray-darker;
+  font-size: $panel-heading-font-size;
+  font-weight: 400;
+}

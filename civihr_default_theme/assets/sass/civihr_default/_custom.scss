@@ -247,7 +247,7 @@ tr {
 
     &:before {
         position: absolute;
-        top: 14px;
+        top: 11px;
         right: 14px;
     }
     &:after {
@@ -597,10 +597,31 @@ tr {
                 margin-top: 0;
             }
         }
+
+        &.collapsed {
+          height: auto;
+        }
+
+        &.panel {
+          @include box-shadow(none);
+        }
+
+        .panel-body {
+          padding: 0;
+        }
+
+        .panel-heading {
+          background-color: transparent;
+          border: 0 none;
+          padding: {
+            left: 5px;
+            right: 5px;
+          }
+        }
+
     }
     .fieldset-legend {
         font-size: 1.6rem;
-        margin: 40px 0 20px;
 
         a {
             color: $gray-darker;
@@ -611,13 +632,11 @@ tr {
         display: none;
     }
     .form-item {
-        @include clearfix;
-
         label:not(.element-invisible) {
             display: block;
             float: left;
             width: 35%;
-            padding: 10px 0;
+            padding: 7px 0;
             font-size: 1.3rem;
             color: $gray-darker;
 
@@ -633,6 +652,11 @@ tr {
         float: left;
         width: 65%;
     }
+
+    .form-managed-file + .description {
+      margin-left: 35%;
+    }
+
     .webform-container-inline {
         width: 65%;
         float: left;
@@ -653,8 +677,8 @@ tr {
     }
     .form-actions {
         border-top: 1px solid $gray-light;
-        padding-top: 10px;
-        margin-top: 30px;
+        padding-top: 20px;
+        margin-bottom: 0;
 
         .btn {
             padding: 0.8rem 6rem;
@@ -703,8 +727,8 @@ tr {
     }
     .form-type-textarea {
         border-bottom: 1px solid $gray-light;
-        margin-bottom: 10px;
-        padding-bottom: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
     .form-submit {
         padding: 0.8rem 6rem;
@@ -806,26 +830,38 @@ form {
         float: right;
     }
 }
-.form-item {
+.form-item,
+.form-actions {
+  @include clearfix;
     position: relative;
-    padding: 10px 0;
-    margin: 0;
+    margin: 0 0 20px 0;
 
     label {
         display: none;
     }
 
     .form-item {
-        padding: 0;
+      margin-bottom: 0;
     }
+
+  input.error {
+    border: 1px solid $brand-danger;
+  }
 }
+
 .form-text {
     border: 1px solid $color-neutral;
     font-size: 1.3rem;
     color: $gray;
-    padding: 10px;
+    line-height: 1.5;
+    padding: 7px 10px;
     margin: 0;
     width: 100%;
+
+  &:focus {
+    outline: 0 none;
+    border-color: $brand-primary;
+  }
 }
 
 /* Header */
@@ -891,7 +927,7 @@ form {
 
 .pane-block,
 .view {
-    background: $light;
+    background: $panel-bg;
     padding: 20px;
     margin: 0 0 30px 0;
     @include clearfix;
@@ -1926,17 +1962,6 @@ label[for*="edit-absence-start-date-period-filter"] {
             padding-left: 0;
         }
     }
-}
-
-/* Login/Register page */
-
-.block-user {
-    padding: 0 20px;
-}
-#user-pass,
-#user-login,
-#user-register-form {
-    padding: 0 15px;
 }
 
 /* Print leave report */

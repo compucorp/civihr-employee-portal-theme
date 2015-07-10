@@ -7769,6 +7769,35 @@ a.badge:hover, a.badge:focus {
   margin-top: -20px;
 }
 
+/* line 49, ../sass/partials/_block.scss */
+#block-header-welcome {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+/* line 56, ../sass/partials/_block.scss */
+#block-header-welcome h1 {
+  margin: 0 0 4px;
+}
+/* line 60, ../sass/partials/_block.scss */
+#block-header-welcome h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+/* line 67, ../sass/partials/_block.scss */
+#block-header-welcome .logo-rect-wrapper {
+  background: #fff;
+  max-width: 100%;
+  width: 125px;
+  height: 125px;
+  border-radius: 125px;
+  margin: 0 auto 17px;
+  padding: 10px;
+  text-align: center;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?iqn065");

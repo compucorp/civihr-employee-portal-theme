@@ -65,13 +65,22 @@
   }
 
   .logo-rect-wrapper {
+    @include box-shadow($box-shadow-global);
     background: $light;
     max-width: 100%;
     width: 125px;
     height: 125px;
     border-radius: 125px;
     margin: 0 auto 17px;
-    padding: 10px;
     text-align: center;
+    position: relative;
+
+    img {
+      max-width: 80%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      @include transform(translate(-50%, -50%));
+    }
   }
 }

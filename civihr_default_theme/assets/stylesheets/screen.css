@@ -7701,28 +7701,35 @@ a.badge:hover, a.badge:focus {
   width: 100%;
 }
 
-/* line 5, ../sass/partials/_panel.scss */
+/* line 4, ../sass/partials/_panel.scss */
+.panel,
+.panel-pane {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035);
+}
+
+/* line 10, ../sass/partials/_panel.scss */
 .panel-body > .row:last-child .form-actions, .content > .view-hr-documents .panel-body > .row-hr-resource:last-child .form-actions, .content > .view-hr-vacancies .panel-body > .row-hr-resource:last-child .form-actions {
   margin-bottom: 0;
 }
-/* line 9, ../sass/partials/_panel.scss */
+/* line 14, ../sass/partials/_panel.scss */
 .panel-body .row, .panel-body .content > .view-hr-documents .row-hr-resource, .content > .view-hr-documents .panel-body .row-hr-resource, .panel-body .content > .view-hr-vacancies .row-hr-resource, .content > .view-hr-vacancies .panel-body .row-hr-resource {
   margin-left: -21px;
   margin-right: -21px;
 }
-/* line 16, ../sass/partials/_panel.scss */
+/* line 21, ../sass/partials/_panel.scss */
 .panel-body [class^="col-"],
 .panel-body [class*=" col-"] {
   padding-left: 21px;
   padding-right: 21px;
 }
 
-/* line 25, ../sass/partials/_panel.scss */
+/* line 30, ../sass/partials/_panel.scss */
 .panel-heading {
   width: 100%;
 }
 
-/* line 29, ../sass/partials/_panel.scss */
+/* line 34, ../sass/partials/_panel.scss */
 .panel-title {
   color: #4c4c5d;
   font-size: 1.8rem;
@@ -7788,14 +7795,27 @@ a.badge:hover, a.badge:focus {
 }
 /* line 67, ../sass/partials/_block.scss */
 #block-header-welcome .logo-rect-wrapper {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035);
   background: #fff;
   max-width: 100%;
   width: 125px;
   height: 125px;
   border-radius: 125px;
   margin: 0 auto 17px;
-  padding: 10px;
   text-align: center;
+  position: relative;
+}
+/* line 78, ../sass/partials/_block.scss */
+#block-header-welcome .logo-rect-wrapper img {
+  max-width: 80%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @font-face {

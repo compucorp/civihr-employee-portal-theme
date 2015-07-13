@@ -1,6 +1,11 @@
 // Styles for panels and panes.
 // --------------------------------------------------
 
+.panel,
+.panel-pane {
+  @include box-shadow($box-shadow-global);
+}
+
 .panel-body {
   > .row:last-child .form-actions {
     margin-bottom: 0;

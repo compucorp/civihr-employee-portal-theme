@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/* line 718, ../sass/civihr_default/_custom.scss */
+#civihr-employee-portal-absence-request-form .container-inline-date .help-block {
+  display: none;
+}
+/* line 722, ../sass/civihr_default/_custom.scss */
+#civihr-employee-portal-absence-request-form #absence-request-dates-selected {
+  border-bottom: 1px solid #ecedee;
+  border-top: 1px solid #ecedee;
+  margin: 20px 0;
+  padding-top: 20px;
+}
 /* line 728, ../sass/civihr_default/_custom.scss */
 #civihr-employee-portal-absence-request-form .form-type-textarea {
   border-bottom: 1px solid #ecedee;
@@ -1460,4 +1471,70 @@ label[for*="edit-absence-start-date-period-filter"] {
   width: 50%;
   padding: 0 10px;
   margin-bottom: 10px;
+}
+/* line 1926, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .views-submit-button {
+  padding: 0 10px;
+}
+/* line 17, ../sass/civihr_default/_functions.scss */
+.view-hr-staff-directory .view-filters .views-submit-button:before, .view-hr-staff-directory .view-filters .views-submit-button:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1930, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-filters .form-submit {
+  margin-top: 30px;
+}
+/* line 1935, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-content .table-responsive {
+  margin-top: -20px;
+}
+/* line 1938, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .view-content th,
+.view-hr-staff-directory .view-content td {
+  padding: 15px 20px;
+}
+/* line 1943, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list {
+  padding-top: 0;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+/* line 1948, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list .pager-current {
+  color: #555862;
+  font-weight: 700;
+}
+/* line 1952, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list,
+.view-hr-staff-directory .item-list a {
+  color: #767b8e;
+  font-weight: 400;
+}
+/* line 1957, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list .pagination {
+  margin-bottom: 0;
+  text-align: left;
+}
+/* line 1961, ../sass/civihr_default/_custom.scss */
+.view-hr-staff-directory .item-list .first {
+  padding-left: 0;
+}
+
+/* Print leave report */
+/* line 1969, ../sass/civihr_default/_custom.scss */
+.page-print-leave-report .view-absence-entitlement {
+  margin: 0;
+  padding: 0;
+}
+/* line 1975, ../sass/civihr_default/_custom.scss */
+.page-print-leave-report .entitlement-date-row + tr {
+  border-top: 1px solid #ecedee;
+}
+
+/* hide slider nav arrows when inactive */
+/* line 1981, ../sass/civihr_default/_custom.scss */
+.jcarousel-container [disabled] {
+  display: none;
 }

@@ -930,6 +930,7 @@ form {
     background: $panel-bg;
     padding: 20px;
     margin: 0 0 30px 0;
+    @include box-shadow($box-shadow-global);
     @include clearfix;
 }
 .pane-block[class*="absence-list"] {

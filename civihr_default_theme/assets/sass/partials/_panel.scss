@@ -1,8 +1,7 @@
 // Styles for panels and panes.
 // --------------------------------------------------
 
-.panel,
-.panel-pane {
+.panel {
   @include box-shadow($box-shadow-global);
 }
 

@@ -170,11 +170,11 @@ ul {
 
 a {
     text-decoration: none;
-    color: $brand-color;
+    color: $brand-primary;
 
     &:hover {
         text-decoration: none;
-        color: rgba($brand-color, 0.8);
+        color: rgba($brand-primary, 0.8);
     }
     &:active,
     &:focus {
@@ -247,7 +247,7 @@ tr {
 
     &:before {
         position: absolute;
-        top: 14px;
+        top: 11px;
         right: 14px;
     }
     &:after {
@@ -295,13 +295,13 @@ tr {
     }
 }
 .alert-danger {
-    background: $color-danger;
+    background: $brand-danger;
 }
 .alert-success {
-    background: $color-safe;
+    background: $brand-success;
 }
 .alert-warning {
-    background: $color-warning;
+    background: $brand-warning;
 }
 
 /* Modals */
@@ -390,7 +390,7 @@ tr {
     }
     // Highlight days in calendar
     // td:not(:first-child):not(:empty) {
-    //     background: $tertiary-color;
+    //     background: $brand-tertiary;
     //     color: $light;
     // }
 }
@@ -516,7 +516,7 @@ tr {
     .today {
         .day {
             display: inline-block;
-            background: $tertiary-color;
+            background: $brand-tertiary;
             border-radius: 50px;
             color: $light;
             width: 2.2rem;
@@ -597,10 +597,31 @@ tr {
                 margin-top: 0;
             }
         }
+
+        &.collapsed {
+          height: auto;
+        }
+
+        &.panel {
+          @include box-shadow(none);
+        }
+
+        .panel-body {
+          padding: 0;
+        }
+
+        .panel-heading {
+          background-color: transparent;
+          border: 0 none;
+          padding: {
+            left: 5px;
+            right: 5px;
+          }
+        }
+
     }
     .fieldset-legend {
         font-size: 1.6rem;
-        margin: 40px 0 20px;
 
         a {
             color: $gray-darker;
@@ -611,13 +632,11 @@ tr {
         display: none;
     }
     .form-item {
-        @include clearfix;
-
         label:not(.element-invisible) {
             display: block;
             float: left;
             width: 35%;
-            padding: 10px 0;
+            padding: 7px 0;
             font-size: 1.3rem;
             color: $gray-darker;
 
@@ -633,6 +652,11 @@ tr {
         float: left;
         width: 65%;
     }
+
+    .form-managed-file + .description {
+      margin-left: 35%;
+    }
+
     .webform-container-inline {
         width: 65%;
         float: left;
@@ -653,8 +677,8 @@ tr {
     }
     .form-actions {
         border-top: 1px solid $gray-light;
-        padding-top: 10px;
-        margin-top: 30px;
+        padding-top: 20px;
+        margin-bottom: 0;
 
         .btn {
             padding: 0.8rem 6rem;
@@ -703,8 +727,8 @@ tr {
     }
     .form-type-textarea {
         border-bottom: 1px solid $gray-light;
-        margin-bottom: 10px;
-        padding-bottom: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
     .form-submit {
         padding: 0.8rem 6rem;
@@ -747,20 +771,53 @@ tr {
 }
 
 /* Buttons */
-
 .btn {
-    background: $brand-color;
-    color: $light;
-    font-size: 1.3rem;
-    padding: 0.8rem 1.2rem;
-    display: inline-block;
-    border: 0;
-    text-align: center;
+  @include button-size(0.7rem, 1.1rem, 1.3rem, $line-height-base, $border-radius-base);
+}
 
-    &:hover {
-        color: $light;
-        background: rgba($brand-color, 0.8);
-    }
+.btn-custom {
+  @include button-variant($light, $btn-primary-bg, transparent);
+}
+
+.btn-lg {
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+.btn-sm {
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+.context-menu-toggle {
+  box-shadow: none !important;
+  color: $gray;
+  padding: 0px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  padding: 0;
+
+  > li > a {
+    padding: 8px 14px;
+    line-height: 18px;
+  }
+
+  [class^="fa-"],
+  [class^="glyphicon-"],
+  [class*=" fa-"],
+  [class*=" glyphicon-"] {
+    text-align: center;
+    width: 1.25em;
+  }
 }
 
 /* Forms */
@@ -773,26 +830,38 @@ form {
         float: right;
     }
 }
-.form-item {
+.form-item,
+.form-actions {
+  @include clearfix;
     position: relative;
-    padding: 10px 0;
-    margin: 0;
+    margin: 0 0 20px 0;
 
     label {
         display: none;
     }
 
     .form-item {
-        padding: 0;
+      margin-bottom: 0;
     }
+
+  input.error {
+    border: 1px solid $brand-danger;
+  }
 }
+
 .form-text {
     border: 1px solid $color-neutral;
     font-size: 1.3rem;
     color: $gray;
-    padding: 10px;
+    line-height: 1.5;
+    padding: 7px 10px;
     margin: 0;
     width: 100%;
+
+  &:focus {
+    outline: 0 none;
+    border-color: $brand-primary;
+  }
 }
 
 /* Header */
@@ -817,7 +886,7 @@ form {
     font-size: 1.6rem;
     color: $light;
     padding: 0 16px;
-    background: $brand-color;
+    background: $brand-primary;
 
     &:hover {
         color: rgba($light, 0.8);
@@ -836,7 +905,8 @@ form {
             padding: 0 15px;
         }
         .active,
-        a:hover {
+        a:hover,
+        a:focus {
             background: $gray;
             color: $light;
         }
@@ -857,9 +927,10 @@ form {
 
 .pane-block,
 .view {
-    background: $light;
+    background: $panel-bg;
     padding: 20px;
     margin: 0 0 30px 0;
+    @include box-shadow($box-shadow-global);
     @include clearfix;
 }
 .pane-block[class*="absence-list"] {
@@ -1237,7 +1308,7 @@ label[for*="edit-absence-start-date-period-filter"] {
     }
     .badge {
         float: right;
-        background: $brand-color;
+        background: $brand-primary;
         color: $light;
         border-radius: 100px;
         padding: 0 7px;
@@ -1247,17 +1318,17 @@ label[for*="edit-absence-start-date-period-filter"] {
         width: 100%;
         text-align: left;
         background: none;
-        color: $brand-color;
+        color: $brand-primary;
         padding: 10px 20px;
 
         &.active,
         &:hover {
-            background: $brand-color;
+            background: $brand-primary;
             color: $light;
 
             .badge {
                 background: $light;
-                color: $brand-color;
+                color: $brand-primary;
             }
         }
     }
@@ -1305,14 +1376,68 @@ label[for*="edit-absence-start-date-period-filter"] {
             font-size: 1.4rem;
         }
         [class*="ok-sign"] {
-            color: $color-safe;
+            color: $brand-success;
             margin-right: 10px;
         }
         [class*="remove-sign"] {
-            color: $color-danger;
+            color: $brand-danger;
         }
     }
 }
+
+/* Documents Upload */
+#civihr-employee-portal-document-form {
+  .drop-zone {
+    margin: 10px 0;
+    padding: 30px;
+  }
+  .help-block {
+    clear: left;
+    font-size: 12px;
+    float: left;
+  }
+
+  .form-type-date-popup {
+    width: 100%;
+
+    .date-padding {
+      padding: 0;
+    }
+
+    .form-type-textfield {
+      label {
+        display: none;
+      }
+    }
+  }
+
+  .table-upload {
+    table-layout: fixed;
+
+    .col-index {
+      width: 60px;
+    }
+
+    .col-name {
+      width: 45%;
+    }
+
+    .col-size {
+      width: 95px;
+    }
+
+    .col-action {
+      width: 130px;
+    }
+
+    td {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+/* Manager Documents Upload Approval */
 
 /* User menu */
 
@@ -1362,7 +1487,7 @@ label[for*="edit-absence-start-date-period-filter"] {
 
             &:hover {
                 color: $light;
-                background: $secondary-color;
+                background: $brand-secondary;
             }
         }
     }
@@ -1693,7 +1818,7 @@ label[for*="edit-absence-start-date-period-filter"] {
 
             & > .views-field:first-of-type {
                 .field-content {
-                    color: $brand-color;
+                    color: $brand-primary;
                 }
             }
         }
@@ -1708,7 +1833,7 @@ label[for*="edit-absence-start-date-period-filter"] {
             .btn {
                 background: none;
                 padding: 0;
-                color: $brand-color;
+                color: $brand-primary;
             }
         }
         .vacancy-wrapper {
@@ -1838,17 +1963,6 @@ label[for*="edit-absence-start-date-period-filter"] {
             padding-left: 0;
         }
     }
-}
-
-/* Login/Register page */
-
-.block-user {
-    padding: 0 20px;
-}
-#user-pass,
-#user-login,
-#user-register-form {
-    padding: 0 15px;
 }
 
 /* Print leave report */

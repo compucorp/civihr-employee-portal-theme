@@ -1,2 +1,86 @@
 // Styles for blocks.
 // --------------------------------------------------
+#block-user-login {
+
+  #messages {
+    padding: 0;
+    margin-bottom: 20px;
+
+    .alert {
+      padding: {
+        bottom: 15px;
+        top: 15px;
+      };
+    }
+  }
+
+  .btn {
+    min-width: 82px;
+  }
+
+  .panel-body {
+    padding-top: 0;
+
+    > .form-item:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .panel-heading {
+    padding: {
+      bottom: 13px;
+      top: 13px;
+    }
+  }
+
+  .panel-forgot-password {
+    background-color: #f0f1f4;
+
+    .alert {
+      margin-bottom: -21px;
+    }
+  }
+
+  .panel-login + .panel-forgot-password {
+    margin-top: -20px;
+  }
+}
+
+#block-header-welcome {
+  padding: {
+    bottom: 20px;
+    top: 20px;
+  }
+  margin-top: 30px;
+
+  h1 {
+    margin: 0 0 4px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+
+  .logo-rect-wrapper {
+    @include box-shadow($box-shadow-global);
+    background: $light;
+    max-width: 100%;
+    width: 125px;
+    height: 125px;
+    border-radius: 125px;
+    margin: 0 auto 17px;
+    text-align: center;
+    position: relative;
+
+    img {
+      max-width: 80%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      @include transform(translate(-50%, -50%));
+    }
+  }
+}

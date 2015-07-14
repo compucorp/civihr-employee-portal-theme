@@ -1249,15 +1249,24 @@ label[for*="edit-absence-start-date-period-filter"] {
 /* Manager absence approval */
 
 .view-approvals {
-    &:before {
-        content: "";
-        position: absolute;
-        left: 25%;
-        height: 100%;
-        border-left: 1px solid $gray-light;
-        margin-left: 14px;
-        display: block;
+    @include grid-condensed(0);
+
+    > .row {
+      margin: {
+        bottom: -$panel-body-padding - 1px;
+        left: -$panel-body-padding - 1px;
+        right: -$panel-body-padding;
+      };
+
+      @media (min-width: $screen-sm-min) {
+        @include flex;
+      }
     }
+
+    table {
+      table-layout: auto;
+    }
+
     .absence-approval-actions {
         position: absolute;
         top: 13px;
@@ -1305,43 +1314,14 @@ label[for*="edit-absence-start-date-period-filter"] {
         margin-bottom: 0;
     }
 }
+
 .approval-filters {
-    ul {
-        margin: 0 -20px;
-        font-size: 1.3rem;
-        padding-top: 15px;
-    }
-    .badge {
-        float: right;
-        background: $brand-primary;
-        color: $light;
-        border-radius: 100px;
-        padding: 0 7px;
-        min-width: 22px;
-    }
-    .btn {
-        width: 100%;
-        text-align: left;
-        background: none;
-        color: $brand-primary;
-        padding: 10px 20px;
-
-        &.active,
-        &:hover {
-            background: $brand-primary;
-            color: $light;
-
-            .badge {
-                background: $light;
-                color: $brand-primary;
-            }
-        }
-    }
+  padding: 15px 0 20px;
+  border-right: 1px solid $gray-light;
 }
 
 // !important here overwrites css from tablesaw.css
 .approval-overflow-content {
-    margin: 0 -20px 0 -10px;
     padding-bottom: 20px;
     overflow: visible !important;
     height: auto !important;
@@ -1391,6 +1371,37 @@ label[for*="edit-absence-start-date-period-filter"] {
 }
 
 /* Documents Upload */
+.pane-views-documents-block {
+
+  .nav {
+    border-right: 1px solid #ecedee;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    margin-bottom: 0;
+  }
+
+  .pane-title {
+    margin-bottom: 0;
+  }
+
+  .view-content {
+    @include grid-condensed(0);
+
+    > .row {
+      margin: {
+        bottom: -$panel-body-padding - 1px;
+        left: -$panel-body-padding - 1px;
+        right: -$panel-body-padding;
+      };
+
+      @media (min-width: $screen-sm-min) {
+        @include flex;
+      }
+    }
+  }
+}
+
+
 #civihr-employee-portal-document-form {
   .drop-zone {
     margin: 10px 0;

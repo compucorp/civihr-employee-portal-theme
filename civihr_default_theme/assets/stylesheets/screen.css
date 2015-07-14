@@ -7726,7 +7726,7 @@ a.badge:hover, a.badge:focus {
 
 /* Welcome page */
 /* line 6, ../sass/partials/_page.scss */
-.page-welcome-page #block-user-login {
+.page-welcome-page .pane-user-login {
   max-width: 438px;
   margin: 0 auto;
   width: 100%;
@@ -7742,88 +7742,93 @@ a.badge:hover, a.badge:focus {
 .panel-body > .row:last-child .form-actions, .content > .view-hr-documents .panel-body > .row-hr-resource:last-child .form-actions, .content > .view-hr-vacancies .panel-body > .row-hr-resource:last-child .form-actions {
   margin-bottom: 0;
 }
-/* line 13, ../sass/partials/_panel.scss */
-.panel-body .row, .panel-body .content > .view-hr-documents .row-hr-resource, .content > .view-hr-documents .panel-body .row-hr-resource, .panel-body .content > .view-hr-vacancies .row-hr-resource, .content > .view-hr-vacancies .panel-body .row-hr-resource {
+/* line 6, ../sass/global/_mixin.scss */
+.panel-body .row, .panel-body .content > .view-hr-documents .row-hr-resource, .content > .view-hr-documents .panel-body .row-hr-resource, .panel-body .content > .view-hr-vacancies .row-hr-resource, .content > .view-hr-vacancies .panel-body .row-hr-resource,
+.panel-body .form-horizontal .form-group {
   margin-left: -21px;
   margin-right: -21px;
 }
-/* line 20, ../sass/partials/_panel.scss */
+/* line 14, ../sass/global/_mixin.scss */
 .panel-body [class^="col-"],
 .panel-body [class*=" col-"] {
   padding-left: 21px;
   padding-right: 21px;
 }
 
-/* line 29, ../sass/partials/_panel.scss */
+/* line 16, ../sass/partials/_panel.scss */
 .panel-heading {
   width: 100%;
 }
 
-/* line 33, ../sass/partials/_panel.scss */
+/* line 20, ../sass/partials/_panel.scss */
 .panel-title {
   color: #4c4c5d;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-/* line 5, ../sass/partials/_block.scss */
-#block-user-login #messages {
+/* line 26, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+/* line 30, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login #messages {
   padding: 0;
   margin-bottom: 20px;
 }
-/* line 9, ../sass/partials/_block.scss */
-#block-user-login #messages .alert {
+/* line 34, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login #messages .alert {
   padding-bottom: 15px;
   padding-top: 15px;
 }
-/* line 17, ../sass/partials/_block.scss */
-#block-user-login .btn, #block-user-login .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header #block-user-login .ctools-use-modal, #block-user-login .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents #block-user-login .hr-resouce-download-all, #block-user-login .modal-body .content > .view-hr-vacancies .hr-resouce-download-all, .modal-body .content > .view-hr-vacancies #block-user-login .hr-resouce-download-all {
+/* line 42, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login .btn, .pane-block.pane-user-login .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .pane-block.pane-user-login .ctools-use-modal, .pane-block.pane-user-login .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .pane-block.pane-user-login .hr-resouce-download-all, .pane-block.pane-user-login .modal-body .content > .view-hr-vacancies .hr-resouce-download-all, .modal-body .content > .view-hr-vacancies .pane-block.pane-user-login .hr-resouce-download-all {
   min-width: 82px;
 }
-/* line 21, ../sass/partials/_block.scss */
-#block-user-login .panel-body {
+/* line 6, ../sass/global/_mixin.scss */
+.pane-block.pane-user-login .pane-content .row, .pane-block.pane-user-login .pane-content .content > .view-hr-documents .row-hr-resource, .content > .view-hr-documents .pane-block.pane-user-login .pane-content .row-hr-resource, .pane-block.pane-user-login .pane-content .content > .view-hr-vacancies .row-hr-resource, .content > .view-hr-vacancies .pane-block.pane-user-login .pane-content .row-hr-resource,
+.pane-block.pane-user-login .pane-content .form-horizontal .form-group {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+/* line 14, ../sass/global/_mixin.scss */
+.pane-block.pane-user-login .pane-content [class^="col-"],
+.pane-block.pane-user-login .pane-content [class*=" col-"] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 49, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login .pane-content > .form-item:first-child {
   padding-top: 0;
 }
-/* line 24, ../sass/partials/_block.scss */
-#block-user-login .panel-body > .form-item:first-child {
-  padding-top: 0;
-}
-/* line 29, ../sass/partials/_block.scss */
-#block-user-login .panel-heading {
-  padding-bottom: 13px;
-  padding-top: 13px;
-}
-/* line 36, ../sass/partials/_block.scss */
-#block-user-login .panel-forgot-password {
+/* line 55, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login .pane-user-login-forgot-password > .row, .pane-block.pane-user-login .content > .view-hr-documents .pane-user-login-forgot-password > .row-hr-resource, .content > .view-hr-documents .pane-block.pane-user-login .pane-user-login-forgot-password > .row-hr-resource, .pane-block.pane-user-login .content > .view-hr-vacancies .pane-user-login-forgot-password > .row-hr-resource, .content > .view-hr-vacancies .pane-block.pane-user-login .pane-user-login-forgot-password > .row-hr-resource {
   background-color: #f0f1f4;
 }
-/* line 39, ../sass/partials/_block.scss */
-#block-user-login .panel-forgot-password .alert {
-  margin-bottom: -21px;
-}
-/* line 44, ../sass/partials/_block.scss */
-#block-user-login .panel-login + .panel-forgot-password {
-  margin-top: -20px;
+/* line 59, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login .pane-user-login-forgot-password .alert {
+  margin-bottom: -20px;
 }
 
-/* line 49, ../sass/partials/_block.scss */
+/* line 4, ../sass/partials/_block.scss */
 #block-header-welcome {
   padding-bottom: 20px;
   padding-top: 20px;
   margin-top: 30px;
 }
-/* line 56, ../sass/partials/_block.scss */
+/* line 11, ../sass/partials/_block.scss */
 #block-header-welcome h1 {
   margin: 0 0 4px;
 }
-/* line 60, ../sass/partials/_block.scss */
+/* line 15, ../sass/partials/_block.scss */
 #block-header-welcome h2 {
   font-size: 18px;
   font-weight: 400;
   margin-top: 0px;
   margin-bottom: 25px;
 }
-/* line 67, ../sass/partials/_block.scss */
+/* line 22, ../sass/partials/_block.scss */
 #block-header-welcome .logo-rect-wrapper {
   -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035);
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035);
@@ -7836,7 +7841,7 @@ a.badge:hover, a.badge:focus {
   text-align: center;
   position: relative;
 }
-/* line 78, ../sass/partials/_block.scss */
+/* line 33, ../sass/partials/_block.scss */
 #block-header-welcome .logo-rect-wrapper img {
   max-width: 80%;
   left: 50%;

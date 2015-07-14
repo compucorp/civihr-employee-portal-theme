@@ -10,20 +10,7 @@
     margin-bottom: 0;
   }
 
-  .row {
-    margin: {
-      left: -($panel-body-padding+1px);
-      right: -($panel-body-padding+1px);
-    };
-  }
-
-  [class^="col-"],
-  [class*=" col-"] {
-    padding: {
-      left: ($panel-body-padding+1px);
-      right: ($panel-body-padding+1px);
-    }
-  }
+  @include grid-condensed($panel-body-padding+1px);
 }
 
 .panel-heading {
@@ -34,4 +21,43 @@
   color: $gray-darker;
   font-size: $panel-heading-font-size;
   font-weight: 400;
+}
+
+.pane-block.pane-user-login {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+
+  #messages {
+    padding: 0;
+    margin-bottom: 20px;
+
+    .alert {
+      padding: {
+        bottom: 15px;
+        top: 15px;
+      };
+    }
+  }
+
+  .btn {
+    min-width: 82px;
+  }
+
+  .pane-content {
+    @include grid-condensed($panel-body-padding);
+
+    > .form-item:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .pane-user-login-forgot-password {
+    > .row {
+      background-color: #f0f1f4;
+    }
+
+    .alert {
+      margin-bottom: -20px;
+    }
+  }
 }

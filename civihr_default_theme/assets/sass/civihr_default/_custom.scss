@@ -56,7 +56,7 @@ $icon-desc-path:    "desc.gif";
 
 .show-all-absences {
     position: absolute;
-    top: 7px;
+    top: 0px;
     font-size: 1.3rem;
     right: 100%;
 }
@@ -1061,7 +1061,8 @@ form {
     }
 }
 
-.footer-slider-block {
+.footer-slider-block,
+.pane-views-hr-documents-block {
     position: relative;
 
     .views-field {

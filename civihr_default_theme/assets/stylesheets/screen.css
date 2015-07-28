@@ -8953,7 +8953,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
 /* line 840, ../sass/civihr_default/_custom.scss */
 .form-item label,
 .form-actions label {
-  display: none;
+  /*display: none;*/
 }
 /* line 844, ../sass/civihr_default/_custom.scss */
 .form-item .form-item,

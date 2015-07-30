@@ -23,7 +23,7 @@ function civihr_default_theme_form_system_theme_settings_alter(&$form, &$form_st
     '#title' => t('Copyright'),
     '#type' => 'text_format',
     '#format' => $copyright['format'],
-    '#default_value' => $copyright['value'] ? $copyright['value'] : t('Drupal is a registered trademark of Dries Buytaert.'),
+    '#default_value' => $copyright['value'] ? $copyright['value'] : '',
   );
 
   // Return the additional form widgets.

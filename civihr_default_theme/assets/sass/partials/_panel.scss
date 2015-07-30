@@ -27,6 +27,10 @@
   margin-bottom: 20px;
   padding-bottom: 0;
 
+  label {
+    display: none;
+  }
+
   #messages {
     padding: 0;
     margin-bottom: 20px;

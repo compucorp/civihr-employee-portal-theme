@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/* line 671, ../sass/civihr_default/_custom.scss */
+.modal-body article .webform-container-inline .form-control,
+#civihr-employee-portal-absence-request-form .webform-container-inline .form-control,
+#civihr-employee-portal-absence-request-form--2 .webform-container-inline .form-control {
+  width: 100%;
+  float: none;
+}
 /* line 675, ../sass/civihr_default/_custom.scss */
 .modal-body article .webform-container-inline .webform-calendar,
 #civihr-employee-portal-absence-request-form .webform-container-inline .webform-calendar,
@@ -262,7 +269,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
 /* line 840, ../sass/civihr_default/_custom.scss */
 .form-item label,
 .form-actions label {
-  display: none;
+  /*display: none;*/
 }
 /* line 844, ../sass/civihr_default/_custom.scss */
 .form-item .form-item,

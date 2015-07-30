@@ -7773,16 +7773,20 @@ a.badge:hover, a.badge:focus {
   padding-bottom: 0;
 }
 /* line 30, ../sass/partials/_panel.scss */
+.pane-block.pane-user-login label {
+  display: none;
+}
+/* line 34, ../sass/partials/_panel.scss */
 .pane-block.pane-user-login #messages {
   padding: 0;
   margin-bottom: 20px;
 }
-/* line 34, ../sass/partials/_panel.scss */
+/* line 38, ../sass/partials/_panel.scss */
 .pane-block.pane-user-login #messages .alert {
   padding-bottom: 15px;
   padding-top: 15px;
 }
-/* line 42, ../sass/partials/_panel.scss */
+/* line 46, ../sass/partials/_panel.scss */
 .pane-block.pane-user-login .btn, .pane-block.pane-user-login .view-approvals .absence-approval-actions .view-header .ctools-use-modal, .view-approvals .absence-approval-actions .view-header .pane-block.pane-user-login .ctools-use-modal, .pane-block.pane-user-login .modal-body .view-hr-documents .hr-resouce-download-all, .modal-body .view-hr-documents .pane-block.pane-user-login .hr-resouce-download-all, .pane-block.pane-user-login .modal-body .content > .view-hr-vacancies .hr-resouce-download-all, .modal-body .content > .view-hr-vacancies .pane-block.pane-user-login .hr-resouce-download-all {
   min-width: 82px;
 }
@@ -7798,15 +7802,15 @@ a.badge:hover, a.badge:focus {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 49, ../sass/partials/_panel.scss */
+/* line 53, ../sass/partials/_panel.scss */
 .pane-block.pane-user-login .pane-content > .form-item:first-child {
   padding-top: 0;
 }
-/* line 55, ../sass/partials/_panel.scss */
+/* line 59, ../sass/partials/_panel.scss */
 .pane-block.pane-user-login .pane-user-login-forgot-password > .row, .pane-block.pane-user-login .content > .view-hr-documents .pane-user-login-forgot-password > .row-hr-resource, .content > .view-hr-documents .pane-block.pane-user-login .pane-user-login-forgot-password > .row-hr-resource, .pane-block.pane-user-login .content > .view-hr-vacancies .pane-user-login-forgot-password > .row-hr-resource, .content > .view-hr-vacancies .pane-block.pane-user-login .pane-user-login-forgot-password > .row-hr-resource {
   background-color: #f0f1f4;
 }
-/* line 59, ../sass/partials/_panel.scss */
+/* line 63, ../sass/partials/_panel.scss */
 .pane-block.pane-user-login .pane-user-login-forgot-password .alert {
   margin-bottom: -20px;
 }
@@ -7851,6 +7855,11 @@ a.badge:hover, a.badge:focus {
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+/* line 5, ../sass/partials/_form.scss */
+#civihr-employee-portal-request-new-account-form label {
+  display: none;
 }
 
 @font-face {
@@ -8953,7 +8962,7 @@ form .btn, form .view-approvals .absence-approval-actions .view-header .ctools-u
 /* line 840, ../sass/civihr_default/_custom.scss */
 .form-item label,
 .form-actions label {
-  display: none;
+  /*display: none;*/
 }
 /* line 844, ../sass/civihr_default/_custom.scss */
 .form-item .form-item,

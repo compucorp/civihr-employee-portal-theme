@@ -30,8 +30,13 @@ function civihr_default_theme_css_alter(&$css) {
  * Implements template_preprocess_page().
  */
 function civihr_default_theme_preprocess_page(&$variables) {
-  // Add copyright to theme.
+  // Add custom copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {
     $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
+  }
+  else {
+    // Set empty copyright message by default
+    // This will override the default copyright message from radix
+    $variables['copyright'] = '';
   }
 }

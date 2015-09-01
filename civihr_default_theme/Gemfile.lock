@@ -39,6 +39,3 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2)
   compass (~> 1.0)
   compass_radix (~> 3.1)
-
-BUNDLED WITH
-   1.10.6

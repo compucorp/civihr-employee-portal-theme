@@ -4,7 +4,7 @@ require "compass_radix";
 require File.join(File.dirname(__FILE__), 'extensions/css_splitter/css_splitter.rb');
 
 # Set environment [development, production]
-environment = :development
+environment = :production
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -23,7 +23,7 @@ output_style = (environment == :development) ? :expanded : :compressed
 relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = (environment == :development) ? true : false
+line_comments = (environment == :development) ? true : 0
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

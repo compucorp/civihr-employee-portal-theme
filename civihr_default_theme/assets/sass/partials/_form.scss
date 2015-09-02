@@ -7,7 +7,8 @@
   }
 }
 
-#civihr-employee-portal-absence-request-form {
+/* Modal: Request leave */
+.civihr_form--modal {
 
 	.container-inline-date {
 		clear: none;
@@ -60,8 +61,19 @@
 
 		.customSelect {
 		    display: block !important;
-		    margin-left: 90px;
+		    overflow: auto;
 		    width: auto;
 		}
+	}
+
+	.form-type-textarea {
+
+		.form-textarea-wrapper {
+			overflow: auto;
+		}
+	}
+
+	.form-submit {
+		padding: 0.8rem 6rem;
 	}
 }

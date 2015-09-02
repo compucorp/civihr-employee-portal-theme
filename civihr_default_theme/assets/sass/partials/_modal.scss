@@ -1,4 +1,4 @@
-.modal-civihr-default-modal {
+.modal-civihr-custom {
 	left: 0 !important;
 	margin: 0 auto;
 	min-height: 400px;
@@ -12,11 +12,11 @@
 	}
 }
 
-.modal-civihr-default-modal__footer {
+.modal-civihr-custom__footer {
 	padding-top: 10px;
 }
 
-.modal-civihr-default-modal__section {
+.modal-civihr-custom__section {
 	@include clearfix;
 
 	border-bottom: 1px solid $gray-light;
@@ -27,8 +27,8 @@
 	}
 }
 
-.modal-civihr-default-modal__section--strip {
-	@extend .modal-civihr-default-modal__section;
+.modal-civihr-custom__section--strip {
+	@extend .modal-civihr-custom__section;
 
 	background: $gray-light-alt;
 	margin: 0 -10px;

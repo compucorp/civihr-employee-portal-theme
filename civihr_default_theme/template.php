@@ -40,3 +40,26 @@ function civihr_default_theme_preprocess_page(&$variables) {
     $variables['copyright'] = '';
   }
 }
+
+/**
+ * Implements hook_js_alter().
+ */
+function civihr_default_theme_js_alter(&$javascript) {
+
+  // Add radix-modal when required.
+  if (module_exists('ctools')) {
+    $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
+
+    $old_radix_modal_js = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
+
+    // Unset the old radix-modal.js -> from the parent theme
+    unset($javascript[$old_radix_modal_js]);
+
+    // Add the new radix-modal.js (can be renamed to something else)
+    $radix_modal = drupal_get_path('theme', 'civihr_default_theme') . '/assets/javascripts/radix-modal.js';
+    if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
+      $javascript[$radix_modal] = array_merge(
+          drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+    }
+  }
+}

@@ -580,7 +580,7 @@ tr {
 /* Modal: My details, Emergency contact */
 
 .modal-body article,
-#civihr-employee-portal-absence-request-form,
+// #civihr-employee-portal-absence-request-form,
 #civihr-employee-portal-absence-request-form--2 {
     max-width: 640px;
     margin: 0 auto;
@@ -689,52 +689,52 @@ tr {
 
 /* Modal: Request leave */
 
-#civihr-employee-portal-absence-request-form {
-    @include clearfix;
+// #civihr-employee-portal-absence-request-form {
+//     @include clearfix;
 
-    #absence-request-dates-selected {
-        @include clearfix;
-    }
-    .container-inline-date {
-        & > .form-item {
-            width: 100%;
-        }
-        .date-padding {
-            padding: 0;
-            width: 65%;
+//     #absence-request-dates-selected {
+//         @include clearfix;
+//     }
+//     .container-inline-date {
+//         & > .form-item {
+//             width: 100%;
+//         }
+//         .date-padding {
+//             padding: 0;
+//             width: 65%;
 
-            .form-item {
-                width: 100%;
+//             .form-item {
+//                 width: 100%;
 
-                .form-control {
-                    width: 100%;
-                    float: none;
-                }
-            }
+//                 .form-control {
+//                     width: 100%;
+//                     float: none;
+//                 }
+//             }
 
-            label {
-                display: none;
-            }
-        }
-        .help-block {
-            display: none;
-        }
-    }
-    #absence-request-dates-selected {
-        border-bottom: 1px solid $gray-light;
-        border-top: 1px solid $gray-light;
-        margin: 20px 0;
-        padding-top: 20px;
-    }
-    .form-type-textarea {
-        border-bottom: 1px solid $gray-light;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
-    .form-submit {
-        padding: 0.8rem 6rem;
-    }
-}
+//             label {
+//                 display: none;
+//             }
+//         }
+//         .help-block {
+//             display: none;
+//         }
+//     }
+//     #absence-request-dates-selected {
+//         border-bottom: 1px solid $gray-light;
+//         border-top: 1px solid $gray-light;
+//         margin: 20px 0;
+//         padding-top: 20px;
+//     }
+//     .form-type-textarea {
+//         border-bottom: 1px solid $gray-light;
+//         margin-bottom: 20px;
+//         padding-bottom: 20px;
+//     }
+//     .form-submit {
+//         padding: 0.8rem 6rem;
+//     }
+// }
 
 /* Modal: Pick days */
 

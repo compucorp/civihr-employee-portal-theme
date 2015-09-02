@@ -1,0 +1,30 @@
+.modal-civihr-default-modal {
+	left: 0 !important;
+	margin: 0 auto;
+	min-height: 400px;
+	right: 0;
+	width: 460px;
+
+	.modal-body {
+		padding: 0 10px 10px 10px;
+	}
+}
+
+.modal-civihr-default-modal__section {
+	@include clearfix;
+
+	border-bottom: 1px solid $gray-light;
+	padding: 20px 10px;
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.modal-civihr-default-modal__section--strip {
+	@extend .modal-civihr-default-modal__section;
+
+	background: $gray-light-alt;
+	margin: 0 -10px;
+	padding: 20px;
+}

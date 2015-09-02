@@ -6,8 +6,14 @@
 	width: 460px;
 
 	.modal-body {
+		@include clearfix;
+
 		padding: 0 10px 10px 10px;
 	}
+}
+
+.modal-civihr-default-modal__footer {
+	padding-top: 10px;
 }
 
 .modal-civihr-default-modal__section {

@@ -39,7 +39,7 @@
 
 		label,
 		.help-block {
-			display: none;
+			display: none !important;
 		}
 
 		.form-control {
@@ -54,6 +54,19 @@
 			float: left;
 			padding: 7px 0;
 			width: 90px;
+		}
+
+		.help-block {
+			clear: both;
+			display: block;
+			font-size: 0.9em;
+		}
+	}
+
+	.form-type-file {
+
+		.form-file {
+			padding: 7px 0;
 		}
 	}
 

@@ -6,3 +6,146 @@
     display: none;
   }
 }
+
+/**
+ * Custom style for a <form>
+ */
+.civihr_form {
+
+	.form-type-file {
+
+		.form-file {
+			background: transparent;
+			padding: 7px 0;
+		}
+	}
+
+	.form-submit {
+		padding: 0.8rem 6rem;
+	}
+}
+
+/* [modifier] <form> being displayed in a modal */
+.civihr_form--modal {
+	@extend .civihr_form;
+
+	.container-inline-date {
+		clear: none;
+		float: left;
+		position: relative;
+		width: 48%;
+
+		&:after {
+			content: '\f073';
+		   	font-family: FontAwesome;
+		   	position: absolute;
+		   	right: 0;
+			top: 7px;
+	   	}
+
+	   	&:last-child {
+	   		float: right;
+	   	}
+
+		.form-item {
+			margin: 0;
+		}
+	}
+
+	.date-padding {
+		padding: 0;
+		width: 45%;
+
+		label,
+		.help-block {
+			display: none !important;
+		}
+
+		.form-control {
+			margin-right: 0;
+			width: 100%;
+		}
+	}
+
+	.form-item {
+
+		label {
+			float: left;
+			padding: 7px 0;
+			width: 90px;
+		}
+
+		.help-block {
+			clear: both;
+			display: block;
+			font-size: 0.9em;
+		}
+	}
+
+	.form-type-select {
+
+		.customSelect {
+		    display: block !important;
+		    overflow: auto;
+		    width: auto;
+		}
+	}
+
+	.form-type-textarea {
+
+		.form-textarea-wrapper {
+			overflow: auto;
+		}
+	}
+}
+
+/* [modifier] <form> for the leave requests */
+.civihr_form--request-leave {
+	@extend .civihr_form;
+
+	.civihr_form--request-leave__period {
+		margin-left: 10px;
+	}
+}
+
+.civihr_form--request-leave__period {
+	font-size: 0.9em;
+	color: $gray;
+}
+
+
+/**
+ * Custom style for a <fieldset>,
+ * (based on the markup printed out by the Form API)
+ */
+.civihr_form__fieldset {
+	margin: 0;
+	padding: 0;
+
+	.fieldset-legend {
+		font-size: 1.6rem;
+	}
+
+	.fieldset-title {
+		margin-left: 10px;
+	}
+}
+
+/* [modifier] Transparent <fieldset> (no borders, paddings, bg colors) */
+.civihr_form__fieldset--transparent {
+	@extend .civihr_form__fieldset;
+
+	border: 0;
+	box-shadow: none;
+
+	> legend {
+		background: none !important;
+		border: none;
+		padding: 0;
+	}
+
+	.panel-body {
+		margin-top: 15px;
+		padding: 0;
+	}
+}

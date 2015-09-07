@@ -1,2 +1,67 @@
 // Styles for Menus and Navs
 // --------------------------------------------------
+
+/**
+ * User menu in main header <nav>
+ */
+.civihr_user-menu {
+    color: $light-pale;
+    cursor: default;
+    padding: 0 10px;
+    position: relative;
+
+    &:hover {
+        background: $gray-darker-alt;
+        color: $light;
+
+        > .civihr_user-menu__sub-menu {
+            display: block;
+        }
+    }
+}
+
+.civihr_user-menu__data {
+
+    .civihr_user-menu__name {
+        float: left;
+    }
+
+    @media(max-width: $screen-md-min) {
+        .civihr_user-menu__name,
+        .fa-caret-down {
+            display: none;
+        }
+    }
+}
+
+.civihr_user-menu__picture {
+    border-radius: 50%;
+    height: 34px;
+    display: inline-block;
+    margin: 8px; // To improve, the vertical margin is just to vertically align the image
+    vertical-align: top;
+    width: 34px;
+}
+
+.civihr_user-menu__sub-menu {
+    background: $gray-darker-alt;
+    display: none;
+    position: absolute;
+    right: 0;
+
+    a {
+        color: $light-pale;
+        display: block;
+        padding: 0 40px 0 20px;
+        white-space: nowrap;
+
+        &:hover {
+            background: $brand-secondary;
+            color: $light;
+        }
+
+        > i {
+            margin-right: 10px;
+        }
+    }
+}

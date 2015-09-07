@@ -38,31 +38,18 @@
 
       <?php if ($logged_in) { ?>
 
-      <div class="user-options">
-        <div class="user-menu">
-          <div class="user-name">
-            <span class="value"> <?php print $user_name; ?> </span>
-            <i class="fa fa-caret-down"></i>
-          </div>
-
-          <ul class="user-submenu">
-            <li>
-                <?php print $edit_account; ?>
-            </li>
-            <li>
-                <?php print $logout_link; ?>
-            </li>
-          </ul>
+      <div class="civihr_user-menu">
+        <div class="civihr_user-menu__data">
+          <span class="civihr_user-menu__name"><?php print $user_name; ?></span>
+          <?php if ($image_url != '') { ?>
+            <img class="civihr_user-menu__picture" src="<?php print $image_url; ?>" alt="">
+          <?php } ?>
+          <i class="fa fa-caret-down"></i>
         </div>
-
-        <?php if ($image_url != '') { ?>
-          <div class="user-picture">
-            <a href="#">
-              <img src="<?php print $image_url; ?>" alt="">
-            </a>
-          </div>
-        <?php } ?>
-
+        <ul class="civihr_user-menu__sub-menu">
+          <li><?php print $edit_account; ?></li>
+          <li><?php print $logout_link; ?></li>
+        </ul>
       </div>
 
       <?php } ?>

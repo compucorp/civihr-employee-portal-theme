@@ -1,2 +1,63 @@
 // Styles for main layout
 // --------------------------------------------------
+
+/* Header */
+.chr_header {
+    @include clearfix;
+
+    background: $gray-dark;
+    box-shadow: 0 2px 3px 0 rgba(black, 0.15);
+    color: $light-pale;
+    font-size: 1.3rem;
+    line-height: 5rem;
+
+    > .chr_header__corner,
+    > .chr_header__nav {
+        float: left;
+    }
+
+    > .chr_header__user-menu {
+        float: right;
+    }
+
+    @media(min-width: $screen-md-min) {
+        padding-right: 30px;
+    }
+}
+
+.chr_header__corner {
+    background: $brand-primary;
+    color: $light;
+    text-align: center;
+    width: 55px;
+
+    &:hover {
+        color: rgba($light, 0.8);
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > .chr_brand {
+            display: block;
+        }
+    }
+}
+
+.chr_header__nav__menu {
+
+    a {
+        color: inherit;
+        display: block;
+        padding: 0 15px;
+    }
+
+    > li {
+        float: left;
+    }
+
+    .active,
+    a:hover,
+    a:focus {
+        background: $gray;
+        color: $light;
+    }
+}

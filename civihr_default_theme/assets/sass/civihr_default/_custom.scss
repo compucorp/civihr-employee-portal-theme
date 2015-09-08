@@ -814,67 +814,6 @@ form {
   }
 }
 
-/* Header */
-
-.header {
-    background: $gray-dark;
-    font-size: 1.3rem;
-    color: $light-pale;
-    line-height: 5rem;
-    box-shadow: 0 2px 3px 0 rgba(black, 0.15);
-
-    @include clearfix;
-}
-
-.navbar {
-    padding-right: 30px;
-
-    > .civihr_user-menu {
-        float: right;
-    }
-
-    @media(max-width: $screen-md-min) {
-        padding-right: 0;
-    }
-}
-
-.navbar-toggle {
-    display: none;
-}
-.navbar-header {
-    float: left;
-}
-.navbar-brand {
-    display: block;
-    font-size: 1.6rem;
-    color: $light;
-    padding: 0 16px;
-    background: $brand-primary;
-
-    &:hover {
-        color: rgba($light, 0.8);
-    }
-}
-.navbar-collapse {
-    float: left;
-
-    .menu {
-        li {
-            float: left;
-        }
-        a {
-            color: inherit;
-            display: block;
-            padding: 0 15px;
-        }
-        .active,
-        a:hover,
-        a:focus {
-            background: $gray;
-            color: $light;
-        }
-    }
-}
 .breadcrumb {
     display: none;
 }

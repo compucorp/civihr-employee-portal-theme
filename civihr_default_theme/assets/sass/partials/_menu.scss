@@ -4,7 +4,7 @@
 /**
  * User menu in main header <nav>
  */
-.civihr_user-menu {
+.chr_header__user-menu {
     color: $light-pale;
     cursor: default;
     padding: 0 10px;
@@ -14,39 +14,39 @@
         background: $gray-darker-alt;
         color: $light;
 
-        > .civihr_user-menu__sub-menu {
+        > .chr_header__user-menu__sub-menu {
             display: block;
         }
     }
 }
 
-.civihr_user-menu__data {
+.chr_header__user-menu__data {
 
-    > .civihr_user-menu__name {
+    > .chr_header__user-menu__name {
         float: left;
     }
 
-    > .civihr_user-menu__picture {
+    > .chr_header__user-menu__picture {
         margin: 8px; // To improve, the vertical margin is just to vertically align the image
         vertical-align: top;
     }
 
     @media(max-width: $screen-md-min) {
-        > .civihr_user-menu__arrow,
-        > .civihr_user-menu__name {
+        > .chr_header__user-menu__arrow,
+        > .chr_header__user-menu__name {
             display: none;
         }
     }
 }
 
-.civihr_user-menu__picture {
+.chr_header__user-menu__picture {
     border-radius: 50%;
     display: inline-block;
     height: 34px;
     width: 34px;
 }
 
-.civihr_user-menu__sub-menu {
+.chr_header__user-menu__sub-menu {
     background: $gray-darker-alt;
     display: none;
     position: absolute;

@@ -1,0 +1,12 @@
+.chr_brand {
+    font-size: 1.6rem;
+}
+
+.chr_brand__link {
+    color: inherit;
+    display: block;
+
+    &:hover {
+        color: inherit;
+    }
+}

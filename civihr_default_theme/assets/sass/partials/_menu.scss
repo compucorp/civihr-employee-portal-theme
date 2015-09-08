@@ -22,13 +22,18 @@
 
 .civihr_user-menu__data {
 
-    .civihr_user-menu__name {
+    > .civihr_user-menu__name {
         float: left;
     }
 
+    > .civihr_user-menu__picture {
+        margin: 8px; // To improve, the vertical margin is just to vertically align the image
+        vertical-align: top;
+    }
+
     @media(max-width: $screen-md-min) {
-        .civihr_user-menu__name,
-        .fa-caret-down {
+        > .civihr_user-menu__arrow,
+        > .civihr_user-menu__name {
             display: none;
         }
     }
@@ -36,10 +41,8 @@
 
 .civihr_user-menu__picture {
     border-radius: 50%;
-    height: 34px;
     display: inline-block;
-    margin: 8px; // To improve, the vertical margin is just to vertically align the image
-    vertical-align: top;
+    height: 34px;
     width: 34px;
 }
 

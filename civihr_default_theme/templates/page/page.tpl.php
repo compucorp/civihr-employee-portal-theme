@@ -42,9 +42,9 @@
         <div class="civihr_user-menu__data">
           <span class="civihr_user-menu__name"><?php print $user_name; ?></span>
           <?php if ($image_url != '') { ?>
-            <img class="civihr_user-menu__picture" src="<?php print $image_url; ?>" alt="">
+            <img class="civihr_user-menu__picture" src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
           <?php } ?>
-          <i class="fa fa-caret-down"></i>
+          <i class="civihr_user-menu__arrow fa fa-caret-down"></i>
         </div>
         <ul class="civihr_user-menu__sub-menu">
           <li><?php print $edit_account; ?></li>

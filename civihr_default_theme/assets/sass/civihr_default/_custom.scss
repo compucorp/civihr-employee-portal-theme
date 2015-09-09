@@ -14,6 +14,10 @@ $images-icons-path: "../images/icon/";
 $icon-asc-path:     "asc.gif";
 $icon-desc-path:    "desc.gif";
 
+body {
+    position: relative;
+}
+
 /**
  * Vacancy list view page default styling
  */

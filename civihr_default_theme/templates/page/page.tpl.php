@@ -13,11 +13,18 @@
 
 <header class="chr_header">
   <div class="chr_header__corner">
-    <div class="chr_brand">
+    <div class="chr_header__nav__toggle">
+      <i class="fa fa-2x fa-navicon"></i>
+    </div>
+    <div class="chr_header__corner__brand chr_brand">
       <a class="chr_brand__link" href="<?php print $front_page; ?>" title="<?php print htmlspecialchars($site_name); ?>">
         <span class="chr_brand__icon icon-logo"></span>
       </a>
     </div>
+  </div>
+  <div class="chr_header__brand chr_brand">
+      <span class="chr_brand__icon icon-logo"></span>
+      <span class="chr_brand__name">CiviHR</span>
   </div>
   <nav class="chr_header__nav">
     <?php if ($main_menu): ?>

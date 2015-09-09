@@ -1,0 +1,14 @@
+.chr_brand {
+    font-size: 1.6rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.chr_brand__link {
+    color: inherit;
+    display: block;
+
+    &:hover {
+        color: inherit;
+    }
+}

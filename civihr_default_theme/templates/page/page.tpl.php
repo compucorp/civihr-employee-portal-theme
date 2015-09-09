@@ -10,50 +10,44 @@
  * @see html.tpl.php
  */
 ?>
-<header id="header" class="header" role="header">
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="<?php print $front_page; ?>" id="logo" class="navbar-brand" title="<?php print $site_name; ?>">
-          <i class="icon-logo"></i>
-        </a>
-      </div> <!-- /.navbar-header -->
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-
-        <?php if ($main_menu): ?>
-          <ul id="main-menu" class="menu nav navbar-nav">
-            <?php print render($main_menu); ?>
-          </ul>
-        <?php endif; ?>
-
-      </div><!-- /.navbar-collapse -->
-
-      <?php if ($logged_in) { ?>
-
-      <div class="civihr_user-menu">
-        <div class="civihr_user-menu__data">
-          <span class="civihr_user-menu__name"><?php print $user_name; ?></span>
-          <?php if ($image_url != '') { ?>
-            <img class="civihr_user-menu__picture" src="<?php print $image_url; ?>" alt="">
-          <?php } ?>
-          <i class="fa fa-caret-down"></i>
-        </div>
-        <ul class="civihr_user-menu__sub-menu">
-          <li><?php print $edit_account; ?></li>
-          <li><?php print $logout_link; ?></li>
-        </ul>
-      </div>
-
+<header class="chr_header">
+  <div class="chr_header__corner">
+    <div class="chr_header__nav__toggle">
+      <i class="fa fa-2x fa-navicon"></i>
+    </div>
+    <div class="chr_header__corner__brand chr_brand">
+      <a class="chr_brand__link" href="<?php print $front_page; ?>" title="<?php print htmlspecialchars($site_name); ?>">
+        <span class="chr_brand__icon icon-logo"></span>
+      </a>
+    </div>
+  </div>
+  <div class="chr_header__brand chr_brand">
+      <span class="chr_brand__icon icon-logo"></span>
+      <span class="chr_brand__name">CiviHR</span>
+  </div>
+  <nav class="chr_header__nav">
+    <?php if ($main_menu): ?>
+      <ul class="chr_header__nav__menu">
+        <?php print render($main_menu); ?>
+      </ul>
+    <?php endif; ?>
+  </nav>
+  <?php if ($logged_in) { ?>
+  <div class="chr_header__user-menu">
+    <div class="chr_header__user-menu__data">
+      <span class="chr_header__user-menu__name"><?php print $user_name; ?></span>
+      <?php if ($image_url != '') { ?>
+        <img class="chr_header__user-menu__picture" src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
       <?php } ?>
-    </nav><!-- /.navbar -->
+      <i class="chr_header__user-menu__arrow fa fa-caret-down"></i>
+    </div>
+    <ul class="chr_header__user-menu__sub-menu">
+      <li><?php print $edit_account; ?></li>
+      <li><?php print $logout_link; ?></li>
+    </ul>
+  </div>
+  <?php } ?>
 </header>
 
 <div id="main-wrapper">

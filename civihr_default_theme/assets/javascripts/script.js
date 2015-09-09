@@ -5,19 +5,25 @@
 (function ($) {
     // on doc ready
     $(document).ready(function() {
-
         applyMatchHeight();
         applyCustomSelect();
-
+        initMobileNav();
     });
 
     // on ajax complete (ie: when opening modals)
     $(document).ajaxComplete(function() {
-
         applyMatchHeight();
         applyCustomSelect();
-
     });
+
+    function initMobileNav() {
+        $header = $('.chr_header');
+        $nav = $header.find('.chr_header__nav');
+
+        $header.on('click', '.chr_header__nav__toggle', function () {
+            $nav.toggleClass('is-open');
+        })
+    }
 
     function applyMatchHeight() {
         $('.view-hr-vacancies li').matchHeight();

@@ -40,10 +40,18 @@
 }
 
 .chr_header__user-menu__picture {
+    background: $gray-light;
     border-radius: 50%;
     display: inline-block;
     height: 34px;
+    overflow: hidden;
     width: 34px;
+
+    > img {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .chr_header__user-menu__sub-menu {

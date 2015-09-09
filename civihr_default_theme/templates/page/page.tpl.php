@@ -37,9 +37,11 @@
   <div class="chr_header__user-menu">
     <div class="chr_header__user-menu__data">
       <span class="chr_header__user-menu__name"><?php print $user_name; ?></span>
-      <?php if ($image_url != '') { ?>
-        <img class="chr_header__user-menu__picture" src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
-      <?php } ?>
+      <div class="chr_header__user-menu__picture">
+        <?php if ($image_url != '') { ?>
+          <img src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
+        <?php } ?>
+      </div>
       <i class="chr_header__user-menu__arrow fa fa-caret-down"></i>
     </div>
     <ul class="chr_header__user-menu__sub-menu">

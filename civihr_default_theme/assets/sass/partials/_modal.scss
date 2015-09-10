@@ -1,48 +1,48 @@
 .modal-civihr-custom {
-	left: 0 !important;
-	padding: 0 20px;
-	right: 0;
+    left: 0 !important;
+    padding: 0 20px;
+    right: 0;
 
-	.modal-body {
-		@include clearfix;
+    .modal-body {
+        @include clearfix;
 
-		padding: 0 10px 10px 10px;
-	}
+        padding: 0 10px 10px 10px;
+    }
 
-	.modal-content {
-		margin: 0 auto;
-		max-width: 460px;
-		min-height: 400px;
-	}
+    .modal-content {
+        margin: 0 auto;
+        max-width: 460px;
+        min-height: 400px;
+    }
 
-	.modal-header {
-		position: relative;
-	}
+    .modal-header {
+        position: relative;
+    }
 
-	@media(min-width: $screen-sm-min) {
-		padding: 0;
-	}
+    @media(min-width: $screen-sm-min) {
+        padding: 0;
+    }
 }
 
 .modal-civihr-custom__footer {
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 .modal-civihr-custom__section {
-	@include clearfix;
+    @include clearfix;
 
-	border-bottom: 1px solid $gray-light;
-	padding: 20px 10px;
+    border-bottom: 1px solid $gray-light;
+    padding: 20px 10px;
 
-	> *:last-child {
-		margin-bottom: 0;
-	}
+    > *:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .modal-civihr-custom__section--strip {
-	@extend .modal-civihr-custom__section;
+    @extend .modal-civihr-custom__section;
 
-	background: $gray-light-alt;
-	margin: 0 -10px;
-	padding: 20px;
+    background: $gray-light-alt;
+    margin: 0 -10px;
+    padding: 20px;
 }

@@ -3,6 +3,17 @@
     padding: 0 20px;
     right: 0;
 
+    .loading-spinner {
+        bottom: 0;
+        height: 42px;
+        left: 0 !important;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0 !important;
+    }
+
     .modal-body {
         @include clearfix;
 
@@ -13,6 +24,7 @@
         margin: 0 auto;
         max-width: 460px;
         min-height: 400px;
+        position: relative;
     }
 
     .modal-header {

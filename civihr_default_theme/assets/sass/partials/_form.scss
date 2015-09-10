@@ -3,9 +3,9 @@
 
 #civihr-employee-portal-request-new-account-form {
 
-  label {
-    display: none;
-  }
+    label {
+        display: none;
+    }
 }
 
 /**
@@ -13,48 +13,48 @@
  */
 .civihr_form {
 
-	.container-inline-date {
-		clear: none;
+    .container-inline-date {
+        clear: none;
 
-		> .form-item {
-			margin: 0;
-		}
-	}
+        > .form-item {
+            margin: 0;
+        }
+    }
 
 	.date-padding {
-		padding: 0 17px 0 0;
-		position: relative;
+        padding: 0 17px 0 0;
+        position: relative;
 
-		&:after {
-			content: '\f073';
+        &:after {
+            content: '\f073';
 		   	font-family: FontAwesome;
 		   	position: absolute;
 		   	right: 0;
-			top: 7px;
+            top: 7px;
 	   	}
 
-		label,
-		.help-block {
-			display: none !important;
-		}
+        label,
+        .help-block {
+            display: none !important;
+        }
 
-		.form-control {
-			margin-right: 0;
-			width: 100%;
-		}
-	}
+        .form-control {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
 
-	.form-type-file {
+    .form-type-file {
 
-		> .form-file {
-			background: transparent;
-			padding: 7px 0;
-		}
-	}
+        > .form-file {
+            background: transparent;
+            padding: 7px 0;
+        }
+    }
 
-	.form-submit {
-		padding: 0.8rem 6rem;
-	}
+    .form-submit {
+        padding: 0.8rem 6rem;
+    }
 }
 
 /* [modifier] <form> being displayed in a modal */
@@ -63,80 +63,80 @@
 
 	.form-item {
 
-		label {
-			float: left;
-			padding: 7px 0;
-			width: 90px;
-		}
+        label {
+            float: left;
+            padding: 7px 0;
+            width: 90px;
+        }
 
-		.help-block {
-			clear: both;
-			display: block;
-			font-size: 0.9em;
-		}
-	}
+        .help-block {
+            clear: both;
+            display: block;
+            font-size: 0.9em;
+        }
+    }
 
-	.form-type-select {
+    .form-type-select {
 
-		.customSelect {
-		    display: block !important;
-		    overflow: auto;
-		    width: auto;
-		}
-	}
+        .customSelect {
+            display: block !important;
+            overflow: auto;
+            width: auto;
+        }
+    }
 
-	.form-type-textarea {
+    .form-type-textarea {
 
-		.form-textarea-wrapper {
-			overflow: auto;
-		}
-	}
+        .form-textarea-wrapper {
+            overflow: auto;
+        }
+    }
 }
 
 /* [modifier] <form> for the leave requests */
 .civihr_form--request-leave {
-	@extend .civihr_form;
+    @extend .civihr_form;
 
-	.civihr_form--request-leave__period {
-		margin-left: 10px;
-	}
+    .civihr_form--request-leave__period {
+        margin-left: 10px;
+    }
 }
 
 .civihr_form--request-leave__period {
-	font-size: 0.9em;
-	color: $gray;
+    font-size: 0.9em;
+    color: $gray;
 }
 
 /* [modifier] <form> for the leave requests, in a modal */
 .civihr_form--modal.civihr_form--request-leave {
 
-	.container-inline-date {
-		margin-bottom: 15px;
+    .container-inline-date {
+        margin-bottom: 15px;
 
-		.ajax-progress {
-			display: none;
-		}
+        .ajax-progress {
+            display: none;
+        }
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-	@media(min-width: $screen-sm-min) {
-		.container-inline-date {
-			margin: 0;
-			float: left;
-			width: 48%;
+    @media(min-width: $screen-sm-min) {
+        .container-inline-date {
+            margin: 0;
+            float: left;
+            width: 48%;
 
-			&:last-child {
-				float: right;
-			}
-		}
+            &:last-child {
+                float: right;
+            }
+        }
 
-		.date-padding {
-			width: 55%;
-		}
-	}
+        .date-padding {
+            width: 55%;
+        }
+    }
 }
 
 
@@ -145,33 +145,33 @@
  * (based on the markup printed out by the Form API)
  */
 .civihr_form__fieldset {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 
-	.fieldset-legend {
-		font-size: 1.6rem;
-	}
+    .fieldset-legend {
+        font-size: 1.6rem;
+    }
 
-	.fieldset-title {
-		margin-left: 10px;
-	}
+    .fieldset-title {
+        margin-left: 10px;
+    }
 }
 
 /* [modifier] Transparent <fieldset> (no borders, paddings, bg colors) */
 .civihr_form__fieldset--transparent {
-	@extend .civihr_form__fieldset;
+    @extend .civihr_form__fieldset;
 
-	border: 0;
-	box-shadow: none;
+    border: 0;
+    box-shadow: none;
 
-	> legend {
-		background: none !important;
-		border: none;
-		padding: 0;
-	}
+    > legend {
+        background: none !important;
+        border: none;
+        padding: 0;
+    }
 
-	.panel-body {
-		margin-top: 15px;
-		padding: 0;
-	}
+    .panel-body {
+        margin-top: 15px;
+        padding: 0;
+    }
 }

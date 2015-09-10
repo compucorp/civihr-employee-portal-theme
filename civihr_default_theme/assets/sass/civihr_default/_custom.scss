@@ -922,6 +922,10 @@ form {
     overflow: hidden;
     border-radius: 50%;
     margin-left: 10px;
+
+    > img {
+        height: 100%;
+    }
 }
 .custom-scale-image {
     position: relative;

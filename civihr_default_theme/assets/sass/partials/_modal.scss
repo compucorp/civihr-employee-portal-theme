@@ -1,14 +1,26 @@
 .modal-civihr-custom {
 	left: 0 !important;
-	margin: 0 auto;
-	min-height: 400px;
+	padding: 0 20px;
 	right: 0;
-	width: 460px;
 
 	.modal-body {
 		@include clearfix;
 
 		padding: 0 10px 10px 10px;
+	}
+
+	.modal-content {
+		margin: 0 auto;
+		max-width: 460px;
+		min-height: 400px;
+	}
+
+	.modal-header {
+		position: relative;
+	}
+
+	@media(min-width: $screen-sm-min) {
+		padding: 0;
 	}
 }
 

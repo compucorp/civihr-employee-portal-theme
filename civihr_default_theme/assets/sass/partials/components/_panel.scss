@@ -1,0 +1,69 @@
+.chr_panel__actions {
+    @extend .clearfix;
+
+    padding-top: 20px;
+    text-align: right;
+
+    > [class*="chr_panel__actions__"] {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // Overrides margin on `.block-civihr-employee-portal .btn`
+    .chr_panel__actions__action {
+        margin-left: 0;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > [class*="chr_panel__actions__"] {
+            display: inline-block;
+            margin-bottom: 0;
+            width: auto;
+        }
+
+        .chr_panel__actions__action {
+            margin-left: 10px;
+        }
+    }
+}
+
+.chr_panel__actions__action--icon {
+    @extend .chr_panel__actions__action;
+
+    &:before {
+        margin-right: 8px;
+    }
+}
+
+.chr_panel__actions__action--icon--edit {
+    @extend .chr_panel__actions__action--icon;
+    @include fa("\f044");
+}
+
+.chr_panel__actions__inline-duo {
+    @extend .clearfix;
+
+    > .chr_panel__actions__action {
+        width: 48%;
+
+        &:first-child {
+            float: left;
+        }
+
+        &:last-child {
+            float: right;
+        }
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > .chr_panel__actions__action {
+            float: none !important;
+            width: auto;
+        }
+    }
+}

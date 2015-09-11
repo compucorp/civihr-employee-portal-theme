@@ -955,19 +955,6 @@ form {
     .views-label {
         color: $gray-darker;
     }
-    .actions {
-        font-size: 0;
-
-        .btn {
-            margin-left: 10px;
-
-            @include fa("\f044");
-
-            &:before {
-                margin-right: 8px;
-            }
-        }
-    }
 }
 
 .footer-slider-block,
@@ -1025,12 +1012,7 @@ form {
         margin-left: 10px;
     }
 }
-#absence-links {
-    height: auto !important;
-    border-top: 1px solid $gray-light;
-    padding-top: 20px;
-    margin-top: 40px;
-}
+
 .pane-civihr-employee-portal-leave {
     tr {
         &.odd {

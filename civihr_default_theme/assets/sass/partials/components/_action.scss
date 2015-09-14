@@ -25,3 +25,10 @@
     @extend .chr_action--icon;
     @include fa("\f02f");
 }
+
+.chr_action--transparent {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: inherit !important;
+    padding: 0;
+}

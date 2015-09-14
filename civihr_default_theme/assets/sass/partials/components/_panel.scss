@@ -110,6 +110,19 @@
 /* [modifier] Panel containing user's details */
 .chr_panel--my-details {
 
+    .chr_panel--my-details__data-group {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media(min-width: $screen-md-min) {
+        .chr_panel--my-details__data-group {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .chr_panel--my-details__data-group {
@@ -125,7 +138,12 @@
     .views-label {
         display: block;
         float: left;
+        font-size: 1.3rem;
         width: 50%;
+    }
+
+    .field-content {
+        @include ellipsis();
     }
 
     .views-field {
@@ -140,6 +158,13 @@
 
     .views-label {
         color: $gray-darker;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        .field-content,
+        .views-label {
+            font-size: 1em;
+        }
     }
 }
 

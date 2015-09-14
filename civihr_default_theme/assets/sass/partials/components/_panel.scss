@@ -105,3 +105,53 @@
         z-index: 2;
     }
 }
+
+
+/* [modifier] Panel containing user's details */
+.chr_panel--my-details {
+
+}
+
+.chr_panel--my-details__data-group {
+
+    > .chr_panel--my-details__data-group__title {
+        margin-bottom: 20px;
+    }
+}
+
+.chr_panel--my-details__data-group__content {
+
+    .field-content,
+    .views-label {
+        display: block;
+        float: left;
+        width: 50%;
+    }
+
+    .views-field {
+        @include clearfix;
+
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .views-label {
+        color: $gray-darker;
+    }
+}
+
+.chr_panel--my-details__data-group__title {
+    margin: 0;
+}
+
+.chr_panel--my-details__profile-image {
+    border-radius: 50%;
+    overflow: hidden;
+
+    > img {
+        width: 100%;
+    }
+}

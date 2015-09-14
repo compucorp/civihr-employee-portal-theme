@@ -928,28 +928,6 @@ form {
     transform: translateX(-50%) translateY(-50%);
     max-height: 140px;
 }
-.civihr-employee-portal-my-details-block {
-    position: relative;
-
-    h5 {
-        margin: 0;
-    }
-    .views-field {
-        @include clearfix;
-
-        font-size: 1.3rem;
-        margin-top: 1.4rem;
-    }
-    .views-label,
-    .field-content {
-        width: 50%;
-        display: block;
-        float: left;
-    }
-    .views-label {
-        color: $gray-darker;
-    }
-}
 
 .footer-slider-block,
 .pane-views-hr-documents-block {

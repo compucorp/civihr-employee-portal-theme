@@ -1,0 +1,27 @@
+.chr_action {
+    @extend .btn;
+    @extend .btn-custom;
+}
+
+.chr_action--icon {
+    @extend .chr_action;
+
+    &:before {
+        margin-right: 8px;
+    }
+}
+
+.chr_action--icon--calendar {
+    @extend .chr_action--icon;
+    @include fa("\f073");
+}
+
+.chr_action--icon--edit {
+    @extend .chr_action--icon;
+    @include fa("\f044");
+}
+
+.chr_action--icon--print {
+    @extend .chr_action--icon;
+    @include fa("\f02f");
+}

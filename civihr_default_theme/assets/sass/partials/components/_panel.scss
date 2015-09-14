@@ -51,3 +51,57 @@
         }
     }
 }
+
+.chr_panel__header {
+    box-shadow: none;
+}
+
+.chr_panel__header--w-actions {
+    @extend .chr_panel__header;
+
+    position: relative;
+
+    [class*="chr_action"] {
+        float: none;
+        margin-left: 15px;
+        vertical-align: top;
+    }
+
+    .form-type-select {
+        @include fa('\f0d7');
+        display: inline-table; // Safari *shrugs*
+        padding: 0;
+
+        &:before {
+            float: right;
+            margin: 4px 0 0 4px;
+        }
+
+        > select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: none;
+            border: 0;
+
+            &::-ms-expand {
+                display: none;
+            }
+        }
+    }
+
+    .pane-title {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .views-exposed-widget {
+        display: inline-block;
+    }
+
+    .views-exposed-widgets {
+        position: relative;
+        text-align: right;
+        z-index: 2;
+    }
+}

@@ -11,6 +11,18 @@
     }
 }
 
+.chr_action--icon--responsive {
+    > span {
+        display: none;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > span {
+            display: inline;
+        }
+    }
+}
+
 .chr_action--icon--calendar {
     @extend .chr_action--icon;
     @include fa("\f073");

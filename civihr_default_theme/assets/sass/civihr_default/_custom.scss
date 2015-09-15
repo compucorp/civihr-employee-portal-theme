@@ -896,13 +896,7 @@ form {
 .views-exposed-form .views-exposed-widget {
     width: auto;
 }
-.views-widget-filter-absence_start_date_period_filter label {
-    font-size: 1.8rem;
-    color: $gray-darker;
-    font-weight: 400;
-    width: auto;
-}
-.views-widget-filter-absence_start_date_period_filter label,
+
 .pane-title {
     margin: 0 -20px 20px;
     padding: 0 20px 20px;
@@ -933,41 +927,6 @@ form {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     max-height: 140px;
-}
-.civihr-employee-portal-my-details-block {
-    position: relative;
-
-    h5 {
-        margin: 0;
-    }
-    .views-field {
-        @include clearfix;
-
-        font-size: 1.3rem;
-        margin-top: 1.4rem;
-    }
-    .views-label,
-    .field-content {
-        width: 50%;
-        display: block;
-        float: left;
-    }
-    .views-label {
-        color: $gray-darker;
-    }
-    .actions {
-        font-size: 0;
-
-        .btn {
-            margin-left: 10px;
-
-            @include fa("\f044");
-
-            &:before {
-                margin-right: 8px;
-            }
-        }
-    }
 }
 
 .footer-slider-block,
@@ -1025,12 +984,7 @@ form {
         margin-left: 10px;
     }
 }
-#absence-links {
-    height: auto !important;
-    border-top: 1px solid $gray-light;
-    padding-top: 20px;
-    margin-top: 40px;
-}
+
 .pane-civihr-employee-portal-leave {
     tr {
         &.odd {
@@ -1075,37 +1029,7 @@ form {
         }
     }
 }
-[class*="pane-views-exp-absence-list-page"] {
-    padding-bottom: 0;
 
-    .views-exposed-widgets {
-        margin: 0;
-    }
-    .views-widget {
-        position: absolute;
-        top: 19px;
-        right: 35px;
-
-        .form-item {
-            padding: 0;
-            @include fa('\f0d7');
-            &:before {
-                float: right;
-                margin: 4px 0 0 4px;
-            }
-        }
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            border: 0;
-            background: none;
-
-        }
-    }
-}
-label[for*="edit-absence-start-date-period-filter"] {
-    margin-bottom: 0;
-}
 .calendar-btn {
     background: none;
     color: $gray;
@@ -1121,29 +1045,7 @@ label[for*="edit-absence-start-date-period-filter"] {
         color: $gray;
     }
 }
-.pane-views-exp-absence-list-page {
-    .views-widget {
-        right: 290px;
-    }
-    .views-submit-button {
-        position: absolute;
-        top: 11px;
-        right: 35px;
 
-        .btn {
-            @extend .calendar-btn;
-            float: left;
-        }
-    }
-}
-#report-replace-div {
-    float: right;
-
-    .btn {
-        @include fa("\f02f");
-        float: none;
-    }
-}
 .pane-civihr-employee-portal-leave,
 .pane-civihr-employee-portal-sick {
     padding-top: 0;

@@ -1,2 +1,31 @@
 // Styles for Views
 // --------------------------------------------------
+
+/**
+ * [modifier] A `.view` containing a <table>
+ *
+ * The <table> on small screens will not adapt to the width anymore, but it will be scrollable on the X axys
+ */
+.view--w-table {
+    overflow: auto;
+
+    table {
+        min-width: 720px;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        overflow: visible;
+    }
+
+    @media(min-width: $screen-md-min) {
+        overflow: auto;
+    }
+
+    @media(min-width: $screen-lg-min) {
+        overflow: visible;
+
+        table {
+            min-width: inherit;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+$icon-margin: 8px;
+
 .chr_action {
     @extend .btn;
     @extend .btn-custom;
@@ -7,16 +9,24 @@
     @extend .chr_action;
 
     &:before {
-        margin-right: 8px;
+        margin-right: $icon-margin;
     }
 }
 
 .chr_action--icon--responsive {
+    &:before {
+        margin-right: 0;
+    }
+
     > span {
         display: none;
     }
 
     @media(min-width: $screen-sm-min) {
+        &:before {
+            margin-right: $icon-margin;
+        }
+
         > span {
             display: inline;
         }

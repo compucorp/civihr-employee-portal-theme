@@ -1,0 +1,53 @@
+/**
+ * A table with filters on the side
+ */
+.chr_table-w-filters {
+
+    > .chr_table-w-filters__filters {
+        margin-top: 20px;
+    }
+}
+
+.chr_table-w-filters__filters {
+
+    @media(min-width: $screen-md-min) {
+        padding-right: 0;
+    }
+}
+
+.chr_table-w-filters__table {
+    margin: 0 20px;
+    overflow: auto;
+
+    table {
+        margin-left: -20px;
+        min-width: $screen-md-min;
+    }
+
+    .views-field {
+        font-size: $font-size-base;
+    }
+
+    th.views-field {
+        font-weight: normal;
+    }
+
+    @media(min-width: $screen-md-min) {
+        margin: 0;
+        overflow: visible;
+
+        table {
+            margin-left: 0;
+            min-width: inherit;
+        }
+    }
+}
+
+.chr_table-w-filters__table-wrapper {
+    padding-bottom: 20px;
+
+    @media(min-width: $screen-md-min) {
+        border-left: 1px solid #ECEDEE;
+        padding-left: 0;
+    }
+}

@@ -1182,38 +1182,6 @@ form {
     }
 }
 
-/* Documents Upload */
-.pane-views-documents-block {
-
-  .nav {
-    border-right: 1px solid #ecedee;
-    padding-bottom: 20px;
-    padding-top: 15px;
-    margin-bottom: 0;
-  }
-
-  .pane-title {
-    margin-bottom: 0;
-  }
-
-  .view-content {
-    @include grid-condensed(0);
-
-    > .row {
-      margin: {
-        bottom: -$panel-body-padding - 1px;
-        left: -$panel-body-padding - 1px;
-        right: -$panel-body-padding;
-      };
-
-      @media (min-width: $screen-sm-min) {
-        @include flex;
-      }
-    }
-  }
-}
-
-
 #civihr-employee-portal-document-form {
   .drop-zone {
     margin: 10px 0;

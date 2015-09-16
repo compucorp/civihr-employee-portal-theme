@@ -77,6 +77,8 @@
 .chr_table-w-filters__filters {
 
     @media(min-width: $screen-md-min) {
+        border-right: 1px solid #ECEDEE;
+        margin-right: -1px;
         padding-right: 0;
     }
 }

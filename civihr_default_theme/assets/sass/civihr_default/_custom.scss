@@ -89,23 +89,6 @@ table.manager-approval-main-table th.headerSortDown {
 }
 
 /**
- * Quick Approve / Reject buttons default style
- */
-#quick-approve {
-    display: inline;
-}
-
-/**
- * Manager Approval Tooltip settings
- */
-.manager-approval-main-table .views-tooltip {
-    @media screen and (min-width: $screen-lg-desktop) {
-        float: right;
-    }
-
-}
-
-/**
  * Manager AJAX filters block / inline settings
  */
 .btn-custom-block {
@@ -1061,23 +1044,6 @@ form {
 /* Manager absence approval */
 
 .view-approvals {
-    @include grid-condensed(0);
-
-    > .row {
-      margin: {
-        bottom: -$panel-body-padding - 1px;
-        left: -$panel-body-padding - 1px;
-        right: -$panel-body-padding;
-      };
-
-      @media (min-width: $screen-sm-min) {
-        @include flex;
-      }
-    }
-
-    table {
-      table-layout: auto;
-    }
 
     .absence-approval-actions {
         position: absolute;
@@ -1118,66 +1084,6 @@ form {
                 @extend .form-text;
                 padding: 2px 8px;
             }
-        }
-    }
-}
-.pane-views-approvals-block-1 {
-    h4 {
-        margin-bottom: 0;
-    }
-}
-
-.approval-filters {
-  padding: 15px 0 20px;
-  border-right: 1px solid $gray-light;
-}
-
-// !important here overwrites css from tablesaw.css
-.approval-overflow-content {
-    padding-bottom: 20px;
-    overflow: visible !important;
-    height: auto !important;
-
-    thead {
-        background: none;
-        border: 0;
-    }
-    tbody {
-        border-top-color: $gray-light;
-    }
-    th,
-    td {
-        line-height: 1.3 !important;
-    }
-    th {
-        background: none;
-        text-shadow: none !important;
-        color: inherit;
-        border: none !important;
-        text-transform: none !important;
-        box-shadow: none;
-        font-family: $sans !important;
-        font-size: 1.3rem !important;
-        color: $gray-darker !important;
-    }
-    .mode-columntoggle {
-        display: none;
-    }
-    .views-tooltip {
-        width: 70px;
-        padding-right: 10px;
-    }
-    #quick-approve {
-        .glyphicon {
-            cursor: pointer;
-            font-size: 1.4rem;
-        }
-        [class*="ok-sign"] {
-            color: $brand-success;
-            margin-right: 10px;
-        }
-        [class*="remove-sign"] {
-            color: $brand-danger;
         }
     }
 }

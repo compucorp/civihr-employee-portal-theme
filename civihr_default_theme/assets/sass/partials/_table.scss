@@ -83,6 +83,23 @@
     }
 }
 
+.chr_table-w-filters__filters__dropdown-wrapper {
+    display: block;
+    padding: 0 20px;
+
+    @media(min-width: $screen-xs-min) {
+        display: none;
+    }
+}
+
+.chr_table-w-filters__filters__nav {
+    display: none;
+
+    @media(min-width: $screen-xs-min) {
+        display: block;
+    }
+}
+
 .chr_table-w-filters__table {
     margin: 0 20px;
     overflow: auto;

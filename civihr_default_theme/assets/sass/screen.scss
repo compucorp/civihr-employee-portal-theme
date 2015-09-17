@@ -104,6 +104,12 @@
 // --------------------------------------------------
 // @import "bootswatch/bootswatch";
 
+// Custom CiviHR Theme CSS
+// --------------------------------------------------
+@import "civihr_default/functions";
+@import "civihr_default/icons";
+@import "civihr_default/custom";
+
 // Theme CSS
 // --------------------------------------------------
 @import "global/typography";
@@ -122,8 +128,7 @@
 @import "partials/user";
 @import "partials/modal";
 
-// Custom CiviHR Theme CSS
-// --------------------------------------------------
-@import "civihr_default/functions";
-@import "civihr_default/icons";
-@import "civihr_default/custom";
+// CSS custom components
+@import "partials/components/action";
+@import "partials/components/brand";
+@import "partials/components/panel";

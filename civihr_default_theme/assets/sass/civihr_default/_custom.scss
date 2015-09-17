@@ -997,9 +997,43 @@ form {
     }
 }
 
-/* Manager absence approval */
-
 // ## TEMPORARY ##
+.chr_panel__header--w-actions {
+
+    .views-exposed-widgets {
+        top: 17px;
+    }
+
+    @media(min-width: $screen-xxs-min) {
+        .views-exposed-widgets {
+            top: 0;
+        }
+    }
+}
+
+.pane-views-exp-absence-list-page {
+
+    .views-exposed-widget {
+
+        .chr_action--icon--responsive {
+
+            @media(min-width: $screen-md-min) {
+                span {
+                    display: none;
+                }
+            }
+
+            @media(min-width: $screen-lg-min) {
+                span {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+
+/* Manager absence approval */
 .pane-views-approvals-block-1 {
     position: relative;
 }
@@ -1088,7 +1122,6 @@ form {
         }
     }
 }
-
 // ## END TEMPORARY ##
 
 #civihr-employee-portal-document-form {

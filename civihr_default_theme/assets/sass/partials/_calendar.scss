@@ -8,6 +8,18 @@
     }
 }
 
+.calendar.legend {
+    text-align: left;
+
+    .table-responsive {
+        margin: 0;
+    }
+
+    @media(min-width: $screen-md-min) {
+        text-align: right;
+    }
+}
+
 .calendar-legend {
 
     thead {
@@ -20,13 +32,6 @@
 
     tr {
         position: relative;
-
-        &:last-child {
-
-            td {
-                margin-right: 10px;
-            }
-        }
 
         &.odd {
             background: none;
@@ -42,20 +47,20 @@
 
     td {
 
-        &:first-child {
-            margin-right: 40px;
-        }
+        &:last-child {
+            min-width: 80px;
+            padding-left: 5px;
+            text-align: left;
 
-        &:not(:first-child) {
-            position: absolute;
-            left: -10px;
+            @media(min-width: $screen-md-min) {
+                min-width: inherit;
+            }
         }
     }
 
     .stripe {
-        width: 10px;
         height: 10px;
-        margin: 6px 0;
+        width: 10px;
     }
 }
 

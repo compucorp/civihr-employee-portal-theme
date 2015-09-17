@@ -114,6 +114,10 @@
 }
 
 .chr_table-w-filters__filters__nav {
+    @extend .nav;
+    @extend .nav-pills;
+    @extend .nav-stacked;
+
     display: none;
 
     @media(min-width: $screen-xs-min) {

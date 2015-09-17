@@ -45,50 +45,6 @@ body {
 }
 
 /**
- * Manager approval search highlight color
- */
-.manager-approval-main-table em {
-    background-color: yellow
-}
-
-/**
- * Manager approval th header color
- */
-.header-class {
-    background: #c0c0c0;
-}
-
-.show-all-absences {
-    position: absolute;
-    top: 0px;
-    font-size: 1.3rem;
-    right: 100%;
-}
-
-/**
- * Manager approval search th icons default style
- */
-@mixin manager-approval-main-table-sort($sort-image) {
-    background-image: url(#{$images-icons-path}#{$sort-image});
-    background-repeat: no-repeat;
-    background-position: right center;
-}
-
-/**
- * Manager approval search th icons -> UP
- */
-table.manager-approval-main-table th.headerSortUp {
-    @include manager-approval-main-table-sort($icon-asc-path);
-}
-
-/**
- * Manager approval search th icons -> DOWN
- */
-table.manager-approval-main-table th.headerSortDown {
-    @include manager-approval-main-table-sort($icon-desc-path);
-}
-
-/**
  * Manager AJAX filters block / inline settings
  */
 .btn-custom-block {
@@ -1043,35 +999,39 @@ form {
 
 /* Manager absence approval */
 
+// ## TEMPORARY ##
+.pane-views-approvals-block-1 {
+    position: relative;
+}
+
 .view-approvals {
 
     .absence-approval-actions {
-        position: absolute;
-        top: 13px;
-        right: 35px;
 
-        .view-header,
-        .view-content {
-            display: inline-block;
+        [class*="chr_action"] {
+            margin-left: 10px;
         }
-        .view-header {
-            p {
-                margin: 0;
-            }
-            .ctools-use-modal {
-                @extend .btn;
-                @extend .calendar-btn;
-            }
-        }
-        .view-content {
-            margin-left: 20px;
 
-            .input-group {
+        .chr_action--icon--calendar {
+
+            &:before {
                 position: relative;
+                top: -1px;
             }
+        }
+
+        .form-control {
+            @extend .form-text;
+            padding: 7px 8px;
+        }
+
+        .view-content {
+            padding: 20px 20px 0;
+            display: block;
+
             .btn {
                 position: absolute;
-                top: 0;
+                top: 4px;
                 right: 2px;
                 padding: 6px;
                 font-size: 1.1rem;
@@ -1080,13 +1040,56 @@ form {
                 color: $color-neutral;
                 cursor: default;
             }
+
+            .input-group {
+                position: relative;
+            }
+        }
+
+        .view-header {
+            position: absolute;
+            right: 20px;
+            top: 19px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .view-empty {
+        padding: 0 20px;
+    }
+
+    @media(min-width: $screen-xs-min) {
+        .absence-approval-actions {
+            position: absolute;
+            right: 20px;
+            top: 17px;
+
             .form-control {
-                @extend .form-text;
                 padding: 2px 8px;
+            }
+
+            .view-content {
+                display: inline-block;
+                margin-left: 10px;
+                padding: 0;
+
+                .btn {
+                    top: 0;
+                }
+            }
+
+            .view-header {
+                display: inline-block;
+                position: static;
             }
         }
     }
 }
+
+// ## END TEMPORARY ##
 
 #civihr-employee-portal-document-form {
   .drop-zone {

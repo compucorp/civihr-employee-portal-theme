@@ -1,0 +1,245 @@
+.calendar {
+    width: auto;
+    text-align: right;
+    margin-top: 20px;
+
+    .table-responsive {
+        border-top: 0;
+    }
+}
+
+.calendar-legend {
+
+    thead {
+        display: none;
+    }
+
+    tbody {
+        border-top: 0;
+    }
+
+    tr {
+        position: relative;
+
+        &:last-child {
+
+            td {
+                margin-right: 10px;
+            }
+        }
+
+        &.odd {
+            background: none;
+        }
+    }
+
+    tr,
+    th,
+    td {
+        border: 0;
+        display: inline-block;
+    }
+
+    td {
+
+        &:first-child {
+            margin-right: 40px;
+        }
+
+        &:not(:first-child) {
+            position: absolute;
+            left: -10px;
+        }
+    }
+
+    .stripe {
+        width: 10px;
+        height: 10px;
+        margin: 6px 0;
+    }
+}
+
+/* Modal: Calendar */
+
+.view-calendar-absence-list {
+
+    .view-header {
+        margin: -20px -43px 0 -20px;
+        padding: 20px;
+        background: $gray-lighter;
+
+        .date-nav-wrapper {
+            margin: 0;
+        }
+
+        .date-nav {
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            color: $gray-darker;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        .pager {
+            margin: 0;
+        }
+
+        .date-prev,
+        .date-next {
+            margin-top: -8px;
+
+            .btn {
+                background: none;
+                border: none;
+                color: $gray-darker;
+                font-size: 0;
+
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+
+        .date-next {
+            right: -28px;
+
+            .btn {
+                @include fa("\f105", 16);
+            }
+        }
+
+        .date-prev {
+            left: -28px;
+
+            .btn {
+                @include fa("\f104", 16);
+            }
+        }
+    }
+
+    &.view {
+        margin: 0;
+        padding: 0;
+    }
+
+    .view-footer {
+
+        h2 {
+            display: none;
+        }
+    }
+}
+
+.calendar-calendar {
+    margin: 0 -43px 0 -20px;
+
+    th,
+    td {
+        border-right: 1px solid $gray-light;
+        padding: 15px;
+        text-align: right;
+
+        &.empty {
+            background: $gray-lighter;
+        }
+    }
+
+    .today {
+
+        .day {
+            display: inline-block;
+            background: $brand-tertiary;
+            border-radius: 50px;
+            color: $light;
+            width: 2.2rem;
+            height: 2.2rem;
+            line-height: 2.2rem;
+            text-align: center;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+
+    thead {
+        border-top: 1px solid $gray-light;
+
+        th {
+            text-align: center;
+        }
+    }
+
+    .date-box,
+    .multi-day {
+        border-bottom: 0;
+    }
+
+    .multi-day,
+    .single-day {
+        padding: 0;
+    }
+
+    .date-box {
+
+        &.empty {
+
+            .day {
+                color: $light-pale ;
+            }
+        }
+
+        .day {
+            font-size: 1.5rem;
+        }
+
+        .inner {
+            min-height: 15px;
+        }
+    }
+
+    .single-day {
+        padding-bottom: 15px;
+    }
+
+    .multi-day {
+
+        + .single-day {
+
+            > .single-day {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.view-item-calendar_absence_list {
+    position: relative;
+
+    .calendar {
+        margin: 0;
+    }
+
+    .stripe {
+        height: 30px;
+    }
+
+    .contents {
+        @include vertical-align(absolute);
+
+        color: $light;
+        font-size: 1.2rem;
+        padding: 0 10px;
+
+        .views-field:not(.views-field-absence-title) {
+            display: none;
+        }
+    }
+
+    .cutoff {
+        display: none;
+    }
+}

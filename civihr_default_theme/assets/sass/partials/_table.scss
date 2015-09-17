@@ -1,8 +1,29 @@
 /**
- * Table with list of absences that the manager can approve/deny
+ * Manager approvals table
  */
+
+// Sort icon on table header
+@mixin manager-approval-main-table-sort($sort-image) {
+    background-image: url(#{$images-icons-path}#{$sort-image});
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
 .manager-approval-main-table {
     table-layout: fixed !important;
+
+    // search highlight color
+    em {
+       background-color: yellow
+    }
+
+    th.headerSortDown {
+        @include manager-approval-main-table-sort($icon-desc-path);
+    }
+
+    th.headerSortUp {
+        @include manager-approval-main-table-sort($icon-asc-path);
+    }
 
     .views-field {
         @include ellipsis();

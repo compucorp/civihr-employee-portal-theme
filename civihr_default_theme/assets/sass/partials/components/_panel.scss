@@ -180,3 +180,13 @@
         width: 100%;
     }
 }
+
+
+/* [modifier] Panel with no padding applied to its content */
+.chr_panel--no-padding {
+
+    > .pane-content {
+        margin: -20px;
+        overflow: hidden;
+    }
+}

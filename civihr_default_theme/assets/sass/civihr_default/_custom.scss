@@ -45,67 +45,6 @@ body {
 }
 
 /**
- * Manager approval search highlight color
- */
-.manager-approval-main-table em {
-    background-color: yellow
-}
-
-/**
- * Manager approval th header color
- */
-.header-class {
-    background: #c0c0c0;
-}
-
-.show-all-absences {
-    position: absolute;
-    top: 0px;
-    font-size: 1.3rem;
-    right: 100%;
-}
-
-/**
- * Manager approval search th icons default style
- */
-@mixin manager-approval-main-table-sort($sort-image) {
-    background-image: url(#{$images-icons-path}#{$sort-image});
-    background-repeat: no-repeat;
-    background-position: right center;
-}
-
-/**
- * Manager approval search th icons -> UP
- */
-table.manager-approval-main-table th.headerSortUp {
-    @include manager-approval-main-table-sort($icon-asc-path);
-}
-
-/**
- * Manager approval search th icons -> DOWN
- */
-table.manager-approval-main-table th.headerSortDown {
-    @include manager-approval-main-table-sort($icon-desc-path);
-}
-
-/**
- * Quick Approve / Reject buttons default style
- */
-#quick-approve {
-    display: inline;
-}
-
-/**
- * Manager Approval Tooltip settings
- */
-.manager-approval-main-table .views-tooltip {
-    @media screen and (min-width: $screen-lg-desktop) {
-        float: right;
-    }
-
-}
-
-/**
  * Manager AJAX filters block / inline settings
  */
 .btn-custom-block {
@@ -1058,54 +997,75 @@ form {
     }
 }
 
+// ## TEMPORARY ##
+.chr_panel__header--w-actions {
+
+    .views-exposed-widgets {
+        top: 17px;
+    }
+
+    @media(min-width: $screen-xxs-min) {
+        .views-exposed-widgets {
+            top: 0;
+        }
+    }
+}
+
+.pane-views-exp-absence-list-page {
+
+    .views-exposed-widget {
+
+        .chr_action--icon--responsive {
+
+            @media(min-width: $screen-md-min) {
+                span {
+                    display: none;
+                }
+            }
+
+            @media(min-width: $screen-lg-min) {
+                span {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+
 /* Manager absence approval */
+.pane-views-approvals-block-1 {
+    position: relative;
+}
 
 .view-approvals {
-    @include grid-condensed(0);
-
-    > .row {
-      margin: {
-        bottom: -$panel-body-padding - 1px;
-        left: -$panel-body-padding - 1px;
-        right: -$panel-body-padding;
-      };
-
-      @media (min-width: $screen-sm-min) {
-        @include flex;
-      }
-    }
-
-    table {
-      table-layout: auto;
-    }
 
     .absence-approval-actions {
-        position: absolute;
-        top: 13px;
-        right: 35px;
 
-        .view-header,
-        .view-content {
-            display: inline-block;
+        [class*="chr_action"] {
+            margin-left: 10px;
         }
-        .view-header {
-            p {
-                margin: 0;
-            }
-            .ctools-use-modal {
-                @extend .btn;
-                @extend .calendar-btn;
-            }
-        }
-        .view-content {
-            margin-left: 20px;
 
-            .input-group {
+        .chr_action--icon--calendar {
+
+            &:before {
                 position: relative;
+                top: -1px;
             }
+        }
+
+        .form-control {
+            @extend .form-text;
+            padding: 7px 8px;
+        }
+
+        .view-content {
+            padding: 20px 20px 0;
+            display: block;
+
             .btn {
                 position: absolute;
-                top: 0;
+                top: 4px;
                 right: 2px;
                 padding: 6px;
                 font-size: 1.1rem;
@@ -1114,105 +1074,55 @@ form {
                 color: $color-neutral;
                 cursor: default;
             }
+
+            .input-group {
+                position: relative;
+            }
+        }
+
+        .view-header {
+            position: absolute;
+            right: 20px;
+            top: 19px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .view-empty {
+        padding: 0 20px;
+    }
+
+    @media(min-width: $screen-xs-min) {
+        .absence-approval-actions {
+            position: absolute;
+            right: 20px;
+            top: 17px;
+
             .form-control {
-                @extend .form-text;
                 padding: 2px 8px;
+            }
+
+            .view-content {
+                display: inline-block;
+                margin-left: 10px;
+                padding: 0;
+
+                .btn {
+                    top: 0;
+                }
+            }
+
+            .view-header {
+                display: inline-block;
+                position: static;
             }
         }
     }
 }
-.pane-views-approvals-block-1 {
-    h4 {
-        margin-bottom: 0;
-    }
-}
-
-.approval-filters {
-  padding: 15px 0 20px;
-  border-right: 1px solid $gray-light;
-}
-
-// !important here overwrites css from tablesaw.css
-.approval-overflow-content {
-    padding-bottom: 20px;
-    overflow: visible !important;
-    height: auto !important;
-
-    thead {
-        background: none;
-        border: 0;
-    }
-    tbody {
-        border-top-color: $gray-light;
-    }
-    th,
-    td {
-        line-height: 1.3 !important;
-    }
-    th {
-        background: none;
-        text-shadow: none !important;
-        color: inherit;
-        border: none !important;
-        text-transform: none !important;
-        box-shadow: none;
-        font-family: $sans !important;
-        font-size: 1.3rem !important;
-        color: $gray-darker !important;
-    }
-    .mode-columntoggle {
-        display: none;
-    }
-    .views-tooltip {
-        width: 70px;
-        padding-right: 10px;
-    }
-    #quick-approve {
-        .glyphicon {
-            cursor: pointer;
-            font-size: 1.4rem;
-        }
-        [class*="ok-sign"] {
-            color: $brand-success;
-            margin-right: 10px;
-        }
-        [class*="remove-sign"] {
-            color: $brand-danger;
-        }
-    }
-}
-
-/* Documents Upload */
-.pane-views-documents-block {
-
-  .nav {
-    border-right: 1px solid #ecedee;
-    padding-bottom: 20px;
-    padding-top: 15px;
-    margin-bottom: 0;
-  }
-
-  .pane-title {
-    margin-bottom: 0;
-  }
-
-  .view-content {
-    @include grid-condensed(0);
-
-    > .row {
-      margin: {
-        bottom: -$panel-body-padding - 1px;
-        left: -$panel-body-padding - 1px;
-        right: -$panel-body-padding;
-      };
-
-      @media (min-width: $screen-sm-min) {
-        @include flex;
-      }
-    }
-  }
-}
-
+// ## END TEMPORARY ##
 
 #civihr-employee-portal-document-form {
   .drop-zone {

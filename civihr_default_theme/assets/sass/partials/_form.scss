@@ -54,7 +54,7 @@
 
 	.date-padding {
 		padding: 0;
-		width: 45%;
+		width: 46%;
 
 		label,
 		.help-block {
@@ -70,6 +70,7 @@
 	.form-item {
 
 		label {
+			color: $gray-darker;
 			float: left;
 			padding: 7px 0;
 			width: 90px;

@@ -43,6 +43,11 @@ $icon-margin: 8px;
     @include fa("\f044");
 }
 
+.chr_action--icon--list {
+    @extend .chr_action--icon;
+    @include fa("\f03a");
+}
+
 .chr_action--icon--print {
     @extend .chr_action--icon;
     @include fa("\f02f");

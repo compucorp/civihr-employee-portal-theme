@@ -737,6 +737,25 @@ form {
     }
 }
 
+// My sickness report
+.view-display-id-page_1 {
+    td,
+    th {
+        &:first-child {
+            width: 14%;
+        }
+    }
+
+    @media(min-width: $screen-xs-min) {
+        td,
+        th {
+            &:first-child {
+                width: 28%;
+            }
+        }
+    }
+}
+
 .calendar-btn {
     background: none;
     color: $gray;
@@ -762,20 +781,6 @@ form {
     p {
         margin: 0;
         padding: 15px 0;
-    }
-}
-
-// ## TEMPORARY ##
-.chr_panel__header--w-actions {
-
-    .views-exposed-widgets {
-        top: 17px;
-    }
-
-    @media(min-width: $screen-xxs-min) {
-        .views-exposed-widgets {
-            top: 0;
-        }
     }
 }
 

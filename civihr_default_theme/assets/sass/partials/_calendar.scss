@@ -1,3 +1,94 @@
+/**
+ * Manager calendar
+ */
+.chr_calendar--manager {
+    border-top: 1px solid $gray-light;
+
+    th,
+    td {
+        border-right: 1px solid $gray-light;
+
+        &:not(:first-child) {
+            padding: 0;
+            text-align: center;
+        }
+    }
+
+    thead {
+        background: $gray-lighter;
+    }
+}
+
+.chr_calendar--manager__date {
+    font-size: 0.9em;
+}
+
+.chr_calendar--manager__employee_name,
+.chr_calendar--manager__header__employee-name {
+    padding: 12px 20px;
+}
+
+.chr_calendar--manager__employee_name {
+    background: $gray-lighter;
+
+    > div {
+        @include ellipsis();
+    }
+}
+
+.chr_calendar--manager__header__day-of-month {
+    height: 40px;
+    width: 35px;
+
+    @media(min-width: $screen-lg-min) {
+        height: auto;
+        width: auto;
+    }
+}
+
+.chr_calendar--manager__header__employee-name {
+    width: 200px;
+}
+
+.civihr-employee-portal-manager-calendar-block {
+    font-size: 1.2rem;
+
+    h2 {
+        display: none;
+    }
+
+    h3 {
+        color: $gray-darker;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .calendar.legend {
+
+        .table-responsive {
+            overflow: visible;
+        }
+    }
+
+    .sticky-header {
+        display: none !important;
+    }
+
+    .table-responsive {
+        margin: 0 -43px 0 -20px;
+        overflow: auto;
+    }
+
+    @media(min-width: $screen-md-min) {
+        overflow: visible;
+    }
+}
+
+
+
+/**
+ * My absences calendar
+ */
 .calendar {
     width: auto;
 

@@ -63,6 +63,13 @@
         font-weight: normal;
     }
 
+    .calendar.legend {
+
+        .table-responsive {
+            overflow: visible;
+        }
+    }
+
     .sticky-header {
         display: none !important;
     }

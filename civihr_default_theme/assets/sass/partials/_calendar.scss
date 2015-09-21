@@ -36,6 +36,16 @@
     }
 }
 
+.chr_calendar--manager__header__day-of-month {
+    height: 40px;
+    width: 35px;
+
+    @media(min-width: $screen-lg-min) {
+        height: auto;
+        width: auto;
+    }
+}
+
 .chr_calendar--manager__header__employee-name {
     width: 200px;
 }
@@ -53,6 +63,11 @@
 
     .table-responsive {
         margin: 0 -43px 0 -20px;
+        overflow: auto;
+    }
+
+    @media(min-width: $screen-md-min) {
+        overflow: visible;
     }
 }
 

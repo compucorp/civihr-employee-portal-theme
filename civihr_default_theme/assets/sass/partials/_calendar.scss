@@ -57,6 +57,12 @@
         display: none;
     }
 
+    h3 {
+        color: $gray-darker;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
     .sticky-header {
         display: none !important;
     }

@@ -288,58 +288,6 @@ tr {
     height: auto !important;
 }
 
-/* Modal manager calendar */
-
-.civihr-employee-portal-manager-calendar-block {
-    font-size: 1.2rem;
-
-    h2 {
-        display: none;
-    }
-
-    .content > .views-tooltip {
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: $gray-darker-alt;
-        // background: $gray-lighter;
-        margin-bottom: 20px;
-    }
-    .table-responsive {
-        border-top: 1px solid $gray-light;
-        margin: 0 -43px 0 -20px;
-    }
-    thead {
-        background: $gray-lighter;
-    }
-    table:not(.calendar-legend) {
-        th,
-        td {
-            padding: 8px 10px;
-            border-right: 1px solid $gray-light;
-
-            &:first-child {
-                padding: 8px 20px;
-                width: 200px;
-                background: $gray-lighter;
-            }
-            &:not(:first-child) {
-                padding: 8px 0;
-                text-align: center;
-            }
-        }
-        tbody {
-            .views-tooltip {
-                font-size: 1.1rem;
-            }
-        }
-    }
-    // Highlight days in calendar
-    // td:not(:first-child):not(:empty) {
-    //     background: $brand-tertiary;
-    //     color: $light;
-    // }
-}
-
 /* Modal: My details, Emergency contact */
 
 .modal-body article {

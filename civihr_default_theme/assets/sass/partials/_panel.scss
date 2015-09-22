@@ -1,36 +1,6 @@
 // Styles for panels and panes.
 // --------------------------------------------------
 
-.pane-content {
-
-    /*
-        Vertical alignment of `.chr_panel_actions` with workaround for forms.
-
-        We need to assume that if contained within a <form>, then there is going to be a
-        `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
-    */
-    form {
-
-        .chr_panel__actions {
-            margin-top: -20px;
-        }
-    }
-
-    @media(min-width: $screen-sm-min) {
-        form {
-
-            .chr_panel__actions {
-                margin-top: 10px;
-            }
-        }
-
-        .chr_panel__actions {
-            border-top: 1px solid $gray-light;
-            margin-top: 30px;
-        }
-    }
-}
-
 .panel {
     @include box-shadow($box-shadow-global);
 }

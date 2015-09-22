@@ -55,12 +55,12 @@
     }
 }
 
-/*
-    Vertical alignment of `.chr_panel_actions` with workaround for forms.
-
-    We need to assume that if contained within a <form>, then there is going to be a
-    `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
-*/
+/**
+ * Vertical alignment workaround for forms.
+ *
+ * We need to assume that if contained within a <form>, then there is going to be a
+ * `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
+ */
 form {
 
     .chr_actions-wrapper {

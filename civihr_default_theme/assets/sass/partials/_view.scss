@@ -29,3 +29,29 @@
         }
     }
 }
+
+
+
+/**
+ * Staff Directory view
+ */
+.view-id-civihr_staff_directory {
+    background: none;
+    padding: 0;
+
+    // This is to reset the -20px margin on .table-responsive
+    // (needs to be verified if that negative margin is necessary at all)
+    .table-responsive {
+        margin: 0;
+    }
+
+    > .view-content {
+        background: #ffffff;
+    }
+
+    > .view-filters {
+        background: #ffffff;
+        margin-bottom: 20px;
+        padding: $panel-body-padding;
+    }
+}

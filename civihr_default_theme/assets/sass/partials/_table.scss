@@ -95,6 +95,51 @@
 
 
 /**
+ * Staff Directory results table
+ */
+.view-id-civihr_staff_directory {
+
+    .table-responsive {
+        overflow: auto;
+        // This is to reset the -20px margin on .table-responsive
+        // (needs to be verified if that negative margin is necessary at all)
+        margin: 0;
+    }
+
+    .views-table {
+        table-layout: auto;
+        width: 100%;
+        white-space: nowrap;
+
+        thead {
+
+            tr {
+                height: 50px;
+            }
+        }
+    }
+
+    @media(min-width: $screen-md-min) {
+        .table-responsive {
+            overflow: visible;
+        }
+
+        .views-table {
+            table-layout: fixed;
+            white-space: normal;
+
+            .views-field-display-name {
+                @include ellipsis();
+
+                width: 20%;
+            }
+        }
+    }
+}
+
+
+
+/**
  * A table with filters on the side
  */
 .chr_table-w-filters {

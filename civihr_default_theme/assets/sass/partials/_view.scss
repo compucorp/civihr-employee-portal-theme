@@ -29,3 +29,23 @@
         }
     }
 }
+
+
+
+/**
+ * Staff Directory view
+ */
+.view-id-civihr_staff_directory {
+    background: none;
+    padding: 0;
+
+    > .view-content {
+        background: #ffffff;
+    }
+
+    > .view-filters {
+        background: #ffffff;
+        margin-bottom: 20px;
+        padding: $panel-body-padding;
+    }
+}

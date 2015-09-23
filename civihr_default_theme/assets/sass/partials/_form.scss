@@ -7,6 +7,31 @@
   }
 }
 
+
+/**
+ * Staff Directory filters
+ */
+#views-exposed-form-civihr-staff-directory-page {
+
+    .form-item {
+        margin-bottom: 20px;
+    }
+
+    .views-exposed-widgets {
+        margin-bottom: 0;
+    }
+
+    .views-submit-button {
+        clear: both;
+
+        .form-submit {
+            margin-top: 0;
+        }
+    }
+}
+
+
+
 /**
  * Custom style for a <form>
  */

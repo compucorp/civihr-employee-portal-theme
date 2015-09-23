@@ -992,74 +992,8 @@ form {
 
 .content {
     & > .view-hr-documents {
-        background: none;
-        padding: 0;
 
-        .view-filters,
-        .view-content {
-            @include clearfix;
-            background: $light;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .view-content {
-            margin-bottom: 0;
-        }
-        .view-filters {
-            label {
-                width: 120px;
-                float: left;
-                font-size: 1.3rem;
-                padding: 20px 0;
-            }
-            select {
-                // margin: 10px 0;
-                width: 100%;
-            }
-            .views-exposed-widgets {
-                position: relative;
-            }
-            .views-widget {
-                float: left;
-            }
-            .views-widget-filter-combine,
-            .views-submit-button {
-                @include clearfix;
-            }
-            .views-widget-filter-combine {
-                .views-widget {
-                    width: 40%;
-                }
-            }
-            .views-widget-filter-field_resource_type_tid {
-                .views-widget {
-                    width: 20%;
-                    padding-right: 10px;
-                }
-
-            }
-            .views-widget-per-page {
-                width: 20%;
-                float: left;
-                padding-left: 10px;
-
-                &:after {
-                    content: "";
-                    width: 100%;
-                    border-bottom: 1px solid $gray-light;
-                    bottom: 50px;
-                    position: absolute;
-                    left: 0;
-                }
-            }
-            .form-submit {
-                margin-top: 30px;
-            }
-        }
         .row-hr-resource {
-            @extend .row;
-            margin: 0 -20px;
-            padding: 20px 5px;
 
             &.views-row-odd {
                 background: $gray-lighter;

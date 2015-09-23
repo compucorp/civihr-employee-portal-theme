@@ -35,11 +35,14 @@
 /**
  * Staff Directory view
  */
-.view-id-civihr_staff_directory {
+.view-id-civihr_staff_directory,
+.view-full-hr-documents {
     background: none;
     padding: 0;
 
     > .view-content {
+        @include clearfix;
+
         background: #ffffff;
     }
 

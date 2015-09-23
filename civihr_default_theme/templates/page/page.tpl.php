@@ -41,7 +41,7 @@
     <div class="chr_header__user-menu">
       <div class="chr_header__user-menu__data">
         <span class="chr_header__user-menu__name"><?php print $user_name; ?></span>
-        <div class="chr_header__user-menu__picture">
+        <div class="chr_profile-pic chr_profile-pic--small">
           <?php if ($image_url != '') { ?>
             <img src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
           <?php } ?>

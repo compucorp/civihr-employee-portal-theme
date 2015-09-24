@@ -2,8 +2,9 @@
     @include clearfix;
 
     padding: $panel-body-padding;
+    position: relative;
 
-    [class*="col-md"] {
+    [class*="col-sm"] {
 
         &:not(:last-child) {
             margin-bottom: 20px;
@@ -14,20 +15,25 @@
         margin-top: 20px;
     }
 
-    @media(min-width: $screen-md-min) {
-        [class*="col-md"] {
+    .chr_hr-resource__download {
+        position: absolute;
+        right: $panel-body-padding;
+        top: $panel-body-padding;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        [class*="col-sm"] {
             margin-bottom: 0 !important;
+        }
+
+        .chr_hr-resource__download {
+            position: static;
         }
     }
 }
 
 .chr_hr-resource__attachments {
     @include clearfix;
-
-    .fieldset-title {
-        color: $gray;
-        font-size: 0.929em;
-    }
 
     .field-content {
         background: $gray-light-alt;
@@ -44,6 +50,11 @@
             }
         }
     }
+
+    .fieldset-title {
+        color: $gray;
+        font-size: 0.929em;
+    }
 }
 
 .chr_hr-resource__description {
@@ -56,7 +67,7 @@
 .chr_hr-resource__download {
     color: $brand-primary;
 
-    @media(min-width: $screen-md-min) {
+    @media(min-width: $screen-sm-min) {
         text-align: right;
     }
 }

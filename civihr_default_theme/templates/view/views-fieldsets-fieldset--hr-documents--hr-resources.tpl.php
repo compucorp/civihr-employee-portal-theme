@@ -1,4 +1,4 @@
-<div class="chr_hr-resource__attachments col-md-12">
+<div class="chr_hr-resource__attachments col-sm-12">
   <<?php print $tag; ?> class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <?php if ($legend_tag): ?>

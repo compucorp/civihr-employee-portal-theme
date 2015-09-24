@@ -1,0 +1,77 @@
+.chr_hr-resource {
+    @include clearfix;
+
+    padding: $panel-body-padding;
+
+    [class*="col-md"] {
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .chr_hr-resource__attachments {
+        margin-top: 20px;
+    }
+
+    @media(min-width: $screen-md-min) {
+        [class*="col-md"] {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.chr_hr-resource__attachments {
+    @include clearfix;
+
+    .fieldset-title {
+        color: $gray;
+        font-size: 0.929em;
+    }
+
+    .field-content {
+        background: $gray-light-alt;
+        margin-top: 20px;
+        padding: 15px;
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.chr_hr-resource__description {
+
+    > p {
+        margin: 0;
+    }
+}
+
+.chr_hr-resource__download {
+    color: $brand-primary;
+
+    @media(min-width: $screen-md-min) {
+        text-align: right;
+    }
+}
+
+.chr_hr-resource__name {
+    color: $gray-darker-alt;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0;
+
+    > a {
+        color: inherit;
+    }
+}
+
+.chr_hr-resource__type {
+    font-style: italic;
+}

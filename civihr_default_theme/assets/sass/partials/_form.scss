@@ -128,8 +128,11 @@
     @media(min-width: $screen-sm-min) {
         .container-inline-date {
             float: left;
-            margin-bottom: 0;
             width: 48%;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
 
             &:last-child {
                 float: right;

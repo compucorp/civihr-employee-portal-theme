@@ -7,7 +7,7 @@
 }
 
 .modal-civihr-custom {
-    box-sizing: content-box;
+    box-sizing: content-box; // Keeps the same width no matter how much the padding is
     left: 0 !important;
     margin: 0 auto;
     max-width: 480px;
@@ -35,8 +35,10 @@
         position: relative;
     }
 
-    @media(min-width: $screen-sm-min) {
+    // Necessary for IE, since it can't center a block with just max-width
+    @media(min-width: 520px) {
         padding: 0;
+        width: 100%;
     }
 }
 

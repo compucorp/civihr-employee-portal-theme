@@ -75,7 +75,7 @@
     }
 
     .table-responsive {
-        margin: 0 -43px 0 -20px;
+        margin: 0 -20px 0;
         overflow: auto;
     }
 
@@ -177,7 +177,7 @@
 
     .view-header {
         background: $gray-lighter;
-        margin: -20px -43px 0 -20px;
+        margin: -20px -20px 0;
         padding: 20px;
 
         h3 {
@@ -240,7 +240,7 @@
 }
 
 .calendar-calendar {
-    margin: 0 -43px 0 -20px;
+    margin: 0 -20px 0;
 
     th,
     td {

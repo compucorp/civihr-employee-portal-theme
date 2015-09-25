@@ -57,21 +57,11 @@
 
 	.container-inline-date {
 		clear: none;
-		float: left;
 		position: relative;
-		width: 48%;
 
-		&:after {
-			content: '\f073';
-		   	font-family: FontAwesome;
-		   	position: absolute;
-		   	right: 0;
-			top: 7px;
-	   	}
-
-	   	&:last-child {
-	   		float: right;
-	   	}
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
 
 		.form-item {
 			margin: 0;
@@ -80,7 +70,7 @@
 
 	.date-padding {
 		padding: 0;
-		width: 46%;
+		width: 55%;
 
 		label,
 		.help-block {
@@ -109,6 +99,16 @@
 		}
 	}
 
+	.form-type-date-popup {
+		&:after {
+			content: '\f073';
+		   	font-family: FontAwesome;
+		   	position: absolute;
+		   	right: 0;
+			top: 7px;
+	   	}
+	}
+
 	.form-type-select {
 
 		.customSelect {
@@ -122,6 +122,22 @@
 
 		.form-textarea-wrapper {
 			overflow: auto;
+		}
+	}
+
+	@media(min-width: $screen-sm-min) {
+		.container-inline-date {
+			float: left;
+			margin-bottom: 0;
+			width: 48%;
+
+		   	&:last-child {
+		   		float: right;
+		   	}
+		}
+
+		.date-padding {
+			width: 46%;
 		}
 	}
 }

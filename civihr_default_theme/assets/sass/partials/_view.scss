@@ -33,13 +33,16 @@
 
 
 /**
- * Staff Directory view
+ * Staff Directory view, HR Resources view
  */
-.view-id-civihr_staff_directory {
+.view-id-civihr_staff_directory,
+.view-full-hr-documents {
     background: none;
     padding: 0;
 
     > .view-content {
+        @include clearfix;
+
         background: #ffffff;
     }
 
@@ -49,3 +52,21 @@
         padding: $panel-body-padding;
     }
 }
+
+/**
+ * HR Resources view
+ */
+.view-full-hr-documents {
+
+    .views-row {
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $gray-light;
+        }
+    }
+
+    .views-row-odd {
+        background: $gray-lighter;
+    }
+}
+

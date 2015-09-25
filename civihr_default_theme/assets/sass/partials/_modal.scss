@@ -1,14 +1,24 @@
+/**
+ * Standard custom CiviHR modal
+ */
+.backdrop-civihr-custom {
+	height: 100% !important;
+	width: 100% !important;
+}
+
 .modal-civihr-custom {
+	box-sizing: content-box;
 	left: 0 !important;
 	margin: 0 auto;
+	max-width: 480px;
 	min-height: 400px;
+	padding: 0 20px;
 	right: 0;
-	width: 460px;
 
 	.loading-spinner {
-		height: 400px;
+		height: 300px;
 		left: 0 !important;
-		line-height: 380px;
+		line-height: 280px;
 		position: relative !important;
 		text-align: center;
 		top: 0 !important;
@@ -22,6 +32,11 @@
 
 	.modal-content {
 		min-height: inherit;
+		position: relative;
+	}
+
+	@media(min-width: $screen-sm-min) {
+		padding: 0;
 	}
 }
 

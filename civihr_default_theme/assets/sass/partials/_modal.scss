@@ -2,68 +2,98 @@
  * Standard custom CiviHR modal
  */
 .backdrop-civihr-custom {
-	height: 100% !important;
-	width: 100% !important;
+    height: 100% !important;
+    width: 100% !important;
 }
 
 .modal-civihr-custom {
-	box-sizing: content-box;
-	left: 0 !important;
-	margin: 0 auto;
-	max-width: 480px;
-	min-height: 400px;
-	padding: 0 20px;
-	right: 0;
+    box-sizing: content-box;
+    left: 0 !important;
+    margin: 0 auto;
+    max-width: 480px;
+    min-height: 400px;
+    padding: 0 20px;
+    right: 0;
 
-	.loading-spinner {
-		height: 300px;
-		left: 0 !important;
-		line-height: 280px;
-		position: relative !important;
-		text-align: center;
-		top: 0 !important;
-	}
+    .loading-spinner {
+        height: 300px;
+        left: 0 !important;
+        line-height: 280px;
+        position: relative !important;
+        text-align: center;
+        top: 0 !important;
+    }
 
-	.modal-body {
-		@include clearfix;
+    .modal-body {
+        @include clearfix;
 
-		padding: 0 10px 10px 10px;
-	}
+        padding: 0 10px 10px 10px;
+    }
 
-	.modal-content {
-		min-height: inherit;
-		position: relative;
-	}
+    .modal-content {
+        min-height: inherit;
+        position: relative;
+    }
 
-	@media(min-width: $screen-sm-min) {
-		padding: 0;
-	}
+    @media(min-width: $screen-sm-min) {
+        padding: 0;
+    }
 }
 
 .modal-civihr-custom__footer {
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 .modal-civihr-custom__section {
-	@include clearfix;
+    @include clearfix;
 
-	border-bottom: 1px solid $gray-light;
-	padding: 20px 10px;
+    border-bottom: 1px solid $gray-light;
+    padding: 20px 10px;
 
-	&:last-of-type {
-		border-bottom: 0;
-		padding-bottom: 0;
-	}
+    &:last-of-type {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
 
-	> *:last-child {
-		margin-bottom: 0;
-	}
+    > *:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .modal-civihr-custom__section--strip {
-	@extend .modal-civihr-custom__section;
+    @extend .modal-civihr-custom__section;
 
-	background: $gray-light-alt;
-	margin: 0 -10px;
-	padding: 20px;
+    background: $gray-light-alt;
+    margin: 0 -10px;
+    padding: 20px;
+}
+
+
+
+/**
+ * HR Resource modal
+ */
+.view-display-id-hr_resources_modal {
+    margin: 0;
+    padding: 0;
+
+    .hr-documents-body-block + .views-field-nothing {
+        border-top: 1px solid $gray-light;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+
+    .resource-uploaded-date {
+        color: $light-pale;
+    }
+
+    .views-label-body {
+        color: $gray-darker;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    p:first-child {
+        margin-top: 0;
+    }
 }

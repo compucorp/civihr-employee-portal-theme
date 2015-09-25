@@ -988,35 +988,8 @@ form {
     }
 }
 
-/* Page: HR Resources/Documents */
-.modal-body .view-hr-documents {
-    margin: 0;
-    padding: 0;
-
-    .view-content {
-        padding: 0;
-    }
-    .hr-documents-body-block + .views-field-nothing {
-        border-top: 1px solid $gray-light;
-        margin-top: 20px;
-        padding-top: 10px;
-    }
-    .resource-uploaded-date {
-        padding-top: 6px;
-        color: $light-pale;
-    }
-    .views-label-body {
-        color: $gray-darker;
-        margin-bottom: 20px;
-        display: inline-block;
-    }
-    p:first-child {
-        margin-top: 0;
-    }
-}
 
 /* Page: HR Vacancies */
-
 .content {
     & > .view-hr-vacancies {
         @extend .view-hr-documents;

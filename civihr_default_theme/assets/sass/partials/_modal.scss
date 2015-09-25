@@ -1,4 +1,31 @@
 /**
+ * Shared style between the default modal and the custom CiviHR modal
+ */
+.modal-default,
+.modal-civihr-custom {
+
+    .loading-spinner {
+        height: 300px;
+        left: 0 !important;
+        line-height: 280px;
+        position: relative !important;
+        text-align: center;
+        top: 0 !important;
+    }
+
+    .modal-body {
+        @include clearfix;
+        width: 100% !important;
+    }
+
+    .modal-content {
+        min-height: inherit;
+        position: relative;
+    }
+}
+
+
+/**
  * Standard custom CiviHR modal
  */
 .backdrop-civihr-custom {
@@ -15,24 +42,10 @@
     padding: 0 20px;
     right: 0;
 
-    .loading-spinner {
-        height: 300px;
-        left: 0 !important;
-        line-height: 280px;
-        position: relative !important;
-        text-align: center;
-        top: 0 !important;
-    }
-
     .modal-body {
         @include clearfix;
 
         padding: 0 10px 10px 10px;
-    }
-
-    .modal-content {
-        min-height: inherit;
-        position: relative;
     }
 
     // Necessary for IE, since it can't center a block with just max-width

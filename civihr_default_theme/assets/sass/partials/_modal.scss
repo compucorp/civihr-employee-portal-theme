@@ -5,10 +5,23 @@
 	right: 0;
 	width: 460px;
 
+	.loading-spinner {
+		height: 400px;
+		left: 0 !important;
+		line-height: 380px;
+		position: relative !important;
+		text-align: center;
+		top: 0 !important;
+	}
+
 	.modal-body {
 		@include clearfix;
 
 		padding: 0 10px 10px 10px;
+	}
+
+	.modal-content {
+		min-height: inherit;
 	}
 }
 
@@ -21,6 +34,11 @@
 
 	border-bottom: 1px solid $gray-light;
 	padding: 20px 10px;
+
+	&:last-of-type {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
 
 	> *:last-child {
 		margin-bottom: 0;

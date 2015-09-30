@@ -24,7 +24,7 @@
 @mixin ellipsis() {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: no-wrap;
+    white-space: nowrap;
 }
 
 @mixin fa($unicode, $font-size: inherit) {

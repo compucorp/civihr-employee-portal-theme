@@ -2,21 +2,31 @@
  * @file
  * Custom scripts for theme.
  */
-(function ($) {
-    // on doc ready
-    $(document).ready(function() {
-        applyMatchHeight();
-        applyCustomSelect();
-        initMobileNav();
-    });
 
-    // on ajax complete (ie: when opening modals)
-    $(document).ajaxComplete(function() {
-        applyMatchHeight();
-        applyCustomSelect();
-    });
+(function($) {
+    Drupal.behaviors.civihr_theme = {
+        attach: function (context, settings) {
 
-    function initMobileNav() {
+            // on doc ready
+            $(document).ready(function () {
+                Drupal.civihr_theme.applyMatchHeight();
+                Drupal.civihr_theme.applyCustomSelect();
+                Drupal.civihr_theme.initMobileNav();
+            });
+
+            // on ajax complete (ie: when opening modals)
+            $(document).ajaxComplete(function () {
+                Drupal.civihr_theme.applyMatchHeight();
+                Drupal.civihr_theme.applyCustomSelect();
+            });
+
+        }
+    }
+
+    // Create theme related functions
+    Drupal.civihr_theme = Drupal.civihr_theme || {};
+
+    Drupal.civihr_theme.initMobileNav = function() {
         $header = $('.chr_header');
         $nav = $header.find('.chr_header__nav');
 
@@ -25,27 +35,21 @@
         })
     }
 
-    function applyMatchHeight() {
+    Drupal.civihr_theme.applyMatchHeight = function() {
         $('.view-hr-vacancies li').matchHeight();
         $('.view-hr-documents li').matchHeight();
     }
 
-    function applyCustomSelect() {
-        initCustomSelect();
-        onFieldsetLegendClick();
+    Drupal.civihr_theme.applyCustomSelect = function() {
+        Drupal.civihr_theme.initCustomSelect();
+        Drupal.civihr_theme.onFieldsetLegendClick();
     }
 
-    // when toggling expanding areas, apply customSelect to unaffected select elements
-    function onFieldsetLegendClick() {
-        $('.fieldset-legend .fieldset-title').click(initCustomSelect);
-    }
-
-    // initialize customSelect for unaffected visible select elements
-    function initCustomSelect() {
-        $('.form-item select').not('.hasCustomSelect').filter(':visible').each(function() {
+    Drupal.civihr_theme.initCustomSelect = function() {
+        $('.form-item select').not('.hasCustomSelect').filter(':visible').each(function () {
             var $this = $(this);
-            if ( $('body').hasClass('page-dashboard') ) {
-                if ( !$this.parent().parent().hasClass('views-widget') ) {
+            if ($('body').hasClass('page-dashboard')) {
+                if (!$this.parent().parent().hasClass('views-widget')) {
                     $this.customSelect();
                 }
             } else {
@@ -53,4 +57,9 @@
             }
         });
     }
+
+    Drupal.civihr_theme.onFieldsetLegendClick = function() {
+        $('.fieldset-legend .fieldset-title').click(Drupal.civihr_theme.initCustomSelect);
+    }
+
 })(jQuery);

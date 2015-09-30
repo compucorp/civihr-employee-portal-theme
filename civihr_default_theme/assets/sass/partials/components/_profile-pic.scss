@@ -1,0 +1,25 @@
+$small-size: 34px;
+
+.chr_profile-pic {
+    background: $gray-light;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+
+    > img {
+        display: block;
+        width: 100%;
+    }
+
+    // # TEMPORARY (will be probably refactored into a `user-card`-like component#
+    // If there is a <span> right after it, assumes it's the name of the user
+    + span {
+        margin-left: 15px;
+    }
+}
+
+.chr_profile-pic--small {
+    height: $small-size;
+    width: $small-size;
+}

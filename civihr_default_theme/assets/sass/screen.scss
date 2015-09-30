@@ -127,8 +127,13 @@
 @import "partials/node";
 @import "partials/user";
 @import "partials/modal";
+@import "partials/toolbar";
+@import "partials/calendar";
+@import "partials/table";
 
 // CSS custom components
 @import "partials/components/action";
+@import "partials/components/actions-wrapper";
 @import "partials/components/brand";
-@import "partials/components/panel";
+@import "partials/components/hr-resource";
+@import "partials/components/profile-pic";

@@ -1,0 +1,210 @@
+/**
+ * Manager documents table
+ *
+ * # TEMPORARY #
+ */
+#documents-dashboard-table-manager {
+    table-layout: auto;
+}
+
+/**
+ * Manager approvals table
+ */
+
+// Sort icon on table header
+@mixin manager-approval-main-table-sort($sort-image) {
+    background-image: url(#{$images-icons-path}#{$sort-image});
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.manager-approval-main-table {
+    table-layout: fixed !important;
+
+    // search highlight color
+    em {
+       background-color: yellow
+    }
+
+    th.headerSortDown {
+        @include manager-approval-main-table-sort($icon-desc-path);
+    }
+
+    th.headerSortUp {
+        @include manager-approval-main-table-sort($icon-asc-path);
+    }
+
+    .views-field {
+        @include ellipsis();
+
+        &:not(.views-field-nothing-1) > * {
+            @include ellipsis();
+        }
+    }
+
+    .header {
+        &.views-field-nothing { // dates
+            width: 27%;
+        }
+
+        &.views-field-nothing-1 { // actions
+            width: 13%;
+        }
+
+        &.views-field-absence-status {
+            width: 15%;
+        }
+
+        &.views-field-absence-title {
+            width: 12%;
+        }
+
+        &.views-field-civi-target-contact-name {
+            width: 25%;
+        }
+
+        @media(min-width: $screen-lg-min) {
+            &.views-field-nothing-1 {
+                width: 10%;
+            }
+        }
+    }
+}
+
+.manager-approval-main-table__actions {
+    display: inline;
+
+    .manager-approval-main-table__actions__action {
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .manager-approval-main-table__actions__action--approve {
+        color: $brand-success;
+    }
+
+    .manager-approval-main-table__actions__action--deny {
+        color: $brand-danger;
+    }
+
+    & + .views-tooltip {
+        display: inline-block;
+    }
+}
+
+
+
+/**
+ * Staff Directory results table
+ */
+.view-id-civihr_staff_directory {
+
+    .table-responsive {
+        overflow: auto;
+        // This is to reset the -20px margin on .table-responsive
+        // (needs to be verified if that negative margin is necessary at all)
+        margin: 0;
+    }
+
+    .views-table {
+        table-layout: auto;
+        width: 100%;
+        white-space: nowrap;
+
+        thead {
+
+            tr {
+                height: 50px;
+            }
+        }
+    }
+
+    @media(min-width: $screen-md-min) {
+        .table-responsive {
+            overflow: visible;
+        }
+
+        .views-table {
+            table-layout: fixed;
+            white-space: normal;
+
+            .views-field-last-name {
+                @include ellipsis();
+
+                width: 20%;
+            }
+        }
+    }
+}
+
+
+
+/**
+ * A table with filters on the side
+ */
+.chr_table-w-filters {
+
+    > .chr_table-w-filters__filters {
+        margin-top: 20px;
+    }
+}
+
+.chr_table-w-filters__filters {
+
+    @media(min-width: $screen-md-min) {
+        border-right: 1px solid #ECEDEE;
+        margin-right: -1px;
+        padding-right: 0;
+    }
+}
+
+.chr_table-w-filters__filters__dropdown-wrapper {
+    display: block;
+    padding: 0 20px;
+
+    @media(min-width: $screen-xs-min) {
+        display: none;
+    }
+}
+
+.chr_table-w-filters__filters__nav {
+    @extend .nav;
+    @extend .nav-pills;
+    @extend .nav-stacked;
+
+    display: none;
+
+    @media(min-width: $screen-xs-min) {
+        display: block;
+    }
+}
+
+.chr_table-w-filters__table {
+    margin: 0 20px;
+    overflow: auto;
+
+    table {
+        margin-left: -20px;
+        min-width: $screen-md-min;
+        table-layout: auto;
+    }
+
+    @media(min-width: $screen-md-min) {
+        margin: 0;
+        overflow: visible;
+
+        table {
+            margin-left: 0;
+            min-width: inherit;
+        }
+    }
+}
+
+.chr_table-w-filters__table-wrapper {
+    padding-bottom: 20px;
+
+    @media(min-width: $screen-md-min) {
+        border-left: 1px solid #ECEDEE;
+        padding-left: 0;
+    }
+}

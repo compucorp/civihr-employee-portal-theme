@@ -38,9 +38,19 @@ $icon-margin: 8px;
     @include fa("\f073");
 }
 
+.chr_action--icon--download {
+    @extend .chr_action--icon;
+    @include fa("\f019");
+}
+
 .chr_action--icon--edit {
     @extend .chr_action--icon;
     @include fa("\f044");
+}
+
+.chr_action--icon--list {
+    @extend .chr_action--icon;
+    @include fa("\f03a");
 }
 
 .chr_action--icon--print {

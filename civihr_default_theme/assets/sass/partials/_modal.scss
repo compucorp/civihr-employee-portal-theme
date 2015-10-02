@@ -44,7 +44,6 @@ $custom-modal-body-padding: 10;
         left: 0 !important;
         margin: 0 auto;
         max-width: #{$custom-modal-width}px;
-        min-height: 400px;
         padding: 0 #{$custom-modal-padding}px;
         right: 0;
 
@@ -64,10 +63,25 @@ $custom-modal-body-padding: 10;
             }
         }
 
+        .table-responsive {
+            overflow: auto;
+
+            table {
+                min-width: #{$custom-modal-width}px;
+            }
+        }
+
         // Necessary for IE, since it can't center a block with just max-width
         @media(min-width: #{$custom-modal-width + $custom-modal-padding * 2}px) {
             padding: 0;
             width: 100%;
+
+            .table-responsive {
+
+                table {
+                    min-width: auto;
+                }
+            }
         }
     }
 }

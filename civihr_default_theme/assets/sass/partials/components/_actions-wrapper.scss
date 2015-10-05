@@ -7,6 +7,7 @@
     > .chr_action,
     > .chr_actions-wrapper__inline-duo {
         display: block;
+        float: none;
         margin-bottom: 10px;
         width: 100%;
 
@@ -53,6 +54,16 @@
             width: auto;
         }
     }
+}
+
+
+/**
+ * [modifier] A version of the wrapper without border, padding, margin
+ */
+.chr_actions-wrapper--plain {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /**

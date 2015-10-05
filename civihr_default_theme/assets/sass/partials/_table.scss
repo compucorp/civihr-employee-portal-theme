@@ -7,6 +7,8 @@
     table-layout: auto;
 }
 
+
+
 /**
  * Manager approvals table
  */
@@ -91,6 +93,18 @@
         display: inline-block;
     }
 }
+
+
+/**
+ * Manager pick days table
+ */
+ .manager-pick-days-table {
+
+    th.select-all {
+        padding-right: 0;
+        width: 35px;
+    }
+ }
 
 
 

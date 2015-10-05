@@ -22,6 +22,33 @@
  */
 ?>
 <?php
+  $fields = [];
+  $fields_keys = [];
+
+  // Store only the visible fields in a separate array
+  foreach ($form['submitted'] as $key => $value) {
+    if (substr($key, 0, 1) <> '#' && $value['#type'] != 'hidden') {
+      $fields[$key] = $value;
+      array_push($fields_keys, $key);
+    }
+  }
+
+  // Wrap each field in Bootstrap's markup, and wrap the entire field group in the modal section
+  foreach ($fields as $key => $value) {
+    $prefix = $key == $fields_keys[0] ? '<div class="modal-civihr-custom__section">' : '';
+    $suffix = $key == $fields_keys[count($fields_keys) -1]? '</div>' : '';
+
+    $form['submitted'][$key]['#prefix'] = $prefix . '
+        <div class="form-group">
+          <label for="edit-submitted-'.$key.'" class="col-sm-3 control-label">'.$value['#title'].'</label>
+          <div class="col-sm-9">
+      ';
+
+    $form['submitted'][$key]['#suffix'] = '</div></div>' . $suffix;
+
+    unset($form['submitted'][$key]['#title']);
+  }
+
   // Print out the progress bar at the top of the page
   print drupal_render($form['progressbar']);
 
@@ -34,9 +61,10 @@
 
   // Print out the main part of the form.
   // Feel free to break this up and move the pieces within the array.
-  //print_r($form['submitted']);
   print drupal_render($form['submitted']);
 
   // Always print out the entire $form. This renders the remaining pieces of the
   // form that haven't yet been rendered above (buttons, hidden elements, etc).
+  print('<div class="modal-civihr-custom__footer">');
   print drupal_render_children($form);
+  print('</div>');

@@ -22,29 +22,20 @@
  */
 ?>
 <?php
-  $fields = [];
-  $fields_keys = [];
-
-  // Store only the visible fields in a separate array
-  foreach ($form['submitted'] as $key => $value) {
-    if (substr($key, 0, 1) <> '#' && $value['#type'] != 'hidden') {
-      $fields[$key] = $value;
-      array_push($fields_keys, $key);
-    }
-  }
+  $fields = array_filter($form['submitted'], function($value, $key) {
+    return substr($key, 0, 1) <> '#' && $value['#type'] != 'hidden';
+  }, ARRAY_FILTER_USE_BOTH);
+  $fields_keys = array_keys($fields);
 
   // Wrap each field in Bootstrap's markup, and wrap the entire field group in the modal section
   foreach ($fields as $key => $value) {
-    $prefix = $key == $fields_keys[0] ? '<div class="modal-civihr-custom__section">' : '';
-    $suffix = $key == $fields_keys[count($fields_keys) -1]? '</div>' : '';
-
-    $form['submitted'][$key]['#prefix'] = $prefix . '
-        <div class="form-group">
-          <label for="edit-submitted-'.$key.'" class="col-sm-3 control-label">'.$value['#title'].'</label>
-          <div class="col-sm-9">
-      ';
-
-    $form['submitted'][$key]['#suffix'] = '</div></div>' . $suffix;
+    $form['submitted'][$key]['#prefix'] = ''
+      . ( $key == $fields_keys[0] ? '<div class="modal-civihr-custom__section">' : '' ) .
+      '<div class="form-group">
+        <label for="edit-submitted-'.$key.'" class="col-sm-3 control-label">'.$value['#title'].'</label>
+        <div class="col-sm-9">
+    ';
+    $form['submitted'][$key]['#suffix'] = '</div></div>' . ( $key == end($fields_keys) ? '</div>' : '' );
 
     unset($form['submitted'][$key]['#title']);
   }

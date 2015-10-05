@@ -69,6 +69,10 @@ $custom-modal-body-padding: 10;
             table {
                 min-width: #{$custom-modal-width}px;
             }
+
+            .sticky-header {
+                display: none !important;
+            }
         }
 
         // Necessary for IE, since it can't center a block with just max-width

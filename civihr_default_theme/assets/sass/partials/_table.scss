@@ -7,6 +7,8 @@
     table-layout: auto;
 }
 
+
+
 /**
  * Manager approvals table
  */
@@ -93,6 +95,18 @@
 }
 
 
+/**
+ * Manager pick days table
+ */
+ .manager-pick-days-table {
+
+    th.select-all {
+        padding-right: 0;
+        width: 35px;
+    }
+ }
+
+
 
 /**
  * Staff Directory results table
@@ -134,77 +148,5 @@
                 width: 20%;
             }
         }
-    }
-}
-
-
-
-/**
- * A table with filters on the side
- */
-.chr_table-w-filters {
-
-    > .chr_table-w-filters__filters {
-        margin-top: 20px;
-    }
-}
-
-.chr_table-w-filters__filters {
-
-    @media(min-width: $screen-md-min) {
-        border-right: 1px solid #ECEDEE;
-        margin-right: -1px;
-        padding-right: 0;
-    }
-}
-
-.chr_table-w-filters__filters__dropdown-wrapper {
-    display: block;
-    padding: 0 20px;
-
-    @media(min-width: $screen-xs-min) {
-        display: none;
-    }
-}
-
-.chr_table-w-filters__filters__nav {
-    @extend .nav;
-    @extend .nav-pills;
-    @extend .nav-stacked;
-
-    display: none;
-
-    @media(min-width: $screen-xs-min) {
-        display: block;
-    }
-}
-
-.chr_table-w-filters__table {
-    margin: 0 20px;
-    overflow: auto;
-
-    table {
-        margin-left: -20px;
-        min-width: $screen-md-min;
-        table-layout: auto;
-    }
-
-    @media(min-width: $screen-md-min) {
-        margin: 0;
-        overflow: visible;
-
-        table {
-            margin-left: 0;
-            min-width: inherit;
-        }
-    }
-}
-
-.chr_table-w-filters__table-wrapper {
-    padding-bottom: 20px;
-
-    @media(min-width: $screen-md-min) {
-        border-left: 1px solid #ECEDEE;
-        padding-left: 0;
     }
 }

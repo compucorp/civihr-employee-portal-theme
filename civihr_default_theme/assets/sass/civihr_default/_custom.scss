@@ -46,6 +46,32 @@ body {
     }
 }
 
+
+/**
+ * Customization of the standard Bootstrap button group
+ */
+.btn-group {
+
+    > .btn {
+        border-color: #777C8F;
+        color: #777C8F;
+
+        &.active {
+            background: #777C8F;
+            color: #ffffff;
+        }
+    }
+}
+
+.btn-group-sm {
+
+    > .btn {
+        padding-bottom: 3px !important;
+        padding-top: 3px !important;
+    }
+}
+
+
 /**
  * Manager AJAX filters block / inline settings
  */

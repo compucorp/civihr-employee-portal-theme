@@ -196,3 +196,63 @@
         padding: 0;
     }
 }
+
+/* SSP Document form */
+
+#civihr-employee-portal-document-form {
+    #drop-target {
+        box-shadow: none;
+        background-color: #E8EEF0;
+        border: 1px dashed #727E8A;
+        color: #525966;
+    }
+
+    .col-index {
+        width: 5%;
+    }
+
+    .col-name {
+        width: 50%;
+    }
+}
+
+/* SSP Task form */
+
+form#civihr-employee-portal-civi-tasks-form {
+    div.input-with-clear .form-item {
+        margin-bottom: 0px;
+    }
+
+    div.input-with-clear .input-group-btn {
+        display: block;
+        width: 100%;
+        height: 34px;
+        margin-bottom: 20px;
+    }
+
+    div.input-with-clear a {
+        border: 0px none;
+    }
+    
+    div.input-with-clear .btn {
+        padding: 3px 346px;
+    }
+
+    div.container-inline-date .form-item {
+        width: 100%;
+    }
+
+    div.container-inline-date #edit-activity-date-time {
+        padding: 0px;
+    }
+
+    div.container-inline-date .form-item.form-type-textfield.form-item-activity-date-time-date.form-group > label {
+        display: none;
+    }
+
+    div.container-inline-date .help-block {
+        clear: left;
+        font-size: 12px;
+        float: left;
+    }
+}

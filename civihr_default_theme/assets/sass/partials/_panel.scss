@@ -177,6 +177,95 @@ form {
     }
 }
 
+.chr_panel__toolbar {
+
+    > [class*="chr_panel__toolbar__"] {
+        display: block;
+    }
+
+    > .chr_panel__toolbar__actions {
+        position: absolute;
+        right: 20px;
+        top: 19px;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        position: absolute;
+        right: 20px;
+        top: 17px;
+
+        > [class*="chr_panel__toolbar__"] {
+            display: inline-block;
+            position: static;
+        }
+
+        > .chr_panel__toolbar__filter {
+            margin-left: 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.chr_panel__toolbar__actions {
+
+    [class*="chr_action"] {
+        margin-left: 10px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .chr_action--icon--calendar {
+
+        &:before {
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+
+.chr_panel__toolbar__filter {
+    padding: 20px 20px 0;
+
+    .btn.input-group-addon {
+        position: absolute;
+        top: 4px;
+        right: 2px;
+        padding: 6px;
+        font-size: 1.1rem;
+        line-height: 1;
+        background: none;
+        color: $color-neutral;
+        cursor: default;
+    }
+
+    .form-control {
+        @extend .form-text;
+        padding: 7px 8px;
+    }
+
+    .input-group {
+        position: relative;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        padding: 0;
+
+        .btn.input-group-addon {
+            top: 0;
+        }
+
+        .form-control {
+            padding: 2px 8px;
+        }
+    }
+}
+
+
 
 /* [modifier] Panel containing user's details */
 .chr_panel--my-details {

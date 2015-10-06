@@ -21,7 +21,7 @@
     display: block;
     padding: 0 20px;
 
-    @media(min-width: $screen-xs-min) {
+    @media(min-width: $screen-sm-min) {
         display: none;
     }
 }
@@ -33,7 +33,7 @@
 
     display: none;
 
-    @media(min-width: $screen-xs-min) {
+    @media(min-width: $screen-sm-min) {
         display: block;
         margin-bottom: 15px;
     }

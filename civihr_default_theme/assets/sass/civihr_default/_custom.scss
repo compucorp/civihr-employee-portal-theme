@@ -785,6 +785,7 @@ form {
 }
 
 
+// ## TEMPORARY ##
 /* Manager absence approval */
 .pane-views-approvals-block-1 {
     position: relative;
@@ -793,86 +794,8 @@ form {
 .view-Tasks,
 .view-approvals {
 
-    .absence-approval-actions {
-
-        [class*="chr_action"] {
-            margin-left: 10px;
-        }
-
-        .chr_action--icon--calendar {
-
-            &:before {
-                position: relative;
-                top: -1px;
-            }
-        }
-
-        .form-control {
-            @extend .form-text;
-            padding: 7px 8px;
-        }
-
-        .view-content {
-            padding: 20px 20px 0;
-            display: block;
-
-            .btn {
-                position: absolute;
-                top: 4px;
-                right: 2px;
-                padding: 6px;
-                font-size: 1.1rem;
-                line-height: 1;
-                background: none;
-                color: $color-neutral;
-                cursor: default;
-            }
-
-            .input-group {
-                position: relative;
-            }
-        }
-
-        .view-header {
-            position: absolute;
-            right: 20px;
-            top: 19px;
-
-            p {
-                margin: 0;
-            }
-        }
-    }
-
     .view-empty {
         padding: 0 20px;
-    }
-
-    @media(min-width: $screen-xs-min) {
-        .absence-approval-actions {
-            position: absolute;
-            right: 20px;
-            top: 17px;
-
-            .form-control {
-                padding: 2px 8px;
-            }
-
-            .view-content {
-                display: inline-block;
-                margin-left: 10px;
-                padding: 0;
-
-                .btn {
-                    top: 0;
-                }
-            }
-
-            .view-header {
-                display: inline-block;
-                position: static;
-            }
-        }
     }
 }
 // ## END TEMPORARY ##

@@ -178,6 +178,7 @@ form {
 }
 
 .chr_panel__toolbar {
+    padding: 20px 20px 0;
 
     > [class*="chr_panel__toolbar__"] {
         display: block;
@@ -190,6 +191,7 @@ form {
     }
 
     @media(min-width: $screen-sm-min) {
+        padding: 0;
         position: absolute;
         right: 20px;
         top: 17px;
@@ -229,7 +231,6 @@ form {
 }
 
 .chr_panel__toolbar__filter {
-    padding: 20px 20px 0;
 
     .btn.input-group-addon {
         position: absolute;
@@ -253,8 +254,6 @@ form {
     }
 
     @media(min-width: $screen-sm-min) {
-        padding: 0;
-
         .btn.input-group-addon {
             top: 0;
         }

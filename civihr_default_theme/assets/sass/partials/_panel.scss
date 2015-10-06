@@ -71,7 +71,37 @@
 /**
  * Custom CiviHR panel
  */
- .chr_panel__header {
+.chr_panel__footer {
+    @extend .clearfix;
+
+    padding-top: 20px;
+
+    @media(min-width: $screen-sm-min) {
+        border-top: 1px solid $gray-light;
+        margin-top: 30px;
+    }
+}
+
+/**
+ * Vertical alignment workaround for forms.
+ *
+ * We need to assume that if contained within a <form>, then there is going to be a
+ * `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
+ */
+form {
+
+    .chr_panel__footer {
+        margin-top: -20px;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        .chr_panel__footer {
+            margin-top: 10px;
+        }
+    }
+}
+
+.chr_panel__header {
     box-shadow: none;
 }
 
@@ -216,6 +246,11 @@
 /* [modifier] Panel with no padding applied to its content */
 .chr_panel--no-padding {
 
+    .chr_panel__footer {
+        margin-top: 0;
+        padding: $panel-body-padding;
+    }
+
     > .pane-content {
         margin: -20px;
         overflow: hidden;
@@ -226,7 +261,7 @@
 
 .chr_panel--tasks {
     position: relative;
-
+    
     .tasks-actions {
         position: absolute;
         right: 5px;
@@ -244,7 +279,7 @@
     .show-complete-tasks > span {
         display: inline-block;
     }
-    
+
     @media (min-width: $screen-sm-min) {
         .show-complete-tasks > span {
             display: none;

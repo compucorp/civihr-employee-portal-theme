@@ -71,6 +71,10 @@
 /**
  * Custom CiviHR panel
  */
+.chr_panel {
+    position: relative;
+}
+
 .chr_panel__footer {
     @extend .clearfix;
 
@@ -254,41 +258,5 @@ form {
     > .pane-content {
         margin: -20px;
         overflow: hidden;
-    }
-}
-
-/* SSP Tasks Block panel */
-
-.chr_panel--tasks {
-    position: relative;
-    
-    .tasks-actions {
-        position: absolute;
-        right: 5px;
-        top: 17px;
-    }
-
-    .show-complete-tasks {
-        width: 100%;
-    }
-
-    input#task-filter-contact {
-        width: 100%;
-    }
-
-    .show-complete-tasks > span {
-        display: inline-block;
-    }
-
-    @media (min-width: $screen-sm-min) {
-        .show-complete-tasks > span {
-            display: none;
-        }
-    }
-
-    @media (min-width: $screen-md) {
-        .show-complete-tasks > span {
-            display: inline-block;
-        }
     }
 }

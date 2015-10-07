@@ -29,13 +29,21 @@
 
   // Wrap each field in Bootstrap's markup, and wrap the entire field group in the modal section
   foreach ($fields as $key => $value) {
+    $first_field = $key == $fields_keys[0];
+    $last_field = $key == end($fields_keys);
+    $label_hidden = $value['#title_display'] == 'none';
+
     $form['submitted'][$key]['#prefix'] = ''
-      . ( $key == $fields_keys[0] ? '<div class="modal-civihr-custom__section">' : '' ) .
-      '<div class="form-group">
-        <label for="edit-submitted-'.$key.'" class="col-sm-3 control-label">'.$value['#title'].'</label>
+      . ( $first_field ? '<div class="modal-civihr-custom__section">' : '' ) .
+      '<div class="form-group form-group--smaller-gutter">
+        <label
+         for="'. $value['#id'] .'"
+         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
+          . ( !$label_hidden ? $value['#title'] : '' ) .
+        '</label>
         <div class="col-sm-9">
     ';
-    $form['submitted'][$key]['#suffix'] = '</div></div>' . ( $key == end($fields_keys) ? '</div>' : '' );
+    $form['submitted'][$key]['#suffix'] = '</div></div>' . ( $last_field ? '</div>' : '' );
 
     unset($form['submitted'][$key]['#title']);
   }

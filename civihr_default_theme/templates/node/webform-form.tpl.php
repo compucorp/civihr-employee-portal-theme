@@ -22,31 +22,66 @@
  */
 ?>
 <?php
-  $fields = array_filter($form['submitted'], function($value, $key) {
-    return substr($key, 0, 1) <> '#' && $value['#type'] != 'hidden';
-  }, ARRAY_FILTER_USE_BOTH);
-  $fields_keys = array_keys($fields);
 
-  // Wrap each field in Bootstrap's markup, and wrap the entire field group in the modal section
-  foreach ($fields as $key => $value) {
-    $first_field = $key == $fields_keys[0];
-    $last_field = $key == end($fields_keys);
-    $label_hidden = $value['#title_display'] == 'none';
-
-    $form['submitted'][$key]['#prefix'] = ''
-      . ( $first_field ? '<div class="modal-civihr-custom__section">' : '' ) .
-      '<div class="form-group form-group--smaller-gutter">
-        <label
-         for="'. $value['#id'] .'"
-         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
-          . ( !$label_hidden ? $value['#title'] : '' ) .
-        '</label>
-        <div class="col-sm-9">
-    ';
-    $form['submitted'][$key]['#suffix'] = '</div></div>' . ( $last_field ? '</div>' : '' );
-
-    unset($form['submitted'][$key]['#title']);
+  /**
+   * Fields that Bootstrap markup can be applied on
+   *
+   * @param array $fields_structure
+   *   The associative array representive the fields structure
+   * @return array
+   */
+  function bootstrapable_fields($fields_structure) {
+    return array_filter($fields_structure, function($value, $key) {
+      return substr($key, 0, 1) <> '#' && !in_array($value['#type'], ['hidden']);
+    }, ARRAY_FILTER_USE_BOTH);
   }
+
+  /**
+   * Recursive function that applies Bootstrap markup to a fields structure
+   * Can be called on entire forms or subsets of it, like fieldsets
+   *
+   * @param array $fields_structure
+   *   The associative array representive the fields structure
+   * @param boolean $section_wrap
+    *  Sets if the fields group must be wrapped in the modal structure element
+   * @return array
+   */
+  function apply_bootstrap($fields_structure, $section_wrap = true) {
+    $fields = bootstrapable_fields($fields_structure);
+    $fields_keys = array_keys($fields);
+
+    foreach ($fields as $key => $value) {
+      $open_section = $section_wrap && $key == $fields_keys[0];
+      $close_section = $section_wrap && $key == end($fields_keys);
+      $label_hidden = $value['#title_display'] == 'none';
+
+      $fields_structure[$key]['#prefix'] = $open_section ? '<div class="modal-civihr-custom__section">' : '';
+      $fields_structure[$key]['#suffix'] = $close_section ? '</div>' : '';
+
+      // Recursively apply bootstrap to fieldset fields
+      if ($value['#type'] == 'fieldset') {
+        $fields_structure[$key] = array_replace_recursive($fields_structure[$key], apply_bootstrap($value, false));
+        $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset--transparent';
+        continue;
+      }
+
+      $fields_structure[$key]['#title'] = null;
+      $fields_structure[$key]['#prefix'] .= '
+        <div class="form-group form-group--smaller-gutter">
+          <label
+           for="'. $value['#id'] .'"
+           class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
+            . ( !$label_hidden ? $value['#title'] : '' ) .
+          '</label>
+          <div class="col-sm-9">
+      ';
+      $fields_structure[$key]['#suffix'] .= '</div></div>';
+    }
+
+    return $fields_structure;
+  }
+
+  $form['submitted'] = apply_bootstrap($form['submitted']);
 
   // Print out the progress bar at the top of the page
   print drupal_render($form['progressbar']);

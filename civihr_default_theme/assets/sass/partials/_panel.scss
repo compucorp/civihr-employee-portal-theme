@@ -71,7 +71,41 @@
 /**
  * Custom CiviHR panel
  */
- .chr_panel__header {
+.chr_panel {
+    position: relative;
+}
+
+.chr_panel__footer {
+    @extend .clearfix;
+
+    padding-top: 20px;
+
+    @media(min-width: $screen-sm-min) {
+        border-top: 1px solid $gray-light;
+        margin-top: 30px;
+    }
+}
+
+/**
+ * Vertical alignment workaround for forms.
+ *
+ * We need to assume that if contained within a <form>, then there is going to be a
+ * `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
+ */
+form {
+
+    .chr_panel__footer {
+        margin-top: -20px;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        .chr_panel__footer {
+            margin-top: 10px;
+        }
+    }
+}
+
+.chr_panel__header {
     box-shadow: none;
 }
 
@@ -142,6 +176,94 @@
         }
     }
 }
+
+.chr_panel__toolbar {
+    padding: 20px 20px 0;
+
+    > [class*="chr_panel__toolbar__"] {
+        display: block;
+    }
+
+    > .chr_panel__toolbar__actions {
+        position: absolute;
+        right: 20px;
+        top: 19px;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        padding: 0;
+        position: absolute;
+        right: 20px;
+        top: 17px;
+
+        > [class*="chr_panel__toolbar__"] {
+            display: inline-block;
+            position: static;
+        }
+
+        > .chr_panel__toolbar__filter {
+            margin-left: 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.chr_panel__toolbar__actions {
+
+    [class*="chr_action"] {
+        margin-left: 10px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .chr_action--icon--calendar {
+
+        &:before {
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+
+.chr_panel__toolbar__filter {
+
+    .btn.input-group-addon {
+        position: absolute;
+        top: 4px;
+        right: 2px;
+        padding: 6px;
+        font-size: 1.1rem;
+        line-height: 1;
+        background: none;
+        color: $color-neutral;
+        cursor: default;
+    }
+
+    .form-control {
+        @extend .form-text;
+        padding: 7px 8px;
+    }
+
+    .input-group {
+        position: relative;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        .btn.input-group-addon {
+            top: 0;
+        }
+
+        .form-control {
+            padding: 2px 8px;
+        }
+    }
+}
+
 
 
 /* [modifier] Panel containing user's details */
@@ -215,6 +337,11 @@
 
 /* [modifier] Panel with no padding applied to its content */
 .chr_panel--no-padding {
+
+    .chr_panel__footer {
+        margin-top: 0;
+        padding: $panel-body-padding;
+    }
 
     > .pane-content {
         margin: -20px;

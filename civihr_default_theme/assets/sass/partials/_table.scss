@@ -109,6 +109,19 @@
 
 
 /**
+ * Tasks table on the dashboard
+ */
+.tasks-dashboard-table {
+
+    th {
+        &.views-field-task-type {
+            width: 25%;
+        }
+    }
+}
+
+
+/**
  * Staff Directory results table
  */
 .view-id-civihr_staff_directory {

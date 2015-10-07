@@ -21,7 +21,7 @@
     display: block;
     padding: 0 20px;
 
-    @media(min-width: $screen-xs-min) {
+    @media(min-width: $screen-sm-min) {
         display: none;
     }
 }
@@ -33,19 +33,30 @@
 
     display: none;
 
-    @media(min-width: $screen-xs-min) {
+    @media(min-width: $screen-sm-min) {
         display: block;
+        margin-bottom: 15px;
+    }
+
+    @media(min-width: $screen-md-min) {
+        margin-bottom: 0;
     }
 }
 
 .chr_table-w-filters__table {
-    margin: 0 20px;
     overflow: auto;
 
     table {
-        margin-left: -20px;
         min-width: $screen-md-min;
         table-layout: auto;
+
+        tr:last-child {
+            border-bottom: 0;
+
+            td {
+                border-bottom: 0;
+            }
+        }
     }
 
     @media(min-width: $screen-md-min) {
@@ -60,10 +71,11 @@
 }
 
 .chr_table-w-filters__table-wrapper {
-    padding-bottom: 20px;
+    border-top: 1px solid $gray-light;
 
     @media(min-width: $screen-md-min) {
         border-left: 1px solid #ECEDEE;
+        border-top: none;
         padding-left: 0;
     }
 }

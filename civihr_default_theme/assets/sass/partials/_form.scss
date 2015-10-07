@@ -8,6 +8,7 @@
 }
 
 
+
 /**
  * Staff Directory filters, HR Resources filters
  */
@@ -38,6 +39,18 @@
  */
 .civihr_form {
 
+    .civihr_form__fieldset {
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .control-label {
+        font-weight: normal;
+        text-align: left;
+    }
+
     .form-type-file {
 
         .form-file {
@@ -46,10 +59,49 @@
         }
     }
 
-    .form-submit {
-        padding: 0.8rem 6rem;
+    .form-actions {
+
+        > .form-submit {
+            padding: 0.8rem 6rem;
+        }
+    }
+
+    // This is mostly a duplicate of .form-group--smaller-gutter
+    // given I couldn't change the markup of the datepicker field itself
+    .webform-datepicker {
+        @extend .row;
+
+        margin-left: -10px;
+        margin-right: -10px;
+
+        .form-item {
+            @extend .col-sm-4;
+
+            display: block;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .webform-calendar {
+            display: none;
+        }
+    }
+
+    @media(min-width: $screen-sm-min) {
+        .webform-datepicker {
+
+            .form-item {
+                margin-bottom: 0;
+            }
+        }
     }
 }
+
 
 /* [modifier] <form> being displayed in a modal */
 .civihr_form--modal {
@@ -145,6 +197,7 @@
     }
 }
 
+
 /* [modifier] <form> for the leave requests */
 .civihr_form--request-leave {
     @extend .civihr_form;
@@ -158,6 +211,17 @@
     font-size: 0.9em;
     color: $gray;
 }
+
+
+/* [modifier] Resets any margin/padding applied by default */
+.civihr_form--reset {
+
+    .form-actions,
+    .form-item {
+        margin: 0;
+    }
+}
+
 
 
 /**
@@ -177,12 +241,20 @@
     }
 }
 
+
 /* [modifier] Transparent <fieldset> (no borders, paddings, bg colors) */
 .civihr_form__fieldset--transparent {
     @extend .civihr_form__fieldset;
 
     border: 0;
     box-shadow: none;
+
+    &.collapsed {
+
+        > legend {
+            margin-bottom: 0;
+        }
+    }
 
     > legend {
         background: none !important;
@@ -192,13 +264,13 @@
     }
 
     .panel-body {
-        margin-top: 15px;
         padding: 0;
     }
 }
 
-/* SSP Document form */
 
+
+/* SSP Document form */
 #civihr-employee-portal-document-form {
     #drop-target {
         box-shadow: none;
@@ -216,8 +288,9 @@
     }
 }
 
-/* SSP Task form */
 
+
+/* SSP Task form */
 form#civihr-employee-portal-civi-tasks-form {
     div.input-with-clear .form-item {
         margin-bottom: 0px;
@@ -233,7 +306,7 @@ form#civihr-employee-portal-civi-tasks-form {
     div.input-with-clear a {
         border: 0px none;
     }
-    
+
     div.input-with-clear .btn {
         padding: 3px 346px;
     }

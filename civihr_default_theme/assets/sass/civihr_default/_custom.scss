@@ -48,6 +48,23 @@ body {
 
 
 /**
+ * Customization of the standard Bootstrap form group
+ * This version has a smaller gap between columns (label and field)
+ */
+.form-horizontal {
+
+    .form-group--smaller-gutter {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        [class*="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+/**
  * Customization of the standard Bootstrap button group
  */
 .btn-group {

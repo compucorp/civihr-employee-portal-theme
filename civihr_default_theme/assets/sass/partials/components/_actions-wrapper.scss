@@ -1,12 +1,12 @@
 .chr_actions-wrapper {
     @extend .clearfix;
 
-    padding-top: 20px;
     text-align: right;
 
     > .chr_action,
     > .chr_actions-wrapper__inline-duo {
         display: block;
+        float: none;
         margin-bottom: 10px;
         width: 100%;
 
@@ -16,9 +16,6 @@
     }
 
     @media(min-width: $screen-sm-min) {
-        border-top: 1px solid $gray-light;
-        margin-top: 30px;
-
         > .chr_action,
         > .chr_actions-wrapper__inline-duo {
             display: inline-block;
@@ -51,25 +48,6 @@
         > .chr_action {
             float: none !important;
             width: auto;
-        }
-    }
-}
-
-/**
- * Vertical alignment workaround for forms.
- *
- * We need to assume that if contained within a <form>, then there is going to be a
- * `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
- */
-form {
-
-    .chr_actions-wrapper {
-        margin-top: -20px;
-    }
-
-    @media(min-width: $screen-sm-min) {
-        .chr_actions-wrapper {
-            margin-top: 10px;
         }
     }
 }

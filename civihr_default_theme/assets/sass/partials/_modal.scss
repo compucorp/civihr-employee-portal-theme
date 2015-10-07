@@ -2,7 +2,7 @@
  * Shared style between the default modal and the custom CiviHR modal
  */
 .modal-default,
-.modal-civihr-custom {
+[class*="modal-civihr-custom"] {
 
     .loading-spinner {
         height: 300px;
@@ -28,42 +28,83 @@
 /**
  * Standard custom CiviHR modal
  */
-.backdrop-civihr-custom {
-    height: 100% !important;
-    width: 100% !important;
-}
+$custom-modal-padding: 20;
+$custom-modal-body-padding: 10;
 
-.modal-civihr-custom {
-    box-sizing: content-box; // Keeps the same width no matter how much the padding is
-    left: 0 !important;
-    margin: 0 auto;
-    max-width: 480px;
-    min-height: 400px;
-    padding: 0 20px;
-    right: 0;
+// Necessary instead of @extend because SASS can't handle @extend + media queries
+@mixin custom-modal($custom-modal-modifier: "", $custom-modal-width: 480) {
 
-    .modal-body {
-        @include clearfix;
-
-        padding: 0 10px 10px 10px;
+    .backdrop-modal-civihr-custom#{$custom-modal-modifier} {
+        height: 100% !important;
+        width: 100% !important;
     }
 
-    // Necessary for IE, since it can't center a block with just max-width
-    @media(min-width: 520px) {
-        padding: 0;
-        width: 100%;
+    .modal-civihr-custom#{$custom-modal-modifier} {
+        box-sizing: content-box; // Keeps the same width no matter how much the padding is
+        left: 0 !important;
+        margin: 0 auto;
+        max-width: #{$custom-modal-width}px;
+        padding: 0 #{$custom-modal-padding}px;
+        right: 0;
+
+        .modal-body {
+            @include clearfix;
+
+            padding: #{$custom-modal-body-padding}px;
+            padding-top: 0;
+        }
+
+        .modal-content {
+
+            .table-responsive,
+            .view {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .table-responsive {
+            overflow: auto;
+
+            table {
+                min-width: #{$custom-modal-width}px;
+            }
+
+            .sticky-header {
+                display: none !important;
+            }
+        }
+
+        // Necessary for IE, since it can't center a block with just max-width
+        @media(min-width: #{$custom-modal-width + $custom-modal-padding * 2}px) {
+            padding: 0;
+            width: 100%;
+
+            .table-responsive {
+
+                table {
+                    min-width: auto;
+                }
+            }
+        }
     }
 }
+
+@include custom-modal();
+@include custom-modal('--large', 755); // [modifier] Larger custom CiviHR modal
 
 .modal-civihr-custom__footer {
-    padding-top: 10px;
+    @include clearfix;
+
+    padding-top: #{$custom-modal-body-padding}px;
+    text-align: right;
 }
 
 .modal-civihr-custom__section {
     @include clearfix;
 
     border-bottom: 1px solid $gray-light;
-    padding: 20px 10px;
+    padding: #{$custom-modal-body-padding * 2}px #{$custom-modal-body-padding}px;
 
     &:last-of-type {
         border-bottom: 0;
@@ -75,12 +116,20 @@
     }
 }
 
+.modal-civihr-custom__section--no-padding {
+   @extend .modal-civihr-custom__section;
+
+    border: 0;
+    margin: 0 #{-$custom-modal-body-padding}px;
+    padding: 0;
+}
+
 .modal-civihr-custom__section--strip {
     @extend .modal-civihr-custom__section;
 
     background: $gray-light-alt;
-    margin: 0 -10px;
-    padding: 20px;
+    margin: 0 #{-$custom-modal-body-padding}px;
+    padding: #{$custom-modal-body-padding * 2}px;
 }
 
 

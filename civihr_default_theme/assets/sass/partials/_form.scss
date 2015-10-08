@@ -76,16 +76,20 @@
  */
 .civihr_form {
 
+    // Boostrap override
+    &.form-horizontal {
+
+        .control-label {
+            font-weight: normal;
+            text-align: left;
+        }
+    }
+
     .civihr_form__fieldset {
 
         &:not(:last-child) {
             margin-bottom: 20px;
         }
-    }
-
-    .control-label {
-        font-weight: normal;
-        text-align: left;
     }
 
     .form-actions {
@@ -97,9 +101,12 @@
 
     .form-file {
         background: transparent;
+        display: inline;
         padding: 7px 0;
     }
 
+    // Adds calendar icon, remove additional labels and help tips
+    // and overrides bootstrap styles for internal elements
     .form-type-date-popup {
 
         .date-padding {
@@ -129,15 +136,38 @@
         }
     }
 
-    // Fixes a IE9 bug with <span> containing block elements
-    // that resulted in Bootstrap cols being misaligned
-    .ie9 & {
+    // Custom style for select2
+    .select2-container.form-text {
+        border: 0;
+        padding: 0;
 
-        .field-prefix {
-            display: none;
+        > .select2-choice {
+            height: auto;
+            line-height: inherit;
+            padding: 7px 10px;
+
+            abbr {
+                top: 11px;
+            }
+        }
+
+        &.select2-dropdown-open {
+
+            .select2-arrow b {
+                background-position: -18px 5px;
+            }
+        }
+
+        &:not(.select2-dropdown-open) {
+
+            .select2-arrow b {
+                background-position: 0 5px;
+            }
         }
     }
 
+    // Place the 3 select dropdowns (DD/MM/YYYY) in columns
+    //
     // This is mostly a duplicate of .form-group--smaller-gutter
     // given I couldn't change the markup of the datepicker field itself
     .webform-datepicker {
@@ -160,6 +190,15 @@
         }
 
         .webform-calendar {
+            display: none;
+        }
+    }
+
+    // Fixes a IE9 bug with <span> containing block elements
+    // that resulted in Bootstrap cols being misaligned
+    .ie9 & {
+
+        .field-prefix {
             display: none;
         }
     }

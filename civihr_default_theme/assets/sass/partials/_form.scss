@@ -35,6 +35,43 @@
 
 
 /**
+ * # TEMPORARY #
+ *
+ * This is a reset of all the style applied by default by .container-inline-date
+ */
+.civihr_container-inline-date--reset {
+
+    > .container-inline-date {
+        clear: initial;
+
+        .date-padding {
+            padding: 0;
+            float: initial;
+
+            .form-control {
+                margin-right: 0;
+                width: 100%;
+            }
+
+            > .form-group.form-item {
+                float: initial;
+                margin: 0;
+            }
+        }
+
+        > .form-group.form-item {
+            display: block;
+            float: initial;
+            margin: 0 -15px 15px;
+            vertical-align: initial;
+            width: initial;
+        }
+    }
+}
+
+
+
+/**
  * Custom style for a <form>
  */
 .civihr_form {
@@ -51,15 +88,53 @@
         text-align: left;
     }
 
+    .form-actions {
+
+        > .form-submit {
+            padding: 0.8rem 6rem;
+        }
+    }
+
     .form-file {
         background: transparent;
         padding: 7px 0;
     }
 
-    .form-actions {
+    .form-type-date-popup {
 
-        > .form-submit {
-            padding: 0.8rem 6rem;
+        .date-padding {
+            position: relative;
+
+            &:before {
+                content: '\f073';
+                font-family: FontAwesome;
+                position: absolute;
+                right: -20px;
+                top: 7px;
+            }
+
+            label,
+            .help-block {
+                display: none !important;
+            }
+        }
+
+        .form-control {
+            margin-right: 0;
+            width: 100%;
+        }
+
+        .form-group {
+            margin: 0;
+        }
+    }
+
+    // Fixes a IE9 bug with <span> containing block elements
+    // that resulted in Bootstrap cols being misaligned
+    .ie9 & {
+
+        .field-prefix {
+            display: none;
         }
     }
 
@@ -161,16 +236,6 @@
     .date-padding {
         padding: 0;
         width: 55%;
-
-        label,
-        .help-block {
-            display: none !important;
-        }
-
-        .form-control {
-            margin-right: 0;
-            width: 100%;
-        }
     }
 
     .form-item {
@@ -186,16 +251,6 @@
             clear: both;
             display: block;
             font-size: 0.9em;
-        }
-    }
-
-    .form-type-date-popup {
-        &:after {
-            content: '\f073';
-            font-family: FontAwesome;
-            position: absolute;
-            right: 0;
-            top: 7px;
         }
     }
 
@@ -277,47 +332,5 @@
 
     .col-name {
         width: 50%;
-    }
-}
-
-
-
-/* SSP Task form */
-form#civihr-employee-portal-civi-tasks-form {
-    div.input-with-clear .form-item {
-        margin-bottom: 0px;
-    }
-
-    div.input-with-clear .input-group-btn {
-        display: block;
-        width: 100%;
-        height: 34px;
-        margin-bottom: 20px;
-    }
-
-    div.input-with-clear a {
-        border: 0px none;
-    }
-
-    div.input-with-clear .btn {
-        padding: 3px 346px;
-    }
-
-    div.container-inline-date .form-item {
-        width: 100%;
-    }
-
-    div.container-inline-date #edit-activity-date-time {
-        padding: 0px;
-    }
-
-    div.container-inline-date .form-item.form-type-textfield.form-item-activity-date-time-date.form-group > label {
-        display: none;
-    }
-
-    div.container-inline-date .help-block {
-        clear: left;
-        font-size: 12px;
-        float: left;
     }
 }

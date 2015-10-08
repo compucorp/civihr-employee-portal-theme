@@ -51,12 +51,9 @@
         text-align: left;
     }
 
-    .form-type-file {
-
-        .form-file {
-            background: transparent;
-            padding: 7px 0;
-        }
+    .form-file {
+        background: transparent;
+        padding: 7px 0;
     }
 
     .form-actions {
@@ -99,6 +96,47 @@
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+// Custom style for a <fieldset>,
+// (based on the markup printed out by the Form API)
+.civihr_form__fieldset {
+    margin: 0;
+    padding: 0;
+
+    .fieldset-legend {
+        font-size: 1.6rem;
+    }
+
+    .fieldset-title {
+        margin-left: 10px;
+    }
+}
+
+// [modifier] Transparent <fieldset> (no borders, paddings, bg colors)
+.civihr_form__fieldset--transparent {
+    @extend .civihr_form__fieldset;
+
+    border: 0;
+    box-shadow: none;
+
+    &.collapsed {
+
+        > legend {
+            margin-bottom: 0;
+        }
+    }
+
+    > legend {
+        background: none !important;
+        border: none;
+        margin-left: -5px; // Removes the margin of the arrow
+        padding: 0;
+    }
+
+    .panel-body {
+        padding: 0;
     }
 }
 
@@ -219,52 +257,6 @@
     .form-actions,
     .form-item {
         margin: 0;
-    }
-}
-
-
-
-/**
- * Custom style for a <fieldset>,
- * (based on the markup printed out by the Form API)
- */
-.civihr_form__fieldset {
-    margin: 0;
-    padding: 0;
-
-    .fieldset-legend {
-        font-size: 1.6rem;
-    }
-
-    .fieldset-title {
-        margin-left: 10px;
-    }
-}
-
-
-/* [modifier] Transparent <fieldset> (no borders, paddings, bg colors) */
-.civihr_form__fieldset--transparent {
-    @extend .civihr_form__fieldset;
-
-    border: 0;
-    box-shadow: none;
-
-    &.collapsed {
-
-        > legend {
-            margin-bottom: 0;
-        }
-    }
-
-    > legend {
-        background: none !important;
-        border: none;
-        margin-left: -5px; // Removes the margin of the arrow
-        padding: 0;
-    }
-
-    .panel-body {
-        padding: 0;
     }
 }
 

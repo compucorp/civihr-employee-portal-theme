@@ -2,6 +2,7 @@
  * Custom select dropdown style
  *
  */
+$customselect-height: 33;
 $customselect-caret-width: 32;
 $customselect-padding-right: $customselect-caret-width + 12;
 
@@ -16,6 +17,7 @@ $customselect-padding-right: $customselect-caret-width + 12;
   > select {
     background: transparent;
     border: 1px solid $color-neutral;
+    height: #{$customselect-height}px;
     padding: 6px #{$customselect-padding-right}px 6px 12px;
     position: relative;
     width: 100%;
@@ -36,13 +38,13 @@ $customselect-padding-right: $customselect-caret-width + 12;
     bottom: 0;
     font-family: "FontAwesome";
     display: inline-block;
+    height: #{$customselect-height}px;
+    line-height: #{$customselect-height + 2}px;
     position: absolute;
     right: 0;
     text-align: center;
-    top: 0;
     width: #{$customselect-caret-width}px;
     z-index: 1;
-    line-height: 33px;
     -webkit-font-smoothing: antialiased;
   }
 

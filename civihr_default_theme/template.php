@@ -63,3 +63,58 @@ function civihr_default_theme_js_alter(&$javascript) {
     }
   }
 }
+
+/**
+ * Extends radix_form_element_label().
+ * This modification allows to set a #label_class attribute on the label element
+ */
+function civihr_default_theme_form_element_label($variables) {
+  $element = $variables['element'];
+  // This is also used in the installer, pre-database setup.
+  $t = get_t();
+
+  // Radios and checkboxes are rendered differently.
+  $is_radio_or_checkbox = (isset($element['#type']) && ('checkbox' === $element['#type'] || 'radio' === $element['#type']));
+
+  // If title and required marker are both empty, output no label.
+  if ((!isset($element['#title']) || $element['#title'] === '') && empty($element['#required']) && !$is_radio_or_checkbox) {
+    return '';
+  }
+
+  // If the element is required, a required marker is appended to the label.
+  $required = !empty($element['#required']) ? theme('form_required_marker', array('element' => $element)) : '';
+
+  $title = !empty($element['#title']) ? filter_xss_admin($element['#title']) : '';
+
+  $attributes = array();
+
+  // Style the label as class option to display inline with the element.
+  if ($element['#title_display'] == 'after' && !$is_radio_or_checkbox) {
+    $attributes['class'] = 'option';
+  }
+  // Show label only to screen readers to avoid disruption in visual flows.
+  elseif ($element['#title_display'] == 'invisible') {
+    $attributes['class'] = 'element-invisible';
+  }
+
+  // Applies custom classes to the label element
+  if (isset($element['#label_class'])) {
+    $attributes['class'] = ( $attributes['class'] ? $attributes['class'] . ' ' : '') . $element['#label_class'];
+  }
+
+  if (!empty($element['#id'])) {
+    $attributes['for'] = $element['#id'];
+  }
+
+  // Radio and checkboxes goes inside label.
+  $output = '';
+  if ($is_radio_or_checkbox && isset($element['#children']) && ($element['#title_display'] != 'invisible')) {
+    $output .= $element['#children'];
+  }
+
+  // Append label.
+  $output .= $t('!title !required', array('!title' => $title, '!required' => $required));
+
+  // The leading whitespace helps visually separate fields from inline labels.
+  return ' <label' . drupal_attributes($attributes) . '>' . $output . "</label>\n";
+}

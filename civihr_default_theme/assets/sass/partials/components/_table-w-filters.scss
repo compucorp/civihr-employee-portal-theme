@@ -2,9 +2,18 @@
  * A table with filters on the side
  */
 .chr_table-w-filters {
+    margin-top: 20px;
 
     > .chr_table-w-filters__filters {
-        margin-top: 20px;
+        margin: 0 0 20px;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        margin-top: 0;
+
+        > .chr_table-w-filters__filters {
+            margin: 20px -1px 0 0;
+        }
     }
 }
 
@@ -12,7 +21,6 @@
 
     @media(min-width: $screen-md-min) {
         border-right: 1px solid #ECEDEE;
-        margin-right: -1px;
         padding-right: 0;
     }
 }

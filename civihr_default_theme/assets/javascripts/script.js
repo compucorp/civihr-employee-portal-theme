@@ -46,7 +46,7 @@
     }
 
     Drupal.civihr_theme.initCustomSelect = function() {
-        $('.form-item select').not('.hasCustomSelect').filter(':visible').each(function () {
+        $('.form-item select').not('.hasCustomSelect').not('.skip-js-custom-select').filter(':visible').each(function () {
             var $this = $(this);
             if ($('body').hasClass('page-dashboard')) {
                 if (!$this.parent().parent().hasClass('views-widget')) {

@@ -178,6 +178,7 @@ form {
 }
 
 .chr_panel__toolbar {
+    margin-bottom: 20px;
     padding: 20px 20px 0;
 
     > [class*="chr_panel__toolbar__"] {
@@ -190,7 +191,15 @@ form {
         top: 19px;
     }
 
+    > .chr_panel__toolbar__filter {
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
     @media(min-width: $screen-sm-min) {
+        margin-bottom: 0;
         padding: 0;
         position: absolute;
         right: 20px;

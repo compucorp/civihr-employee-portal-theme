@@ -241,13 +241,33 @@
         > legend {
             margin-bottom: 0;
         }
+
+        .fieldset-legend {
+            @include fa("\f054", 10);
+        }
     }
 
     > legend {
         background: none !important;
         border: none;
-        margin-left: -5px; // Removes the margin of the arrow
         padding: 0;
+    }
+
+    .fieldset-legend {
+        @include fa("\f078", 10);
+
+        background: none !important;
+        font-size: 1.6rem;
+        padding-left: 0 !important;
+
+        &:before {
+            width: 10px;
+        }
+
+        > .fieldset-title {
+            margin-left: 5px;
+            vertical-align: middle;
+        }
     }
 
     .panel-body {

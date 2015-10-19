@@ -1,16 +1,16 @@
 // Bootstrap variables.
-@import 'variables';
+@import 'variables.less';
 
 // Media query variables.
-$tablet:  "screen and (min-width: #{screen-sm-min})";
-$normal:  "screen and (min-width: #{screen-md-min})";
-$wide:    "screen and (min-width: #{screen-lg-min})";
+@tablet:  ~"screen and (min-width: @{screen-sm-min})";
+@normal:  ~"screen and (min-width: @{screen-md-min})";
+@wide:    ~"screen and (min-width: @{screen-lg-min})";
 
 // Drop shadows.
-@mixin box-shadow($shadow) {
-  -webkit-box-shadow: $shadow;
-     -moz-box-shadow: $shadow;
-          box-shadow: $shadow;
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
 }
 
 html {
@@ -75,7 +75,7 @@ body {
   }
   // Override box-shadow styles on all "admin" menus.
   #toolbar, #admin-menu, #admin-toolbar {
-    @include box-shadow(none);
+    .box-shadow(none);
   }
   // Override #admin-menu style.
   #admin-menu {
@@ -91,14 +91,14 @@ body {
 
 // Default navbar.
 .navbar.container {
-  @media #{$tablet} {
-    max-width: (($container-sm - 30px));
+  @media @tablet {
+    max-width: ((@container-sm - 30px));
   }
-  @media #{$normal} {
-    max-width: (($container-md - 30px));
+  @media @normal {
+    max-width: ((@container-md - 30px));
   }
-  @media #{$wide} {
-    max-width: (($container-lg - 30px));
+  @media @wide {
+    max-width: ((@container-lg - 30px));
   }
   margin-top: 20px;
   > .container {
@@ -146,7 +146,7 @@ body {
   margin-right: -15px;
   padding-left: 15px;
   padding-right: 15px;
-  @media #{$tablet} {
+  @media @tablet {
     margin-right: 0;
     padding-left: 0;
   }
@@ -155,7 +155,7 @@ body {
 // Navigation.
 ul.secondary {
   float: left;
-  @media #{$tablet} {
+  @media @tablet {
     float: right;
   }
 }
@@ -180,7 +180,7 @@ p:last-child {
 // Help region.
 .region-help {
   > .glyphicon {
-    font-size: $font-size-large;
+    font-size: @font-size-large;
     float: left;
     margin: -0.05em 0.5em 0 0;
   }
@@ -196,7 +196,7 @@ form#search-block-form {
 .navbar #block-search-form {
   float: none;
   margin: 5px 0 5px 5px;
-  @media #{$normal} {
+  @media @normal {
     float: right;
   }
 }
@@ -206,12 +206,12 @@ form#search-block-form {
 
 // Action Links
 ul.action-links {
-  margin: $padding-base-horizontal 0;
+  margin: @padding-base-horizontal 0;
   padding: 0;
   li {
     display: inline;
     margin: 0;
-    padding: 0 $padding-base-vertical 0 0;
+    padding: 0 @padding-base-vertical 0 0;
   }
   .glyphicon {
     padding-right: 0.5em;
@@ -224,8 +224,8 @@ input, textarea, select, .uneditable-input {
   width: auto;
 }
 input.error {
-  color: $state-danger-text;
-  border-color: $state-danger-border;
+  color: @state-danger-text;
+  border-color: @state-danger-border;
 }
 fieldset legend.panel-heading {
   float: left;
@@ -248,7 +248,7 @@ fieldset .panel-heading a.panel-title {
   clear: both;
 }
 .resizable-textarea textarea {
-  border-radius: $border-radius-base $border-radius-base 0 0;
+  border-radius: @border-radius-base @border-radius-base 0 0;
 }
 .radio, .checkbox {
   &:first-child {
@@ -259,7 +259,7 @@ fieldset .panel-heading a.panel-title {
   }
 }
 .help-block, .control-group .help-inline {
-  color: $gray-light;
+  color: @gray-light;
   font-size: 12px;
   margin: 5px 0 10px;
   padding: 0;
@@ -274,25 +274,25 @@ a.tabledrag-handle .handle {
 
 // Error containers.
 .error {
-  color: $state-danger-text;
+  color: @state-danger-text;
 }
 div.error,
 table tr.error {
-  background-color: $state-danger-bg;
-  color: $state-danger-text;
+  background-color: @state-danger-bg;
+  color: @state-danger-text;
 }
 .control-group.error {
   background: none;
   label, .control-label {
-    color: $state-danger-text;
+    color: @state-danger-text;
     font-weight: 600;
   }
   input, textarea, select, .uneditable-input {
-    color: $input-color;
-    border: 1px solid $input-border;
+    color: @input-color;
+    border: 1px solid @input-border;
   }
   .help-block, .help-inline {
-    color: $text-color;
+    color: @text-color;
   }
 }
 
@@ -337,13 +337,13 @@ ul li.leaf {
   font-weight: bold;
 }
 .password-indicator {
-  background-color: darken($input-color-placeholder, 2%);
+  background-color: darken(@input-color-placeholder, 2%);
   height: 0.3em;
   width: 100%;
   div {
     height: 100%;
     width: 0%;
-    background-color: $input-color-placeholder;
+    background-color: @input-color-placeholder;
   }
 }
 input.password-confirm,
@@ -388,10 +388,10 @@ div.password-suggestions ul {
 // Autocomplete and throbber
 .form-autocomplete {
   .glyphicon {
-    color: $gray-light;
+    color: @gray-light;
     font-size: 120%;
     &.glyphicon-spin {
-      color: $brand-primary;
+      color: @brand-primary;
     }
   }
   .input-group-addon {
@@ -469,8 +469,8 @@ a .glyphicon-spin {
 
 /**
  * Missing Bootstrap 2 tab styling.
- * $see http://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
- * $see http://bootply.com/74926
+ * @see http://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
+ * @see http://bootply.com/74926
  */
 .tabbable {
   margin-bottom: 20px;
@@ -479,8 +479,8 @@ a .glyphicon-spin {
   > .nav-tabs {
     border-bottom: 0;
     .summary {
-      color: $nav-disabled-link-color;
-      font-size: $font-size-small;
+      color: @nav-disabled-link-color;
+      font-size: @font-size-small;
     }
   }
 }
@@ -494,15 +494,15 @@ a .glyphicon-spin {
 // Below.
 .tabs-below {
   > .nav-tabs {
-    border-top: 1px solid $nav-tabs-border-color;
+    border-top: 1px solid @nav-tabs-border-color;
     > li {
       margin-top: -1px;
       margin-bottom: 0;
       > a {
-        border-radius: 0 0 $border-radius-base $border-radius-base;
+        border-radius: 0 0 @border-radius-base @border-radius-base;
         &:hover,
         &:focus {
-          border-top-color: $nav-tabs-border-color;
+          border-top-color: @nav-tabs-border-color;
           border-bottom-color: transparent;
         }
       }
@@ -511,7 +511,7 @@ a .glyphicon-spin {
       > a,
       > a:hover,
       > a:focus {
-        border-color: transparent $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color;
+        border-color: transparent @nav-tabs-border-color @nav-tabs-border-color @nav-tabs-border-color;
       }
     }
   }
@@ -538,9 +538,9 @@ a .glyphicon-spin {
     }
   }
   > .tab-content {
-    border-radius: 0 $border-radius-base $border-radius-base $border-radius-base;
-    @include box-shadow(0 1px 1px rgba(0,0,0,.05));
-    border: 1px solid $nav-tabs-border-color;
+    border-radius: 0 @border-radius-base @border-radius-base @border-radius-base;
+    .box-shadow(0 1px 1px rgba(0,0,0,.05));
+    border: 1px solid @nav-tabs-border-color;
     overflow: hidden;
     padding: 10px 15px;
   }
@@ -552,17 +552,17 @@ a .glyphicon-spin {
     float: left;
     margin-right: -1px;
     > li > a {
-      border-radius: $border-radius-base 0 0 $border-radius-base;
+      border-radius: @border-radius-base 0 0 @border-radius-base;
       &:hover,
       &:focus {
-        border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+        border-color: @nav-tabs-link-hover-border-color @nav-tabs-border-color @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color;
       }
     }
     > .active > a,
     > .active > a:hover,
     > .active > a:focus {
-      border-color: $nav-tabs-border-color transparent $nav-tabs-border-color $nav-tabs-border-color;
-      @include box-shadow(-1px 1px 1px rgba(0,0,0,.05));
+      border-color: @nav-tabs-border-color transparent @nav-tabs-border-color @nav-tabs-border-color;
+      .box-shadow(-1px 1px 1px rgba(0,0,0,.05));
     }
   }
 }
@@ -573,17 +573,17 @@ a .glyphicon-spin {
     float: right;
     margin-left: -1px;
     > li > a {
-      border-radius: 0 $border-radius-base $border-radius-base 0;
+      border-radius: 0 @border-radius-base @border-radius-base 0;
       &:hover,
       &:focus {
-        border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
-        @include box-shadow(1px 1px 1px rgba(0,0,0,.05));
+        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+        .box-shadow(1px 1px 1px rgba(0,0,0,.05));
       }
     }
     > .active > a,
     > .active > a:hover,
     > .active > a:focus {
-      border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color transparent;
+      border-color: @nav-tabs-border-color @nav-tabs-border-color @nav-tabs-border-color transparent;
     }
   }
 }
@@ -623,29 +623,29 @@ table {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
-  padding-left:  ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
+  padding-left:  (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
   text-align: right;
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: @screen-sm-min) {
     float: left;
-    width: percentage((2 / $grid-columns));
+    width: percentage((2 / @grid-columns));
   }
 }
 
 // Treat all links inside alert as .alert-link
 .alert a {
-  font-weight: $alert-link-font-weight;
+  font-weight: @alert-link-font-weight;
 }
 .alert-success a {
-  color: darken($alert-success-text, 10%);
+  color: darken(@alert-success-text, 10%);
 }
 .alert-info a {
-  color: darken($alert-info-text, 10%);
+  color: darken(@alert-info-text, 10%);
 }
 .alert-warning a {
-  color: darken($alert-warning-text, 10%);
+  color: darken(@alert-warning-text, 10%);
 }
 .alert-danger a {
-  color: darken($alert-danger-text, 10%);
+  color: darken(@alert-danger-text, 10%);
 }

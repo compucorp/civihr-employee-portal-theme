@@ -1,0 +1,46 @@
+name = CiviHR Admin theme
+description = CiviHR admin theme, based on Bootstrap
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+
+; ;;;;;;;;;;;;;;;;;;;;;
+; ;; Scripts
+; ;;;;;;;;;;;;;;;;;;;;;
+
+; scripts[] = 'bootstrap/js/affix.js'
+scripts[] = 'bootstrap/js/dist/alert.js'
+scripts[] = 'bootstrap/js/dist/button.js'
+scripts[] = 'bootstrap/js/dist/carousel.js'
+scripts[] = 'bootstrap/js/dist/collapse.js'
+scripts[] = 'bootstrap/js/dist/dropdown.js'
+scripts[] = 'bootstrap/js/dist/modal.js'
+scripts[] = 'bootstrap/js/dist/tooltip.js'
+scripts[] = 'bootstrap/js/dist/popover.js'
+scripts[] = 'bootstrap/js/dist/scrollspy.js'
+scripts[] = 'bootstrap/js/dist/tab.js'
+; scripts[] = 'bootstrap/js/dist/transition.js'
+
+settings[bootstrap_cdn] = ''

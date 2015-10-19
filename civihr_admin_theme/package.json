@@ -1,7 +1,7 @@
 {
-  "name": "my_bootstrap_subtheme",
+  "name": "civihr-admin-theme",
   "version": "1.0.0",
-  "description": "To help consolidate and remove possible future inconsistencies, the documentation for this sub-theme starter kit has been moved to: http://drupal.org/node/1978010.",
+  "description": "The CiviHR admin theme, based on the Bootstrap theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-less": "^3.0.3",
-    "gulp-minify-css": "^1.2.1",
-    "less": "^2.5.3"
+    "gulp-sass": "^2.0.4"
   }
 }

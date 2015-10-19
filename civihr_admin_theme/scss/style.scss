@@ -1,0 +1,10 @@
+// Bootstrap library.
+@import 'bootstrap.scss';
+   
+// Base-theme overrides.
+@import 'overrides.scss';
+
+// Theme specific.
+@import 'header.scss';
+@import 'content.scss';
+@import 'footer.scss';

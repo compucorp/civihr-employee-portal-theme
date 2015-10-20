@@ -21,3 +21,11 @@
     font-weight: normal;
     margin: 0;
 }
+
+/* [modifier] A section with no padding applied on the body */
+.chr_section--no-padding {
+
+    > .chr_section__body {
+        padding: 0;
+    }
+}

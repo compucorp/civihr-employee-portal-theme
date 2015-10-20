@@ -5,6 +5,8 @@
 @import 'overrides-style';
 
 // Mixins
+@import 'mixins/button-outline-variant';
+@import 'mixins/hover';
 @import 'mixins/em';
 
 // Theme specific.
@@ -13,6 +15,7 @@
 @import 'footer';
 
 // Components
+@import 'components/btn';
 @import 'components/header';
 @import 'components/section';
 @import 'components/table';

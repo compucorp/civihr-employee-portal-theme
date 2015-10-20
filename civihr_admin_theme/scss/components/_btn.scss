@@ -1,0 +1,28 @@
+// From Bootstrap 4 alpha
+.btn-secondary {
+  @include button-variant(#ffffff, $gray-dark, $gray-darker);
+}
+
+.btn-primary-outline {
+  @include button-outline-variant($btn-primary-bg);
+}
+
+.btn-secondary-outline {
+  @include button-outline-variant($gray-dark);
+}
+
+.btn-info-outline {
+  @include button-outline-variant($btn-info-bg);
+}
+
+.btn-success-outline {
+  @include button-outline-variant($btn-success-bg);
+}
+
+.btn-warning-outline {
+  @include button-outline-variant($btn-warning-bg);
+}
+
+.btn-danger-outline {
+  @include button-outline-variant($btn-danger-bg);
+}

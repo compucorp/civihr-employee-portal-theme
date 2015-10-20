@@ -1,0 +1,23 @@
+.chr_section {
+
+    > .chr_section__header {
+        margin-bottom: 15px;
+    }
+}
+
+.chr_section__body {
+    background: $brand-primary-light;
+    padding: 20px;
+}
+
+.chr_section__header {
+    background: $brand-primary;
+    padding: 10px 20px;
+}
+
+.chr_section__title {
+    color: #ffffff;
+    font-size: em(18);
+    font-weight: normal;
+    margin: 0;
+}

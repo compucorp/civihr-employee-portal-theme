@@ -1,0 +1,32 @@
+//
+// Variables override
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker:         #535a67 !default;
+$gray-dark:           #727e8a !default;
+
+$brand-primary:       #3ab1c9 !default;
+$brand-primary-light: lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
+
+$background-color:    #e8eef0 !default;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: $background-color !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-size-base-unitless: 13;
+$font-size-base: 13px !default;

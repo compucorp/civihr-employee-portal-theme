@@ -1,7 +1,9 @@
 $chr-table-cell-padding: 10px 20px;
 
-.chr_table {
+table,
+.table {
     background: #ffffff;
+    margin-bottom: 0;
 
     th,
     .even {

@@ -1,3 +1,7 @@
+.btn-lg {
+    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+}
+
 // From Bootstrap 4 alpha
 .btn-secondary {
   @include button-variant(#ffffff, $gray-dark, $gray-darker);
@@ -8,7 +12,7 @@
 }
 
 .btn-secondary-outline {
-  @include button-outline-variant($gray-dark);
+  @include button-outline-variant($gray-darker, $gray-dark);
 }
 
 .btn-info-outline {

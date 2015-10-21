@@ -16,6 +16,7 @@ $brand-primary-light: lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.
 $background-color:    #e8eef0 !default;
 $border-color:        #e6ecef !default;
 
+
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -29,4 +30,15 @@ $body-bg: $background-color !default;
 //## Font, line-height, and color for body text, headings, and more.
 
 $font-size-base-unitless: 13;
-$font-size-base: 13px !default;
+$font-size-base:          13px !default;
+
+$line-height-base:        1.53846153846154 !default; // 20/13
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical: 7px !default;
+
+$border-radius-base: 2px !default;

@@ -42,3 +42,20 @@ $line-height-base:        1.53846153846154 !default; // 20/13
 $padding-base-vertical: 7px !default;
 
 $border-radius-base: 2px !default;
+
+
+//== Panels
+//
+//##
+
+$panel-bg:                    transparent !default;
+$panel-body-padding:          20px !default;
+$panel-heading-padding:       10px 20px !default;
+$panel-footer-padding:        10px 0 !default;
+$panel-border-radius:         0 !default;
+
+//** Border color for elements within panels
+$panel-footer-bg:             #ffffff !default;
+
+$panel-default-text:          $gray-darker !default;
+$panel-default-heading-bg:    #ffffff !default;

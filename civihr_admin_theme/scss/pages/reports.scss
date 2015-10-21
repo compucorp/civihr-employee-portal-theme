@@ -1,0 +1,38 @@
+#custom-report-details {
+
+    .panel {
+        position: relative;
+
+        .dropdown {
+            color: #ffffff;
+            position: absolute;
+            right: 10px;
+            top: 2px;
+        }
+
+        .dropdown-menu {
+            border-color: $gray-lighter;
+            left: -70%;
+            padding: 0;
+
+            > li {
+
+                > a {
+                    font-size: 14px;
+                    padding-bottom: 12px;
+                    padding-top: 12px;
+
+                    &:hover {
+                        background: $brand-primary-light;
+                    }
+                }
+            }
+        }
+
+        .dropdown-toggle {
+            color: inherit;
+            font-size: 14px;
+            text-decoration: none !important;
+        }
+    }
+}

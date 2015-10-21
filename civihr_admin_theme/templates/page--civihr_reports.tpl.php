@@ -24,8 +24,8 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
-        <header class="chr_header">
-          <h1 class="chr_header__title">
+        <header class="page-header">
+          <h1>
             <?php print $title; ?>
           </h1>
         </header>

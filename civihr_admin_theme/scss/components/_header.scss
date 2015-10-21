@@ -1,11 +1,12 @@
-.chr_header {
+.page-header {
     background: #fff;
+    border: 0;
     padding: 15px 20px;
-    margin-bottom: 15px;
-}
+    margin: 0 0 15px 0;
 
-.chr_header__title {
-    color: $gray-darker;
-    font-size: em(18);
-    margin: 0;
+    > h1 {
+        color: $gray-darker;
+        font-size: em(18);
+        margin: 0;
+    }
 }

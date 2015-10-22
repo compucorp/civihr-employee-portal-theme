@@ -10,6 +10,10 @@ table,
         background: $brand-primary-light;
     }
 
+    .odd {
+        background: $brand-primary-lighter;
+    }
+
     > tbody {
 
         > tr {

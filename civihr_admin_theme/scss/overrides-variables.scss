@@ -7,16 +7,15 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:         #535a67 !default;
-$gray-dark:           #727e8a !default;
-$gray-lighter:        #dddfe5 !default;
+$gray-darker:           #535a67 !default;
+$gray-dark:             #727e8a !default;
+$gray-lighter:          #e6ecef !default;
 
 $brand-primary:         #3ab1c9 !default;
 $brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
-$background-color:    #e8eef0 !default;
-$border-color:        #e6ecef !default;
+$background-color:      #e8eef0 !default;
 
 
 //== Scaffolding
@@ -44,6 +43,19 @@ $line-height-base:        1.53846153846154 !default; // 20/13
 $padding-base-vertical: 7px !default;
 
 $border-radius-base: 2px !default;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding: 10px 20px !default;
+
+//** Default background color used for all tables.
+$table-bg:           #ffffff !default;
+//** Border color for table and cell borders.
+$table-border-color: $gray-lighter !default;
 
 
 //== Panels

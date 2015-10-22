@@ -1,8 +1,5 @@
-$chr-table-cell-padding: 10px 20px;
-
 table,
 .table {
-    background: #ffffff;
     margin-bottom: 0;
 
     th,
@@ -14,27 +11,14 @@ table,
         background: $brand-primary-lighter;
     }
 
-    > tbody {
-
-        > tr {
-
-            > td {
-                border-color: $border-color;
-                padding: $chr-table-cell-padding;
-            }
-        }
-    }
-
     > thead {
 
         > tr {
 
             > th {
                 border-bottom: 0;
-                border-color: $border-color;
                 color: $gray-darker;
                 text-transform: capitalize;
-                padding: $chr-table-cell-padding;
             }
         }
     }

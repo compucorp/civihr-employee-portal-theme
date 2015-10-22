@@ -9,9 +9,11 @@
 
 $gray-darker:         #535a67 !default;
 $gray-dark:           #727e8a !default;
+$gray-lighter:        #dddfe5 !default;
 
-$brand-primary:       #3ab1c9 !default;
-$brand-primary-light: lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
+$brand-primary:         #3ab1c9 !default;
+$brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
+$brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
 $background-color:    #e8eef0 !default;
 $border-color:        #e6ecef !default;
@@ -59,3 +61,36 @@ $panel-footer-bg:             #ffffff !default;
 
 $panel-default-text:          $gray-darker !default;
 $panel-default-heading-bg:    #ffffff !default;
+
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $gray-dark !default; //
+$pagination-bg:                        transparent !default; //
+
+$pagination-hover-color:               $gray-darker !default; //
+$pagination-hover-bg:                  $pagination-bg !default; //
+
+$pagination-active-color:              $gray-darker !default; //
+$pagination-active-bg:                 $pagination-bg !default; //
+
+$pagination-disabled-color:            $gray-lighter !default; //
+$pagination-disabled-bg:               $pagination-bg !default; //
+
+
+// //== Pager
+// //
+// //##
+
+// $pager-bg:                             $pagination-bg !default;
+// $pager-border:                         $pagination-border !default;
+// $pager-border-radius:                  15px !default;
+
+// $pager-hover-bg:                       $pagination-hover-bg !default;
+
+// $pager-active-bg:                      $pagination-active-bg !default;
+// $pager-active-color:                   $pagination-active-color !default;
+
+// $pager-disabled-color:                 $pagination-disabled-color !default;

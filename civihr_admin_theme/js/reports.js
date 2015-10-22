@@ -4,7 +4,7 @@
             .on('click', '[data-reports-actions-action]', function (event) {
                 var $form = $('[data-reports-actions-form]');
 
-                $form.find('.form-select > option').eq($(this).index()).prop('selected', true);
+                $form.find('.form-select > option[value="' + $(this).data('action') + '"]').prop('selected', true);
                 $form.find('.form-submit').click();
 
                 event.preventDefault();

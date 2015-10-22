@@ -45,8 +45,10 @@ function _report_actions_dropdown_html($options) {
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">' .
-                array_reduce($options, function ($html, $label) {
-                    return $html . "<li data-reports-actions-action><a>$label</a></li>";
+                array_reduce(array_slice($options, 1), function ($html, $label) use ($options) {
+                    return $html . "<li data-reports-actions-action data-action=\"" . array_search($label, $options) . "\">
+                        <a>$label</a>
+                    </li>";
                 }, '')
             . '</ul>
         </div>

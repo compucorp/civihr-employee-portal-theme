@@ -1,13 +1,22 @@
 (function ($) {
     $(document).ready(function () {
-        $('#custom-report-details').on('click', '[data-reports-actions-action]', function (event) {
-            var $reportsActions = $('[data-reports-actions]');
-            var actionIndex = $(this).index()
+        $('#custom-report-details')
+            .on('click', '[data-reports-actions-action]', function (event) {
+                var $form = $('[data-reports-actions-form]');
 
-            $reportsActions.find('.form-select > option').eq(actionIndex).prop('selected', true);
-            $reportsActions.find('.form-submit').click();
+                $form.find('.form-select > option').eq($(this).index()).prop('selected', true);
+                $form.find('.form-submit').click();
 
-            event.preventDefault();
-        })
+                event.preventDefault();
+            })
+            .on('click', 'input[class*="vbo-"]', function () {
+                var $dropdown = $('[data-reports-actions-dropdown]');
+
+                if ($('input[class*="vbo"]').filter(':checked').length > 0) {
+                    $dropdown.show();
+                } else {
+                    $dropdown.hide();
+                }
+            });
     });
 })(jQuery);

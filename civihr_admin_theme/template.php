@@ -22,7 +22,7 @@ function civihr_admin_theme_preprocess_page(&$variables) {
  */
 function civihr_admin_theme_views_bulk_operations_form_alter(&$form, &$form_state, $vbo) {
     if ($form_state['step'] == 'views_form_views_form') {
-        $form['#attributes'] = array('data-reports-actions' => '');
+        $form['#attributes'] = array('data-reports-actions-form' => '');
         $form['select']['#attributes'] = array('class' => array('hide'));
         $form['select']['#title'] = NULL;
         $form['foo']['#markup'] = _report_actions_dropdown_html($form['select']['operation']['#options']);
@@ -39,7 +39,7 @@ function civihr_admin_theme_views_bulk_operations_form_alter(&$form, &$form_stat
  */
 function _report_actions_dropdown_html($options) {
     return '
-        <div class="dropdown">
+        <div class="dropdown" data-reports-actions-dropdown style="display: none;">
             <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Select Action
                 <span class="caret"></span>

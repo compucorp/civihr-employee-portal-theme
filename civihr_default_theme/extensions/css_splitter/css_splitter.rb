@@ -2,7 +2,7 @@
 # See https://github.com/zweilove/css_splitter
 class CssSplitter
 
-  def self.split(infile, outdir = File.dirname(infile), max_selectors = 4095)
+  def self.split(infile, outdir = File.dirname(infile), max_selectors = 3900)
 
     raise "infile could not be found" unless File.exists? infile
 

@@ -1,32 +1,50 @@
 /**
  * Shared style between the default modal and the custom CiviHR modal
  */
-.modal-default,
-[class*="modal-civihr-custom"] {
+body.modal-open {
+    overflow: hidden;
 
-    .loading-spinner {
-        height: 300px;
+    > .modal-default,
+    > [class*="modal-civihr-custom"] {
+
+        bottom: 0 !important;
         left: 0 !important;
-        line-height: 280px;
-        position: relative !important;
-        text-align: center;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: fixed !important;
+        right: 0 !important;
         top: 0 !important;
-    }
 
-    .modal-body {
-        @include clearfix;
-        width: 100% !important;
-    }
+        .loading-spinner {
+            height: 300px;
+            left: 0 !important;
+            line-height: 280px;
+            position: relative !important;
+            text-align: center;
+            top: 0 !important;
+        }
 
-    .modal-content {
-        min-height: inherit;
-        position: relative;
+        .modal-body {
+            @include clearfix;
+            width: 100% !important;
+        }
+
+        .modal-content {
+            min-height: inherit;
+            position: relative;
+        }
+
+        .modal-dialog {
+            height: auto !important;
+            margin: 40px auto !important;
+        }
     }
 }
 
 
+
 /**
- * Standard custom CiviHR modal
+ * Custom CiviHR modal
  */
 $custom-modal-padding: 20;
 $custom-modal-body-padding: 10;
@@ -34,18 +52,12 @@ $custom-modal-body-padding: 10;
 // Necessary instead of @extend because SASS can't handle @extend + media queries
 @mixin custom-modal($custom-modal-modifier: "", $custom-modal-width: 480) {
 
-    .backdrop-modal-civihr-custom#{$custom-modal-modifier} {
+    .backdrop-civihr-custom#{$custom-modal-modifier} {
         height: 100% !important;
         width: 100% !important;
     }
 
     .modal-civihr-custom#{$custom-modal-modifier} {
-        box-sizing: content-box; // Keeps the same width no matter how much the padding is
-        left: 0 !important;
-        margin: 0 auto;
-        max-width: #{$custom-modal-width}px;
-        padding: 0 #{$custom-modal-padding}px;
-        right: 0;
 
         .modal-body {
             @include clearfix;
@@ -63,6 +75,12 @@ $custom-modal-body-padding: 10;
             }
         }
 
+        .modal-dialog {
+            box-sizing: content-box; // Keeps the same width no matter how much the padding is
+            padding: #{$custom-modal-padding}px;
+            max-width: #{$custom-modal-width}px;
+        }
+
         .table-responsive {
             overflow: auto;
 
@@ -77,8 +95,11 @@ $custom-modal-body-padding: 10;
 
         // Necessary for IE, since it can't center a block with just max-width
         @media(min-width: #{$custom-modal-width + $custom-modal-padding * 2}px) {
-            padding: 0;
-            width: 100%;
+
+            .modal-dialog {
+                padding: 0;
+                width: 100%;
+            }
 
             .table-responsive {
 

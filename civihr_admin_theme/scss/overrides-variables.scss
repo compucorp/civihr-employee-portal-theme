@@ -66,8 +66,11 @@ $border-radius-base: 2px !default;
 //** Padding for `<th>`s and `<td>`s.
 $table-cell-padding: 10px 20px !default;
 
-//** Default background color used for all tables.
-$table-bg:           #ffffff !default;
+//** Background for striped tables
+$table-striped-bg:              $brand-primary-light !default;
+//** Background color used for `.table-striped`.
+$table-bg-accent:               $brand-primary-lighter !default;
+
 //** Border color for table and cell borders.
 $table-border-color: $gray-lighter !default;
 

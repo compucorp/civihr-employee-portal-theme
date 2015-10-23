@@ -2,13 +2,8 @@ table,
 .table {
     margin-bottom: 0;
 
-    th,
-    .even {
+    th {
         background: $brand-primary-light;
-    }
-
-    .odd {
-        background: $brand-primary-lighter;
     }
 
     > thead {
@@ -22,4 +17,8 @@ table,
             }
         }
     }
+}
+
+.table-striped {
+    background: $table-striped-bg;
 }

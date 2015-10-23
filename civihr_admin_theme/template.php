@@ -6,6 +6,33 @@
  */
 
 /**
+ * Implements hook_js_alter().
+ *
+ * The Bootstrap theme includes an old version of CTool's modal, which doesn't pass
+ * a custom class to the modal element. So we swap it with a newer version.
+ *
+ */
+function civihr_admin_theme_js_alter(&$javascript) {
+
+  // Add Ctools modal file included in the Bootstrap theme when required.
+  if (module_exists('ctools')) {
+    $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
+    $old_bootstrap_modal_js = drupal_get_path('theme', 'bootstrap') . '/js/modules/ctools/js/modal.js';
+
+    // Unset the old modal.js -> from the parent theme
+    unset($javascript[$old_bootstrap_modal_js]);
+
+    // Add the new modal.js
+    $new_modal = drupal_get_path('theme', 'civihr_admin_theme') . '/js/modal.js';
+
+    if (!empty($javascript[$ctools_modal]) && empty($javascript[$new_modal])) {
+      $javascript[$new_modal] = array_merge(
+          drupal_js_defaults(), array('group' => JS_THEME, 'data' => $new_modal));
+    }
+  }
+}
+
+/**
  * Adds JS specific to the civihr_reports page
  */
 function civihr_admin_theme_preprocess_page(&$variables) {

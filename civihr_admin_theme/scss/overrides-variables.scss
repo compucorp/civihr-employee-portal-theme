@@ -37,6 +37,7 @@ $body-bg: $background-color !default;
 
 $font-size-base-unitless: 13;
 $font-size-base:          13px !default;
+$font-size-medium:        ceil(($font-size-base * 1.08)) !default; // ~14px
 
 $line-height-base:        1.53846153846154 !default; // 20/13
 

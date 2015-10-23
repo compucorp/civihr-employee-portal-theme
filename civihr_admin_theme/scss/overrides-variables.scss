@@ -63,6 +63,18 @@ $table-bg:           #ffffff !default;
 $table-border-color: $gray-lighter !default;
 
 
+//== Forms
+//
+//##
+
+//** Default `.form-control` border radius
+$input-border-radius:       0 !default;
+//** Large `.form-control` border radius
+$input-border-radius-large: $input-border-radius !default;
+//** Small `.form-control` border radius
+$input-border-radius-small: $input-border-radius !default;
+
+
 //== Panels
 //
 //##
@@ -84,30 +96,14 @@ $panel-default-heading-bg:    #ffffff !default;
 //
 //##
 
-$pagination-color:                     $gray-dark !default; //
-$pagination-bg:                        transparent !default; //
+$pagination-color:                     $gray-dark !default;
+$pagination-bg:                        transparent !default;
 
-$pagination-hover-color:               $gray-darker !default; //
-$pagination-hover-bg:                  $pagination-bg !default; //
+$pagination-hover-color:               $gray-darker !default;
+$pagination-hover-bg:                  $pagination-bg !default;
 
-$pagination-active-color:              $gray-darker !default; //
-$pagination-active-bg:                 $pagination-bg !default; //
+$pagination-active-color:              $gray-darker !default;
+$pagination-active-bg:                 $pagination-bg !default;
 
-$pagination-disabled-color:            $gray-lighter !default; //
-$pagination-disabled-bg:               $pagination-bg !default; //
-
-
-// //== Pager
-// //
-// //##
-
-// $pager-bg:                             $pagination-bg !default;
-// $pager-border:                         $pagination-border !default;
-// $pager-border-radius:                  15px !default;
-
-// $pager-hover-bg:                       $pagination-hover-bg !default;
-
-// $pager-active-bg:                      $pagination-active-bg !default;
-// $pager-active-color:                   $pagination-active-color !default;
-
-// $pager-disabled-color:                 $pagination-disabled-color !default;
+$pagination-disabled-color:            $gray-lighter !default;
+$pagination-disabled-bg:               $pagination-bg !default;

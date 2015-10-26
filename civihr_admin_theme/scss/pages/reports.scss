@@ -7,7 +7,7 @@
         }
     }
 
-    #custom-report-details {
+    [data-graph-section="data"] {
 
         .panel {
             position: relative;
@@ -45,7 +45,11 @@
         }
     }
 
-    #reportToDate {
+    [data-graph-section="legend"] {
+        margin-top: 50px;
+    }
+
+    [data-graph-calendar] {
         max-width: 140px;
     }
 }

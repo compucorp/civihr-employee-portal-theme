@@ -1,6 +1,6 @@
 (function ($) {
     $(document).ready(function () {
-        $('#custom-report-details')
+        $('[data-graph-section="data"]')
             .on('click', '[data-reports-actions-action]', function (event) {
                 var $form = $('[data-reports-actions-form]');
 

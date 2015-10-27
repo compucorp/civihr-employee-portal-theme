@@ -41,10 +41,12 @@
     <div class="chr_header__user-menu">
       <div class="chr_header__user-menu__data">
         <span class="chr_header__user-menu__name"><?php print $user_name; ?></span>
-        <div class="chr_profile-pic chr_profile-pic--small">
-          <?php if ($image_url != '') { ?>
-            <img src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
-          <?php } ?>
+        <div class="chr_profile-card">
+          <div class="chr_profile-card__picture chr_profile-card__picture--small">
+            <?php if ($image_url != '') { ?>
+              <img src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
+            <?php } ?>
+          </div>
         </div>
         <i class="chr_header__user-menu__arrow fa fa-caret-down"></i>
       </div>

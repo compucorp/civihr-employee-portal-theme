@@ -154,10 +154,9 @@
         .views-table {
             table-layout: fixed;
             white-space: normal;
+            word-wrap: break-word;
 
             .views-field-last-name {
-                @include ellipsis();
-
                 width: 20%;
             }
         }

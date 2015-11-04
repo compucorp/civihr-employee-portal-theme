@@ -1,10 +1,33 @@
+@import "overrides-variables";
+
+// Font Awesome
+@import '../font-awesome/scss/font-awesome';
+
 // Bootstrap library.
-@import 'bootstrap.scss';
-   
+@import 'bootstrap';
+
 // Base-theme overrides.
-@import 'overrides.scss';
+@import 'overrides-style';
+
+// Mixins
+@import 'mixins/button-outline-variant';
+@import 'mixins/hover';
+@import 'mixins/em';
 
 // Theme specific.
-@import 'header.scss';
-@import 'content.scss';
-@import 'footer.scss';
+@import 'header';
+@import 'content';
+@import 'footer';
+
+// Components
+@import 'components/btn';
+@import 'components/chart';
+@import 'components/forms';
+@import 'components/header';
+@import 'components/modals';
+@import 'components/pagination';
+@import 'components/panel';
+@import 'components/table';
+
+// Pages specific
+@import 'pages/reports';

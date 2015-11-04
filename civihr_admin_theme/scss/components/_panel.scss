@@ -1,0 +1,36 @@
+.panel {
+    @include box-shadow(none);
+
+    border: none;
+}
+
+.panel-body {
+    background: $brand-primary-light;
+}
+
+.panel-footer {
+    border: 0;
+}
+
+.panel-heading {
+    border: none;
+}
+
+.panel-title {
+    font-size: em(18);
+    font-weight: normal;
+    line-height: $headings-line-height;
+}
+
+
+// Contextual variations
+.panel-primary,
+.panel-success,
+.panel-info,
+.panel-warning,
+.panel-danger {
+
+    > .panel-heading {
+        margin-bottom: 15px;
+    }
+}

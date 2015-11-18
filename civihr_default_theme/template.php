@@ -33,8 +33,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
   // Add custom copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {
     $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
-  }
-  else {
+  } else {
     // Set empty copyright message by default
     // This will override the default copyright message from radix
     $variables['copyright'] = '';
@@ -65,6 +64,48 @@ function civihr_default_theme_js_alter(&$javascript) {
 }
 
 /**
+ * Renders icon for file
+ * @param $variables
+ * @return string
+ */
+function civihr_default_theme_file_icon($variables) {
+  $file = $variables['file'];
+  $mime = check_plain($file->filemime);
+
+  return '<i class="fa ' . get_icon_class($mime) . '"></i>';
+}
+
+/**
+ * Gets font-awesome class depending on file's mime-type
+ * @param $mime
+ * @return string
+ */
+function get_icon_class($mime) {
+  $type = explode('/', $mime);
+
+  switch ($type[0]) {
+    case 'image':
+      return 'fa-file-image-o';
+
+    case 'audio':
+      return 'fa-file-audio-o';
+
+    case 'video':
+      return 'fa-file-video-o';
+
+    case 'text':
+      return 'fa-file-text-o';
+
+    default:
+      if ($type[1] == 'pdf') {
+        return 'fa-file-pdf-o';
+      } else {
+        return 'fa-file-o';
+      }
+  }
+}
+
+/**
  * Extends radix_form_element_label().
  * This modification allows to set a #label_class attribute on the label element
  */
@@ -91,15 +132,14 @@ function civihr_default_theme_form_element_label($variables) {
   // Style the label as class option to display inline with the element.
   if ($element['#title_display'] == 'after' && !$is_radio_or_checkbox) {
     $attributes['class'] = 'option';
-  }
-  // Show label only to screen readers to avoid disruption in visual flows.
+  } // Show label only to screen readers to avoid disruption in visual flows.
   elseif ($element['#title_display'] == 'invisible') {
     $attributes['class'] = 'element-invisible';
   }
 
   // Applies custom classes to the label element
   if (isset($element['#label_class'])) {
-    $attributes['class'] = ( $attributes['class'] ? $attributes['class'] . ' ' : '') . $element['#label_class'];
+    $attributes['class'] = ($attributes['class'] ? $attributes['class'] . ' ' : '') . $element['#label_class'];
   }
 
   if (!empty($element['#id'])) {

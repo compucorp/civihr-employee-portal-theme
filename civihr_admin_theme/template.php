@@ -34,11 +34,35 @@ function civihr_admin_theme_js_alter(&$javascript) {
 
 /**
  * Adds JS specific to the civihr_reports page
+ * @TODO -> do we actually need this? reports.js is loaded through civihr_employee_portal_module anyways || Needs review
  */
 function civihr_admin_theme_preprocess_page(&$variables) {
     if (arg(0) == 'civihr_reports') {
         drupal_add_js(drupal_get_path('theme', 'civihr_admin_theme') . '/js/reports.js');
         $vars['scripts'] = drupal_get_js();
+    }
+}
+
+/**
+ * @param $variables
+ * Add custom css from civicrm or fallback to defaults
+ */
+function civihr_admin_theme_preprocess_html(&$variables) {
+
+    // This will try to load the bootstrapcivihr extension and load the css styles from there
+    // Otherwise it will fallback to the theme default styles
+    try {
+
+        // @TODO -> we should have a check if these extensions are actually enabled
+        $load_civicrm_css = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrapcivicrm');
+        drupal_add_css($load_civicrm_css . '/css/bootstrap-civicrm-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+
+        $load_civihr_css = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrapcivihr');
+        drupal_add_css($load_civihr_css . '/css/bootstrap-civihr-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+    }
+    catch (Exception $e) {
+        // Fallback to default styles (if civi modules not found)
+        drupal_add_css(path_to_theme() . '/css/style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
     }
 }
 

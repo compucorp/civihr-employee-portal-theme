@@ -52,13 +52,14 @@ function civihr_admin_theme_preprocess_html(&$variables) {
     // This will try to load the bootstrapcivihr extension and load the css styles from there
     // Otherwise it will fallback to the theme default styles
     try {
-
         // @TODO -> we should have a check if these extensions are actually enabled
-        $load_civicrm_css = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrapcivicrm');
-        drupal_add_css($load_civicrm_css . '/css/bootstrap-civicrm-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+        $civicrm_path = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrapcivicrm');
+        $civihr_path = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrapcivihr');
 
-        $load_civihr_css = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrapcivihr');
-        drupal_add_css($load_civihr_css . '/css/bootstrap-civihr-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+        drupal_add_css($civicrm_path . '/css/bootstrap-civicrm-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+        drupal_add_css($civihr_path . '/css/bootstrap-civihr-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
+
+        // _add_bootstrap_plugins(); // Uncomment if Bootstrap JS plugins are needed
     }
     catch (Exception $e) {
         // Fallback to default styles (if civi modules not found)
@@ -78,6 +79,27 @@ function civihr_admin_theme_views_bulk_operations_form_alter(&$form, &$form_stat
         $form['select']['#title'] = NULL;
         $form['foo']['#markup'] = _report_actions_dropdown_html($form['select']['operation']['#options']);
     }
+}
+
+/**
+ * Loads the Bootstrap JS plugins from the CiviCRM org.civicrm.bootstrap extension
+ */
+function _add_bootstrap_plugins() {
+    $bootstrap_path = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrap');
+
+    drupal_add_js($bootstrap_path . '/js/modal.js');
+    drupal_add_js($bootstrap_path . '/js/affix.js');
+    drupal_add_js($bootstrap_path . '/js/alert.js');
+    drupal_add_js($bootstrap_path . '/js/button.js');
+    drupal_add_js($bootstrap_path . '/js/carousel.js');
+    drupal_add_js($bootstrap_path . '/js/collapse.js');
+    drupal_add_js($bootstrap_path . '/js/dropdown.js');
+    drupal_add_js($bootstrap_path . '/js/modal.js');
+    drupal_add_js($bootstrap_path . '/js/tooltip.js');
+    drupal_add_js($bootstrap_path . '/js/popover.js');
+    drupal_add_js($bootstrap_path . '/js/scrollspy.js');
+    drupal_add_js($bootstrap_path . '/js/tab.js');
+    drupal_add_js($bootstrap_path . '/js/transition.js');
 }
 
 /**

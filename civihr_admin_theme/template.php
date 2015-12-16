@@ -59,7 +59,7 @@ function civihr_admin_theme_preprocess_html(&$variables) {
         drupal_add_css($civicrm_path . '/css/bootstrap-civicrm-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
         drupal_add_css($civihr_path . '/css/bootstrap-civihr-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
 
-        _add_bootstrap_plugins(array('tooltip')); // Uncomment if Bootstrap JS plugins are needed
+        _add_bootstrap_plugins(array('tooltip', 'dropdown')); // Uncomment if Bootstrap JS plugins are needed
     }
     catch (Exception $e) {
         // Fallback to default styles (if civi modules not found)

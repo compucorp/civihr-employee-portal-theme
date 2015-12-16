@@ -59,7 +59,7 @@ function civihr_admin_theme_preprocess_html(&$variables) {
         drupal_add_css($civicrm_path . '/css/bootstrap-civicrm-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
         drupal_add_css($civihr_path . '/css/bootstrap-civihr-style.css', array('group' => CSS_THEME, 'preprocess' => FALSE));
 
-        // _add_bootstrap_plugins(); // Uncomment if Bootstrap JS plugins are needed
+        _add_bootstrap_plugins(array('tooltip', 'dropdown')); // Uncomment if Bootstrap JS plugins are needed
     }
     catch (Exception $e) {
         // Fallback to default styles (if civi modules not found)
@@ -83,23 +83,15 @@ function civihr_admin_theme_views_bulk_operations_form_alter(&$form, &$form_stat
 
 /**
  * Loads the Bootstrap JS plugins from the CiviCRM org.civicrm.bootstrap extension
+ *
+ * @param array $plugins_list The list of plugins to include in the page
  */
-function _add_bootstrap_plugins() {
+function _add_bootstrap_plugins($plugins_list) {
     $bootstrap_path = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.bootstrap');
 
-    drupal_add_js($bootstrap_path . '/js/modal.js');
-    drupal_add_js($bootstrap_path . '/js/affix.js');
-    drupal_add_js($bootstrap_path . '/js/alert.js');
-    drupal_add_js($bootstrap_path . '/js/button.js');
-    drupal_add_js($bootstrap_path . '/js/carousel.js');
-    drupal_add_js($bootstrap_path . '/js/collapse.js');
-    drupal_add_js($bootstrap_path . '/js/dropdown.js');
-    drupal_add_js($bootstrap_path . '/js/modal.js');
-    drupal_add_js($bootstrap_path . '/js/tooltip.js');
-    drupal_add_js($bootstrap_path . '/js/popover.js');
-    drupal_add_js($bootstrap_path . '/js/scrollspy.js');
-    drupal_add_js($bootstrap_path . '/js/tab.js');
-    drupal_add_js($bootstrap_path . '/js/transition.js');
+    foreach ($plugins_list as $index => $plugin) {
+        drupal_add_js($bootstrap_path . "/js/$plugin.js");
+    }
 }
 
 /**

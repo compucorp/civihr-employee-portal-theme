@@ -21,7 +21,7 @@
         <i class="fa fa-2x fa-navicon"></i>
       </div>
       <div class="chr_header__corner__brand chr_brand">
-        <a class="chr_brand__link" href="<?php print $front_page; ?>" title="<?php print htmlspecialchars($site_name); ?>">
+        <a class="chr_brand__link" href="<?php print rtrim($base_path, '/') ?>/dashboard" title="<?php print htmlspecialchars($site_name); ?>">
           <span class="chr_brand__icon icon-logo"></span>
         </a>
       </div>

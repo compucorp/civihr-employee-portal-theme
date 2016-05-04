@@ -1,0 +1,23 @@
+// Styles for Navs
+// --------------------------------------------------
+
+.chr_tabs__header {
+    .chr_tabs__header-item {
+        .btn {
+            font-size: 18px;
+            color: #4C4C5D;
+            border: 0;
+            border-bottom: 3px solid transparent;
+        }
+
+        &.active {
+            .btn,
+            .btn:hover,
+            .btn:focus {
+                color: #2f91aa;
+                border: 0;
+                border-bottom: 3px solid #2f91aa;
+            }
+        }
+    }
+}

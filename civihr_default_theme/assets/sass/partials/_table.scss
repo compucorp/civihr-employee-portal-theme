@@ -162,3 +162,65 @@
         }
     }
 }
+
+/**
+ * Report results table
+ */
+#reportTable {    
+    ::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #F5F5F7;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #767B8E;
+    }
+
+    .view {
+        padding: 0;
+        margin: 0;
+    }
+
+    thead {
+        border-top: 1px solid #FAFAFB;
+    }
+
+    tr {
+        height: 35px;
+
+        &.odd {
+            background-color: #FFFFFF;
+        }
+
+        &.even {
+            background-color: #fbfbfc;
+        }
+    }
+    
+    thead tr {
+        background-color: #FAFAFB;
+    }
+
+    td,
+    th {
+        padding: 0 20px !important;
+    }
+    
+    th {
+        white-space: nowrap;
+        font-weight: normal;
+        
+        a {
+            color: #4c4c5d;
+        }
+    }
+}
+
+.table-wrapper {
+    overflow-x: scroll;
+}

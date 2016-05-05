@@ -3,23 +3,78 @@
 
 /* Welcome page */
 .page-welcome-page {
-  .pane-user-login {
-    max-width: 438px;
-    margin: 0 auto;
-    width: 100%;
-  }
+    .pane-user-login {
+        max-width: 438px;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 .page-reports {
-	.content {
-	    padding: 0;
-	    background-color: transparent;
-	}
+    .content {
+        padding: 0;
+        background-color: transparent;
+    }
 
-	.export-button-wrap {
-		text-align: right;
-		border-top: 1px solid #ecedee;
-		padding-top: 20px;
-		margin: 5px 20px 20px 20px;
-	}
+    .export-button-wrap {
+        text-align: right;
+        border-top: 1px solid #ecedee;
+        padding-top: 20px;
+        margin: 5px 20px 20px 20px;
+    }
+}
+
+#reportPivotTable {
+    .pvtAttr {
+        padding: 0 15px;
+        line-height: 33px;
+        background-color: #fbfbfc;
+        border-radius: 0;
+        border: 1px solid #eeeded;
+    }
+
+    .pvtTriangle {
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
+
+    .pvtFilterBox {
+        border-radius: 0;
+        border: 1px solid #eeeded;
+        padding: 10px;
+
+        .pvtFilterSelectAllWrap {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .pvtFilter {
+            position: relative;
+            margin-right: 5px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: #FFFFFF;
+                border: 1px solid #4c4c5d;
+                border-radius: 3px;
+                line-height: 13px;
+                text-align: center;
+                color: #4c4c5d;
+            }
+
+            &:checked {
+                &:after {
+                    content: '\02714';
+                }
+            }
+        }
+    }
+
+    .pvtCheckContainer {
+        p {
+            padding: 6px 0;
+        }
+    }
 }

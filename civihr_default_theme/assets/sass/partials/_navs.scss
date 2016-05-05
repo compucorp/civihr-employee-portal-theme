@@ -1,22 +1,24 @@
 // Styles for Navs
 // --------------------------------------------------
 
-.chr_tabs__header {
-    .chr_tabs__header-item {
+.nav-tabs-header {
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.035),0px 4px 8px 0px rgba(0,0,0,0.035);
+    margin-bottom: 20px;
+
+    li {
         .btn {
             font-size: 18px;
-            color: #4C4C5D;
-            border: 0;
-            border-bottom: 3px solid transparent;
+            color: $gray-darker;
+            border: 0 !important;
+            border-bottom: 3px solid transparent !important;
         }
 
         &.active {
             .btn,
             .btn:hover,
             .btn:focus {
-                color: #2f91aa;
-                border: 0;
-                border-bottom: 3px solid #2f91aa;
+                color: $brand-primary;
+                border-bottom: 3px solid $brand-primary !important;
             }
         }
     }

@@ -167,20 +167,6 @@
  * Report results table
  */
 #reportTable {
-    ::-webkit-scrollbar {
-        height: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background-color: #F5F5F7;
-        border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: #767B8E;
-    }
-
     .table-wrapper {
         overflow-x: scroll;
     }

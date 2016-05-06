@@ -1,0 +1,51 @@
+// Styles for Pivot Table
+// --------------------------------------------------
+
+.pvtTable-civi {
+    .pvtAxisContainer {
+        width: 80%;
+    }
+
+    .pvtTable {
+        border: 1px solid $gray-light;
+
+        th,
+        td {
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        th {
+            border-color: $gray-light;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .pvtColLabel,
+        .pvtTotalLabel {
+            vertical-align: top;
+        }
+
+        .pvtColLabel,
+        .pvtTotalLabel,
+        .pvtVal,
+        .pvtTotal,
+        .pvtGrandTotal {
+            border-right: 0;
+            border-left: 0;
+            text-align: right;
+        }
+
+        th.pvtTotalLabel {
+            border-right: 1px solid $gray-light;
+        }
+
+        .rowTotal,
+        .pvtVal {
+            color: $gray-light-blue;
+            font-weight: normal;
+        }
+    }
+}

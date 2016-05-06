@@ -3,9 +3,16 @@
 
 /* Welcome page */
 .page-welcome-page {
-  .pane-user-login {
-    max-width: 438px;
-    margin: 0 auto;
-    width: 100%;
-  }
+    .pane-user-login {
+        max-width: 438px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.page-reports {
+    .content {
+        padding: 0;
+        background-color: transparent;
+    }
 }

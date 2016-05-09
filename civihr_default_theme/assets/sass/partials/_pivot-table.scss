@@ -69,4 +69,12 @@
         border-left: 0;
         padding: 8px 20px;
     }
+
+    .pvtUi {
+        > tbody,
+        .pvtAxisContainer.pvtHorizList {
+            border-top: 0;
+            border-right: 0;
+        }
+    }
 }

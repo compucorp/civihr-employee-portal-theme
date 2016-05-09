@@ -48,4 +48,19 @@
             font-weight: normal;
         }
     }
+
+    li {
+        span.pvtAttr {
+            padding: 0 15px;
+            line-height: 33px;
+            background-color: $gray-lighter;
+            border-radius: 0;
+            border: 1px solid #ededed;
+        }
+
+        .pvtTriangle {
+            margin-left: 10px;
+            margin-bottom: 2px;
+        }
+    }
 }

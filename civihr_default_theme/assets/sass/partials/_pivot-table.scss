@@ -64,7 +64,9 @@
         }
     }
 
-    .pvtVals {
+    .pvtVals,
+    .pvtAxisContainer.pvtRows {
+        border-left: 0;
         padding: 8px 20px;
     }
 }

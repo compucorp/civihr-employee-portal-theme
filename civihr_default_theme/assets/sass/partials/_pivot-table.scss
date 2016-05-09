@@ -13,10 +13,11 @@
         td {
             padding: 10px;
             font-size: 13px;
+            border-color: $gray-light;
         }
 
         th {
-            border-color: $gray-light;
+            font-weight: normal;
         }
 
         td {
@@ -40,6 +41,10 @@
 
         th.pvtTotalLabel {
             border-right: 1px solid $gray-light;
+        }
+
+        th.pvtTotalLabel[colspan="2"] {
+            font-weight: bold;
         }
 
         .rowTotal,

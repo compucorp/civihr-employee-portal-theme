@@ -1,0 +1,26 @@
+// Custom checkbox style
+// --------------------------------------------------
+.chr_custom-checkbox {
+    position: relative;
+    margin-right: 5px;
+    outline: none;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: $light;
+        border: 1px solid $gray-darker;
+        border-radius: 3px;
+        line-height: 13px;
+        text-align: center;
+        color: $gray-darker;
+    }
+
+    &:checked {
+        &:after {
+            content: '\02714';
+        }
+    }
+}

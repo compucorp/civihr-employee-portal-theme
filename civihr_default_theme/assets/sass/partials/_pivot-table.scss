@@ -92,4 +92,49 @@
             background-color: $gray-lighter;
         }
     }
+
+    br {
+        display: none;
+    }
+
+    .pvtFilterBox {
+        border-radius: 0;
+        border: 1px solid $light-gray;
+        padding: 10px;
+
+        > h4,
+        > :nth-child(2) > button {
+            display: none;
+        }
+
+        .pvtFilterSelectAllWrap {
+            color: $gray-darker;
+            border-bottom: 1px solid $light-gray;
+        }
+
+        .pvtFilter,
+        .pvtFilterSelectAll {
+            @extend .chr_custom-checkbox;
+        }
+
+        button {
+            @extend .btn;
+            @extend .btn-primary;
+            margin: 10px 0 0 0;
+        }
+
+        .pvtCheckContainer {
+            margin-top: 10px;
+            padding: 0;
+
+            p {
+                padding: 6px 0;
+            }
+        }
+
+        .form-text {
+            height: 25px;
+            @include placeholder-color($gray);
+        }
+    }
 }

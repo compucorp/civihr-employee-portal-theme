@@ -1,26 +1,58 @@
 // Custom checkbox style
 // --------------------------------------------------
+// 
+// USAGE:
+// ==========================
+// <div class="chr_custom-checkbox">
+//  <input type="checkbox" id="test" />
+//  <label for="test">Test</label>
+// </div>
+// 
+// <label class="chr_custom-checkbox">
+//  <input type="checkbox" id="test" />
+//  <span>Test</span>
+// </label>
+
 .chr_custom-checkbox {
     position: relative;
-    margin-right: 5px;
-    outline: none;
 
-    &:after {
-        content: '';
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        background-color: $light;
-        border: 1px solid $gray-darker;
-        border-radius: 3px;
-        line-height: 13px;
-        text-align: center;
-        color: $gray-darker;
-    }
+    input[type="checkbox"] {
+        margin: 0 5px 0 0;
+        width: 13px;
+        height: 13px;
+        outline: none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        -o-appearance:none;
 
-    &:checked {
-        &:after {
-            content: '\02714';
+        + span:after,
+        + label:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            background-color: $light;
+            border: 1px solid $gray-darker;
+            border-radius: 3px;
+            line-height: 13px;
+            text-align: center;
+            color: $gray-darker;
+        }
+
+        &:focus {
+            + span:after,
+            + label:after {
+                border-color: $brand-primary;
+            }
+        }
+
+        &:checked {
+            + span:after,
+            + label:after {
+                content: '\02714';
+                border-color: $gray-darker;
+            }
         }
     }
 }

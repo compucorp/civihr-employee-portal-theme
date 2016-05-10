@@ -58,21 +58,27 @@
         span.pvtAttr {
             padding: 0 15px;
             line-height: 33px;
+            color: $gray-light-blue;
             background-color: $gray-lighter;
             border-radius: 0;
-            border: 1px solid #ededed;
+            border: 1px solid $light-gray;
         }
 
         .pvtTriangle {
+            color: $gray-light-blue;
             margin-left: 10px;
             margin-bottom: 2px;
         }
     }
 
+    .pvtAxisContainer,
+    .pvtVals {
+        padding: 20px;
+    }
+
     .pvtVals,
     .pvtAxisContainer.pvtRows {
         border-left: 0;
-        padding: 8px 20px;
     }
 
     .pvtUi {
@@ -80,6 +86,10 @@
         .pvtAxisContainer.pvtHorizList {
             border-top: 0;
             border-right: 0;
+        }
+
+        tr:nth-child(2) {
+            background-color: $gray-lighter;
         }
     }
 }

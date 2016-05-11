@@ -1,6 +1,22 @@
 // Custom scrollbar
 // --------------------------------------------------
 .chr_custom-scrollbar {
+    position: relative;
+    overflow: auto;
+    padding-bottom: 8px;
+
+    .ps-scrollbar-x-rail {
+        bottom: 0 !important;
+        opacity: 1 !important;
+        background-color: $scrollbar-track-color !important;
+        height: 10px !important;
+    }
+
+    .ps-scrollbar-x {
+        background-color: $scrollbar-thumb-color !important;
+        height: 10px !important;
+    }
+
     &::-webkit-scrollbar {
         height: $scrollbar-size;
     }

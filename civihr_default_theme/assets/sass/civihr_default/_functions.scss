@@ -52,3 +52,24 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+@mixin placeholder-color($color) {
+    // These selectors needs to be separated because browser doesn't
+    // understand a selector and invalidate all line.
+    // https://css-tricks.com/snippets/css/style-placeholder-text/#comment-96772
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:-moz-placeholder {
+       color: $color;
+    }
+
+    &::-moz-placeholder {
+       color: $color;
+    }
+
+    &:-ms-input-placeholder {
+       color: $color;
+    }
+}

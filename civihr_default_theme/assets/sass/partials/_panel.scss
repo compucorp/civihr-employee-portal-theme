@@ -6,11 +6,19 @@
 }
 
 .panel-body {
-    > .row:last-child .form-actions {
-        margin-bottom: 0;
-    }
+  transition: all .4s linear;
+  max-height: 162px;
 
-    @include grid-condensed($panel-body-padding+1px);
+  &.panel-body--sliding {
+    max-height: 0;
+    padding: 0 20px;
+  }
+
+  > .row:last-child .form-actions {
+      margin-bottom: 0;
+  }
+
+  @include grid-condensed($panel-body-padding+1px);
 }
 
 .panel-heading {
@@ -107,6 +115,12 @@ form {
 
 .chr_panel__header {
     box-shadow: none;
+}
+
+.chr_panel__header--with-border {
+  border-bottom: 1px solid $gray-light;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .chr_panel__header--w-actions {

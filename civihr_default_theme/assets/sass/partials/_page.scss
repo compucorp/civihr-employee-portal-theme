@@ -15,4 +15,16 @@
         padding: 0;
         background-color: transparent;
     }
+
+    .pane-content {
+      overflow: visible !important;
+    }
+
+    .input-group-btn {
+      cursor: pointer;
+    }
+
+    #bootstrap-theme .dropdown-menu[datepicker-popup-wrap] {
+      width: 316px;
+    }
 }

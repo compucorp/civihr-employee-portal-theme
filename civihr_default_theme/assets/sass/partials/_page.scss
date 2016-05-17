@@ -27,4 +27,14 @@
     #bootstrap-theme .dropdown-menu[datepicker-popup-wrap] {
       width: 316px;
     }
+
+    .input-group-btn {
+      .btn {
+        border: 0;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
 }

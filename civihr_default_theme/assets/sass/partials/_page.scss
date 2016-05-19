@@ -20,16 +20,15 @@
       overflow: visible !important;
     }
 
-    .input-group-btn {
-      cursor: pointer;
-    }
-
     #bootstrap-theme .dropdown-menu[datepicker-popup-wrap] {
       width: 316px;
     }
 
     .input-group-btn {
+      cursor: pointer;
+
       .btn {
+        color: $gray;
         border: 0;
 
         &:hover {

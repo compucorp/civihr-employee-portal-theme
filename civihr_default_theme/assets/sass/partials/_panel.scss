@@ -3,17 +3,22 @@
 
 .panel {
     @include box-shadow($box-shadow-global);
+
+    &.panel--sliding-body {
+      overflow: hidden !important;
+
+      .panel-body-wrap {
+        max-height: 0;
+      }
+    }
+}
+
+.panel-body-wrap {
+  transition: all .4s linear;
+  max-height: 162px;
 }
 
 .panel-body {
-  transition: all .4s linear;
-  max-height: 162px;
-
-  &.panel-body--sliding {
-    max-height: 0;
-    padding: 0 20px;
-  }
-
   > .row:last-child .form-actions {
       margin-bottom: 0;
   }

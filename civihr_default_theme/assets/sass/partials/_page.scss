@@ -24,8 +24,18 @@
       width: 316px;
     }
 
-    .input-group-btn {
-      cursor: pointer;
+    .form-group {
+      margin-right: 30px;
+
+      label {
+        color: $gray-darker;
+        font-weight: normal;
+        margin-right: 20px;
+      }
+    }
+
+    .help-block {
+      display: inline;
 
       .btn {
         color: $gray;
@@ -37,7 +47,9 @@
       }
     }
 
-    .help-block {
-      display: inline;
+    .chr_panel__footer {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-right: 0 !important;
     }
 }

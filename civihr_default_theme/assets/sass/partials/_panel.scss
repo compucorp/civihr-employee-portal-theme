@@ -12,10 +12,10 @@
 .panel-body-wrap {
   transition: max-height .4s linear;
   max-height: 162px;
-}
 
-.panel-body-wrap--collapse {
-  max-height: 0;
+  &--collapse {
+    max-height: 0;
+  }
 }
 
 .panel-body {

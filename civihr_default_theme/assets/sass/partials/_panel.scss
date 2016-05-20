@@ -3,14 +3,27 @@
 
 .panel {
     @include box-shadow($box-shadow-global);
+
+    &--sliding-body {
+      overflow: hidden !important;
+    }
+}
+
+.panel-body-wrap {
+  transition: max-height .4s linear;
+  max-height: 162px;
+
+  &--collapse {
+    max-height: 0;
+  }
 }
 
 .panel-body {
-    > .row:last-child .form-actions {
-        margin-bottom: 0;
-    }
+  > .row:last-child .form-actions {
+      margin-bottom: 0;
+  }
 
-    @include grid-condensed($panel-body-padding+1px);
+  @include grid-condensed($panel-body-padding+1px);
 }
 
 .panel-heading {
@@ -107,6 +120,12 @@ form {
 
 .chr_panel__header {
     box-shadow: none;
+}
+
+.chr_panel__header--with-border {
+  border-bottom: 1px solid $gray-light;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .chr_panel__header--w-actions {

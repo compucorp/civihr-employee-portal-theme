@@ -15,4 +15,50 @@
         padding: 0;
         background-color: transparent;
     }
+
+    .pane-content {
+      overflow: visible !important;
+    }
+
+    #bootstrap-theme .dropdown-menu[datepicker-popup-wrap] {
+      width: 316px;
+    }
+
+    .form-group {
+      margin-right: 30px;
+
+      label {
+        color: $gray-darker;
+        font-weight: normal;
+        margin-right: 20px;
+      }
+    }
+
+    .help-block {
+      display: inline;
+
+      .btn {
+        color: $gray;
+        border: 0;
+        cursor: default;
+
+        &:hover,
+        &:focus,
+        &:active {
+          box-shadow: none;
+          outline: none;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .chr_search-result__header {
+      cursor: default;
+    }
+
+    .chr_panel__footer {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-right: 0 !important;
+    }
 }

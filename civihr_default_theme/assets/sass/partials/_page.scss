@@ -40,8 +40,13 @@
       .btn {
         color: $gray;
         border: 0;
+        cursor: default;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
+          box-shadow: none;
+          outline: none;
           background-color: transparent;
         }
       }

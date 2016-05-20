@@ -4,7 +4,7 @@
 .panel {
     @include box-shadow($box-shadow-global);
 
-    &.panel--sliding-body {
+    &--sliding-body {
       overflow: hidden !important;
 
       .panel-body-wrap {

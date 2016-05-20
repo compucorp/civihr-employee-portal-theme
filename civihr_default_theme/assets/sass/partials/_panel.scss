@@ -6,16 +6,16 @@
 
     &--sliding-body {
       overflow: hidden !important;
-
-      .panel-body-wrap {
-        max-height: 0;
-      }
     }
 }
 
 .panel-body-wrap {
   transition: max-height .4s linear;
   max-height: 162px;
+}
+
+.panel-body-wrap--collapse {
+  max-height: 0;
 }
 
 .panel-body {

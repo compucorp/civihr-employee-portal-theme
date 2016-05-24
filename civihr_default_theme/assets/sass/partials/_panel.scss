@@ -95,6 +95,10 @@
          border-bottom-color: $grizzly;
        }
     }
+
+    &__header-subtitle {
+      color: $brand-primary;
+    }
 }
 
 .chr_panel__footer {
@@ -129,10 +133,6 @@ form {
 
 .chr_panel__header {
     box-shadow: none;
-
-    &__header-subtitle {
-      color: $brand-primary;
-    }
 }
 
 .chr_panel__header--with-border {

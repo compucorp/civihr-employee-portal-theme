@@ -129,6 +129,10 @@ form {
 
 .chr_panel__header {
     box-shadow: none;
+
+    &__header-subtitle {
+      color: $brand-primary;
+    }
 }
 
 .chr_panel__header--with-border {
@@ -203,10 +207,6 @@ form {
             padding: inherit;
         }
     }
-}
-
-.chr_panel__header-subtitle {
-  color: $brand-primary;
 }
 
 .chr_panel__toolbar {

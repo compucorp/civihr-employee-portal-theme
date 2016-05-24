@@ -91,6 +91,10 @@
 .chr_panel--without-background {
    background: none;
    box-shadow: none;
+
+   .chr_search-result__header--border-darker {
+     border-bottom-color: $grizzly;
+   }
 }
 
 .chr_panel__footer {
@@ -384,10 +388,4 @@ form {
         margin: -20px;
         overflow: hidden;
     }
-}
-
-.chr_panel--body-text-bigger {
-  .panel-body {
-    font-size: 1.143em;
-  }
 }

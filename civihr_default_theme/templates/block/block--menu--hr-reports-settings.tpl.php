@@ -48,7 +48,7 @@
   <div
     id="<?php print $block_html_id; ?>"
     ng-controller="SettingsController as settings"
-    class="panel panel-pane pane-block chr_panel--no-padding panel--sliding-body chr_panel--without-background chr_panel--body-text-bigger"
+    class="panel panel-pane pane-block chr_panel--no-padding panel--sliding-body chr_panel--without-background"
     ng-class="{ 'panel--sliding-body': settings.isCollapsed }">
       <div class="pane-content">
           <div class="chr_search-result__header chr_panel__header chr_search-result__header--border-darker" ng-click="settings.isCollapsed = !settings.isCollapsed">

@@ -86,15 +86,15 @@
  */
 .chr_panel {
     position: relative;
-}
 
-.chr_panel--without-background {
-   background: none;
-   box-shadow: none;
+    &--without-background {
+       background: none;
+       box-shadow: none;
 
-   .chr_search-result__header--border-darker {
-     border-bottom-color: $grizzly;
-   }
+       .chr_search-result__header--border-darker {
+         border-bottom-color: $grizzly;
+       }
+    }
 }
 
 .chr_panel__footer {
@@ -205,7 +205,7 @@ form {
     }
 }
 
-.chr_panel__header__subtitle {
+.chr_panel__header-subtitle {
   color: $brand-primary;
 }
 

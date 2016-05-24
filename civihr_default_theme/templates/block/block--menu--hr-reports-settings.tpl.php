@@ -51,7 +51,7 @@
     class="panel panel-pane pane-block chr_panel--no-padding panel--sliding-body chr_panel--without-background"
     ng-class="{ 'panel--sliding-body': settings.isCollapsed }">
       <div class="pane-content">
-          <div class="chr_search-result__header chr_panel__header chr_search-result__header--border-darker" ng-click="settings.isCollapsed = !settings.isCollapsed">
+          <div class="chr_search-result__header chr_panel__header" ng-click="settings.isCollapsed = !settings.isCollapsed">
               <div class="chr_search-result__total">
                   <i
                     class="chr_search-result__icon glyphicon glyphicon-chevron-down"

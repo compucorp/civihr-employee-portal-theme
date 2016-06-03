@@ -162,3 +162,26 @@
         }
     }
 }
+
+/**
+ * Report results table
+ */
+#reportTable {
+    .table-wrapper {
+        overflow-x: scroll;
+    }
+
+    .table {
+        width: auto;
+    }
+
+    .view {
+        padding: 0;
+        margin: 0;
+    }
+
+    td,
+    th {
+        white-space: nowrap;
+    }
+}

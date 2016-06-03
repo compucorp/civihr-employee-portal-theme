@@ -46,6 +46,12 @@
     > .chr_search-result__total {
         display: inline-block;
         vertical-align: sub;
+
+        > .chr_search-result__icon {
+          top: 3px;
+          font-size: 15px;
+          margin-right: 5px;
+        }
     }
 }
 

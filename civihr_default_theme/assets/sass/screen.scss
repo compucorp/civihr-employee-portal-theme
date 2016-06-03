@@ -40,14 +40,14 @@
 // @import "bootstrap/code";
 @import "bootstrap/grid";
 // @import "bootstrap/tables";
-// @import "bootstrap/forms";
+@import "bootstrap/forms";
 @import "bootstrap/buttons";
 
 // Components
 //@import "bootstrap/component-animations";
 @import "bootstrap/dropdowns";
 @import "bootstrap/button-groups";
-// @import "bootstrap/input-groups";
+@import "bootstrap/input-groups";
 @import "bootstrap/navs";
 // @import "bootstrap/navbar";
 // @import "bootstrap/breadcrumbs";
@@ -131,6 +131,8 @@
 @import "partials/toolbar";
 @import "partials/calendar";
 @import "partials/table";
+@import "partials/navs";
+@import "partials/pivot-table";
 
 // CSS custom components
 @import "partials/components/action";
@@ -141,3 +143,5 @@
 @import "partials/components/profile-card";
 @import "partials/components/search-result";
 @import "partials/components/table-w-filters";
+@import "partials/components/scrollbar";
+@import "partials/components/custom-checkbox";

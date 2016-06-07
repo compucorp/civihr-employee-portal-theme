@@ -32,13 +32,16 @@ $box-shadow-global:     0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px r
 $gray-lighter    : #fbfbfc; // table odd row
 $gray-light      : #ecedee; // body bg, table border
 $gray-light-alt  : #f0f1f4; // carousel item bg, hr resource bg
+$gray-light-blue : #757b8e; // scrollbar thumb, pivot table text
 $gray            : #767b8e; // main text/lighter, menu item bg hover, footer logo
 $gray-dark       : #555862; // menu bg
 $gray-darker     : #4c4c5d; // text darker
 $gray-darker-alt : #404454; // page title
+$grizzly         : #dcdddd;
 
 $light           : #fff; // well bg, text on dark bg hover
 $light-pale      : #c3cbd6; // text on dark bg
+$light-gray      : #eeeded;
 
 $color-neutral   : #949caa; // gray shade
 
@@ -66,4 +69,10 @@ $badge-bg:              $gray;
 
 // Navs
 // -------------------------
-$nav-link-hover-bg:     $gray-lighter
+$nav-link-hover-bg:     $gray-lighter;
+
+// Scrollbar
+// -------------------------
+$scrollbar-size: 10px;
+$scrollbar-track-color: #F5F5F7;
+$scrollbar-thumb-color: $gray-light-blue;

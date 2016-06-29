@@ -1047,20 +1047,18 @@ form {
 }
 
 /* Styling the exposed filters on reports page. */
-@media (min-width: 768px) {
-  #edit-absence-date-filter-wrapper,
-  #edit-between-date-filter-wrapper {
-    .form-inline {
-      .form-control {
-        display: inline-block;
-        width: auto;
-        vertical-align: middle;
-      }
-      .form-group {
-        display: inline-block;
-        margin-bottom: 0;
-        vertical-align: middle;
-      }
+#edit-absence-date-filter-wrapper,
+#edit-between-date-filter-wrapper {
+  .form-inline {
+    .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
     }
   }
 }

@@ -1048,7 +1048,8 @@ form {
 
 /* Styling the exposed filters on reports page. */
 @media (min-width: 768px) {
-  #edit-absence-date-filter-wrapper, #edit-between-date-filter-wrapper {
+  #edit-absence-date-filter-wrapper,
+  #edit-between-date-filter-wrapper {
     .form-inline {
       .form-control {
         display: inline-block;

@@ -5,6 +5,7 @@
     @include box-shadow($box-shadow-global);
 
     &--sliding-body {
+      border-bottom: 0;
       overflow: hidden !important;
     }
 }

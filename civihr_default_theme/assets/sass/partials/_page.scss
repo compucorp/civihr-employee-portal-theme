@@ -20,7 +20,7 @@
       overflow: visible !important;
     }
 
-    #bootstrap-theme .dropdown-menu[datepicker-popup-wrap] {
+    #bootstrap-theme [uib-datepicker-popup-wrap] .dropdown-menu {
       width: 316px;
     }
 

@@ -20,8 +20,12 @@
       overflow: visible !important;
     }
 
-    #bootstrap-theme [uib-datepicker-popup-wrap] .dropdown-menu {
-      width: 316px;
+    #bootstrap-theme {
+      display: inline-block;
+
+      [uib-datepicker-popup-wrap] .dropdown-menu {
+        width: 316px;
+      }
     }
 
     .form-group {

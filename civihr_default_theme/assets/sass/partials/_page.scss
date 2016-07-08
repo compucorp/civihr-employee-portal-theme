@@ -45,6 +45,9 @@
         color: $gray;
         border: 0;
         cursor: default;
+        height: 35px;
+        border: 1px solid $color-neutral;
+        border-left: 0;
 
         &:hover,
         &:focus,

@@ -20,8 +20,12 @@
       overflow: visible !important;
     }
 
-    #bootstrap-theme .dropdown-menu[datepicker-popup-wrap] {
-      width: 316px;
+    #bootstrap-theme {
+      display: inline-block;
+
+      [uib-datepicker-popup-wrap] .dropdown-menu {
+        width: 316px;
+      }
     }
 
     .form-group {
@@ -41,6 +45,9 @@
         color: $gray;
         border: 0;
         cursor: default;
+        height: 35px;
+        border: 1px solid $color-neutral;
+        border-left: 0;
 
         &:hover,
         &:focus,

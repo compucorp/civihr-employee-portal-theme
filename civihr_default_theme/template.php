@@ -51,10 +51,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
  * @return boolean
  */
 function _is_hrreports_current_path() {
-    if (substr(current_path(), 0, 8) === 'reports/') {
-        return TRUE;
-    }
-    return FALSE;
+  return substr(current_path(), 0, 8) === 'reports/';
 }
 
 /**

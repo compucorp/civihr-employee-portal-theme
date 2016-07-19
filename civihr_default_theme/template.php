@@ -38,6 +38,20 @@ function civihr_default_theme_preprocess_page(&$variables) {
     // This will override the default copyright message from radix
     $variables['copyright'] = '';
   }
+  $container_class = 'container';
+  if (_is_hrreports_current_path()) {
+    $container_class = 'container-fluid';
+  }
+  $variables['container_class'] = $container_class;
+}
+
+/**
+ * Check if we are displaying custom Report page.
+ *
+ * @return boolean
+ */
+function _is_hrreports_current_path() {
+  return substr(current_path(), 0, 8) === 'reports/';
 }
 
 /**

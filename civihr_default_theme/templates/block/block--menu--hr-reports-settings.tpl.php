@@ -64,7 +64,7 @@
           <div
             class="panel-body-wrap panel-body-wrap--collapse"
             ng-class="{ 'panel-body-wrap--collapse': settings.isCollapsed }">
-              <div class="panel-body">
+              <div class="panel-body u-font-size-big">
                 <?php print $content ?>
               </div>
           </div>

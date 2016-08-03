@@ -1,0 +1,172 @@
+// Styles for main layout
+// --------------------------------------------------
+
+/**
+ * The outer wrapper of the entire site
+ *
+ * It is necessary because .chr_header__nav on mobile must attach to it and be as tall as it is
+ * when position: absolute is applied
+ */
+#outer-wrapper {
+    position: relative;
+}
+
+
+
+/**
+ * Main <header>
+ */
+
+.chr_header {
+    @include clearfix;
+
+    background: $gray-dark;
+    box-shadow: 0 2px 3px 0 rgba(black, 0.15);
+    color: $light-pale;
+    font-size: 1.3rem;
+    height: $header-height;
+    line-height: $header-height;
+
+    > .chr_header__brand {
+        left: 0;
+        position: absolute;
+        margin: 0 auto;
+        right: 0;
+        width: 25%;
+    }
+
+    > .chr_header__corner {
+        float: left;
+    }
+
+    > .chr_header__nav {
+        height: 100%;
+        left: -100%;
+        position: absolute;
+        top: $header-height;
+        width: 100%;
+
+        transition: left 0.2s ease-out;
+
+        &.is-open {
+            left: 0;
+        }
+    }
+
+    > .chr_header__user-menu {
+        float: right;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > .chr_header__brand {
+            display: none;
+        }
+
+        > .chr_header__nav {
+            float: left;
+            height: auto;
+            position: static;
+            width: auto;
+        }
+    }
+
+    @media(min-width: $screen-md-min) {
+        padding-right: 30px;
+    }
+}
+
+.chr_header__brand {
+    color: $light;
+}
+
+.chr_header__corner {
+    background: $brand-primary;
+    color: $light;
+    display: table;
+    height: 100%;
+    text-align: center;
+    width: 55px;
+
+    &:hover {
+        color: rgba($light, 0.8);
+    }
+
+    > .chr_header__corner__brand {
+        display: none;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > .chr_header__corner__brand {
+            display: block;
+        }
+
+        > .chr_header__nav__toggle {
+            display: none;
+        }
+    }
+}
+
+.chr_header__nav {
+    background: #ffffff;
+    font-size: 1.385em;
+    padding: 5px 25px;
+    z-index: 99;
+
+    @media(min-width: $screen-sm-min) {
+        background: inherit;
+        font-size: inherit;
+        padding: 0;
+    }
+}
+
+.chr_header__nav__menu {
+
+    a {
+        color: $gray-darker;
+        display: block;
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: $brand-primary;
+            outline: none;
+        }
+    }
+
+    > li {
+        border-bottom: 1px solid $gray-light;
+        padding-left: 20px;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    @media(min-width: $screen-sm-min) {
+        a {
+            color: inherit;
+            padding: 0 15px;
+
+            &.active,
+            &:hover,
+            &:focus {
+                background: $gray;
+                color: $light;
+            }
+        }
+
+        > li {
+            border: none;
+            padding: 0;
+            float: left;
+        }
+    }
+}
+
+.chr_header__nav__toggle {
+    cursor: pointer;
+    display: table-cell;
+    height: 100%;
+    line-height: normal;
+    vertical-align: middle;
+}

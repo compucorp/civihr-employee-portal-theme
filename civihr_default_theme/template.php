@@ -7,24 +7,17 @@
 require_once dirname(__FILE__) . '/includes/structure.inc';
 require_once dirname(__FILE__) . '/includes/comment.inc';
 require_once dirname(__FILE__) . '/includes/form.inc';
-require_once dirname(__FILE__) . '/includes/menu.inc';
+//require_once dirname(__FILE__) . '/includes/menu.inc';
 require_once dirname(__FILE__) . '/includes/node.inc';
 require_once dirname(__FILE__) . '/includes/panel.inc';
 require_once dirname(__FILE__) . '/includes/user.inc';
 require_once dirname(__FILE__) . '/includes/view.inc';
 
-/**
- * Implements hook_css_alter().
- */
-function civihr_default_theme_css_alter(&$css) {
-  $radix_path = drupal_get_path('theme', 'radix');
-
-  // Radix now includes compiled stylesheets for demo purposes.
-  // We remove these from our subtheme since they are already included 
-  // in compass_radix.
-  unset($css[$radix_path . '/assets/stylesheets/radix-style.css']);
-  unset($css[$radix_path . '/assets/stylesheets/radix-print.css']);
-}
+//// Include all files from the includes directory.
+//$includes_path = dirname(__FILE__) . '/includes/*.inc';
+//foreach (glob($includes_path) as $filename) {
+//  require_once dirname(__FILE__) . '/includes/' . basename($filename);
+//}
 
 /**
  * Implements template_preprocess_page().
@@ -40,6 +33,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
   }
 }
 
+
 /**
  * Implements hook_js_alter().
  */
@@ -49,16 +43,16 @@ function civihr_default_theme_js_alter(&$javascript) {
   if (module_exists('ctools')) {
     $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
 
-    $old_radix_modal_js = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
+    $old_radix_modal_js = drupal_get_path('theme', 'radix') . '/assets/js/radix.modal.js';
 
     // Unset the old radix-modal.js -> from the parent theme
     unset($javascript[$old_radix_modal_js]);
 
     // Add the new radix-modal.js (can be renamed to something else)
-    $radix_modal = drupal_get_path('theme', 'civihr_default_theme') . '/assets/javascripts/radix-modal.js';
+    $radix_modal = drupal_get_path('theme', 'civihr_default_theme') . '/assets/js/radix.modal.js';
     if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
       $javascript[$radix_modal] = array_merge(
-          drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+        drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
     }
   }
 }
@@ -179,7 +173,7 @@ function bootstrapable_fields($fields_structure) {
  * @param array $fields_structure
  *   The associative array representive the fields structure
  * @param boolean $section_wrap
-  *  Sets if the fields group must be wrapped in the modal structure element
+ *  Sets if the fields group must be wrapped in the modal structure element
  * @return array
  */
 function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_wrap = true) {
@@ -209,8 +203,8 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
         <label
          for="'. $value['#id'] .'"
          class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
-          . ( !$label_hidden ? $value['#title'] : '' ) .
-        '</label>
+      . ( !$label_hidden ? $value['#title'] : '' ) .
+      '</label>
         <div class="col-sm-9">
     ';
     $fields_structure[$key]['#suffix'] .= '</div></div>';
@@ -221,3 +215,4 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 
   return $fields_structure;
 }
+

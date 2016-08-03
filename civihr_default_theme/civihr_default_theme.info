@@ -10,27 +10,32 @@ base theme  = radix
 ; Regions
 regions[content] = Content
 
+; Breakpoints
+breakpoints[xs] = (max-width: 767px)
+breakpoints[sm] = (min-width: 768px) and (max-width: 991px)
+breakpoints[md] = (min-width: 992px) and (max-width: 1199px)
+breakpoints[lg] = (min-width: 1200px)
+
 ; Panels
 plugins[panels][layouts] = panels/layouts
 plugins[panels][styles] = panels/styles
 
 ; CSS - General
-stylesheets[all][]     = assets/stylesheets/screen.css
-stylesheets[print][]   = assets/stylesheets/print.css
-
-; CSS - Conditional
-stylesheets-conditional[lte IE 9][all][] = assets/stylesheets/ie.css
-stylesheets-conditional[IE 7][all][] = assets/stylesheets/ie7.css
-stylesheets-conditional[IE 8][all][] = assets/stylesheets/ie8.css
+stylesheets[all][]     = assets/css/civihr_default_theme.style.css
+stylesheets[print][]   = assets/css/print.css
 
 ; Javascript
-scripts[] = assets/javascripts/script.js
-scripts[] = assets/javascripts/jquery.matchHeight-min.js
-scripts[] = assets/javascripts/jquery.customSelect.min.js
+scripts[] = assets/js/civihr_default_theme.script.js
+scripts[] = assets/js/jquery.matchHeight-min.js
+scripts[] = assets/js/jquery.customSelect.min.js
 
-; Information added by Drupal.org packaging script on 2014-12-09
-version = "7.x-3.0-rc1"
+; Settings
+; Set this to FALSE for development only.
+settings[preprocess_css] = FALSE
+
+; Information added by Drupal.org packaging script on 2016-05-15
+version = "7.x-3.4"
 core = "7.x"
 project = "radix"
-datestamp = "1418143643"
+datestamp = "1463294557"
 

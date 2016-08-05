@@ -296,9 +296,13 @@ function civihr_default_theme_form_element_label($variables) {
  * @return array
  */
 function bootstrapable_fields($fields_structure) {
-  return array_filter($fields_structure, function($value, $key) {
-    return substr($key, 0, 1) <> '#' && !in_array($value['#type'], ['hidden']);
-  }, ARRAY_FILTER_USE_BOTH);
+  $fields = $fields_structure;
+  foreach($fields as $key => $value)  {
+    if (!(substr($key, 0, 1) <> '#' && !in_array($value['#type'], ['hidden'])))  {
+      unset($fields[$key]);
+    }
+  }
+  return $fields;
 }
 
 /**

@@ -5,6 +5,7 @@
     @include box-shadow($box-shadow-global);
 
     &--sliding-body {
+      border-bottom: 0;
       overflow: hidden !important;
     }
 }
@@ -137,8 +138,8 @@ form {
 
 .chr_panel__header--with-border {
   border-bottom: 1px solid $gray-light;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .chr_panel__header--w-actions {

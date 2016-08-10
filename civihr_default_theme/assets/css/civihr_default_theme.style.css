@@ -8169,6 +8169,9 @@ form .chr_panel__footer {
   .chr_hr-resource__name > a {
     color: inherit; }
 
+.button-container {
+  margin-bottom: 40px; }
+
 .chr_profile-card {
   display: inline-block; }
 
@@ -8355,5 +8358,26 @@ form .chr_panel__footer {
       border-left: 1px solid #ECEDEE;
       border-top: none;
       padding-left: 0; } }
+
+.btn-group > .chr_action, .btn-group > .chr_action--icon, .btn-group > .chr_action--icon--calendar, .btn-group > .chr_action--icon--download, .btn-group > .chr_action--icon--edit, .btn-group > .chr_action--icon--list, .btn-group > .chr_action--icon--print, .chr_search-result__pager--mini .pager .pager-previous.btn-group > a,
+.chr_search-result__pager--mini .pager .pager-next.btn-group > a {
+  border-color: transparent;
+  color: #fff; }
+
+.nav-tabs > li {
+  width: 50%;
+  text-align: center;
+  font-size: 20px; }
+  .nav-tabs > li a {
+    margin-right: 0; }
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #41afcb;
+    border: none;
+    border-bottom: 3px solid #41afcb; }
+
+.nav > li > a, .chr_table-w-filters__filters__nav > li > a, .chr_table-w-filters__filters__nav > li > a {
+  background-color: #fff;
+  color: #404454;
+  border: none; }
 
 /*# sourceMappingURL=civihr_default_theme.style.css.map */

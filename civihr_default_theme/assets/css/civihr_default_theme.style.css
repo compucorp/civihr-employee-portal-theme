@@ -7390,6 +7390,9 @@ body.modal-open {
   margin: 0 auto;
   width: 100%; }
 
+.page-reports .form-submit {
+  padding: .7rem 2rem; }
+
 .page-reports .content {
   padding: 0;
   background-color: transparent; }
@@ -7543,8 +7546,8 @@ form .chr_panel__footer {
 
 .chr_panel__header--with-border {
   border-bottom: 1px solid #ecedee;
-  padding-bottom: 10px;
-  margin-bottom: 10px; }
+  padding-bottom: 20px;
+  margin-bottom: 20px; }
 
 .chr_panel__header--w-actions {
   padding-bottom: 10px;
@@ -7761,7 +7764,8 @@ form .chr_panel__footer {
   margin-bottom: 2px; }
 
 .pvtTable-civi .pvtAxisContainer,
-.pvtTable-civi .pvtVals {
+.pvtTable-civi .pvtVals,
+.pvtTable-civi .pvtRendererArea {
   padding: 20px; }
 
 .pvtTable-civi .pvtVals,
@@ -8373,7 +8377,7 @@ form .chr_panel__footer {
       display: block; }
 
 .chr_search-result__total {
-  color: #404454;
+  color: #4c4c5d;
   font-size: 1.286em; }
   .chr_search-result__total > .chr_search-result__total__count {
     margin-left: 5px; }

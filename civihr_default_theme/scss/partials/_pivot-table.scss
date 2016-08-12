@@ -2,57 +2,57 @@
 // --------------------------------------------------
 
 .pvtTable-civi {
-    .pvtAxisContainer {
-        width: 80%;
+  .pvtAxisContainer {
+    width: 80%;
+  }
+
+  .pvtTable {
+    border: 1px solid $gray-light;
+
+    th,
+    td {
+      padding: 10px;
+      font-size: 13px;
+      border-color: $gray-light;
     }
 
-    .pvtTable {
-        border: 1px solid $gray-light;
-
-        th,
-        td {
-            padding: 10px;
-            font-size: 13px;
-            border-color: $gray-light;
-        }
-
-        th {
-            font-weight: normal;
-        }
-
-        td {
-            text-align: center;
-        }
-
-        .pvtColLabel,
-        .pvtTotalLabel {
-            vertical-align: top;
-        }
-
-        .pvtColLabel,
-        .pvtTotalLabel,
-        .pvtVal,
-        .pvtTotal,
-        .pvtGrandTotal {
-            border-right: 0;
-            border-left: 0;
-            text-align: right;
-        }
-
-        th.pvtTotalLabel {
-            border-right: 1px solid $gray-light;
-        }
-
-        th.pvtTotalLabel[colspan="2"] {
-            font-weight: bold;
-        }
-
-        .rowTotal,
-        .pvtVal {
-            color: $crm_gray-light-blue;
-            font-weight: normal;
-        }
+    th {
+      font-weight: normal;
     }
+
+    td {
+      text-align: center;
+    }
+
+    .pvtColLabel,
+    .pvtTotalLabel {
+      vertical-align: top;
+    }
+
+    .pvtColLabel,
+    .pvtTotalLabel,
+    .pvtVal,
+    .pvtTotal,
+    .pvtGrandTotal {
+      border-right: 0;
+      border-left: 0;
+      text-align: right;
+    }
+
+    th.pvtTotalLabel {
+      border-right: 1px solid $gray-light;
+    }
+
+    th.pvtTotalLabel[colspan="2"] {
+      font-weight: bold;
+    }
+
+    .rowTotal,
+    .pvtVal {
+      color: $crm_$gray-light-blue;
+      font-weight: normal;
+    }
+  }
 
     li {
         span.pvtAttr {
@@ -72,7 +72,8 @@
     }
 
     .pvtAxisContainer,
-    .pvtVals {
+    .pvtVals,
+    .pvtRendererArea {
         padding: 20px;
     }
 

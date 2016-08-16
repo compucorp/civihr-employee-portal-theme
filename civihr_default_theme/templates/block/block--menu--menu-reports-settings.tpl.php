@@ -54,8 +54,8 @@
           <div class="chr_search-result__header chr_panel__header" ng-click="settings.isCollapsed = !settings.isCollapsed">
               <div class="chr_search-result__total">
                   <i
-                    class="chr_search-result__icon glyphicon glyphicon-chevron-down"
-                    ng-class="{ 'glyphicon-chevron-down': settings.isCollapsed, 'glyphicon-chevron-up': !settings.isCollapsed }">
+                    class="chr_search-result__icon glyphicon glyphicon-chevron-right"
+                    ng-class="{ 'glyphicon-chevron-right': settings.isCollapsed, 'glyphicon-chevron-down': !settings.isCollapsed }">
                   </i>
                   <?php print $block->subject ?>
               </div>
@@ -64,7 +64,7 @@
           <div
             class="panel-body-wrap panel-body-wrap--collapse"
             ng-class="{ 'panel-body-wrap--collapse': settings.isCollapsed }">
-              <div class="panel-body">
+              <div class="panel-body u-font-size-big">
                 <?php print $content ?>
               </div>
           </div>

@@ -3,73 +3,77 @@
 
 /* Welcome page */
 .page-welcome-page {
-    .pane-user-login {
-        max-width: 438px;
-        margin: 0 auto;
-        width: 100%;
-    }
+  .pane-user-login {
+    max-width: 438px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .page-reports {
-    .content {
-        padding: 0;
-        background-color: transparent;
+  .form-submit {
+    padding: .7rem 2rem;
+  }
+
+  .content {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .pane-content {
+    overflow: visible !important;
+  }
+
+  #bootstrap-theme {
+    display: inline-block;
+
+    [uib-datepicker-popup-wrap] .dropdown-menu {
+      width: 316px;
     }
+  }
 
-    .pane-content {
-      overflow: visible !important;
-    }
+  .form-group {
+    margin-right: 30px;
 
-    #bootstrap-theme {
-      display: inline-block;
-
-      [uib-datepicker-popup-wrap] .dropdown-menu {
-        width: 316px;
-      }
-    }
-
-    .form-group {
-      margin-right: 30px;
-
-      label {
-        color: $gray-darker;
-        font-weight: normal;
-        margin-right: 20px;
-      }
-    }
-
-    .help-block {
-      display: inline;
-
-      .btn {
-        color: $gray;
-        border: 0;
-        cursor: default;
-        height: 35px;
-        border: 1px solid $crm_color-neutral;
-        border-left: 0;
-
-        &:hover,
-        &:focus,
-        &:active {
-          box-shadow: none;
-          outline: none;
-          background-color: transparent;
-        }
-      }
-    }
-
-    .chr_search-result__header {
-      cursor: default;
-    }
-
-    .chr_panel__footer {
-      margin-left: 20px;
+    label {
+      color: $gray-darker;
+      font-weight: normal;
       margin-right: 20px;
-      padding-right: 0 !important;
     }
+  }
 
-    .ta-hidden-input {
-      display: none;
+  .help-block {
+    display: inline;
+
+    .btn {
+      color: $gray;
+      border: 0;
+      cursor: default;
+      height: 35px;
+      border: 1px solid $crm_color-neutral;
+      border-left: 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+        outline: none;
+        background-color: transparent;
+      }
     }
+  }
+
+  .chr_search-result__header {
+    cursor: default;
+  }
+
+  .chr_panel__footer {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 0 !important;
+  }
+
+  .ta-hidden-input {
+    display: none;
+  }
 }

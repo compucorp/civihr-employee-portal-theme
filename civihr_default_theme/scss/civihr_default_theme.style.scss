@@ -2,6 +2,10 @@
 // SASS partials import
 // -----------------------------------------------------------------------------
 
+// Compass mixins for backward compatibility.
+// -----------------------------------------------------------------------------
+@import "compass";
+
 // Bootstrap global partials.
 // -----------------------------------------------------------------------------
 @import "base/variables";
@@ -11,11 +15,6 @@
 // Core variables and mixins
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
-
-
-// Compass mixins for backward compatibility.
-// -----------------------------------------------------------------------------
-@import "compass";
 
 
 //@import "radix/mixins";

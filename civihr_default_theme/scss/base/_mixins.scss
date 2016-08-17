@@ -1,0 +1,177 @@
+//
+// SASS Mixins
+// --------------------------------------------------
+
+@mixin grid-condensed($gutter: $grid-gutter-width) {
+  .row,
+  .form-horizontal .form-group {
+    margin: {
+      left: -$gutter;
+      right: -$gutter;
+    };
+  }
+
+  [class^="col-"],
+  [class*=" col-"] {
+    padding: {
+      left: $gutter;
+      right: $gutter;
+    }
+  }
+}
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+//Custom Mixins for CIVIHR
+// Clearfix
+@mixin cf-content {
+  content: "";
+  display: table;
+  clear: both;
+}
+@mixin clearfix($where: both) {
+  @if $where == 'before' {
+    &:before {
+      @include cf-content;
+    }
+  } @elseif $where == 'after' {
+    &:after {
+      @include cf-content;
+    }
+  } @else {
+    &:before,
+    &:after {
+      @include cf-content;
+    }
+  }
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin fa($unicode, $font-size: inherit) {
+  &:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: $unicode;
+
+    @if $font-size == 'inherit' {
+      font-size: inherit;
+    } @else {
+      font-size: $font-size +px;
+    }
+  }
+}
+
+@mixin vertical-align($pos: relative) {
+  position: $pos;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin placeholder-color($color) {
+  // These selectors needs to be separated because browser doesn't
+  // understand a selector and invalidate all line.
+  // https://css-tricks.com/snippets/css/style-placeholder-text/#comment-96772
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// Necessary instead of @extend because SASS can't handle @extend + media queries
+@mixin custom-modal($custom-modal-modifier: "", $custom-modal-width: 480) {
+
+  .backdrop-civihr-custom#{$custom-modal-modifier} {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .modal-civihr-custom#{$custom-modal-modifier} {
+
+    .modal-body {
+      @include clearfix;
+
+      padding: #{$crm_custom-modal-body-padding}px;
+      padding-top: 0;
+    }
+
+    .modal-content {
+
+      .table-responsive,
+      .view {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .modal-dialog {
+      box-sizing: content-box; // Keeps the same width no matter how much the padding is
+      padding: #{$crm_custom-modal-padding}px;
+      max-width: #{$custom-modal-width}px;
+    }
+
+    .table-responsive {
+      overflow: auto;
+
+      table {
+        min-width: #{$custom-modal-width}px;
+      }
+
+      .sticky-header {
+        display: none !important;
+      }
+    }
+
+    // Necessary for IE, since it can't center a block with just max-width
+    @media(min-width: #{$custom-modal-width + $crm_custom-modal-padding * 2}px) {
+
+      .modal-dialog {
+        padding: 0;
+        width: 100%;
+      }
+
+      .table-responsive {
+
+        table {
+          min-width: auto;
+        }
+      }
+    }
+  }
+}
+
+
+// Sort icon on table header
+@mixin manager-approval-main-table-sort($sort-image) {
+  background-image: url(#{$crm_images-icons-path}#{$sort-image});
+  background-repeat: no-repeat;
+  background-position: right center;
+}

@@ -1,0 +1,146 @@
+// Styles for Pivot Table
+// --------------------------------------------------
+
+.pvtTable-civi {
+  .pvtAxisContainer {
+    width: 80%;
+  }
+
+  .pvtTable {
+    border: 1px solid $gray-light;
+
+    th,
+    td {
+      padding: 10px;
+      font-size: 13px;
+      border-color: $gray-light;
+    }
+
+    th {
+      font-weight: normal;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    .pvtColLabel,
+    .pvtTotalLabel {
+      vertical-align: top;
+    }
+
+    .pvtColLabel,
+    .pvtTotalLabel,
+    .pvtVal,
+    .pvtTotal,
+    .pvtGrandTotal {
+      border-right: 0;
+      border-left: 0;
+      text-align: right;
+    }
+
+    th.pvtTotalLabel {
+      border-right: 1px solid $gray-light;
+    }
+
+    th.pvtTotalLabel[colspan="2"] {
+      font-weight: bold;
+    }
+
+    .rowTotal,
+    .pvtVal {
+      color: $crm_gray-light-blue;
+      font-weight: normal;
+    }
+  }
+
+    li {
+        span.pvtAttr {
+            padding: 0 15px;
+            line-height: 33px;
+            color: $crm_gray-light-blue;
+            background-color: $gray-lighter;
+            border-radius: 0;
+            border: 1px solid $light-gray;
+        }
+
+        .pvtTriangle {
+            color: $crm_gray-light-blue;
+            margin-left: 10px;
+            margin-bottom: 2px;
+        }
+    }
+
+    .pvtAxisContainer,
+    .pvtVals,
+    .pvtRendererArea {
+        padding: 20px;
+    }
+
+    .pvtVals,
+    .pvtAxisContainer.pvtRows {
+        border-left: 0;
+    }
+
+    .pvtUi {
+        > tbody,
+        .pvtAxisContainer.pvtHorizList {
+            border-top: 0;
+            border-right: 0;
+        }
+
+        tr:nth-child(2) {
+            background-color: $gray-lighter;
+        }
+    }
+
+    br {
+        display: none;
+    }
+
+    .pvtFilterBox {
+        border-radius: 0;
+        border: 1px solid $light-gray;
+        padding: 10px;
+
+        > h4,
+        > :nth-child(2) > button {
+            display: none;
+        }
+
+        .pvtFilterSelectAllWrap {
+            color: $gray-darker;
+            border-bottom: 1px solid $light-gray;
+        }
+
+        label {
+            margin: 0;
+        }
+
+        button {
+            @extend .btn;
+            @extend .btn-primary;
+            margin: 10px 0 0 0;
+        }
+
+        .pvtCheckContainer {
+            margin-top: 10px;
+            padding: 0;
+
+            p {
+                padding: 10px 0;
+            }
+        }
+
+        .form-text {
+            position: relative;
+            height: 25px;
+            padding: 4px 20px 4px 10px;
+            @include placeholder-color($gray);
+
+            background-position: 99% 3px;
+            background-repeat: no-repeat;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVDhP5ZI9C4MwEIb7//+BEDgICA6C4OQgBJy6dRIEB6EgCNkEJ4e3iT2oHzH9wHbpAwfyJvfkJDnhYH4kHDVKlSAigSAQoCiBKjVGXvaxFXZnxBQYkSlBICII+22K4jM63rbHSthCSdsskVX9Y6KxR5XJSSpVy6GbpbBKp6aw0BzM0ShCe1iKihMXC6EuQtMQwukzPFu3fFd4+C+/cimUNxy6WQkNnmdzL3NYPfDmLVuhZf2wZYz80qDkKX1St3CXAfVMqq4cz3hTaGEpmctxDPmB0M/fCYEbAwZYyVKYcroAAAAASUVORK5CYII=);
+        }
+    }
+}

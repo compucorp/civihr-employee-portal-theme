@@ -1,0 +1,135 @@
+/**
+ * Component containing search results, including an header with
+ * total number of results and items-per-page links, and a footer with page links
+ */
+.chr_search-result {}
+
+.chr_search-result__footer,
+.chr_search-result__header {
+    @include clearfix;
+
+    padding: 10px 20px;
+
+    > .chr_search-result__items-per-page {
+        display: none;
+        float: right;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > .chr_search-result__items-per-page {
+            display: block;
+        }
+    }
+}
+
+.chr_search-result__footer {
+
+    > .chr_search-result__pager--full {
+        display: none;
+    }
+
+    @media(min-width: $screen-sm-min) {
+        > .chr_search-result__pager--full {
+            display: inline-block;
+            vertical-align: sub;
+        }
+
+        > .chr_search-result__pager--mini {
+            display: none;
+        }
+    }
+}
+
+.chr_search-result__header {
+    border-bottom: 1px solid $gray-light;
+
+    > .chr_search-result__total {
+        display: inline-block;
+        vertical-align: sub;
+
+        > .chr_search-result__icon {
+          top: 3px;
+          font-size: 15px;
+          margin-right: 5px;
+        }
+    }
+}
+
+.chr_search-result__items-per-page {
+
+    > .chr_search-result__items-per-page__list {
+        margin-left: 10px;
+    }
+}
+
+.chr_search-result__items-per-page__list__item {
+    min-width: 40px;
+}
+
+.chr_search-result__pager {
+
+    // Relies on drupal's .item-list component being present as child element
+    .pager {
+        margin: 0;
+
+        a {
+            color: inherit;
+        }
+
+        li {
+            padding: 0 3px;
+        }
+    }
+}
+
+// The "mini" version of the pager consists of the standard Drupal pager markup
+// with just the "Prev" and "Next" buttons visible.
+// Flexbox is used as the markup can't be changed
+.chr_search-result__pager--mini {
+
+    .pager {
+        display: flex;
+        margin: 0 -10px;
+
+        .pager-current,
+        .pager-first,
+        .pager-item,
+        .pager-last {
+            display: none;
+        }
+
+        .pager-previous,
+        .pager-next {
+            flex-grow: 1;
+            margin: 0 10px;
+            padding: 0;
+
+            > a {
+                @extend .chr_action;
+
+                display: block;
+            }
+        }
+    }
+}
+
+.chr_search-result__total {
+    color: $gray-darker;
+    font-size: 1.286em;
+
+    > .chr_search-result__total__count {
+        margin-left: 5px;
+    }
+}
+
+.chr_search-result__total__count {
+    color: $gray;
+
+    &:after {
+        content: ')';
+    }
+
+    &:before {
+        content: '(';
+    }
+}

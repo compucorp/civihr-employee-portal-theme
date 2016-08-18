@@ -91,7 +91,6 @@
         <div class="main-container">
 <!--      HTML for myleave added-->
           <?php
-//          include('myleave.html');
           include_once path_to_theme() . '/assets/partials/myleave.html'
           ?>
         </div>

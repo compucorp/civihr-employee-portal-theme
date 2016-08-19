@@ -100,7 +100,7 @@
 // civihr_default_theme partials
 // --------------------------------------------------
 @import "base/typography";
-@import "layout/page";
+@import "pages/**/*";
 @import "partials/**/*";
 @import "components/**/*";
 

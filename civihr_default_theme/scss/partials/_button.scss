@@ -1,0 +1,16 @@
+.btn-default {
+  border-color: $gray;
+  color: $gray;
+
+  &.active,
+  &.active:hover {
+    border-color: $gray;
+    background: $gray;
+    color: $light;
+  }
+}
+
+.btn-primary{
+  border-color: transparent;
+  color: $light;
+}

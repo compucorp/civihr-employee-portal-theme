@@ -1,12 +1,12 @@
 .btn-group {
 
-  > .chr_action {
+  > .btn {
     border-color: transparent;
     color: $light;
   }
 }
 
-.nav-tabs{
+.nav-tabs {
 
   > li {
     width: 50%;
@@ -17,8 +17,10 @@
       margin-right: 0;
     }
 
-    &.active{
-      > a, > a:hover, > a:focus {
+    &.active {
+      > a,
+      > a:hover,
+      > a:focus {
         color: $brand-primary;
         border: none;
         border-bottom: 3px solid $brand-primary;
@@ -27,8 +29,8 @@
   }
 }
 
+.nav {
 
-.nav, .chr_table-w-filters__filters__nav{
   > li >a {
     background-color: $light;
     color: $crm_gray-darker-alt;

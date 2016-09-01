@@ -20,10 +20,16 @@
       <div class="chr_header__nav__toggle">
         <i class="fa fa-2x fa-navicon"></i>
       </div>
-      <div class="chr_header__corner__brand chr_brand">
-        <a class="chr_brand__link" href="<?php print rtrim($base_path, '/') ?>/dashboard" title="<?php print htmlspecialchars($site_name); ?>">
+      <div class="chr_header__corner__brand chr_brand chr_header__home-menu">
+<!--        <a class="chr_brand__link" href="--><?php //print rtrim($base_path, '/') ?><!--/dashboard" title="--><?php //print htmlspecialchars($site_name); ?><!--">-->
           <span class="chr_brand__icon icon-logo"></span>
-        </a>
+<!--        </a>-->
+
+        <ul class="chr_header__home-menu__sub-menu">
+          <li><?php print $edit_account; ?></li>
+          <li><?php print $logout_link; ?></li>
+        </ul>
+
       </div>
     </div>
     <div class="chr_header__brand chr_brand">

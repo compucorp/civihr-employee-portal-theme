@@ -62,3 +62,39 @@
         }
     }
 }
+
+
+
+
+
+.chr_header__home-menu {
+  &:hover {
+    > .chr_header__home-menu__sub-menu {
+      display: block;
+    }
+  }
+}
+
+.chr_header__home-menu__sub-menu {
+  background: $crm_gray-darker-alt;
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 99;
+
+  a {
+    color: $light-pale;
+    display: block;
+    padding: 0 40px 0 20px;
+    white-space: nowrap;
+
+    &:hover {
+      background: $crm_brand-secondary;
+      color: $light;
+    }
+
+    > i {
+      margin-right: 10px;
+    }
+  }
+}

@@ -14,10 +14,28 @@
   }
 
   .table-responsive {
-    margin: 0;
+    margin: 0px 3px 5px 3px;
   }
 
   fieldset.panel-default {
-    padding: 0;
+    padding-top: 70px;
+    position: relative;
+
+    legend {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $light;
+      line-height: 30px;
+    }
+  }
+
+  table {
+    background: $light;
+    @include box-shadow($crm_box-shadow-global);
+
+    th {
+      height: 45px;
+    }
   }
 }

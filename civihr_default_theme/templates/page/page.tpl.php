@@ -12,6 +12,11 @@
  * NOTE: The #outer-wrapper element is for the mobile menu to have a way
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
  */
+
+$admin_link = l(t('CiviHR admin'), 'civicrm', array('html' => true));
+$ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => true));
+$documents_link = l(t('Manage documents'), 'admin/content', array('html' => true));
+$users_link = l(t('Manage users'), 'admin/people', array('html' => true));
 ?>
 
 <div id="outer-wrapper">
@@ -20,21 +25,22 @@
       <div class="chr_header__nav__toggle">
         <i class="fa fa-2x fa-navicon"></i>
       </div>
-      <div class="chr_header__corner__brand chr_brand chr_header__home-menu">
-<!--        <a class="chr_brand__link" href="--><?php //print rtrim($base_path, '/') ?><!--/dashboard" title="--><?php //print htmlspecialchars($site_name); ?><!--">-->
+      <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
           <span class="chr_brand__icon icon-logo"></span>
-<!--        </a>-->
-
+          <span>Home</span>
         <ul class="chr_header__home-menu__sub-menu">
-          <li><?php print $edit_account; ?></li>
-          <li><?php print $logout_link; ?></li>
+          <li><?php print $admin_link; ?></li>
+          <li><?php print $ssp_link; ?></li>
         </ul>
-
       </div>
     </div>
-    <div class="chr_header__brand chr_brand">
+    <div class="chr_header__brand chr_brand chr_header__home-menu">
         <span class="chr_brand__icon icon-logo"></span>
         <span class="chr_brand__name">CiviHR</span>
+        <ul class="chr_header__home-menu__sub-menu">
+          <li><?php print $admin_link; ?></li>
+          <li><?php print $ssp_link; ?></li>
+        </ul>
     </div>
     <nav class="chr_header__nav">
       <?php if ($main_menu): ?>
@@ -43,6 +49,8 @@
         </ul>
       <?php endif; ?>
     </nav>
+
+
     <?php if ($logged_in) { ?>
     <div class="chr_header__user-menu">
       <div class="chr_header__user-menu__data">
@@ -62,6 +70,17 @@
       </ul>
     </div>
     <?php } ?>
+
+    <div class="chr_header__settings-menu">
+      <span class="icon-settings">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </span>
+      <ul class="chr_header__settings-menu__sub-menu">
+        <li><?php print $documents_link; ?></li>
+        <li><?php print $users_link; ?></li>
+      </ul>
+    </div>
+
   </header>
 
   <div id="main-wrapper">

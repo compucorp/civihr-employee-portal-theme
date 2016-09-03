@@ -71,6 +71,7 @@ $users_link = l(t('Manage users'), 'admin/people', array('html' => true));
     </div>
     <?php } ?>
 
+    <?php if (user_access("administer users") && user_access("administer nodes") ) { ?>
     <div class="chr_header__settings-menu">
       <span class="icon-settings">
         <i class="fa fa-cog" aria-hidden="true"></i>
@@ -80,7 +81,7 @@ $users_link = l(t('Manage users'), 'admin/people', array('html' => true));
         <li><?php print $users_link; ?></li>
       </ul>
     </div>
-
+    <?php } ?>
   </header>
 
   <div id="main-wrapper">

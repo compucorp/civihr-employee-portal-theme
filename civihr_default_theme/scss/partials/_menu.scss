@@ -63,10 +63,6 @@
     }
 }
 
-
-
-
-
 .chr_header__settings-menu {
   position: relative;
   display: inline-block;
@@ -76,46 +72,74 @@
   float: right;
 
   &:hover {
-
     background-color: $crm_gray-darker-alt;
+
     > .chr_header__settings-menu__sub-menu {
       display: block;
     }
   }
-}
 
-.chr_header__settings-menu__sub-menu {
-  background: $crm_gray-darker-alt;
-  display: none;
-  position: absolute;
-  right: 0;
-  z-index: 99;
+  .chr_header__settings-menu__sub-menu {
+    background: $crm_gray-darker-alt;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 99;
 
-  li {
-    text-align: left;
-  }
-
-  a {
-    color: $light-pale;
-    font-size: 1.3rem;
-    display: block;
-    padding: 0 30px 0 20px;
-    white-space: nowrap;
-
-    &:hover {
-      background: $crm_brand-secondary;
-      color: $light;
+    li {
+      text-align: left;
     }
 
-    > i {
-      margin-right: 10px;
+    a {
+      color: $light-pale;
+      font-size: 1.3rem;
+      display: block;
+      padding: 0 30px 0 20px;
+      white-space: nowrap;
+
+      &:hover {
+        background: $crm_brand-secondary;
+        color: $light;
+      }
+
+      > i {
+        margin-right: 10px;
+      }
     }
   }
 }
-
-
 
 .chr_header__home-menu {
+
+  .chr_header__home-menu__sub-menu {
+    background: $crm_gray-darker-alt;
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+
+    li {
+      text-align: left;
+    }
+
+    a {
+      color: $light-pale;
+      font-size: 1.3rem;
+      display: block;
+      padding: 0 30px 0 20px;
+      white-space: nowrap;
+
+      &:hover {
+        background: $crm_brand-secondary;
+        color: $light;
+      }
+
+      > i {
+        margin-right: 10px;
+      }
+    }
+  }
+
   &:hover {
     > .chr_header__home-menu__sub-menu {
       display: block;
@@ -123,36 +147,7 @@
   }
 }
 
-.chr_header__home-menu__sub-menu {
-  background: $crm_gray-darker-alt;
-  display: none;
-  position: absolute;
-  left: 0;
-  z-index: 99;
-
-  li {
-    text-align: left;
-  }
-
-  a {
-    color: $light-pale;
-    font-size: 1.3rem;
-    display: block;
-    padding: 0 30px 0 20px;
-    white-space: nowrap;
-
-    &:hover {
-      background: $crm_brand-secondary;
-      color: $light;
-    }
-
-    > i {
-      margin-right: 10px;
-    }
-  }
-}
-
-.chr_header__brand .chr_header__home-menu__sub-menu {
+.chr_header__brand .chr_header__home-menu__sub-menu { //civihr menu in small devices
   right: 0;
   width: 120px;
   margin: auto;

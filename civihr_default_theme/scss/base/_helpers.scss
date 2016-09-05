@@ -1,0 +1,19 @@
+//
+// CSS Helpers
+// --------------------------------------------------
+
+.flex {
+  @include flex;
+}
+
+.flex-md {
+  @media (min-width: $screen-md-min) {
+    @include flex;
+  }
+}
+
+.flex-lg {
+  @media (min-width: $screen-lg-min) {
+    @include flex;
+  }
+}

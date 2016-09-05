@@ -1,0 +1,64 @@
+// Styles for Menus and Navs
+// --------------------------------------------------
+
+/**
+ * User menu in main header <nav>
+ */
+.chr_header__user-menu {
+    color: $light-pale;
+    cursor: default;
+    padding: 0 10px;
+    position: relative;
+
+    &:hover {
+        background: $crm_gray-darker-alt;
+        color: $light;
+
+        > .chr_header__user-menu__sub-menu {
+            display: block;
+        }
+    }
+}
+
+.chr_header__user-menu__data {
+
+    > .chr_header__user-menu__name {
+        float: left;
+    }
+
+    > .chr_profile-card {
+        margin: -2px 8px 0 8px; // To improve, the vertical margin is just to vertically align the card
+        vertical-align: top;
+    }
+
+    @media(max-width: $screen-md-min) {
+        > .chr_header__user-menu__arrow,
+        > .chr_header__user-menu__name {
+            display: none;
+        }
+    }
+}
+
+.chr_header__user-menu__sub-menu {
+    background: $crm_gray-darker-alt;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+
+    a {
+        color: $light-pale;
+        display: block;
+        padding: 0 40px 0 20px;
+        white-space: nowrap;
+
+        &:hover {
+            background: $crm_brand-secondary;
+            color: $light;
+        }
+
+        > i {
+            margin-right: 10px;
+        }
+    }
+}

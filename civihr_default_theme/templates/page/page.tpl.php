@@ -28,7 +28,7 @@ $users_link = l(t('Manage users'), 'admin/people', array('html' => true));
       <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
           <span class="chr_brand__icon icon-logo"></span>
           <span>Home</span>
-        <ul class="chr_header__home-menu__sub-menu">
+        <ul class="chr_header__home-sub-menu">
           <li><?php print $admin_link; ?></li>
           <li><?php print $ssp_link; ?></li>
         </ul>
@@ -37,7 +37,7 @@ $users_link = l(t('Manage users'), 'admin/people', array('html' => true));
     <div class="chr_header__brand chr_brand chr_header__home-menu">
         <span class="chr_brand__icon icon-logo"></span>
         <span class="chr_brand__name">CiviHR</span>
-        <ul class="chr_header__home-menu__sub-menu">
+        <ul class="chr_header__home-sub-menu">
           <li><?php print $admin_link; ?></li>
           <li><?php print $ssp_link; ?></li>
         </ul>
@@ -73,7 +73,7 @@ $users_link = l(t('Manage users'), 'admin/people', array('html' => true));
       <span class="icon-settings">
         <i class="fa fa-cog" aria-hidden="true"></i>
       </span>
-      <ul class="chr_header__settings-menu__sub-menu">
+      <ul class="chr_header__settings-sub-menu">
         <li><?php print $documents_link; ?></li>
         <li><?php print $users_link; ?></li>
       </ul>

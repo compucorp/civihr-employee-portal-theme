@@ -5,62 +5,42 @@
  * User menu in main header <nav>
  */
 .chr_header__user-menu {
-    color: $light-pale;
-    cursor: default;
-    padding: 0 10px;
-    position: relative;
+  color: $light-pale;
+  cursor: default;
+  padding: 0 10px;
+  position: relative;
 
-    &:hover {
-        background: $crm_gray-darker-alt;
-        color: $light;
+  &:hover {
+    background: $crm_gray-darker-alt;
+    color: $light;
 
-        > .chr_header__user-menu__sub-menu {
-            display: block;
-        }
+    > .chr_header__sub-menu {
+      display: block;
     }
+  }
+
+  .chr_header__sub-menu {
+    right: 0;
+  }
 }
 
 .chr_header__user-menu__data {
 
+  > .chr_header__user-menu__name {
+    float: left;
+  }
+
+  > .chr_profile-card {
+    margin: -2px 8px 0 8px; // To improve, the vertical margin is just to vertically align the card
+    vertical-align: top;
+  }
+
+  @media(max-width: $screen-md-min) {
+    > .chr_header__user-menu__arrow,
     > .chr_header__user-menu__name {
-        float: left;
+      display: none;
     }
-
-    > .chr_profile-card {
-        margin: -2px 8px 0 8px; // To improve, the vertical margin is just to vertically align the card
-        vertical-align: top;
-    }
-
-    @media(max-width: $screen-md-min) {
-        > .chr_header__user-menu__arrow,
-        > .chr_header__user-menu__name {
-            display: none;
-        }
-    }
-}
-
-.chr_header__user-menu__sub-menu {
-    background: $crm_gray-darker-alt;
-    display: none;
-    position: absolute;
-    right: 0;
-    z-index: 99;
-
-    a {
-        color: $light-pale;
-        display: block;
-        padding: 0 40px 0 20px;
-        white-space: nowrap;
-
-        &:hover {
-            background: $crm_brand-secondary;
-            color: $light;
-        }
-
-        > i {
-            margin-right: 10px;
-        }
-    }
+  }
 }
 
 .chr_header__settings-menu {
@@ -74,55 +54,37 @@
   &:hover {
     background-color: $crm_gray-darker-alt;
 
-    > .chr_header__settings-sub-menu {
+    > .chr_header__sub-menu {
       display: block;
     }
   }
-}
 
-.chr_header__settings-sub-menu {
-  background: $crm_gray-darker-alt;
-  display: none;
-  position: absolute;
-  right: 0;
-  z-index: 99;
-
-  li {
-    text-align: left;
+  > .fa-cog {
+    font-size: 18px;
   }
 
-  a {
-    color: $light-pale;
-    font-size: 1.3rem;
-    display: block;
-    padding: 0 30px 0 20px;
-    white-space: nowrap;
-
-    &:hover {
-      background: $crm_brand-secondary;
-      color: $light;
-    }
-
-    > i {
-      margin-right: 10px;
-    }
+  .chr_header__sub-menu {
+    right: 0;
   }
 }
 
 .chr_header__home-menu {
 
   &:hover {
-    > .chr_header__home-sub-menu {
+    > .chr_header__sub-menu {
       display: block;
     }
   }
+
+  .chr_header__sub-menu {
+    left: 0;
+  }
 }
 
-.chr_header__home-sub-menu {
+.chr_header__sub-menu {
   background: $crm_gray-darker-alt;
   display: none;
   position: absolute;
-  left: 0;
   z-index: 99;
 
   li {
@@ -147,17 +109,14 @@
   }
 }
 
-.chr_header__brand .chr_header__home-sub-menu { //civihr menu in small devices
+//CiviHR menu in small devices
+.chr_header__brand .chr_header__home-sub-menu {
   right: 0;
   width: 120px;
   margin: auto;
 }
 
-
-.icon-settings {
-  font-size: 18px;
-}
-
-.menu-link-home { //Hide Menu link as part of SSP
+//Hide Menu link as part of SSP
+.menu-link-home {
   display: none;
 }

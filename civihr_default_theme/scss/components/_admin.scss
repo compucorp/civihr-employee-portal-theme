@@ -1,4 +1,4 @@
-.page-admin {
+.page-admin, .page-node-add-hr-documents {
 
   .tabs,
   .action-links,
@@ -36,6 +36,26 @@
 
     th {
       height: 45px;
+    }
+  }
+}
+
+.page-node-add-hr-documents {
+  .form-type-select.form-item-body-und-0-format {
+    width: 200px;
+
+    label {
+      display: block;
+    }
+  }
+
+  #edit-submit {
+    margin-left: 20px;
+  }
+
+  #edit-body-und-0-format {
+    .customSelectInner {
+      width: auto !important;
     }
   }
 }

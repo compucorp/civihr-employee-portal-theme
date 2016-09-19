@@ -117,6 +117,25 @@
 }
 
 //Hide Menu link as part of SSP
-.menu-link-home {
+.menu-link-home,
+.menu-link-civihr-admin,
+.menu-link-civihr-ssp {
   display: none;
+}
+
+//Show links in Mobile view
+@media (max-width: 767px) {
+  .menu-link-civihr-admin,
+  .menu-link-civihr-ssp {
+    display: block;
+  }
+}
+
+//Hide Menus when not logged in
+.not-logged-in {
+  .menu-link-civihr-admin,
+  .menu-link-civihr-ssp,
+  .chr_header__home-menu .chr_header__sub-menu {
+    display: none;
+  }
 }

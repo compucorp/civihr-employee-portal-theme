@@ -131,6 +131,19 @@
   }
 }
 
+.menu-link-civihr-admin,
+.menu-link-civihr-ssp {
+  background-color: $gray-light;
+}
+
+.chr_header__nav__menu>li {
+  border-bottom: 1px solid $crm_grizzly;
+}
+
+.chr_header__nav.is-open {
+  padding: 0px;
+}
+
 //Hide Menus when not logged in
 .not-logged-in {
   .menu-link-civihr-admin,

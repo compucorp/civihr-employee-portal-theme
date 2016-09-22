@@ -123,26 +123,34 @@
   display: none;
 }
 
-//Show links in Mobile view
 @media (max-width: 767px) {
+  //Show links in Mobile view and different background
   .menu-link-civihr-admin,
   .menu-link-civihr-ssp {
     display: block;
+    background-color: $gray-light;
+  }
+
+  .chr_header__nav__menu>li {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .chr_header__nav__menu>li>a {
+    border-bottom: 1px solid $crm_grizzly;
+    margin: 0 25px;
+    padding: 0 20px;
+  }
+
+  .chr_header__nav__menu>li:last-child>a {
+    border-bottom: none;
+  }
+
+  .chr_header__nav.is-open {
+    padding: 0px
   }
 }
 
-.menu-link-civihr-admin,
-.menu-link-civihr-ssp {
-  background-color: $gray-light;
-}
-
-.chr_header__nav__menu>li {
-  border-bottom: 1px solid $crm_grizzly;
-}
-
-.chr_header__nav.is-open {
-  padding: 0px;
-}
 
 //Hide Menus when not logged in
 .not-logged-in {

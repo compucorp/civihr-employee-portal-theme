@@ -1,0 +1,61 @@
+.page-admin, .page-node-add-hr-documents {
+
+  .tabs,
+  .action-links,
+  .nav.nav-pills.secondary {
+    margin: 20px 0;
+  }
+
+  .customSelect {
+    margin: 0 0 20px 0;
+  }
+  .panel-title {
+    font-size: 14px;
+  }
+
+  .table-responsive {
+    margin: 0px 3px 5px 3px;
+  }
+
+  fieldset.panel-default {
+    padding-top: 70px;
+    position: relative;
+
+    legend {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $light;
+      line-height: 30px;
+    }
+  }
+
+  table {
+    background: $light;
+    @include box-shadow($crm_box-shadow-global);
+
+    th {
+      height: 45px;
+    }
+  }
+}
+
+.page-node-add-hr-documents {
+  .form-type-select.form-item-body-und-0-format {
+    width: 200px;
+
+    label {
+      display: block;
+    }
+  }
+
+  #edit-submit {
+    margin-left: 20px;
+  }
+
+  #edit-body-und-0-format {
+    .customSelectInner {
+      width: auto !important;
+    }
+  }
+}

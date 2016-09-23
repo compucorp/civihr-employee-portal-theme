@@ -7,11 +7,126 @@
 require_once dirname(__FILE__) . '/includes/structure.inc';
 require_once dirname(__FILE__) . '/includes/comment.inc';
 require_once dirname(__FILE__) . '/includes/form.inc';
-require_once dirname(__FILE__) . '/includes/menu.inc';
+//require_once dirname(__FILE__) . '/includes/menu.inc';
 require_once dirname(__FILE__) . '/includes/node.inc';
 require_once dirname(__FILE__) . '/includes/panel.inc';
 require_once dirname(__FILE__) . '/includes/user.inc';
 require_once dirname(__FILE__) . '/includes/view.inc';
+
+/**
+ * Implements theme_pager()
+ */
+function civihr_default_theme_pager($variables) {
+  $tags = $variables['tags'];
+  $element = $variables['element'];
+  $parameters = $variables['parameters'];
+  $quantity = $variables['quantity'];
+  global $pager_page_array, $pager_total;
+
+  // Calculate various markers within this pager piece:
+  // Middle is used to "center" pages around the current page.
+  $pager_middle = ceil($quantity / 2);
+  // current is the page we are currently paged to
+  $pager_current = $pager_page_array[$element] + 1;
+  // first is the first page listed by this pager piece (re quantity)
+  $pager_first = $pager_current - $pager_middle + 1;
+  // last is the last page listed by this pager piece (re quantity)
+  $pager_last = $pager_current + $quantity - $pager_middle;
+  // max is the maximum page number
+  $pager_max = $pager_total[$element];
+  // End of marker calculations.
+
+  // Prepare for generation loop.
+  $i = $pager_first;
+  if ($pager_last > $pager_max) {
+    // Adjust "center" if at end of query.
+    $i = $i + ($pager_max - $pager_last);
+    $pager_last = $pager_max;
+  }
+  if ($i <= 0) {
+    // Adjust "center" if at start of query.
+    $pager_last = $pager_last + (1 - $i);
+    $i = 1;
+  }
+  // End of generation loop preparation.
+
+  $li_first = theme('pager_first', array('text' => (1), 'element' => $element, 'parameters' => $parameters));
+  $li_previous = theme('pager_previous', array('text' => (isset($tags[1]) ? $tags[1] : t('Previous')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
+  $li_next = theme('pager_next', array('text' => (isset($tags[3]) ? $tags[3] : t('Next')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
+  $li_last = theme('pager_last', array('text' => ($pager_total[0]), 'element' => $element, 'parameters' => $parameters));
+
+  if ($pager_total[$element] > 1) {
+    $items[] = array(
+      'class' => array('pager-first'),
+      'data' => 'Page:',
+    );
+
+    if ($li_previous) {
+      $items[] = array(
+        'class' => array('pager-previous'),
+        'data' => $li_previous,
+      );
+    }
+
+    // When there is more than one page, create the pager list.
+    if ($i != $pager_max) {
+      if ($i > 2) {
+        $items[] = array(
+          'class' => array('pager-firt-count'),
+          'data' => $li_first,
+        );
+        $items[] = array(
+          'class' => array('pager-ellipsis'),
+          'data' => '…',
+        );
+      }
+      // Now generate the actual pager piece.
+      for (; $i <= $pager_last && $i <= $pager_max; $i++) {
+        if ($i < $pager_current) {
+          $items[] = array(
+            'class' => array('pager-item'),
+            'data' => theme('pager_previous', array('text' => $i, 'element' => $element, 'interval' => ($pager_current - $i), 'parameters' => $parameters)),
+          );
+        }
+        if ($i == $pager_current) {
+          $items[] = array(
+            'class' => array('pager-current'),
+            'data' => $i,
+          );
+        }
+        if ($i > $pager_current) {
+          $items[] = array(
+            'class' => array('pager-item'),
+            'data' => theme('pager_next', array('text' => $i, 'element' => $element, 'interval' => ($i - $pager_current), 'parameters' => $parameters)),
+          );
+        }
+      }
+      if ($i < $pager_max) {
+        $items[] = array(
+          'class' => array('pager-ellipsis'),
+          'data' => '…',
+        );
+        $items[] = array(
+          'class' => array('pager-last-count'),
+          'data' => $li_last,
+        );
+      }
+    }
+
+    // End generation.
+    if ($li_next) {
+      $items[] = array(
+        'class' => array('pager-next'),
+        'data' => $li_next,
+      );
+    }
+
+    return '<h2 class="element-invisible">' . t('Pages') . '</h2>' . theme('item_list', array(
+      'items' => $items,
+      'attributes' => array('class' => array('pager')),
+    ));
+  }
+}
 
 /**
  * Implements hook_css_alter().
@@ -20,7 +135,7 @@ function civihr_default_theme_css_alter(&$css) {
   $radix_path = drupal_get_path('theme', 'radix');
 
   // Radix now includes compiled stylesheets for demo purposes.
-  // We remove these from our subtheme since they are already included 
+  // We remove these from our subtheme since they are already included
   // in compass_radix.
   unset($css[$radix_path . '/assets/stylesheets/radix-style.css']);
   unset($css[$radix_path . '/assets/stylesheets/radix-print.css']);
@@ -38,6 +153,20 @@ function civihr_default_theme_preprocess_page(&$variables) {
     // This will override the default copyright message from radix
     $variables['copyright'] = '';
   }
+  $container_class = 'container';
+  if (_is_hrreports_current_path()) {
+    $container_class = 'container-fluid';
+  }
+  $variables['container_class'] = $container_class;
+}
+
+/**
+ * Check if we are displaying custom Report page.
+ *
+ * @return boolean
+ */
+function _is_hrreports_current_path() {
+  return substr(current_path(), 0, 8) === 'reports/';
 }
 
 /**
@@ -49,16 +178,16 @@ function civihr_default_theme_js_alter(&$javascript) {
   if (module_exists('ctools')) {
     $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
 
-    $old_radix_modal_js = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
+    $old_radix_modal_js = drupal_get_path('theme', 'radix') . '/assets/js/radix.modal.js';
 
     // Unset the old radix-modal.js -> from the parent theme
     unset($javascript[$old_radix_modal_js]);
 
     // Add the new radix-modal.js (can be renamed to something else)
-    $radix_modal = drupal_get_path('theme', 'civihr_default_theme') . '/assets/javascripts/radix-modal.js';
+    $radix_modal = drupal_get_path('theme', 'civihr_default_theme') . '/assets/js/radix.modal.js';
     if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
       $javascript[$radix_modal] = array_merge(
-          drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+        drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
     }
   }
 }
@@ -158,3 +287,71 @@ function civihr_default_theme_form_element_label($variables) {
   // The leading whitespace helps visually separate fields from inline labels.
   return ' <label' . drupal_attributes($attributes) . '>' . $output . "</label>\n";
 }
+
+/**
+ * Fields that Bootstrap markup can be applied on
+ *
+ * @param array $fields_structure
+ *   The associative array representive the fields structure
+ * @return array
+ */
+function bootstrapable_fields($fields_structure) {
+  $fields = $fields_structure;
+  foreach($fields as $key => $value)  {
+    if (!(substr($key, 0, 1) <> '#' && !in_array($value['#type'], ['hidden'])))  {
+      unset($fields[$key]);
+    }
+  }
+  return $fields;
+}
+
+/**
+ * Recursive function that applies Bootstrap markup to a fields structure
+ * Can be called on entire forms or subsets of it, like fieldsets
+ *
+ * @param array $fields_structure
+ *   The associative array representive the fields structure
+ * @param boolean $section_wrap
+  *  Sets if the fields group must be wrapped in the modal structure element
+ * @return array
+ */
+function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_wrap = true) {
+  $fields = bootstrapable_fields($fields_structure);
+  $fields_keys = array_keys($fields);
+
+  foreach ($fields as $key => $value) {
+    $open_section = $section_wrap && $key == $fields_keys[0];
+    $close_section = $section_wrap && $key == end($fields_keys);
+    $label_hidden = $value['#title_display'] == 'none';
+    $original_prefix = !empty($fields_structure[$key]['#prefix']) ? $fields_structure[$key]['#prefix'] : '';
+    $original_suffix = !empty($fields_structure[$key]['#suffix']) ? $fields_structure[$key]['#suffix'] : '';
+
+    $fields_structure[$key]['#prefix'] = $open_section ? '<div class="modal-civihr-custom__section">' : '';
+    $fields_structure[$key]['#suffix'] = $close_section ? '</div>' : '';
+
+    // Recursively apply bootstrap to fieldset fields
+    if ($value['#type'] == 'fieldset') {
+      $fields_structure[$key] = array_replace_recursive($fields_structure[$key], civihr_default_theme_form_apply_bootstrap($value, false));
+      $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset--transparent';
+      continue;
+    }
+
+    $fields_structure[$key]['#title'] = null;
+    $fields_structure[$key]['#prefix'] .= '
+      <div class="form-group form-group--smaller-gutter">
+        <label
+         for="'. $value['#id'] .'"
+         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
+          . ( !$label_hidden ? $value['#title'] : '' ) .
+        '</label>
+        <div class="col-sm-9">
+    ';
+    $fields_structure[$key]['#suffix'] .= '</div></div>';
+
+    $fields_structure[$key]['#prefix'] = $original_prefix . $fields_structure[$key]['#prefix'];
+    $fields_structure[$key]['#suffix'] = $fields_structure[$key]['#suffix'] . $original_suffix;
+  }
+
+  return $fields_structure;
+}
+

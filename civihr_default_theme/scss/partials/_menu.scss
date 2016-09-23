@@ -131,18 +131,22 @@
     background-color: $gray-light;
   }
 
-  .chr_header__nav__menu>li {
+  .menu-link-civihr-ssp > a {
+    border-bottom: none !important;
+  }
+
+  .chr_header__nav__menu > li {
     border-bottom: none;
     padding: 0;
   }
 
-  .chr_header__nav__menu>li>a {
+  .chr_header__nav__menu > li > a {
     border-bottom: 1px solid $crm_grizzly;
     margin: 0 25px;
     padding: 0 20px;
   }
 
-  .chr_header__nav__menu>li:last-child>a {
+  .chr_header__nav__menu > li:last-child > a {
     border-bottom: none;
   }
 

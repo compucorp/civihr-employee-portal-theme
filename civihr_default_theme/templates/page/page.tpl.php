@@ -37,10 +37,6 @@
     <div class="chr_header__brand chr_brand chr_header__home-menu">
         <span class="chr_brand__icon icon-logo"></span>
         <span class="chr_brand__name"><span><?php print t("CiviHR"); ?></span></span>
-        <ul class="chr_header__sub-menu">
-          <li><?php print $admin_link; ?></li>
-          <li><?php print $ssp_link; ?></li>
-        </ul>
     </div>
     <nav class="chr_header__nav">
       <?php if ($main_menu): ?>

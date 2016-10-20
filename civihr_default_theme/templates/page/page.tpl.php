@@ -29,7 +29,9 @@
           <span class="chr_brand__icon icon-logo"></span>
           <span><?php print t("Home"); ?></span>
         <ul class="chr_header__sub-menu">
-          <li><?php print $admin_link; ?></li>
+          <?php if (user_access("access CiviCRM")) { ?>
+            <li><?php print $admin_link; ?></li>
+          <?php } ?>
           <li><?php print $ssp_link; ?></li>
         </ul>
       </div>

@@ -13,7 +13,7 @@
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
  */
 
-  $admin_link = l(t('CiviHR admin'), 'civicrm', array('html' => true));
+  $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard#/tasks', array('html' => true));
   $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => true));
 
   $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;

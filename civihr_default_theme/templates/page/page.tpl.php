@@ -13,10 +13,33 @@
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
  */
 
-  $admin_link = l(t('CiviHR admin'), 'civicrm', array('html' => true));
+  $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard#/tasks', array('html' => true));
   $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => true));
-  $documents_link = l(t('Manage documents'), 'admin/content', array('html' => true));
-  $users_link = l(t('Manage users'), 'admin/people', array('html' => true));
+
+  $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
+  $mapGearLinks = [
+    [
+      'permissions' => ["access content overview"],
+      'link' => l(t('Manage documents'), 'admin/content', array('html' => true)),
+    ],
+    [
+      'permissions' => ["administer users", "access users overview"],
+      'link' => l(t('Manage users'), 'admin/people', array('html' => true)),
+    ],
+    [
+      'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
+      'link' => l(t('HR resource types'), 'hr-resource-types-list', array('html' => true))
+    ],
+  ];
+  $gearLinks = "";
+  foreach($mapGearLinks as $link) {
+    foreach ($link['permissions'] as $permission) {
+      if (user_access($permission)) {
+        $gearLinks .= "<li>{$link['link']}</li>";
+        break;
+      }
+    }
+  }
 ?>
 
 <div id="outer-wrapper">
@@ -29,7 +52,9 @@
           <span class="chr_brand__icon icon-logo"></span>
           <span><?php print t("Home"); ?></span>
         <ul class="chr_header__sub-menu">
-          <li><?php print $admin_link; ?></li>
+          <?php if (user_access("access CiviCRM")) { ?>
+            <li><?php print $admin_link; ?></li>
+          <?php } ?>
           <li><?php print $ssp_link; ?></li>
         </ul>
       </div>
@@ -64,12 +89,11 @@
       </ul>
     </div>
     <?php } ?>
-    <?php if (user_access("administer users") && user_access("administer nodes") ) { ?>
+    <?php if (!empty($gearLinks)) { ?>
     <div class="chr_header__settings-menu">
       <i class="fa fa-cog" aria-hidden="true"></i>
       <ul class="chr_header__sub-menu">
-        <li><?php print $documents_link; ?></li>
-        <li><?php print $users_link; ?></li>
+        <?php print $gearLinks ?>
       </ul>
     </div>
     <?php } ?>

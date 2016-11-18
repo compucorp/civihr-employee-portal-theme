@@ -48,16 +48,22 @@
       <div class="chr_header__nav__toggle">
         <i class="fa fa-2x fa-navicon"></i>
       </div>
-      <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
-          <span class="chr_brand__icon icon-logo"></span>
-          <span><?php print t("Home"); ?></span>
-        <ul class="chr_header__sub-menu">
-          <?php if (user_access("access CiviCRM")) { ?>
-            <li><?php print $admin_link; ?></li>
-          <?php } ?>
-          <li><?php print $ssp_link; ?></li>
-        </ul>
-      </div>
+      <?php if (!user_access("access CiviCRM")) { ?>
+        <a href="/dashboard">
+      <?php }?>
+        <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
+            <span class="chr_brand__icon icon-logo"></span>
+            <span><?php print t("Home"); ?></span>
+            <?php if (user_access("access CiviCRM")) { ?>
+              <ul class="chr_header__sub-menu">
+                <li><?php print $admin_link; ?></li>
+                <li><?php print $ssp_link; ?></li>
+              </ul>
+            <?php }?>
+        </div>
+      <?php if (!user_access("access CiviCRM")) { ?>
+        </a>
+      <?php }?>
     </div>
     <div class="chr_header__brand chr_brand chr_header__home-menu">
         <span class="chr_brand__icon icon-logo"></span>

@@ -12,6 +12,34 @@
  * NOTE: The #outer-wrapper element is for the mobile menu to have a way
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
  */
+
+  $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard', ['fragment' => '/tasks']);
+  $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => true));
+
+  $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
+  $mapGearLinks = [
+    [
+      'permissions' => ["access content overview"],
+      'link' => l(t('Manage documents'), 'admin/content', array('html' => true)),
+    ],
+    [
+      'permissions' => ["administer users", "access users overview"],
+      'link' => l(t('Manage users'), 'admin/people', array('html' => true)),
+    ],
+    [
+      'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
+      'link' => l(t('HR resource types'), 'hr-resource-types-list', array('html' => true))
+    ],
+  ];
+  $gearLinks = "";
+  foreach($mapGearLinks as $link) {
+    foreach ($link['permissions'] as $permission) {
+      if (user_access($permission)) {
+        $gearLinks .= "<li>{$link['link']}</li>";
+        break;
+      }
+    }
+  }
 ?>
 
 <div id="outer-wrapper">
@@ -20,15 +48,20 @@
       <div class="chr_header__nav__toggle">
         <i class="fa fa-2x fa-navicon"></i>
       </div>
-      <div class="chr_header__corner__brand chr_brand">
-        <a class="chr_brand__link" href="<?php print rtrim($base_path, '/') ?>/dashboard" title="<?php print htmlspecialchars($site_name); ?>">
+      <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
           <span class="chr_brand__icon icon-logo"></span>
-        </a>
+          <span><?php print t("Home"); ?></span>
+        <ul class="chr_header__sub-menu">
+          <?php if (user_access("access CiviCRM")) { ?>
+            <li><?php print $admin_link; ?></li>
+          <?php } ?>
+          <li><?php print $ssp_link; ?></li>
+        </ul>
       </div>
     </div>
-    <div class="chr_header__brand chr_brand">
+    <div class="chr_header__brand chr_brand chr_header__home-menu">
         <span class="chr_brand__icon icon-logo"></span>
-        <span class="chr_brand__name">CiviHR</span>
+        <span class="chr_brand__name"><span><?php print t("CiviHR"); ?></span></span>
     </div>
     <nav class="chr_header__nav">
       <?php if ($main_menu): ?>
@@ -50,9 +83,17 @@
         </div>
         <i class="chr_header__user-menu__arrow fa fa-caret-down"></i>
       </div>
-      <ul class="chr_header__user-menu__sub-menu">
+      <ul class="chr_header__sub-menu">
         <li><?php print $edit_account; ?></li>
         <li><?php print $logout_link; ?></li>
+      </ul>
+    </div>
+    <?php } ?>
+    <?php if (!empty($gearLinks)) { ?>
+    <div class="chr_header__settings-menu">
+      <i class="fa fa-cog" aria-hidden="true"></i>
+      <ul class="chr_header__sub-menu">
+        <?php print $gearLinks ?>
       </ul>
     </div>
     <?php } ?>

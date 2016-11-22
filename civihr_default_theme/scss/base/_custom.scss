@@ -370,7 +370,12 @@ a {
 
 /* Headings */
 
-h1 {
+.block__title {
+  padding: 0 15px;
+}
+
+h1,
+.block__title {
     font-size: 3.6rem;
     font-weight: 300;
     color: $crm_gray-darker-alt;

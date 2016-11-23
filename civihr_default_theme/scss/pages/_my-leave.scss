@@ -1,10 +1,12 @@
-.block-civihr-leave-absences {
+.pane-civihr-leave-absences-my-leave {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
 
-  #my-leave-block {
-    padding: 0 15px;
+.my-leave-page {
 
-    .button-container {
-      margin-bottom: 40px;
-    }
+  .button-container {
+    margin-bottom: 40px;
   }
 }

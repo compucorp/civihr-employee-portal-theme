@@ -12,9 +12,9 @@
 
   > select {
     background: transparent;
-    border: 1px solid $crm_color-neutral;
-    height: #{$crm_customselect-height}px;
-    padding: 6px #{$crm_customselect-padding-right}px 6px 12px;
+    border: 1px solid $crm-color-neutral;
+    height: #{$crm-customselect-height}px;
+    padding: 6px #{$crm-customselect-padding-right}px 6px 12px;
     position: relative;
     width: 100%;
     z-index: 2;
@@ -30,16 +30,16 @@
 
   &:after {
     content: '\f0d7';
-    border-left: 1px solid $crm_color-neutral;
+    border-left: 1px solid $crm-color-neutral;
     bottom: 0;
     font-family: "FontAwesome";
     display: inline-block;
-    height: #{$crm_customselect-height}px;
-    line-height: #{$crm_customselect-height + 2}px;
+    height: #{$crm-customselect-height}px;
+    line-height: #{$crm-customselect-height + 2}px;
     position: absolute;
     right: 0;
     text-align: center;
-    width: #{$crm_customselect-caret-width}px;
+    width: #{$crm-customselect-caret-width}px;
     z-index: 1;
     -webkit-font-smoothing: antialiased;
   }
@@ -74,10 +74,10 @@
   .chr_custom-select {
 
     > select {
-      padding-right: #{$crm_customselect-padding-right}px;
+      padding-right: #{$crm-customselect-padding-right}px;
 
       + .form-control-feedback {
-          right: #{$crm_customselect-caret-width - 5}px !important;
+          right: #{$crm-customselect-caret-width - 5}px !important;
       }
     }
   }

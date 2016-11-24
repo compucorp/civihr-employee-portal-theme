@@ -2,7 +2,7 @@
 // --------------------------------------------------
 
 .panel {
-    @include box-shadow($crm_box-shadow-global);
+    @include box-shadow($crm-box-shadow-global);
 
     &--sliding-body {
       border-bottom: 0;
@@ -33,7 +33,7 @@
 
 .panel-title {
     color: $gray-darker;
-    font-size: $crm_panel-heading-font-size;
+    font-size: $crm-panel-heading-font-size;
     font-weight: 400;
 }
 
@@ -93,7 +93,7 @@
        box-shadow: none;
 
        .chr_search-result__header {
-         border-bottom-color: $crm_grizzly;
+         border-bottom-color: $crm-grizzly;
        }
     }
 
@@ -282,7 +282,7 @@ form {
         font-size: 1.1rem;
         line-height: 1;
         background: none;
-        color: $crm_color-neutral;
+        color: $crm-color-neutral;
         cursor: default;
     }
 

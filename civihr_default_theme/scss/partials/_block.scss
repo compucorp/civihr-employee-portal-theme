@@ -20,7 +20,7 @@
   }
 
   .logo-rect-wrapper {
-    @include box-shadow($crm_box-shadow-global);
+    @include box-shadow($crm-box-shadow-global);
     background: $light;
     max-width: 100%;
     width: 125px;

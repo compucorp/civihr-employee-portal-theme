@@ -49,7 +49,7 @@
 
     .rowTotal,
     .pvtVal {
-      color: $crm_gray-light-blue;
+      color: $crm-gray-light-blue;
       font-weight: normal;
     }
   }
@@ -58,14 +58,14 @@
         span.pvtAttr {
             padding: 0 15px;
             line-height: 33px;
-            color: $crm_gray-light-blue;
+            color: $crm-gray-light-blue;
             background-color: $gray-lighter;
             border-radius: 0;
             border: 1px solid $light-gray;
         }
 
         .pvtTriangle {
-            color: $crm_gray-light-blue;
+            color: $crm-gray-light-blue;
             margin-left: 10px;
             margin-bottom: 2px;
         }

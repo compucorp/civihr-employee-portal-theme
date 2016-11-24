@@ -36,7 +36,7 @@
     @include clearfix;
 
     .field-content {
-        background: $crm_gray-light-alt;
+        background: $crm-gray-light-alt;
         padding: 15px;
 
         ul {
@@ -72,7 +72,7 @@
 }
 
 .chr_hr-resource__name {
-    color: $crm_gray-darker-alt;
+    color: $crm-gray-darker-alt;
     font-weight: normal;
     line-height: normal;
     margin: 0;

@@ -29,6 +29,7 @@ scripts[] = assets/js/civihr_default_theme.script.js
 scripts[] = assets/js/jquery.matchHeight-min.js
 scripts[] = assets/js/jquery.customSelect.min.js
 
+
 ; Settings
 ; Set this to FALSE for development only.
 settings[preprocess_css] = FALSE

@@ -1,100 +1,4 @@
-//Custom Variables for CIVIHR
-
 @import url(//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
-
-// Typography
-// -------------------------
-$crm_sans            : 'Lato', sans-serif;
-
-// Iconography
-// -------------------------
-
-$icon-font-path:          "../fonts/"; //default: 'bootstrap/'
-
-// Brand colors
-// -------------------------
-$brand-primary:         #42afcb; // blue-green shade , default: #428bca
-$crm_brand-secondary:       #db6c86; // submenu hover
-$crm_brand-tertiary:        $brand-primary; // calendar today
-$brand-success:         #7dc4a7; // green shade, default: #5cb85c
-$brand-warning:         #DABB24; //default: #f0ad4e
-$brand-danger:          #da6b86; // red shade , default: #d9534f
-
-// Brand colors
-// -------------------------
-$crm_box-shadow-global:     0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035);
-
-// Grays
-// -------------------------
-$gray-lighter         : #fbfbfc; // table odd row, default: lighten(#000, 93.5%) !default;
-$gray-light           : #ecedee; // body bg, table border, default: lighten(#000, 60%) !default;   // #999
-$crm_gray-light-alt   : #f0f1f4; // carousel item bg, hr resource bg
-$crm_gray-light-blue  : #757b8e; // scrollbar thumb, pivot table text
-$gray                 : #767b8e; // main text/lighter, menu item bg hover, footer logo, default: lighten(#000, 33.5%) !default; // #555
-$gray-dark            : #555862; // menu bg, default: lighten(#000, 20%) !default
-$gray-darker          : #4c4c5d; // text darker, default: lighten(#000, 13.5%) !default; // #222
-$crm_gray-darker-alt  : #404454; // page title
-$crm_grizzly          : #dcdddd;
-
-$light           : #fff; // well bg, text on dark bg hover
-$light-pale      : #c3cbd6; // text on dark bg
-$light-gray      : #eeeded;
-
-$crm_color-neutral   : #949caa; // gray shade
-
-// Components
-// -------------------------
-$border-radius-base:             0; //default: 4px
-$border-radius-large:            0; //default: 6px
-$border-radius-small:            0; //default: 3px
-
-// Buttons
-// -------------------------
-
-// Panels
-// -------------------------
-$panel-bg:                        $light; //default: #fff !default
-$crm_panel-heading-font-size:     1.8rem;
-
-$panel-body-padding:          20px;
-$panel-heading-padding:       15px 20px;
-
-// Badges
-// -------------------------
-$badge-bg:              $gray; //default: $gray-light !default
-
-// Navs
-// -------------------------
-$nav-link-hover-bg:     $gray-lighter;
-
-// Scrollbar
-// -------------------------
-$crm_scrollbar-size: 10px;
-$crm_scrollbar-track-color: #F5F5F7;
-$crm_scrollbar-thumb-color: $crm_gray-light-blue;
-
-
-//Miscellaneous
-$crm_customselect-height: 33;
-$crm_customselect-caret-width: 32;
-$crm_customselect-padding-right: $crm_customselect-caret-width + 12;
-
-$crm_small-size: 34px;
-
-$crm_wrapper-width:     18%;
-$crm_max-tablet-size:   767px;
-$crm_images-icons-path: "../images/icon/";
-$crm_icon-asc-path:     "asc.gif";
-$crm_icon-desc-path:    "desc.gif";
-
-$crm_header-height: 50px;
-
-$crm_custom-modal-padding: 20;
-$crm_custom-modal-body-padding: 10;
-//End of Custom Variables for CIVIHR
-
-
-
 
 // Variables
 // -----------------------------------------------------------------------------
@@ -102,14 +6,57 @@ $crm_custom-modal-body-padding: 10;
 // bootstrap specific variable. set to false if not using ruby + asset pipeline / compass.
 $bootstrap-sass-asset-helper: false !default;
 
+$crm_box-shadow-global:          0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035) !default;
+$crm_customselect-height:        33 !default;
+$crm_customselect-caret-width:   32 !default;
+$crm_customselect-padding-right: $crm_customselect-caret-width + 12 !default;
+
+$crm_small-size:                 34px !default;
+
+$crm_wrapper-width:              18% !default;
+$crm_max-tablet-size:            767px !default;
+$crm_images-icons-path:          '../images/icon/' !default;
+$crm_icon-asc-path:              'asc.gif' !default;
+$crm_icon-desc-path:             'desc.gif' !default;
+
+$crm_header-height:              50px !default;
+
+$crm_custom-modal-padding:       20 !default;
+$crm_custom-modal-body-padding:  10 !default;
+
+
 // Global values
 // -----------------------------------------------------------------------------
 
+// Grays
+// -----------------------------------------------------------------------------
+
+$gray-dark:           #555862 !default; // menu bg
+$gray-darker:         #4c4c5d !default; // text darker
+$gray:                #767b8e !default; // main text/lighter, menu item bg hover, footer logo
+$gray-light:          #ecedee !default; // body bg
+$gray-lighter:        #fbfbfc !default; // table odd row
+
+$light:               #ffffff !default; // well bg, text on dark bg hover
+$light-pale:          #c3cbd6 !default; // text on dark bg
+$light-gray:          #eeeded !default;
+
+$crm_gray-light-alt:  #f0f1f4 !default; // carousel item bg, hr resource bg
+$crm_gray-light-blue: #757b8e !default; // scrollbar thumb, pivot table text
+$crm_gray-darker-alt: #404454 !default; // page title
+$crm_grizzly:         #dcdddd !default;
+$crm_color-neutral:   #949caa !default; // gray shade
 
 // Brand colors
 // -----------------------------------------------------------------------------
 
-$brand-info:            #5bc0de !default;
+$brand-primary:       #42afcb !default;
+$brand-success:       #7dc4a7 !default;
+$brand-warning:       #DABB24 !default;
+$brand-danger:        #da6b86 !default;
+$brand-info:          #5bc0de !default;
+$crm_brand-secondary: #db6c86; // submenu hover
+$crm_brand-tertiary:  $brand-primary; // calendar today
 
 // Scaffolding
 // -----------------------------------------------------------------------------
@@ -150,10 +97,13 @@ $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
+$crm_sans: 'Lato', sans-serif;
+
 
 // Iconography
 // -----------------------------------------------------------------------------
 
+$icon-font-path: '../fonts/' !default;
 $icon-font-name: 'glyphicons-halflings-regular' !default;
 
 
@@ -176,6 +126,9 @@ $padding-xs-horizontal:          5px !default;
 $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
 
+$border-radius-base:             0 !default;
+$border-radius-large:            0 !default;
+$border-radius-small:            0 !default;
 
 $component-active-color:         #fff !default;
 $component-active-bg:            $brand-primary !default;
@@ -589,6 +542,7 @@ $list-group-link-heading-color:  #333 !default;
 
 // Panels
 // -----------------------------------------------------------------------------
+$panel-bg:                    $light !default;
 $panel-inner-border:          #ddd !default;
 $panel-border-radius:         $border-radius-base !default;
 $panel-footer-bg:             #f5f5f5 !default;
@@ -617,6 +571,10 @@ $panel-info-text:             $state-info-text !default;
 $panel-info-border:           $state-info-border !default;
 $panel-info-heading-bg:       $state-info-bg !default;
 
+$crm_panel-heading-font-size: 1.8rem;
+$panel-body-padding:          20px;
+$panel-heading-padding:       15px 20px;
+
 
 // Thumbnails
 // -----------------------------------------------------------------------------
@@ -638,6 +596,7 @@ $well-bg:                     #f5f5f5 !default;
 // -----------------------------------------------------------------------------
 $badge-color:                 #fff !default;
 $badge-link-hover-color:      #fff !default;
+$badge-bg:                    $gray !default;
 
 $badge-active-color:          $link-color !default;
 $badge-active-bg:             #fff !default;
@@ -723,5 +682,8 @@ $container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
 $container-lg:                 $container-large-desktop !default;
 
 
-
-
+// Scrollbar
+// -------------------------
+$crm_scrollbar-size:        10px !default;
+$crm_scrollbar-track-color: #F5F5F7 !default;
+$crm_scrollbar-thumb-color: $crm_gray-light-blue !default;

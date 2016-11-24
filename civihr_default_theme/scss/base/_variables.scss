@@ -13,7 +13,7 @@ $icon-font-path:          "../fonts/"; //default: 'bootstrap/'
 
 // Brand colors
 // -------------------------
-$brand-primary:         #41afcb; // blue-green shade , default: #428bca
+$brand-primary:         #42afcb; // blue-green shade , default: #428bca
 $crm_brand-secondary:       #db6c86; // submenu hover
 $crm_brand-tertiary:        $brand-primary; // calendar today
 $brand-success:         #7dc4a7; // green shade, default: #5cb85c
@@ -208,19 +208,19 @@ $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-border:             transparent !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
-$btn-success-border:             darken($btn-success-bg, 5%) !default;
+$btn-success-border:             transparent !default;
 
 $btn-warning-color:              #fff !default;
 $btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+$btn-warning-border:             transparent !default;
 
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+$btn-danger-border:              transparent !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;

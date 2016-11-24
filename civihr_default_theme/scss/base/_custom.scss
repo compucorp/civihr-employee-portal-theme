@@ -238,7 +238,7 @@ body {
  * Vacancy list view page default styling
  */
 .vacancy-wrapper {
-    width: $crm_wrapper-width;
+    width: 18%;
     margin: 1%;
     float: left;
 }
@@ -255,7 +255,7 @@ body {
 .views-exposed-form .views-exposed-widget {
     @include exposed-form-default-style(50%);
 
-    @media screen and (max-width: $crm_max-tablet-size) {
+    @media screen and (max-width: $screen-sm-max) {
         @include exposed-form-default-style(100%);
     }
 }
@@ -339,7 +339,7 @@ body {
 /* General styles */
 
 body {
-    font-family: $crm_sans;
+    font-family: $crm-sans;
     color: $gray;
     background: $gray-light;
 }
@@ -378,7 +378,7 @@ h1,
 .block__title {
     font-size: 3.6rem;
     font-weight: 300;
-    color: $crm_gray-darker-alt;
+    color: $crm-gray-darker-alt;
     margin: 25px 0;
 }
 h4 {
@@ -454,7 +454,7 @@ tr {
         right: 37px;
         height: 100%;
         width: 0;
-        border-left: 1px solid $crm_color-neutral;
+        border-left: 1px solid $crm-color-neutral;
     }
 
 }
@@ -523,7 +523,7 @@ tr {
 .modal-content {
     background: $light;
     min-height: 500px;
-    border: 1px solid $crm_color-neutral;
+    border: 1px solid $crm-color-neutral;
 }
 .modal-header,
 .modal-body {
@@ -742,7 +742,7 @@ form {
 }
 
 .form-text {
-    border: 1px solid $crm_color-neutral;
+    border: 1px solid $crm-color-neutral;
     font-size: 1.3rem;
     color: $gray;
     line-height: 1.5;
@@ -778,7 +778,7 @@ form {
 }
 
 .pane-block {
-  @include box-shadow($crm_box-shadow-global);
+  @include box-shadow($crm-box-shadow-global);
 }
 
 .pane-block[class*="absence-list"] {
@@ -803,7 +803,7 @@ form {
         width: 193px;
         margin: 0 10px;
         padding: 20px;
-        background: $crm_gray-light-alt;
+        background: $crm-gray-light-alt;
     }
     .jcarousel-prev,
     .jcarousel-next {
@@ -1219,7 +1219,7 @@ form {
         }
         .fieldset-wrapper {
             margin-top: 20px;
-            background: $crm_gray-light-alt;
+            background: $crm-gray-light-alt;
             padding: 15px 20px;
 
             .views-field {

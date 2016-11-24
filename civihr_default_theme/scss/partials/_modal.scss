@@ -53,7 +53,7 @@ body.modal-open {
 .modal-civihr-custom__footer {
     @include clearfix;
 
-    padding-top: #{$crm_custom-modal-body-padding}px;
+    padding-top: #{$crm-custom-modal-body-padding}px;
     text-align: right;
 }
 
@@ -61,7 +61,7 @@ body.modal-open {
     @include clearfix;
 
     border-bottom: 1px solid $gray-light;
-    padding: #{$crm_custom-modal-body-padding * 2}px #{$crm_custom-modal-body-padding}px;
+    padding: #{$crm-custom-modal-body-padding * 2}px #{$crm-custom-modal-body-padding}px;
 
     &:last-of-type {
         border-bottom: 0;
@@ -77,16 +77,16 @@ body.modal-open {
    @extend .modal-civihr-custom__section;
 
     border: 0;
-    margin: 0 #{-$crm_custom-modal-body-padding}px;
+    margin: 0 #{-$crm-custom-modal-body-padding}px;
     padding: 0;
 }
 
 .modal-civihr-custom__section--strip {
     @extend .modal-civihr-custom__section;
 
-    background: $crm_gray-light-alt;
-    margin: 0 #{-$crm_custom-modal-body-padding}px;
-    padding: #{$crm_custom-modal-body-padding * 2}px;
+    background: $crm-gray-light-alt;
+    margin: 0 #{-$crm-custom-modal-body-padding}px;
+    padding: #{$crm-custom-modal-body-padding * 2}px;
 }
 
 

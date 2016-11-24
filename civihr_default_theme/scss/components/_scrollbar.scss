@@ -8,26 +8,26 @@
     .ps-scrollbar-x-rail {
         bottom: 0 !important;
         opacity: 1 !important;
-        background-color: $crm_scrollbar-track-color !important;
+        background-color: $crm-scrollbar-track-color !important;
         height: 10px !important;
     }
 
     .ps-scrollbar-x {
-        background-color: $crm_scrollbar-thumb-color !important;
+        background-color: $crm-scrollbar-thumb-color !important;
         height: 10px !important;
     }
 
     &::-webkit-scrollbar {
-        height: $crm_scrollbar-size;
+        height: $crm-scrollbar-size;
     }
 
     &::-webkit-scrollbar-track {
-        background-color: $crm_scrollbar-track-color;
+        background-color: $crm-scrollbar-track-color;
         border-radius: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background-color: $crm_scrollbar-thumb-color;
+        background-color: $crm-scrollbar-thumb-color;
     }
 }

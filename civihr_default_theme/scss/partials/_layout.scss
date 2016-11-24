@@ -24,8 +24,8 @@
     box-shadow: 0 2px 3px 0 rgba(black, 0.15);
     color: $light-pale;
     font-size: 1.3rem;
-    height: $crm_header-height;
-    line-height: $crm_header-height;
+    height: $crm-header-height;
+    line-height: $crm-header-height;
 
     > .chr_header__brand {
         left: 0;
@@ -43,7 +43,7 @@
         height: 100%;
         left: -100%;
         position: absolute;
-        top: $crm_header-height;
+        top: $crm-header-height;
         width: 100%;
 
         transition: left 0.2s ease-out;

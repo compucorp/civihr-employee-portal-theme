@@ -22,11 +22,11 @@
     }
 
     th.headerSortDown {
-        @include manager-approval-main-table-sort($crm_icon-desc-path);
+        @include manager-approval-main-table-sort($crm-icon-desc);
     }
 
     th.headerSortUp {
-        @include manager-approval-main-table-sort($crm_icon-asc-path);
+        @include manager-approval-main-table-sort($crm-icon-asc);
     }
 
     .views-field {

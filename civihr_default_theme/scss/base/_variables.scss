@@ -6,24 +6,8 @@
 // bootstrap specific variable. set to false if not using ruby + asset pipeline / compass.
 $bootstrap-sass-asset-helper: false !default;
 
-$crm_box-shadow-global:          0px 3px 10px 0px rgba(0, 0, 0, 0.035), 0px 4px 8px 0px rgba(0, 0, 0, 0.035) !default;
-$crm_customselect-height:        33 !default;
-$crm_customselect-caret-width:   32 !default;
-$crm_customselect-padding-right: $crm_customselect-caret-width + 12 !default;
-
-$crm_small-size:                 34px !default;
-
-$crm_wrapper-width:              18% !default;
-$crm_max-tablet-size:            767px !default;
-$crm_images-icons-path:          '../images/icon/' !default;
-$crm_icon-asc-path:              'asc.gif' !default;
-$crm_icon-desc-path:             'desc.gif' !default;
-
-$crm_header-height:              50px !default;
-
-$crm_custom-modal-padding:       20 !default;
-$crm_custom-modal-body-padding:  10 !default;
-
+$crm-box-shadow-global: 0 3px 10px 0 rgba(0, 0, 0, 0.035), 0 4px 8px 0 rgba(0, 0, 0, 0.035) !default;
+$crm-header-height:     50px !default;
 
 // Global values
 // -----------------------------------------------------------------------------
@@ -41,11 +25,11 @@ $light:               #ffffff !default; // well bg, text on dark bg hover
 $light-pale:          #c3cbd6 !default; // text on dark bg
 $light-gray:          #eeeded !default;
 
-$crm_gray-light-alt:  #f0f1f4 !default; // carousel item bg, hr resource bg
-$crm_gray-light-blue: #757b8e !default; // scrollbar thumb, pivot table text
-$crm_gray-darker-alt: #404454 !default; // page title
-$crm_grizzly:         #dcdddd !default;
-$crm_color-neutral:   #949caa !default; // gray shade
+$crm-gray-light-alt:  #f0f1f4 !default; // carousel item bg, hr resource bg
+$crm-gray-light-blue: #757b8e !default; // scrollbar thumb, pivot table text
+$crm-gray-darker-alt: #404454 !default; // page title
+$crm-grizzly:         #dcdddd !default;
+$crm-color-neutral:   #949caa !default; // gray shade
 
 // Brand colors
 // -----------------------------------------------------------------------------
@@ -55,8 +39,7 @@ $brand-success:       #7dc4a7 !default;
 $brand-warning:       #DABB24 !default;
 $brand-danger:        #da6b86 !default;
 $brand-info:          #5bc0de !default;
-$crm_brand-secondary: #db6c86; // submenu hover
-$crm_brand-tertiary:  $brand-primary; // calendar today
+$crm-brand-secondary: #db6c86; // submenu hover
 
 // Scaffolding
 // -----------------------------------------------------------------------------
@@ -97,7 +80,7 @@ $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
-$crm_sans: 'Lato', sans-serif;
+$crm-sans: 'Lato', sans-serif;
 
 
 // Iconography
@@ -105,6 +88,10 @@ $crm_sans: 'Lato', sans-serif;
 
 $icon-font-path: '../fonts/' !default;
 $icon-font-name: 'glyphicons-halflings-regular' !default;
+
+$crm-icon-image-path: '../images/icon/' !default;
+$crm-icon-asc:        'asc.gif' !default;
+$crm-icon-desc:       'desc.gif' !default;
 
 
 // Components
@@ -256,6 +243,7 @@ $screen-phone:               $screen-xs-min !default;
 // Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
 $screen-sm:                  768px !default;
 $screen-sm-min:              $screen-sm !default;
+$screen-sm-max:               767px !default;
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
@@ -489,6 +477,9 @@ $modal-backdrop-bg:           #000 !default;
 $modal-header-border-color:   #e5e5e5 !default;
 $modal-footer-border-color:   $modal-header-border-color !default;
 
+$crm-custom-modal-padding:       20 !default;
+$crm-custom-modal-body-padding:  10 !default;
+
 
 // Alerts
 // -----------------------------------------------------------------------------
@@ -571,7 +562,7 @@ $panel-info-text:             $state-info-text !default;
 $panel-info-border:           $state-info-border !default;
 $panel-info-heading-bg:       $state-info-bg !default;
 
-$crm_panel-heading-font-size: 1.8rem;
+$crm-panel-heading-font-size: 1.8rem;
 $panel-body-padding:          20px;
 $panel-heading-padding:       15px 20px;
 
@@ -683,7 +674,14 @@ $container-lg:                 $container-large-desktop !default;
 
 
 // Scrollbar
-// -------------------------
-$crm_scrollbar-size:        10px !default;
-$crm_scrollbar-track-color: #F5F5F7 !default;
-$crm_scrollbar-thumb-color: $crm_gray-light-blue !default;
+// -----------------------------------------------------------------------------
+$crm-scrollbar-size:        10px !default;
+$crm-scrollbar-track-color: #F5F5F7 !default;
+$crm-scrollbar-thumb-color: $crm-gray-light-blue !default;
+
+
+// Custom Scrollbar
+// -----------------------------------------------------------------------------
+$crm-customselect-height:        33 !default;
+$crm-customselect-caret-width:   32 !default;
+$crm-customselect-padding-right: $crm-customselect-caret-width + 12 !default;

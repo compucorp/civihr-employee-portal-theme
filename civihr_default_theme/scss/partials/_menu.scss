@@ -11,7 +11,7 @@
   position: relative;
 
   &:hover {
-    background: $crm_gray-darker-alt;
+    background: $crm-gray-darker-alt;
     color: $light;
 
     > .chr_header__sub-menu {
@@ -52,7 +52,7 @@
   float: right;
 
   &:hover {
-    background-color: $crm_gray-darker-alt;
+    background-color: $crm-gray-darker-alt;
 
     > .chr_header__sub-menu {
       display: block;
@@ -82,7 +82,7 @@
 }
 
 .chr_header__sub-menu {
-  background: $crm_gray-darker-alt;
+  background: $crm-gray-darker-alt;
   display: none;
   position: absolute;
   z-index: 99;
@@ -99,7 +99,7 @@
     white-space: nowrap;
 
     &:hover {
-      background: $crm_brand-secondary;
+      background: $crm-brand-secondary;
       color: $light;
     }
 
@@ -141,7 +141,7 @@
   }
 
   .chr_header__nav__menu > li > a {
-    border-bottom: 1px solid $crm_grizzly;
+    border-bottom: 1px solid $crm-grizzly;
     margin: 0 25px;
     padding: 0 20px;
   }

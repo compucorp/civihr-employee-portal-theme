@@ -119,7 +119,7 @@
     .modal-body {
       @include clearfix;
 
-      padding: #{$crm_custom-modal-body-padding}px;
+      padding: #{$crm-custom-modal-body-padding}px;
       padding-top: 0;
     }
 
@@ -134,7 +134,7 @@
 
     .modal-dialog {
       box-sizing: content-box; // Keeps the same width no matter how much the padding is
-      padding: #{$crm_custom-modal-padding}px;
+      padding: #{$crm-custom-modal-padding}px;
       max-width: #{$custom-modal-width}px;
     }
 
@@ -151,7 +151,7 @@
     }
 
     // Necessary for IE, since it can't center a block with just max-width
-    @media(min-width: #{$custom-modal-width + $crm_custom-modal-padding * 2}px) {
+    @media(min-width: #{$custom-modal-width + $crm-custom-modal-padding * 2}px) {
 
       .modal-dialog {
         padding: 0;
@@ -171,7 +171,7 @@
 
 // Sort icon on table header
 @mixin manager-approval-main-table-sort($sort-image) {
-  background-image: url(#{$crm_images-icons-path}#{$sort-image});
+  background-image: url(#{$crm-icon-image-path}#{$sort-image});
   background-repeat: no-repeat;
   background-position: right center;
 }

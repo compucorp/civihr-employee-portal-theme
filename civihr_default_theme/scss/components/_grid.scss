@@ -1,0 +1,39 @@
+/*
+A grid table with embedded tables
+*/
+
+.chr-grid {
+  border: none;/*no border for grid*/
+  box-shadow: none;
+  background-color: $gray-light;
+}
+
+.chr-grid__header{
+    background-color: $light/*rgb(255, 255, 255)*/;
+    box-shadow: $crm-box-shadow-global;
+}
+
+.panel {
+  > .chr-grid__panel-heading {
+    background-image: none;
+    background-color: $light;
+    color: $light;
+    box-shadow: $crm-box-shadow-global;
+  }
+}
+
+.chr-grid__body{
+  margin: 16px 16px 0 16px;
+  background-color: $light;
+  box-shadow: $crm-box-shadow-global;
+  padding-bottom: 0px;
+  padding-top: 1px;
+  border-top-width: 0px;
+}
+
+.chr-grid__row__cell--light{
+  font-weight: $font-weight-lighter;
+  text-align: left;
+}
+
+

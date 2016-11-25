@@ -178,3 +178,17 @@
         white-space: nowrap;
     }
 }
+
+/**
+* Borderless table,use it alongside table class
+*/
+.table-borderless {
+  tbody,
+  thead,
+  tfoot {
+    tr,
+    th {
+      border: none;
+    }
+  }
+}

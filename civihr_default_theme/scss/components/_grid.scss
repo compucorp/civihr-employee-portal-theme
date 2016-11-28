@@ -3,36 +3,36 @@ A grid table with embedded tables
 */
 
 .chr-grid {
-  border: none;/*no border for grid*/
-  box-shadow: none;
   background-color: $gray-light;
+  border: none;
+  box-shadow: none;
 }
 
-.chr-grid__header{
-    background-color: $light/*rgb(255, 255, 255)*/;
+.chr-grid__header {
+    background-color: $light;
     box-shadow: $crm-box-shadow-global;
 }
 
 .panel {
   > .chr-grid__panel-heading {
-    background-image: none;
     background-color: $light;
+    background-image: none;
     color: $light;
     box-shadow: $crm-box-shadow-global;
   }
 }
 
-.chr-grid__body{
-  margin: 16px 16px 0 16px;
+.chr-grid__body {
   background-color: $light;
+  border-top-width: 0;
   box-shadow: $crm-box-shadow-global;
-  padding-bottom: 0px;
+  margin: 16px 16px 0 16px;
+  padding-bottom: 0;
   padding-top: 1px;
-  border-top-width: 0px;
 }
 
-.chr-grid__row__cell--light{
-  font-weight: $font-weight-lighter;
+.chr-grid__row__cell--light {
+  font-weight: $crm-font-weight-lighter;
   text-align: left;
 }
 

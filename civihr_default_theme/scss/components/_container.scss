@@ -1,23 +1,23 @@
 .chr-separator {
-  background-color: $light-gray /*rgb(237, 237, 237)*/;
+  background-color: $light-gray;
   height: 2px;
 }
 
 .chr-container {
-  margin-top: 60px;
   background-color: $gray-light;
+  margin-top: 60px;
 }
 
 .chr-container__row {
-  background-color: $gray-lighter/*#f7f7f9*/;
+  background-color: $gray-lighter;
   padding: 24px;
 }
 
 .chr-container__row--summary {
   height: 70px;
+  margin-bottom: 30px;
   padding-top: 6px;
   padding-bottom: 20px;
-  margin-bottom: 30px;
 }
 
 .chr-container__row__cell {
@@ -38,16 +38,18 @@
 /**
 * table header font
 **/
-.chr-container  th {
-  font-weight: $font-weight-medium;
-  color: $gray-darker;
+.chr-container {
+  th {
+    color: $gray-darker;
+    font-weight: $crm-font-weight-medium;
+  }
 }
 
 .chr-container__split-button {
-  font-size: 13px;
   color: $brand-primary;
+  font-size: $crm-font-size-small;
+  font-weight: $crm-font-weight-lighter;
   text-align: left;
-  font-weight: $font-weight-lighter;
 }
 
 .chr-margin-left-10 {

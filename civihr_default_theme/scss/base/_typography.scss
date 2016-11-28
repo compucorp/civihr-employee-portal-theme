@@ -21,6 +21,11 @@
   }
 }
 
+$crm-font-weight-medium: 500;
+$crm-font-weight-lighter: 300;
+$crm-font-size-small: 13px;
+$crm-font-size-big: 16px;
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -45,9 +50,9 @@
 
 
 .u-font-size-small {
-  font-size: 13px;
+  font-size: $crm-font-size-small;
 }
 
 .u-font-size-big {
-  font-size: 16px;
+  font-size: $crm-font-size-big;
 }

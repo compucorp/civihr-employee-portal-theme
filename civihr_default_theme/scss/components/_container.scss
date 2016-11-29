@@ -1,3 +1,7 @@
+/**
+* container for report
+**/
+
 .chr-separator {
   background-color: $light-gray;
   height: 2px;
@@ -10,18 +14,18 @@
 
 .chr-container__row {
   background-color: $gray-lighter;
-  padding: 24px;
+  font-size: $crm-font-size-medium;
+  padding: 20px 0;
 }
 
 .chr-container__row--summary {
-  height: 70px;
-  margin-bottom: 30px;
-  padding-top: 6px;
-  padding-bottom: 20px;
+  @extend .chr-container__row;
+  margin-bottom: 15px;
+  padding: 0;
 }
 
 .chr-container__row__cell {
-  margin: 24px;
+  font-family: "FontAwesome";
 }
 
 .chr-container__row__cell--separate {
@@ -42,6 +46,8 @@
   th {
     color: $gray-darker;
     font-weight: $crm-font-weight-medium;
+    line-height: 2.5;
+    text-align: left;
   }
 }
 
@@ -50,8 +56,23 @@
   font-size: $crm-font-size-small;
   font-weight: $crm-font-weight-lighter;
   text-align: left;
+  width: 100%;
 }
 
 .chr-margin-left-10 {
   margin-left: 10px;
+}
+
+.chr-margin-left-15 {
+  margin-left: 15px;
+}
+
+.chr-padding-left-medium {
+  padding-left: 1px;
+}
+.chr-padding-left-large {
+  padding-left: 48px;
+}
+.chr-width-full {
+  width: 100%;
 }

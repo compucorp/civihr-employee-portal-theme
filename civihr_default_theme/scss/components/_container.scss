@@ -1,0 +1,57 @@
+/**
+* container for report
+**/
+
+@mixin chr_mixin-row($padding-updown, $padding-leftright){
+  background-color: $gray-lighter;
+  font-size: $crm-font-size-small;
+  padding: $padding-updown $padding-leftright;
+}
+
+.chr_separator {
+  background-color: $light-gray;
+  height: 2px;
+}
+
+.chr_container {
+  font-size: $crm-font-size-small;
+  font-weight: $crm-font-weight-medium;
+  .fa {
+    margin-right: 8px;
+  }
+  th {
+    font-weight: $crm-font-weight-medium;
+    font-size: $crm-font-size-small;
+  }
+}
+
+.chr_container__row {
+  @include chr_mixin_row(5px, 0);
+  th {
+    padding: 9px 3px;
+    width: 85px;
+    &:first-child {
+      width: 287px;
+    }
+    &:nth-child(2) {
+      width: 178px;
+    }
+    &:nth-child(3) {
+      width: 178px;
+    }
+  }
+}
+
+.chr_container__row--header {
+  @include chr_mixin_row(2px, 0);
+}
+
+.chr_container__row--summary {
+  margin-bottom: 15px;
+  th {
+    &:first-child {
+      padding-left: 72px;
+    }
+  }
+}
+

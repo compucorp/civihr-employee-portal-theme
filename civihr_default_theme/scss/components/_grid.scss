@@ -1,0 +1,78 @@
+/*
+A grid table with embedded tables
+*/
+
+/**
+* variables for desktop resolution
+*/
+
+@mixin chr_mixin-table-cell($padding-updown, $padding-leftright, $padding-left){
+  th {
+    font-size: $crm-font-size-small;
+    font-weight: $crm-font-weight-medium;
+    padding: $padding-updown $padding-leftright;
+    &:first-child {
+      padding-left: $padding-left;
+    }
+  }
+  td {
+    font-size: $crm-font-size-small;
+    font-weight: $crm-font-weight-medium;
+    padding: $padding-updown $padding-leftright;
+    &:first-child {
+      padding-left: $padding-left;
+    }
+    &:nth-child(n+2) {
+      font-weight: $crm-font-weight-lighter;
+    }
+  }
+}
+
+.chr_grid {
+  @include chr_mixin-table-cell(9px, 3px, 20px);
+  background-color: $gray-light;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 15px;
+}
+
+.panel {
+  > .chr_grid__panel-heading {
+    background-color: $light;
+    box-shadow: $crm-box-shadow-global;
+    padding: 0 20px;
+    th {
+      width: 85px;
+      &:first-child {
+        width: 643px;
+      }
+    }
+    .fa {
+      margin-right: 15px;
+    }
+  }
+}
+
+.chr_grid__body {
+  background-color: $light;
+  border-top-width: 0;
+  box-shadow: $crm-box-shadow-global;
+  margin: 16px 16px 0 16px;
+  padding: 0 20px;
+}
+
+.chr_grid__row--header {
+  th {
+    width: 85px;
+    &:first-child {
+      width: 271px;
+    }
+    &:nth-child(2) {
+      width: 178px;
+    }
+    &:nth-child(3) {
+      width: 178px;
+    }
+  }
+}
+

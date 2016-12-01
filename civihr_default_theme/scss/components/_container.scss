@@ -2,77 +2,56 @@
 * container for report
 **/
 
-.chr-separator {
+@mixin chr_mixin-row($padding-updown, $padding-leftright){
+  background-color: $gray-lighter;
+  font-size: $crm-font-size-small;
+  padding: $padding-updown $padding-leftright;
+}
+
+.chr_separator {
   background-color: $light-gray;
   height: 2px;
 }
 
-.chr-container {
-  background-color: $gray-light;
-  margin-top: 60px;
-}
-
-.chr-container__row {
-  background-color: $gray-lighter;
-  font-size: $crm-font-size-medium;
-  padding: 20px 0;
-}
-
-.chr-container__row--summary {
-  @extend .chr-container__row;
-  margin-bottom: 15px;
-  padding: 0;
-}
-
-.chr-container__row__cell {
-  font-family: "FontAwesome";
-}
-
-.chr-container__row__cell--separate {
-  box-shadow: $crm-box-shadow-global;
-  height: 70px;
-  text-align: center;
-}
-
-.chr-container__row__cell--separate__title {
-  margin-left: 100px;
-  text-align: center;
-}
-
-/**
-* table header font
-**/
-.chr-container {
+.chr_container {
+  font-size: $crm-font-size-small;
+  font-weight: $crm-font-weight-medium;
+  .fa {
+    margin-right: 8px;
+  }
   th {
-    color: $gray-darker;
     font-weight: $crm-font-weight-medium;
-    line-height: 2.5;
-    text-align: left;
+    font-size: $crm-font-size-small;
   }
 }
 
-.chr-container__split-button {
-  color: $brand-primary;
-  font-size: $crm-font-size-small;
-  font-weight: $crm-font-weight-lighter;
-  text-align: left;
-  width: 100%;
+.chr_container__row {
+  @include chr_mixin_row(5px, 0);
+  th {
+    padding: 9px 3px;
+    width: 85px;
+    &:first-child {
+      width: 287px;
+    }
+    &:nth-child(2) {
+      width: 178px;
+    }
+    &:nth-child(3) {
+      width: 178px;
+    }
+  }
 }
 
-.chr-margin-left-10 {
-  margin-left: 10px;
+.chr_container__row--header {
+  @include chr_mixin_row(2px, 0);
 }
 
-.chr-margin-left-15 {
-  margin-left: 15px;
+.chr_container__row--summary {
+  margin-bottom: 15px;
+  th {
+    &:first-child {
+      padding-left: 72px;
+    }
+  }
 }
 
-.chr-padding-left-medium {
-  padding-left: 1px;
-}
-.chr-padding-left-large {
-  padding-left: 48px;
-}
-.chr-width-full {
-  width: 100%;
-}

@@ -1,0 +1,308 @@
+/**
+ * Custom CiviHR panel
+ */
+.chr_panel {
+  position: relative;
+
+  &--without-background {
+   background: none;
+   box-shadow: none;
+
+   .chr_search-result__header {
+     border-bottom-color: $crm-grizzly;
+   }
+  }
+
+  &__header-subtitle {
+    color: $brand-primary;
+  }
+}
+
+.chr_panel__footer {
+  @extend .clearfix;
+
+  padding-top: 20px;
+
+  @media(min-width: $screen-sm-min) {
+    border-top: 1px solid $gray-light;
+    margin-top: 30px;
+  }
+}
+
+/**
+ * Vertical alignment workaround for forms.
+ *
+ * We need to assume that if contained within a <form>, then there is going to be a
+ * `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
+ */
+form {
+
+  .chr_panel__footer {
+    margin-top: -20px;
+  }
+
+  @media(min-width: $screen-sm-min) {
+    .chr_panel__footer {
+      margin-top: 10px;
+    }
+  }
+}
+
+.chr_panel__header {
+  box-shadow: none;
+}
+
+.chr_panel__header--with-border {
+  border-bottom: 1px solid $gray-light;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.chr_panel__header--w-actions {
+  @extend .chr_panel__header;
+
+  padding-bottom: 10px;
+  position: relative;
+
+  [class*="chr_action"] {
+    float: none;
+    margin-left: 15px;
+    vertical-align: top;
+  }
+
+  .form-type-select {
+    @include fa('\f0d7');
+    display: inline-table; // Safari *shrugs*
+    padding: 0;
+
+    &:before {
+      float: right;
+      margin: 4px 0 0 4px;
+    }
+
+    > select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: none;
+      border: 0;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+
+  .pane-title {
+    margin-bottom: 0;
+  }
+
+  .views-exposed-widget {
+    display: inline-block;
+  }
+
+  .views-exposed-widgets {
+    background: $gray-lighter;
+    margin: 0 -20px;
+    padding: 10px 20px;
+    position: relative;
+    text-align: right;
+    z-index: 2;
+  }
+
+  @media(min-width: $screen-xs-min) {
+    padding-bottom: 20px;
+
+    .pane-title {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .views-exposed-widgets {
+      background: none;
+      margin: 0 0 10px 0;
+      padding: inherit;
+    }
+  }
+}
+
+.chr_panel__toolbar {
+  margin-bottom: 20px;
+  padding: 20px 20px 0;
+
+  > [class*="chr_panel__toolbar__"] {
+    display: block;
+  }
+
+  > .chr_panel__toolbar__actions {
+    position: absolute;
+    right: 20px;
+    top: 19px;
+  }
+
+  > .chr_panel__toolbar__filter {
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media(min-width: $screen-sm-min) {
+    margin-bottom: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+
+    > [class*="chr_panel__toolbar__"] {
+      display: inline-block;
+      position: static;
+    }
+
+    > .chr_panel__toolbar__filter {
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.chr_panel__toolbar__actions {
+
+  [class*="chr_action"] {
+    margin-left: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .chr_action--icon--calendar {
+
+    &:before {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+.chr_panel__toolbar__filter {
+
+  .btn.input-group-addon {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    padding: 6px;
+    font-size: 1.1rem;
+    line-height: 1;
+    background: none;
+    color: $crm-color-neutral;
+    cursor: default;
+  }
+
+  .form-control {
+    @extend .form-text;
+    padding: 7px 8px;
+  }
+
+  .input-group {
+    position: relative;
+  }
+
+  @media(min-width: $screen-sm-min) {
+    .btn.input-group-addon {
+      top: 0;
+    }
+
+    .form-control {
+      padding: 2px 8px;
+    }
+  }
+}
+
+
+
+/* [modifier] Panel containing user's details */
+.chr_panel--my-details {
+
+  .chr_panel--my-details__data-group {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media(min-width: $screen-md-min) {
+    .chr_panel--my-details__data-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.chr_panel--my-details__data-group {
+
+  > .chr_panel--my-details__data-group__title {
+    margin-bottom: 20px;
+  }
+}
+
+.chr_panel--my-details__data-group__content {
+
+  .field-content,
+  .views-label {
+    display: block;
+    float: left;
+    font-size: 1.3rem;
+    width: 50%;
+  }
+
+  .views-field {
+    @include clearfix;
+
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .views-field-email {
+
+    .field-content {
+      word-break: break-all;
+    }
+  }
+
+  .views-label {
+    color: $gray-darker;
+  }
+
+  @media(min-width: $screen-sm-min) {
+    .field-content,
+    .views-label {
+      font-size: 1em;
+    }
+  }
+}
+
+.chr_panel--my-details__data-group__title {
+  margin: 0;
+}
+
+
+/* [modifier] Panel with no padding applied to its content */
+.chr_panel--no-padding {
+
+  .chr_panel__footer {
+    margin-top: 0;
+    padding: $panel-body-padding;
+  }
+
+  > .pane-content {
+    margin: -20px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,35 @@
+.panel {
+  @include box-shadow($crm-box-shadow-global);
+
+  &--sliding-body {
+    border-bottom: 0;
+    overflow: hidden !important;
+  }
+}
+
+.panel-body-wrap {
+  transition: max-height .4s linear;
+  max-height: 162px;
+
+  &--collapse {
+    max-height: 0;
+  }
+}
+
+.panel-body {
+  > .row:last-child .form-actions {
+    margin-bottom: 0;
+  }
+
+  @include grid-condensed($panel-body-padding+1px);
+}
+
+.panel-heading {
+  width: 100%;
+}
+
+.panel-title {
+  color: $gray-darker;
+  font-size: $crm-panel-heading-font-size;
+  font-weight: 400;
+}

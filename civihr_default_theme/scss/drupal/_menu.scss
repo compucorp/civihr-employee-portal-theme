@@ -1,0 +1,31 @@
+// Styles for Menus and Navs
+// --------------------------------------------------
+
+//Hide Menu link as part of SSP
+.menu-link-home,
+.menu-link-civihr-admin,
+.menu-link-civihr-ssp {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  //Show links in Mobile view and different background
+  .menu-link-civihr-admin,
+  .menu-link-civihr-ssp {
+    display: block;
+    background-color: $gray-light;
+  }
+
+  .menu-link-civihr-ssp > a {
+    border-bottom: none !important;
+  }
+}
+
+
+//Hide Menus when not logged in
+.not-logged-in {
+  .menu-link-civihr-admin,
+  .menu-link-civihr-ssp {
+    display: none;
+  }
+}

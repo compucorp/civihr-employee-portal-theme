@@ -14,7 +14,7 @@ $crm-header-height:     50px !default;
 
 $gray-dark:           #555862 !default; // menu bg
 $gray-darker:         #4c4c5d !default; // text darker
-$gray:                #767b8e !default; // main text/lighter, menu item bg hover, footer logo
+$gray:                #757b8e !default; // main text/lighter, menu item bg hover, footer logo
 $gray-light:          #ecedee !default; // body bg
 $gray-lighter:        #fbfbfc !default; // table odd row
 
@@ -59,6 +59,20 @@ $crm-icon-desc:       'desc.gif' !default;
 $border-radius-base:             0 !default;
 $border-radius-large:            0 !default;
 $border-radius-small:            0 !default;
+
+
+// Tables
+// -----------------------------------------------------------------------------
+$table-bg:                       $light !default;
+$table-border-color:             #ededed !default;
+$table-cell-padding:             8px 20px !default;
+
+$crm-table-heading-padding:      13px !default;
+$crm-table-heading-bg:           #f7f7f9 !default;
+$crm-table-heading-border-color: #dadcde !default;
+
+$crm-table-nested-indent-color:  #dbdddf !default;
+$crm-table-nested-indent-width:  10px !default;
 
 
 // Buttons

@@ -398,34 +398,6 @@ h2.pane-title {
     font-weight: 400;
 }
 
-/* Tables */
-
-.table-responsive {
-    margin: 0 -20px;
-}
-table {
-    font-size: 1.3rem;
-    width: 100%;
-    table-layout: fixed;
-}
-th,
-td {
-    border-bottom: 1px solid $gray-light;
-    padding: 8px 20px;
-    line-height: 1.3;
-}
-th {
-    color: $gray-darker;
-}
-tr {
-    &.odd {
-        background: $gray-lighter;
-    }
-    &.even {
-        background: none;
-    }
-}
-
 .container.collapse {
     padding: 0;
 }

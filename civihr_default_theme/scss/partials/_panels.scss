@@ -1,5 +1,7 @@
 .panel {
   @include box-shadow($crm-box-shadow-global);
+  background: transparent;
+  border: none;
 
   &--sliding-body {
     border-bottom: 0;
@@ -17,11 +19,13 @@
 }
 
 .panel-body {
+  @include grid-condensed($panel-body-padding+1px);
+  background: $light;
+
   > .row:last-child .form-actions {
     margin-bottom: 0;
   }
 
-  @include grid-condensed($panel-body-padding+1px);
 }
 
 .panel-heading {

@@ -1,3 +1,6 @@
+$padding-y: nth($table-cell-padding, 1);
+$padding-x: nth($table-cell-padding, 2);
+
 table,
 .table {
   margin-bottom: 0;
@@ -7,12 +10,10 @@ table,
     > tr {
 
       > th {
-        $padding-x: nth($table-cell-padding, 2);
-
         background: $crm-table-heading-bg;
         border-bottom: 0;
         color: $gray-darker;
-        padding: $crm-table-heading-padding $padding-x;
+        padding: $crm-table-heading-padding;
         text-transform: capitalize;
       }
     }
@@ -52,7 +53,6 @@ table,
 
   > tbody,
   > thead {
-    $padding-x: nth($table-cell-padding, 2);
 
     > tr {
 
@@ -74,11 +74,48 @@ table,
 
 // A table nested in another table's <td>
 .table-nested {
-  $margin-y: nth($table-cell-padding, 1);
-  $margin-x: nth($table-cell-padding, 2);
+  margin: -#{$padding-y} -#{$padding-x};
 
-  border-color: $crm-table-nested-indent-color;
-  border-style: solid;
-  border-width: 2px 0 2px $crm-table-nested-indent-width;
-  margin: -#{$margin-y} -#{$margin-x};
+  tbody,
+  thead {
+
+    > tr {
+
+      > td,
+      > th {
+
+        &:first-child {
+          padding-left: $padding-x + $crm-table-nested-indent-width;
+          position: relative;
+
+          &:before {
+            background: $crm-table-nested-indent-color;
+            content: '';
+            display: block;
+            height: 102%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: $crm-table-nested-indent-width;
+          }
+        }
+
+        &:last-child {
+          padding-right: $padding-x + $crm-table-nested-indent-width;
+          position: relative;
+
+          &:after {
+            background: $crm-table-nested-indent-color;
+            content: '';
+            display: block;
+            height: 102%;
+            right: 0;
+            position: absolute;
+            top: 0;
+            width: $crm-table-nested-indent-width;
+          }
+        }
+      }
+    }
+  }
 }

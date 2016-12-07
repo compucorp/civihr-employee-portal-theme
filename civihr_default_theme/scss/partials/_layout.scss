@@ -79,6 +79,12 @@
     color: $light;
 }
 
+&.not-logged-in {
+    .chr_header__corner {
+        display: none;
+    }
+}
+
 .chr_header__corner {
     background: $brand-primary;
     color: $light;
@@ -91,11 +97,17 @@
         color: rgba($light, 0.8);
     }
 
+    > a {
+        height: 50px;
+    }
+
+    > a,
     > .chr_header__corner__brand {
         display: none;
     }
 
     @media(min-width: $screen-sm-min) {
+        > a,
         > .chr_header__corner__brand {
             display: block;
         }

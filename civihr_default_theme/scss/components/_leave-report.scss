@@ -1,0 +1,53 @@
+
+// ToDo: This is probably some kind of variation of .table-condensed:
+// only small padding horizontally, and keep the highlight on the headings
+.chr_leave-report__table {
+
+  > thead,
+  > tbody {
+
+    > tr {
+      $padding-x:           nth($table-cell-padding, 2);
+      $padding-condensed-x: nth($table-condensed-cell-padding, 2);
+
+      > th,
+      > td {
+        padding-left: $padding-condensed-x;
+        padding-right: $padding-condensed-x;
+
+        &:first-child {
+          padding-left: $padding-x;
+        }
+
+        &:last-child {
+          padding-right: $padding-x;
+        }
+      }
+    }
+  }
+}
+
+.chr_leave-report__cell--action {
+  width: 3.5%;
+}
+
+.chr_leave-report__cell--label {
+  width: 24.57%;
+}
+
+.chr_leave-report__cell--dates {
+  width: 15.8%;
+}
+
+.chr_leave-report__cell--status {
+  width: 16%;
+}
+
+.chr_leave-report__cell--type {
+  width: 7.46%;
+}
+
+// Label:  280px
+// Dates:  180px
+// Status: 182px
+// Type:   85px

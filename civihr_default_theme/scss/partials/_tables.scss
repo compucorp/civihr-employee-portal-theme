@@ -7,35 +7,70 @@ table,
     > tr {
 
       > th {
+        $padding-x: nth($table-cell-padding, 2);
+
+        background: $crm-table-heading-bg;
         border-bottom: 0;
         color: $gray-darker;
+        padding: $crm-table-heading-padding $padding-x;
         text-transform: capitalize;
-
-        :not(.table-nested) > & {
-          background: $crm-table-heading-bg;
-          padding: $crm-table-heading-padding $table-cell-padding;
-        }
       }
     }
   }
 
   // The border below the headings should be darker
-  &:not(.table-bordered) {
+  // unless it's a bordered or condensed table
+  &:not(.table-bordered):not(.table-condensed) {
 
     > tbody {
 
       > tr:first-child {
 
         > td {
-
-          :not(.table-nested) > & {
-            border-color: $crm-table-heading-border-color;
-          }
+          border-color: $crm-table-heading-border-color;
         }
       }
     }
   }
 }
+
+
+// The condensed version does not have highlighted heading
+// and the it maintains the standard padding for the leftmost and rightmost cells
+.table-condensed {
+
+  > thead {
+
+    > tr {
+
+      > th {
+        background: $table-bg;
+        padding: $table-condensed-cell-padding;
+      }
+    }
+  }
+
+  > tbody,
+  > thead {
+    $padding-x: nth($table-cell-padding, 2);
+
+    > tr {
+
+      > td,
+      > th {
+
+        &:first-child {
+          padding-left: $padding-x;
+        }
+
+        &:last-child {
+          padding-right: $padding-x;
+        }
+      }
+    }
+  }
+}
+
 
 // A table nested in another table's <td>
 .table-nested {

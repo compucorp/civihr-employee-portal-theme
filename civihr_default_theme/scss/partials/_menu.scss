@@ -69,8 +69,11 @@
 }
 
 .chr_header__home-menu {
+  color: $light;
 
   &:hover {
+    color: rgba($light, 0.8);
+
     > .chr_header__sub-menu {
       display: block;
     }

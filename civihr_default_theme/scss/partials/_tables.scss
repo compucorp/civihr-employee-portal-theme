@@ -9,6 +9,8 @@ table,
 
     > tr {
 
+      // The headings have a different background, different color, and
+      // different padding than the normal cells
       > th {
         background: $crm-table-heading-bg;
         border-bottom: 0;
@@ -37,7 +39,6 @@ table,
 
 
 // The condensed version does not have highlighted heading
-// and the it maintains the standard padding for the leftmost and rightmost cells
 .table-condensed {
 
   > thead {
@@ -50,6 +51,32 @@ table,
       }
     }
   }
+}
+
+
+// The mixed condensed version keeps the same features of the standard table
+// but the horizontal padding is the same as the one for the condensed version
+.table-condensed-mixed {
+  $padding-condensed-x: nth($table-condensed-cell-padding, 2);
+
+  > thead,
+  > tbody {
+
+    > tr {
+
+      > th,
+      > td {
+        padding-left: $padding-condensed-x;
+        padding-right: $padding-condensed-x;
+      }
+    }
+  }
+}
+
+// Both condensed variations maintain the standard padding
+// for the leftmost and rightmost cells
+.table-condensed,
+.table-condensed-mixed {
 
   > tbody,
   > thead {
@@ -72,47 +99,27 @@ table,
 }
 
 
-// A table nested in another table's <td>
+// A table nested and indented in another table's <td>
 .table-nested {
   margin: -#{$padding-y} -#{$padding-x};
+  overflow-y: hidden;
 
-  tbody,
-  thead {
+  > table {
 
-    > tr {
+    > tbody,
+    > thead {
 
-      > td,
-      > th {
+      > tr {
 
-        &:first-child {
-          padding-left: $padding-x + $crm-table-nested-indent-width;
-          position: relative;
+        > td,
+        > th {
 
-          &:before {
-            background: $crm-table-nested-indent-color;
-            content: '';
-            display: block;
-            height: 102%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: $crm-table-nested-indent-width;
+          &:first-child {
+            @include cell-indent-effect('left');
           }
-        }
 
-        &:last-child {
-          padding-right: $padding-x + $crm-table-nested-indent-width;
-          position: relative;
-
-          &:after {
-            background: $crm-table-nested-indent-color;
-            content: '';
-            display: block;
-            height: 102%;
-            right: 0;
-            position: absolute;
-            top: 0;
-            width: $crm-table-nested-indent-width;
+          &:last-child {
+            @include cell-indent-effect('right');
           }
         }
       }

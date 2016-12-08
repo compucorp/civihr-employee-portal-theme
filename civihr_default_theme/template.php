@@ -356,11 +356,10 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 }
 
 /**
- * Hide the links to civicrm and dashboard if Access to CiviCRM is not present
+ * Hide the links to civicrm if Access to CiviCRM is not present
  */
 function _hide_menu_items(&$element) {
-  if (!user_access("access CiviCRM") &&
-    ($element['#href'] == 'civicrm' || $element['#href'] == 'dashboard')) {
+  if (!user_access("access CiviCRM") && $element['#href'] == 'civicrm') {
     //Apply hide class provided by bootstrap
     $element['#attributes']['class'][] = 'hidden';
   }

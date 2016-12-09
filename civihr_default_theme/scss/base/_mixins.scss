@@ -216,14 +216,14 @@
   $sign: if($pos == 'top', '', '-');
 
   &:#{$pseudo-pos} {
-    box-shadow: inset 0px #{$sign}4px 9px -4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px #{$sign}6px 9px -6px rgba(0, 0, 0, 0.2);
     content: '';
     display: block;
     height: 10px;
-    left: -10px;
+    left: 0;
     position: absolute;
     #{$pos}: 0;
-    width: 110%;
+    width: 100%;
     z-index: 10;
   }
 }

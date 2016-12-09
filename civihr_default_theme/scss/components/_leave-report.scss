@@ -1,7 +1,30 @@
+.chr_leave-report__action {
+  color: $gray-darker;
+}
+
+
+.chr_leave-report__label {
+  color: $gray-darker;
+  font-weight: 600;
+
+  > .fa {
+    margin-right: 5px;
+  }
+}
+
+
+.chr_leave-report__heading {
+
+  .chr_leave-report__export-button {
+    line-height: 2.4;
+  }
+}
+
+
 .chr_leave-report__table {
 
-  // Fix for a rendering bug in firefox and chrome, where the background is
-  // painted over the cell borders
+  // Fix for a rendering bug in firefox and chrome, where the background
+  // is painted over the cell borders
   table {
     border-collapse: separate;
   }
@@ -26,8 +49,3 @@
 .chr_leave-report__table__heading--type {
   width: 7.46%;
 }
-
-// Label:  280px
-// Dates:  180px
-// Status: 182px
-// Type:   85px

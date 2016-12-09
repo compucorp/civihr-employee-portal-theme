@@ -1,20 +1,29 @@
-.chr_leave-report__cell--action {
+.chr_leave-report__table {
+
+  // Fix for a rendering bug in firefox and chrome, where the background is
+  // painted over the cell borders
+  table {
+    border-collapse: separate;
+  }
+}
+
+.chr_leave-report__table__heading--action {
   width: 3.5%;
 }
 
-.chr_leave-report__cell--label {
+.chr_leave-report__table__heading--label {
   width: 24.57%;
 }
 
-.chr_leave-report__cell--dates {
+.chr_leave-report__table__heading--dates {
   width: 15.8%;
 }
 
-.chr_leave-report__cell--status {
+.chr_leave-report__table__heading--status {
   width: 16%;
 }
 
-.chr_leave-report__cell--type {
+.chr_leave-report__table__heading--type {
   width: 7.46%;
 }
 

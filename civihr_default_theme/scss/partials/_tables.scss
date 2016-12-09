@@ -1,6 +1,3 @@
-$padding-y: nth($table-cell-padding, 1);
-$padding-x: nth($table-cell-padding, 2);
-
 table,
 .table {
   margin-bottom: 0;
@@ -77,6 +74,8 @@ table,
 // for the leftmost and rightmost cells
 .table-condensed,
 .table-condensed-mixed {
+  $padding-y: nth($table-cell-padding, 1);
+  $padding-x: nth($table-cell-padding, 2);
 
   > tbody,
   > thead {
@@ -101,7 +100,6 @@ table,
 
 // A table nested and indented in another table's <td>
 .table-nested {
-  margin: -#{$padding-y} -#{$padding-x};
   overflow-y: hidden;
 
   > table {
@@ -115,14 +113,25 @@ table,
         > th {
 
           &:first-child {
-            @include cell-indent-effect('left');
+            @include table-nested-indent('left');
           }
 
           &:last-child {
-            @include cell-indent-effect('right');
+            @include table-nested-indent('right');
           }
         }
       }
     }
   }
+
+  @media screen and (max-width: $screen-xs-max) {
+    &.table-responsive {
+      border: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.table-nested-cell {
+  padding: 0 !important;
 }

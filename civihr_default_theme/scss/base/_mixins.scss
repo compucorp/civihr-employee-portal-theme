@@ -177,21 +177,23 @@
 }
 
 /**
- * An indentation effect simulated by using a absolutely-positioned
- * pseudo element in a table cell
+ * An indentation effect for .table-nested simulated by
+ * using a absolutely-positioned pseudo element in the table cell
  *
  * Due to the overflowing height, the table container must `overflow: hidden`!
  *
  * @param  {string} $dir the direction of the indent
  */
-@mixin cell-indent-effect($dir: 'left') {
-  $padding: if($dir == 'left', 'padding-left', 'padding-right');
-  $pseudo: if($dir == 'left', 'before', 'after');
+@mixin table-nested-indent($dir: 'left') {
+  $padding-x: nth($table-cell-padding, 2);
 
-  #{$padding}: $padding-x + $crm-table-nested-indent-width;
+  $padding-dir: if($dir == 'left', 'padding-left', 'padding-right');
+  $pseudo-pos: if($dir == 'left', 'before', 'after');
+
+  #{$padding-dir}: $padding-x + $crm-table-nested-indent-width;
   position: relative;
 
-  &:#{$pseudo} {
+  &:#{$pseudo-pos} {
     background: $crm-table-nested-indent-color;
     content: '';
     display: block;
@@ -200,5 +202,6 @@
     position: absolute;
     top: 0;
     width: $crm-table-nested-indent-width;
+    z-index: 2;
   }
 }

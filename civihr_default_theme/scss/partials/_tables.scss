@@ -100,7 +100,11 @@ table,
 
 // A table nested and indented in another table's <td>
 .table-nested {
+  @include table-nested-shadow('top');
+  @include table-nested-shadow('bottom');
+
   overflow-y: hidden;
+  position: relative;
 
   > table {
 

@@ -182,7 +182,7 @@
  *
  * Due to the overflowing height, the table container must `overflow: hidden`!
  *
- * @param  {string} $dir the direction of the indent
+ * @param {string} $dir the direction of the indent
  */
 @mixin table-nested-indent($dir: 'left') {
   $padding-x: nth($table-cell-padding, 2);
@@ -203,5 +203,27 @@
     top: 0;
     width: $crm-table-nested-indent-width;
     z-index: 2;
+  }
+}
+
+/**
+ * Adds a inset shadow to the top/bottom of a nested table
+ *
+ * @param {string} $pos the position of the shadow
+ */
+@mixin table-nested-shadow($pos: 'top') {
+  $pseudo-pos: if($pos == 'top', 'before', 'after');
+  $sign: if($pos == 'top', '', '-');
+
+  &:#{$pseudo-pos} {
+    box-shadow: inset 0px #{$sign}4px 9px -4px rgba(0, 0, 0, 0.2);
+    content: '';
+    display: block;
+    height: 10px;
+    left: -10px;
+    position: absolute;
+    #{$pos}: 0;
+    width: 110%;
+    z-index: 10;
   }
 }

@@ -1,5 +1,7 @@
 table,
 .table {
+  @include table-first-row-border();
+
   margin-bottom: 0;
 
   > thead {
@@ -14,21 +16,6 @@ table,
         color: $gray-darker;
         padding: $crm-table-heading-padding;
         text-transform: capitalize;
-      }
-    }
-  }
-
-  // The border below the headings should be darker
-  // unless it's a bordered or condensed table
-  &:not(.table-bordered):not(.table-condensed) {
-
-    > tbody {
-
-      > tr:first-child {
-
-        > td {
-          border-color: $crm-table-heading-border-color;
-        }
       }
     }
   }

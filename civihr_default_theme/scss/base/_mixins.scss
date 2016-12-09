@@ -176,6 +176,52 @@
   background-position: right center;
 }
 
+
+/**
+ * Applies rules specific to the border of the first row of a table
+ */
+@mixin table-first-row-border() {
+  // Remove the top border by default for the first row of a table...
+  > tbody {
+
+    > tr:first-child {
+
+      > td {
+        border-top-width: 0;
+      }
+    }
+  }
+
+  // ...but add it back if the table has an heading
+  > thead {
+
+    + tbody {
+
+      > tr:first-child {
+
+        > td {
+          border-top-width: 1px;
+        }
+      }
+    }
+  }
+
+  // The border below the headings should be darker
+  // unless it's a bordered or condensed table
+  &:not(.table-bordered):not(.table-condensed) {
+
+    > tbody {
+
+      > tr:first-child {
+
+        > td {
+          border-color: $crm-table-heading-border-color;
+        }
+      }
+    }
+  }
+}
+
 /**
  * An indentation effect for .table-nested simulated by
  * using a absolutely-positioned pseudo element in the table cell

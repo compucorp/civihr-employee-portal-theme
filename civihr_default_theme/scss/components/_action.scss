@@ -1,66 +1,66 @@
 $icon-margin: 8px;
 
 .chr_action {
-    @extend .btn;
-    @extend .btn-custom;
+  @extend .btn;
+  @extend .btn-custom;
 }
 
 .chr_action--icon {
-    @extend .chr_action;
+  @extend .chr_action;
 
-    &:before {
-        margin-right: $icon-margin;
-    }
+  &:before {
+    margin-right: $icon-margin;
+  }
 }
 
 .chr_action--icon--responsive {
+  &:before {
+    margin-right: 0;
+  }
+
+  > span {
+    display: none;
+  }
+
+  @media(min-width: $screen-sm-min) {
     &:before {
-        margin-right: 0;
+      margin-right: $icon-margin;
     }
 
     > span {
-        display: none;
+      display: inline;
     }
-
-    @media(min-width: $screen-sm-min) {
-        &:before {
-            margin-right: $icon-margin;
-        }
-
-        > span {
-            display: inline;
-        }
-    }
+  }
 }
 
 .chr_action--icon--calendar {
-    @extend .chr_action--icon;
-    @include fa("\f073");
+  @extend .chr_action--icon;
+  @include fa("\f073");
 }
 
 .chr_action--icon--download {
-    @extend .chr_action--icon;
-    @include fa("\f019");
+  @extend .chr_action--icon;
+  @include fa("\f019");
 }
 
 .chr_action--icon--edit {
-    @extend .chr_action--icon;
-    @include fa("\f044");
+  @extend .chr_action--icon;
+  @include fa("\f044");
 }
 
 .chr_action--icon--list {
-    @extend .chr_action--icon;
-    @include fa("\f03a");
+  @extend .chr_action--icon;
+  @include fa("\f03a");
 }
 
 .chr_action--icon--print {
-    @extend .chr_action--icon;
-    @include fa("\f02f");
+  @extend .chr_action--icon;
+  @include fa("\f02f");
 }
 
 .chr_action--transparent {
-    background: transparent !important;
-    box-shadow: none !important;
-    color: inherit !important;
-    padding: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  padding: 0;
 }

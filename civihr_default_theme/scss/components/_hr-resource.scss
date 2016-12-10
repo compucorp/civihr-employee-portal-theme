@@ -1,83 +1,83 @@
 .chr_hr-resource {
-    @include clearfix;
+  @include clearfix;
 
-    padding: $panel-body-padding;
-    position: relative;
+  padding: $panel-body-padding;
+  position: relative;
 
-    [class*="col-sm"] {
+  [class*="col-sm"] {
 
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
+  }
 
-    .chr_hr-resource__attachments {
-        margin-top: 20px;
+  .chr_hr-resource__attachments {
+    margin-top: 20px;
+  }
+
+  .chr_hr-resource__download {
+    position: absolute;
+    right: $panel-body-padding;
+    top: $panel-body-padding;
+  }
+
+  @media(min-width: $screen-sm-min) {
+    [class*="col-sm"] {
+      margin-bottom: 0 !important;
     }
 
     .chr_hr-resource__download {
-        position: absolute;
-        right: $panel-body-padding;
-        top: $panel-body-padding;
+      position: static;
     }
-
-    @media(min-width: $screen-sm-min) {
-        [class*="col-sm"] {
-            margin-bottom: 0 !important;
-        }
-
-        .chr_hr-resource__download {
-            position: static;
-        }
-    }
+  }
 }
 
 .chr_hr-resource__attachments {
-    @include clearfix;
+  @include clearfix;
 
-    .field-content {
-        background: $crm-gray-light-alt;
-        padding: 15px;
+  .field-content {
+    background: $crm-gray-light-alt;
+    padding: 15px;
 
-        ul {
-            margin: 0;
-        }
-
-        li {
-            &:not(:last-child) {
-                margin-bottom: 15px;
-            }
-        }
+    ul {
+      margin: 0;
     }
 
-    .fieldset-title {
-        color: $gray;
-        font-size: 0.875em;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
+  }
+
+  .fieldset-title {
+    color: $gray;
+    font-size: 0.875em;
+  }
 }
 
 .chr_hr-resource__description {
 
-    > p {
-        margin: 0;
-    }
+  > p {
+    margin: 0;
+  }
 }
 
 .chr_hr-resource__download {
-    color: $brand-primary;
+  color: $brand-primary;
 
-    @media(min-width: $screen-sm-min) {
-        text-align: right;
-    }
+  @media(min-width: $screen-sm-min) {
+    text-align: right;
+  }
 }
 
 .chr_hr-resource__name {
-    color: $crm-gray-darker-alt;
-    font-weight: normal;
-    line-height: normal;
-    margin: 0;
+  color: $crm-gray-darker-alt;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
 
-    > a {
-        color: inherit;
-    }
+  > a {
+    color: inherit;
+  }
 }

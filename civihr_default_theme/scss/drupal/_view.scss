@@ -7,27 +7,27 @@
  * The <table> on small screens will not adapt to the width anymore, but it will be scrollable on the X axys
  */
 .view--w-table {
+  overflow: auto;
+
+  table {
+    min-width: 720px;
+  }
+
+  @media(min-width: $screen-sm-min) {
+    overflow: visible;
+  }
+
+  @media(min-width: $screen-md-min) {
     overflow: auto;
+  }
+
+  @media(min-width: $screen-lg-min) {
+    overflow: visible;
 
     table {
-        min-width: 720px;
+      min-width: inherit;
     }
-
-    @media(min-width: $screen-sm-min) {
-        overflow: visible;
-    }
-
-    @media(min-width: $screen-md-min) {
-        overflow: auto;
-    }
-
-    @media(min-width: $screen-lg-min) {
-        overflow: visible;
-
-        table {
-            min-width: inherit;
-        }
-    }
+  }
 }
 
 
@@ -37,20 +37,20 @@
  */
 .view-id-civihr_staff_directory,
 .view-full-hr-documents {
-    background: none;
-    padding: 0;
+  background: none;
+  padding: 0;
 
-    > .view-content {
-        @include clearfix;
+  > .view-content {
+    @include clearfix;
 
-        background: #ffffff;
-    }
+    background: #ffffff;
+  }
 
-    > .view-filters {
-        background: #ffffff;
-        margin-bottom: 20px;
-        padding: $panel-body-padding;
-    }
+  > .view-filters {
+    background: #ffffff;
+    margin-bottom: 20px;
+    padding: $panel-body-padding;
+  }
 }
 
 /**
@@ -58,16 +58,16 @@
  */
 .view-full-hr-documents {
 
-    .views-row {
+  .views-row {
 
-        &:not(:last-child) {
-            border-bottom: 1px solid $gray-light;
-        }
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-light;
     }
+  }
 
-    .views-row-odd {
-        background: $gray-lighter;
-    }
+  .views-row-odd {
+    background: $gray-lighter;
+  }
 }
 
 /**

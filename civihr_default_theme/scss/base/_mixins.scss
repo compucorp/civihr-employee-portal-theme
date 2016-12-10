@@ -259,10 +259,10 @@
  */
 @mixin table-nested-shadow($pos: 'top') {
   $pseudo-pos: if($pos == 'top', 'before', 'after');
-  $sign: if($pos == 'top', '', '-');
+  $offset-y: if($pos == 'top', '6', '-4');
 
   &:#{$pseudo-pos} {
-    box-shadow: inset 0px #{$sign}6px 9px -6px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px #{$offset-y}px 9px -6px rgba(0, 0, 0, 0.2);
     content: '';
     display: block;
     height: 10px;

@@ -93,7 +93,9 @@ table,
   overflow-y: hidden;
   position: relative;
 
-  > table {
+  > table,
+  > .table {
+    background-color: $table-bg;
 
     > tbody,
     > thead {

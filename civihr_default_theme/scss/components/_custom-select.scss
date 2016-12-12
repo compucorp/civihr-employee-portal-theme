@@ -2,7 +2,7 @@
  * Custom select dropdown style
  *
  */
-.chr_custom-select {
+ .chr_custom-select {
   background: #ffffff;
   color: #767B8E;
   display: inline-block;
@@ -77,7 +77,7 @@
       padding-right: #{$crm-customselect-padding-right}px;
 
       + .form-control-feedback {
-          right: #{$crm-customselect-caret-width - 5}px !important;
+        right: #{$crm-customselect-caret-width - 5}px !important;
       }
     }
   }

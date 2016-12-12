@@ -14,7 +14,7 @@ $crm-header-height:     50px !default;
 
 $gray-dark:           #555862 !default; // menu bg
 $gray-darker:         #4c4c5d !default; // text darker
-$gray:                #767b8e !default; // main text/lighter, menu item bg hover, footer logo
+$gray:                #757b8e !default; // main text/lighter, menu item bg hover, footer logo
 $gray-light:          #ecedee !default; // body bg
 $gray-lighter:        #fbfbfc !default; // table odd row
 
@@ -37,15 +37,23 @@ $brand-warning:       #DABB24 !default;
 $brand-danger:        #da6b86 !default;
 $crm-brand-secondary: #db6c86; // submenu hover
 
+// Scaffolding
+// -----------------------------------------------------------------------------
+$body-bg:    $gray-light !default;
+$text-color: $gray !default;
+
+
 // Typography
 // -----------------------------------------------------------------------------
+$font-family-sans-serif:  'Lato', sans-serif;
 
-$crm-sans: 'Lato', sans-serif;
+$crm-font-weight-light:   300;
+$crm-font-weight-regular: 400;
+$crm-font-weight-bold:    700;
 
 
 // Iconography
 // -----------------------------------------------------------------------------
-
 $icon-font-path: '../fonts/' !default;
 
 $crm-icon-image-path: '../images/icon/' !default;
@@ -61,6 +69,21 @@ $border-radius-large:            0 !default;
 $border-radius-small:            0 !default;
 
 
+// Tables
+// -----------------------------------------------------------------------------
+$table-bg:                       $light !default;
+$table-border-color:             #ededed !default;
+$table-cell-padding:             8px 20px !default;
+$table-condensed-cell-padding:   8px 5px !default;
+
+$crm-table-heading-padding:      13px 20px !default;
+$crm-table-heading-bg:           #f7f7f9 !default;
+$crm-table-heading-border-color: #dadcde !default;
+
+$crm-table-nested-indent-color:  #dbdddf !default;
+$crm-table-nested-indent-width:  10px !default;
+
+
 // Buttons
 // -----------------------------------------------------------------------------
 
@@ -70,8 +93,17 @@ $btn-warning-border:             transparent !default;
 $btn-danger-border:              transparent !default;
 
 
-// COMPONENT VARIABLES
-// ------------------------------------------------------------------------------------------------------
+// Dropdown
+// -----------------------------------------------------------------------------
+$dropdown-border:        transparent !default;
+$dropdown-link-color:    $text-color !default;
+$dropdown-link-hover-bg: #f7f7f9 !default;
+
+
+// Navs
+// -----------------------------------------------------------------------------
+$nav-tabs-active-link-hover-bg:               $light !default;
+$nav-tabs-justified-active-link-border-color: $light !default;
 
 
 // Media queries breakpoints
@@ -93,6 +125,11 @@ $panel-bg:                    $light !default;
 $crm-panel-heading-font-size: 1.8rem;
 $panel-body-padding:          20px;
 $panel-heading-padding:       15px 20px;
+
+
+// Thumbnails
+// -----------------------------------------------------------------------------
+$thumbnail-bg: $light !default;
 
 
 // Badges

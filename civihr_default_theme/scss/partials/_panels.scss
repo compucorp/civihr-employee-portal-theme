@@ -37,3 +37,21 @@
   font-size: $crm-panel-heading-font-size;
   font-weight: 400;
 }
+
+
+// A panel heading that is just white, with a border below the title
+// (only for .panel-default)
+.panel-heading-plain {
+
+  .panel-default > & {
+    background: $light;
+    border: 0;
+
+    > .panel-title {
+      $foo: nth($panel-heading-padding, 1);
+
+      border-bottom: 1px solid $gray-light;
+      padding-bottom: $foo;
+    }
+  }
+}

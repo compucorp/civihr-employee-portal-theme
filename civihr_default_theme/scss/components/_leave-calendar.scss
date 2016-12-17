@@ -82,7 +82,7 @@
   }
 }
 
-.chr_leave-calendar__legend__item {
+.chr_leave-calendar__legend__entry {
   height: 20px;
 
   > .chr_leave-calendar__item {
@@ -95,6 +95,10 @@
   & + & {
     margin-top: 10px;
   }
+}
+
+.chr_leave-calendar__legend__label {
+  font-size: 12px;
 }
 
 

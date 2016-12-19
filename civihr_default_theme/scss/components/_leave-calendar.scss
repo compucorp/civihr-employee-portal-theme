@@ -15,16 +15,12 @@ $chr-leave-calendar-legend-size:                  20px;
 .chr_leave-calendar__days {
 
   > th {
-    font-size: 10px;
+    font-size: $chr-leave-calendar-cell-font-size;
     padding: 10px !important;
     text-align: center;
 
     @media (min-width: $screen-lg-min) {
       padding: 10px 0 !important;
-    }
-
-    > span {
-      display: block;
     }
   }
 }
@@ -51,13 +47,8 @@ $chr-leave-calendar-legend-size:                  20px;
   width: 100%;
 
   > span {
-    bottom: 0;
+    @include absolute-centered();
     height: 1.2em;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 }
 
@@ -113,7 +104,7 @@ $chr-leave-calendar-legend-size:                  20px;
 }
 
 .chr_leave-calendar__legend__label {
-  font-size: 12px;
+  font-size: $crm-font-size-small;
 }
 
 

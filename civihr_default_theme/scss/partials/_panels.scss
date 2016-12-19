@@ -49,10 +49,10 @@
     border: 0;
 
     > .panel-title {
-      $foo: nth($panel-heading-padding, 1);
+      $padding-y: nth($panel-heading-padding, 1);
 
       border-bottom: 1px solid $gray-light;
-      padding-bottom: $foo;
+      padding-bottom: $padding-y;
     }
   }
 

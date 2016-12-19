@@ -40,7 +40,8 @@
 
 
 // A panel heading that is just white, with a border below the title
-// (only for .panel-default)
+// (only for .panel-default). If the panel itself is collapsed, the title loses
+// the bottom border
 .panel-heading-plain {
 
   .panel-default > & {
@@ -52,6 +53,14 @@
 
       border-bottom: 1px solid $gray-light;
       padding-bottom: $foo;
+    }
+  }
+
+  .panel-default.is-collapsed > & {
+
+    > .panel-title {
+      border-bottom: 0;
+      padding-bottom: 0;
     }
   }
 }

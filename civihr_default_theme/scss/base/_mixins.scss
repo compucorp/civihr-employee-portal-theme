@@ -273,3 +273,15 @@
     z-index: 10;
   }
 }
+
+/**
+ * Absolutely positions and vertically and horizontally centers an element
+ */
+@mixin absolute-centered() {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

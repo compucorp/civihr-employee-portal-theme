@@ -9,4 +9,11 @@
   .button-container {
     margin-bottom: 40px;
   }
+
+  .btn-group {
+
+    > .btn {
+      border-color: transparent;
+    }
+  }
 }

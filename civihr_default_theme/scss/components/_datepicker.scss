@@ -1,7 +1,12 @@
-$crm-datepicker-text: #949da6;
-$crm-datepicker-muted: #d3d8db;
+input[uib-datepicker-popup] {
+  border-color: $crm-color-neutral;
 
-.chr-datepicker {
+  .form-control {
+    border-color: $crm-color-neutral;
+  }
+}
+
+div[uib-datepicker-popup-wrap] {
 
   table {
     margin: 10px;
@@ -17,12 +22,12 @@ $crm-datepicker-muted: #d3d8db;
         color: inherit;
 
         strong {
-          font-weight: 400;
+          font-weight: $crm-font-weight-regular;
           font-size: 14px;
         }
 
         i {
-          font-weight: 300;
+          font-weight: $crm-font-weight-light;
         }
 
         &:hover {
@@ -41,12 +46,12 @@ $crm-datepicker-muted: #d3d8db;
       }
 
       .btn-default {
+        background: transparent;
         border: none;
+        color: $crm-color-neutral;
+        line-height: 1;
         min-width: 0;
         padding: 7px;
-        line-height: 1;
-        background: transparent;
-        color: $crm-datepicker-text;
 
         span {
           padding: 5px;
@@ -60,7 +65,7 @@ $crm-datepicker-muted: #d3d8db;
       }
 
       .text-muted {
-        color: $crm-datepicker-muted;
+        color: $crm-grizzly;
       }
 
       .text-info {
@@ -72,16 +77,12 @@ $crm-datepicker-muted: #d3d8db;
     }
   }
 
-  .form-control,
-  .btn {
-    border-color: $crm-color-neutral;
-  }
-
-  .input-group-btn > button {
-    color: $crm-color-neutral;
-  }
-
   .uib-datepicker-popup {
-    border: 1px solid $gray;
+    border: 1px solid $crm-color-neutral;
+  }
+
+  + .input-group-btn > button {
+    color: $crm-color-neutral;
+    border-color: $crm-color-neutral;
   }
 }

@@ -118,8 +118,12 @@ $screen-sm-max:               767px !default;
 
 // Modals
 // -----------------------------------------------------------------------------
-$crm-custom-modal-padding:       20 !default;
-$crm-custom-modal-body-padding:  10 !default;
+$crm-custom-modal-padding:        20 !default;
+$crm-custom-modal-body-padding:   10 !default;
+
+$modal-lg:                        945px !default;
+$modal-md:                        555px !default;
+$modal-sm:                        360px !default;
 
 
 // Panels

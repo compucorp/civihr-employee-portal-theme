@@ -1,3 +1,16 @@
 .btn .caret {
   margin: 0 5px;
 }
+
+.btn-group {
+
+  .btn {
+    box-shadow: none;
+    border-color: $crm-color-neutral;
+
+    &.active {
+      background-color: $gray;
+      color: $light;
+    }
+  }
+}

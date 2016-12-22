@@ -1,0 +1,9 @@
+.chr-table {
+  border: 1px solid $crm-table-heading-border-color;
+  margin-bottom: 15px;
+
+  th {
+    padding: 8px 20px !important;
+    font-weight: 400;
+  }
+}

@@ -19,6 +19,13 @@ table,
       }
     }
   }
+
+  > tfoot {
+
+    > tr {
+      background: $crm-table-heading-bg;
+    }
+  }
 }
 
 

@@ -1,8 +1,23 @@
 // Styles for Navs
 // --------------------------------------------------
 
-.nav > li > a {
+.tab-pane {
+  padding: 20px;
+  border: 1px solid $nav-tabs-border-color;
+  border-top: none;
   background-color: $light;
+}
+
+.nav > li {
+  a {
+    background-color: transparent;
+    color: $brand-primary;
+  }
+
+  &.active > a {
+    background-color: $light;
+    color: $gray;
+  }
 }
 
 .nav-tabs-header {
@@ -17,6 +32,7 @@
         border: 0;
         border-bottom: 3px solid transparent;
         cursor: pointer;
+        background-color: $light;
       }
 
       &.active {

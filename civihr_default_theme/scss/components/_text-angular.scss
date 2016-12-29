@@ -1,3 +1,5 @@
+$crm-text-angular-min-height: 120px;
+
 [text-angular] {
   border: 1px solid $gray-light;
   padding: 0;
@@ -23,11 +25,11 @@
 
   .form-control {
     border: none;
-    min-height: 120px;
+    min-height: $crm-text-angular-min-height;
     box-shadow: none !important;
 
     &.ta-scroll-window > .ta-bind {
-      min-height: 120px;
+      min-height: $crm-text-angular-min-height;
       outline: 0;
     }
   }

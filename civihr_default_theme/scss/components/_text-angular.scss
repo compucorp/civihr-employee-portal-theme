@@ -8,6 +8,11 @@
     .btn {
       border: none;
       background: transparent;
+      color: $gray;
+
+      &.active {
+        color: $gray-darker;
+      }
 
       i.fa {
         font-size: $crm-font-size-small;

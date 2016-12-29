@@ -1,0 +1,29 @@
+[text-angular] {
+  border: 1px solid $gray-light;
+  padding: 0;
+
+  [text-angular-toolbar] {
+    padding: 10px;
+
+    .btn {
+      border: none;
+      background: transparent;
+
+      i.fa {
+        font-size: $crm-font-size-small;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .form-control {
+    border: none;
+    min-height: 120px;
+    box-shadow: none !important;
+
+    &.ta-scroll-window > .ta-bind {
+      min-height: 120px;
+      outline: 0;
+    }
+  }
+}

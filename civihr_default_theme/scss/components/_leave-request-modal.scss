@@ -1,0 +1,49 @@
+$row-margin-bottom: 15px;
+
+.chr_leave-request-modal__chevron {
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.chr_leave-request-modal__user-info {
+  padding: 20px;
+  font-size: $crm-font-size-large;
+
+  > span {
+    &:nth-child(1) {
+      color: $gray-darker;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid $gray-light;
+      color: $gray;
+    }
+  }
+}
+
+.chr_leave-request-modal__form-group {
+  margin-bottom: $row-margin-bottom;
+}
+
+.chr_leave-request-modal__response {
+  padding: 20px 20px 0;
+
+  label {
+    font-size: $crm-font-size-large;
+    margin-top: -3px;
+  }
+
+  .chr_wysiwyg {
+    margin-top: 15px;
+  }
+}
+
+.chr_leave-request-modal__table {
+  margin-bottom: $row-margin-bottom !important;
+  border: 1px solid $crm-table-heading-border-color;
+}
+
+.chr_leave-request-modal__tab {
+  margin-top: 20px;
+}

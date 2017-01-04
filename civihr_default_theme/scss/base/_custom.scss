@@ -465,45 +465,6 @@ h2.pane-title {
     background: $brand-warning;
 }
 
-/* Modals */
-
-#modalBackdrop {
-    // display: none !important;
-}
-.modal-dialog {
-    .close {
-        color: $gray;
-        border: 0;
-        background: none;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-weight: bold;
-        line-height: 1;
-        font-size: 2.2rem;
-        padding: 0;
-    }
-}
-.modal-content {
-    background: $light;
-    min-height: 500px;
-    border: 1px solid $crm-color-neutral;
-}
-.modal-header,
-.modal-body {
-    padding: 20px;
-}
-.modal-header {
-    border-bottom: 1px solid $gray-light;
-
-    h4 {
-        margin: 0;
-    }
-}
-.modal-body {
-    height: auto !important;
-}
-
 /* Modal: My details, Emergency contact */
 
 .modal-body article {

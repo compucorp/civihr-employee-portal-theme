@@ -1,0 +1,16 @@
+.chr_vertical_tabs.nav {
+  background-color: $panel-default-heading-bg;
+
+  > li {
+
+    a {
+      background-color: $panel-default-heading-bg;
+      color: $gray;
+    }
+
+    &.active a {
+      background-color: $brand-primary;
+      color: $light;
+    }
+  }
+}

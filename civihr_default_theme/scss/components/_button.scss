@@ -1,0 +1,7 @@
+.chr-button--inline {
+  padding: 0 10px;
+
+  & + .dropdown-menu > li > a {
+    color: $brand-primary;
+  }
+}

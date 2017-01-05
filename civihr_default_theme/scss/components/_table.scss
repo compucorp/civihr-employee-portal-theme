@@ -1,0 +1,11 @@
+.chr_table--clean {
+
+  thead > tr > th,
+  tfoot > tr > td {
+    background: $light;
+  }
+
+  tfoot {
+    border-bottom: 1px solid $table-border-color;
+  }
+}

@@ -20,6 +20,13 @@ table,
     }
   }
 
+  > tbody {
+
+    > tr:first-child > td {
+      border-color: $table-border-color !important;
+    }
+  }
+
   > tfoot {
 
     > tr {

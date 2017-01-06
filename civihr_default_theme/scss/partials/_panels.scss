@@ -34,10 +34,23 @@
 
 .panel-title {
   color: $gray-darker;
-  font-size: $crm-panel-heading-font-size;
+  font-size: $crm-font-size-large;
   font-weight: 400;
 }
 
+// Subheading and subtitle
+.panel-subheading {
+  padding: $crm-panel-subheading-padding;
+}
+
+.panel-default {
+
+  > .panel-subheading {
+    background: $panel-default-heading-bg;
+    border-bottom: 1px solid $crm-grizzly;
+    color: $panel-default-text;
+  }
+}
 
 // A panel heading that is just white, with a border below the title
 // (only for .panel-default). If the panel itself is collapsed, the title loses

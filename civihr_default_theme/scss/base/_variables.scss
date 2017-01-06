@@ -131,9 +131,9 @@ $modal-sm:                        360px !default;
 // -----------------------------------------------------------------------------
 $panel-bg:                    $light !default;
 
-$crm-panel-heading-font-size: 1.6rem;
-$panel-body-padding:          20px;
-$panel-heading-padding:       12px 20px;
+$panel-body-padding:            20px;
+$panel-heading-padding:         12px 20px;
+$crm-panel-subheading-padding:  $panel-heading-padding !default;
 
 
 // Thumbnails

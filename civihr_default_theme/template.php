@@ -148,37 +148,9 @@ function civihr_default_theme_css_alter(&$css) {
       'sites/all/modules/civicrm/bower_components/font-awesome/css/font-awesome.css',
       'sites/all/modules/civihr-contrib-required/fancy_login/css/fancy_login.css',
       'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
-      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css',
-      
-      
-//      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/print.css',
-//      'sites/all/modules/civihr-custom/civihr_employee_portal/css/custom.css',
-//      'sites/all/modules/civicrm/tools/extensions/civihr/org.civicrm.bootstrapcivicrm/css/bootstrap.css',
-//      'sites/all/modules/civihr-custom/civihr_employee_portal/lib/sweetalert/sweetalert.css',
-//      'sites/all/modules/civihr-custom/civihr_employee_portal/lib/tablesaw/tablesaw.css',
-//      'sites/all/modules/civihr-contrib-required/ctools/css/ctools.css',
-//      'sites/all/modules/civihr-contrib-required/panels/css/panels.css',
-//      'modules/comment/comment.css',
-//      'sites/all/modules/civihr-contrib-required/date/date_api/date.css',
-//      'sites/all/modules/civihr-contrib-required/date/date_popup/themes/datepicker.1.7.css',
-//      'modules/field/theme/field.css',
-//      'modules/node/node.css',
-//      'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
-//      'modules/search/search.css',
-//      'modules/user/user.css',
-//      'sites/all/modules/contrib/views/css/views.css',
-//      'sites/all/modules/civihr-contrib-required/views_tooltip/views_tooltip.css',
-//      'sites/all/modules/civihr-contrib-required/tipsy/stylesheets/tipsy.css',
-//      'sites/all/modules/civicrm/css/crm-i.css',
-//      'sites/all/modules/civicrm/bower_components/datatables/media/css/jquery.dataTables.css',
-//      'sites/all/modules/civicrm/bower_components/font-awesome/css/font-awesome.css',
-//      'sites/all/modules/civicrm/bower_components/jquery-ui/themes/smoothness/jquery-ui.css',
-//      'sites/all/modules/civicrm/bower_components/select2/select2.css',
-//      'sites/all/modules/civicrm/css/civicrm.css',
-//      'http://civihr-dev.dev/sites/all/modules/civicrm/tools/extensions/civihr/org.civicrm.bootstrapcivicrm/css/custom-civicrm.css',
-//      'sites/all/modules/civihr-contrib-required/fancy_login/css/fancy_login.css'
+      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css'
     ];
-    
+
     foreach (array_keys($css) as $file) {
       if (!in_array($file, $requiredCSS)) {
         unset($css[$file]);

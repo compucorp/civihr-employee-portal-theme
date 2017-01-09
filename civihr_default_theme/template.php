@@ -139,6 +139,52 @@ function civihr_default_theme_css_alter(&$css) {
   // in compass_radix.
   unset($css[$radix_path . '/assets/stylesheets/radix-style.css']);
   unset($css[$radix_path . '/assets/stylesheets/radix-print.css']);
+  
+  // Welcome page optimization
+  if (current_path() == 'welcome-page') {
+    $requiredCSS = [
+      'modules/system/system.base.css',
+      'modules/system/system.theme.css',
+      'sites/all/modules/civicrm/bower_components/font-awesome/css/font-awesome.css',
+      'sites/all/modules/civihr-contrib-required/fancy_login/css/fancy_login.css',
+      'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
+      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css',
+      
+      
+//      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/print.css',
+//      'sites/all/modules/civihr-custom/civihr_employee_portal/css/custom.css',
+//      'sites/all/modules/civicrm/tools/extensions/civihr/org.civicrm.bootstrapcivicrm/css/bootstrap.css',
+//      'sites/all/modules/civihr-custom/civihr_employee_portal/lib/sweetalert/sweetalert.css',
+//      'sites/all/modules/civihr-custom/civihr_employee_portal/lib/tablesaw/tablesaw.css',
+//      'sites/all/modules/civihr-contrib-required/ctools/css/ctools.css',
+//      'sites/all/modules/civihr-contrib-required/panels/css/panels.css',
+//      'modules/comment/comment.css',
+//      'sites/all/modules/civihr-contrib-required/date/date_api/date.css',
+//      'sites/all/modules/civihr-contrib-required/date/date_popup/themes/datepicker.1.7.css',
+//      'modules/field/theme/field.css',
+//      'modules/node/node.css',
+//      'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
+//      'modules/search/search.css',
+//      'modules/user/user.css',
+//      'sites/all/modules/contrib/views/css/views.css',
+//      'sites/all/modules/civihr-contrib-required/views_tooltip/views_tooltip.css',
+//      'sites/all/modules/civihr-contrib-required/tipsy/stylesheets/tipsy.css',
+//      'sites/all/modules/civicrm/css/crm-i.css',
+//      'sites/all/modules/civicrm/bower_components/datatables/media/css/jquery.dataTables.css',
+//      'sites/all/modules/civicrm/bower_components/font-awesome/css/font-awesome.css',
+//      'sites/all/modules/civicrm/bower_components/jquery-ui/themes/smoothness/jquery-ui.css',
+//      'sites/all/modules/civicrm/bower_components/select2/select2.css',
+//      'sites/all/modules/civicrm/css/civicrm.css',
+//      'http://civihr-dev.dev/sites/all/modules/civicrm/tools/extensions/civihr/org.civicrm.bootstrapcivicrm/css/custom-civicrm.css',
+//      'sites/all/modules/civihr-contrib-required/fancy_login/css/fancy_login.css'
+    ];
+    
+    foreach (array_keys($css) as $file) {
+      if (!in_array($file, $requiredCSS)) {
+        unset($css[$file]);
+      }
+    }
+  }
 }
 
 /**
@@ -188,6 +234,33 @@ function civihr_default_theme_js_alter(&$javascript) {
     if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
       $javascript[$radix_modal] = array_merge(
         drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+    }
+  }
+
+  // Welcome page optimization
+  if (current_path() == 'welcome-page') {
+    $requiredJS = [
+      'settings',
+      'misc/drupal.js',
+      'sites/all/modules/civihr-contrib-required/jquery_update/replace/jquery/1.8/jquery.min.js',
+      'misc/jquery.once.js',
+      'sites/all/modules/civicrm/js/noconflict.js',
+      'sites/all/modules/civihr-custom/civihr_employee_portal/js/scripts.js',
+      'sites/all/modules/civihr-contrib-required/ctools/js/modal.js',
+      'sites/all/modules/civicrm/bower_components/jquery/dist/jquery.js',
+      'sites/all/modules/civicrm/bower_components/jquery-ui/jquery-ui.js',
+      'sites/all/modules/civicrm/bower_components/lodash-compat/lodash.js',
+      'sites/all/modules/civicrm/js/crm.ajax.js',
+      'sites/all/modules/civihr-contrib-required/jquery_update/replace/misc/jquery.form.min.js',
+      'misc/ajax.js',
+      'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
+      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js'
+    ];
+
+    foreach (array_keys($javascript) as $file) {
+      if (!in_array($file, $requiredJS)) {
+        unset($javascript[$file]);
+      }
     }
   }
 }

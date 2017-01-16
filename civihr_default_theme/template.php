@@ -220,13 +220,16 @@ function civihr_default_theme_js_alter(&$javascript) {
       'sites/all/modules/civihr-custom/civihr_employee_portal/js/scripts.js',
       'sites/all/modules/civihr-contrib-required/ctools/js/modal.js',
       'sites/all/modules/civicrm/bower_components/jquery/dist/jquery.js',
+      'sites/all/modules/civicrm/bower_components/jquery/dist/jquery.min.js',
       'sites/all/modules/civicrm/bower_components/jquery-ui/jquery-ui.js',
+      'sites/all/modules/civicrm/bower_components/jquery-ui/jquery-ui.min.js',
       'sites/all/modules/civicrm/bower_components/lodash-compat/lodash.js',
+      'sites/all/modules/civicrm/bower_components/lodash-compat/lodash.min.js',
       'sites/all/modules/civicrm/js/crm.ajax.js',
       'sites/all/modules/civihr-contrib-required/jquery_update/replace/misc/jquery.form.min.js',
       'misc/ajax.js',
       'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
-      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js'
+      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js',
     ];
 
     foreach (array_keys($javascript) as $file) {

@@ -13,6 +13,7 @@
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
  */
 
+  $civicrm_access = user_access("access CiviCRM");
   $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard', ['fragment' => '/tasks']);
   $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => true));
 
@@ -48,16 +49,22 @@
       <div class="chr_header__nav__toggle">
         <i class="fa fa-2x fa-navicon"></i>
       </div>
-      <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
+      <?php if (!$civicrm_access): ?>
+        <a href="/dashboard">
+      <?php endif; ?>
+        <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
           <span class="chr_brand__icon icon-logo"></span>
           <span><?php print t("Home"); ?></span>
-        <ul class="chr_header__sub-menu">
-          <?php if (user_access("access CiviCRM")) { ?>
-            <li><?php print $admin_link; ?></li>
-          <?php } ?>
-          <li><?php print $ssp_link; ?></li>
-        </ul>
-      </div>
+          <?php if ($civicrm_access) { ?>
+            <ul class="chr_header__sub-menu">
+              <li><?php print $admin_link; ?></li>
+              <li><?php print $ssp_link; ?></li>
+            </ul>
+          <?php }?>
+        </div>
+      <?php if (!$civicrm_access): ?>
+        </a>
+      <?php endif; ?>
     </div>
     <div class="chr_header__brand chr_brand chr_header__home-menu">
         <span class="chr_brand__icon icon-logo"></span>

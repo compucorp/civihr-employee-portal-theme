@@ -141,12 +141,12 @@
   <footer id="footer" class="footer" role="footer">
     <div class="container">
       <div class="text-center">
-        Powered by CiviHR <?php print get_civihr_version(); ?>
-        CiviHR is openly available under the <a href="http://www.gnu.org/licenses/agpl-3.0.html ">GNU AGPL License</a>
+        Powered by CiviHR <?php print get_civihr_version(); ?>.
+        CiviHR is openly available under the <a href="http://www.gnu.org/licenses/agpl-3.0.html ">GNU AGPL License</a>.
         <br />
-        <a href="https://github.com/civicrm/civihr">Download CiviHR</a>&nbsp;
-        <a href="https://civihr.atlassian.net/wiki/display/CIV/Welcome ">View Wiki page</a>&nbsp;
-        <a href="https://civihr.org">Project website</a>
+        <a target="_blank" href="https://github.com/civicrm/civihr">Download CiviHR</a>&nbsp;
+        <a target="_blank" href="https://civihr.atlassian.net/wiki/display/CIV/Welcome ">View Wiki page</a>&nbsp;
+        <a target="_blank" href="https://civihr.org">Project website</a>
         <div class="footer-logo">
           <i class="icon-logo-full"></i>
         </div>

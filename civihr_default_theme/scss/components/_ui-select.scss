@@ -1,50 +1,57 @@
-.ui-select-container:not(.ui-select-multiple) {
+.ui-select-container {
 
-  .btn:hover {
-    background: $light;
-  }
+  &:not(.ui-select-multiple) {
 
-  .ui-select-match-text {
-    padding-right: 3em;
-    color: $gray;
+    .btn:hover {
+      background: $light;
+    }
 
-    span {
-      text-overflow: ellipsis;
+    .ui-select-match-text {
+      padding-right: 3em;
+      color: $gray;
+
+      span {
+        text-overflow: ellipsis;
+      }
+    }
+
+    + i {
+      color: $brand-primary;
+      position: relative;
+      top: -21px;
+      float: right;
+      right: 30px;
+      font-size: $crm-font-size-small;
+      cursor: pointer;
+    }
+
+    .caret {
+      display: none;
+    }
+
+    input {
+      border: 1px solid $crm-color-neutral !important;;
+      box-shadow: none !important;
+    }
+
+    &:after {
+      content: '\f002';
+      bottom: 0;
+      font-family: "FontAwesome";
+      display: inline-block;
+      height: 33px;
+      line-height: 35px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      width: 32px;
+      z-index: 1;
+      -webkit-font-smoothing: antialiased;
     }
   }
 
-  + i {
-    color: $brand-primary;
-    position: relative;
-    top: -21px;
-    float: right;
-    right: 30px;
-    font-size: $crm-font-size-small;
-    cursor: pointer;
-  }
-
-  .caret {
-    display: none;
-  }
-
-  input {
-    border: 1px solid $crm-color-neutral !important;;
-    box-shadow: none !important;
-  }
-
-  &:after {
-    content: '\f002';
-    bottom: 0;
-    font-family: "FontAwesome";
-    display: inline-block;
-    height: 33px;
-    line-height: 35px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    width: 32px;
-    z-index: 1;
-    -webkit-font-smoothing: antialiased;
+  .text-muted {
+    color: $crm-color-neutral;
   }
 }
 

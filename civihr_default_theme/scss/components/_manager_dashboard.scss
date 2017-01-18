@@ -1,5 +1,6 @@
 .chr_manager_dashboard__header {
   margin: 0;
+  background: $crm-grayish-blue;
 
   .chr_custom-select {
     margin-right: 20px;
@@ -26,6 +27,7 @@
 
 .chr_manager_dashboard__sub-header {
   padding-top: 15px;
+  background-color: $crm-grayish-blue;
 
   > div {
     display: inline-block;

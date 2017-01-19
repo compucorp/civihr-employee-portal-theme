@@ -15,14 +15,12 @@
       }
     }
 
-    + i {
-      color: $brand-primary;
-      position: relative;
-      top: -21px;
-      float: right;
-      right: 30px;
-      font-size: $crm-font-size-small;
-      cursor: pointer;
+    a.btn {
+      margin-right: 14px !important;
+    }
+
+    .glyphicon-remove {
+      font-size: 10px;
     }
 
     .caret {
@@ -52,25 +50,6 @@
 
   .text-muted {
     color: $crm-color-neutral;
-  }
-}
-
-.ui-select-multiple {
-  padding: 3px !important;
-
-  &:after {
-    content: '\f0d7';
-    bottom: 0;
-    font-family: "FontAwesome";
-    display: inline-block;
-    height: 33px;
-    line-height: 35px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    width: 32px;
-    z-index: 1;
-    -webkit-font-smoothing: antialiased;
   }
 }
 

@@ -47,3 +47,11 @@ $row-margin-bottom: 15px;
 .chr_leave-request-modal__tab {
   margin-top: 20px;
 }
+
+.chr_leave-request-modal__small_spinner {
+
+  > div.chr_spinner {
+    min-height: initial;
+    margin-top: 18px;
+  }
+}

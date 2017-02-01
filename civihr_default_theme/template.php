@@ -150,9 +150,14 @@ function civihr_default_theme_css_alter(&$css) {
       'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
       'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css'
     ];
-
     foreach (array_keys($css) as $file) {
-      if (!in_array($file, $requiredCSS)) {
+      $found = false;
+      foreach ($requiredCSS as $allowedFile) {
+        if (stripos($file, $allowedFile) !== false) {
+          $found = true;
+        }
+      }
+      if (!$found) {
         unset($css[$file]);
       }
     }
@@ -230,10 +235,16 @@ function civihr_default_theme_js_alter(&$javascript) {
       'misc/ajax.js',
       'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
       'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js',
+      'sites/all/modules/civicrm/packages/jquery/plugins/jquery.blockUI.min.js'
     ];
-
     foreach (array_keys($javascript) as $file) {
-      if (!in_array($file, $requiredJS)) {
+      $found = false;
+      foreach ($requiredJS as $allowedFile) {
+        if (stripos($file, $allowedFile) !== false) {
+          $found = true;
+        }
+      }
+      if (!$found) {
         unset($javascript[$file]);
       }
     }

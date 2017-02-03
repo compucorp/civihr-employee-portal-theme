@@ -55,4 +55,32 @@
       }
     }
   }
+
+  &.squared {
+    margin-bottom: 15px;
+
+    input[type="checkbox"] {
+      height: 20px;
+      width: 20px;
+
+      + span,
+      + label {
+        display: inline-block;
+        font-weight: normal;
+      }
+
+      + span:after,
+      + label:after {
+        border-radius: 0;
+        border-color: $crm-color-neutral;
+        height: 20px;
+        width: 20px;
+      }
+
+      &:checked + span:after,
+      &:checked + label:after {
+        line-height: 17px;
+      }
+    }
+  }
 }

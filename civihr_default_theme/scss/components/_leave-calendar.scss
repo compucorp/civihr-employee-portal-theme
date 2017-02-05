@@ -107,7 +107,26 @@ $chr-leave-calendar-legend-size:                  20px;
   font-size: $crm-font-size-small;
 }
 
-
 .chr_leave-calendar__weekend {
   opacity: 0.5;
+}
+
+.chr_leave-calendar__item--type--public-holiday {
+  background-color: #8ec68a;
+  border-color: #8ec68a;
+}
+
+.chr_leave-calendar__item--type--weekend {
+  background-color: #c7cbd0 !important;
+  border-color: #c7cbd0 !important;
+}
+
+.chr_leave-calendar__item--type--non-working {
+  background-color: #41afcb !important;
+  border-color: #41afcb !important;
+}
+
+.chr_leave-calendar__item--type--late {
+  background-color: #eca67e;
+  border-color: #eca67e;
 }

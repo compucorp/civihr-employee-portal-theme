@@ -57,18 +57,7 @@
   padding: 3px !important;
 
   &:after {
-    content: '\f0d7';
-    bottom: 0;
-    font-family: "FontAwesome";
-    display: inline-block;
-    height: 33px;
-    line-height: 35px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    width: 32px;
-    z-index: 1;
-    -webkit-font-smoothing: antialiased;
+    @include dropdown-arrow();
   }
 }
 

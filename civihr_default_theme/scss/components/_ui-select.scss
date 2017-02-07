@@ -53,6 +53,14 @@
   }
 }
 
+.ui-select-multiple {
+  padding: 3px !important;
+
+  &:after {
+    @include dropdown-arrow();
+  }
+}
+
 .ui-select-bootstrap .ui-select-choices-row {
 
   > span {

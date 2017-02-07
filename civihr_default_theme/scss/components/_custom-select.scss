@@ -29,19 +29,7 @@
   }
 
   &:after {
-    content: '\f0d7';
-    border-left: 1px solid $crm-color-neutral;
-    bottom: 0;
-    font-family: "FontAwesome";
-    display: inline-block;
-    height: #{$crm-customselect-height}px;
-    line-height: #{$crm-customselect-height + 2}px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    width: #{$crm-customselect-caret-width}px;
-    z-index: 1;
-    -webkit-font-smoothing: antialiased;
+    @include dropdown-arrow();
   }
 
   .ie9 & {

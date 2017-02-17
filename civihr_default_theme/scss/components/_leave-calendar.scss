@@ -25,7 +25,6 @@ $chr-leave-calendar-legend-size:                  20px;
   }
 }
 
-
 .chr_leave-calendar__items {
 
   > td {
@@ -35,6 +34,15 @@ $chr-leave-calendar-legend-size:                  20px;
   }
 }
 
+th.chr_leave-calendar__name,
+td.chr_leave-calendar__name {
+  font-size: $crm-font-size-small !important;
+  line-height: 100%;
+  padding: 0 0 0 20px !important;
+  text-align: left;
+  vertical-align: middle !important;
+  width: 180px;
+}
 
 .chr_leave-calendar__item {
   color: $light;

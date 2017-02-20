@@ -5,6 +5,8 @@ $crm-text-angular-min-height: 120px;
   padding: 0;
 
   [text-angular-toolbar] {
+    background-color: $crm-grayish-blue;
+    margin-left: 0;
     padding: 10px;
 
     .btn {

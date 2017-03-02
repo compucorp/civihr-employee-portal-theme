@@ -1,0 +1,23 @@
+.chr_leave-request-files_list {
+  height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  > li {
+    div:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.chr_leave-request-files_upload {
+  border: dashed 1px darkgray;
+  padding: 20px;
+
+  > div.row {
+    text-align: center;
+    padding: 5px;
+  }
+}

@@ -60,8 +60,25 @@ td.chr_leave-calendar__name {
   }
 }
 
+//Public Holiday, Weekend and Non Working day needs to be specified before other styles
+//to give other styles more priority
+.chr_leave-calendar__item--type--public-holiday {
+  background-color: #8ec68a;
+  border-color: #8ec68a;
+}
+
+.chr_leave-calendar__item--type--weekend {
+  background-color: #c7cbd0 !important;
+  border-color: #c7cbd0;
+}
+
+.chr_leave-calendar__item--type--non-working {
+  background-color: #41afcb !important;
+  border-color: #41afcb;
+}
+
 .chr_leave-calendar__item--alt {
-  background: transparent !important;
+  background: $light !important;
   border: 1px solid transparent;
   color: $gray-darker;
 }
@@ -76,6 +93,20 @@ td.chr_leave-calendar__name {
     position: absolute;
     width: 100%;
     top: 0;
+  }
+}
+
+.chr_leave-calendar__item--toil-requested {
+
+  &:before {
+    background: red;
+    content: '';
+    display: block;
+    height: $chr-leave-calendar-item-requested-border-height;
+    left: -1px;
+    position: absolute;
+    width: calc(100% + 2px);
+    top: -1px;
   }
 }
 
@@ -117,21 +148,6 @@ td.chr_leave-calendar__name {
 
 .chr_leave-calendar__weekend {
   opacity: 0.5;
-}
-
-.chr_leave-calendar__item--type--public-holiday {
-  background-color: #8ec68a;
-  border-color: #8ec68a;
-}
-
-.chr_leave-calendar__item--type--weekend {
-  background-color: #c7cbd0 !important;
-  border-color: #c7cbd0 !important;
-}
-
-.chr_leave-calendar__item--type--non-working {
-  background-color: #41afcb !important;
-  border-color: #41afcb !important;
 }
 
 .chr_leave-calendar__item--type--late {

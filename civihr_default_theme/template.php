@@ -139,6 +139,29 @@ function civihr_default_theme_css_alter(&$css) {
   // in compass_radix.
   unset($css[$radix_path . '/assets/stylesheets/radix-style.css']);
   unset($css[$radix_path . '/assets/stylesheets/radix-print.css']);
+  
+  // Welcome page optimization
+  if (current_path() == 'welcome-page') {
+    $requiredCSS = [
+      'modules/system/system.base.css',
+      'modules/system/system.theme.css',
+      'sites/all/modules/civicrm/bower_components/font-awesome/css/font-awesome.css',
+      'sites/all/modules/civihr-contrib-required/fancy_login/css/fancy_login.css',
+      'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
+      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css'
+    ];
+    foreach (array_keys($css) as $file) {
+      $found = false;
+      foreach ($requiredCSS as $allowedFile) {
+        if (stripos($file, $allowedFile) !== false) {
+          $found = true;
+        }
+      }
+      if (!$found) {
+        unset($css[$file]);
+      }
+    }
+  }
 }
 
 /**
@@ -188,6 +211,42 @@ function civihr_default_theme_js_alter(&$javascript) {
     if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
       $javascript[$radix_modal] = array_merge(
         drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+    }
+  }
+
+  // Welcome page optimization
+  if (current_path() == 'welcome-page') {
+    $requiredJS = [
+      'settings',
+      'misc/drupal.js',
+      'sites/all/modules/civihr-contrib-required/jquery_update/replace/jquery/1.8/jquery.min.js',
+      'misc/jquery.once.js',
+      'sites/all/modules/civicrm/js/noconflict.js',
+      'sites/all/modules/civihr-custom/civihr_employee_portal/js/scripts.js',
+      'sites/all/modules/civihr-contrib-required/ctools/js/modal.js',
+      'sites/all/modules/civicrm/bower_components/jquery/dist/jquery.js',
+      'sites/all/modules/civicrm/bower_components/jquery/dist/jquery.min.js',
+      'sites/all/modules/civicrm/bower_components/jquery-ui/jquery-ui.js',
+      'sites/all/modules/civicrm/bower_components/jquery-ui/jquery-ui.min.js',
+      'sites/all/modules/civicrm/bower_components/lodash-compat/lodash.js',
+      'sites/all/modules/civicrm/bower_components/lodash-compat/lodash.min.js',
+      'sites/all/modules/civicrm/js/crm.ajax.js',
+      'sites/all/modules/civihr-contrib-required/jquery_update/replace/misc/jquery.form.min.js',
+      'misc/ajax.js',
+      'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
+      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js',
+      'sites/all/modules/civicrm/packages/jquery/plugins/jquery.blockUI.min.js'
+    ];
+    foreach (array_keys($javascript) as $file) {
+      $found = false;
+      foreach ($requiredJS as $allowedFile) {
+        if (stripos($file, $allowedFile) !== false) {
+          $found = true;
+        }
+      }
+      if (!$found) {
+        unset($javascript[$file]);
+      }
     }
   }
 }

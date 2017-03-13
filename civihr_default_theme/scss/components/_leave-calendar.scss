@@ -63,7 +63,7 @@ td.chr_leave-calendar__name {
 //Public Holiday, Weekend and Non Working day needs to be specified before other styles
 //to give other styles more priority
 .chr_leave-calendar__item--type--public-holiday {
-  background-color: #8ec68a;
+  background-color: #8ec68a !important;
   border-color: #8ec68a;
 }
 

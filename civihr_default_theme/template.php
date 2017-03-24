@@ -476,6 +476,23 @@ function civihr_default_theme_menu_link__dropdown($variables) {
   _hide_menu_items($element);
   /* End - Code Added */
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  // Alter Manager Leave menu to show number of pending leave requests.
+  if ($element['#title'] === 'Manager Leave') {
+    _get_pending_leave_request_markup($output);
+  }
+
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+/**
+ * Adding markup from template that holds number of pending leave request
+ * to display with Manager Leave menu.
+ *
+ * @param String
+ *    Menu item link.
+ */
+function _get_pending_leave_request_markup(&$output) {
+  $markup = civihr_leave_absences_get_markup('pending-leave-request');
+  $output .= $markup;
+}

@@ -11,6 +11,9 @@ $chr-leave-calendar-legend-size:                  20px;
   }
 }
 
+.chr_leave-calendar__month-header {
+  background: $panel-default-heading-bg;
+}
 
 .chr_leave-calendar__days {
 
@@ -57,6 +60,11 @@ td.chr_leave-calendar__name {
   > span {
     @include absolute-centered();
     height: 1.2em;
+  }
+
+  > a {
+    cursor: pointer;
+    @include absolute-centered();
   }
 }
 

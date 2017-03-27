@@ -16,7 +16,8 @@ $row-margin-bottom: 15px;
   margin-bottom: 20px;
 }
 
-.chr_leave-request-modal__form-group {
+.chr_leave-request-modal__form-group,
+.chr_leave-request-modal__required-documents > div {
   margin-bottom: $row-margin-bottom;
 }
 
@@ -31,6 +32,10 @@ $row-margin-bottom: 15px;
   .chr_wysiwyg {
     margin-top: 15px;
   }
+}
+
+.chr_leave-request-modal__required-documents input {
+  margin-right: 5px;
 }
 
 .chr_leave-request-modal__small_spinner {

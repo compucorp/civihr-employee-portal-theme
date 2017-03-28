@@ -69,16 +69,3 @@
     background: $gray-lighter;
   }
 }
-
-/**
- * ## Temporary!
- *
- * My Leave view block, reverts
- * https://github.com/compucorp/civihr-employee-portal-theme/commit/cd52ce8ce180065e9e80e05df274270ef22cb8fc#diff-65aeeb131fdcf21745fe0d5f4cc30597R246
- */
-.view-id-absence_list {
-
-  .table-responsive {
-    margin: 0;
-  }
-}

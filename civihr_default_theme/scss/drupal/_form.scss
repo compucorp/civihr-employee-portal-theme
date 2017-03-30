@@ -350,22 +350,6 @@
   }
 }
 
-
-/* [modifier] <form> for the leave requests */
-.civihr_form--request-leave {
-  @extend .civihr_form;
-
-  .civihr_form--request-leave__period {
-    margin-left: 10px;
-  }
-}
-
-.civihr_form--request-leave__period {
-  font-size: 0.9em;
-  color: $gray;
-}
-
-
 /* [modifier] Resets any margin/padding applied by default */
 .civihr_form--reset {
 
@@ -374,8 +358,6 @@
     margin: 0;
   }
 }
-
-
 
 /* SSP Document form */
 #civihr-employee-portal-document-form {

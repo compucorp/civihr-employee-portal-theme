@@ -48,6 +48,14 @@ $row-margin-bottom: 15px;
 
 .chr_leave-request-modal__tab {
   margin-top: 20px;
+
+  /*
+  * This is a TEMP fix to fit the text of input controls like date picker within input box
+  * It is hardcoded to 13px for now.
+  */
+  input[uib-datepicker-popup] {
+    font-size: 13px;
+  }
 }
 
 .chr_leave-request-modal__table {
@@ -69,4 +77,9 @@ $row-margin-bottom: 15px;
       color: $gray;
     }
   }
+}
+
+.chr_leave-request-modal__span-expiry {
+  margin-top: 7px;
+  display: inline-block;
 }

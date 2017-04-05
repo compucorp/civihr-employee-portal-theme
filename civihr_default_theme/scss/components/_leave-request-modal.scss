@@ -39,6 +39,7 @@ $row-margin-bottom: 15px;
 }
 
 .chr_leave-request-modal__small_spinner {
+
   > div.chr_spinner {
     min-height: initial;
     margin-top: 18px;
@@ -47,6 +48,7 @@ $row-margin-bottom: 15px;
 
 .chr_leave-request-modal__tab {
   margin-top: 20px;
+
   /*
   * This is a TEMP fix to fit the text of input controls like date picker within input box
   * It is hardcoded to 13px for now.
@@ -80,14 +82,4 @@ $row-margin-bottom: 15px;
 .chr_leave-request-modal__span-expiry {
   margin-top: 7px;
   display: inline-block;
-}
-
-.chr_leave-request-modal__disabled {
-  opacity: 0.5;
-  pointer-events: none;
-
-  > * {
-    opacity: 0.5;
-    pointer-events: none;
-  }
 }

@@ -21,3 +21,9 @@
 .pointer {
   cursor: pointer !important;
 }
+
+//disable the element and prevent any user interaction
+.chr_disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

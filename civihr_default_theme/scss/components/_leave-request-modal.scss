@@ -16,6 +16,70 @@ $row-margin-bottom: 15px;
   margin-bottom: 20px;
 }
 
+.chr_leave-request-modal__form {
+
+  .ui-select-container {
+    .text-muted {
+      color: $brand-primary;
+      font-size: $crm-font-size-large;
+    }
+
+    &:not(.ui-select-multiple) {
+      .glyphicon-remove {
+        top: 5px;
+      }
+
+      .ui-select-match-text span {
+        font-size: $crm-font-size-large;
+      }
+    }
+
+    input[type="search"] {
+      color: $brand-primary;
+      font-size: $crm-font-size-large;
+      border: none !important;
+    }
+  }
+
+  .form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $brand-primary;
+  }
+
+  .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $brand-primary;
+  }
+
+  .form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $brand-primary;
+  }
+
+  .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: $brand-primary;
+  }
+
+  .ui-select-placeholder {
+    color: $brand-primary;
+    font-size: $crm-font-size-large;
+  }
+
+  .ui-select-bootstrap > .ui-select-match > .btn {
+    border: none;
+    padding-bottom: 0;
+    padding-top: 3px;
+    background: $crm-grayish-blue;
+    box-shadow: none;
+
+    &:active {
+      /* to remove additional focused rectangle on element selection*/
+      background: white;
+    }
+  }
+}
+
 .chr_leave-request-modal__form-group,
 .chr_leave-request-modal__required-documents > div {
   margin-bottom: $row-margin-bottom;
@@ -48,7 +112,6 @@ $row-margin-bottom: 15px;
 
 .chr_leave-request-modal__tab {
   margin-top: 20px;
-
   /*
   * This is a TEMP fix to fit the text of input controls like date picker within input box
   * It is hardcoded to 13px for now.

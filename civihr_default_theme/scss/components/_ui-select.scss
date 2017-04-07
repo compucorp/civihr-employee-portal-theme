@@ -1,7 +1,5 @@
 .ui-select-container {
-
   &:not(.ui-select-multiple) {
-
     .btn:hover {
       background: $light;
     }
@@ -28,7 +26,7 @@
     }
 
     input {
-      border: 1px solid $crm-color-neutral !important;;
+      border: 1px solid $crm-color-neutral !important;
       box-shadow: none !important;
     }
 
@@ -62,7 +60,6 @@
 }
 
 .ui-select-bootstrap .ui-select-choices-row {
-
   > span {
     color: $gray;
     font-size: $crm-font-size-small;
@@ -72,5 +69,40 @@
   &.active > span {
     color: $gray;
     background: $light-gray;
+  }
+}
+
+/*
+* TEMP fixes till ui-select styling is fixed
+*/
+.civihr-ui-select {
+
+  &.civihr-ui-select.open .select2-chosen {
+    //pads text correctly in open state
+    border-style: none !important;
+    padding-left: 15px !important;
+  }
+
+  .civihr-ui-select .select2-chosen {
+    //pads selected text correctly in closed state
+    padding-left: 15px !important;
+  }
+
+  &.ui-select-container {
+    &:not(.ui-select-multiple) {
+      &:after {
+        //prevents search icon to overlap dropdown-arrow in closed state
+        content: none;
+      }
+    }
+  }
+
+  &.select2-container .select2-choice {
+    padding: 0;
+
+    //shift the clear remove icon to be in line with the selected text
+    abbr {
+      top: 4px;
+    }
   }
 }

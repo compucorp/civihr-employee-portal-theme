@@ -16,6 +16,13 @@ $row-margin-bottom: 15px;
   margin-bottom: 20px;
 }
 
+.chr_leave-request-modal__form {
+
+  .civihr-ui-select {
+    margin-bottom: 20px;
+  }
+}
+
 .chr_leave-request-modal__form-group,
 .chr_leave-request-modal__required-documents > div {
   margin-bottom: $row-margin-bottom;
@@ -48,7 +55,6 @@ $row-margin-bottom: 15px;
 
 .chr_leave-request-modal__tab {
   margin-top: 20px;
-
   /*
   * This is a TEMP fix to fit the text of input controls like date picker within input box
   * It is hardcoded to 13px for now.

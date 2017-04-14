@@ -1,0 +1,47 @@
+.chr_leave-absences-admin {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.chr_absence-tab-page {
+
+  .button-container {
+    margin-bottom: 20px;
+  }
+
+  .tabs-container {
+
+    ul {
+      margin-left: 0px;
+      background: white;
+
+      li {
+
+        &:first-child {
+          margin-left: 20px;
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .btn-group {
+
+    > .btn {
+      border-color: transparent;
+      font-weight: 200;
+    }
+
+    > .btn-primary {
+      min-width: 0px;
+    }
+  }
+}
+
+.chr_absence-tab-page--active_bottom {
+  border-bottom: 3px solid black !important;
+}

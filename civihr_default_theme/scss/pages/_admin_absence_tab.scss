@@ -1,0 +1,67 @@
+.absence-tab-page {
+  .button-container {
+    margin-bottom: 20px;
+  }
+
+  .tabs-container {
+
+    .container {
+      /*to shift the container to left else it was not aligned with button*/
+      padding-left: 0;
+    }
+
+    ul {
+      margin-left: 0;
+      /**/
+      background: $light;
+
+      li {
+        &:first-child {
+          /*to match the shift from left in the design*/
+          margin-left: 20px;
+        }
+
+        a {
+          font-size: $crm-font-size-medium;
+          /*otherwise it jumps in on hover*/
+          border-width: 0;
+
+          &:hover {
+            /*as by default it sets it to #fbfbfc*/
+            background-color: transparent;
+            border-width: 0;
+          }
+        }
+
+        &.active {
+          a {
+            &,
+            &:focus,
+            &:hover {
+              border: 0;
+              border-bottom: 3px solid $gray-darker;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn-group {
+    > .btn {
+      border-color: transparent;
+      /*reduce the font weight to meet design*/
+      font-weight: $crm-font-weight-light;
+
+      > .caret {
+        /*was not centered */
+        margin-right: 0;
+      }
+    }
+
+    > .btn-primary {
+      /*to reduce the button size to fit text */
+      min-width: 0;
+    }
+  }
+}

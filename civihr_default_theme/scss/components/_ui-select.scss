@@ -74,35 +74,8 @@
 
 /*
 * TEMP fixes till ui-select styling is fixed
+* Dropdown ul opacity was set to 0
 */
-.civihr-ui-select {
-
-  &.civihr-ui-select.open .select2-chosen {
-    //pads text correctly in open state
-    border-style: none !important;
-    padding-left: 15px !important;
-  }
-
-  .civihr-ui-select .select2-chosen {
-    //pads selected text correctly in closed state
-    padding-left: 15px !important;
-  }
-
-  &.ui-select-container {
-    &:not(.ui-select-multiple) {
-      &:after {
-        //prevents search icon to overlap dropdown-arrow in closed state
-        content: none;
-      }
-    }
-  }
-
-  &.select2-container .select2-choice {
-    padding: 0;
-
-    //shift the clear remove icon to be in line with the selected text
-    abbr {
-      top: 4px;
-    }
-  }
+.chr_leave-request-modal__form .ui-select-container ul {
+  opacity: 1 !important;
 }

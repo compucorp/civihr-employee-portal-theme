@@ -1,0 +1,248 @@
+// This is the temporary styles to male the new Document modal look similar in SSP
+
+// Variables
+$light-gray: #F4F7F8;
+$white: #FFFFFF;
+$light-black-blue: #586277;
+$light-blue: #41AFCB;
+
+$brand-danger:           #E6807F;
+$brand-primary:          #42AFCB;
+$dropdown-border:        #727E8A;
+$gray-dark:              #727E8A;
+$gray-lighter:           #F3F6F7;
+$text-color-light-black: #586277;
+$input-border-radius:    0;
+
+
+// Opened Modal
+.modal-open {
+  .modal {
+    overflow-y: scroll !important;
+  }
+
+  // Required Imports
+  @import "bootstrap/modals";
+  @import "bootstrap/forms";
+  @import "bootstrap/input-groups";
+  @import "bootstrap/list-group";
+
+  // Overriding custom height for modal-content
+  .modal-content {
+    min-height: auto;
+  }
+
+  // Modal Form
+  form[name="documentForm"] {
+    .civihr-ui-select.form-control {
+      border: 0;
+      height: 40px;
+      padding: 0;
+    }
+
+    .ui-select-container {
+      width: 100%;
+    }
+
+    .ui-select-offscreen {
+      display: none;
+    }
+
+    .ui-select-choice {
+      height: 30px;
+    }
+
+    .form-control-file {
+      visibility: hidden;
+    }
+
+    .drop-zone {
+      border: 2px #797E90 dotted;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .no-left-margin {
+      margin-left: -15px;
+    }
+
+    table.ct-table-upload {
+      margin-bottom: 15px;
+      margin-left: 20px;
+
+      th.pull-right {
+        display: none;
+      }
+    }
+
+    // help icon
+    a.helpicon {
+      border-radius: 50%;
+      background-color: #41AFCB;
+      padding: 1px 6px 1px 6px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 400;
+
+      &:before {
+        color: #FFF;
+        content: '?';
+      }
+    }
+
+    // Tabs
+    .nav-tabs {
+      li {
+        margin-bottom: -1px;
+      }
+
+      a,
+      li {
+        background-color: $light-gray;
+        color:  $light-black-blue;
+      }
+
+      li a {
+        margin-right: 0;
+
+        &:focus,
+        &:hover {
+          background-color: $light-gray;
+          border-color: $light-gray;
+          color: $light-black-blue;
+          margin-right: 0;
+        }
+      }
+
+      li.active a {
+        background-color: $white;
+        border-bottom-color: transparent;
+        color: $light-blue;
+
+        &:focus,
+        &:hover {
+          background-color: $white;
+          color: $light-blue;
+          cursor: default;
+        }
+      }
+    }
+
+    // Datepicker
+    [uib-datepicker-popup-wrap] > .dropdown-menu {
+      padding: 10px;
+      width: 300px;
+
+      table {
+        &:focus {
+          outline: 0 none;
+        }
+
+        tbody {
+          background-color: #f4f7f8;
+
+          .btn {
+            background-color: #f4f7f8;
+            border-radius: 20px;
+            padding: 7px;
+            line-height: 1;
+            width: auto !important;
+
+            &:active {
+              @include box-shadow(none);
+            }
+
+            &:focus {
+              outline: 0 none;
+              background-color: #f4f7f8;
+            }
+
+            &.active {
+              @include box-shadow(none);
+              background-color: #41afcb;
+
+              span {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        td,th {
+          padding: 7px;
+        }
+
+        thead {
+          small {
+            color: #525966;
+            font-size: 11px;
+          }
+        }
+
+        .btn {
+          border-width: 0;
+          font-size: 12px;
+          font-weight: normal;
+        }
+
+        .text-muted {
+          color: #CCCCCC;
+        }
+
+        > thead > tr > th {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .civihr-ui-select {
+      .select2-choice,
+      .select2-arrow {
+        background-color: #FFF;
+        background-image: none;
+      }
+
+      .select2-results {
+        color: #727E8A;
+
+        .select2-highlighted {
+          background: #E8E8E8;
+          color: inherit;
+        }
+      }
+
+      .select2-search {
+        margin-bottom: 5px;
+      }
+
+      .select2-drop {
+        border-radius: 0 !important;
+      }
+
+      .select2-choice {
+        border-radius: 0;
+        height: 33px !important;
+        padding: 2px 8px;
+
+        abbr {
+          right: 40px;
+          top: 10px;
+        }
+      }
+
+      .select2-arrow {
+        border-radius: 0 !important;
+        padding-left: 8px;
+        width: 32px;
+
+        b {
+          background: url(select2.png) no-repeat 0 3px;
+        }
+      }
+    }
+  }
+
+  form .btn {
+    float: none;
+  }
+}

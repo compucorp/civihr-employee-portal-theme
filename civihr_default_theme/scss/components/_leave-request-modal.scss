@@ -16,6 +16,10 @@ $row-margin-bottom: 15px;
   margin-bottom: 20px;
 }
 
+.chr_leave-request-modal__footer {
+  margin: 0;
+}
+
 .chr_leave-request-modal__form {
 
   .ui-select-container {
@@ -54,7 +58,6 @@ $row-margin-bottom: 15px;
 }
 
 .chr_leave-request-modal__tab {
-  margin-top: 20px;
   /*
   * This is a TEMP fix to fit the text of input controls like date picker within input box
   * It is hardcoded to 13px for now.

@@ -95,7 +95,6 @@
 // Custom CiviHR Theme CSS
 // --------------------------------------------------
 @import "base/custom";
-@import "base/_temp_custom";
 
 // civihr_default_theme partials
 // --------------------------------------------------
@@ -103,3 +102,6 @@
 @import "layout/page";
 @import "partials/**/*";
 @import "components/**/*";
+
+// Temporary styles
+@import "base/task-assignments-modal-temp";

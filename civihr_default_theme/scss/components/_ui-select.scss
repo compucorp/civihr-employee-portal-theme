@@ -82,7 +82,8 @@
   }
 
   .dropdown-menu {
-    border: 1px solid #ccc;
+    border: 1px solid $crm-color-neutral;
+    border-top: 1px solid transparent;
   }
 
   .ui-select-container:not(.ui-select-multiple) input {

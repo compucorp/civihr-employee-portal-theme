@@ -1,19 +1,11 @@
 // This is the temporary styles to make the new Document modal look similar in SSP
 
 // Variables
-$light-gray: #F4F7F8;
-$white: #FFFFFF;
 $light-black-blue: #586277;
 $light-blue: #41AFCB;
-
-$brand-danger:           #E6807F;
-$brand-primary:          #42AFCB;
-$dropdown-border:        #727E8A;
-$gray-dark:              #727E8A;
-$gray-lighter:           #F3F6F7;
-$text-color-light-black: #586277;
-$input-border-radius:    0;
-
+$light-gray: #F4F7F8;
+$lighter-grey: #ECEDEE;
+$white: #FFFFFF;
 
 // Opened Modal
 .modal-open {
@@ -72,6 +64,10 @@ $input-border-radius:    0;
 
       th.pull-right {
         display: none;
+      }
+
+      tbody {
+        border-top: 1px solid $lighter-grey;
       }
     }
 

@@ -11,6 +11,10 @@ $white: #FFFFFF;
 .modal-open {
   .modal {
     overflow-y: scroll !important;
+
+    .modal-dialog {
+      width: 500px;
+    }
   }
 
   // Required Imports
@@ -49,7 +53,7 @@ $white: #FFFFFF;
     }
 
     .drop-zone {
-      border: 2px #797E90 dotted;
+      border: 1px dashed #727E8A;
       padding: 30px;
       text-align: center;
     }
@@ -68,6 +72,12 @@ $white: #FFFFFF;
 
       tbody {
         border-top: 1px solid $lighter-grey;
+
+        tr td:first-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 120px;
+        }
       }
     }
 
@@ -164,8 +174,10 @@ $white: #FFFFFF;
           }
         }
 
-        td,th {
+        td,
+        th {
           padding: 7px;
+          border-bottom: 0px solid #ecedee;
         }
 
         thead {
@@ -230,15 +242,25 @@ $white: #FFFFFF;
         border-radius: 0 !important;
         padding-left: 8px;
         width: 32px;
-
-        b {
-          background: url(select2.png) no-repeat 0 3px;
-        }
       }
     }
   }
 
-  form .btn {
-    float: none;
+  form {
+    .btn {
+      border-radius: 2px;
+      float: none;
+      font-size: 13px;
+      padding: 6px 12px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      border-color:#727E8A;
+    }
+
+    .btn-danger {
+      border: 0;
+      background-color: $white;
+      color: #DA6B86;
+    }
   }
 }

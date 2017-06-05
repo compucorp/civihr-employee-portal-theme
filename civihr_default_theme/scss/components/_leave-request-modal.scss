@@ -24,6 +24,16 @@ $row-margin-bottom: 15px;
 
   .ui-select-container {
     margin-bottom: 20px;
+
+    // TEMP: without opacity: 1 the dropdown is not visible
+    ul {
+      opacity: 1 !important;
+    }
+
+    &:not(.ui-select-multiple) input {
+      /*the width was getting set to 503px in element itself thus causing the input box to reduce*/
+      width: 100% !important;
+    }
   }
 }
 

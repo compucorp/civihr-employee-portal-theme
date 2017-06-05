@@ -4,6 +4,11 @@
       background: $light;
     }
 
+    .dropdown-menu {
+      border: 1px solid $crm-color-neutral;
+      border-top: 1px solid transparent;
+    }
+
     .ui-select-match-text {
       padding-right: 3em;
       color: $gray;
@@ -69,25 +74,5 @@
   &.active > span {
     color: $gray;
     background: $light-gray;
-  }
-}
-
-/*
-* TEMP fixes till ui-select styling is fixed
-* Dropdown ul opacity was set to 0
-*/
-.chr_leave-request-modal__form {
- .ui-select-container ul {
-   opacity: 1 !important;
-  }
-
-  .dropdown-menu {
-    border: 1px solid $crm-color-neutral;
-    border-top: 1px solid transparent;
-  }
-
-  .ui-select-container:not(.ui-select-multiple) input {
-    /*the width was getting set to 503px in element itself thus causing the input box to reduce*/
-    width: 100% !important;
   }
 }

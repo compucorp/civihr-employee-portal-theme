@@ -248,16 +248,17 @@ $white: #FFFFFF;
 
   form {
     .btn {
+      border: 1px solid transparent;
+      border-color:#727E8A;
       border-radius: 2px;
       float: none;
       font-size: 13px;
       padding: 6px 12px;
       text-transform: uppercase;
-      border: 1px solid transparent;
-      border-color:#727E8A;
     }
 
-    .btn-danger {
+    .btn-danger,
+    .btn-danger:focus {
       border: 0;
       background-color: $white;
       color: #DA6B86;

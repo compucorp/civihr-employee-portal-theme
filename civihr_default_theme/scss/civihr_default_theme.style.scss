@@ -96,7 +96,6 @@
 // --------------------------------------------------
 @import "base/custom";
 
-
 // civihr_default_theme partials
 // --------------------------------------------------
 @import "base/typography";
@@ -104,4 +103,5 @@
 @import "partials/**/*";
 @import "components/**/*";
 
-
+// Temporary styles
+@import "base/task-assignments-modal-temp";

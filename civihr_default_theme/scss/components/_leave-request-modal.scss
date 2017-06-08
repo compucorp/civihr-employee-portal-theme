@@ -16,10 +16,24 @@ $row-margin-bottom: 15px;
   margin-bottom: 20px;
 }
 
+.chr_leave-request-modal__footer {
+  margin: 0;
+}
+
 .chr_leave-request-modal__form {
 
-  .civihr-ui-select {
+  .ui-select-container {
     margin-bottom: 20px;
+
+    // TEMP: without opacity: 1 the dropdown is not visible
+    ul {
+      opacity: 1 !important;
+    }
+
+    &:not(.ui-select-multiple) input {
+      /*the width was getting set to 503px in element itself thus causing the input box to reduce*/
+      width: 100% !important;
+    }
   }
 }
 
@@ -54,7 +68,6 @@ $row-margin-bottom: 15px;
 }
 
 .chr_leave-request-modal__tab {
-  margin-top: 20px;
   /*
   * This is a TEMP fix to fit the text of input controls like date picker within input box
   * It is hardcoded to 13px for now.

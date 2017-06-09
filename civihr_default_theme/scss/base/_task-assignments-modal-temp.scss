@@ -1,0 +1,310 @@
+// This is the temporary styles to make the new Document modal look similar in SSP
+
+// Variables
+$light-black-blue: #586277;
+$light-blue: #41AFCB;
+$light-gray: #F4F7F8;
+$lighter-grey: #ECEDEE;
+$white: #FFFFFF;
+
+// Opened Modal
+.modal-open {
+  .modal {
+    overflow-y: scroll !important;
+
+    .modal-dialog {
+      width: 500px;
+    }
+  }
+
+  // Required Imports
+  @import "bootstrap/modals";
+  @import "bootstrap/forms";
+  @import "bootstrap/input-groups";
+  @import "bootstrap/list-group";
+
+  // Overriding custom height for modal-content
+  .modal-content {
+    min-height: auto;
+  }
+
+  // Modal Form
+  form[name="documentForm"] {
+    .civihr-ui-select.form-control {
+      border: 0;
+      height: 40px;
+      padding: 0;
+    }
+
+    .ui-select-container {
+      width: 100%;
+    }
+
+    .ui-select-offscreen {
+      display: none;
+    }
+
+    .ui-select-choice {
+      height: 30px;
+    }
+
+    .form-control-file {
+      visibility: hidden;
+    }
+
+    .drop-zone {
+      border: 1px dashed #727E8A;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .no-left-margin {
+      margin-left: -15px;
+    }
+
+    table.ct-table-upload {
+      margin-bottom: 15px;
+      margin-left: 20px;
+
+      th.pull-right {
+        display: none;
+      }
+
+      tbody {
+        border-top: 1px solid $lighter-grey;
+
+        tr td:first-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 120px;
+        }
+      }
+    }
+
+    // help icon
+    a.helpicon {
+      border-radius: 50%;
+      background-color: #41AFCB;
+      padding: 1px 6px 1px 6px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 400;
+
+      &:before {
+        color: #FFF;
+        content: '?';
+      }
+    }
+
+    // Tabs
+    .nav-tabs {
+      li {
+        margin-bottom: -1px;
+      }
+
+      a,
+      li {
+        background-color: $light-gray;
+        color:  $light-black-blue;
+      }
+
+      li a {
+        margin-right: 0;
+
+        &:focus,
+        &:hover {
+          background-color: $light-gray;
+          border-color: $light-gray;
+          color: $light-black-blue;
+          margin-right: 0;
+        }
+      }
+
+      li.active a {
+        background-color: $white;
+        border-bottom-color: transparent;
+        color: $light-blue;
+
+        &:focus,
+        &:hover {
+          background-color: $white;
+          color: $light-blue;
+          cursor: default;
+        }
+      }
+    }
+
+    // Datepicker
+    [uib-datepicker-popup-wrap] > .dropdown-menu {
+      padding: 10px;
+      width: 300px;
+
+      table {
+        &:focus {
+          outline: 0 none;
+        }
+
+        tbody {
+          background-color: #f4f7f8;
+
+          .btn {
+            background-color: #f4f7f8;
+            border-radius: 20px;
+            padding: 7px;
+            line-height: 1;
+            width: auto !important;
+
+            &:active {
+              @include box-shadow(none);
+            }
+
+            &:focus {
+              outline: 0 none;
+              background-color: #f4f7f8;
+            }
+
+            &.active {
+              @include box-shadow(none);
+              background-color: #41afcb;
+
+              span {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        td,
+        th {
+          padding: 7px;
+          border-bottom: 0px solid #ecedee;
+        }
+
+        thead {
+          small {
+            color: #525966;
+            font-size: 11px;
+          }
+        }
+
+        .btn {
+          border-width: 0;
+          font-size: 12px;
+          font-weight: normal;
+        }
+
+        .text-muted {
+          color: #CCCCCC;
+        }
+
+        > thead > tr > th {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .civihr-ui-select {
+      .select2-choice,
+      .select2-arrow {
+        background-color: #FFF;
+        background-image: none;
+      }
+
+      .select2-results {
+        color: #727E8A;
+
+        .select2-highlighted {
+          background: #E8E8E8;
+          color: inherit;
+        }
+      }
+
+      .select2-search {
+        margin-bottom: 5px;
+      }
+
+      .select2-drop {
+        border-radius: 0 !important;
+      }
+
+      .select2-choice {
+        border-radius: 0;
+        height: 33px !important;
+        padding: 2px 8px;
+
+        abbr {
+          right: 40px;
+          top: 10px;
+        }
+      }
+
+      .select2-arrow {
+        border-radius: 0 !important;
+        padding-left: 8px;
+        width: 32px;
+      }
+    }
+  }
+
+  form {
+    .btn {
+      border: 1px solid transparent;
+      border-color:#727E8A;
+      border-radius: 2px;
+      float: none;
+      font-size: 13px;
+      padding: 6px 12px;
+      text-transform: uppercase;
+    }
+
+    .btn-danger,
+    .btn-danger:focus {
+      border: 0;
+      background-color: $white;
+      color: #DA6B86;
+    }
+  }
+
+  // Styles for spinner taken forn T&A
+  .ct-spinner-container {
+    position: relative;
+  }
+
+  .ct-spinner-cover {
+    @include border-radius($border-radius-base);
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1039;
+
+    @include animation(fadeIn 0.3s);
+  }
+
+  .ct-spinner-img {
+    background-image: url('../images/loading-overlay.gif') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
+
+  .ct-spinner {
+    height: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    z-index: 1040;
+
+    @include animation(fadeIn 0.3s);
+  }
+
+  .ct-page-loading {
+    .ct-spinner-cover {
+      background-color: rgba(255, 255, 255, 1) !important;
+    }
+  }
+}

@@ -8,7 +8,8 @@ $lighter-grey: #ECEDEE;
 $white: #FFFFFF;
 
 // Opened Modal
-.modal-open {
+[data-ta-documents],
+[data-ta-documents-manager] {
   .modal {
     overflow-y: scroll !important;
 

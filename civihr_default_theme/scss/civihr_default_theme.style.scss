@@ -96,7 +96,6 @@
 // --------------------------------------------------
 @import "base/custom";
 
-
 // civihr_default_theme partials
 // --------------------------------------------------
 @import "base/typography";
@@ -109,3 +108,6 @@
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-calendar";
+
+// Temporary styles
+@import "base/task-assignments-modal-temp";

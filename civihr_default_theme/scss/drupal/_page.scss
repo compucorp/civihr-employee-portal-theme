@@ -47,10 +47,9 @@
 
     .btn {
       color: $gray;
-      border: 0;
       cursor: default;
       height: 35px;
-      border: 1px solid $crm-color-neutral;
+      border: 1px solid $input-border;
       border-left: 0;
 
       &:hover,

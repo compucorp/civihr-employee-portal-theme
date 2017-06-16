@@ -418,7 +418,7 @@ h2.pane-title {
         right: 37px;
         height: 100%;
         width: 0;
-        border-left: 1px solid $crm-color-neutral;
+        border-left: 1px solid $input-border;
     }
 
 }
@@ -667,7 +667,7 @@ form {
 }
 
 .form-text {
-    border: 1px solid $crm-color-neutral;
+    border: 1px solid $input-border;
     font-size: 1.3rem;
     color: $gray;
     line-height: 1.5;

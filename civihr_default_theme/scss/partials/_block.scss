@@ -58,3 +58,21 @@
     text-align: center;
   }
 }
+
+//Yoti Account
+#yoti-connect-register {
+  @include box-shadow($crm_box-shadow-global);
+  background: $light;
+  margin: 50px auto 0;
+  max-width: 492px;
+  padding: 20px 20px 5px;
+  width: 100%;
+
+  .form-checkbox {
+    margin-top: 0;
+  }
+
+  .form-submit {
+    min-width: 82px;
+  }
+}

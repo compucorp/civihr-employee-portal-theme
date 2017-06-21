@@ -14,8 +14,12 @@ $white: #FFFFFF;
     overflow-y: scroll !important;
 
     .modal-dialog {
-      width: 500px;
+      max-width: 500px;
     }
+  }
+
+  .modal-backdrop {
+    z-index: 1040 !important;
   }
 
   // Required Imports

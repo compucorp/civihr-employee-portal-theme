@@ -105,9 +105,17 @@
 @import "components/**/*";
 @import "drupal/**/*";
 
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups";
+
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select";
+
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-calendar";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-modal";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-comment";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-files";
 
 // Temporary styles
 @import "base/task-assignments-modal-temp";

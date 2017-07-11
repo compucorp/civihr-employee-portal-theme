@@ -19,7 +19,6 @@
 @import "base/helpers";
 //@import "radix/mixins";
 
-
 // Bootstrap reset and dependencies
 // -----------------------------------------------------------------------------
 @import "bootstrap/normalize";
@@ -35,6 +34,7 @@
 @import "bootstrap/tables";
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/outlined-buttons";
 
 // Bootstrap components
 // -----------------------------------------------------------------------------

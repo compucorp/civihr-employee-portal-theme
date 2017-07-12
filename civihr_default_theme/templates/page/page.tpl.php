@@ -92,8 +92,8 @@
       </div>
       <ul class="chr_header__sub-menu">
         <li><?php print $edit_account; ?></li>
-        <li><?php print $logout_link; ?></li>
         <li><?php print $user_guide_link; ?></li>
+        <li><?php print $logout_link; ?></li>
       </ul>
     </div>
     <?php } ?>
@@ -150,7 +150,7 @@
     <div class="container">
       <div class="text-center">
         Powered by CiviHR <?php print get_civihr_version(); ?>.
-        CiviHR is openly available under the <a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU AGPL License</a> and can be downloaded from the onkeyup=""<a target="_blank" href="https://civihr.org">Project website</a>&nbsp;.
+        CiviHR is openly available under the <a target="_blank" href="http://www.gnu.org/licenses/agpl-3.0.html">GNU AGPL License</a> and can be downloaded from the <a target="_blank" href="https://civihr.org">Project website</a>&nbsp;.
         <div class="footer-logo">
           <i class="icon-logo-full"></i>
         </div>

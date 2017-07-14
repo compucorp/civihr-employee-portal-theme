@@ -1,8 +1,8 @@
 input[uib-datepicker-popup] {
-  border-color: $crm-color-neutral;
+  border-color: $input-border;
 
   .form-control {
-    border-color: $crm-color-neutral;
+    border-color: $input-border;
   }
 }
 
@@ -78,11 +78,11 @@ div[uib-datepicker-popup-wrap] {
   }
 
   .uib-datepicker-popup {
-    border: 1px solid $crm-color-neutral;
+    border: 1px solid $input-border;
   }
 
   + .input-group-btn > button {
     color: $crm-color-neutral;
-    border-color: $crm-color-neutral;
+    border-color: $input-border;
   }
 }

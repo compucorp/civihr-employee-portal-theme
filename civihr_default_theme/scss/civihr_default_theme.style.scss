@@ -10,6 +10,7 @@
 // -----------------------------------------------------------------------------
 @import "base/variables";
 @import "base/mixins";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/utility";
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -17,7 +18,6 @@
 
 @import "base/helpers";
 //@import "radix/mixins";
-
 
 // Bootstrap reset and dependencies
 // -----------------------------------------------------------------------------
@@ -34,6 +34,7 @@
 @import "bootstrap/tables";
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/outlined-buttons";
 
 // Bootstrap components
 // -----------------------------------------------------------------------------
@@ -103,6 +104,25 @@
 @import "partials/**/*";
 @import "components/**/*";
 @import "drupal/**/*";
+
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups";
+
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select";
+
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/variables";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/mixins/tables";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/base/helpers/disabled";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/style/tables";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-report";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-calendar";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manager_calendar";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manage-leave-requests";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-modal";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-comment";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-files";
 
 // Temporary styles
 @import "base/task-assignments-modal-temp";

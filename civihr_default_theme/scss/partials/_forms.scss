@@ -12,5 +12,17 @@
 }
 
 .form-control {
-  border: 1px solid $crm-color-neutral;
+  border: 1px solid $input-border;
+}
+
+// This is a temporary copied class from Shoreditch theme
+// @TODO remove this class as soon as Shoreditch theme is applied
+// Required mark (*)
+.required-mark {
+
+  &:after {
+    content:"*";
+    color: $brand-danger;
+    margin-left: 5px;
+  }
 }

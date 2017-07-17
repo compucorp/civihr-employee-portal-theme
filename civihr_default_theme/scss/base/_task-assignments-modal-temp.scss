@@ -8,13 +8,18 @@ $lighter-grey: #ECEDEE;
 $white: #FFFFFF;
 
 // Opened Modal
-.modal-open {
+[data-ta-documents],
+[data-ta-documents-manager] {
   .modal {
     overflow-y: scroll !important;
 
     .modal-dialog {
-      width: 500px;
+      max-width: 500px;
     }
+  }
+
+  .modal-backdrop {
+    z-index: 1040 !important;
   }
 
   // Required Imports

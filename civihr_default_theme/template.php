@@ -22,11 +22,13 @@ function civihr_default_theme_preprocess_views_view_table(&$variables) {
 
 /**
  * Implements theme_table().
+ * Copied from sites/all/themes/radix/includes/structure.inc
  */
 function civihr_default_theme_table($variables) {
   // Add default classes to table elements.
   $variables['attributes']['class'] = (isset($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
   $variables['attributes']['class'] = (is_array($variables['attributes']['class'])) ? $variables['attributes']['class'] : array($variables['attributes']['class']);
+    // REMOVED THE table-striped' and 'table-bordered' classes
   $variables['attributes']['class'] = array_merge($variables['attributes']['class'], array(
     'table'
   ));

@@ -1,0 +1,174 @@
+/**
+ * Manager documents table
+ *
+ * # TEMPORARY #
+ */
+#documents-dashboard-table-manager {
+  table-layout: auto;
+}
+
+/**
+ * Manager approvals table
+ */
+
+.manager-approval-main-table {
+  table-layout: fixed !important;
+
+  // search highlight color
+  em {
+    background-color: yellow
+  }
+
+  th.headerSortDown {
+    @include manager-approval-main-table-sort($crm_icon-desc-path);
+  }
+
+  th.headerSortUp {
+    @include manager-approval-main-table-sort($crm_icon-asc-path);
+  }
+
+  .views-field {
+    @include ellipsis();
+
+    &:not(.views-field-nothing-1) > * {
+      @include ellipsis();
+    }
+  }
+
+  .header {
+    &.views-field-nothing { // dates
+      width: 27%;
+    }
+
+    &.views-field-nothing-1 { // actions
+      width: 13%;
+    }
+
+    &.views-field-absence-status {
+      width: 15%;
+    }
+
+    &.views-field-absence-title {
+      width: 12%;
+    }
+
+    &.views-field-civi-target-contact-name {
+      width: 25%;
+    }
+
+    @media(min-width: $screen-lg-min) {
+      &.views-field-nothing-1 {
+        width: 10%;
+      }
+    }
+  }
+}
+
+.manager-approval-main-table__actions {
+  display: inline;
+
+  .manager-approval-main-table__actions__action {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .manager-approval-main-table__actions__action--approve {
+    color: $brand-success;
+  }
+
+  .manager-approval-main-table__actions__action--deny {
+    color: $brand-danger;
+  }
+
+  & + .views-tooltip {
+    display: inline-block;
+  }
+}
+
+/**
+ * Manager pick days table
+ */
+.manager-pick-days-table {
+
+  th.select-all {
+    padding-right: 0;
+    width: 35px;
+  }
+}
+
+/**
+ * Tasks table on the dashboard
+ */
+.tasks-dashboard-table {
+
+  th {
+    &.views-field-task-type {
+      width: 25%;
+    }
+  }
+}
+
+/**
+ * Staff Directory results table
+ */
+.view-id-civihr_staff_directory {
+
+  .table-responsive {
+    overflow: auto;
+    // This is to reset the -20px margin on .table-responsive
+    // (needs to be verified if that negative margin is necessary at all)
+    margin: 0;
+  }
+
+  .views-table {
+    table-layout: auto;
+    width: 100%;
+    white-space: nowrap;
+
+    thead {
+
+      tr {
+        height: 50px;
+      }
+    }
+  }
+
+  @media(min-width: $screen-md-min) {
+    .table-responsive {
+      overflow: visible;
+    }
+
+    .views-table {
+      table-layout: fixed;
+      white-space: normal;
+      word-wrap: break-word;
+
+      .views-field-last-name {
+        width: 20%;
+      }
+    }
+  }
+}
+
+/**
+ * Report results table
+ */
+#reportTable {
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+
+  .table {
+    width: auto;
+  }
+
+  .view {
+    padding: 0;
+    margin: 0;
+  }
+
+  td,
+  th {
+    white-space: nowrap;
+  }
+}

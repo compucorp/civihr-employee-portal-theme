@@ -172,3 +172,18 @@
     white-space: nowrap;
   }
 }
+
+table.civihr-employee-portal-civihr-report-settings-age-group {
+  margin-bottom: 0;
+}
+
+#reportPivotTable {
+  table {
+    table-layout: fixed;
+    width: 100%;
+
+    td {
+      padding: 8px 20px;
+    }
+  }
+}

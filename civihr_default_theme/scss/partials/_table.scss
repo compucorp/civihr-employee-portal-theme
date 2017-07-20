@@ -30,3 +30,11 @@
     }
   }
 }
+
+// necessary to override styles from system.theme.css
+tr {
+  &.even,
+  &.odd {
+    background-color: initial;
+  }
+}

@@ -7,6 +7,7 @@
   th,
   td {
     border-right: 1px solid $gray-light;
+    vertical-align: middle !important;
 
     &:not(:first-child) {
       padding: 0;
@@ -39,11 +40,6 @@
 .chr_calendar--manager__header__day-of-month {
   height: 40px;
   width: 35px;
-
-  @media(min-width: $screen-lg-min) {
-    height: auto;
-    width: auto;
-  }
 }
 
 .chr_calendar--manager__header__employee-name {
@@ -117,11 +113,14 @@
   }
 
   td {
+    border: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
 
     &:last-child {
       margin-right: 15px;
       min-width: 80px;
-      padding-left: 5px;
+      padding-left: 5px !important;
       text-align: left;
 
       @media(min-width: $screen-md-min) {
@@ -240,9 +239,14 @@
 .calendar-calendar {
   margin: 0 -20px 0;
 
+  table {
+    width: 100%;
+  }
+
   th,
   td {
     border-right: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
     padding: 5px;
     text-align: center;
 

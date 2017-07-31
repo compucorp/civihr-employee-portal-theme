@@ -143,6 +143,10 @@
         </div>
       </div>
     </div> <!-- /#main -->
+    <?php
+      module_load_include('inc', 'webform_civicrm', 'includes/wf_crm_admin_help');
+      print wf_crm_admin_help::helpTemplate();
+    ?>
   </div> <!-- /#main-wrapper -->
 
   <footer id="footer" class="footer" role="footer">

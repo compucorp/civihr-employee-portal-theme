@@ -658,6 +658,6 @@ function civihr_default_theme_menu_link__dropdown($variables) {
  *    Menu item link.
  */
 function _get_pending_leave_request_markup(&$output) {
-  $markup = civihr_leave_absences_get_markup('pending-leave-request');
+  $markup = civihr_leave_absences_get_markup('waiting-approval-notification');
   $output .= $markup;
 }

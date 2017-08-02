@@ -657,6 +657,6 @@ function civihr_default_theme_menu_link__dropdown($variables) {
  * @param $element
  */
 function _get_pending_leave_request_markup($element) {
-  $markup = civihr_leave_absences_get_markup('waiting-approval-notification');
+  $markup = civihr_leave_absences_get_markup('manager-notification-badge');
   return $element['#title'].$markup;
 }

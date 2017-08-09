@@ -34,7 +34,7 @@ $white: #FFFFFF;
   }
 
   // Modal Form
-  form[name="documentForm"] {
+  .form-document {
     .civihr-ui-select.form-control {
       border: 0;
       height: 40px;
@@ -69,7 +69,6 @@ $white: #FFFFFF;
 
     table.ct-table-upload {
       margin-bottom: 15px;
-      margin-left: 20px;
 
       th.pull-right {
         display: none;

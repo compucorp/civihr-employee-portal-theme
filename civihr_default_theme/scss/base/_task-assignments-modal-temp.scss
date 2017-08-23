@@ -63,6 +63,11 @@ $white: #FFFFFF;
       text-align: center;
     }
 
+    .no-file {
+      color: red;
+      border-color: #e6230f !important;
+    }
+
     .no-left-margin {
       margin-left: -15px;
     }

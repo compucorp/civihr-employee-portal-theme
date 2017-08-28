@@ -400,7 +400,8 @@ function civihr_default_theme_js_alter(&$javascript) {
       'misc/ajax.js',
       'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
       'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js',
-      'sites/all/modules/civicrm/packages/jquery/plugins/jquery.blockUI.min.js'
+      'sites/all/modules/civicrm/packages/jquery/plugins/jquery.blockUI.min.js',
+      'https://sdk.yoti.com/clients/browser.js'
     ];
     foreach (array_keys($javascript) as $file) {
       $found = false;

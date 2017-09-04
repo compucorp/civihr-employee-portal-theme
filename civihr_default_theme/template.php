@@ -347,6 +347,16 @@ function civihr_default_theme_preprocess_page(&$variables) {
     $container_class = 'container-fluid';
   }
   $variables['container_class'] = $container_class;
+
+  global $user;
+  $isUserEdit = preg_match('/user\/(\d+)\/edit/', current_path(), $matches);
+  $editUserID = CRM_Utils_Array::value(1, $matches, NULL);
+  $isCurrentUser = $editUserID == $user->uid;
+  // todo change to only use overridden theme if user hasn't completed onboarding
+
+  if ($isUserEdit && $isCurrentUser) {
+    $variables['theme_hook_suggestions'][] = 'page__user__edit__onboarding';
+  }
 }
 
 /**

@@ -330,6 +330,17 @@ function civihr_default_theme_css_alter(&$css) {
 }
 
 /**
+ * @param array $node
+ */
+function civihr_default_theme_preprocess_node(&$node) {
+  // Set a different template for the onboarding form
+  $onboardingTitle = 'Welcome to CiviHR';
+  if ($node && $node['type'] === 'webform' && $node['title'] === $onboardingTitle) {
+    $node['theme_hook_suggestions'][] = 'page__webform__onboarding';
+  }
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function civihr_default_theme_preprocess_page(&$variables) {
@@ -349,7 +360,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
 
   global $user;
   $isUserEdit = preg_match('/user\/(\d+)\/edit/', current_path(), $matches);
-  $editUserID = CRM_Utils_Array::value(1, $matches, NULL);
+  $editUserID = CRM_Utils_Array::value(1, $matches);
   $isCurrentUser = $editUserID == $user->uid;
   // todo change to only use overridden theme if user hasn't completed onboarding
 

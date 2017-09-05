@@ -358,15 +358,27 @@ function civihr_default_theme_preprocess_page(&$variables) {
   }
   $variables['container_class'] = $container_class;
 
+  // Use a different template if the user should start the onboarding process
+  if (_civihr_default_theme_should_start_onboarding()) {
+    $variables['theme_hook_suggestions'][] = 'page__user__edit__onboarding';
+  }
+}
+
+/**
+ * @return bool
+ */
+function _civihr_default_theme_should_start_onboarding() {
   global $user;
+  $shouldDoOnboarding = FALSE;
   $isUserEdit = preg_match('/user\/(\d+)\/edit/', current_path(), $matches);
   $editUserID = CRM_Utils_Array::value(1, $matches);
   $isCurrentUser = $editUserID == $user->uid;
-  // todo change to only use overridden theme if user hasn't completed onboarding
-
-  if ($isUserEdit && $isCurrentUser) {
-    $variables['theme_hook_suggestions'][] = 'page__user__edit__onboarding';
+  $onboardingChecker = '_civihr_employee_portal_should_do_onboarding';
+  if (function_exists($onboardingChecker)) {
+    $shouldDoOnboarding = $isUserEdit && $isCurrentUser && $onboardingChecker($user);
   }
+
+  return $shouldDoOnboarding;
 }
 
 /**

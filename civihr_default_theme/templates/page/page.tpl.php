@@ -15,21 +15,26 @@
 
   $civicrm_access = user_access("access CiviCRM");
   $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard', ['fragment' => '/tasks']);
-  $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => true));
+  $options = array('html' => TRUE);
+  $ssp_link = l(t('CiviHR SSP'), 'dashboard', $options);
 
   $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
   $mapGearLinks = [
     [
       'permissions' => ["access content overview"],
-      'link' => l(t('Manage documents'), 'admin/content', array('html' => true)),
+      'link' => l(t('Manage documents'), 'admin/content', $options),
     ],
     [
       'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage users'), 'admin/people', array('html' => true)),
+      'link' => l(t('Manage users'), 'admin/people', $options),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR resource types'), 'hr-resource-types-list', array('html' => true))
+      'link' => l(t('HR resource types'), 'hr-resource-types-list', $options)
+    ],
+    [
+      'permissions' => ["administer CiviCRM"], // todo new permission
+      'link' => l(t('Customize Webform Wizard'), 'civicrm/customize-webform', $options),
     ],
   ];
   $gearLinks = "";

@@ -45,6 +45,23 @@ $variables = [
 ];
 $progressBar = theme('webform_progressbar', $variables);
 
+$prefix = 'civihr_onboarding_';
+$logoKey = $prefix . 'organization_logo_fid';
+$welcomeTextKey = $prefix . 'welcome_text';
+
+$logoID = variable_get($logoKey);
+$organizationLogoUrl = NULL;
+if ($logoID) {
+  $logo = file_load($logoID);
+  $organizationLogoUrl = file_create_url($logo->uri);
+}
+
+$welcomeTextParts = variable_get($welcomeTextKey);
+$welcomeText = '';
+if ($welcomeTextParts) {
+  $welcomeText = CRM_Utils_Array::value('value', $welcomeTextParts);
+}
+
 ?>
 
 <div id="outer-wrapper">
@@ -62,6 +79,20 @@ $progressBar = theme('webform_progressbar', $variables);
 
         <div class="progress_bar">
           <?php print $progressBar; ?>
+        </div>
+
+        <h1 id="onboarding-welcome-message">
+          Welcome to CiviHR
+        </h1>
+
+        <?php if($organizationLogoUrl): ?>
+        <div id="onboarding-company-logo">
+          <img src="<?php print $organizationLogoUrl; ?>">
+        </div>
+        <?php endif; ?>
+
+        <div id="onboarding-welcome-text">
+          <?php print $welcomeText; ?>
         </div>
 
         <div class="main-container">

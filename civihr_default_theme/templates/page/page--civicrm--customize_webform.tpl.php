@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var array $page Contains all data for this page
+ */
+?>
+
 <div id="onboarding-customization-page">
   <h1>Customize Welcome Wizard</h1>
 

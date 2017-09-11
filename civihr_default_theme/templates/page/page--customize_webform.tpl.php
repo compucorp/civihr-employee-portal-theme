@@ -2,7 +2,15 @@
 /**
  * @var array $page Contains all data for this page
  */
+
+require_once __DIR__ . '/../../includes/header.inc';
 ?>
+
+<style>
+  #edit-civihr-onboarding-welcome-text-format {
+    display: none;
+  }
+</style>
 
 <div id="onboarding-customization-page">
   <h1>Customize Welcome Wizard</h1>
@@ -14,5 +22,7 @@
     the information text when they complete the wizard.
   </p>
 
-  <?php print drupal_render_children($page['content']) ?>
+  <?php print drupal_render($page['content']) ?>
 </div>
+
+<?php require_once __DIR__ . '/../../includes/footer.inc';

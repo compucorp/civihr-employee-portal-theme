@@ -31,10 +31,15 @@
   }
 }
 
-// necessary to override styles from system.theme.css
+// Necessary to override styles from system.theme.css
 tr {
   &.even,
   &.odd {
     background-color: initial;
   }
+}
+
+// Necessary to remove the bottom margin if a table is inside a panel
+.panel table, .table-responsive {
+  margin-bottom: 0;
 }

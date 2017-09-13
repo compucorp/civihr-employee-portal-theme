@@ -40,6 +40,10 @@ tr {
 }
 
 // Necessary to remove the bottom margin if a table is inside a panel
-.panel table, .table-responsive {
-  margin-bottom: 0;
+.panel {
+
+  .table,
+  .table-responsive {
+    margin-bottom: 0;
+  }
 }

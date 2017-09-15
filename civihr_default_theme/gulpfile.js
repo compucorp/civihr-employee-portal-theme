@@ -93,4 +93,4 @@ gulp.task('js-lint', function() {
 });
 
 // Default Task
-gulp.task('default', ['css', 'fonts', 'watch']);
+gulp.task('default', ['css', 'fonts']);

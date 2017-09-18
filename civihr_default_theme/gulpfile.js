@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var config = require('./config.json');
 
 // Include plugins.
+var civicrmScssRoot = require('civicrm-scssroot')();
 var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
@@ -19,7 +20,7 @@ var scssLint = require('gulp-scss-lint');
 var jshint = require('gulp-jshint');
 
 // CSS.
-gulp.task('css', function() {
+gulp.task('css', ['css:sync'], function() {
   return gulp.src(config.css.src)
     .pipe(glob())
     .pipe(plumber({
@@ -36,11 +37,15 @@ gulp.task('css', function() {
     .pipe(sass({
       outputStyle: 'compressed',
       errLogToConsole: true,
-      includePaths: config.css.includePaths
+      includePaths: config.css.includePaths.concat(civicrmScssRoot.getPath())
     }))
     .pipe(autoprefix('last 2 versions', '> 1%', 'ie 9', 'ie 10'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.css.dest))
+});
+
+gulp.task('css:sync', function(){
+  civicrmScssRoot.updateSync();
 });
 
 // Compress images.

@@ -7,6 +7,13 @@ $light-gray: #F4F7F8;
 $lighter-grey: #ECEDEE;
 $white: #FFFFFF;
 
+// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+// so we reset that to ensure it behaves more like a standard block element.
+// See https://github.com/twbs/bootstrap/issues/12359.
+fieldset {
+  min-width: 0;
+}
+
 // Opened Modal
 [data-ta-documents],
 [data-ta-documents-manager] {

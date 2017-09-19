@@ -1,6 +1,17 @@
 // Styles for Forms
 // --------------------------------------------------
 
+// Styles for astrisk (required indicator)
+.required-field-indicator {
+  &:after {
+    color: $brand-danger;
+    content: '*';
+    font-size: 13px;
+    padding-left: 5px;
+    position: absolute;
+  }
+}
+
 #civihr-employee-portal-request-new-account-form {
   label {
     display: none;

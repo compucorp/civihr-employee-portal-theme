@@ -70,6 +70,17 @@ fieldset {
       text-align: center;
     }
 
+    .required-field-indicator {
+      &:after {
+        color: #e6807f;
+        content: '*';
+        font-size: 13px;
+        padding-left: 5px;
+        position: absolute;
+        top: -1px;
+      }
+    }
+
     .no-file {
       color: $brand-danger;
       border-color: $brand-danger !important;

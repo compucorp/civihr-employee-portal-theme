@@ -1,3 +1,5 @@
+$chr-menu-responsive-breakpoint: 1250px;
+
 .chr_header {
   @include clearfix;
 
@@ -206,7 +208,7 @@
     vertical-align: top;
   }
 
-  @media(max-width: $screen-md-max) {
+  @media(max-width: $chr-menu-responsive-breakpoint) {
     > .chr_header__user-menu__arrow,
     > .chr_header__user-menu__name {
       display: none;

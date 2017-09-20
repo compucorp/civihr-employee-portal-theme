@@ -206,7 +206,7 @@
     vertical-align: top;
   }
 
-  @media(max-width: $screen-md-max) {
+  @media(max-width: $crm-menu-responsive-breakpoint) {
     > .chr_header__user-menu__arrow,
     > .chr_header__user-menu__name {
       display: none;

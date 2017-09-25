@@ -556,7 +556,7 @@ function civihr_default_theme_form_element_label($variables) {
 function bootstrapable_fields($fields_structure) {
   $fields = $fields_structure;
   foreach($fields as $key => $value)  {
-    if (!(substr($key, 0, 1) <> '#' && !in_array($value['#type'], ['hidden'])))  {
+    if (!(substr($key, 0, 1) <> '#' && !in_array(CRM_Utils_Array::value('#type', $value), ['hidden'])))  {
       unset($fields[$key]);
     }
   }
@@ -588,7 +588,7 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
     $fields_structure[$key]['#suffix'] = $close_section ? '</div>' : '';
 
     // Recursively apply bootstrap to fieldset fields
-    if ($value['#type'] == 'fieldset') {
+    if (CRM_Utils_Array::value('#type', $value) == 'fieldset') {
       $fields_structure[$key] = array_replace_recursive($fields_structure[$key], civihr_default_theme_form_apply_bootstrap($value, false));
       $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset--transparent';
       continue;
@@ -600,7 +600,7 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
         <label
          for="'. $value['#id'] .'"
          class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
-          . ( !$label_hidden ? $value['#title'] : '' ) .
+          . ( !$label_hidden ? CRM_Utils_Array::value('#title', $value) : '' ) .
         '</label>
         <div class="col-sm-9">
     ';

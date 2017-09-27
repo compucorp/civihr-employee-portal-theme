@@ -56,11 +56,7 @@ if ($logoID) {
   $organizationLogoUrl = file_create_url($logo->uri);
 }
 
-$welcomeTextParts = variable_get($welcomeTextKey);
-$welcomeText = '';
-if ($welcomeTextParts) {
-  $welcomeText = CRM_Utils_Array::value('value', $welcomeTextParts);
-}
+$welcomeText = variable_get($welcomeTextKey, '');
 
 ?>
 

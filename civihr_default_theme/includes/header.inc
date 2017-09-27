@@ -21,7 +21,7 @@ $mapGearLinks = [
   ],
   [
     'permissions' => ["customize welcome wizard"],
-    'link' => l(t('Customize Welcome Wizard'), 'civicrm/customize-webform', $options),
+    'link' => l(t('Customize Welcome Wizard'), 'customize-onboarding-wizard', $options),
   ],
 ];
 $gearLinks = "";

@@ -362,6 +362,11 @@ function civihr_default_theme_preprocess_page(&$variables) {
   if (_civihr_default_theme_should_start_onboarding()) {
     $variables['theme_hook_suggestions'][] = 'page__user__edit__onboarding';
   }
+
+  $plainPages = ['onboarding-form', 'features-in-civihr'];
+  if (in_array(request_path(), $plainPages)) {
+    $variables['page']['hide_header'] = TRUE;
+  }
 }
 
 /**

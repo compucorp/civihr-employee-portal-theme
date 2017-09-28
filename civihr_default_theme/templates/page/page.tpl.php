@@ -11,12 +11,18 @@
  *
  * NOTE: The #outer-wrapper element is for the mobile menu to have a way
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
+ *
+ * @var array $page
  */
 ?>
 
 <div id="outer-wrapper">
 
-  <?php require_once __DIR__ . '/../../includes/header.inc' ?>
+  <?php
+  if (!isset($page['hide_header']) || $page['hide_header'] !== TRUE) {
+    require_once __DIR__ . '/../../includes/header.inc';
+  }
+  ?>
 
   <div id="main-wrapper">
     <div id="main" class="main">

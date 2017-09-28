@@ -5,6 +5,18 @@
  * @var string $container_class
  */
 
+/**
+ * When I tried using #access it deleted data (⊙︿⊙)
+ * @see https://www.drupal.org/node/1267434
+ *
+ * @param $element
+ */
+$hideElement = function (&$element) {
+  $element['#prefix'] = '<div style="display:none;">';
+  $element['#suffix'] = '</div>';
+};
+
+
 if (isset($page['content']['system_main'])) {
   $form = &$page['content']['system_main'];
 } else {
@@ -16,7 +28,7 @@ $formParts = element_get_visible_children($form);
 $visibleParts = ['account', 'actions', 'form_token'];
 $hiddenParts = array_diff($formParts, $visibleParts);
 foreach ($hiddenParts as $part) {
-  hide($form[$part]);
+  $hideElement($form[$part]);
 }
 
 // Hide all account parts except password
@@ -24,7 +36,7 @@ $accountParts = element_get_visible_children($form['account']);
 $visibleAccountParts = ['pass', 'current_pass'];
 $hiddenAccountParts = array_diff($accountParts, $visibleAccountParts);
 foreach ($hiddenAccountParts as $accountPart) {
-  hide($form['account'][$accountPart]);
+  $hideElement($form['account'][$accountPart]);
 }
 
 // Change the label on the form button

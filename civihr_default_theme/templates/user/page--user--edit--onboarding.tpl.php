@@ -72,6 +72,8 @@ $welcomeText = variable_get($welcomeTextKey, '');
 
 ?>
 
+<?php require_once __DIR__ .  '/../../includes/header_basic.inc'; ?>
+
 <div id="outer-wrapper">
   <div id="main-wrapper">
     <div id="main" class="main">

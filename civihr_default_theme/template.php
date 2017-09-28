@@ -365,7 +365,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
 
   $plainPages = ['onboarding-form', 'features-in-civihr'];
   if (in_array(request_path(), $plainPages)) {
-    $variables['page']['hide_header'] = TRUE;
+    $variables['page']['header_style'] = 'basic';
   }
 }
 

@@ -1,7 +1,17 @@
 
 <!--This page is just for importing by other pages -->
 
-<div id="main-wrapper">
+<?php
+/**
+ * @var array $page
+ * @var array $variables
+ */
+
+$classes = isset($variables['#attributes']['class']) ?
+  implode(' ', $variables['#attributes']['class']) : '';
+?>
+
+<div id="main-wrapper" class="<?php print $classes?>">
     <div id="main" class="main">
       <div class="container">
         <?php if ($breadcrumb): ?>

@@ -369,7 +369,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
   }
 
   if (request_path() === 'onboarding-form') {
-    $variables['#attributes']['class'][] = 'onboarding-wizard';
+    $variables['theme_hook_suggestions'][] = 'page__onboarding__wizard';
   }
 }
 

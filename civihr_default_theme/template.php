@@ -368,6 +368,10 @@ function civihr_default_theme_preprocess_page(&$variables) {
   if (in_array(request_path(), $plainPages)) {
     $variables['page']['header_style'] = 'basic';
   }
+
+  if (request_path() === 'onboarding-form') {
+    $variables['#attributes']['class'][] = 'onboarding-wizard';
+  }
 }
 
 /**

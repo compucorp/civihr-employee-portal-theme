@@ -5,7 +5,7 @@
  */
 ?>
 
-<div id="outer-wrapper">
+<div id="outer-wrapper" class="onboarding-wizard">
   <?php
     $includesDir = __DIR__ . '/../../includes/';
     require_once $includesDir . 'header_basic.inc';

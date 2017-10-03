@@ -21,6 +21,43 @@ function civihr_default_theme_preprocess_views_view_table(&$variables) {
 }
 
 /**
+ * @param array $variables
+ */
+function civihr_default_theme_preprocess_webform_progressbar(&$variables) {
+  global $user;
+  $onboardingPages = ['onboarding-form'];
+
+  if ($user && $user->uid) {
+    $userEditPage = sprintf('user/%d/edit', $user->uid);
+    $onboardingPages[] = $userEditPage;
+  }
+
+  if (in_array(request_path(), $onboardingPages)) {
+    $variables['theme_hook_suggestions'][] = 'webform_onboarding_progressbar';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function civihr_default_theme_theme() {
+
+  $defaultProgressBarVars = [
+    'node' => NULL,
+    'page_num' => NULL,
+    'page_count' => NULL,
+    'page_labels' => []
+  ];
+
+  return [
+    'webform_onboarding_progressbar' => [
+      'variables' => $defaultProgressBarVars,
+      'template' => 'templates/contrib/webform-onboarding-progressbar',
+    ],
+  ];
+}
+
+/**
  * Implements theme_table().
  * Copied from sites/all/themes/radix/includes/structure.inc
  */

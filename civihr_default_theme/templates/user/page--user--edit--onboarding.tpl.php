@@ -77,7 +77,7 @@ $welcomeText = variable_get($welcomeTextKey, '');
 <div id="onboarding-password-form" class="onboarding-wizard">
   <div id="main-wrapper">
     <div id="main" class="main">
-      <div class="container">
+      <div>
         <?php if ($messages): ?>
           <div id="messages">
             <?php print $messages; ?>
@@ -85,7 +85,7 @@ $welcomeText = variable_get($welcomeTextKey, '');
         <?php endif; ?>
       </div>
 
-      <div id="content" class="<?php print $container_class; ?> collapse">
+      <div id="content" class="collapse">
 
         <div class="progress_bar">
           <?php print $progressBar; ?>

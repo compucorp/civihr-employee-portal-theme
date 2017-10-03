@@ -1,0 +1,123 @@
+$breadcrumb-height: 60px;
+$breadcrumb-background: $light;
+$breadcrumb-border: #E8EEF0;
+$breadcrumb-hover-color: #E9EDF3;
+$breadcrumb-font-color: #4E4E78;
+$breadcrumb-completed-font-color: #00B0B9;
+$breadcrumb-current-font-color: #3DA4F1;
+
+.onboarding-wizard {
+  .webform-progressbar {
+    background: $breadcrumb-background;
+    width: 100%;
+
+    .webform-progressbar-inner {
+      display: none;
+    }
+
+    .webform-progressbar-outer {
+      border: none;
+      background: $breadcrumb-background;
+      height: 60px;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .webform-progressbar-page {
+      background: $breadcrumb-background;
+      border: none;
+      border-radius: 0;
+      color: $breadcrumb-font-color;
+      display: inline-block;
+      height: $breadcrumb-height;
+      left: 0 !important;
+      margin: 0;
+      padding: 0 20px 0 30px;
+      position: relative;
+      text-align: left;
+      width: auto;
+
+      .webform-progressbar-page-number {
+        border: 2px solid;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 18px;
+        height: 30px;
+        margin-right: 5px;
+        padding-top: 1px;
+        position: relative;
+        text-align: center;
+        top: 2px;
+        width: 30px;
+      }
+
+      &:after {
+        border-bottom: 40px solid transparent;
+        border-left: $breadcrumb-height/4 solid $breadcrumb-background;
+        border-top: 40px solid transparent;
+        content: " ";
+        display: block;
+        height: 0;
+        left: 100%;
+        margin-top: -40px;
+        position: absolute;
+        top: 50%;
+        width: 0;
+        z-index: 2;
+      }
+
+      &:before {
+        border-bottom: 40px solid transparent;
+        border-top: 40px solid transparent;
+        border-left: $breadcrumb-height/4 solid $breadcrumb-border;
+        content: " ";
+        display: block;
+        height: 0;
+        left: 100%;
+        margin-left: 1px;
+        margin-top: -40px;
+        position: absolute;
+        top: 50%;
+        width: 0;
+        z-index: 1;
+      }
+
+      &.completed {
+        .webform-progressbar-page-number {
+          border-radius: 50%;
+          border: 2px solid;
+          color: $breadcrumb-completed-font-color;
+          font-size: 15px;
+          height: 30px;
+          padding-top: 3px;
+          text-align: center;
+          top: 1px;
+          width: 30px;
+        }
+      }
+
+      &.current {
+        background: $breadcrumb-hover-color;
+        color: $breadcrumb-current-font-color;
+
+        &:after {
+          border-left-color: $breadcrumb-hover-color !important;
+        }
+      }
+
+      &:last-child {
+        &:before,
+        &:after {
+          border: none;
+        }
+      }
+    }
+
+    .webform-progressbar-page-label {
+      line-height: $breadcrumb-height;
+      margin: 0;
+      top: 0;
+    }
+  }
+}
+

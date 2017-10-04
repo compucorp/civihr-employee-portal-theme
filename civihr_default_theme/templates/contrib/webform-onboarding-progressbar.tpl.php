@@ -19,46 +19,26 @@
  * @var $percent: The percentage complete.
  */
 ?>
-<div class="webform-progressbar">
-  <?php if ($progressbar_bar): ?>
-    <div class="webform-progressbar-outer">
-      <div class="webform-progressbar-inner" style="width: <?php print number_format($percent, 0); ?>%">&nbsp;</div>
+
+<div class="panel panel-default crm_wizard__title">
+  <div class="panel-body">
+    <ul class="nav nav-pills">
       <?php for ($n = 1; $n <= $page_count; $n++): ?>
-        <span class="webform-progressbar-page<?php if ($n < $page_num) { print ' completed'; }; ?><?php if ($n == $page_num) { print ' current'; }; ?>" style="<?php print ($GLOBALS['language']->direction == 0) ? 'left' : 'right'; ?>: <?php print number_format(($n - 1) / ($page_count - 1), 4) * 100; ?>%">
-          <span class="webform-progressbar-page-number">
-            <?php
-            if ($n < $page_num) {
-              print '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>';
-            } else {
-              print $n;
-            }
-            ?>
-          </span>
-          <?php if ($progressbar_pagebreak_labels): ?>
-            <span class="webform-progressbar-page-label">
+        <li class="<?php if ($n < $page_num) { print 'completed'; }; ?><?php if ($n == $page_num) { print ' active'; }; ?>">
+          <a>
+            <span class="crm_wizard__title__number">
+              <?php
+              if ($n < $page_num) {
+                print '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>';
+              } else {
+                print $n;
+              }
+              ?>
+            </span>
             <?php print check_plain($page_labels[$n - 1]); ?>
-          </span>
-          <?php endif; ?>
-        </span>
+          </a>
+        </li>
       <?php endfor; ?>
-    </div>
-  <?php endif; ?>
-
-
-  <?php if ($progressbar_page_number): ?>
-    <div class="webform-progressbar-number">
-      <?php print t('Page @start of @end', ['@start' => $page_num, '@end' => $page_count]); ?>
-      <?php if ($progressbar_percent): ?>
-        <span class="webform-progressbar-number">
-          (<?php print number_format($percent, 0); ?>%)
-        </span>
-      <?php endif; ?>
-    </div>
-  <?php endif; ?>
-
-  <?php if (!$progressbar_page_number && $progressbar_percent): ?>
-    <div class="webform-progressbar-number">
-      <?php print number_format($percent, 0); ?>%
-    </div>
-  <?php endif; ?>
+    </ul>
+  </div>
 </div>

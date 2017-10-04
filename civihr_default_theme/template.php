@@ -648,7 +648,8 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
       <div class="form-group form-group--smaller-gutter">
         <label
          for="'. $value['#id'] .'"
-         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
+         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' )
+          . ( $fields_structure[$key]['#required'] ? 'required-mark' : '' ) . '">'
           . ( !$label_hidden ? CRM_Utils_Array::value('#title', $value) : '' ) .
         '</label>
         <div class="col-sm-9">

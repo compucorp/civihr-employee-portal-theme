@@ -7,6 +7,7 @@
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   },
   "devDependencies": {
+    "civicrm-scssroot": "git://github.com/totten/civicrm-scssroot.git#v0.1.1",
     "imagemin-pngcrush": "~4.1.0",
     "node-sass": "^3.4.1",
     "gulp": "~3.9.0",

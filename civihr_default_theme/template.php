@@ -350,7 +350,8 @@ function civihr_default_theme_css_alter(&$css) {
       'sites/all/modules/civicrm/bower_components/font-awesome/css/font-awesome.css',
       'sites/all/modules/civihr-contrib-required/fancy_login/css/fancy_login.css',
       'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
-      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css'
+      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css',
+      'sites/all/modules/civihr-signup/css/civihr-signup.css'
     ];
     foreach (array_keys($css) as $file) {
       $found = false;
@@ -480,7 +481,8 @@ function civihr_default_theme_js_alter(&$javascript) {
       'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
       'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js',
       'sites/all/modules/civicrm/packages/jquery/plugins/jquery.blockUI.min.js',
-      'https://sdk.yoti.com/clients/browser.js'
+      'https://sdk.yoti.com/clients/browser.js',
+      'sites/all/modules/civihr-signup/js/civihr-signup.js'
     ];
     foreach (array_keys($javascript) as $file) {
       $found = false;

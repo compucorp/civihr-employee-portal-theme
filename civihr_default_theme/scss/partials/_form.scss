@@ -405,3 +405,15 @@
         width: 50%;
     }
 }
+
+// This is a temporary copied class from Shoreditch theme
+// @TODO remove this style below as soon as Shoreditch theme is applied
+// Required mark (*)
+.required-mark {
+
+  &:after {
+    content:"*";
+    color: $brand-danger;
+    margin-left: 5px;
+  }
+}

@@ -15,7 +15,7 @@
     width: 100%;
 
     > label {
-      color: $crm-wizard-primary-color;
+      color: $crm-wizard-font-color;
       display: block;
       font-size: 13px;
       padding: 0;
@@ -48,21 +48,10 @@
   }
 
   .webform-previous {
-    background: $crm-wizard-secondary-color;
-    border: 0;
-    color: $light;
-    float: left;
-
-    &:focus {
-      background: $crm-wizard-secondary-color;
-      color: $light;
-    }
-  }
-
-  .webform-next {
     background: $crm-wizard-primary-color;
     border: 0;
     color: $light;
+    float: left;
 
     &:focus {
       background: $crm-wizard-primary-color;
@@ -70,15 +59,51 @@
     }
   }
 
-  .webform-component--address-title {
+  .webform-next {
+    background: $crm-wizard-secondary-color;
+    border: 0;
+    color: $light;
+
+    &:focus {
+      background: $crm-wizard-secondary-color;
+      color: $light;
+    }
+  }
+
+  .webform-component--address-title,
+  .webform-component--personal-details-title {
     background: transparent !important;
 
     .onboarding-fieldset-title {
-      color: $crm-wizard-primary-color;
+      color: $crm-wizard-font-color;
       margin-top: -15px;
       font-size: 36px;
       font-weight: 500;
       text-align: center;
+    }
+  }
+
+
+  .webform-container-inline.webform-datepicker  div.form-item.form-type-select {
+    display: none;
+  }
+
+  .webform-calendar {
+    padding: 7px 10px;
+
+    &+.input-group-addon {
+      background-color: #F3F3F6;
+      border: 1px solid $crm-color-neutral;
+      color: $crm-wizard-font-color;
+      display: inline-block;
+      height: 100%;
+      line-height: 32px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 40px;
     }
   }
 }

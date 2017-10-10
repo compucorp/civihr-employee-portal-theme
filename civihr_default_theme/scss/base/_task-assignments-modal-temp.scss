@@ -70,6 +70,11 @@ fieldset {
       text-align: center;
     }
 
+    .no-file {
+      color: $brand-danger;
+      border-color: $brand-danger !important;
+    }
+
     .no-left-margin {
       margin-left: -15px;
     }
@@ -148,7 +153,6 @@ fieldset {
     // Datepicker
     [uib-datepicker-popup-wrap] > .dropdown-menu {
       padding: 10px;
-      width: 300px;
 
       table {
         &:focus {

@@ -79,7 +79,7 @@
       color: $crm-wizard-font-color;
       margin-top: -15px;
       font-size: 36px;
-      font-weight: 500;
+      font-weight: $headings-font-weight;
       text-align: center;
     }
   }
@@ -92,7 +92,7 @@
     padding: 7px 10px;
 
     &+.input-group-addon {
-      background-color: #F3F3F6;
+      background-color: $crm_gray-light-alt;
       border: 1px solid $crm-color-neutral;
       color: $crm-wizard-font-color;
       display: inline-block;

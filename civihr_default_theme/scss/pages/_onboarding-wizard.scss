@@ -1,4 +1,4 @@
-.onboarding-wizard {
+.onboarding-wizard-page {
   .crm_wizard__title {
     .nav-pills {
       text-align: center;
@@ -8,5 +8,107 @@
         float: none;
       }
     }
+  }
+
+  .form-group {
+    display: inline-block;
+    width: 100%;
+
+    > label {
+      color: $crm-wizard-font-color;
+      display: block;
+      font-size: 13px;
+      padding: 0;
+      width: 100%;
+    }
+
+    > div {
+      padding: 0;
+      width: 100%;
+
+      div.form-item {
+        background-color: $light;
+        margin: 0;
+      }
+    }
+  }
+
+  .modal-civihr-custom__section {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -150px;
+    width: 475px;
+  }
+
+  .modal-civihr-custom__footer {
+    padding-top: 20px;
+  }
+
+  .page-header {
+    display: none;
+  }
+
+  .webform-previous {
+    background: $crm-wizard-primary-color;
+    border: 0;
+    color: $light;
+    float: left;
+
+    &:focus {
+      background: $crm-wizard-primary-color;
+      color: $light;
+    }
+  }
+
+  .webform-next {
+    background: $crm-wizard-secondary-color;
+    border: 0;
+    color: $light;
+
+    &:focus {
+      background: $crm-wizard-secondary-color;
+      color: $light;
+    }
+  }
+
+  .webform-component-markup {
+    background: transparent !important;
+
+    .onboarding-fieldset-title {
+      color: $crm-wizard-font-color;
+      margin-top: -15px;
+      font-size: 36px;
+      font-weight: $headings-font-weight;
+      text-align: center;
+    }
+  }
+
+  .webform-container-inline.webform-datepicker  div.form-item.form-type-select {
+    display: none;
+  }
+
+  .webform-calendar {
+    padding: 7px 10px;
+
+    &+.input-group-addon {
+      background-color: $crm_gray-light-alt;
+      border: 1px solid $crm-color-neutral;
+      color: $crm-wizard-font-color;
+      display: inline-block;
+      height: 100%;
+      line-height: 32px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 40px;
+    }
+  }
+
+  .webform-component-fieldset {
+    background: transparent;
+    box-shadow: none;
   }
 }

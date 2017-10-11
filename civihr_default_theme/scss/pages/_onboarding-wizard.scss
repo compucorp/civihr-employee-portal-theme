@@ -33,11 +33,44 @@
     }
   }
 
+  .form-radios {
+    > div {
+      background-color: transparent !important;
+      float: left;
+      padding: 8px 12px;
+      border: 1px solid #949caa;
+      border-right: none;
+      margin: 0 !important;
+    }
+
+    > div:last-child {
+      border-right: 1px solid #949caa;
+    }
+
+    > div.checked {
+      background-color: $crm-wizard-secondary-color !important;
+      color: $light;
+      border-color: transparent;
+    }
+
+    input[type='radio']:checked:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      position: relative;
+      background-color: #000;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 4px solid white;
+    }
+  }
+
   .modal-civihr-custom__section {
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-    top: -150px;
+    //position: relative;
+    //top: -150px;
     width: 475px;
   }
 
@@ -110,5 +143,43 @@
   .webform-component-fieldset {
     background: transparent;
     box-shadow: none;
+  }
+
+  .webform-component--civicrm-1-contact-1-contact-gender-id {
+    background-color: transparent !important;
+
+    .description {
+      margin-bottom: 10px;
+    }
+
+    .form-type-radio {
+      width: 33.33%;
+    }
+  }
+
+  .webform-component--civicrm-1-contact-1-cg16-custom-73 {
+    position: relative;
+    top: -23px;
+    z-index: 2;
+    background-color: transparent !important;
+    margin-bottom: -18px !important;
+
+    .form-type-checkbox {
+      background-color: transparent !important;
+    }
+  }
+
+  [for="edit-submitted-civicrm-1-contact-1-cg16-custom-73"] {
+    padding-left: 20px !important;
+  }
+
+  label:empty {
+    display: none;
+  }
+}
+
+#onboarding-webform {
+  > form > div:first-child {
+    height: 160px;
   }
 }

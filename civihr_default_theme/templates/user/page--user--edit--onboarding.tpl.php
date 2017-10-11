@@ -74,7 +74,7 @@ $welcomeText = variable_get($welcomeTextKey, '');
 
 <?php require_once __DIR__ .  '/../../includes/header_basic.inc'; ?>
 
-<div id="onboarding-password-form" class="onboarding-wizard">
+<div id="onboarding-password-form" class="onboarding-wizard-page">
   <div id="main-wrapper">
     <div id="main" class="main">
       <div>

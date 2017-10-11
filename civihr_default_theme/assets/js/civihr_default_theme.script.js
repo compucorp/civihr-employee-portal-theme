@@ -9,6 +9,8 @@
 
       // on doc ready
       $(document).ready(function () {
+        Drupal.civihr_theme.addClassToRadioButtons();
+        Drupal.civihr_theme.onBoardingWizard();
         Drupal.civihr_theme.applyMatchHeight();
         Drupal.civihr_theme.applyCustomSelect();
         Drupal.civihr_theme.initMobileNav();
@@ -19,12 +21,29 @@
         Drupal.civihr_theme.applyMatchHeight();
         Drupal.civihr_theme.applyCustomSelect();
       });
-
     }
-  }
+  };
 
   // Create theme related functions
   Drupal.civihr_theme = Drupal.civihr_theme || {};
+
+  Drupal.civihr_theme.onBoardingWizard = function() {
+    var ssnRadioBtn = $('#edit-submitted-civicrm-1-contact-1-cg16-custom-73-1');
+    var ssnLabel = $('label[for="edit-submitted-civicrm-1-contact-1-cg16-custom-72"]');
+
+    ssnRadioBtn.click(function() {
+      ssnLabel.toggle();
+    });
+  };
+
+  Drupal.civihr_theme.addClassToRadioButtons = function() {
+    var $radioButtons = $('input[type="radio"]');
+    $radioButtons.click(function() {
+      $radioButtons.each(function() {
+        $(this).parent().parent().toggleClass('checked', this.checked);
+      });
+    });
+  };
 
   Drupal.civihr_theme.initMobileNav = function() {
     $header = $('.chr_header');
@@ -34,20 +53,20 @@
     var toggleMenu = function () {
       $nav.toggleClass('is-open');
     };
-    
+
     $header.on('click', '.chr_header__nav__toggle', toggleMenu);
     $mobileLogo.on('click', toggleMenu);
-  }
+  };
 
   Drupal.civihr_theme.applyMatchHeight = function() {
     $('.view-hr-vacancies li').matchHeight();
     $('.view-hr-documents li').matchHeight();
-  }
+  };
 
   Drupal.civihr_theme.applyCustomSelect = function() {
     Drupal.civihr_theme.initCustomSelect();
     Drupal.civihr_theme.onFieldsetLegendClick();
-  }
+  };
 
   Drupal.civihr_theme.initCustomSelect = function() {
     $('.form-item select').not('.hasCustomSelect').not('.skip-js-custom-select').filter(':visible').each(function () {
@@ -60,7 +79,7 @@
         $this.customSelect();
       }
     });
-  }
+  };
 
   Drupal.civihr_theme.onFieldsetLegendClick = function() {
     $('.fieldset-legend .fieldset-title').click(Drupal.civihr_theme.initCustomSelect);

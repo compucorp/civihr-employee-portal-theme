@@ -50,13 +50,13 @@
       background-color: transparent !important;
       float: left;
       padding: 8px 12px;
-      border: 1px solid #949caa;
+      border: 1px solid $crm_color-neutral;
       border-right: none;
       margin: 0 !important;
     }
 
     > div:last-child {
-      border-right: 1px solid #949caa;
+      border-right: 1px solid $crm_color-neutral;
     }
 
     > div.checked {

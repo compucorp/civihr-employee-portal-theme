@@ -421,12 +421,11 @@ function civihr_default_theme_preprocess_page(&$variables) {
 function _civihr_default_theme_should_start_onboarding() {
   global $user;
   $shouldDoOnboarding = FALSE;
-  $isUserEdit = preg_match('/user\/(\d+)\/edit/', current_path(), $matches);
-  $editUserID = CRM_Utils_Array::value(1, $matches);
-  $isCurrentUser = $editUserID == $user->uid;
+  $userEditPath = sprintf('user/%d/edit', $user->uid);
+  $isEditSelfPage = (current_path() === $userEditPath);
   $onboardingChecker = '_civihr_employee_portal_should_do_onboarding';
   if (function_exists($onboardingChecker)) {
-    $shouldDoOnboarding = $isUserEdit && $isCurrentUser && $onboardingChecker($user);
+    $shouldDoOnboarding = $isEditSelfPage && $onboardingChecker($user);
   }
 
   return $shouldDoOnboarding;

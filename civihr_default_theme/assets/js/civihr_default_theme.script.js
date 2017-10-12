@@ -3,10 +3,9 @@
  * Custom scripts for theme.
  */
 
-(function($) {
+(function ($) {
   Drupal.behaviors.civihr_theme = {
-    attach: function (context, settings) {
-
+    attach: function () {
       // on doc ready
       $(document).ready(function () {
         Drupal.civihr_theme.addClassToRadioButtons();
@@ -27,28 +26,28 @@
   // Create theme related functions
   Drupal.civihr_theme = Drupal.civihr_theme || {};
 
-  Drupal.civihr_theme.onBoardingWizard = function() {
+  Drupal.civihr_theme.onBoardingWizard = function () {
     applyCustomSelecttoEmergencyContact();
     hideSSNLabelOnRadioButtonClick();
   };
 
-  Drupal.civihr_theme.addClassToRadioButtons = function() {
+  Drupal.civihr_theme.addClassToRadioButtons = function () {
     var $radioButtons = $('input[type="radio"]');
-    $radioButtons.each(function() {
+    $radioButtons.each(function () {
       $(this).parent().parent().toggleClass('checked', this.checked);
     });
 
-    $radioButtons.click(function() {
-      $radioButtons.each(function() {
+    $radioButtons.click(function () {
+      $radioButtons.each(function () {
         $(this).parent().parent().toggleClass('checked', this.checked);
       });
     });
   };
 
-  Drupal.civihr_theme.initMobileNav = function() {
-    $header = $('.chr_header');
-    $mobileLogo = $('.chr_header__brand.chr_brand.chr_header__home-menu');
-    $nav = $header.find('.chr_header__nav');
+  Drupal.civihr_theme.initMobileNav = function () {
+    var $header = $('.chr_header');
+    var $mobileLogo = $('.chr_header__brand.chr_brand.chr_header__home-menu');
+    var $nav = $header.find('.chr_header__nav');
 
     var toggleMenu = function () {
       $nav.toggleClass('is-open');
@@ -58,17 +57,17 @@
     $mobileLogo.on('click', toggleMenu);
   };
 
-  Drupal.civihr_theme.applyMatchHeight = function() {
+  Drupal.civihr_theme.applyMatchHeight = function () {
     $('.view-hr-vacancies li').matchHeight();
     $('.view-hr-documents li').matchHeight();
   };
 
-  Drupal.civihr_theme.applyCustomSelect = function() {
+  Drupal.civihr_theme.applyCustomSelect = function () {
     Drupal.civihr_theme.initCustomSelect();
     Drupal.civihr_theme.onFieldsetLegendClick();
   };
 
-  Drupal.civihr_theme.initCustomSelect = function() {
+  Drupal.civihr_theme.initCustomSelect = function () {
     $('.form-item select').not('.hasCustomSelect').not('.skip-js-custom-select').filter(':visible').each(function () {
       var $this = $(this);
       if ($('body').hasClass('page-dashboard')) {
@@ -81,7 +80,7 @@
     });
   };
 
-  Drupal.civihr_theme.onFieldsetLegendClick = function() {
+  Drupal.civihr_theme.onFieldsetLegendClick = function () {
     $('.fieldset-legend .fieldset-title').click(Drupal.civihr_theme.initCustomSelect);
   };
 
@@ -92,13 +91,12 @@
     });
   }
 
-  function hideSSNLabelOnRadioButtonClick() {
+  function hideSSNLabelOnRadioButtonClick () {
     var ssnRadioBtn = $('#edit-submitted-civicrm-1-contact-1-cg16-custom-73-1');
     var ssnLabel = $('label[for="edit-submitted-civicrm-1-contact-1-cg16-custom-72"]');
 
-    ssnRadioBtn.click(function() {
+    ssnRadioBtn.click(function () {
       ssnLabel.toggle();
     });
   }
-
 })(jQuery);

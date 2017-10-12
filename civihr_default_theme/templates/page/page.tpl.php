@@ -19,6 +19,7 @@
 <div id="outer-wrapper">
   <?php
     $includesDir = __DIR__ . '/../../includes/';
+    // For some pages we don't want to show the user menu
     $headerStyle = isset($page['header_style']) ? $page['header_style'] : NULL;
 
     if ($headerStyle === 'basic') {

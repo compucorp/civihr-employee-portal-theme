@@ -10,10 +10,10 @@
       // on doc ready
       $(document).ready(function () {
         Drupal.civihr_theme.addClassToRadioButtons();
-        Drupal.civihr_theme.onBoardingWizard();
         Drupal.civihr_theme.applyMatchHeight();
         Drupal.civihr_theme.applyCustomSelect();
         Drupal.civihr_theme.initMobileNav();
+        Drupal.civihr_theme.onBoardingWizard();
       });
 
       // on ajax complete (ie: when opening modals)
@@ -28,16 +28,16 @@
   Drupal.civihr_theme = Drupal.civihr_theme || {};
 
   Drupal.civihr_theme.onBoardingWizard = function() {
-    var ssnRadioBtn = $('#edit-submitted-civicrm-1-contact-1-cg16-custom-73-1');
-    var ssnLabel = $('label[for="edit-submitted-civicrm-1-contact-1-cg16-custom-72"]');
-
-    ssnRadioBtn.click(function() {
-      ssnLabel.toggle();
-    });
+    applyCustomSelecttoEmergencyContact();
+    hideSSNLabelOnRadioButtonClick();
   };
 
   Drupal.civihr_theme.addClassToRadioButtons = function() {
     var $radioButtons = $('input[type="radio"]');
+    $radioButtons.each(function() {
+      $(this).parent().parent().toggleClass('checked', this.checked);
+    });
+
     $radioButtons.click(function() {
       $radioButtons.each(function() {
         $(this).parent().parent().toggleClass('checked', this.checked);
@@ -83,6 +83,22 @@
 
   Drupal.civihr_theme.onFieldsetLegendClick = function() {
     $('.fieldset-legend .fieldset-title').click(Drupal.civihr_theme.initCustomSelect);
+  };
+
+  function applyCustomSelecttoEmergencyContact () {
+    var addEmergencyContact = $('#edit-submitted-add-another-emergency-contact-1');
+    addEmergencyContact.click(function () {
+      setTimeout(Drupal.civihr_theme.applyCustomSelect, 0);
+    });
+  }
+
+  function hideSSNLabelOnRadioButtonClick() {
+    var ssnRadioBtn = $('#edit-submitted-civicrm-1-contact-1-cg16-custom-73-1');
+    var ssnLabel = $('label[for="edit-submitted-civicrm-1-contact-1-cg16-custom-72"]');
+
+    ssnRadioBtn.click(function() {
+      ssnLabel.toggle();
+    });
   }
 
 })(jQuery);

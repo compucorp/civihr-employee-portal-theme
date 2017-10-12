@@ -32,6 +32,7 @@ function civihr_default_theme_preprocess_webform_progressbar(&$variables) {
     $onboardingPages[] = $userEditPage;
   }
 
+  // use different template for progress bar for onboarding form / user edit
   if (in_array(request_path(), $onboardingPages)) {
     $variables['theme_hook_suggestions'][] = 'webform_onboarding_progressbar';
   }

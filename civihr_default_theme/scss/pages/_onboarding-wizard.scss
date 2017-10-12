@@ -34,6 +34,8 @@
   }
 
   .form-radios {
+    background-color: transparent !important;
+
     > div {
       background-color: transparent !important;
       float: left;
@@ -69,8 +71,6 @@
   .modal-civihr-custom__section {
     margin-left: auto;
     margin-right: auto;
-    //position: relative;
-    //top: -150px;
     width: 475px;
   }
 
@@ -146,8 +146,6 @@
   }
 
   .webform-component--civicrm-1-contact-1-contact-gender-id {
-    background-color: transparent !important;
-
     .description {
       margin-bottom: 10px;
     }
@@ -175,6 +173,22 @@
 
   label:empty {
     display: none;
+  }
+
+  .fieldset-legend {
+    &:before {
+      display: none;
+    }
+  }
+
+  #edit-submitted-add-another-emergency-contact {
+    .form-type-radio {
+      width: 50%;
+    }
+  }
+
+  .webform-component-radios {
+    background-color: transparent !important;
   }
 }
 

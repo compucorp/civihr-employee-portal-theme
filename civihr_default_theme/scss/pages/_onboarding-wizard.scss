@@ -5,10 +5,6 @@
     }
   }
 
-  label[for="edit-submitted-civicrm-1-contact-1-cg16-custom-73"] {
-    padding-left: 20px !important;
-  }
-
   .crm_wizard__title {
     .nav-pills {
       text-align: center;
@@ -50,13 +46,13 @@
       background-color: transparent !important;
       float: left;
       padding: 8px 12px;
-      border: 1px solid #949caa;
+      border: 1px solid $crm_color-neutral;
       border-right: none;
       margin: 0 !important;
     }
 
     > div:last-child {
-      border-right: 1px solid #949caa;
+      border-right: 1px solid $crm_color-neutral;
     }
 
     > div.checked {
@@ -85,13 +81,43 @@
   }
 
   .modal-civihr-custom__section {
+    margin: -25px auto 25px auto;
+    width: 475px;
+    padding: 90px 0 0 0;
+  }
+
+  .modal-civihr-custom__footer {
     margin-left: auto;
     margin-right: auto;
     width: 475px;
   }
 
-  .modal-civihr-custom__footer {
-    padding-top: 20px;
+  .onboarding_wizard_payroll_gender .webform-component-radios {
+    .description {
+      margin-bottom: 10px;
+    }
+
+    .form-type-radio {
+      width: 33.33%;
+    }
+  }
+
+  .onboarding_wizard_payroll_ssin_checkbox {
+    label {
+      padding-left: 20px !important;
+    }
+
+    .webform-component-checkboxes {
+      background-color: transparent !important;
+      margin-bottom: -18px !important;
+      position: relative;
+      top: -23px;
+      z-index: 2;
+
+      .form-type-checkbox {
+        background-color: transparent !important;
+      }
+    }
   }
 
   .page-header {
@@ -149,28 +175,6 @@
     background-color: transparent !important;
   }
 
-  .webform-component--civicrm-1-contact-1-contact-gender-id {
-    .description {
-      margin-bottom: 10px;
-    }
-
-    .form-type-radio {
-      width: 33.33%;
-    }
-  }
-
-  .webform-component--civicrm-1-contact-1-cg16-custom-73 {
-    background-color: transparent !important;
-    margin-bottom: -18px !important;
-    position: relative;
-    top: -23px;
-    z-index: 2;
-
-    .form-type-checkbox {
-      background-color: transparent !important;
-    }
-  }
-
   .webform-container-inline.webform-datepicker div.form-item.form-type-select {
     display: none;
   }
@@ -185,11 +189,5 @@
       background: $crm-wizard-primary-color;
       color: $light;
     }
-  }
-}
-
-#onboarding-webform {
-  > form > div:first-child {
-    height: 160px;
   }
 }

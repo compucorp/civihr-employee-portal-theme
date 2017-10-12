@@ -26,13 +26,20 @@
   // Create theme related functions
   Drupal.civihr_theme = Drupal.civihr_theme || {};
 
+  /**
+   * Do the stuff related to On boarding wizard
+   */
   Drupal.civihr_theme.onBoardingWizard = function () {
     applyCustomSelecttoEmergencyContact();
-    hideSSNLabelOnRadioButtonClick();
+    hideSSNLabelOnCheckboxClick();
   };
 
+  /**
+   * Add a class to the Radio buttons when they are checked
+   */
   Drupal.civihr_theme.addClassToRadioButtons = function () {
     var $radioButtons = $('input[type="radio"]');
+
     $radioButtons.each(function () {
       $(this).parent().parent().toggleClass('checked', this.checked);
     });
@@ -84,6 +91,9 @@
     $('.fieldset-legend .fieldset-title').click(Drupal.civihr_theme.initCustomSelect);
   };
 
+  /**
+   * Apply custom select for 2nd emergency contact
+   */
   function applyCustomSelecttoEmergencyContact () {
     var addEmergencyContact = $('#edit-submitted-add-another-emergency-contact-1');
     addEmergencyContact.click(function () {
@@ -91,11 +101,14 @@
     });
   }
 
-  function hideSSNLabelOnRadioButtonClick () {
-    var ssnRadioBtn = $('#edit-submitted-civicrm-1-contact-1-cg16-custom-73-1');
-    var ssnLabel = $('label[for="edit-submitted-civicrm-1-contact-1-cg16-custom-72"]');
+  /**
+   * Hide the SSN Label of Onboarding page when the checkbox is checked
+   */
+  function hideSSNLabelOnCheckboxClick () {
+    var ssnCheckbox = $('.onboarding_wizard_payroll_ssin_checkbox input.form-checkbox');
+    var ssnLabel = $('.onboarding_wizard_payroll_ssin_textfield');
 
-    ssnRadioBtn.click(function () {
+    ssnCheckbox.click(function () {
       ssnLabel.toggle();
     });
   }

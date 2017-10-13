@@ -30,7 +30,7 @@
    * Do the stuff related to On boarding wizard
    */
   Drupal.civihr_theme.onBoardingWizard = function () {
-    applyCustomSelecttoEmergencyContact();
+    applyCustomSelectOnRadioClick();
     hideSSNLabelOnCheckboxClick();
   };
 
@@ -92,11 +92,11 @@
   };
 
   /**
-   * Apply custom select for 2nd emergency contact
+   * Apply custom select when clicked on radio buttons, which opens new section
    */
-  function applyCustomSelecttoEmergencyContact () {
-    var addEmergencyContact = $('#edit-submitted-add-another-emergency-contact-1');
-    addEmergencyContact.click(function () {
+  function applyCustomSelectOnRadioClick () {
+    var radioBtn = $('.onboarding-wizard-page .form-radios');
+    radioBtn.click(function () {
       setTimeout(Drupal.civihr_theme.applyCustomSelect, 0);
     });
   }

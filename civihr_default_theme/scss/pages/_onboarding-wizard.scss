@@ -1,5 +1,10 @@
 .onboarding-wizard-page {
-  #edit-submitted-add-another-emergency-contact {
+  #edit-submitted-add-another-emergency-contact,
+  #edit-submitted-do-you-have-any-dependants,
+  #edit-submitted-first-dependant-add-a-second-dependant,
+  #edit-submitted-second-dependant-add-a-third-dependant,
+  #edit-submitted-third-dependant-add-a-fourth-dependant,
+  #edit-submitted-fourth-dependant-add-a-fifth-dependant {
     .form-type-radio {
       width: 50%;
     }

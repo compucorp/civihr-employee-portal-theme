@@ -1,5 +1,10 @@
 .onboarding-wizard-page {
-  #edit-submitted-add-another-emergency-contact {
+  #edit-submitted-add-another-emergency-contact,
+  #edit-submitted-do-you-have-any-dependants,
+  #edit-submitted-first-dependant-add-a-second-dependant,
+  #edit-submitted-second-dependant-add-a-third-dependant,
+  #edit-submitted-third-dependant-add-a-fourth-dependant,
+  #edit-submitted-fourth-dependant-add-a-fifth-dependant {
     .form-type-radio {
       width: 50%;
     }
@@ -91,7 +96,10 @@
   }
 
   .modal-civihr-custom__footer {
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 20px;
+    width: 475px;
   }
 
   .page-header {
@@ -186,10 +194,14 @@
       color: $light;
     }
   }
+
+  .webform-component--emergency-contact-title {
+    margin-top: 50px !important;
+  }
 }
 
 #onboarding-webform {
-  > form > div:first-child {
-    height: 160px;
+  > form > .modal-civihr-custom__section {
+    margin-top: -130px;
   }
 }

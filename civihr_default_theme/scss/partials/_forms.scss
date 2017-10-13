@@ -1,0 +1,46 @@
+.form-horizontal {
+
+  .control-label {
+    text-align: left;
+    font-weight: normal;
+
+    i {
+      vertical-align: super;
+      font-size: 0.3em;
+    }
+  }
+}
+
+.form-control {
+  border: 1px solid $input-border;
+}
+
+// This is a temporary copied class from Shoreditch theme
+// @TODO remove this style below as soon as Shoreditch theme is applied
+// Required mark (*)
+.required-mark {
+
+  &:after {
+    content:"*";
+    color: $brand-danger;
+    margin-left: 5px;
+  }
+}
+
+// Theme has issues with ui-select search field
+// @TODO remove these styles below as soon as Shoreditch theme is applied
+
+.ui-select-search {
+  width: 100% !important;
+}
+
+.ui-select-multiple {
+
+  .ui-select-search {
+    width: 150px !important;
+  }
+}
+
+.ui-select-toggle {
+  padding: 7px 10px !important;
+}

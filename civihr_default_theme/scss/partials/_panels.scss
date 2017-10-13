@@ -1,0 +1,79 @@
+.panel {
+  @include box-shadow($crm-box-shadow-global);
+  background: transparent;
+  border: none;
+
+  &--sliding-body {
+    border-bottom: 0;
+    overflow: hidden !important;
+  }
+}
+
+.panel-body-wrap {
+  transition: max-height .4s linear;
+  max-height: 162px;
+
+  &--collapse {
+    max-height: 0;
+  }
+}
+
+.panel-body {
+  @include grid-condensed($panel-body-padding+1px);
+  background: $light;
+
+  > .row:last-child .form-actions {
+    margin-bottom: 0;
+  }
+
+}
+
+.panel-heading {
+  width: 100%;
+}
+
+.panel-title {
+  color: $gray-darker;
+  font-size: $crm-font-size-large;
+  font-weight: 400;
+}
+
+// Subheading and subtitle
+.panel-subheading {
+  padding: $crm-panel-subheading-padding;
+}
+
+.panel-default {
+
+  > .panel-subheading {
+    background: $panel-default-heading-bg;
+    border-bottom: 1px solid $crm-grizzly;
+    color: $panel-default-text;
+  }
+}
+
+// A panel heading that is just white, with a border below the title
+// (only for .panel-default). If the panel itself is collapsed, the title loses
+// the bottom border
+.panel-heading-plain {
+
+  .panel-default > & {
+    background: $light;
+    border: 0;
+
+    > .panel-title {
+      $padding-y: nth($panel-heading-padding, 1);
+
+      border-bottom: 1px solid $gray-light;
+      padding-bottom: $padding-y;
+    }
+  }
+
+  .panel-default.is-collapsed > & {
+
+    > .panel-title {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.pane-civihr-leave-absences-manager-leave {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.manager-leave-page {
+
+  .button-container {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: $screen-md-min) {
+    .button-container {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn-group {
+
+    > .btn {
+      border-color: transparent;
+    }
+  }
+}
+
+.chr_leave_notification {
+  margin-left: 5px;
+  vertical-align: baseline;
+}

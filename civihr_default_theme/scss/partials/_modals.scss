@@ -1,0 +1,16 @@
+.modal-content,
+.modal-body,
+.modal-header,
+.modal-footer {
+  background: $crm-grayish-blue;
+}
+
+.modal-body,
+.modal-header,
+.modal-footer {
+  padding: 15px 20px;
+}
+
+.modal-footer {
+  border-top: none;
+}

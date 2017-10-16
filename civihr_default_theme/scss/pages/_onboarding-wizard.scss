@@ -81,7 +81,7 @@
 
   .fieldset-legend {
     &:before {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -125,11 +125,27 @@
     }
   }
 
+  .onboarding_wizard_profile_pic_upload_image {
+    label {
+      display: none;
+    }
+    input.form-file {
+      height: 180px;
+      margin-bottom: 15px;
+      width: 475px;
+    }
+
+    .form-item {
+      background-color: transparent !important;
+    }
+  }
+
   .page-header {
     display: none;
   }
 
-  .webform-next {
+  .webform-next,
+  .webform-submit {
     background: $crm-wizard-secondary-color;
     border: 0;
     color: $light;
@@ -160,8 +176,11 @@
   }
 
   .webform-component-fieldset {
-    background: transparent;
     box-shadow: none;
+
+    .fieldset-wrapper {
+      background: transparent;
+    }
   }
 
   .webform-component-markup {
@@ -193,6 +212,52 @@
     &:focus {
       background: $crm-wizard-primary-color;
       color: $light;
+    }
+  }
+
+  .drop-layer {
+    align-items: center;
+    background: #ecedee;
+    color: $crm-wizard-font-color;
+    display: flex;
+    justify-content: center;
+    height: 180px;
+    outline: 1px dashed #7a8084;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    top: 0;
+    width: 475px;
+
+    i {
+      color: $crm-wizard-secondary-color;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    &.is-dragover {
+      outline-offset: -10px;
+      outline-color: #c8dadf;
+      background-color: $light;
+    }
+  }
+
+  .webform-component-file {
+    background-color: transparent;
+  }
+
+  .form-managed-file {
+    .description {
+      margin-top: 15px;
+    }
+
+    .form-submit {
+      margin-top: 15px;
+    }
+
+    input[type='submit'] {
+      float: right;
     }
   }
 }

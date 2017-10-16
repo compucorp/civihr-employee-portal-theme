@@ -32,6 +32,34 @@
   Drupal.civihr_theme.onBoardingWizard = function () {
     applyCustomSelectOnRadioClick();
     hideSSNLabelOnCheckboxClick();
+    Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
+  };
+
+  /**
+   * Apply the Drag and Drop Behaviour to the given input field
+   *
+   * @param {string} inputFieldSelector
+   */
+  Drupal.civihr_theme.createDragAndDrop = function (inputFieldSelector) {
+    var inputField = $(inputFieldSelector);
+    var dropHelper = '<span><i class="fa fa-cloud-upload" aria-hidden="true"></i><br>' +
+      '<b>Drop file here</b><br>or click to browse</span>';
+
+    var dropLayer = inputFieldSelector+ '+.drop-layer';
+
+    if (!$(dropLayer).length) {
+      inputField.after('<div class="drop-layer">' + dropHelper + '</div>');
+      inputField.on('dragenter', function() {
+        $(dropLayer).addClass('is-dragover');
+      });
+      inputField.on('dragleave', function () {
+        $(dropLayer).removeClass('is-dragover');
+      });
+      inputField.on('change', function () {
+        $(dropLayer).html('File Selected');
+        $(dropLayer).removeClass('is-dragover');
+      });
+    }
   };
 
   /**

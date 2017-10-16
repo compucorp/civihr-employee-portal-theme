@@ -646,9 +646,14 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
       continue;
     }
 
+    $wrapperAttr = CRM_Utils_Array::value('#wrapper_attributes', $value, []);
+    $wrappperClasses = CRM_Utils_Array::value('class', $wrapperAttr, []);
+    $wrappperClasses = implode(' ', $wrappperClasses);
+    unset($fields_structure[$key]['#wrapper_attributes']); // once is enough
+
     $fields_structure[$key]['#title'] = null;
     $fields_structure[$key]['#prefix'] .= '
-      <div class="form-group form-group--smaller-gutter">
+      <div class="form-group form-group--smaller-gutter ' . $wrappperClasses . '">
         <label
          for="'. $value['#id'] .'"
          class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' )

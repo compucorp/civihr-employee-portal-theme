@@ -1,26 +1,26 @@
 <?php
 
-$civicrm_access = user_access("access CiviCRM");
+$civicrm_access = user_access('access CiviCRM');
 $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard', ['fragment' => '/tasks']);
-$options = array('html' => TRUE);
+$options = ['html' => TRUE];
 $ssp_link = l(t('CiviHR SSP'), 'dashboard', $options);
 
 $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
 $mapGearLinks = [
   [
-    'permissions' => ["access content overview"],
+    'permissions' => ['access content overview'],
     'link' => l(t('Manage documents'), 'admin/content', $options),
   ],
   [
-    'permissions' => ["administer users", "access users overview"],
+    'permissions' => ['administer users', 'access users overview'],
     'link' => l(t('Manage users'), 'admin/people', $options),
   ],
   [
-    'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
+    'permissions' => ['edit terms in ' . $resourceTypeVocabularyID],
     'link' => l(t('HR resource types'), 'hr-resource-types-list', $options)
   ],
   [
-    'permissions' => ["customize welcome wizard"],
+    'permissions' => ['customize welcome wizard'],
     'link' => l(t('Customize Welcome Wizard'), 'customize-onboarding-wizard', $options),
   ],
 ];
@@ -28,7 +28,7 @@ $gearLinks = "";
 foreach($mapGearLinks as $link) {
   foreach ($link['permissions'] as $permission) {
     if (user_access($permission)) {
-      $gearLinks .= "<li>{$link['link']}</li>";
+      $gearLinks .= sprintf('<li>%s</li>', $link['link']);
       break;
     }
   }

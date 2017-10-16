@@ -416,7 +416,10 @@ function civihr_default_theme_preprocess_page(&$variables) {
 }
 
 /**
+ * Uses function from employee portal to check if user should do onboarding.
+ *
  * @return bool
+ *   TRUE if they have no submissions and can are editing their own account.
  */
 function _civihr_default_theme_should_start_onboarding() {
   global $user;

@@ -1,6 +1,7 @@
 <?php
 /**
- * @var array $page Contains all data for this page
+ * @var array
+ *   $page Contains all data for this page
  */
 
 require_once __DIR__ . '/../../includes/header.inc';

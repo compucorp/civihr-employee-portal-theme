@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @var array $page Contains all variables and details for the page
- * @var string $container_class
- */
-
-/**
+ * @var array
+ *   $page Contains all variables and details for the page
+ * @var string
+ *   $container_class
+ *
  * When I tried using #access it deleted data (⊙︿⊙)
  * @see https://www.drupal.org/node/1267434
  *
- * @param $element
+ * @param array $element
  */
 $hideElement = function (&$element) {
   $element['#prefix'] = '<div style="display:none;">';

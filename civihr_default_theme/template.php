@@ -42,6 +42,7 @@ function civihr_default_theme_preprocess_webform_progressbar(&$variables) {
  * Implements hook_theme().
  * This adds a new theme for the onboarding form progress bar. This theme is not
  * directly used, but is suggested conditionally in
+ *
  * @see civihr_default_theme_preprocess_webform_progressbar.
  */
 function civihr_default_theme_theme() {

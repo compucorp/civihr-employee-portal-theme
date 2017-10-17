@@ -1,4 +1,10 @@
 .onboarding-wizard-page {
+  #edit-submitted-add-another-emergency-contact {
+    .form-type-radio {
+      width: 50%;
+    }
+  }
+
   .crm_wizard__title {
     .nav-pills {
       text-align: center;
@@ -33,32 +39,89 @@
     }
   }
 
+  .form-radios {
+    background-color: transparent !important;
+
+    > div {
+      background-color: transparent !important;
+      float: left;
+      padding: 8px 12px;
+      border: 1px solid $crm_color-neutral;
+      border-right: none;
+      margin: 0 !important;
+    }
+
+    > div:last-child {
+      border-right: 1px solid $crm_color-neutral;
+    }
+
+    > div.checked {
+      background-color: $crm-wizard-secondary-color !important;
+      color: $light;
+      border-color: transparent;
+    }
+
+    input[type='radio']:checked:after {
+      border: 4px solid $light;
+      border-radius: 15px;
+      background-color: #000;
+      content: '';
+      display: inline-block;
+      height: 15px;
+      position: relative;
+      visibility: visible;
+      width: 15px;
+    }
+  }
+
+  .fieldset-legend {
+    &:before {
+      display: none;
+    }
+  }
+
   .modal-civihr-custom__section {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: -150px;
+    margin: -25px auto 25px auto;
     width: 475px;
+    padding: 90px 0 0 0;
   }
 
   .modal-civihr-custom__footer {
-    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 475px;
+  }
+
+  .onboarding_wizard_payroll_gender .webform-component-radios {
+    .description {
+      margin-bottom: 10px;
+    }
+
+    .form-type-radio {
+      width: 33.33%;
+    }
+  }
+
+  .onboarding_wizard_payroll_ssin_checkbox {
+    label {
+      padding-left: 20px !important;
+    }
+
+    .webform-component-checkboxes {
+      background-color: transparent !important;
+      margin-bottom: -18px !important;
+      position: relative;
+      top: -23px;
+      z-index: 2;
+
+      .form-type-checkbox {
+        background-color: transparent !important;
+      }
+    }
   }
 
   .page-header {
     display: none;
-  }
-
-  .webform-previous {
-    background: $crm-wizard-primary-color;
-    border: 0;
-    color: $light;
-    float: left;
-
-    &:focus {
-      background: $crm-wizard-primary-color;
-      color: $light;
-    }
   }
 
   .webform-next {
@@ -70,22 +133,6 @@
       background: $crm-wizard-secondary-color;
       color: $light;
     }
-  }
-
-  .webform-component-markup {
-    background: transparent !important;
-
-    .onboarding-fieldset-title {
-      color: $crm-wizard-font-color;
-      margin-top: -15px;
-      font-size: 36px;
-      font-weight: $headings-font-weight;
-      text-align: center;
-    }
-  }
-
-  .webform-container-inline.webform-datepicker  div.form-item.form-type-select {
-    display: none;
   }
 
   .webform-calendar {
@@ -110,5 +157,37 @@
   .webform-component-fieldset {
     background: transparent;
     box-shadow: none;
+  }
+
+  .webform-component-markup {
+    background: transparent !important;
+
+    .onboarding-fieldset-title {
+      color: $crm-wizard-font-color;
+      margin-top: -15px;
+      font-size: 36px;
+      font-weight: $headings-font-weight;
+      text-align: center;
+    }
+  }
+
+  .webform-component-radios {
+    background-color: transparent !important;
+  }
+
+  .webform-container-inline.webform-datepicker div.form-item.form-type-select {
+    display: none;
+  }
+
+  .webform-previous {
+    background: $crm-wizard-primary-color;
+    border: 0;
+    color: $light;
+    float: left;
+
+    &:focus {
+      background: $crm-wizard-primary-color;
+      color: $light;
+    }
   }
 }

@@ -3,8 +3,6 @@
 /**
  * @var array
  *   $page Contains all variables and details for the page
- * @var string
- *   $container_class
  *
  * When I tried using #access it deleted data (⊙︿⊙)
  * @see https://www.drupal.org/node/1267434

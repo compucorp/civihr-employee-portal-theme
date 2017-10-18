@@ -238,7 +238,7 @@ body {
  * Vacancy list view page default styling
  */
 .vacancy-wrapper {
-    width: $crm_wrapper-width;
+    width: 18%;
     margin: 1%;
     float: left;
 }
@@ -255,7 +255,7 @@ body {
 .views-exposed-form .views-exposed-widget {
     @include exposed-form-default-style(50%);
 
-    @media screen and (max-width: $crm_max-tablet-size) {
+    @media screen and (max-width: $screen-sm-max) {
         @include exposed-form-default-style(100%);
     }
 }
@@ -274,22 +274,6 @@ body {
         [class*="col-"] {
             padding-left: 10px;
             padding-right: 10px;
-        }
-    }
-}
-
-/**
- * Customization of the standard Bootstrap button group
- */
-.btn-group {
-
-    > .btn {
-        border-color: #777C8F;
-        color: #777C8F;
-
-        &.active {
-            background: #777C8F;
-            color: #ffffff;
         }
     }
 }
@@ -352,14 +336,6 @@ body {
     float: none;
 }
 
-/* General styles */
-
-body {
-    font-family: $crm_sans;
-    color: $gray;
-    background: $gray-light;
-}
-
 /* Lists */
 
 ul {
@@ -386,10 +362,15 @@ a {
 
 /* Headings */
 
-h1 {
+.block__title {
+  padding: 0 15px;
+}
+
+h1,
+.block__title {
     font-size: 3.6rem;
     font-weight: 300;
-    color: $crm_gray-darker-alt;
+    color: $crm-gray-darker-alt;
     margin: 25px 0;
 }
 h4 {
@@ -437,7 +418,7 @@ h2.pane-title {
         right: 37px;
         height: 100%;
         width: 0;
-        border-left: 1px solid $crm_color-neutral;
+        border-left: 1px solid $input-border;
     }
 
 }
@@ -482,45 +463,6 @@ h2.pane-title {
 }
 .alert-warning {
     background: $brand-warning;
-}
-
-/* Modals */
-
-#modalBackdrop {
-    // display: none !important;
-}
-.modal-dialog {
-    .close {
-        color: $gray;
-        border: 0;
-        background: none;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-weight: bold;
-        line-height: 1;
-        font-size: 2.2rem;
-        padding: 0;
-    }
-}
-.modal-content {
-    background: $light;
-    min-height: 500px;
-    border: 1px solid $crm_color-neutral;
-}
-.modal-header,
-.modal-body {
-    padding: 20px;
-}
-.modal-header {
-    border-bottom: 1px solid $gray-light;
-
-    h4 {
-        margin: 0;
-    }
-}
-.modal-body {
-    height: auto !important;
 }
 
 /* Modal: My details, Emergency contact */
@@ -725,7 +667,7 @@ form {
 }
 
 .form-text {
-    border: 1px solid $crm_color-neutral;
+    border: 1px solid $input-border;
     font-size: 1.3rem;
     color: $gray;
     line-height: 1.5;
@@ -761,7 +703,7 @@ form {
 }
 
 .pane-block {
-  @include box-shadow($crm_box-shadow-global);
+  @include box-shadow($crm-box-shadow-global);
 }
 
 .pane-block[class*="absence-list"] {
@@ -786,7 +728,7 @@ form {
         width: 193px;
         margin: 0 10px;
         padding: 20px;
-        background: $crm_gray-light-alt;
+        background: $crm-gray-light-alt;
     }
     .jcarousel-prev,
     .jcarousel-next {
@@ -1202,7 +1144,7 @@ form {
         }
         .fieldset-wrapper {
             margin-top: 20px;
-            background: $crm_gray-light-alt;
+            background: $crm-gray-light-alt;
             padding: 15px 20px;
 
             .views-field {

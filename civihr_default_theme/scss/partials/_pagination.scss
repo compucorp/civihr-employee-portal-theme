@@ -1,0 +1,33 @@
+.pagination {
+  margin: 0;
+  vertical-align: top;
+
+  li {
+
+    > a {
+      background: transparent;
+      color: $gray;
+      border: none;
+      padding: 0 4px;
+
+      &:hover,
+      &:focus {
+        color: $gray-darker;
+      }
+    }
+  }
+
+  .active {
+
+    > a,
+    > a:hover,
+    > a:focus,
+    > span:hover,
+    > span:focus {
+      color: $gray-darker;
+      background-color: transparent;
+      border-color: transparent;
+      font-weight: $crm-font-weight-bold;
+    }
+  }
+}

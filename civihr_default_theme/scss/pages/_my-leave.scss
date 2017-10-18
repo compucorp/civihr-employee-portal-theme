@@ -1,0 +1,25 @@
+.pane-civihr-leave-absences-my-leave {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.my-leave-page {
+
+  .button-container {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: $screen-md-min) {
+    .button-container {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn-group {
+
+    > .btn {
+      border-color: transparent;
+    }
+  }
+}

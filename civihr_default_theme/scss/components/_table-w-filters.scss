@@ -2,88 +2,88 @@
  * A table with filters on the side
  */
 .chr_table-w-filters {
-    margin-top: 20px;
+  margin-top: 20px;
+
+  > .chr_table-w-filters__filters {
+    margin: 0 0 20px;
+  }
+
+  @media(min-width: $screen-sm-min) {
+    margin-top: 0;
 
     > .chr_table-w-filters__filters {
-        margin: 0 0 20px;
+      margin: 20px -1px 0 0;
     }
-
-    @media(min-width: $screen-sm-min) {
-        margin-top: 0;
-
-        > .chr_table-w-filters__filters {
-            margin: 20px -1px 0 0;
-        }
-    }
+  }
 }
 
 .chr_table-w-filters__filters {
 
-    @media(min-width: $screen-md-min) {
-        border-right: 1px solid #ECEDEE;
-        padding-right: 0;
-    }
+  @media(min-width: $screen-md-min) {
+    border-right: 1px solid #ECEDEE;
+    padding-right: 0;
+  }
 }
 
 .chr_table-w-filters__filters__dropdown-wrapper {
-    display: block;
-    padding: 0 20px;
+  display: block;
+  padding: 0 20px;
 
-    @media(min-width: $screen-sm-min) {
-        display: none;
-    }
+  @media(min-width: $screen-sm-min) {
+    display: none;
+  }
 }
 
 .chr_table-w-filters__filters__nav {
-    @extend .nav;
-    @extend .nav-pills;
-    @extend .nav-stacked;
+  @extend .nav;
+  @extend .nav-pills;
+  @extend .nav-stacked;
 
-    display: none;
+  display: none;
 
-    @media(min-width: $screen-sm-min) {
-        display: block;
-        margin-bottom: 15px;
-    }
+  @media(min-width: $screen-sm-min) {
+    display: block;
+    margin-bottom: 15px;
+  }
 
-    @media(min-width: $screen-md-min) {
-        margin-bottom: 0;
-    }
+  @media(min-width: $screen-md-min) {
+    margin-bottom: 0;
+  }
 }
 
 .chr_table-w-filters__table {
-    overflow: auto;
+  overflow: auto;
+
+  table {
+    min-width: $screen-md-min;
+    table-layout: auto;
+
+    tr:last-child {
+      border-bottom: 0;
+
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  @media(min-width: $screen-md-min) {
+    margin: 0;
+    overflow: visible;
 
     table {
-        min-width: $screen-md-min;
-        table-layout: auto;
-
-        tr:last-child {
-            border-bottom: 0;
-
-            td {
-                border-bottom: 0;
-            }
-        }
+      margin-left: 0;
+      min-width: inherit;
     }
-
-    @media(min-width: $screen-md-min) {
-        margin: 0;
-        overflow: visible;
-
-        table {
-            margin-left: 0;
-            min-width: inherit;
-        }
-    }
+  }
 }
 
 .chr_table-w-filters__table-wrapper {
-    border-top: 1px solid $gray-light;
+  border-top: 1px solid $gray-light;
 
-    @media(min-width: $screen-md-min) {
-        border-left: 1px solid #ECEDEE;
-        border-top: none;
-        padding-left: 0;
-    }
+  @media(min-width: $screen-md-min) {
+    border-left: 1px solid #ECEDEE;
+    border-top: none;
+    padding-left: 0;
+  }
 }

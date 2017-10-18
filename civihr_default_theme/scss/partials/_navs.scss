@@ -1,28 +1,45 @@
 // Styles for Navs
 // --------------------------------------------------
 
+.tab-pane {
+  padding: 20px;
+  border: 1px solid $nav-tabs-border-color;
+  border-top: none;
+  background-color: $light;
+}
+
+.nav > li {
+  a {
+    background-color: transparent;
+    color: $brand-primary;
+  }
+}
+
 .nav-tabs-header {
-    &.nav-justified {
-        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.035), 0 4px 8px 0 rgba(0, 0, 0, 0.035);
-        margin-bottom: 20px;
+  &.nav-justified {
+    box-shadow: $crm-box-shadow-global;
+    margin-bottom: 20px;
 
-        li {
-            a {
-                font-size: 18px;
-                color: $gray-darker;
-                border: 0;
-                border-bottom: 3px solid transparent;
-            }
+    li {
+      a {
+        font-size: 18px;
+        color: $gray-darker;
+        border: 0;
+        border-bottom: 3px solid transparent;
+        cursor: pointer;
+        background-color: $light;
+      }
 
-            &.active {
-                a,
-                a:hover,
-                a:focus {
-                    color: $brand-primary;
-                    border: 0;
-                    border-bottom: 3px solid $brand-primary;
-                }
-            }
+      &.active {
+        a,
+        a:hover,
+        a:focus {
+          color: $brand-primary;
+          border: 0;
+          border-bottom: 3px solid $brand-primary;
+          cursor: auto;
         }
+      }
     }
+  }
 }

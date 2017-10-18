@@ -1,0 +1,86 @@
+/**
+ * Manager documents table
+ *
+ * # TEMPORARY #
+ */
+#documents-dashboard-table-manager {
+  table-layout: auto;
+}
+
+/**
+ * Tasks table on the dashboard
+ */
+.tasks-dashboard-table {
+
+  th {
+    &.views-field-task-type {
+      width: 25%;
+    }
+  }
+}
+
+
+/**
+ * Staff Directory results table
+ */
+.view-id-civihr_staff_directory {
+
+  .table-responsive {
+    overflow: auto;
+    // This is to reset the -20px margin on .table-responsive
+    // (needs to be verified if that negative margin is necessary at all)
+    margin: 0;
+  }
+
+  .views-table {
+    table-layout: auto;
+    width: 100%;
+    white-space: nowrap;
+
+    thead {
+
+      tr {
+        height: 50px;
+      }
+    }
+  }
+
+  @media(min-width: $screen-md-min) {
+    .table-responsive {
+      overflow: visible;
+    }
+
+    .views-table {
+      table-layout: fixed;
+      white-space: normal;
+      word-wrap: break-word;
+
+      .views-field-last-name {
+        width: 20%;
+      }
+    }
+  }
+}
+
+/**
+ * Report results table
+ */
+#reportTable {
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+
+  .table {
+    width: auto;
+  }
+
+  .view {
+    padding: 0;
+    margin: 0;
+  }
+
+  td,
+  th {
+    white-space: nowrap;
+  }
+}

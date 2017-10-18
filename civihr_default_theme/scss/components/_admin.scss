@@ -32,7 +32,7 @@
 
   table {
     background: $light;
-    @include box-shadow($crm_box-shadow-global);
+    @include box-shadow($crm-box-shadow-global);
 
     th {
       height: 45px;

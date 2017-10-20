@@ -132,7 +132,8 @@
     input.form-file {
       height: 180px;
       margin-bottom: 15px;
-      width: 475px;
+      min-width: 120px;
+      width: 100%;
     }
 
     .form-item {
@@ -222,13 +223,14 @@
     display: flex;
     justify-content: center;
     height: 180px;
+    min-width: 120px;
     outline: 1px dashed #7a8084;
     pointer-events: none;
     position: absolute;
     text-align: center;
     transition: outline-offset .15s ease-in-out, background-color .15s linear;
     top: 0;
-    width: 475px;
+    width: 100%;
 
     i {
       color: $crm-wizard-secondary-color;

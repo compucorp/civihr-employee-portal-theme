@@ -32,6 +32,7 @@
   Drupal.civihr_theme.onBoardingWizard = function () {
     applyCustomSelectOnRadioClick();
     hideSSNLabelOnCheckboxClick();
+    removeTextFromCarousalPager();
     Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
   };
 
@@ -139,5 +140,12 @@
     ssnCheckbox.click(function () {
       ssnLabel.toggle();
     });
+  }
+
+  /**
+   * Remove carousal pager text
+   */
+  function removeTextFromCarousalPager () {
+    $('.views-slideshow-pager-fields .views-content-title').html('');
   }
 })(jQuery);

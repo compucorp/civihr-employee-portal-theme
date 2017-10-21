@@ -4,9 +4,12 @@
  * @file
  * Views Slideshow: Template for text control - next.
  *
- * - $variables: Contains theme variables.
- * - $classes: Text control classes.
- * - $vss_id: The Views Slideshow unique id.
+ * - @var $variables
+ *    Contains theme variables.
+ * - @var $classes
+ *    Text control classes.
+ * - @var $vss_id
+ *    The Views Slideshow unique id.
  *
  * @ingroup vss_templates
  */

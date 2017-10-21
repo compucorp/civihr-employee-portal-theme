@@ -32,7 +32,7 @@
   Drupal.civihr_theme.onBoardingWizard = function () {
     applyCustomSelectOnRadioClick();
     hideSSNLabelOnCheckboxClick();
-    removeTextFromCarousalPager();
+    removeTextFromCarouselPager();
     Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
   };
 
@@ -143,9 +143,9 @@
   }
 
   /**
-   * Remove carousal pager text
+   * Remove carousel pager text
    */
-  function removeTextFromCarousalPager () {
+  function removeTextFromCarouselPager () {
     $('.views-slideshow-pager-fields .views-content-title').html('');
   }
 })(jQuery);

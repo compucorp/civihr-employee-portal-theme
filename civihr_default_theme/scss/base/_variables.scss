@@ -173,3 +173,16 @@ $crm-customselect-padding-right: $crm-customselect-caret-width + 12 !default;
 $input-border:              $crm-color-neutral !default;
 
 $crm-ui-select-top-padding: 7px;
+
+
+//== User Menu
+//
+//##
+$user-menu-color: $light-pale;
+$user-menu-line-height: inherit;
+$user-menu-minify-breakpoint: 1250px;
+$user-menu-bg-hover: $crm-gray-darker-alt;
+$user-menu-dropdown-bg: $crm-gray-darker-alt;
+$user-menu-dropdown-link-color: $light-pale;
+$user-menu-dropdown-link-color-hover: $light;
+$user-menu-dropdown-link-bg-hover: $crm-brand-secondary;

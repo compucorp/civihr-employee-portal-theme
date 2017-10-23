@@ -77,26 +77,11 @@
         </ul>
       <?php endif; ?>
     </nav>
-    <?php if ($logged_in) { ?>
-    <div class="chr_header__user-menu">
-      <div class="chr_header__user-menu__data">
-        <span class="chr_header__user-menu__name"><?php print $user_name; ?></span>
-        <div class="chr_profile-card">
-          <div class="chr_profile-card__picture chr_profile-card__picture--small">
-            <?php if ($image_url != '') { ?>
-              <img src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
-            <?php } ?>
-          </div>
-        </div>
-        <i class="chr_header__user-menu__arrow fa fa-caret-down"></i>
-      </div>
-      <ul class="chr_header__sub-menu">
-        <li><?php print $edit_account; ?></li>
-        <li><?php print $user_guide_link; ?></li>
-        <li><?php print $logout_link; ?></li>
-      </ul>
-    </div>
-    <?php } ?>
+    <?php
+      if ($logged_in) {
+        print((new CRM_HRCore_UserMenuMarkup())->getMarkup());
+      }
+    ?>
     <?php if (!empty($gearLinks)) { ?>
     <div class="chr_header__settings-menu">
       <i class="fa fa-cog" aria-hidden="true"></i>

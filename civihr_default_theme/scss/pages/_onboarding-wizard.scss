@@ -87,10 +87,35 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
   }
 
-  .modal-civihr-custom__section {
+  .modal-civihr-custom__section,
+  .onboarding-wizard-container {
     margin: -25px auto 25px auto;
     width: 475px;
     padding: 90px 0 0 0;
+  }
+
+  .onboarding-wizard-container {
+    .main-container {
+      margin-top: 65px;
+    }
+
+    .form-type-password {
+      margin: 0;
+    }
+
+    .form-item {
+      input {
+        width: 100%;
+      }
+    }
+
+    .password-strength {
+      margin-bottom: 15px;
+    }
+
+    .password-suggestions {
+      width: 100%;
+    }
   }
 
   .modal-civihr-custom__footer {
@@ -148,7 +173,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 
   .webform-next,
-  .webform-submit {
+  .webform-submit,
+  #edit-submit {
     background: $crm-wizard-secondary-color;
     border: 0;
     color: $light;
@@ -157,6 +183,16 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       background: $crm-wizard-secondary-color;
       color: $light;
     }
+  }
+
+  #edit-actions {
+    text-align: center;
+  }
+
+  #edit-submit {
+    float: none;
+    text-transform: uppercase;
+    width: 100px;
   }
 
   .webform-calendar {
@@ -188,14 +224,15 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .webform-component-markup {
     background: transparent !important;
+  }
 
-    .onboarding-fieldset-title {
-      color: $crm-wizard-font-color;
-      margin-top: -15px;
-      font-size: 36px;
-      font-weight: $headings-font-weight;
-      text-align: center;
-    }
+  .onboarding-fieldset-title,
+  #onboarding-welcome-message {
+    color: $crm-wizard-font-color;
+    margin-top: -15px;
+    font-size: 36px;
+    font-weight: $headings-font-weight;
+    text-align: center;
   }
 
   .webform-component-radios {

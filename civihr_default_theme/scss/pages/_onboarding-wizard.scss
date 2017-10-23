@@ -301,6 +301,49 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       float: right;
     }
   }
+
+
+  @media (max-width: $screen-lg-min) {
+    .modal-civihr-custom__section,
+    .modal-civihr-custom__footer,
+    .onboarding-wizard-container {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+    }
+
+    .crm_wizard__title {
+      .nav-pills {
+        display: none;
+      }
+
+      .crm_wizard__mobile {
+        padding-top: 15px;
+        text-align: center;
+
+        .crm_wizard__progress {
+          background-color: $crm-wizard-active-font-color;
+          height: 2px;
+          margin-top: 15px;
+        }
+
+        .crm_wizard__progress-title {
+          color: $crm-wizard-active-font-color;
+          font-weight: 700;
+        }
+
+        .crm_wizard__current-step {
+          color: $crm-wizard-font-color;
+          font-weight: 300;
+        }
+
+        .crm_wizard__total-step {
+          color: $crm-color-neutral;
+          font-weight: 300;
+        }
+      }
+    }
+  }
 }
 
 .page-features-in-civihr {
@@ -387,7 +430,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .active {
       .views-content-title {
-        background: #3DA4F1;
+        background: $crm-wizard-active-font-color;
       }
     }
   }
@@ -396,7 +439,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     position: relative;
 
     .views-slideshow-controls-text-pause {
-      display: none;
+      //display: none;
     }
 
     .views-slideshow-controls-text-previous,
@@ -412,6 +455,45 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .views-slideshow-controls-text-next {
       right: 0;
+    }
+  }
+
+  @media (max-width: $screen-lg-min) {
+    .views-slideshow-controls-text-previous,
+    .views-slideshow-controls-text-next {
+      display: none;
+    }
+
+    .views-slideshow-cycle-main-frame {
+      margin: 0;
+      height: 400px;
+
+      .views-slideshow-cycle-main-frame-row {
+        .views-slideshow-cycle-main-frame-row-item {
+          margin: 0;
+
+          .views-field-field-slideshow-image {
+            width: 100% !important;
+
+            img {
+              height: 200px !important;
+              width: 100% !important;
+            }
+          }
+
+          .views-field-title {
+            left: 0;
+            top: 240px;
+            width: 100%;
+          }
+
+          .views-field-field-description {
+            left: 0;
+            top: 290px;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

@@ -7,12 +7,6 @@
 require_once __DIR__ . '/../../includes/header.inc';
 ?>
 
-<style>
-  #edit-civihr-onboarding-welcome-text-format {
-    display: none;
-  }
-</style>
-
 <div id="onboarding-customization-page">
   <h1>Customize Welcome Wizard</h1>
 

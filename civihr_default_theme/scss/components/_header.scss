@@ -92,6 +92,11 @@
     color: rgba($light, 0.8);
   }
 
+  > a {
+    height: 50px;
+  }
+
+  > a,
   > .chr_header__corner__brand {
     display: none;
   }
@@ -293,6 +298,7 @@
 .not-logged-in {
   .menu-link-civihr-admin,
   .menu-link-civihr-ssp,
+  .chr_header__corner,
   .chr_header__home-menu .chr_header__sub-menu {
     display: none;
   }

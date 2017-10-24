@@ -1,3 +1,5 @@
+$carousel-box-shadow-color: rgba(#3f3c55,0.3);
+
 .onboarding-wizard-page {
   #edit-submitted-add-another-emergency-contact,
   #edit-submitted-do-you-have-any-dependants,
@@ -260,6 +262,119 @@
 
     input[type='submit'] {
       float: right;
+    }
+  }
+}
+
+.page-features-in-civihr {
+  .onboarding_wizard_features_get_started {
+    background: $crm-wizard-secondary-color;
+    display: block;
+    margin: 40px auto 0 auto;
+    text-transform: uppercase;
+    width: 200px;
+  }
+
+  .page-header {
+    font-weight: 700;
+    margin-top: 80px;
+    text-align: center;
+
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  .view-id-onboarding_slideshow {
+    background: transparent;
+  }
+
+  .views-slideshow-cycle-main-frame {
+    margin: 0 30px;
+    height: 303px;
+
+    .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+
+      img {
+        height: 303px !important;
+        width: 458px !important;
+      }
+
+      .views-slideshow-cycle-main-frame-row-item {
+        margin: 0 65px;
+        position: relative;
+
+        .views-field-field-slideshow-image {
+          box-shadow: 0 10px 20px 0 $carousel-box-shadow-color, 0 -2px 15px 0 $carousel-box-shadow-color;
+          left: 0;
+          position: absolute;
+          width: 458px;
+        }
+
+        .views-field-title {
+          color: $crm-wizard-font-color;
+          font-size: 26px;
+          left: 458px;
+          position: absolute;
+          text-align: center;
+          top: 100px;
+          width: calc( 100% - 458px);
+        }
+
+        .views-field-field-description {
+          color: $crm-wizard-primary-color;
+          left: 458px;
+          padding: 0 40px;
+          position: absolute;
+          text-align: center;
+          top: 150px;
+          width: calc( 100% - 458px);
+        }
+      }
+    }
+  }
+
+  .views-slideshow-pager-fields {
+    text-align: center;
+    margin-top: 40px;
+
+    .views-content-title {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      background: $crm-darker-grayblue;
+      border-radius: 50%;
+    }
+
+    .active {
+      .views-content-title {
+        background: #3DA4F1;
+      }
+    }
+  }
+
+  .views-slideshow-cycle-processed {
+    position: relative;
+
+    .views-slideshow-controls-text-pause {
+      display: none;
+    }
+
+    .views-slideshow-controls-text-previous,
+    .views-slideshow-controls-text-next {
+      font-size: 35px;
+      position: absolute;
+      top: 140px;
+
+      a {
+        color: #c2cfd7;
+      }
+    }
+
+    .views-slideshow-controls-text-next {
+      right: 0;
     }
   }
 }

@@ -30,10 +30,12 @@
    * Do the stuff related to On boarding wizard
    */
   Drupal.civihr_theme.onBoardingWizard = function () {
+    addVerticalLineInCustomizeOnboardingPage();
     applyCustomSelectOnRadioClick();
     hideSSNLabelOnCheckboxClick();
     removeTextFromCarouselPager();
     Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
+    Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
   };
 
   /**
@@ -128,6 +130,21 @@
     radioBtn.click(function () {
       setTimeout(Drupal.civihr_theme.applyCustomSelect, 0);
     });
+  }
+
+  /**
+   * Add Vertical Line in Customize Onboarding Page
+   */
+  function addVerticalLineInCustomizeOnboardingPage () {
+    if(!$('.form-item-civihr-onboarding-welcome-text+hr').length) {
+      $('.form-item-civihr-onboarding-welcome-text').after('<hr/>');
+    }
+    if(!$('.form-item-civihr-onboarding-intro-text+hr').length) {
+      $('.form-item-civihr-onboarding-intro-text').after('<hr/>');
+    }
+    if(!$('.form-item-civihr-onboarding-carousel-options+hr').length) {
+      $('.form-item-civihr-onboarding-carousel-options').after('<hr/>');
+    }
   }
 
   /**

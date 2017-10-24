@@ -82,33 +82,30 @@ $welcomeText = variable_get($welcomeTextKey, '');
           </div>
         <?php endif; ?>
       </div>
-
       <div id="content" class="collapse">
-
         <div class="progress_bar">
           <?php print $progressBar; ?>
         </div>
-
-        <h1 id="onboarding-welcome-message">
-          Welcome to CiviHR
-        </h1>
-
-        <?php if($organizationLogoUrl): ?>
-        <div id="onboarding-company-logo">
-          <img src="<?php print $organizationLogoUrl; ?>">
-        </div>
-        <?php endif; ?>
-
-        <div id="onboarding-welcome-text">
-          <?php print $welcomeText; ?>
-        </div>
-
-        <div class="main-container">
-          <?php print render($page['content']); ?>
+        <div class="onboarding-wizard-container">
+          <h1 id="onboarding-welcome-message">
+            Welcome to CiviHR
+          </h1>
+          <?php if($organizationLogoUrl) { ?>
+            <img class="onboarding-company-logo" src="<?php print $organizationLogoUrl; ?>">
+          <?php } else { ?>
+            <img
+              class="onboarding-company-logo"
+              src="../../<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/logo.png"/>
+          <?php }; ?>
+          <div id="onboarding-welcome-text">
+            <?php print $welcomeText; ?>
+          </div>
+          <div class="main-container">
+            <?php print render($page['content']); ?>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
   <?php require_once __DIR__ . '/../../includes/footer.inc'; ?>
 </div>

@@ -40,5 +40,13 @@
         </li>
       <?php endfor; ?>
     </ul>
+    <div class="crm_wizard__mobile">
+      <div class="crm_wizard__progress-title"><?php print check_plain($page_labels[$page_num - 1]); ?></div>
+      <div>
+        <span class="crm_wizard__current-step">Step <?php print $page_num ?></span>
+        <span class="crm_wizard__total-step">(of <?php print $page_count ?>)</span>
+      </div>
+      <div class="crm_wizard__progress" style="width: <?php print ($page_num/$page_count) * 100 ?>%"></div>
+    </div>
   </div>
 </div>

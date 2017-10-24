@@ -1,6 +1,39 @@
 $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
+.drop-layer {
+  align-items: center;
+  background: #ecedee;
+  color: $crm-wizard-font-color;
+  display: flex;
+  justify-content: center;
+  height: 180px;
+  min-width: 120px;
+  outline: 1px dashed #7a8084;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  top: 0;
+  width: 100%;
+
+  i {
+    color: $crm-wizard-secondary-color;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  &.is-dragover {
+    outline-offset: -10px;
+    outline-color: #c8dadf;
+    background-color: $light;
+  }
+}
+
 .onboarding-wizard-page {
+  .crm_wizard__mobile {
+    display: none;
+  }
+
   #edit-submitted-add-another-emergency-contact,
   #edit-submitted-do-you-have-any-dependants,
   #edit-submitted-first-dependant-add-a-second-dependant,
@@ -185,12 +218,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
   }
 
-  #edit-actions {
-    text-align: center;
-  }
-
   #edit-submit {
-    float: none;
     text-transform: uppercase;
     width: 100px;
   }
@@ -204,7 +232,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       color: $crm-wizard-font-color;
       display: inline-block;
       height: 100%;
-      line-height: 32px;
+      line-height: 20px;
       pointer-events: none;
       position: absolute;
       right: 0;
@@ -243,7 +271,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     display: none;
   }
 
-  .webform-previous {
+  .webform-previous,
+  #edit-cancel {
     background: $crm-wizard-primary-color;
     border: 0;
     color: $light;
@@ -252,35 +281,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     &:focus {
       background: $crm-wizard-primary-color;
       color: $light;
-    }
-  }
-
-  .drop-layer {
-    align-items: center;
-    background: #ecedee;
-    color: $crm-wizard-font-color;
-    display: flex;
-    justify-content: center;
-    height: 180px;
-    min-width: 120px;
-    outline: 1px dashed #7a8084;
-    pointer-events: none;
-    position: absolute;
-    text-align: center;
-    transition: outline-offset .15s ease-in-out, background-color .15s linear;
-    top: 0;
-    width: 100%;
-
-    i {
-      color: $crm-wizard-secondary-color;
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
-
-    &.is-dragover {
-      outline-offset: -10px;
-      outline-color: #c8dadf;
-      background-color: $light;
     }
   }
 
@@ -302,6 +302,11 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
   }
 
+  .onboarding-company-logo {
+    display: block;
+    margin: 77px auto;
+    width: 140px;
+  }
 
   @media (max-width: $screen-lg-min) {
     .modal-civihr-custom__section,
@@ -318,6 +323,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       }
 
       .crm_wizard__mobile {
+        display: block;
         padding-top: 15px;
         text-align: center;
 
@@ -439,7 +445,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     position: relative;
 
     .views-slideshow-controls-text-pause {
-      //display: none;
+      display: none;
     }
 
     .views-slideshow-controls-text-previous,
@@ -494,6 +500,117 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
           }
         }
       }
+    }
+  }
+}
+
+.page-customize-onboarding-wizard {
+  #onboarding-customization-page {
+    position: relative;
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    .region {
+      background: $light;
+    }
+
+    .drop-layer {
+      background: $light;
+      height: 140px;
+      top: 25px;
+
+      i {
+        color: inherit;
+      }
+    }
+
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+      input.form-file {
+        height: 140px;
+        margin-bottom: 15px;
+        min-width: 120px;
+        width: 100%;
+      }
+
+      .help-block {
+        display: none;
+      }
+    }
+
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+    .form-item-civihr-onboarding-carousel-options {
+      height: 250px;
+      margin-left: 100px;
+      padding-top: 50px;
+      width: 350px;
+    }
+
+    .form-actions {
+      padding-bottom: 20px;
+      padding-right: 20px;
+    }
+
+    .form-managed-file {
+      input[type='submit'],
+      .ajax-progress {
+        float: right;
+      }
+    }
+
+    .form-item-civihr-onboarding-welcome-text,
+    .form-item-civihr-onboarding-carousel-options,
+    .form-item-civihr-onboarding-intro-text {
+      margin-bottom: 100px;
+    }
+
+    .form-item-civihr-onboarding-carousel-options {
+      .form-type-checkbox {
+        margin-bottom: 10px !important;
+      }
+    }
+
+    .form-item-civihr-onboarding-welcome-text,
+    .form-item-civihr-onboarding-intro-text {
+      height: 200px;
+      margin-left: 100px;
+      padding-top: 50px;
+      width: 350px;
+
+      .help-block {
+        display: none;
+      }
+
+      .form-textarea-wrapper {
+        height: 100%;
+
+        textarea {
+          height: 100%;
+          resize: none;
+        }
+      }
+    }
+
+    .onboarding-customize-logo {
+      width: 440px;
+      position: absolute;
+      top: 290px;
+      right: 100px;
+    }
+
+    .onboarding-customize-features {
+      width: 440px;
+      position: absolute;
+      top: 850px;
+      right: 100px;
+    }
+
+    .onboarding-customize-welcome {
+      width: 440px;
+      position: absolute;
+      top: 1200px;
+      right: 100px;
     }
   }
 }

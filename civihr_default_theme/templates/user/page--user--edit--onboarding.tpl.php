@@ -90,11 +90,13 @@ $welcomeText = variable_get($welcomeTextKey, '');
           <h1 id="onboarding-welcome-message">
             Welcome to CiviHR
           </h1>
-          <?php if($organizationLogoUrl): ?>
-            <div id="onboarding-company-logo">
-              <img src="<?php print $organizationLogoUrl; ?>">
-            </div>
-          <?php endif; ?>
+          <?php if($organizationLogoUrl) { ?>
+            <img class="onboarding-company-logo" src="<?php print $organizationLogoUrl; ?>">
+          <?php } else { ?>
+            <img
+              class="onboarding-company-logo"
+              src="../../<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/logo.png"/>
+          <?php }; ?>
           <div id="onboarding-welcome-text">
             <?php print $welcomeText; ?>
           </div>

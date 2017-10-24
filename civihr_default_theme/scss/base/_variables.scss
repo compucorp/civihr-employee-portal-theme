@@ -180,7 +180,7 @@ $crm-ui-select-top-padding: 7px;
 //##
 $chr-user-menu-color: $light-pale;
 $chr-user-menu-line-height: inherit;
-$chr-user-menu-minify-breakpoint: 1250px;
+$chr-user-menu-minify-breakpoint: $crm-menu-responsive-breakpoint;
 $chr-user-menu-bg-hover: $crm-gray-darker-alt;
 $chr-user-menu-dropdown-bg: $crm-gray-darker-alt;
 $chr-user-menu-dropdown-link-color: $light-pale;

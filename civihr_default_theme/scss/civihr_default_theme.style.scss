@@ -96,6 +96,7 @@
 // --------------------------------------------------
 @import "base/custom";
 
+
 // civihr_default_theme partials
 // --------------------------------------------------
 @import "base/typography";
@@ -106,14 +107,18 @@
 @import "components/**/*";
 @import "drupal/**/*";
 
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups";
 
+// Imports from other styles
+// --------------------------------------------------
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/date-picker";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen";
+
+@import "SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/user-menu";
 
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/variables";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/mixins/tables";
@@ -129,7 +134,7 @@
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-comment";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-files";
 
-// Temporary styles
-@import "base/task-assignments-modal-temp";
 
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/date-picker";
+// Temporary styles that should be removed ASAP
+// --------------------------------------------------
+@import "base/task-assignments-modal-temp";

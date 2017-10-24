@@ -34,7 +34,7 @@
     }
   }
 
-  > .chr_header__user-menu {
+  > .chr_user-menu {
     float: right;
   }
 
@@ -92,6 +92,11 @@
     color: rgba($light, 0.8);
   }
 
+  > a {
+    height: 50px;
+  }
+
+  > a,
   > .chr_header__corner__brand {
     display: none;
   }
@@ -172,47 +177,6 @@
   vertical-align: middle;
 }
 
-
-/**
- * User menu in main header <nav>
- */
-.chr_header__user-menu {
-  color: $light-pale;
-  cursor: default;
-  padding: 0 10px;
-  position: relative;
-
-  &:hover {
-    background: $crm-gray-darker-alt;
-    color: $light;
-
-    > .chr_header__sub-menu {
-      display: block;
-    }
-  }
-
-  .chr_header__sub-menu {
-    right: 0;
-  }
-}
-
-.chr_header__user-menu__data {
-  > .chr_header__user-menu__name {
-    float: left;
-  }
-
-  > .chr_profile-card {
-    margin: -2px 8px 0 8px; // To improve, the vertical margin is just to vertically align the card
-    vertical-align: top;
-  }
-
-  @media(max-width: $crm-menu-responsive-breakpoint) {
-    > .chr_header__user-menu__arrow,
-    > .chr_header__user-menu__name {
-      display: none;
-    }
-  }
-}
 
 .chr_header__settings-menu {
   position: relative;
@@ -334,6 +298,7 @@
 .not-logged-in {
   .menu-link-civihr-admin,
   .menu-link-civihr-ssp,
+  .chr_header__corner,
   .chr_header__home-menu .chr_header__sub-menu {
     display: none;
   }

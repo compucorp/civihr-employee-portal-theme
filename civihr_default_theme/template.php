@@ -449,6 +449,9 @@ function _is_hrreports_current_path() {
  */
 function civihr_default_theme_js_alter(&$javascript) {
 
+  $path = drupal_get_path('theme',$GLOBALS['theme']);;
+  drupal_add_js(array('civihr_default_theme' => array('path' => $path)), 'setting');
+
   // Add radix-modal when required.
   if (module_exists('ctools')) {
     $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';

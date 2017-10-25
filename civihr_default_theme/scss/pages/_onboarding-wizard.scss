@@ -29,6 +29,33 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 }
 
+.mobile {
+  .drop-layer {
+    background: $brand-primary !important;
+    color: $light;
+    height: 40px !important;
+    outline: none;
+  }
+
+  #onboarding-customization-page {
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+      height: auto !important;
+
+      input.form-file {
+        height: 40px !important;
+      }
+    }
+  }
+
+  .onboarding-wizard-page {
+    .onboarding_wizard_profile_pic_upload_image {
+      input.form-file {
+        height: 40px !important;
+      }
+    }
+  }
+}
+
 .onboarding-wizard-page {
   .crm_wizard__mobile {
     display: none;
@@ -189,6 +216,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     label {
       display: none;
     }
+
     input.form-file {
       height: 180px;
       margin-bottom: 15px;
@@ -198,6 +226,16 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .form-item {
       background-color: transparent !important;
+    }
+
+    .civicrm-file-icon~.drop-layer {
+      display: none;
+    }
+
+    .civicrm-remove-file {
+      background: $light;
+      border: 1px solid #ccc;
+      padding: .7rem 1.1rem;
     }
   }
 
@@ -536,6 +574,11 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       margin-top: 50px;
     }
 
+    hr {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
     .region {
       background: $light;
     }
@@ -590,8 +633,11 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .form-item-civihr-onboarding-carousel-options {
+      margin-bottom: 60px;
+
       .form-type-checkbox {
         margin-bottom: 10px !important;
+        height: 20px;
       }
     }
 
@@ -618,23 +664,58 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .onboarding-customize-logo {
       width: 440px;
-      position: absolute;
-      top: 290px;
-      right: 100px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 75px;
     }
 
     .onboarding-customize-features {
       width: 440px;
-      position: absolute;
-      top: 850px;
-      right: 100px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 50px;
     }
 
     .onboarding-customize-welcome {
       width: 440px;
-      position: absolute;
-      top: 1200px;
-      right: 100px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 45px;
+    }
+
+    @media (max-width: $screen-lg-min) {
+      #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+      .form-item-civihr-onboarding-carousel-options,
+      .form-item-civihr-onboarding-welcome-text,
+      .form-item-civihr-onboarding-intro-text {
+        margin: 20px;
+        padding-top: 0;
+        width: auto;
+      }
+
+      .onboarding-customize-logo,
+      .onboarding-customize-features,
+      .onboarding-customize-welcome {
+        float: none;
+        margin: 20px;
+        width: calc( 100% - 40px);
+      }
+
+      .form-item-civihr-onboarding-welcome-text,
+      .form-item-civihr-onboarding-intro-text {
+        margin-bottom: 60px;
+      }
+
+      .form-item-civihr-onboarding-carousel-options {
+        height: auto;
+        margin-bottom: 0;
+
+        .form-type-checkbox {
+          border: 1px solid #ececed;
+          height: auto;
+          padding: 10px;
+        }
+      }
     }
   }
 }

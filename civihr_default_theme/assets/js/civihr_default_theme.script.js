@@ -4,6 +4,8 @@
  */
 
 (function ($) {
+  var isMobile = $('body.mobile').length;
+
   Drupal.behaviors.civihr_theme = {
     attach: function () {
       // on doc ready
@@ -49,7 +51,7 @@
     var dropHelper;
     var inputField = $(inputFieldSelector);
 
-    if (!$('body.mobile').length) {
+    if (!isMobile) {
       dropHelper = '<span><i class="fa fa-cloud-upload" aria-hidden="true"></i><br>' +
       '<b>Drop file here</b><br>or click to browse</span>';
     } else {
@@ -65,7 +67,7 @@
         $(dropLayer).removeClass('is-dragover');
       });
 
-      if (!$('body.mobile').length) {
+      if (!isMobile) {
         inputField.on('dragenter', function () {
           $(dropLayer).addClass('is-dragover');
         });
@@ -147,16 +149,18 @@
    * Add Images in Customize Onboarding Page
    */
   function addImagesInCustomizeOnboardingPage () {
+    var onBoardingWizardImageDirectory = '../../' + Drupal.settings.civihr_default_theme.path + '/assets/images/onboarding_wizard/';
+
     if (!$('.onboarding-customize-logo').length) {
-      $('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper').before('<img class="onboarding-customize-logo" src="../../' + Drupal.settings.civihr_default_theme.path +'/assets/images/onboarding_wizard/logo-img.jpg"/>');
+      $('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper').before('<img class="onboarding-customize-logo" src="'+ onBoardingWizardImageDirectory +'logo-img.jpg"/>');
     }
 
     if (!$('.onboarding-customize-features').length) {
-      $('.form-item-civihr-onboarding-carousel-options').before('<img class="onboarding-customize-features" src="../../' + Drupal.settings.civihr_default_theme.path +'/assets/images/onboarding_wizard/features-img.jpg"/>')
+      $('.form-item-civihr-onboarding-carousel-options').before('<img class="onboarding-customize-features" src="'+ onBoardingWizardImageDirectory +'/features-img.jpg"/>')
     }
 
     if (!$('.onboarding-customize-welcome').length) {
-      $('.form-item-civihr-onboarding-intro-text').before('<img class="onboarding-customize-welcome" src="../../' + Drupal.settings.civihr_default_theme.path + '/assets/images/onboarding_wizard/welcome-img.jpg"/>')
+      $('.form-item-civihr-onboarding-intro-text').before('<img class="onboarding-customize-welcome" src="'+ onBoardingWizardImageDirectory +'/welcome-img.jpg"/>')
     }
   }
 
@@ -175,6 +179,26 @@
     }
   }
 
+  /**
+   * Get values from Webform's SELECT input type calendar values and set it to
+   * Native Datepicker
+   */
+  function getWebformCalendarValues() {
+    var day = $('#' + this.id + '-' + 'day').val();
+    day = (day < 10 ? '0' : '') + day;
+
+    var month = $('#' + this.id + '-' + 'month').val();
+    month = (month < 10 ? '0' : '') + month;
+
+    var year = $('#' + this.id + '-' + 'year').val();
+    var date = year + '-' + month + '-' + day;
+
+    $(this).val(date);
+  }
+
+  /**
+   * Handle Webform Calendar element
+   */
   function handleWebformCalendar () {
     // Remove Required attribute from default select datepicker, which is not used
     $('.webform-container-inline.webform-datepicker div.form-item.form-type-select select').attr('required', false);
@@ -182,23 +206,11 @@
     $('.mobile .webform-calendar').remove();
     $('body:not(.mobile) .mobile-webform-calendar').remove();
 
-    // Seeter and Getter for Native Calendar
-    $('.mobile-webform-calendar').change(function () {
-      var date = new Date(this.value);
-      $('#' + this.id + '-' + 'month').val(date.getMonth() + 1);
-      $('#' + this.id + '-' + 'day').val(date.getDate());
-      $('#' + this.id + '-' + 'year').val(date.getFullYear());
-    });
-    $('.mobile-webform-calendar').each(function () {
-      var day = $('#' + this.id + '-' + 'day').val();
-      day = (day < 10 ? '0' : '') + day;
-      var month = $('#' + this.id + '-' + 'month').val();
-      month = (month < 10 ? '0' : '') + month;
-      var year = $('#' + this.id + '-' + 'year').val();
-      var date = year + '-' + month + '-' + day;
-      $(this).val(date);
-    });
+    // Setter and Getter for Native Calendar
+    $('.mobile-webform-calendar').change(setWebformCalendarValues);
+    $('.mobile-webform-calendar').each(getWebformCalendarValues);
   }
+
   /**
    * Hide the SSN Label of Onboarding page when the checkbox is checked
    */
@@ -216,5 +228,16 @@
    */
   function removeTextFromCarouselPager () {
     $('.views-slideshow-pager-fields .views-content-title').html('');
+  }
+
+  /**
+   * Set values to Webform's SELECT input type calendar values from
+   * Native Datepicker
+   */
+  function setWebformCalendarValues () {
+    var date = new Date(this.value);
+    $('#' + this.id + '-' + 'month').val(date.getMonth() + 1);
+    $('#' + this.id + '-' + 'day').val(date.getDate());
+    $('#' + this.id + '-' + 'year').val(date.getFullYear());
   }
 })(jQuery);

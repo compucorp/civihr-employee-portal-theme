@@ -387,6 +387,10 @@ function civihr_default_theme_preprocess_node(&$node) {
  * Implements template_preprocess_page().
  */
 function civihr_default_theme_preprocess_page(&$variables) {
+  // Adds the theme path to Javascript variable.
+  $path = drupal_get_path('theme', 'civihr_default_theme');
+  drupal_add_js(array('civihr_default_theme' => array('path' => $path)), 'setting');
+
   // Add custom copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {
     $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
@@ -448,10 +452,6 @@ function _is_hrreports_current_path() {
  * Implements hook_js_alter().
  */
 function civihr_default_theme_js_alter(&$javascript) {
-
-  $path = drupal_get_path('theme',$GLOBALS['theme']);;
-  drupal_add_js(array('civihr_default_theme' => array('path' => $path)), 'setting');
-
   // Add radix-modal when required.
   if (module_exists('ctools')) {
     $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';

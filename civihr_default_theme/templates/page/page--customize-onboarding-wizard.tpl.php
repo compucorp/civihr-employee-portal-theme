@@ -18,16 +18,6 @@ require_once __DIR__ . '/../../includes/header.inc';
   </p>
 
   <?php print drupal_render($page['content']) ?>
-  <img class="onboarding-customize-logo"
-    src="../../<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/assets/images/onboarding_wizard/logo-img.jpg"/>
-
-  <img
-    class="onboarding-customize-features"
-    src="../../<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/assets/images/onboarding_wizard/features-img.jpg"/>
-
-  <img
-    class="onboarding-customize-welcome"
-    src="../../<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/assets/images/onboarding_wizard/welcome-img.jpg"/>
 </div>
 
 <?php require_once __DIR__ . '/../../includes/footer.inc';

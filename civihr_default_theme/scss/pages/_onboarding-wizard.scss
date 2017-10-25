@@ -29,6 +29,33 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 }
 
+.mobile {
+  .drop-layer {
+    background: $brand-primary !important;
+    color: $light;
+    height: 40px !important;
+    outline: none;
+  }
+
+  #onboarding-customization-page {
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+      height: auto !important;
+
+      input.form-file {
+        height: 40px !important;
+      }
+    }
+  }
+
+  .onboarding-wizard-page {
+    .onboarding_wizard_profile_pic_upload_image {
+      input.form-file {
+        height: 40px !important;
+      }
+    }
+  }
+}
+
 .onboarding-wizard-page {
   .crm_wizard__mobile {
     display: none;
@@ -189,6 +216,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     label {
       display: none;
     }
+
     input.form-file {
       height: 180px;
       margin-bottom: 15px;
@@ -198,6 +226,16 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .form-item {
       background-color: transparent !important;
+    }
+
+    .civicrm-file-icon~.drop-layer {
+      display: none;
+    }
+
+    .civicrm-remove-file {
+      background: $light;
+      border: 1px solid #ccc;
+      padding: .7rem 1.1rem;
     }
   }
 
@@ -223,7 +261,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     width: 100px;
   }
 
-  .webform-calendar {
+  .webform-calendar,
+  .mobile-webform-calendar {
     padding: 7px 10px;
 
     &+.input-group-addon {
@@ -383,18 +422,17 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       width: 100% !important;
 
       img {
-        height: 303px !important;
+        height: 270px !important;
         width: 458px !important;
       }
 
       .views-slideshow-cycle-main-frame-row-item {
         margin: 0 65px;
+        padding: 12px;
         position: relative;
 
         .views-field-field-slideshow-image {
           box-shadow: 0 10px 20px 0 $carousel-box-shadow-color, 0 -2px 15px 0 $carousel-box-shadow-color;
-          left: 0;
-          position: absolute;
           width: 458px;
         }
 
@@ -472,7 +510,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .views-slideshow-cycle-main-frame {
       margin: 0;
-      height: 400px;
+      height: 500px;
 
       .views-slideshow-cycle-main-frame-row {
         .views-slideshow-cycle-main-frame-row-item {
@@ -482,21 +520,45 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
             width: 100% !important;
 
             img {
-              height: 200px !important;
+              height: 350px !important;
               width: 100% !important;
             }
           }
 
           .views-field-title {
             left: 0;
-            top: 240px;
+            top: 390px;
             width: 100%;
           }
 
           .views-field-field-description {
             left: 0;
-            top: 290px;
+            top: 450px;
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-min) {
+    .views-slideshow-cycle-main-frame {
+      height: 400px;
+
+      .views-slideshow-cycle-main-frame-row {
+        .views-slideshow-cycle-main-frame-row-item {
+          .views-field-field-slideshow-image {
+            img {
+              height: 200px !important;
+            }
+          }
+
+          .views-field-title {
+            top: 240px;
+          }
+
+          .views-field-field-description {
+            top: 290px;
           }
         }
       }
@@ -510,6 +572,11 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     h1 {
       margin-top: 50px;
+    }
+
+    hr {
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     .region {
@@ -566,8 +633,11 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .form-item-civihr-onboarding-carousel-options {
+      margin-bottom: 60px;
+
       .form-type-checkbox {
         margin-bottom: 10px !important;
+        height: 20px;
       }
     }
 
@@ -594,23 +664,58 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .onboarding-customize-logo {
       width: 440px;
-      position: absolute;
-      top: 290px;
-      right: 100px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 75px;
     }
 
     .onboarding-customize-features {
       width: 440px;
-      position: absolute;
-      top: 850px;
-      right: 100px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 50px;
     }
 
     .onboarding-customize-welcome {
       width: 440px;
-      position: absolute;
-      top: 1200px;
-      right: 100px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 45px;
+    }
+
+    @media (max-width: $screen-lg-min) {
+      #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+      .form-item-civihr-onboarding-carousel-options,
+      .form-item-civihr-onboarding-welcome-text,
+      .form-item-civihr-onboarding-intro-text {
+        margin: 20px;
+        padding-top: 0;
+        width: auto;
+      }
+
+      .onboarding-customize-logo,
+      .onboarding-customize-features,
+      .onboarding-customize-welcome {
+        float: none;
+        margin: 20px;
+        width: calc( 100% - 40px);
+      }
+
+      .form-item-civihr-onboarding-welcome-text,
+      .form-item-civihr-onboarding-intro-text {
+        margin-bottom: 60px;
+      }
+
+      .form-item-civihr-onboarding-carousel-options {
+        height: auto;
+        margin-bottom: 0;
+
+        .form-type-checkbox {
+          border: 1px solid #ececed;
+          height: auto;
+          padding: 10px;
+        }
+      }
     }
   }
 }

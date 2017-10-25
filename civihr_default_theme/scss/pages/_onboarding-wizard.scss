@@ -472,7 +472,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .views-slideshow-cycle-main-frame {
       margin: 0;
-      height: 400px;
+      height: 500px;
 
       .views-slideshow-cycle-main-frame-row {
         .views-slideshow-cycle-main-frame-row-item {
@@ -482,21 +482,45 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
             width: 100% !important;
 
             img {
-              height: 200px !important;
+              height: 350px !important;
               width: 100% !important;
             }
           }
 
           .views-field-title {
             left: 0;
-            top: 240px;
+            top: 390px;
             width: 100%;
           }
 
           .views-field-field-description {
             left: 0;
-            top: 290px;
+            top: 450px;
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-min) {
+    .views-slideshow-cycle-main-frame {
+      height: 400px;
+
+      .views-slideshow-cycle-main-frame-row {
+        .views-slideshow-cycle-main-frame-row-item {
+          .views-field-field-slideshow-image {
+            img {
+              height: 200px !important;
+            }
+          }
+
+          .views-field-title {
+            top: 240px;
+          }
+
+          .views-field-field-description {
+            top: 290px;
           }
         }
       }

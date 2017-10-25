@@ -36,6 +36,26 @@
     removeTextFromCarouselPager();
     Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
     Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
+
+    $('.webform-container-inline.webform-datepicker div.form-item.form-type-select select').attr('required', false);
+    $('.mobile .webform-calendar').remove();
+    $('body:not(.mobile) .mobile-webform-calendar').remove();
+    $('.mobile-webform-calendar').change(function () {
+      var date = new Date(this.value);
+      $('#' + this.id + '-' + 'month').val(date.getMonth() + 1);
+      $('#' + this.id + '-' + 'day').val(date.getDate());
+      $('#' + this.id + '-' + 'year').val(date.getFullYear());
+    });
+    $('.mobile-webform-calendar').each(function () {
+      var day = $('#' + this.id + '-' + 'day').val();
+      day = (day < 10 ? '0' : '') + day;
+      var month = $('#' + this.id + '-' + 'month').val();
+      month = (month < 10 ? '0' : '') + month;
+      var year = $('#' + this.id + '-' + 'year').val();
+      var date = year + '-' + month + '-' + day;
+      $(this).val(date);
+    })
+
   };
 
   /**

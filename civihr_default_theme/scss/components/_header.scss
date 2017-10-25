@@ -247,6 +247,12 @@
   }
 }
 
+.chr_header__sub-menu__separator {
+  border-top: 1px solid $gray-darker;
+  height: 0;
+  margin: 0 30px 0 20px;
+}
+
 //CiviHR menu in small devices
 .chr_header__brand .chr_header__home-sub-menu {
   right: 0;

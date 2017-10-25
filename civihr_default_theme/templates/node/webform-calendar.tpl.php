@@ -1,10 +1,10 @@
 <?php
 /**
  * @var array $component
- *  A Webform component array
+ *   A Webform component array
  *
  * @var array $calendar_classes
- *  Array of classes fot the Webform Calendar component
+ *   Array of classes for the Webform Calendar component
  */
 $idKey = str_replace('_', '-', $component['form_key']);
 ?>

@@ -347,6 +347,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
     $container_class = 'container-fluid';
   }
   $variables['container_class'] = $container_class;
+  $variables['cog_menu_markup'] = _build_cog_menu_markup();
 }
 
 /**
@@ -356,6 +357,59 @@ function civihr_default_theme_preprocess_page(&$variables) {
  */
 function _is_hrreports_current_path() {
   return substr(current_path(), 0, 8) === 'reports/';
+}
+
+/**
+ * Builds the markup of the cog menu
+ *
+ * @return string
+ */
+function _build_cog_menu_markup() {
+  $menuItems = _get_cog_menu_items();
+  $markup = "";
+
+  foreach($menuItems as $menuItem) {
+    if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
+      $markup .= '<hr class="chr_header__sub-menu__separator">';
+      continue;
+    }
+
+    foreach ($menuItem['permissions'] as $permission) {
+      if (user_access($permission)) {
+        $markup .= "<li>{$menuItem['link']}</li>";
+        break;
+      }
+    }
+  }
+
+  return $markup;
+}
+
+/**
+ * Gets the structure of the cog menu
+ *
+ * @return array
+ */
+function _get_cog_menu_items() {
+  $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
+
+  return [
+    [
+      'permissions' => ["access content overview"],
+      'link' => l(t('Manage HR Resources'), 'admin/content', array('html' => TRUE)),
+    ],
+    [
+      'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', array('html' => TRUE))
+    ],
+    [
+      'separator' => TRUE
+    ],
+    [
+      'permissions' => ["administer users", "access users overview"],
+      'link' => l(t('Manage Users'), 'admin/people', array('html' => TRUE)),
+    ],
+  ];
 }
 
 /**

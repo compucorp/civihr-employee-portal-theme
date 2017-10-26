@@ -21,8 +21,9 @@
   }
 
   > .chr_header__nav {
-    height: 100%;
+    height: auto;
     left: -100%;
+    min-height: 100%;
     position: absolute;
     top: $crm-header-height;
     width: 100%;
@@ -46,6 +47,7 @@
     > .chr_header__nav {
       float: left;
       height: auto;
+      min-height: auto;
       position: static;
       margin-left: 10px;
       width: auto;

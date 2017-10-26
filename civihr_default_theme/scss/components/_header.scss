@@ -47,12 +47,9 @@
       float: left;
       height: auto;
       position: static;
+      margin-left: 10px;
       width: auto;
     }
-  }
-
-  @media(min-width: $screen-md-max) {
-    padding-right: 30px;
   }
 
   //Hide Menu link as part of SSP
@@ -86,7 +83,7 @@
   display: table;
   height: 100%;
   text-align: center;
-  width: 90px;
+  width: 60px;
 
   &:hover {
     color: rgba($light, 0.8);
@@ -142,6 +139,20 @@
   > li {
     border-bottom: 1px solid $gray-light;
     padding-left: 20px;
+    position: relative;
+
+    &.active {
+      &:after {
+        content: '';
+        border: 2px solid $brand-primary;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+    }
 
     &:last-child {
       border: none;
@@ -150,14 +161,17 @@
 
   @media(min-width: $screen-md-max) {
     a {
-      color: inherit;
+      color: $light-pale;
       padding: 0 15px;
 
-      &.active,
       &:hover,
       &:focus {
         background: $gray;
-        color: $light;
+        color: $light !important;
+      }
+
+      &.active {
+        color: inherit;
       }
     }
 
@@ -179,15 +193,14 @@
 
 
 .chr_header__settings-menu {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  text-align: center;
   float: right;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 50px;
 
   &:hover {
-    background-color: $crm-gray-darker-alt;
+    background-color: $gray;
 
     > .chr_header__sub-menu {
       display: block;
@@ -195,7 +208,7 @@
   }
 
   > .fa-cog {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .chr_header__sub-menu {
@@ -237,7 +250,7 @@
     white-space: nowrap;
 
     &:hover {
-      background: $crm-brand-secondary;
+      background: $gray;
       color: $light;
     }
 

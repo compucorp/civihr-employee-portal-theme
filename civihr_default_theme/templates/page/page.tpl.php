@@ -15,32 +15,7 @@
 
   $civicrm_access = user_access("access CiviCRM");
   $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard', ['fragment' => '/tasks']);
-  $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => true));
-
-  $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
-  $mapGearLinks = [
-    [
-      'permissions' => ["access content overview"],
-      'link' => l(t('Manage documents'), 'admin/content', array('html' => true)),
-    ],
-    [
-      'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage users'), 'admin/people', array('html' => true)),
-    ],
-    [
-      'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR resource types'), 'hr-resource-types-list', array('html' => true))
-    ],
-  ];
-  $gearLinks = "";
-  foreach($mapGearLinks as $link) {
-    foreach ($link['permissions'] as $permission) {
-      if (user_access($permission)) {
-        $gearLinks .= "<li>{$link['link']}</li>";
-        break;
-      }
-    }
-  }
+  $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => TRUE));
 ?>
 
 <div id="outer-wrapper">
@@ -82,11 +57,11 @@
         print((new CRM_HRCore_UserMenuMarkup())->getMarkup());
       }
     ?>
-    <?php if (!empty($gearLinks)) { ?>
+    <?php if (!empty($cog_menu_markup)) { ?>
     <div class="chr_header__settings-menu">
       <i class="fa fa-cog" aria-hidden="true"></i>
       <ul class="chr_header__sub-menu">
-        <?php print $gearLinks ?>
+        <?php print $cog_menu_markup; ?>
       </ul>
     </div>
     <?php } ?>

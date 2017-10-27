@@ -21,8 +21,9 @@
   }
 
   > .chr_header__nav {
-    height: 100%;
+    height: auto;
     left: -100%;
+    min-height: 100%;
     position: absolute;
     top: $crm-header-height;
     width: 100%;
@@ -46,6 +47,7 @@
     > .chr_header__nav {
       float: left;
       height: auto;
+      min-height: auto;
       position: static;
       margin-left: 10px;
       width: auto;
@@ -133,6 +135,22 @@
     &:focus {
       color: $brand-primary;
       outline: none;
+    }
+
+    // The fa classes are applied by Drupal to the anchors directly,
+    // so the style on the anchor needs to be resetted and the style
+    // of the actual icon needs to be "confirmed" again
+    // (see: https://www.dannyenglander.com/blog/drupal-theming-adding-font-awesome-icons-menu-items)
+    &.fa {
+      font-family: inherit;
+      line-height: inherit;
+      -webkit-font-smoothing: inherit;
+      -moz-osx-font-smoothing: inherit;
+
+      &:before {
+        @include fa-icon();
+        margin-right: 5px;
+      }
     }
   }
 

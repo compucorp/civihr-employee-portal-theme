@@ -347,7 +347,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
     $container_class = 'container-fluid';
   }
   $variables['container_class'] = $container_class;
-  $variables['cog_menu_markup'] = _build_cog_menu_markup();
+  $variables['cog_menu_markup'] = $variables['logged_in'] ? _build_cog_menu_markup() : NULL;
 }
 
 /**

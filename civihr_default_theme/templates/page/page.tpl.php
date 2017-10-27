@@ -28,8 +28,7 @@
         <a href="/dashboard">
       <?php endif; ?>
         <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
-          <span class="chr_brand__icon icon-logo"></span>
-          <span><?php print t("Home"); ?></span>
+          <span class="chr_logo"></span>
           <?php if ($civicrm_access) { ?>
             <ul class="chr_header__sub-menu">
               <li><?php print $admin_link; ?></li>
@@ -42,8 +41,7 @@
       <?php endif; ?>
     </div>
     <div class="chr_header__brand chr_brand chr_header__home-menu">
-        <span class="chr_brand__icon icon-logo"></span>
-        <span class="chr_brand__name"><span><?php print t("CiviHR"); ?></span></span>
+        <span class="chr_logo chr_logo--full"><i></i></span>
     </div>
     <nav class="chr_header__nav">
       <?php if ($main_menu): ?>
@@ -116,7 +114,7 @@
         Powered by CiviHR <?php print get_civihr_version(); ?>.
         CiviHR is openly available under the <a target="_blank" href="http://www.gnu.org/licenses/agpl-3.0.html">GNU AGPL License</a> and can be downloaded from the <a target="_blank" href="https://civihr.org">Project website</a>&nbsp;.
         <div class="footer-logo">
-          <i class="icon-logo-full"></i>
+          <span class="chr_logo chr_logo--full"><i></i></span>
         </div>
         <?php if ($copyright): ?>
           <div class="copyright"><?php print $copyright; ?></div>

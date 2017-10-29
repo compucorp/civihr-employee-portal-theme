@@ -369,14 +369,9 @@ function _build_cog_menu_markup() {
   $markup = "";
 
   foreach($menuItems as $menuItem) {
-    if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
-      $markup .= '<hr class="chr_header__sub-menu__separator">';
-      continue;
-    }
-
     foreach ($menuItem['permissions'] as $permission) {
       if (user_access($permission)) {
-        $markup .= "<li>{$menuItem['link']}</li>";
+        $markup .= _get_cog_menu_item_markup($menuItem);
         break;
       }
     }
@@ -400,16 +395,31 @@ function _get_cog_menu_items() {
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', array('html' => TRUE))
-    ],
-    [
-      'separator' => TRUE
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', array('html' => TRUE)),
+      'separator' => TRUE,
     ],
     [
       'permissions' => ["administer users", "access users overview"],
       'link' => l(t('Manage Users'), 'admin/people', array('html' => TRUE)),
     ],
   ];
+}
+
+/**
+ * Builds and returns the markup of the given menu item
+ *
+ * @param array $menuItem
+ *
+ * @return string
+ */
+function _get_cog_menu_item_markup($menuItem) {
+  $class = '';
+
+  if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
+    $class = 'chr_header__sub-menu__separator';
+  }
+
+  return "<li class=\"{$class}\">{$menuItem['link']}</li>";
 }
 
 /**

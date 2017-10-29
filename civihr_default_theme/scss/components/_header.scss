@@ -8,16 +8,16 @@
   height: $crm-header-height;
   line-height: $crm-header-height;
 
-  > .chr_header__brand {
+  > .chr_header__corner {
+    float: left;
+  }
+
+  > .chr_header__logo {
     left: 0;
     position: absolute;
     margin: 0 auto;
     right: 0;
     width: 25%;
-  }
-
-  > .chr_header__corner {
-    float: left;
   }
 
   > .chr_header__nav {
@@ -40,7 +40,7 @@
   }
 
   @media(min-width: $screen-md-max) {
-    > .chr_header__brand {
+    > .chr_header__logo {
       display: none;
     }
 
@@ -74,10 +74,6 @@
   }
 }
 
-.chr_header__brand {
-  color: $light;
-}
-
 .chr_header__corner {
   background: $brand-primary;
   color: $light;
@@ -90,23 +86,30 @@
     color: rgba($light, 0.8);
   }
 
-  > a {
+  > .chr_header__logo {
+    display: none;
     height: 50px;
   }
 
-  > a,
-  > .chr_header__corner__brand {
-    display: none;
-  }
-
   @media(min-width: $screen-md-max) {
-    > .chr_header__corner__brand {
+    > .chr_header__logo {
       display: block;
     }
 
     > .chr_header__nav__toggle {
       display: none;
     }
+  }
+}
+
+.chr_header__logo {
+  color: $light;
+  font-size: 1.6rem;
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    color: rgba($light, 0.8);
   }
 }
 
@@ -239,22 +242,6 @@
   }
 }
 
-.chr_header__home-menu {
-  color: $light;
-
-  &:hover {
-    color: rgba($light, 0.8);
-
-    > .chr_header__sub-menu {
-      display: block;
-    }
-  }
-
-  .chr_header__sub-menu {
-    left: 0;
-  }
-}
-
 .chr_header__sub-menu {
   background: $crm-gray-darker-alt;
   display: none;
@@ -287,13 +274,6 @@
   border-top: 1px solid $gray-darker;
   height: 0;
   margin: 0 30px 0 20px;
-}
-
-//CiviHR menu in small devices
-.chr_header__brand .chr_header__home-sub-menu {
-  right: 0;
-  width: 120px;
-  margin: auto;
 }
 
 //Hide Menu link as part of SSP

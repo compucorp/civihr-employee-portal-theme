@@ -20,11 +20,11 @@
       <div class="chr_header__nav__toggle">
         <i class="fa fa-2x fa-navicon"></i>
       </div>
-      <a href="/dashboard" class="chr_header__corner__brand chr_brand chr_header__home-menu">
+      <a href="/dashboard" class="chr_header__logo">
         <span class="chr_logo"></span>
       </a>
     </div>
-    <div class="chr_header__brand chr_brand chr_header__home-menu">
+    <div class="chr_header__logo">
       <span class="chr_logo chr_logo--full"><i></i></span>
     </div>
     <nav class="chr_header__nav">

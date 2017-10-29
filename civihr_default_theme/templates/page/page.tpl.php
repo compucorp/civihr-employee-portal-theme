@@ -12,10 +12,6 @@
  * NOTE: The #outer-wrapper element is for the mobile menu to have a way
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
  */
-
-  $civicrm_access = user_access("access CiviCRM");
-  $admin_link = l(t('CiviHR admin'), 'civicrm/tasksassignments/dashboard', ['fragment' => '/tasks']);
-  $ssp_link = l(t('CiviHR SSP'), 'dashboard', array('html' => TRUE));
 ?>
 
 <div id="outer-wrapper">
@@ -24,24 +20,12 @@
       <div class="chr_header__nav__toggle">
         <i class="fa fa-2x fa-navicon"></i>
       </div>
-      <?php if (!$civicrm_access): ?>
-        <a href="/dashboard">
-      <?php endif; ?>
-        <div class="chr_header__corner__brand chr_brand chr_header__home-menu" title="<?php print htmlspecialchars($site_name); ?>">
-          <span class="chr_logo"></span>
-          <?php if ($civicrm_access) { ?>
-            <ul class="chr_header__sub-menu">
-              <li><?php print $admin_link; ?></li>
-              <li><?php print $ssp_link; ?></li>
-            </ul>
-          <?php }?>
-        </div>
-      <?php if (!$civicrm_access): ?>
-        </a>
-      <?php endif; ?>
+      <a href="/dashboard" class="chr_header__corner__brand chr_brand chr_header__home-menu">
+        <span class="chr_logo"></span>
+      </a>
     </div>
     <div class="chr_header__brand chr_brand chr_header__home-menu">
-        <span class="chr_logo chr_logo--full"><i></i></span>
+      <span class="chr_logo chr_logo--full"><i></i></span>
     </div>
     <nav class="chr_header__nav">
       <?php if ($main_menu): ?>

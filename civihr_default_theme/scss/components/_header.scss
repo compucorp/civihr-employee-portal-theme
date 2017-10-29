@@ -14,8 +14,8 @@
 
   > .chr_header__logo {
     left: 0;
-    position: absolute;
     margin: 0 auto;
+    position: absolute;
     right: 0;
     width: 25%;
   }
@@ -39,6 +39,10 @@
     float: right;
   }
 
+  .menu-link-home {
+    display: none;
+  }
+
   @media(min-width: $screen-md-max) {
     > .chr_header__logo {
       display: none;
@@ -47,28 +51,21 @@
     > .chr_header__nav {
       float: left;
       height: auto;
+      margin-left: 10px;
       min-height: auto;
       position: static;
-      margin-left: 10px;
       width: auto;
     }
   }
 
-  //Hide Menu link as part of SSP
-  .menu-link-home,
-  .menu-link-civihr-ssp {
-    display: none;
-  }
-
-  @media (max-width: 767px) {
-    //Show links in Mobile view and different background
+  @media (max-width: $screen-sm-max) {
     .menu-link-hr-admin,
-    .menu-link-civihr-ssp {
-      display: block;
+    .menu-link-home {
       background-color: $gray-light;
+      display: block;
     }
 
-    .menu-link-civihr-ssp > a {
+    .menu-link-home > a {
       border-bottom: none !important;
     }
   }
@@ -116,7 +113,6 @@
 .chr_header__nav {
   background: #ffffff;
   font-size: 1.385em;
-  padding: 5px 25px;
   z-index: 99;
 
   @media(min-width: $screen-md-max) {
@@ -129,8 +125,11 @@
 .chr_header__nav__menu {
 
   a {
+    border-bottom: 1px solid $crm-grizzly;
     color: $gray-darker;
     display: block;
+    margin: 0 25px;
+    padding: 0 20px;
 
     &.active,
     &:hover,
@@ -157,8 +156,6 @@
   }
 
   > li {
-    border-bottom: 1px solid $gray-light;
-    padding-left: 20px;
     position: relative;
 
     &.active {
@@ -175,7 +172,9 @@
     }
 
     &:last-child {
-      border: none;
+      > a {
+        border: none;
+      }
     }
   }
 
@@ -183,7 +182,9 @@
     display: flex;
 
     a {
+      border: 0;
       color: $light-pale;
+      margin: 0;
       padding: 0 15px;
 
       &:hover,
@@ -276,45 +277,6 @@
   margin: 0 30px 0 20px;
 }
 
-//Hide Menu link as part of SSP
-.menu-link-home,
-.menu-link-civihr-ssp {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  //Show links in Mobile view and different background
-  .menu-link-civihr-ssp {
-    display: block;
-    background-color: $gray-light;
-  }
-
-  .menu-link-civihr-ssp > a {
-    border-bottom: none !important;
-  }
-
-  .chr_header__nav__menu > li {
-    border-bottom: none;
-    padding: 0;
-  }
-
-  .chr_header__nav__menu > li > a {
-    border-bottom: 1px solid $crm-grizzly;
-    margin: 0 25px;
-    padding: 0 20px;
-  }
-
-  .chr_header__nav__menu > li:last-child > a {
-    border-bottom: none;
-  }
-
-  .chr_header__nav.is-open {
-    padding: 0px
-  }
-}
-
-
-//Hide Menus when not logged in
 .not-logged-in {
   .chr_header__corner {
     display: none;

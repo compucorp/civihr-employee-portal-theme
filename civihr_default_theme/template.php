@@ -638,12 +638,17 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 }
 
 /**
- * Hide the links to civicrm if Access to CiviCRM is not present
+ * Hide the links to the admin if the current user does not
+ * have administer access
+ *
+ * @param Array $link
  */
-function _hide_menu_items(&$element) {
-  if (!user_access("access CiviCRM") && $element['#href'] == 'civicrm') {
-    //Apply hide class provided by bootstrap
-    $element['#attributes']['class'][] = 'hidden';
+function _hide_admin_link_to_basic_users(&$link) {
+  $adminAccess = user_access("administer CiviCRM");
+  $identifier = $link['#localized_options']['identifier'];
+
+  if ($identifier == 'main-menu_civihr-admin:civicrm' && !$adminAccess) {
+    $link['#attributes']['class'][] = 'hidden';
   }
 }
 
@@ -695,9 +700,8 @@ function civihr_default_theme_menu_link__dropdown($variables) {
   $title = strip_tags($element['#title']);
   $element['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
 
-  /* Code Added */
-  _hide_menu_items($element);
-  /* End - Code Added */
+  _hide_admin_link_to_basic_users($element);
+
   if ($element['#title'] === 'Manager Leave') {
     $element['#localized_options']['html'] = true;
     $output = l(_get_pending_leave_request_markup($element), $element['#href'], $element['#localized_options']);

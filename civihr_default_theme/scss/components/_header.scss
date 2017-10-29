@@ -198,14 +198,15 @@
       }
     }
 
-    > li {
-      border: none;
-      padding: 0;
-      float: left;
-    }
-
     .menu-link-hr-admin {
+      line-height: 33px;
       order: 9999;
+      padding: 12px 0 0 15px;
+
+      > a {
+        border: 1px solid $light;
+        color: $light;
+      }
     }
   }
 }

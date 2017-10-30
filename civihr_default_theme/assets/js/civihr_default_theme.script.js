@@ -66,9 +66,9 @@
       dropHelper = 'Select Image';
     }
 
-    var dropLayer = inputFieldSelector+ '+.drop-layer';
+    var dropLayer = inputFieldSelector+ '+.drop-zone-overlay';
     if (!$(dropLayer).length) {
-      inputField.after('<div class="drop-layer">' + dropHelper + '</div>');
+      inputField.after('<div class="drop-zone-overlay">' + dropHelper + '</div>');
 
       inputField.on('change', function () {
         $(dropLayer).html('File Selected');

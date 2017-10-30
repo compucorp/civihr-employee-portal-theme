@@ -1,42 +1,6 @@
 $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
-.drop-layer {
-  align-items: center;
-  background: #ecedee;
-  color: $crm-wizard-font-color;
-  display: flex;
-  justify-content: center;
-  height: 180px;
-  min-width: 120px;
-  outline: 1px dashed #7a8084;
-  pointer-events: none;
-  position: absolute;
-  text-align: center;
-  transition: outline-offset .15s ease-in-out, background-color .15s linear;
-  top: 0;
-  width: 100%;
-
-  i {
-    color: $crm-wizard-secondary-color;
-    font-size: 25px;
-    margin-bottom: 15px;
-  }
-
-  &.is-dragover {
-    outline-offset: -10px;
-    outline-color: #c8dadf;
-    background-color: $light;
-  }
-}
-
 .mobile {
-  .drop-layer {
-    background: $brand-primary !important;
-    color: $light;
-    height: 40px !important;
-    outline: none;
-  }
-
   #onboarding-customization-page {
     #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
       height: auto !important;
@@ -247,7 +211,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       background-color: transparent !important;
     }
 
-    .civicrm-file-icon~.drop-layer {
+    .civicrm-file-icon~.drop-zone-overlay {
       display: none;
     }
 
@@ -603,7 +567,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       background: $light;
     }
 
-    .drop-layer {
+    .drop-zone-overlay {
       background: $light;
       height: 140px;
       top: 25px;

@@ -175,8 +175,8 @@ $input-border:              $crm-color-neutral !default;
 
 $crm-ui-select-top-padding: 7px;
 
-$crm-wizard-font-color: #312D4B;
-$crm-wizard-primary-color: #4E4E78;
-$crm-wizard-secondary-color : #00B0B9;
+$crm-wizard-font-color: #404454;
+$crm-wizard-primary-color: #767b8e;
+$crm-wizard-secondary-color : #42afcb;
 $crm-wizard-active-bg-color: #E9EDF3;
-$crm-wizard-active-font-color: #3DA4F1;
+$crm-wizard-active-font-color: $crm-wizard-secondary-color;

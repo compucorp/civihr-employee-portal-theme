@@ -391,16 +391,16 @@ function _get_cog_menu_items() {
   return [
     [
       'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', array('html' => TRUE)),
+      'link' => l(t('Manage HR Resources'), 'admin/content', ['html' => TRUE]),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', array('html' => TRUE)),
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', ['html' => TRUE]),
       'separator' => TRUE,
     ],
     [
       'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage Users'), 'admin/people', array('html' => TRUE)),
+      'link' => l(t('Manage Users'), 'admin/people', ['html' => TRUE]),
     ],
   ];
 }
@@ -661,46 +661,73 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 function civihr_default_theme_menu_link__dropdown($variables) {
   $element = $variables['element'];
 
-  _add_active_class_if_link_is_current($element);
-  _add_unique_class_to_link($element);
-  _hide_admin_link_to_basic_users($element);
+  _add_active_class_if_menu_link_is_current($element);
+  _add_unique_class_to_menu_link($element);
+  _hide_admin_menu_link_to_basic_users($element);
 
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . _get_link_markup($element) . "</li>\n";
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . _get_menu_link_markup($element) . "</li>\n";
 }
 
 /**
- * If the link is for the current page, then it adds the active class to it
+ * If the menu link is for the current page, or is in its path trail,
+ * then it adds the active class to it
  *
  * @param array $link
  */
-function _add_active_class_if_link_is_current(&$link) {
-  if (($link['#href'] == current_path() || ($link['#href'] == '<front>' && drupal_is_front_page())) && (empty($link['#localized_options']['language']) || $link['#localized_options']['language']->language == $language_url->language)) {
-    $link['#attributes']['class'][] = 'active';
-  }
-
-  // Add active class to li if active trail.
-  if (in_array('active-trail', $link['#attributes']['class'])) {
+function _add_active_class_if_menu_link_is_current(&$link) {
+  if (_is_menu_link_current($link) || _is_menu_link_in_trail($link)) {
     $link['#attributes']['class'][] = 'active';
   }
 }
+
+/**
+ * Checks if the given menu link is the link of the current page
+ *
+ * @param array $link
+ *
+ * @return boolean
+ */
+function _is_menu_link_current($link) {
+  $localOptions = $link['#localized_options'];
+  $language = !empty($localOptions['language']) ? $localOptions['language'] : NULL;
+
+  $isLinkOfCurrentPath = $link['#href'] == current_path();
+  $isLinkOfFrontPage = $link['#href'] == '<front>' && drupal_is_front_page();
+  $isLanguageUndefinedOrCurrent = !$language || $language->language == $language_url->language;
+
+  return ($isLinkOfCurrentPath || $isLinkOfFrontPage) && $isLanguageUndefinedOrCurrent;
+}
+
+/**
+ * Checks if the given menu link is in the trail of the current page
+ * (as in, it's part of the hierarchy of the current page)
+ *
+ * @param aray $link
+ *
+ * @return boolean
+ */
+function _is_menu_link_in_trail($link) {
+  return in_array('active-trail', $link['#attributes']['class']);
+}
+
 
 /**
  * Adds a unique class to a link using its title
  *
  * @param array $link
  */
-function _add_unique_class_to_link(&$link) {
+function _add_unique_class_to_menu_link(&$link) {
   $title = strip_tags($link['#title']);
   $link['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
 }
 
 /**
- * Hide the link to the admin if the current user does not
+ * Hide the menu link to the admin if the current user does not
  * have administer access
  *
  * @param array $link
  */
-function _hide_admin_link_to_basic_users(&$link) {
+function _hide_admin_menu_link_to_basic_users(&$link) {
   $adminAccess = user_access("administer CiviCRM");
   $identifier = $link['#localized_options']['identifier'];
 
@@ -716,7 +743,7 @@ function _hide_admin_link_to_basic_users(&$link) {
  *
  * @return string
  */
-function _get_link_markup(&$link) {
+function _get_menu_link_markup(&$link) {
   if ($link['#title'] === 'Manager Leave') {
     $link['#localized_options']['html'] = true;
     $link['#title'] .= civihr_leave_absences_get_markup('manager-notification-badge');

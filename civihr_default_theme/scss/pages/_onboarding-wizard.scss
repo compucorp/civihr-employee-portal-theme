@@ -264,6 +264,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   .webform-calendar,
   .mobile-webform-calendar {
     padding: 7px 10px;
+    -webkit-appearance: none;
 
     &+.input-group-addon {
       background-color: $crm_gray-light-alt;

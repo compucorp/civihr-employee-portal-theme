@@ -369,14 +369,9 @@ function _build_cog_menu_markup() {
   $markup = "";
 
   foreach($menuItems as $menuItem) {
-    if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
-      $markup .= '<hr class="chr_header__sub-menu__separator">';
-      continue;
-    }
-
     foreach ($menuItem['permissions'] as $permission) {
       if (user_access($permission)) {
-        $markup .= "<li>{$menuItem['link']}</li>";
+        $markup .= _get_cog_menu_item_markup($menuItem);
         break;
       }
     }
@@ -396,20 +391,35 @@ function _get_cog_menu_items() {
   return [
     [
       'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', array('html' => TRUE)),
+      'link' => l(t('Manage HR Resources'), 'admin/content', ['html' => TRUE]),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', array('html' => TRUE))
-    ],
-    [
-      'separator' => TRUE
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', ['html' => TRUE]),
+      'separator' => TRUE,
     ],
     [
       'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage Users'), 'admin/people', array('html' => TRUE)),
+      'link' => l(t('Manage Users'), 'admin/people', ['html' => TRUE]),
     ],
   ];
+}
+
+/**
+ * Builds and returns the markup of the given menu item
+ *
+ * @param array $menuItem
+ *
+ * @return string
+ */
+function _get_cog_menu_item_markup($menuItem) {
+  $class = '';
+
+  if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
+    $class = 'chr_header__sub-menu__separator';
+  }
+
+  return "<li class=\"{$class}\">{$menuItem['link']}</li>";
 }
 
 /**
@@ -638,16 +648,6 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 }
 
 /**
- * Hide the links to civicrm if Access to CiviCRM is not present
- */
-function _hide_menu_items(&$element) {
-  if (!user_access("access CiviCRM") && $element['#href'] == 'civicrm') {
-    //Apply hide class provided by bootstrap
-    $element['#attributes']['class'][] = 'hidden';
-  }
-}
-
-/**
  * Returns HTML for a menu link and submenu.
  * Copied from Radix theme
  * Added functionality to Hide Menu items based on condition
@@ -660,61 +660,124 @@ function _hide_menu_items(&$element) {
  */
 function civihr_default_theme_menu_link__dropdown($variables) {
   $element = $variables['element'];
-  $sub_menu = '';
 
-  if (!empty($element['#below'])) {
-    // Wrap in dropdown-menu.
-    unset($element['#below']['#theme_wrappers']);
-    $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
-    $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-    $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+  _add_active_class_if_menu_link_is_current($element);
+  _add_unique_class_to_menu_link($element);
+  _hide_admin_menu_link_to_basic_users($element);
 
-    // Check if element is nested.
-    if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
-      $element['#attributes']['class'][] = 'dropdown-submenu';
-    } else {
-      $element['#attributes']['class'][] = 'dropdown';
-      $element['#localized_options']['html'] = TRUE;
-      $element['#title'] .= '<span class="caret"></span>';
-    }
-
-    $element['#localized_options']['attributes']['data-target'] = '#';
-  }
-
-  // Fix for active class.
-  if (($element['#href'] == current_path() || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']) || $element['#localized_options']['language']->language == $language_url->language)) {
-    $element['#attributes']['class'][] = 'active';
-  }
-
-  // Add active class to li if active trail.
-  if (in_array('active-trail', $element['#attributes']['class'])) {
-    $element['#attributes']['class'][] = 'active';
-  }
-
-  // Add a unique class using the title.
-  $title = strip_tags($element['#title']);
-  $element['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
-
-  /* Code Added */
-  _hide_menu_items($element);
-  /* End - Code Added */
-  if ($element['#title'] === 'Manager Leave') {
-    $element['#localized_options']['html'] = true;
-    $output = l(_get_pending_leave_request_markup($element), $element['#href'], $element['#localized_options']);
-  } else {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  }
-
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . _get_menu_link_markup($element) . "</li>\n";
 }
 
 /**
- * Adding markup from template that holds number of pending leave request
- * to display with Manager Leave menu.
+ * If the menu link is for the current page, or is in its path trail,
+ * then it adds the active class to it
  *
- * @param $element
+ * @param array $link
  */
-function _get_pending_leave_request_markup($element) {
-  $markup = civihr_leave_absences_get_markup('manager-notification-badge');
-  return $element['#title'].$markup;
+function _add_active_class_if_menu_link_is_current(&$link) {
+  if (_is_menu_link_current($link) || _is_menu_link_in_trail($link)) {
+    $link['#attributes']['class'][] = 'active';
+  }
+}
+
+/**
+ * Checks if the given menu link is the link of the current page
+ *
+ * @param array $link
+ *
+ * @return boolean
+ */
+function _is_menu_link_current($link) {
+  $localOptions = $link['#localized_options'];
+  $language = !empty($localOptions['language']) ? $localOptions['language'] : NULL;
+
+  $isLinkOfCurrentPath = $link['#href'] == current_path();
+  $isLinkOfFrontPage = $link['#href'] == '<front>' && drupal_is_front_page();
+  $isLanguageUndefinedOrCurrent = !$language || $language->language == $language_url->language;
+
+  return ($isLinkOfCurrentPath || $isLinkOfFrontPage) && $isLanguageUndefinedOrCurrent;
+}
+
+/**
+ * Checks if the given menu link is in the trail of the current page
+ * (as in, it's part of the hierarchy of the current page)
+ *
+ * @param aray $link
+ *
+ * @return boolean
+ */
+function _is_menu_link_in_trail($link) {
+  return in_array('active-trail', $link['#attributes']['class']);
+}
+
+
+/**
+ * Adds a unique class to a link using its title
+ *
+ * @param array $link
+ */
+function _add_unique_class_to_menu_link(&$link) {
+  $title = strip_tags($link['#title']);
+  $link['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
+}
+
+/**
+ * Hide the menu link to the admin if the current user does not
+ * have administer access
+ *
+ * @param array $link
+ */
+function _hide_admin_menu_link_to_basic_users(&$link) {
+  $adminAccess = user_access("administer CiviCRM");
+  $identifier = $link['#localized_options']['identifier'];
+
+  if ($identifier == 'main-menu_civihr-admin:civicrm' && !$adminAccess) {
+    $link['#attributes']['class'][] = 'hidden';
+  }
+}
+
+/**
+ * Build and returns the markup of the given link (and submenu, if present)
+ *
+ * @param array $link
+ *
+ * @return string
+ */
+function _get_menu_link_markup(&$link) {
+  if ($link['#title'] === 'Manager Leave') {
+    $link['#localized_options']['html'] = true;
+    $link['#title'] .= civihr_leave_absences_get_markup('manager-notification-badge');
+  }
+
+  $linkMarkup = l($link['#title'], $link['#href'], $link['#localized_options']);
+  $subMenuMarkup = !empty($link['#below']) ? _add_sub_menu_to_link($link) : '';
+
+  return $linkMarkup . $subMenuMarkup;
+}
+
+/**
+ * Builds and returns the markup of the link's submenu
+ *
+ * @param array $link
+ *
+ * @return string
+ */
+function _add_sub_menu_to_link(&$link) {
+  unset($link['#below']['#theme_wrappers']);
+
+  $link['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+  $link['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+
+  // Check if link is nested.
+  if ((!empty($link['#original_link']['depth'])) && ($link['#original_link']['depth'] > 1)) {
+    $link['#attributes']['class'][] = 'dropdown-submenu';
+  } else {
+    $link['#attributes']['class'][] = 'dropdown';
+    $link['#localized_options']['html'] = TRUE;
+    $link['#title'] .= '<span class="caret"></span>';
+  }
+
+  $link['#localized_options']['attributes']['data-target'] = '#';
+
+  return '<ul class="dropdown-menu">' . drupal_render($link['#below']) . '</ul>';
 }

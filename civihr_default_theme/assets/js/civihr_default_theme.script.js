@@ -33,14 +33,21 @@
    * Do the stuff related to On boarding wizard
    */
   Drupal.civihr_theme.onBoardingWizard = function () {
-    addImagesInCustomizeOnboardingPage();
-    addVerticalLineInCustomizeOnboardingPage();
-    applyCustomSelectOnRadioClick();
-    handleWebformCalendar();
-    hideSSNLabelOnCheckboxClick();
-    removeTextFromCarouselPager();
-    Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
-    Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
+    var isOnboardingPage =
+      $('.onboarding-wizard-page').length ||
+      $('.page-features-in-civihr').length ||
+      $('.page-customize-onboarding-wizard').length;
+
+    if (isOnboardingPage) {
+      addImagesInCustomizeOnboardingPage();
+      addVerticalLineInCustomizeOnboardingPage();
+      applyCustomSelectOnRadioClick();
+      handleWebformCalendar();
+      hideSSNLabelOnCheckboxClick();
+      removeTextFromCarouselPager();
+      Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
+      Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
+    }
   };
 
   /**
@@ -54,7 +61,7 @@
 
     if (!Drupal.behaviors.isMobile) {
       dropHelper = '<span><i class="fa fa-cloud-upload" aria-hidden="true"></i><br>' +
-      '<b>Drop file here</b><br>or click to browse</span>';
+        '<b>Drop file here</b><br>or click to browse</span>';
     } else {
       dropHelper = 'Select Image';
     }
@@ -204,15 +211,22 @@
     // Remove Required attribute from default select datepicker, which is not used
     $('.webform-container-inline.webform-datepicker div.form-item.form-type-select select').attr('required', false);
     if (Drupal.behaviors.isMobile) {
+      var mobileCalendar = $('.mobile-webform-calendar');
+
       $('.mobile .webform-calendar').remove();
-      $('.mobile-webform-calendar').change(setWebformCalendarValues);
-      $('.mobile-webform-calendar').each(getWebformCalendarValues);
+      mobileCalendar.change(setWebformCalendarValues);
+      mobileCalendar.each(getWebformCalendarValues);
     } else {
+      var desktopCalendar = $('.webform-calendar');
+
       $('body:not(.mobile) .mobile-webform-calendar').remove();
-      $('.webform-calendar').each(getWebformCalendarValues);
-      $('.webform-calendar').datepicker("option", "dateFormat", "dd-mm-yy");
-      $('.webform-calendar').datepicker("option", "beforeShow", null);
-      $('.webform-calendar').datepicker("option", "onSelect", setWebformCalendarValues);
+
+      if(desktopCalendar.length) {
+        desktopCalendar.each(getWebformCalendarValues);
+        desktopCalendar.datepicker("option", "dateFormat", "dd-mm-yy");
+        desktopCalendar.datepicker("option", "beforeShow", null);
+        desktopCalendar.datepicker("option", "onSelect", setWebformCalendarValues);
+      }
     }
   }
 

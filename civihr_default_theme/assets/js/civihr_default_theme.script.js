@@ -4,12 +4,13 @@
  */
 
 (function ($) {
-  var isMobile = $('body.mobile').length;
-
+  Drupal.behaviors.isMobile = false;
   Drupal.behaviors.civihr_theme = {
     attach: function () {
       // on doc ready
       $(document).ready(function () {
+        Drupal.behaviors.isMobile = $('body.mobile').length;
+
         Drupal.civihr_theme.addClassToRadioButtons();
         Drupal.civihr_theme.applyMatchHeight();
         Drupal.civihr_theme.applyCustomSelect();
@@ -32,14 +33,21 @@
    * Do the stuff related to On boarding wizard
    */
   Drupal.civihr_theme.onBoardingWizard = function () {
-    addImagesInCustomizeOnboardingPage();
-    addVerticalLineInCustomizeOnboardingPage();
-    applyCustomSelectOnRadioClick();
-    handleWebformCalendar();
-    hideSSNLabelOnCheckboxClick();
-    removeTextFromCarouselPager();
-    Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
-    Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
+    var isOnboardingPage =
+      $('.onboarding-wizard-page').length ||
+      $('.page-features-in-civihr').length ||
+      $('.page-customize-onboarding-wizard').length;
+
+    if (isOnboardingPage) {
+      addImagesInCustomizeOnboardingPage();
+      addVerticalLineInCustomizeOnboardingPage();
+      applyCustomSelectOnRadioClick();
+      handleWebformCalendar();
+      hideSSNLabelOnCheckboxClick();
+      removeTextFromCarouselPager();
+      Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
+      Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
+    }
   };
 
   /**
@@ -51,23 +59,23 @@
     var dropHelper;
     var inputField = $(inputFieldSelector);
 
-    if (!isMobile) {
+    if (!Drupal.behaviors.isMobile) {
       dropHelper = '<span><i class="fa fa-cloud-upload" aria-hidden="true"></i><br>' +
-      '<b>Drop file here</b><br>or click to browse</span>';
+        '<b>Drop file here</b><br>or click to browse</span>';
     } else {
       dropHelper = 'Select Image';
     }
 
-    var dropLayer = inputFieldSelector+ '+.drop-layer';
+    var dropLayer = inputFieldSelector+ '+.drop-zone-overlay';
     if (!$(dropLayer).length) {
-      inputField.after('<div class="drop-layer">' + dropHelper + '</div>');
+      inputField.after('<div class="drop-zone-overlay">' + dropHelper + '</div>');
 
       inputField.on('change', function () {
         $(dropLayer).html('File Selected');
         $(dropLayer).removeClass('is-dragover');
       });
 
-      if (!isMobile) {
+      if (!Drupal.behaviors.isMobile) {
         inputField.on('dragenter', function () {
           $(dropLayer).addClass('is-dragover');
         });
@@ -180,6 +188,38 @@
   }
 
   /**
+   * Get Date Values for the Desktop Version of the Datepicker
+   *
+   * @param {String} dateText - Changed Date
+   * @return {Object}
+   */
+  function getDesktopCalendarValues (dateText) {
+    var fullDate = dateText.split('-');
+
+    return {
+      date: parseInt(fullDate[0]),
+      month: parseInt(fullDate[1]),
+      year: parseInt(fullDate[2])
+    };
+  }
+
+  /**
+   * Get Date Values for the Mobile Version of the Datepicker
+   *
+   * @param {String} dateText - Changed Date
+   * @return {Object}
+   */
+  function getMobileCalendarValues (dateText) {
+    var fullDate = new Date(dateText);
+
+    return {
+      month: fullDate.getMonth() + 1,
+      date: fullDate.getDate(),
+      year: fullDate.getFullYear()
+    }
+  }
+
+  /**
    * Get values from Webform's SELECT input type calendar values and set it to
    * Native Datepicker
    */
@@ -193,7 +233,7 @@
     var year = $('#' + this.id + '-' + 'year').val();
     var date = year + '-' + month + '-' + day;
 
-    $(this).val(date);
+    $(this).val(date).trigger('change');
   }
 
   /**
@@ -202,13 +242,24 @@
   function handleWebformCalendar () {
     // Remove Required attribute from default select datepicker, which is not used
     $('.webform-container-inline.webform-datepicker div.form-item.form-type-select select').attr('required', false);
-    // Switch between Normal and Native Datepicker based on device
-    $('.mobile .webform-calendar').remove();
-    $('body:not(.mobile) .mobile-webform-calendar').remove();
+    if (Drupal.behaviors.isMobile) {
+      var mobileCalendar = $('.mobile-webform-calendar');
 
-    // Setter and Getter for Native Calendar
-    $('.mobile-webform-calendar').change(setWebformCalendarValues);
-    $('.mobile-webform-calendar').each(getWebformCalendarValues);
+      $('.mobile .webform-calendar').remove();
+      mobileCalendar.change(setWebformCalendarValues);
+      mobileCalendar.each(getWebformCalendarValues);
+    } else {
+      var desktopCalendar = $('.webform-calendar');
+
+      $('body:not(.mobile) .mobile-webform-calendar').remove();
+
+      if(desktopCalendar.length) {
+        desktopCalendar.each(getWebformCalendarValues);
+        desktopCalendar.datepicker("option", "dateFormat", "dd-mm-yy");
+        desktopCalendar.datepicker("option", "beforeShow", null);
+        desktopCalendar.datepicker("option", "onSelect", setWebformCalendarValues);
+      }
+    }
   }
 
   /**
@@ -233,11 +284,16 @@
   /**
    * Set values to Webform's SELECT input type calendar values from
    * Native Datepicker
+   *
+   * @param {String} dateText - Changed Date
    */
-  function setWebformCalendarValues () {
-    var date = new Date(this.value);
-    $('#' + this.id + '-' + 'month').val(date.getMonth() + 1);
-    $('#' + this.id + '-' + 'day').val(date.getDate());
-    $('#' + this.id + '-' + 'year').val(date.getFullYear());
+  function setWebformCalendarValues (dateText) {
+    var dateValues = Drupal.behaviors.isMobile
+      ? getMobileCalendarValues(this.value)
+      : getDesktopCalendarValues(dateText);
+
+    $('#' + this.id + '-' + 'month').val(dateValues.month).trigger('change');
+    $('#' + this.id + '-' + 'day').val(dateValues.date).trigger('change');
+    $('#' + this.id + '-' + 'year').val(dateValues.year).trigger('change');
   }
 })(jQuery);

@@ -1,42 +1,6 @@
 $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
-.drop-layer {
-  align-items: center;
-  background: #ecedee;
-  color: $crm-wizard-font-color;
-  display: flex;
-  justify-content: center;
-  height: 180px;
-  min-width: 120px;
-  outline: 1px dashed #7a8084;
-  pointer-events: none;
-  position: absolute;
-  text-align: center;
-  transition: outline-offset .15s ease-in-out, background-color .15s linear;
-  top: 0;
-  width: 100%;
-
-  i {
-    color: $crm-wizard-secondary-color;
-    font-size: 25px;
-    margin-bottom: 15px;
-  }
-
-  &.is-dragover {
-    outline-offset: -10px;
-    outline-color: #c8dadf;
-    background-color: $light;
-  }
-}
-
 .mobile {
-  .drop-layer {
-    background: $brand-primary !important;
-    color: $light;
-    height: 40px !important;
-    outline: none;
-  }
-
   #onboarding-customization-page {
     #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
       height: auto !important;
@@ -79,6 +43,25 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       li {
         display: inline-block;
         float: none;
+
+        a {
+          color: $gray-darker !important;
+        }
+
+        &.active {
+          a {
+            color: $crm-wizard-secondary-color !important;
+          }
+        }
+
+        &.completed,
+        &.active {
+          a {
+            .crm_wizard__title__number {
+              color: $crm-wizard-secondary-color;
+            }
+          }
+        }
       }
     }
   }
@@ -228,7 +211,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       background-color: transparent !important;
     }
 
-    .civicrm-file-icon~.drop-layer {
+    .civicrm-file-icon~.drop-zone-overlay {
       display: none;
     }
 
@@ -264,6 +247,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   .webform-calendar,
   .mobile-webform-calendar {
     padding: 7px 10px;
+    -webkit-appearance: none;
 
     &+.input-group-addon {
       background-color: $crm_gray-light-alt;
@@ -347,7 +331,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     width: 140px;
   }
 
-  @media (max-width: $screen-lg-min) {
+  @media (max-width: $crm-onboarding-wizard-menu-responsive-breakpoint) {
     .modal-civihr-custom__section,
     .modal-civihr-custom__footer,
     .onboarding-wizard-container {
@@ -583,7 +567,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       background: $light;
     }
 
-    .drop-layer {
+    .drop-zone-overlay {
       background: $light;
       height: 140px;
       top: 25px;
@@ -643,7 +627,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .form-item-civihr-onboarding-welcome-text,
     .form-item-civihr-onboarding-intro-text {
-      height: 200px;
       margin-left: 100px;
       padding-top: 50px;
       width: 350px;

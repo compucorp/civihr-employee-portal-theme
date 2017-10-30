@@ -39,6 +39,18 @@ function civihr_default_theme_preprocess_webform_progressbar(&$variables) {
 }
 
 /**
+ * @param array $variables
+ */
+function civihr_default_theme_preprocess_webform_calendar(&$variables) {
+  $onboardingPages = ['onboarding-form'];
+
+  // use different template for calendar for onboarding form / user edit
+  if (in_array(request_path(), $onboardingPages)) {
+    $variables['theme_hook_suggestions'][] = 'webform_onboarding_calendar';
+  }
+}
+
+/**
  * Implements hook_theme().
  * This adds a new theme for the onboarding form progress bar. This theme is not
  * directly used, but is suggested conditionally in
@@ -58,6 +70,10 @@ function civihr_default_theme_theme() {
     'webform_onboarding_progressbar' => [
       'variables' => $defaultProgressBarVars,
       'template' => 'templates/contrib/webform-onboarding-progressbar',
+    ],
+    'webform_onboarding_calendar' => [
+      'variables' => $defaultProgressBarVars,
+      'template' => 'templates/node/webform-onboarding-calendar',
     ],
   ];
 }

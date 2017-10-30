@@ -73,7 +73,6 @@
 
 .chr_header__corner {
   background: $brand-primary;
-  color: $light;
   display: table;
   height: 100%;
   text-align: center;
@@ -86,6 +85,7 @@
   > .chr_header__logo {
     display: none;
     height: 50px;
+    text-align: center;
   }
 
   @media(min-width: $screen-md-max) {
@@ -103,7 +103,6 @@
   color: $light;
   font-size: 1.6rem;
   display: inline-block;
-  text-align: center;
 
   &:hover {
     color: rgba($light, 0.8);
@@ -183,7 +182,7 @@
 
     a {
       border: 0;
-      color: $light-pale;
+      color: inherit;
       margin: 0;
       padding: 0 15px;
 
@@ -198,19 +197,22 @@
       }
     }
 
-    > li {
-      border: none;
-      padding: 0;
-      float: left;
-    }
-
     .menu-link-hr-admin {
+      line-height: 33px;
       order: 9999;
+      padding: 12px 0 0 15px;
+      text-transform: uppercase;
+
+      > a {
+        border: 1px solid $light;
+        color: $light;
+      }
     }
   }
 }
 
 .chr_header__nav__toggle {
+  color: $light;
   cursor: pointer;
   display: table-cell;
   height: 100%;

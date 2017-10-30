@@ -45,7 +45,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
         float: none;
 
         a {
-          color: #4c4c5d !important;
+          color: $gray-darker !important;
         }
 
         &.active {

@@ -188,6 +188,38 @@
   }
 
   /**
+   * Get Date Values for the Desktop Version of the Datepicker
+   *
+   * @param {String} dateText - Changed Date
+   * @return {Object}
+   */
+  function getDesktopCalendarValues (dateText) {
+    var fullDate = dateText.split('-');
+
+    return {
+      date: parseInt(fullDate[0]),
+      month: parseInt(fullDate[1]),
+      year: parseInt(fullDate[2])
+    };
+  }
+
+  /**
+   * Get Date Values for the Mobile Version of the Datepicker
+   *
+   * @param {String} dateText - Changed Date
+   * @return {Object}
+   */
+  function getMobileCalendarValues (dateText) {
+    var fullDate = new Date(dateText);
+
+    return {
+      month: fullDate.getMonth() + 1,
+      date: fullDate.getDate(),
+      year: fullDate.getFullYear()
+    }
+  }
+
+  /**
    * Get values from Webform's SELECT input type calendar values and set it to
    * Native Datepicker
    */
@@ -252,23 +284,16 @@
   /**
    * Set values to Webform's SELECT input type calendar values from
    * Native Datepicker
+   *
+   * @param {String} dateText - Changed Date
    */
   function setWebformCalendarValues (dateText) {
-    var month, date, year, fullDate;
+    var dateValues = Drupal.behaviors.isMobile
+      ? getMobileCalendarValues(this.value)
+      : getDesktopCalendarValues(dateText);
 
-    if (Drupal.behaviors.isMobile) {
-      fullDate = new Date(this.value);
-      month = fullDate.getMonth() + 1;
-      date = fullDate.getDate();
-      year = fullDate.getFullYear();
-    } else {
-      fullDate = dateText.split('-');
-      date = fullDate[0];
-      month = fullDate[1];
-      year = fullDate[2];
-    }
-    $('#' + this.id + '-' + 'month').val(month).trigger('change');
-    $('#' + this.id + '-' + 'day').val(date).trigger('change');
-    $('#' + this.id + '-' + 'year').val(year).trigger('change');
+    $('#' + this.id + '-' + 'month').val(dateValues.month).trigger('change');
+    $('#' + this.id + '-' + 'day').val(dateValues.date).trigger('change');
+    $('#' + this.id + '-' + 'year').val(dateValues.year).trigger('change');
   }
 })(jQuery);

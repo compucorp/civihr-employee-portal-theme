@@ -603,6 +603,10 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
         margin: 0 5px;
       }
 
+      #edit-submit {
+        border: 0;
+      }
+
       #edit-cancel {
         background: $crm-wizard-primary-color;
         border: 0;

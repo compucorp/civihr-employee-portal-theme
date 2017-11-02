@@ -25,17 +25,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     display: none;
   }
 
-  #edit-submitted-add-another-emergency-contact,
-  #edit-submitted-do-you-have-any-dependants,
-  #edit-submitted-first-dependant-add-a-second-dependant,
-  #edit-submitted-second-dependant-add-a-third-dependant,
-  #edit-submitted-third-dependant-add-a-fourth-dependant,
-  #edit-submitted-fourth-dependant-add-a-fifth-dependant {
-    .form-type-radio {
-      width: 50%;
-    }
-  }
-
   .crm_wizard__title {
     .nav-pills {
       text-align: center;
@@ -91,10 +80,21 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .form-radios {
     background-color: transparent !important;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .form-type-radio {
+      display: table-cell;
+
+      label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
 
     > div {
       background-color: transparent !important;
-      float: left;
       padding: 8px 12px;
       border: 1px solid $crm_color-neutral;
       border-right: none;
@@ -170,10 +170,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   .onboarding_wizard_payroll_gender .webform-component-radios {
     .description {
       margin-bottom: 10px;
-    }
-
-    .form-type-radio {
-      width: 33.33%;
     }
   }
 
@@ -600,7 +596,22 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .form-actions {
       padding-bottom: 20px;
-      padding-right: 20px;
+      padding-right: 15px;
+
+      input {
+        margin: 0 5px;
+      }
+
+      #edit-cancel {
+        background: $crm-wizard-primary-color;
+        border: 0;
+        color: $light;
+
+        &:focus {
+          background: $crm-wizard-primary-color;
+          color: $light;
+        }
+      }
     }
 
     .form-managed-file {

@@ -185,7 +185,7 @@
       border: 0;
       color: inherit;
       margin: 0;
-      padding: 0 15px;
+      padding: 0 10px;
 
       &:hover,
       &:focus {
@@ -208,6 +208,12 @@
         border: 1px solid $light;
         color: $light;
       }
+    }
+  }
+
+  @media(min-width: $crm-screen-lg-max) {
+    a {
+      padding: 0 15px;
     }
   }
 }

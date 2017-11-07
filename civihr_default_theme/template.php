@@ -729,9 +729,10 @@ function _add_unique_class_to_menu_link(&$link) {
  */
 function _hide_admin_menu_link_to_basic_users(&$link) {
   $adminAccess = user_access("administer CiviCRM");
-  $identifier = $link['#localized_options']['identifier'];
+  $localOptions = $link['#localized_options'];
+  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_civihr-admin:civicrm';
 
-  if ($identifier == 'main-menu_civihr-admin:civicrm' && !$adminAccess) {
+  if ($isAdminLink && !$adminAccess) {
     $link['#attributes']['class'][] = 'hidden';
   }
 }

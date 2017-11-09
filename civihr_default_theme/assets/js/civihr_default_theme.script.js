@@ -194,7 +194,7 @@
    * @return {Object}
    */
   function getDesktopCalendarValues (dateText) {
-    var fullDate = dateText.split('-');
+    var fullDate = dateText.split('/');
 
     return {
       date: parseInt(fullDate[0]),

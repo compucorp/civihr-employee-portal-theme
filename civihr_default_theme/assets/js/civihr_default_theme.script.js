@@ -296,4 +296,8 @@
     $('#' + this.id + '-' + 'day').val(dateValues.date).trigger('change');
     $('#' + this.id + '-' + 'year').val(dateValues.year).trigger('change');
   }
+
+  Drupal.civihr_theme.deleteEmergencyContact =  function(id) {
+    CRM.api3('contact', 'deleteemergencycontact', {'id':id});
+  }
 })(jQuery);

@@ -87,6 +87,10 @@
     display: none;
     height: 50px;
     text-align: center;
+
+    &:hover {
+      color: rgba($light, 0.8);
+    }
   }
 
   @media(min-width: $screen-md-max) {

@@ -112,6 +112,7 @@
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/date-picker";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/time-amount-picker";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen";
 
@@ -131,5 +132,3 @@
 
 // Temporary styles
 @import "base/task-assignments-modal-temp";
-
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/date-picker";

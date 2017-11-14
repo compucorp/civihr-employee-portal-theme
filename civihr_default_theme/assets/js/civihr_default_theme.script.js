@@ -30,6 +30,15 @@
   Drupal.civihr_theme = Drupal.civihr_theme || {};
 
   /**
+   * Delete Emergency contacts
+   *
+   * @param {String} id
+   */
+  Drupal.civihr_theme.deleteEmergencyContact = function (id) {
+    CRM.api3('contact', 'deleteemergencycontact', { 'id': id });
+  };
+
+  /**
    * Do the stuff related to On boarding wizard
    */
   Drupal.civihr_theme.onBoardingWizard = function () {
@@ -295,9 +304,5 @@
     $('#' + this.id + '-' + 'month').val(dateValues.month).trigger('change');
     $('#' + this.id + '-' + 'day').val(dateValues.date).trigger('change');
     $('#' + this.id + '-' + 'year').val(dateValues.year).trigger('change');
-  }
-
-  Drupal.civihr_theme.deleteEmergencyContact =  function(id) {
-    CRM.api3('contact', 'deleteemergencycontact', {'id':id});
   }
 })(jQuery);

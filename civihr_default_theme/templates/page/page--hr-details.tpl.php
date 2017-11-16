@@ -9,7 +9,7 @@ $emergencyContactsView = views_embed_view('emergency_contacts', 'non_dependant_e
   <?php require_once __DIR__ . '/page_body.tpl.php'; ?>
 
   <div class="container region region-content">
-    <h2>Emergency Contacts</h2>';
+    <h2>Emergency Contacts</h2>
     <?php print $emergencyContactsView; ?>
   </div>
 

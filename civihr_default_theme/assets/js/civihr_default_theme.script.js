@@ -30,12 +30,13 @@
   Drupal.civihr_theme = Drupal.civihr_theme || {};
 
   /**
-   * Delete Emergency contacts
+   * Delete Emergency contacts and refresh the page
    *
    * @param {String} id
    */
-  Drupal.civihr_theme.deleteEmergencyContact = function (id) {
+  Drupal.civihr_theme.deleteEmergencyContactAndRefresh = function (id) {
     CRM.api3('contact', 'deleteemergencycontact', { 'id': id });
+    location.reload();
   };
 
   /**

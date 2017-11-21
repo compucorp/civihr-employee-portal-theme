@@ -204,7 +204,7 @@
    * @return {Object}
    */
   function getDesktopCalendarValues (dateText) {
-    var fullDate = dateText.split('-');
+    var fullDate = dateText.split('/');
 
     return {
       date: parseInt(fullDate[0]),
@@ -279,6 +279,8 @@
     var ssnCheckbox = $('.onboarding_wizard_payroll_ssin_checkbox input.form-checkbox');
     var ssnLabel = $('.onboarding_wizard_payroll_ssin_textfield');
 
+    // set initial state of the label, based on checkbox's value
+    ssnCheckbox.is(':checked') ? ssnLabel.hide() : ssnLabel.show();
     ssnCheckbox.click(function () {
       ssnLabel.toggle();
     });

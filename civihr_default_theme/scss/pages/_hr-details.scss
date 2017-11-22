@@ -11,6 +11,16 @@
       padding: 0;
     }
   }
+
+  .chr_panel--my-details__data-group:last-child {
+    margin-top: 40px;
+  }
+
+  #modal-content {
+    .panel-body {
+      background: transparent;
+    }
+  }
 }
 
 
@@ -49,12 +59,5 @@
       margin-left: 0;
       margin-top: 0;
     }
-  }
-}
-
-.webform-client-form-11,
-.webform-client-form-12 {
-  .panel-body {
-    background: transparent;
   }
 }

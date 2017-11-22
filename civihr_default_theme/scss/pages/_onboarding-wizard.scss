@@ -328,6 +328,10 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     width: 140px;
   }
 
+  #messages {
+    padding: 0;
+  }
+  
   @media (max-width: $crm-onboarding-wizard-menu-responsive-breakpoint) {
     .modal-civihr-custom__section,
     .modal-civihr-custom__footer,

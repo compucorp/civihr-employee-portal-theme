@@ -12,3 +12,49 @@
     }
   }
 }
+
+
+.chr_hr_details-emergency_contacts,
+.chr_hr_details-dependents {
+  .view {
+    margin: 0;
+    padding: 0;
+  }
+
+  .view-content {
+    overflow: auto;
+  }
+
+  .view-empty {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .chr_hr_details-add_contacts {
+    margin-left: 15px;
+    margin-top: -15px;
+  }
+
+  .chr_hr_details-header {
+    display: inline-block;
+  }
+
+  @media (max-width: $screen-sm-min) {
+    .chr_hr_details-header {
+      display: block;
+    }
+
+    .chr_hr_details-add_contacts {
+      margin-bottom: 30px;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+.webform-client-form-11,
+.webform-client-form-12 {
+  .panel-body {
+    background: transparent;
+  }
+}

@@ -27,7 +27,6 @@
 .chr_hr_details-emergency_contacts,
 .chr_hr_details-dependents {
   .view {
-    background: transparent;
     margin: 0;
     padding: 0;
   }
@@ -39,6 +38,10 @@
   .view-empty {
     padding: 15px;
     text-align: center;
+  }
+
+  .views-table {
+    margin-bottom: 0;
   }
 
   .chr_hr_details-add_contacts {

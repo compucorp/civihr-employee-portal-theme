@@ -113,9 +113,8 @@
     });
   };
 
-  Drupal.civihr_theme.initMobileNav = function () {
+  Drupal.civihr_theme.initMobileNav = function() {
     var $header = $('.chr_header');
-    var $mobileLogo = $('.chr_header__brand.chr_brand.chr_header__home-menu');
     var $nav = $header.find('.chr_header__nav');
 
     var toggleMenu = function () {
@@ -123,7 +122,6 @@
     };
 
     $header.on('click', '.chr_header__nav__toggle', toggleMenu);
-    $mobileLogo.on('click', toggleMenu);
   };
 
   Drupal.civihr_theme.applyMatchHeight = function () {

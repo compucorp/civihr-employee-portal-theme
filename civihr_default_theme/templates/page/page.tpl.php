@@ -12,42 +12,24 @@
  * NOTE: The #outer-wrapper element is for the mobile menu to have a way
  * both to stick at the top of the page and to be as tall as the content (necessary because of the Drupal toolbar)
  */
+
+$includesDir = __DIR__ . '/../../includes/';
+
 ?>
 
 <div id="outer-wrapper">
-  <header class="chr_header">
-    <div class="chr_header__corner">
-      <div class="chr_header__nav__toggle">
-        <i class="fa fa-2x fa-navicon"></i>
-      </div>
-      <a href="/dashboard" class="chr_header__logo">
-        <span class="chr_logo"></span>
-      </a>
-    </div>
-    <div class="chr_header__logo">
-      <span class="chr_logo chr_logo--full"><i></i></span>
-    </div>
-    <nav class="chr_header__nav">
-      <?php if ($main_menu): ?>
-        <ul class="chr_header__nav__menu">
-          <?php print render($main_menu); ?>
-        </ul>
-      <?php endif; ?>
-    </nav>
-    <?php
-      if ($logged_in) {
-        print((new CRM_HRCore_UserMenuMarkup())->getMarkup());
-      }
-    ?>
-    <?php if (!empty($cog_menu_markup)) { ?>
-    <div class="chr_header__settings-menu">
-      <i class="fa fa-cog" aria-hidden="true"></i>
-      <ul class="chr_header__sub-menu">
-        <?php print $cog_menu_markup; ?>
-      </ul>
-    </div>
-    <?php } ?>
-  </header>
+
+  <?php
+  $includesDir = __DIR__ . '/../../includes/';
+  // For some pages we don't want to show the user menu
+  $headerStyle = isset($page['header_style']) ? $page['header_style'] : NULL;
+
+  if ($headerStyle === 'basic') {
+  require_once $includesDir . 'header_basic.inc';
+  } else {
+  require_once $includesDir . 'header.inc';
+  }
+  ?>
 
   <div id="main-wrapper">
     <div id="main" class="main">

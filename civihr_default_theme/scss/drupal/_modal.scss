@@ -38,6 +38,12 @@ body.modal-open {
       height: auto !important;
       margin: 40px auto !important;
     }
+
+    @media (max-width: $screen-sm-min) {
+      .modal-dialog {
+        margin: auto !important;
+      }
+    }
   }
 }
 

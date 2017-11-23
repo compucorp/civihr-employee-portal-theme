@@ -118,6 +118,7 @@ $nav-tabs-justified-active-link-border-color: $light !default;
 
 $screen-sm-max:     767px !default;
 $crm-screen-lg-max: 1300px;
+$crm-onboarding-wizard-menu-responsive-breakpoint:  1170px;
 
 
 // Modals
@@ -187,3 +188,12 @@ $chr-user-menu-dropdown-username-color: $light;
 $chr-user-menu-dropdown-link-color: $light-pale;
 $chr-user-menu-dropdown-link-color-hover: $light;
 $chr-user-menu-dropdown-link-bg-hover: $gray;
+
+//== Wizard
+//
+//##
+$crm-wizard-font-color: #404454;
+$crm-wizard-primary-color: #767b8e;
+$crm-wizard-secondary-color : #42afcb;
+$crm-wizard-active-bg-color: #E9EDF3;
+$crm-wizard-active-font-color: $crm-wizard-secondary-color;

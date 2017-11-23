@@ -1,0 +1,724 @@
+$carousel-box-shadow-color: rgba(#3f3c55,0.3);
+
+.mobile {
+  #onboarding-customization-page {
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+      height: auto !important;
+
+      input.form-file {
+        height: 40px !important;
+      }
+    }
+  }
+
+  .onboarding-wizard-page {
+    .onboarding_wizard_profile_pic_upload_image {
+      input.form-file {
+        height: 40px !important;
+      }
+    }
+  }
+}
+
+.onboarding-wizard-page {
+  .crm_wizard__mobile {
+    display: none;
+  }
+
+  .crm_wizard__title {
+    .nav-pills {
+      text-align: center;
+
+      li {
+        display: inline-block;
+        float: none;
+
+        a {
+          color: $gray-darker !important;
+          padding: 15px 5px 15px 15px;
+        }
+
+        &.active {
+          a {
+            color: $crm-wizard-secondary-color !important;
+          }
+        }
+
+        &.completed,
+        &.active {
+          a {
+            .crm_wizard__title__number {
+              color: $crm-wizard-secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form-group {
+    display: inline-block;
+    width: 100%;
+
+    > label {
+      color: $crm-wizard-font-color;
+      display: block;
+      font-size: 13px;
+      padding: 0;
+      width: 100%;
+    }
+
+    > div {
+      padding: 0;
+      width: 100%;
+
+      div.form-item {
+        background-color: $light;
+        margin: 0;
+      }
+    }
+  }
+
+  .form-radios {
+    background-color: transparent !important;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .form-type-radio {
+      display: table-cell;
+
+      label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    > div {
+      background-color: transparent !important;
+      padding: 8px 12px;
+      border: 1px solid $crm_color-neutral;
+      border-right: none;
+      margin: 0 !important;
+    }
+
+    > div:last-child {
+      border-right: 1px solid $crm_color-neutral;
+    }
+
+    > div.checked {
+      background-color: $crm-wizard-secondary-color !important;
+      color: $light;
+      border-color: transparent;
+    }
+
+    input[type='radio']:checked:after {
+      border: 4px solid $light;
+      border-radius: 15px;
+      background-color: #000;
+      content: '';
+      display: inline-block;
+      height: 15px;
+      position: relative;
+      visibility: visible;
+      width: 15px;
+    }
+  }
+
+  .fieldset-legend {
+    &:before {
+      display: none !important;
+    }
+  }
+
+  .modal-civihr-custom__section,
+  .onboarding-wizard-container {
+    margin: -25px auto 25px auto;
+    width: 475px;
+    padding: 90px 0 0 0;
+  }
+
+  .onboarding-wizard-container {
+    .main-container {
+      margin-top: 65px;
+    }
+
+    .form-type-password {
+      margin: 0;
+    }
+
+    .form-item {
+      input {
+        width: 100%;
+      }
+    }
+
+    .password-strength {
+      margin-bottom: 15px;
+    }
+
+    .password-suggestions {
+      width: 100%;
+    }
+  }
+
+  .modal-civihr-custom__footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 475px;
+  }
+
+  .onboarding_wizard_payroll_gender .webform-component-radios {
+    .description {
+      margin-bottom: 10px;
+    }
+  }
+
+  .onboarding_wizard_payroll_ssin_checkbox {
+    label {
+      padding-left: 20px !important;
+    }
+
+    .webform-component-checkboxes {
+      background-color: transparent !important;
+      margin-bottom: -18px !important;
+      position: relative;
+      top: -23px;
+      z-index: 2;
+
+      .form-type-checkbox {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  .onboarding_wizard_profile_pic_upload_image {
+    label {
+      display: none;
+    }
+
+    input.form-file {
+      height: 180px;
+      margin-bottom: 15px;
+      min-width: 120px;
+      width: 100%;
+    }
+
+    .form-item {
+      background-color: transparent !important;
+    }
+
+    .civicrm-file-icon~.drop-zone-overlay {
+      display: none;
+    }
+
+    .civicrm-remove-file {
+      background: $light;
+      border: 1px solid #ccc;
+      padding: .7rem 1.1rem;
+    }
+  }
+
+  .page-header {
+    display: none;
+  }
+
+  .webform-next,
+  .webform-submit,
+  #edit-submit {
+    background: $crm-wizard-secondary-color;
+    border: 0;
+    color: $light;
+
+    &:focus {
+      background: $crm-wizard-secondary-color;
+      color: $light;
+    }
+  }
+
+  #edit-submit {
+    text-transform: uppercase;
+    width: 100px;
+  }
+
+  .webform-calendar,
+  .mobile-webform-calendar {
+    padding: 7px 10px;
+    -webkit-appearance: none;
+
+    &+.input-group-addon {
+      background-color: $crm_gray-light-alt;
+      border: 1px solid $crm-color-neutral;
+      color: $crm-wizard-font-color;
+      display: inline-block;
+      height: 100%;
+      line-height: 20px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 40px;
+    }
+  }
+
+  .webform-component-fieldset {
+    box-shadow: none;
+
+    .fieldset-wrapper {
+      background: transparent;
+    }
+  }
+
+  .webform-component-markup {
+    background: transparent !important;
+  }
+
+  .onboarding-fieldset-title,
+  #onboarding-welcome-message {
+    color: $crm-wizard-font-color;
+    margin-top: -15px;
+    font-size: 36px;
+    font-weight: $headings-font-weight;
+    text-align: center;
+  }
+
+  .webform-component-radios {
+    background-color: transparent !important;
+  }
+
+  .webform-container-inline.webform-datepicker div.form-item.form-type-select {
+    display: none;
+  }
+
+  .webform-previous,
+  #edit-cancel {
+    background: $crm-wizard-primary-color;
+    border: 0;
+    color: $light;
+    float: left;
+
+    &:focus {
+      background: $crm-wizard-primary-color;
+      color: $light;
+    }
+  }
+
+  .webform-component-file {
+    background-color: transparent;
+  }
+
+  .form-managed-file {
+    .description {
+      margin-top: 15px;
+    }
+
+    .form-submit {
+      margin-top: 15px;
+    }
+
+    input[type='submit'] {
+      float: right;
+    }
+  }
+
+  .onboarding-company-logo {
+    display: block;
+    margin: 77px auto;
+    width: 140px;
+  }
+
+  #messages {
+    padding: 0;
+  }
+  
+  @media (max-width: $crm-onboarding-wizard-menu-responsive-breakpoint) {
+    .modal-civihr-custom__section,
+    .modal-civihr-custom__footer,
+    .onboarding-wizard-container {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+    }
+
+    .crm_wizard__title {
+      .nav-pills {
+        display: none;
+      }
+
+      .crm_wizard__mobile {
+        display: block;
+        padding-top: 15px;
+        text-align: center;
+
+        .crm_wizard__progress {
+          background-color: $crm-wizard-active-font-color;
+          height: 2px;
+          margin-top: 15px;
+        }
+
+        .crm_wizard__progress-title {
+          color: $crm-wizard-active-font-color;
+          font-weight: 700;
+        }
+
+        .crm_wizard__current-step {
+          color: $crm-wizard-font-color;
+          font-weight: 300;
+        }
+
+        .crm_wizard__total-step {
+          color: $crm-color-neutral;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.page-features-in-civihr {
+  .onboarding_wizard_features_get_started {
+    background: $crm-wizard-secondary-color;
+    display: block;
+    margin: 40px auto 0 auto;
+    text-transform: uppercase;
+    width: 200px;
+  }
+
+  .page-header {
+    font-weight: 700;
+    margin-top: 80px;
+    text-align: center;
+
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  .view-id-onboarding_slideshow {
+    background: transparent;
+  }
+
+  .views-slideshow-cycle-main-frame {
+    margin: 0 30px;
+    height: 303px;
+
+    .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+
+      img {
+        height: 270px !important;
+        width: 458px !important;
+      }
+
+      .views-slideshow-cycle-main-frame-row-item {
+        margin: 0 65px;
+        padding: 12px;
+        position: relative;
+
+        .views-field-field-slideshow-image {
+          box-shadow: 0 10px 20px 0 $carousel-box-shadow-color, 0 -2px 15px 0 $carousel-box-shadow-color;
+          width: 458px;
+        }
+
+        .views-field-title {
+          color: $crm-wizard-font-color;
+          font-size: 26px;
+          left: 458px;
+          position: absolute;
+          text-align: center;
+          top: 100px;
+          width: calc( 100% - 458px);
+        }
+
+        .views-field-field-description {
+          color: $crm-wizard-primary-color;
+          left: 458px;
+          padding: 0 40px;
+          position: absolute;
+          text-align: center;
+          top: 150px;
+          width: calc( 100% - 458px);
+        }
+      }
+    }
+  }
+
+  .views-slideshow-pager-fields {
+    text-align: center;
+    margin-top: 40px;
+
+    .views-content-title {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      background: $crm-darker-grayblue;
+      border-radius: 50%;
+    }
+
+    .active {
+      .views-content-title {
+        background: $crm-wizard-active-font-color;
+      }
+    }
+  }
+
+  .views-slideshow-cycle-processed {
+    position: relative;
+
+    .views-slideshow-controls-text-pause {
+      display: none;
+    }
+
+    .views-slideshow-controls-text-previous,
+    .views-slideshow-controls-text-next {
+      font-size: 35px;
+      position: absolute;
+      top: 140px;
+
+      a {
+        color: #c2cfd7;
+      }
+    }
+
+    .views-slideshow-controls-text-next {
+      right: 0;
+    }
+  }
+
+  @media (max-width: $screen-lg-min) {
+    .views-slideshow-controls-text-previous,
+    .views-slideshow-controls-text-next {
+      display: none;
+    }
+
+    .views-slideshow-cycle-main-frame {
+      margin: 0;
+      height: 500px;
+
+      .views-slideshow-cycle-main-frame-row {
+        .views-slideshow-cycle-main-frame-row-item {
+          margin: 0;
+
+          .views-field-field-slideshow-image {
+            width: 100% !important;
+
+            img {
+              height: 350px !important;
+              width: 100% !important;
+            }
+          }
+
+          .views-field-title {
+            left: 0;
+            top: 390px;
+            width: 100%;
+          }
+
+          .views-field-field-description {
+            left: 0;
+            top: 450px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-min) {
+    .views-slideshow-cycle-main-frame {
+      height: 400px;
+
+      .views-slideshow-cycle-main-frame-row {
+        .views-slideshow-cycle-main-frame-row-item {
+          .views-field-field-slideshow-image {
+            img {
+              height: 200px !important;
+            }
+          }
+
+          .views-field-title {
+            top: 240px;
+          }
+
+          .views-field-field-description {
+            top: 290px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-customize-onboarding-wizard {
+  #onboarding-customization-page {
+    position: relative;
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    hr {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .region {
+      background: $light;
+    }
+
+    .drop-zone-overlay {
+      background: $light;
+      height: 140px;
+      top: 25px;
+
+      i {
+        color: inherit;
+      }
+    }
+
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+      input.form-file {
+        height: 140px;
+        margin-bottom: 15px;
+        min-width: 120px;
+        width: 100%;
+      }
+
+      .help-block {
+        display: none;
+      }
+    }
+
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+    .form-item-civihr-onboarding-carousel-options {
+      height: 250px;
+      margin-left: 100px;
+      padding-top: 50px;
+      width: 350px;
+    }
+
+    .form-actions {
+      padding-bottom: 20px;
+      padding-right: 15px;
+
+      input {
+        margin: 0 5px;
+      }
+
+      #edit-submit {
+        border: 0;
+      }
+
+      #edit-cancel {
+        background: $crm-wizard-primary-color;
+        border: 0;
+        color: $light;
+
+        &:focus {
+          background: $crm-wizard-primary-color;
+          color: $light;
+        }
+      }
+    }
+
+    .form-managed-file {
+      input[type='submit'],
+      .ajax-progress {
+        float: right;
+      }
+    }
+
+    .form-item-civihr-onboarding-welcome-text,
+    .form-item-civihr-onboarding-carousel-options,
+    .form-item-civihr-onboarding-intro-text {
+      margin-bottom: 100px;
+    }
+
+    .form-item-civihr-onboarding-carousel-options {
+      margin-bottom: 60px;
+
+      .form-type-checkbox {
+        margin-bottom: 10px !important;
+        height: 20px;
+      }
+    }
+
+    .form-item-civihr-onboarding-welcome-text,
+    .form-item-civihr-onboarding-intro-text {
+      margin-left: 100px;
+      padding-top: 50px;
+      width: 350px;
+
+      .help-block {
+        display: none;
+      }
+
+      .form-textarea-wrapper {
+        height: 100%;
+
+        textarea {
+          height: 100%;
+          resize: none;
+        }
+      }
+    }
+
+    .onboarding-customize-logo {
+      width: 440px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 75px;
+    }
+
+    .onboarding-customize-features {
+      width: 440px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 50px;
+    }
+
+    .onboarding-customize-welcome {
+      width: 440px;
+      margin-right: 90px;
+      float: right;
+      margin-top: 45px;
+    }
+
+    @media (max-width: $screen-lg-min) {
+      #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+      .form-item-civihr-onboarding-carousel-options,
+      .form-item-civihr-onboarding-welcome-text,
+      .form-item-civihr-onboarding-intro-text {
+        margin: 20px;
+        padding-top: 0;
+        width: auto;
+      }
+
+      .onboarding-customize-logo,
+      .onboarding-customize-features,
+      .onboarding-customize-welcome {
+        float: none;
+        margin: 20px;
+        width: calc( 100% - 40px);
+      }
+
+      .form-item-civihr-onboarding-welcome-text,
+      .form-item-civihr-onboarding-intro-text {
+        margin-bottom: 60px;
+      }
+
+      .form-item-civihr-onboarding-carousel-options {
+        height: auto;
+        margin-bottom: 0;
+
+        .form-type-checkbox {
+          border: 1px solid #ececed;
+          height: auto;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

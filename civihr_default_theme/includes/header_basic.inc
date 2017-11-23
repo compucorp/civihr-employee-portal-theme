@@ -1,25 +1,26 @@
 <header class="chr_header">
-  <div class="chr_header__brand chr_brand chr_header__home-menu">
-    <span class="chr_brand__icon icon-logo"></span>
-    <span class="chr_brand__name"><span><?php print t("CiviHR"); ?></span></span>
+  <div class="chr_header__corner">
+    <div class="chr_header__nav__toggle">
+      <i class="fa fa-2x fa-navicon"></i>
+    </div>
+    <a href="/dashboard" class="chr_header__logo">
+      <span class="chr_logo"></span>
+    </a>
   </div>
-  <?php if ($logged_in) { ?>
-    <div class="chr_header__user-menu">
-      <div class="chr_header__user-menu__data">
-        <span class="chr_header__user-menu__name"><?php print $user_name; ?></span>
-        <div class="chr_profile-card">
-          <div class="chr_profile-card__picture chr_profile-card__picture--small">
-            <?php if ($image_url != '') { ?>
-              <img src="<?php print $image_url; ?>" alt="<?php print htmlspecialchars($user_name); ?>">
-            <?php } ?>
-          </div>
-        </div>
-        <i class="chr_header__user-menu__arrow fa fa-caret-down"></i>
-      </div>
+  <div class="chr_header__logo">
+    <span class="chr_logo chr_logo--full"><i></i></span>
+  </div>
+
+  <?php
+  if ($logged_in) {
+    print((new CRM_HRCore_UserMenuMarkup())->getMarkup());
+  }
+  ?>
+  <?php if (!empty($cog_menu_markup)) { ?>
+    <div class="chr_header__settings-menu">
+      <i class="fa fa-cog" aria-hidden="true"></i>
       <ul class="chr_header__sub-menu">
-        <li><?php print $edit_account; ?></li>
-        <li><?php print $user_guide_link; ?></li>
-        <li><?php print $logout_link; ?></li>
+        <?php print $cog_menu_markup; ?>
       </ul>
     </div>
   <?php } ?>

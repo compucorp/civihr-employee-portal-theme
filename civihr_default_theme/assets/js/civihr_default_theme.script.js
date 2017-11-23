@@ -28,15 +28,13 @@
 
   Drupal.civihr_theme.initMobileNav = function() {
     $header = $('.chr_header');
-    $mobileLogo = $('.chr_header__brand.chr_brand.chr_header__home-menu');
     $nav = $header.find('.chr_header__nav');
 
     var toggleMenu = function () {
       $nav.toggleClass('is-open');
     };
-    
+
     $header.on('click', '.chr_header__nav__toggle', toggleMenu);
-    $mobileLogo.on('click', toggleMenu);
   }
 
   Drupal.civihr_theme.applyMatchHeight = function() {

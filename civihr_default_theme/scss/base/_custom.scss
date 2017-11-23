@@ -1050,22 +1050,6 @@ form {
     }
 }
 
-/* Page: My details */
-
-.page-hr-details {
-    .civihr-employee-portal-my-details-block {
-        background: $light;
-        padding: 20px;
-        margin: 0 15px;
-
-        .view {
-            margin: 0;
-            padding: 0;
-        }
-    }
-}
-
-
 /* Page: HR Vacancies */
 .content {
     & > .view-hr-vacancies {

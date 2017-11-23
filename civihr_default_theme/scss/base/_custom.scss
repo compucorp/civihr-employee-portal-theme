@@ -1196,3 +1196,8 @@ form {
     }
   }
 }
+
+// Hides the text-angular secret input field
+.ta-hidden-input {
+  display: none;
+}

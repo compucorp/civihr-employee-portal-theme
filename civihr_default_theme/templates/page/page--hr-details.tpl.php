@@ -28,5 +28,5 @@ $emergencyContactsView = views_embed_view('emergency_contacts', 'non_dependant_e
     <?php print $dependantsView; ?>
   </div>
 
-  <? require_once $includesDir . 'footer.inc' ?>
+  <?php require_once $includesDir . 'footer.inc' ?>
 </div>

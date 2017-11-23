@@ -8,21 +8,23 @@
   height: $crm-header-height;
   line-height: $crm-header-height;
 
-  > .chr_header__brand {
-    left: 0;
-    position: absolute;
-    margin: 0 auto;
-    right: 0;
-    width: 25%;
-  }
-
   > .chr_header__corner {
     float: left;
   }
 
+  > .chr_header__logo {
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 25%;
+  }
+
   > .chr_header__nav {
-    height: 100%;
+    height: auto;
     left: -100%;
+    min-height: 100%;
     position: absolute;
     top: $crm-header-height;
     width: 100%;
@@ -34,70 +36,65 @@
     }
   }
 
-  > .chr_header__user-menu {
+  > .chr_user-menu {
     float: right;
   }
 
+  .menu-link-home {
+    display: none;
+  }
+
   @media(min-width: $screen-md-max) {
-    > .chr_header__brand {
+    > .chr_header__logo {
       display: none;
     }
 
     > .chr_header__nav {
       float: left;
       height: auto;
+      margin-left: 10px;
+      min-height: auto;
       position: static;
       width: auto;
     }
   }
 
-  @media(min-width: $screen-md-max) {
-    padding-right: 30px;
-  }
-
-  //Hide Menu link as part of SSP
-  .menu-link-home,
-  .menu-link-civihr-admin,
-  .menu-link-civihr-ssp {
-    display: none;
-  }
-
-  @media (max-width: 767px) {
-    //Show links in Mobile view and different background
-    .menu-link-civihr-admin,
-    .menu-link-civihr-ssp {
-      display: block;
+  @media (max-width: $screen-sm-max) {
+    .menu-link-hr-admin,
+    .menu-link-home {
       background-color: $gray-light;
+      display: block;
     }
 
-    .menu-link-civihr-ssp > a {
+    .menu-link-home > a {
       border-bottom: none !important;
     }
   }
 }
 
-.chr_header__brand {
-  color: $light;
-}
-
 .chr_header__corner {
   background: $brand-primary;
-  color: $light;
   display: table;
   height: 100%;
   text-align: center;
-  width: 90px;
+  width: 60px;
 
   &:hover {
     color: rgba($light, 0.8);
   }
 
-  > .chr_header__corner__brand {
+  > .chr_header__logo {
     display: none;
+    height: 50px;
+    text-align: center;
+
+    &:hover {
+      color: rgba($light, 0.8);
+    }
   }
 
   @media(min-width: $screen-md-max) {
-    > .chr_header__corner__brand {
+    > .chr_header__logo {
       display: block;
     }
 
@@ -107,10 +104,15 @@
   }
 }
 
+.chr_header__logo {
+  color: $light;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
 .chr_header__nav {
   background: #ffffff;
   font-size: 1.385em;
-  padding: 5px 25px;
   z-index: 99;
 
   @media(min-width: $screen-md-max) {
@@ -123,8 +125,11 @@
 .chr_header__nav__menu {
 
   a {
+    border-bottom: 1px solid $crm-grizzly;
     color: $gray-darker;
     display: block;
+    margin: 0 25px;
+    padding: 0 20px;
 
     &.active,
     &:hover,
@@ -132,39 +137,89 @@
       color: $brand-primary;
       outline: none;
     }
+
+    // The fa classes are applied by Drupal to the anchors directly,
+    // so the style on the anchor needs to be resetted and the style
+    // of the actual icon needs to be "confirmed" again
+    // (see: https://www.dannyenglander.com/blog/drupal-theming-adding-font-awesome-icons-menu-items)
+    &.fa {
+      font-family: inherit;
+      line-height: inherit;
+      -webkit-font-smoothing: inherit;
+      -moz-osx-font-smoothing: inherit;
+
+      &:before {
+        @include fa-icon();
+        margin-right: 5px;
+      }
+    }
   }
 
   > li {
-    border-bottom: 1px solid $gray-light;
-    padding-left: 20px;
+    position: relative;
+
+    &.active {
+      &:after {
+        content: '';
+        border: 2px solid $brand-primary;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+    }
 
     &:last-child {
-      border: none;
+      > a {
+        border: none;
+      }
     }
   }
 
   @media(min-width: $screen-md-max) {
-    a {
-      color: inherit;
-      padding: 0 15px;
+    display: flex;
 
-      &.active,
+    a {
+      border: 0;
+      color: inherit;
+      margin: 0;
+      padding: 0 10px;
+
       &:hover,
       &:focus {
         background: $gray;
-        color: $light;
+        color: $light !important;
+      }
+
+      &.active {
+        color: inherit;
       }
     }
 
-    > li {
-      border: none;
-      padding: 0;
-      float: left;
+    .menu-link-hr-admin {
+      line-height: 33px;
+      order: 9999;
+      padding: 12px 0 0 15px;
+      text-transform: uppercase;
+
+      > a {
+        border: 1px solid $light;
+        color: $light;
+      }
+    }
+  }
+
+  @media(min-width: $crm-screen-lg-max) {
+    a {
+      padding: 0 15px;
     }
   }
 }
 
 .chr_header__nav__toggle {
+  color: $light;
   cursor: pointer;
   display: table-cell;
   height: 100%;
@@ -173,57 +228,15 @@
 }
 
 
-/**
- * User menu in main header <nav>
- */
-.chr_header__user-menu {
-  color: $light-pale;
-  cursor: default;
-  padding: 0 10px;
-  position: relative;
-
-  &:hover {
-    background: $crm-gray-darker-alt;
-    color: $light;
-
-    > .chr_header__sub-menu {
-      display: block;
-    }
-  }
-
-  .chr_header__sub-menu {
-    right: 0;
-  }
-}
-
-.chr_header__user-menu__data {
-  > .chr_header__user-menu__name {
-    float: left;
-  }
-
-  > .chr_profile-card {
-    margin: -2px 8px 0 8px; // To improve, the vertical margin is just to vertically align the card
-    vertical-align: top;
-  }
-
-  @media(max-width: $crm-menu-responsive-breakpoint) {
-    > .chr_header__user-menu__arrow,
-    > .chr_header__user-menu__name {
-      display: none;
-    }
-  }
-}
-
 .chr_header__settings-menu {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  text-align: center;
   float: right;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 50px;
 
   &:hover {
-    background-color: $crm-gray-darker-alt;
+    background-color: $gray;
 
     > .chr_header__sub-menu {
       display: block;
@@ -231,27 +244,11 @@
   }
 
   > .fa-cog {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .chr_header__sub-menu {
     right: 0;
-  }
-}
-
-.chr_header__home-menu {
-  color: $light;
-
-  &:hover {
-    color: rgba($light, 0.8);
-
-    > .chr_header__sub-menu {
-      display: block;
-    }
-  }
-
-  .chr_header__sub-menu {
-    left: 0;
   }
 }
 
@@ -273,7 +270,7 @@
     white-space: nowrap;
 
     &:hover {
-      background: $crm-brand-secondary;
+      background: $gray;
       color: $light;
     }
 
@@ -283,58 +280,19 @@
   }
 }
 
-//CiviHR menu in small devices
-.chr_header__brand .chr_header__home-sub-menu {
-  right: 0;
-  width: 120px;
-  margin: auto;
-}
+.chr_header__sub-menu__separator {
 
-//Hide Menu link as part of SSP
-.menu-link-home,
-.menu-link-civihr-admin,
-.menu-link-civihr-ssp {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  //Show links in Mobile view and different background
-  .menu-link-civihr-admin,
-  .menu-link-civihr-ssp {
+  &:after {
+    border-top: 1px solid $gray-darker;
+    content: '';
     display: block;
-    background-color: $gray-light;
-  }
-
-  .menu-link-civihr-ssp > a {
-    border-bottom: none !important;
-  }
-
-  .chr_header__nav__menu > li {
-    border-bottom: none;
-    padding: 0;
-  }
-
-  .chr_header__nav__menu > li > a {
-    border-bottom: 1px solid $crm-grizzly;
-    margin: 0 25px;
-    padding: 0 20px;
-  }
-
-  .chr_header__nav__menu > li:last-child > a {
-    border-bottom: none;
-  }
-
-  .chr_header__nav.is-open {
-    padding: 0px
+    height: 0;
+    margin: 0 30px 0 20px;
   }
 }
 
-
-//Hide Menus when not logged in
 .not-logged-in {
-  .menu-link-civihr-admin,
-  .menu-link-civihr-ssp,
-  .chr_header__home-menu .chr_header__sub-menu {
+  .chr_header__corner {
     display: none;
   }
 }

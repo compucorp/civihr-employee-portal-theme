@@ -21,6 +21,64 @@ function civihr_default_theme_preprocess_views_view_table(&$variables) {
 }
 
 /**
+ * @param array $variables
+ */
+function civihr_default_theme_preprocess_webform_progressbar(&$variables) {
+  global $user;
+  $onboardingPages = ['onboarding-form'];
+
+  if ($user && $user->uid) {
+    $userEditPage = sprintf('user/%d/edit', $user->uid);
+    $onboardingPages[] = $userEditPage;
+  }
+
+  // use different template for progress bar for onboarding form / user edit
+  if (in_array(request_path(), $onboardingPages)) {
+    $variables['theme_hook_suggestions'][] = 'webform_onboarding_progressbar';
+  }
+}
+
+/**
+ * @param array $variables
+ */
+function civihr_default_theme_preprocess_webform_calendar(&$variables) {
+  $onboardingPages = ['onboarding-form'];
+
+  // use different template for calendar for onboarding form / user edit
+  if (in_array(request_path(), $onboardingPages)) {
+    $variables['theme_hook_suggestions'][] = 'webform_onboarding_calendar';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ * This adds a new theme for the onboarding form progress bar. This theme is not
+ * directly used, but is suggested conditionally in
+ *
+ * @see civihr_default_theme_preprocess_webform_progressbar.
+ */
+function civihr_default_theme_theme() {
+
+  $defaultProgressBarVars = [
+    'node' => NULL,
+    'page_num' => NULL,
+    'page_count' => NULL,
+    'page_labels' => []
+  ];
+
+  return [
+    'webform_onboarding_progressbar' => [
+      'variables' => $defaultProgressBarVars,
+      'template' => 'templates/contrib/webform-onboarding-progressbar',
+    ],
+    'webform_onboarding_calendar' => [
+      'variables' => $defaultProgressBarVars,
+      'template' => 'templates/node/webform-onboarding-calendar',
+    ],
+  ];
+}
+
+/**
  * Implements theme_table().
  * Copied from sites/all/themes/radix/includes/structure.inc
  */
@@ -331,9 +389,24 @@ function civihr_default_theme_css_alter(&$css) {
 }
 
 /**
+ * @param array $node
+ */
+function civihr_default_theme_preprocess_node(&$node) {
+  // Set a different template for the onboarding form
+  $onboardingTitle = 'Welcome to CiviHR';
+  if ($node && $node['type'] === 'webform' && $node['title'] === $onboardingTitle) {
+    $node['theme_hook_suggestions'][] = 'page__webform__onboarding';
+  }
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function civihr_default_theme_preprocess_page(&$variables) {
+  // Adds the theme path to Javascript variable.
+  $path = drupal_get_path('theme', 'civihr_default_theme');
+  drupal_add_js(array('civihr_default_theme' => array('path' => $path)), 'setting');
+
   // Add custom copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {
     $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
@@ -348,6 +421,39 @@ function civihr_default_theme_preprocess_page(&$variables) {
   }
   $variables['container_class'] = $container_class;
   $variables['cog_menu_markup'] = $variables['logged_in'] ? _build_cog_menu_markup() : NULL;
+
+  // Use a different template if the user should start the onboarding process
+  if (_civihr_default_theme_should_start_onboarding()) {
+    $variables['theme_hook_suggestions'][] = 'page__user__edit__onboarding';
+  }
+
+  $plainPages = ['onboarding-form', 'features-in-civihr'];
+  if (in_array(request_path(), $plainPages)) {
+    $variables['page']['header_style'] = 'basic';
+  }
+
+  if (request_path() === 'onboarding-form') {
+    $variables['theme_hook_suggestions'][] = 'page__onboarding__wizard';
+  }
+}
+
+/**
+ * Uses function from employee portal to check if user should do onboarding.
+ *
+ * @return bool
+ *   TRUE if they have no submissions and can are editing their own account.
+ */
+function _civihr_default_theme_should_start_onboarding() {
+  global $user;
+  $shouldDoOnboarding = FALSE;
+  $userEditPath = sprintf('user/%d/edit', $user->uid);
+  $isEditSelfPage = (current_path() === $userEditPath);
+  $onboardingChecker = '_civihr_employee_portal_should_do_onboarding';
+  if (function_exists($onboardingChecker)) {
+    $shouldDoOnboarding = $isEditSelfPage && $onboardingChecker($user);
+  }
+
+  return $shouldDoOnboarding;
 }
 
 /**
@@ -426,7 +532,6 @@ function _get_cog_menu_item_markup($menuItem) {
  * Implements hook_js_alter().
  */
 function civihr_default_theme_js_alter(&$javascript) {
-
   // Add radix-modal when required.
   if (module_exists('ctools')) {
     $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
@@ -590,7 +695,7 @@ function civihr_default_theme_form_element_label($variables) {
 function bootstrapable_fields($fields_structure) {
   $fields = $fields_structure;
   foreach($fields as $key => $value)  {
-    if (!(substr($key, 0, 1) <> '#' && !in_array($value['#type'], ['hidden'])))  {
+    if (!(substr($key, 0, 1) <> '#' && !in_array(CRM_Utils_Array::value('#type', $value), ['hidden'])))  {
       unset($fields[$key]);
     }
   }
@@ -622,19 +727,25 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
     $fields_structure[$key]['#suffix'] = $close_section ? '</div>' : '';
 
     // Recursively apply bootstrap to fieldset fields
-    if ($value['#type'] == 'fieldset') {
+    if (CRM_Utils_Array::value('#type', $value) == 'fieldset') {
       $fields_structure[$key] = array_replace_recursive($fields_structure[$key], civihr_default_theme_form_apply_bootstrap($value, false));
       $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset--transparent';
       continue;
     }
 
+    $wrapperAttr = CRM_Utils_Array::value('#wrapper_attributes', $value, []);
+    $wrappperClasses = CRM_Utils_Array::value('class', $wrapperAttr, []);
+    $wrappperClasses = implode(' ', $wrappperClasses);
+    unset($fields_structure[$key]['#wrapper_attributes']); // once is enough
+
     $fields_structure[$key]['#title'] = null;
     $fields_structure[$key]['#prefix'] .= '
-      <div class="form-group form-group--smaller-gutter">
+      <div class="form-group form-group--smaller-gutter ' . $wrappperClasses . '">
         <label
          for="'. $value['#id'] .'"
-         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
-          . ( !$label_hidden ? $value['#title'] : '' ) .
+         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' )
+          . ( $fields_structure[$key]['#required'] ? 'required-mark' : '' ) . '">'
+          . ( !$label_hidden ? CRM_Utils_Array::value('#title', $value) : '' ) .
         '</label>
         <div class="col-sm-9">
     ';

@@ -21,6 +21,64 @@ function civihr_default_theme_preprocess_views_view_table(&$variables) {
 }
 
 /**
+ * @param array $variables
+ */
+function civihr_default_theme_preprocess_webform_progressbar(&$variables) {
+  global $user;
+  $onboardingPages = ['onboarding-form'];
+
+  if ($user && $user->uid) {
+    $userEditPage = sprintf('user/%d/edit', $user->uid);
+    $onboardingPages[] = $userEditPage;
+  }
+
+  // use different template for progress bar for onboarding form / user edit
+  if (in_array(request_path(), $onboardingPages)) {
+    $variables['theme_hook_suggestions'][] = 'webform_onboarding_progressbar';
+  }
+}
+
+/**
+ * @param array $variables
+ */
+function civihr_default_theme_preprocess_webform_calendar(&$variables) {
+  $onboardingPages = ['onboarding-form'];
+
+  // use different template for calendar for onboarding form / user edit
+  if (in_array(request_path(), $onboardingPages)) {
+    $variables['theme_hook_suggestions'][] = 'webform_onboarding_calendar';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ * This adds a new theme for the onboarding form progress bar. This theme is not
+ * directly used, but is suggested conditionally in
+ *
+ * @see civihr_default_theme_preprocess_webform_progressbar.
+ */
+function civihr_default_theme_theme() {
+
+  $defaultProgressBarVars = [
+    'node' => NULL,
+    'page_num' => NULL,
+    'page_count' => NULL,
+    'page_labels' => []
+  ];
+
+  return [
+    'webform_onboarding_progressbar' => [
+      'variables' => $defaultProgressBarVars,
+      'template' => 'templates/contrib/webform-onboarding-progressbar',
+    ],
+    'webform_onboarding_calendar' => [
+      'variables' => $defaultProgressBarVars,
+      'template' => 'templates/node/webform-onboarding-calendar',
+    ],
+  ];
+}
+
+/**
  * Implements theme_table().
  * Copied from sites/all/themes/radix/includes/structure.inc
  */
@@ -331,9 +389,24 @@ function civihr_default_theme_css_alter(&$css) {
 }
 
 /**
+ * @param array $node
+ */
+function civihr_default_theme_preprocess_node(&$node) {
+  // Set a different template for the onboarding form
+  $onboardingTitle = 'Welcome to CiviHR';
+  if ($node && $node['type'] === 'webform' && $node['title'] === $onboardingTitle) {
+    $node['theme_hook_suggestions'][] = 'page__webform__onboarding';
+  }
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function civihr_default_theme_preprocess_page(&$variables) {
+  // Adds the theme path to Javascript variable.
+  $path = drupal_get_path('theme', 'civihr_default_theme');
+  drupal_add_js(array('civihr_default_theme' => array('path' => $path)), 'setting');
+
   // Add custom copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {
     $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
@@ -347,6 +420,40 @@ function civihr_default_theme_preprocess_page(&$variables) {
     $container_class = 'container-fluid';
   }
   $variables['container_class'] = $container_class;
+  $variables['cog_menu_markup'] = $variables['logged_in'] ? _build_cog_menu_markup() : NULL;
+
+  // Use a different template if the user should start the onboarding process
+  if (_civihr_default_theme_should_start_onboarding()) {
+    $variables['theme_hook_suggestions'][] = 'page__user__edit__onboarding';
+  }
+
+  $plainPages = ['onboarding-form', 'features-in-civihr'];
+  if (in_array(request_path(), $plainPages)) {
+    $variables['page']['header_style'] = 'basic';
+  }
+
+  if (request_path() === 'onboarding-form') {
+    $variables['theme_hook_suggestions'][] = 'page__onboarding__wizard';
+  }
+}
+
+/**
+ * Uses function from employee portal to check if user should do onboarding.
+ *
+ * @return bool
+ *   TRUE if they have no submissions and can are editing their own account.
+ */
+function _civihr_default_theme_should_start_onboarding() {
+  global $user;
+  $shouldDoOnboarding = FALSE;
+  $userEditPath = sprintf('user/%d/edit', $user->uid);
+  $isEditSelfPage = (current_path() === $userEditPath);
+  $onboardingChecker = '_civihr_employee_portal_should_do_onboarding';
+  if (function_exists($onboardingChecker)) {
+    $shouldDoOnboarding = $isEditSelfPage && $onboardingChecker($user);
+  }
+
+  return $shouldDoOnboarding;
 }
 
 /**
@@ -359,10 +466,72 @@ function _is_hrreports_current_path() {
 }
 
 /**
+ * Builds the markup of the cog menu
+ *
+ * @return string
+ */
+function _build_cog_menu_markup() {
+  $menuItems = _get_cog_menu_items();
+  $markup = "";
+
+  foreach($menuItems as $menuItem) {
+    foreach ($menuItem['permissions'] as $permission) {
+      if (user_access($permission)) {
+        $markup .= _get_cog_menu_item_markup($menuItem);
+        break;
+      }
+    }
+  }
+
+  return $markup;
+}
+
+/**
+ * Gets the structure of the cog menu
+ *
+ * @return array
+ */
+function _get_cog_menu_items() {
+  $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
+
+  return [
+    [
+      'permissions' => ["access content overview"],
+      'link' => l(t('Manage HR Resources'), 'admin/content', ['html' => TRUE]),
+    ],
+    [
+      'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', ['html' => TRUE]),
+      'separator' => TRUE,
+    ],
+    [
+      'permissions' => ["administer users", "access users overview"],
+      'link' => l(t('Manage Users'), 'admin/people', ['html' => TRUE]),
+    ],
+  ];
+}
+
+/**
+ * Builds and returns the markup of the given menu item
+ *
+ * @param array $menuItem
+ *
+ * @return string
+ */
+function _get_cog_menu_item_markup($menuItem) {
+  $class = '';
+
+  if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
+    $class = 'chr_header__sub-menu__separator';
+  }
+
+  return "<li class=\"{$class}\">{$menuItem['link']}</li>";
+}
+
+/**
  * Implements hook_js_alter().
  */
 function civihr_default_theme_js_alter(&$javascript) {
-
   // Add radix-modal when required.
   if (module_exists('ctools')) {
     $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
@@ -526,7 +695,7 @@ function civihr_default_theme_form_element_label($variables) {
 function bootstrapable_fields($fields_structure) {
   $fields = $fields_structure;
   foreach($fields as $key => $value)  {
-    if (!(substr($key, 0, 1) <> '#' && !in_array($value['#type'], ['hidden'])))  {
+    if (!(substr($key, 0, 1) <> '#' && !in_array(CRM_Utils_Array::value('#type', $value), ['hidden'])))  {
       unset($fields[$key]);
     }
   }
@@ -558,19 +727,25 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
     $fields_structure[$key]['#suffix'] = $close_section ? '</div>' : '';
 
     // Recursively apply bootstrap to fieldset fields
-    if ($value['#type'] == 'fieldset') {
+    if (CRM_Utils_Array::value('#type', $value) == 'fieldset') {
       $fields_structure[$key] = array_replace_recursive($fields_structure[$key], civihr_default_theme_form_apply_bootstrap($value, false));
       $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset--transparent';
       continue;
     }
 
+    $wrapperAttr = CRM_Utils_Array::value('#wrapper_attributes', $value, []);
+    $wrappperClasses = CRM_Utils_Array::value('class', $wrapperAttr, []);
+    $wrappperClasses = implode(' ', $wrappperClasses);
+    unset($fields_structure[$key]['#wrapper_attributes']); // once is enough
+
     $fields_structure[$key]['#title'] = null;
     $fields_structure[$key]['#prefix'] .= '
-      <div class="form-group form-group--smaller-gutter">
+      <div class="form-group form-group--smaller-gutter ' . $wrappperClasses . '">
         <label
          for="'. $value['#id'] .'"
-         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' ) . '">'
-          . ( !$label_hidden ? $value['#title'] : '' ) .
+         class="col-sm-3 control-label ' . ( $label_hidden ? 'hidden-xs' : '' )
+          . ( $fields_structure[$key]['#required'] ? 'required-mark' : '' ) . '">'
+          . ( !$label_hidden ? CRM_Utils_Array::value('#title', $value) : '' ) .
         '</label>
         <div class="col-sm-9">
     ';
@@ -581,16 +756,6 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
   }
 
   return $fields_structure;
-}
-
-/**
- * Hide the links to civicrm if Access to CiviCRM is not present
- */
-function _hide_menu_items(&$element) {
-  if (!user_access("access CiviCRM") && $element['#href'] == 'civicrm') {
-    //Apply hide class provided by bootstrap
-    $element['#attributes']['class'][] = 'hidden';
-  }
 }
 
 /**
@@ -606,61 +771,125 @@ function _hide_menu_items(&$element) {
  */
 function civihr_default_theme_menu_link__dropdown($variables) {
   $element = $variables['element'];
-  $sub_menu = '';
 
-  if (!empty($element['#below'])) {
-    // Wrap in dropdown-menu.
-    unset($element['#below']['#theme_wrappers']);
-    $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
-    $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-    $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+  _add_active_class_if_menu_link_is_current($element);
+  _add_unique_class_to_menu_link($element);
+  _hide_admin_menu_link_to_basic_users($element);
 
-    // Check if element is nested.
-    if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
-      $element['#attributes']['class'][] = 'dropdown-submenu';
-    } else {
-      $element['#attributes']['class'][] = 'dropdown';
-      $element['#localized_options']['html'] = TRUE;
-      $element['#title'] .= '<span class="caret"></span>';
-    }
-
-    $element['#localized_options']['attributes']['data-target'] = '#';
-  }
-
-  // Fix for active class.
-  if (($element['#href'] == current_path() || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']) || $element['#localized_options']['language']->language == $language_url->language)) {
-    $element['#attributes']['class'][] = 'active';
-  }
-
-  // Add active class to li if active trail.
-  if (in_array('active-trail', $element['#attributes']['class'])) {
-    $element['#attributes']['class'][] = 'active';
-  }
-
-  // Add a unique class using the title.
-  $title = strip_tags($element['#title']);
-  $element['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
-
-  /* Code Added */
-  _hide_menu_items($element);
-  /* End - Code Added */
-  if ($element['#title'] === 'Manager Leave') {
-    $element['#localized_options']['html'] = true;
-    $output = l(_get_pending_leave_request_markup($element), $element['#href'], $element['#localized_options']);
-  } else {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  }
-
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . _get_menu_link_markup($element) . "</li>\n";
 }
 
 /**
- * Adding markup from template that holds number of pending leave request
- * to display with Manager Leave menu.
+ * If the menu link is for the current page, or is in its path trail,
+ * then it adds the active class to it
  *
- * @param $element
+ * @param array $link
  */
-function _get_pending_leave_request_markup($element) {
-  $markup = civihr_leave_absences_get_markup('manager-notification-badge');
-  return $element['#title'].$markup;
+function _add_active_class_if_menu_link_is_current(&$link) {
+  if (_is_menu_link_current($link) || _is_menu_link_in_trail($link)) {
+    $link['#attributes']['class'][] = 'active';
+  }
+}
+
+/**
+ * Checks if the given menu link is the link of the current page
+ *
+ * @param array $link
+ *
+ * @return boolean
+ */
+function _is_menu_link_current($link) {
+  $localOptions = $link['#localized_options'];
+  $language = !empty($localOptions['language']) ? $localOptions['language'] : NULL;
+
+  $isLinkOfCurrentPath = $link['#href'] == current_path();
+  $isLinkOfFrontPage = $link['#href'] == '<front>' && drupal_is_front_page();
+  $isLanguageUndefinedOrCurrent = !$language || $language->language == $language_url->language;
+
+  return ($isLinkOfCurrentPath || $isLinkOfFrontPage) && $isLanguageUndefinedOrCurrent;
+}
+
+/**
+ * Checks if the given menu link is in the trail of the current page
+ * (as in, it's part of the hierarchy of the current page)
+ *
+ * @param aray $link
+ *
+ * @return boolean
+ */
+function _is_menu_link_in_trail($link) {
+  return in_array('active-trail', $link['#attributes']['class']);
+}
+
+
+/**
+ * Adds a unique class to a link using its title
+ *
+ * @param array $link
+ */
+function _add_unique_class_to_menu_link(&$link) {
+  $title = strip_tags($link['#title']);
+  $link['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
+}
+
+/**
+ * Hide the menu link to the admin if the current user does not
+ * have administer access
+ *
+ * @param array $link
+ */
+function _hide_admin_menu_link_to_basic_users(&$link) {
+  $adminAccess = user_access("administer CiviCRM");
+  $localOptions = $link['#localized_options'];
+  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_civihr-admin:civicrm';
+
+  if ($isAdminLink && !$adminAccess) {
+    $link['#attributes']['class'][] = 'hidden';
+  }
+}
+
+/**
+ * Build and returns the markup of the given link (and submenu, if present)
+ *
+ * @param array $link
+ *
+ * @return string
+ */
+function _get_menu_link_markup(&$link) {
+  if ($link['#title'] === 'Manager Leave') {
+    $link['#localized_options']['html'] = true;
+    $link['#title'] .= civihr_leave_absences_get_markup('manager-notification-badge');
+  }
+
+  $linkMarkup = l($link['#title'], $link['#href'], $link['#localized_options']);
+  $subMenuMarkup = !empty($link['#below']) ? _add_sub_menu_to_link($link) : '';
+
+  return $linkMarkup . $subMenuMarkup;
+}
+
+/**
+ * Builds and returns the markup of the link's submenu
+ *
+ * @param array $link
+ *
+ * @return string
+ */
+function _add_sub_menu_to_link(&$link) {
+  unset($link['#below']['#theme_wrappers']);
+
+  $link['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+  $link['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+
+  // Check if link is nested.
+  if ((!empty($link['#original_link']['depth'])) && ($link['#original_link']['depth'] > 1)) {
+    $link['#attributes']['class'][] = 'dropdown-submenu';
+  } else {
+    $link['#attributes']['class'][] = 'dropdown';
+    $link['#localized_options']['html'] = TRUE;
+    $link['#title'] .= '<span class="caret"></span>';
+  }
+
+  $link['#localized_options']['attributes']['data-target'] = '#';
+
+  return '<ul class="dropdown-menu">' . drupal_render($link['#below']) . '</ul>';
 }

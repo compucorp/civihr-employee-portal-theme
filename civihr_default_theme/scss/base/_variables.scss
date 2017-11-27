@@ -4,7 +4,7 @@
 // -----------------------------------------------------------------------------
 
 $crm-box-shadow-global: 0 3px 10px 0 rgba(0, 0, 0, 0.035), 0 4px 8px 0 rgba(0, 0, 0, 0.035) !default;
-$crm-header-height:     50px !default;
+$crm-header-height:     60px !default;
 
 // Global values
 // -----------------------------------------------------------------------------
@@ -116,8 +116,9 @@ $nav-tabs-justified-active-link-border-color: $light !default;
 // Media queries breakpoints
 // ------------------------------------------------------------------------------------------------------
 
-$screen-sm-max:                   767px !default;
-$crm-menu-responsive-breakpoint:  1250px;
+$screen-sm-max:     767px !default;
+$crm-screen-lg-max: 1300px;
+$crm-onboarding-wizard-menu-responsive-breakpoint:  1170px;
 
 
 // Modals
@@ -173,3 +174,26 @@ $crm-customselect-padding-right: $crm-customselect-caret-width + 12 !default;
 $input-border:              $crm-color-neutral !default;
 
 $crm-ui-select-top-padding: 7px;
+
+
+//== User Menu
+//
+//##
+$chr-user-menu-color: $light-pale;
+$chr-user-menu-line-height: inherit;
+$chr-user-menu-minify-breakpoint: $crm-screen-lg-max;
+$chr-user-menu-bg-hover: $gray;
+$chr-user-menu-dropdown-bg: $crm-gray-darker-alt;
+$chr-user-menu-dropdown-username-color: $light;
+$chr-user-menu-dropdown-link-color: $light-pale;
+$chr-user-menu-dropdown-link-color-hover: $light;
+$chr-user-menu-dropdown-link-bg-hover: $gray;
+
+//== Wizard
+//
+//##
+$crm-wizard-font-color: #404454;
+$crm-wizard-primary-color: #767b8e;
+$crm-wizard-secondary-color : #42afcb;
+$crm-wizard-active-bg-color: #E9EDF3;
+$crm-wizard-active-font-color: $crm-wizard-secondary-color;

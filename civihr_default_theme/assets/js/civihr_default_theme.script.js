@@ -274,6 +274,8 @@
         desktopCalendar.each(getWebformCalendarValues);
         desktopCalendar.datepicker("option", "dateFormat", "dd/mm/yy");
         desktopCalendar.datepicker("option", "beforeShow", null);
+        desktopCalendar.datepicker("option", "changeMonth", true);
+        desktopCalendar.datepicker("option", "changeYear", true);
         desktopCalendar.datepicker("option", "onSelect", setWebformCalendarValues);
       }
     }

@@ -1,5 +1,4 @@
 $carousel-box-shadow-color: rgba(#3f3c55,0.3);
-$crm-darker-grayblue: rgb(182, 186, 207);
 
 .mobile {
   #onboarding-customization-page {
@@ -729,12 +728,4 @@ $crm-darker-grayblue: rgb(182, 186, 207);
       }
     }
   }
-}
-
-// Specific to datepicker
-.ui-datepicker-month,
-.ui-datepicker-year {
-  font-size: 14px !important;
-  font-weight: 400;
-  margin: 0 5px !important;
 }

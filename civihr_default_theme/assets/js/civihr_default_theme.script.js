@@ -4,15 +4,6 @@
  */
 
 (function ($) {
-  // Add civicrm-page class to body of onboarding form page
-  $(document).ready(function () {
-    var currentPath = $(location).attr('pathname');
-
-    if(currentPath.indexOf('onboarding-form') !== -1) {
-      $('body').addClass('page-civicrm')
-    }
-  });
-
   Drupal.behaviors.isMobile = false;
   Drupal.behaviors.civihr_theme = {
     attach: function () {

@@ -731,6 +731,10 @@ $crm-darker-grayblue: rgb(182, 186, 207);
   }
 }
 
-.select2-container .select2-choice .select2-arrow {
-  width: 26px !important;
+// Specific to datepicker
+.ui-datepicker-month,
+.ui-datepicker-year {
+  font-size: 14px !important;
+  font-weight: 400;
+  margin: 0 5px !important;
 }

@@ -1,12 +1,22 @@
-// When enable-select2.js is included in page it will add extra class select2-container
-// that adds following styles. But if the enable-select2.js is not used in SSP pages
-// following styles are needed to add explictly to make the year and month dropdown
-// look similar to that of civicrm.
+// civicrm datepicker styles form shoreditch
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/_fa-icon.scss";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/civicrm/_mixins.scss";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/civicrm/common/_datepickers.scss";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/civicrm/common/_bootstrap-calendar.scss";
 
+// Override styles for civicrm datepicker specific to SSP
 .ui-datepicker {
+  .ui-datepicker-calendar thead tr th {
+    font-size:13px !important;
+  }
+
+  tbody {
+    border-top: 0;
+  }
+
   .ui-datepicker-month,
   .ui-datepicker-year {
-    font-size: 14px !important;
+    font-size: 15px !important;
     font-weight: 400;
     margin: 0 5px !important;
   }

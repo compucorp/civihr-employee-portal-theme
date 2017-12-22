@@ -1,7 +1,0 @@
-// With the inclusion of custom-civicrm.css in onboarding-form,
-// a top padding of 60px is added making space for menubar.
-// But we dont need menubar for obnoarding form.
-// So, the padding is set back to 0px.
-body:not(.toolbar) {
-  padding-top: 0 !important;
-}

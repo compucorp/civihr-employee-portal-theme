@@ -7,16 +7,11 @@
 // Override styles for civicrm datepicker specific to SSP
 .ui-datepicker {
   .ui-datepicker-calendar thead tr th {
-    font-size:13px !important;
+    font-size: 11.9px !important; //Calendar heading font size as in SSP
   }
-
-  tbody {
-    border-top: 0;
-  }
-
   .ui-datepicker-month,
   .ui-datepicker-year {
-    font-size: 15px !important;
+    font-size: 14px !important; // Select option font size as in SSP
     font-weight: 400;
     margin: 0 5px !important;
   }

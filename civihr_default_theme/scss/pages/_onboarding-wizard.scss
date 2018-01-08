@@ -21,6 +21,13 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 }
 
 .onboarding-wizard-page {
+  // Override Browser default validation style specific to firefox
+  // Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid
+  // which adds red border shadow in required field
+  input:invalid {
+    box-shadow: none;
+  }
+
   .crm_wizard__mobile {
     display: none;
   }

@@ -338,7 +338,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   #messages {
     padding: 0;
   }
-  
+
   @media (max-width: $crm-onboarding-wizard-menu-responsive-breakpoint) {
     .modal-civihr-custom__section,
     .modal-civihr-custom__footer,
@@ -460,7 +460,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       height: 10px;
       width: 10px;
       display: inline-block;
-      background: $crm-darker-grayblue;
+      background: $light-pale;
       border-radius: 50%;
     }
 

@@ -494,19 +494,25 @@ function _build_cog_menu_markup() {
 function _get_cog_menu_items() {
   $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
 
+  $options = ['html' => TRUE];
+
   return [
     [
       'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', ['html' => TRUE]),
+      'link' => l(t('Manage HR Resources'), 'admin/content', $options),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', ['html' => TRUE]),
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', $options),
       'separator' => TRUE,
     ],
     [
       'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage Users'), 'admin/people', ['html' => TRUE]),
+      'link' => l(t('Manage Users'), 'admin/people', $options),
+    ],
+    [
+      'permissions' => ['customize welcome wizard'],
+      'link' => l(t('Customize Welcome Wizard'), 'customize-onboarding-wizard', $options),
     ],
   ];
 }

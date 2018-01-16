@@ -89,11 +89,11 @@ output {
   margin-bottom: 10px;
 
   label {
-    min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
-    padding-left: 20px;
-    margin-bottom: 0;
-    font-weight: normal;
-    cursor: pointer;
+  min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
   }
 }
 .radio input[type="radio"],
@@ -136,7 +136,7 @@ input[type="checkbox"] {
   &[disabled],
   &.disabled,
   fieldset[disabled] & {
-    cursor: $cursor-disabled;
+  cursor: $cursor-disabled;
   }
 }
 // These classes are used directly on <label>s
@@ -144,7 +144,7 @@ input[type="checkbox"] {
 .checkbox-inline {
   &.disabled,
   fieldset[disabled] & {
-    cursor: $cursor-disabled;
+  cursor: $cursor-disabled;
   }
 }
 // These classes are used on elements with <label> descendants
@@ -152,9 +152,9 @@ input[type="checkbox"] {
 .checkbox {
   &.disabled,
   fieldset[disabled] & {
-    label {
-      cursor: $cursor-disabled;
-    }
+  label {
+    cursor: $cursor-disabled;
+  }
   }
 }
 
@@ -172,30 +172,30 @@ input[type="checkbox"] {
   .checkbox,
   .radio-inline,
   .checkbox-inline {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: ($padding-base-vertical + 1); // Default padding plus a border
   }
   // Account for padding we're adding to ensure the alignment and of help text
   // and other content below items
   .radio,
   .checkbox {
-    min-height: ($line-height-computed + ($padding-base-vertical + 1));
+  min-height: ($line-height-computed + ($padding-base-vertical + 1));
   }
 
   // Make form groups behave like rows
   .form-group {
-    @include make-row;
+  @include make-row;
   }
 
   // Reset spacing and right align labels, but scope to media queries so that
   // labels on narrow viewports stack the same as a default form example.
   @media (min-width: $screen-sm-min) {
-    .control-label {
-      text-align: right;
-      margin-bottom: 0;
-      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
-    }
+  .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+  }
   }
 
   // Validation states
@@ -203,7 +203,7 @@ input[type="checkbox"] {
   // Reposition the icon because it's now within a grid column and columns have
   // `position: relative;` on them. Also accounts for the grid gutter padding.
   .has-feedback .form-control-feedback {
-    right: floor(($grid-gutter-width / 2));
+  right: floor(($grid-gutter-width / 2));
   }
 
   // Form group sizes
@@ -211,53 +211,53 @@ input[type="checkbox"] {
   // Quick utility class for applying `.input-lg` and `.input-sm` styles to the
   // inputs and labels within a `.form-group`.
   .form-group-lg {
-    @media (min-width: $screen-sm-min) {
-      .control-label {
-        padding-top: (($padding-large-vertical * $line-height-large) + 1);
-        font-size: $font-size-large;
-      }
+  @media (min-width: $screen-sm-min) {
+    .control-label {
+    padding-top: (($padding-large-vertical * $line-height-large) + 1);
+    font-size: $font-size-large;
     }
   }
+  }
   .form-group-sm {
-    @media (min-width: $screen-sm-min) {
-      .control-label {
-        padding-top: ($padding-small-vertical + 1);
-        font-size: $font-size-small;
-      }
+  @media (min-width: $screen-sm-min) {
+    .control-label {
+    padding-top: ($padding-small-vertical + 1);
+    font-size: $font-size-small;
     }
+  }
   }
 }
 
 body {
-    // The Drupal toolbar module tries to push down the <body> as much as its height
-    padding-top: 0 !important;
-    position: relative;
+  // The Drupal toolbar module tries to push down the <body> as much as its height
+  padding-top: 0 !important;
+  position: relative;
 }
 
 /**
  * Vacancy list view page default styling
  */
 .vacancy-wrapper {
-    width: 18%;
-    margin: 1%;
-    float: left;
+  width: 18%;
+  margin: 1%;
+  float: left;
 }
 
 /**
  * Views exposed form styling
  */
 @mixin exposed-form-default-style($width) {
-    float: none;
-    display: block;
-    width: $width;
+  float: none;
+  display: block;
+  width: $width;
 }
 
 .views-exposed-form .views-exposed-widget {
-    @include exposed-form-default-style(50%);
+  @include exposed-form-default-style(50%);
 
-    @media screen and (max-width: $screen-sm-max) {
-        @include exposed-form-default-style(100%);
-    }
+  @media screen and (max-width: $screen-sm-max) {
+    @include exposed-form-default-style(100%);
+  }
 }
 
 
@@ -267,23 +267,23 @@ body {
  */
 .form-horizontal {
 
-    .form-group--smaller-gutter {
-        margin-left: -10px;
-        margin-right: -10px;
+  .form-group--smaller-gutter {
+    margin-left: -10px;
+    margin-right: -10px;
 
-        [class*="col-"] {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+    [class*="col-"] {
+      padding-left: 10px;
+      padding-right: 10px;
     }
+  }
 }
 
 .btn-group-sm {
 
-    > .btn {
-        padding-bottom: 3px !important;
-        padding-top: 3px !important;
-    }
+  > .btn {
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+  }
 }
 
 
@@ -291,9 +291,9 @@ body {
  * Manager AJAX filters block / inline settings
  */
 .btn-custom-block {
-    @media screen and (min-width: $screen-tablet) {
-        display: block;
-    }
+  @media screen and (min-width: $screen-tablet) {
+    display: block;
+  }
 
 }
 
@@ -306,58 +306,58 @@ body {
 /* Overwrite inherited styles */
 
 .views-exposed-form .views-exposed-widget {
-    padding: 0;
+  padding: 0;
 }
 .item-list ul li {
-    margin: 0;
+  margin: 0;
 }
 
 /* Helpers */
 
 .relative {
-    position: relative;
+  position: relative;
 }
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 .left {
-    float: left;
+  float: left;
 }
 .right {
-    float: right;
+  float: right;
 }
 .nofloat {
-    float: none;
+  float: none;
 }
 
 /* Lists */
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Links */
 
 a {
-    text-decoration: none;
-    color: $brand-primary;
+  text-decoration: none;
+  color: $brand-primary;
 
-    &:hover {
-        text-decoration: none;
-        color: rgba($brand-primary, 0.8);
-    }
-    &:active,
-    &:focus {
-        text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
+    color: rgba($brand-primary, 0.8);
+  }
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 /* Headings */
@@ -368,223 +368,223 @@ a {
 
 h1,
 .block__title {
-    font-size: 3.6rem;
-    font-weight: 300;
-    color: $crm-gray-darker-alt;
-    margin: 25px 0;
+  font-size: 3.6rem;
+  font-weight: 300;
+  color: $crm-gray-darker-alt;
+  margin: 25px 0;
 }
 h4 {
-    font-size: 1.8rem;
-    color: $gray-darker;
-    font-weight: 400;
+  font-size: 1.8rem;
+  color: $gray-darker;
+  font-weight: 400;
 }
 h5 {
-    font-size: 1.6rem;
-    color: $gray-darker;
-    font-weight: 400;
+  font-size: 1.6rem;
+  color: $gray-darker;
+  font-weight: 400;
 }
 
 h2.pane-title {
-    font-size: 1.8rem;
-    color: $gray-darker;
-    font-weight: 400;
+  font-size: 1.8rem;
+  color: $gray-darker;
+  font-weight: 400;
 }
 
 .container.collapse {
-    padding: 0;
+  padding: 0;
 }
 
 /* Selects */
 
 .hasCustomSelect {
-    z-index: 10;
+  z-index: 10;
 }
 .customSelect {
-    @extend .form-text;
-    margin: 0;
-    position: relative;
+  @extend .form-text;
+  margin: 0;
+  position: relative;
 
-    @include fa('\f0d7');
+  @include fa('\f0d7');
 
-    &:before {
-        position: absolute;
-        top: 11px;
-        right: 14px;
-    }
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 37px;
-        height: 100%;
-        width: 0;
-        border-left: 1px solid $input-border;
-    }
+  &:before {
+    position: absolute;
+    top: 11px;
+    right: 14px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 37px;
+    height: 100%;
+    width: 0;
+    border-left: 1px solid $input-border;
+  }
 
 }
 
 /* Alerts/Messages */
 
 #messages {
-    padding: 15px 0 0;
+  padding: 15px 0 0;
 }
 .alert {
-    padding: 20px;
-    margin-bottom: 20px;
-    color: $light;
-    position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: $light;
+  position: relative;
 
-    button {
-        color: $gray-dark !important;
-        margin-right: 10px;
+  button {
+    color: $gray-dark !important;
+    margin-right: 10px;
 
-    }
-    .close {
-        color: $light !important;
-        border: 0;
-        background: none;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-weight: bold;
-        line-height: 1;
-        font-size: 2.2rem;
-        padding: 0;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
+  }
+  .close {
+    color: $light !important;
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    line-height: 1;
+    font-size: 2.2rem;
+    padding: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .alert-danger {
-    background: $brand-danger;
+  background: $brand-danger;
 }
 .alert-success {
-    background: $brand-success;
+  background: $brand-success;
 }
 .alert-warning {
-    background: $brand-warning;
+  background: $brand-warning;
 }
 
 /* Modal: My details, Emergency contact */
 
 .modal-body article {
-    max-width: 640px;
-    margin: 0 auto;
+  max-width: 640px;
+  margin: 0 auto;
 
-    h2 {
-        display: none;
+  h2 {
+    display: none;
+  }
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    &:first-of-type {
+      .fieldset-legend {
+        margin-top: 0;
+      }
     }
-    fieldset {
-        border: 0;
-        margin: 0;
-        padding: 0;
 
-        &:first-of-type {
-            .fieldset-legend {
-                margin-top: 0;
-            }
-        }
-
-        &.collapsed {
-          height: auto;
-        }
-
-        &.panel {
-          @include box-shadow(none);
-        }
-
-        .panel-body {
-          padding: 0;
-        }
-
-        .panel-heading {
-          background-color: transparent;
-          border: 0 none;
-          padding: {
-            left: 5px;
-            right: 5px;
-          }
-        }
-
+    &.collapsed {
+      height: auto;
     }
-    .fieldset-legend {
-        font-size: 1.6rem;
 
-        a {
-            color: $gray-darker;
-            margin-left: 10px;
-        }
+    &.panel {
+      @include box-shadow(none);
     }
-    .grippie {
-        display: none;
+
+    .panel-body {
+      padding: 0;
     }
+
+    .panel-heading {
+      background-color: transparent;
+      border: 0 none;
+      padding: {
+      left: 5px;
+      right: 5px;
+      }
+    }
+
+  }
+  .fieldset-legend {
+    font-size: 1.6rem;
+
+    a {
+      color: $gray-darker;
+      margin-left: 10px;
+    }
+  }
+  .grippie {
+    display: none;
+  }
+  .form-item {
+    label:not(.element-invisible) {
+      display: block;
+      float: left;
+      width: 35%;
+      padding: 7px 0;
+      font-size: 1.3rem;
+      color: $gray-darker;
+
+      & + .hasCustomSelect {
+        left: 35%;
+      }
+    }
+  }
+  .form-control,
+  .form-managed-file,
+  .form-managed-file + .description {
+    display: block;
+    float: left;
+    width: 65%;
+  }
+
+  .form-managed-file + .description {
+    margin-left: 35%;
+  }
+
+  .webform-container-inline {
+    width: 65%;
+    float: left;
+
     .form-item {
-        label:not(.element-invisible) {
-            display: block;
-            float: left;
-            width: 35%;
-            padding: 7px 0;
-            font-size: 1.3rem;
-            color: $gray-darker;
-
-            & + .hasCustomSelect {
-                left: 35%;
-            }
-        }
+      width: 100%;
+      max-width: 100px;
+      margin-right: 20px;
+      float: left;
     }
-    .form-control,
-    .form-managed-file,
-    .form-managed-file + .description {
-        display: block;
-        float: left;
-        width: 65%;
+    .form-control {
+      width: 100%;
+      float: none;
     }
-
-    .form-managed-file + .description {
-      margin-left: 35%;
+    .webform-calendar {
+      margin: 10px 0;
     }
+  }
+  .form-actions {
+    border-top: 1px solid $gray-light;
+    padding-top: 20px;
+    margin-bottom: 0;
 
-    .webform-container-inline {
-        width: 65%;
-        float: left;
-
-        .form-item {
-            width: 100%;
-            max-width: 100px;
-            margin-right: 20px;
-            float: left;
-        }
-        .form-control {
-            width: 100%;
-            float: none;
-        }
-        .webform-calendar {
-            margin: 10px 0;
-        }
+    .btn {
+      padding: 0.8rem 6rem;
     }
-    .form-actions {
-        border-top: 1px solid $gray-light;
-        padding-top: 20px;
-        margin-bottom: 0;
-
-        .btn {
-            padding: 0.8rem 6rem;
-        }
-    }
+  }
 }
 
 /* Splitters */
 
 .vertical-splitter {
-    position: absolute;
-    height: 100%;
-    width: 0;
-    border-left: 1px solid $gray-light;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-left: 1px solid $gray-light;
 }
 .splitter-top {
-    border-top: 1px solid $gray-light;
-    margin-top: 20px;
-    padding-top: 20px;
+  border-top: 1px solid $gray-light;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 /* Buttons */
@@ -615,7 +615,7 @@ h2.pane-title {
   font-size: 14px;
 
   &:hover {
-    color: $brand-primary;
+  color: $brand-primary;
   }
 }
 
@@ -624,82 +624,82 @@ h2.pane-title {
   padding: 0;
 
   > li > a {
-    padding: 8px 14px;
-    line-height: 18px;
+  padding: 8px 14px;
+  line-height: 18px;
   }
 
   [class^="fa-"],
   [class^="glyphicon-"],
   [class*=" fa-"],
   [class*=" glyphicon-"] {
-    text-align: center;
-    width: 1.25em;
+  text-align: center;
+  width: 1.25em;
   }
 }
 
 /* Forms */
 
 form {
-    hr {
-        margin-top: 40px;
-    }
-    .btn {
-        float: right;
-    }
+  hr {
+    margin-top: 40px;
+  }
+  .btn {
+    float: right;
+  }
 }
 .form-item,
 .form-actions {
   @include clearfix;
-    position: relative;
-    margin: 0 0 20px 0;
+  position: relative;
+  margin: 0 0 20px 0;
 
-    label {
-        /*display: none;*/
-    }
+  label {
+    /*display: none;*/
+  }
 
-    .form-item {
-      margin-bottom: 0;
-    }
+  .form-item {
+    margin-bottom: 0;
+  }
 
   input.error {
-    border: 1px solid $brand-danger;
+  border: 1px solid $brand-danger;
   }
 }
 
 .form-text {
-    border: 1px solid $input-border;
-    font-size: 1.3rem;
-    color: $gray;
-    line-height: 1.5;
-    padding: 7px 10px;
-    margin: 0;
-    width: 100%;
+  border: 1px solid $input-border;
+  font-size: 1.3rem;
+  color: $gray;
+  line-height: 1.5;
+  padding: 7px 10px;
+  margin: 0;
+  width: 100%;
 
   &:focus {
-    outline: 0 none;
-    border-color: $brand-primary;
+  outline: 0 none;
+  border-color: $brand-primary;
   }
 }
 
 .breadcrumb {
-    display: none;
+  display: none;
 }
 
 
 /* Main / Dashboard */
 
 .main {
-    background: $gray-light;
+  background: $gray-light;
 }
 
 /* Panels / Dashboard Carousel */
 
 .pane-block,
 .view {
-    background: $panel-bg;
-    padding: 20px;
-    margin: 0 0 30px 0;
-    @include clearfix;
+  background: $panel-bg;
+  padding: 20px;
+  margin: 0 0 30px 0;
+  @include clearfix;
 }
 
 .pane-block {
@@ -707,477 +707,477 @@ form {
 }
 
 .pane-block[class*="absence-list"] {
-    margin: 0;
+  margin: 0;
 }
 .view {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 .pane-block {
-    .view {
-        padding: 0;
-        margin: 0;
-    }
-    .jcarousel-container {
-        margin: 0 -10px;
-        padding: 0 26px;
-    }
-    .jcarousel-clip {
-        overflow: hidden;
-    }
-    .jcarousel-item {
-        width: 193px;
-        margin: 0 10px;
-        padding: 20px;
-        background: $crm-gray-light-alt;
-    }
-    .jcarousel-prev,
-    .jcarousel-next {
-        position: absolute;
-        height: 100%;
-        width: 26px;
-        display: block;
-        left: 10px;
-        top: 0;
-        text-align: center;
-        color: $gray;
-        background: $light;
+  .view {
+    padding: 0;
+    margin: 0;
+  }
+  .jcarousel-container {
+    margin: 0 -10px;
+    padding: 0 26px;
+  }
+  .jcarousel-clip {
+    overflow: hidden;
+  }
+  .jcarousel-item {
+    width: 193px;
+    margin: 0 10px;
+    padding: 20px;
+    background: $crm-gray-light-alt;
+  }
+  .jcarousel-prev,
+  .jcarousel-next {
+    position: absolute;
+    height: 100%;
+    width: 26px;
+    display: block;
+    left: 10px;
+    top: 0;
+    text-align: center;
+    color: $gray;
+    background: $light;
 
-        @include fa("\f104", 24);
+    @include fa("\f104", 24);
 
-        &:before {
-            @include vertical-align;
-            display: block;
-        }
+    &:before {
+      @include vertical-align;
+      display: block;
     }
-    .jcarousel-next {
-        left: auto;
-        right: 10px;
+  }
+  .jcarousel-next {
+    left: auto;
+    right: 10px;
 
-        @include fa("\f105", 24);
-    }
+    @include fa("\f105", 24);
+  }
 }
 .views-exposed-form .views-exposed-widget {
-    width: auto;
+  width: auto;
 }
 
 .pane-title {
-    margin: 0 -20px 20px;
-    padding: 0 20px 20px;
-    border-bottom: 1px solid $gray-light;
-    line-height: 1;
+  margin: 0 -20px 20px;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid $gray-light;
+  line-height: 1;
 
-    &:first-child {
-        margin-top: 0;
-    }
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 /* My details */
 
 .profile-image {
-    width: 140px;
-    height: 140px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-left: 10px;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 10px;
 
-    > img {
-        height: 100%;
-    }
+  > img {
+    height: 100%;
+  }
 }
 .custom-scale-image {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    max-height: 140px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-height: 140px;
 }
 
 .footer-slider-block,
 .pane-views-hr-documents-block {
-    position: relative;
+  position: relative;
 
+  .views-field {
+    margin-top: 1.4rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .view-header {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    font-size: 1.3rem;
+
+    a {
+      color: $gray;
+    }
+  }
+  .view-hr-vacancies,
+  .view-hr-documents {
+    .jcarousel-item {
+      position: relative;
+      padding-bottom: 55px;
+    }
+    .btn {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  .view-hr-documents {
     .views-field {
-        margin-top: 1.4rem;
+      font-size: 1.3rem;
 
-        &:first-child {
-            margin-top: 0;
-        }
+      &:first-child {
+        font-size: 1.6rem;
+        color: $gray-darker;
+      }
     }
-    .view-header {
-        position: absolute;
-        top: 7px;
-        right: 20px;
-        font-size: 1.3rem;
-
-        a {
-            color: $gray;
-        }
-    }
-    .view-hr-vacancies,
-    .view-hr-documents {
-        .jcarousel-item {
-            position: relative;
-            padding-bottom: 55px;
-        }
-        .btn {
-            position: absolute;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-        }
-    }
-    .view-hr-documents {
-        .views-field {
-            font-size: 1.3rem;
-
-            &:first-child {
-                font-size: 1.6rem;
-                color: $gray-darker;
-            }
-        }
-    }
+  }
 }
 
 /* Absencies */
 
 .block-civihr-employee-portal {
-    text-align: right;
+  text-align: right;
 
-    .btn {
-        margin-left: 10px;
-    }
+  .btn {
+    margin-left: 10px;
+  }
 }
 
 .pane-civihr-employee-portal-leave {
-    tr {
-        &.odd {
-            background: none;
-        }
-        &.even {
-            background: $gray-lighter;
-        }
+  tr {
+    &.odd {
+      background: none;
     }
+    &.even {
+      background: $gray-lighter;
+    }
+  }
 }
 .view-absence-list {
-    & > .view-header,
-    & > .view-footer {
-        tbody {
-            border-top: 0;
+  & > .view-header,
+  & > .view-footer {
+    tbody {
+      border-top: 0;
 
-            tr {
-                font-weight: 700;
-                color: $gray-darker;
-            }
-        }
+      tr {
+        font-weight: 700;
+        color: $gray-darker;
+      }
     }
-    & > .view-header {
-        margin: 0 -20px;
+  }
+  & > .view-header {
+    margin: 0 -20px;
+  }
+  & > .view-content {
+    tbody {
+      border: 0;
     }
-    & > .view-content {
-        tbody {
-            border: 0;
-        }
+  }
+  td,
+  th {
+    &:first-child {
+      width: 28%;
     }
-    td,
-    th {
-        &:first-child {
-            width: 28%;
-        }
-    }
-    .entitlement-date-row {
-        border-bottom: 1px solid $gray-light;
+  }
+  .entitlement-date-row {
+    border-bottom: 1px solid $gray-light;
 
-        td {
-            border-bottom: 0;
-        }
+    td {
+      border-bottom: 0;
     }
+  }
 }
 
 // My sickness report
 .pane-civihr-employee-portal-sick {
+  td,
+  th {
+    &:first-child {
+      width: 14%;
+    }
+  }
+
+  @media(min-width: $screen-xs-min) {
     td,
     th {
-        &:first-child {
-            width: 14%;
-        }
+      &:first-child {
+        width: 28%;
+      }
     }
-
-    @media(min-width: $screen-xs-min) {
-        td,
-        th {
-            &:first-child {
-                width: 28%;
-            }
-        }
-    }
+  }
 }
 
 .calendar-btn {
+  background: none;
+  color: $gray;
+  padding-right: 0;
+
+  @include fa("\f073");
+
+  &:before {
+    margin-right: 8px;
+  }
+  &:hover {
     background: none;
     color: $gray;
-    padding-right: 0;
-
-    @include fa("\f073");
-
-    &:before {
-        margin-right: 8px;
-    }
-    &:hover {
-        background: none;
-        color: $gray;
-    }
+  }
 }
 
 .pane-civihr-employee-portal-leave,
 .pane-civihr-employee-portal-sick {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .view-empty {
-    p {
-        margin: 0;
-        padding: 15px 0;
-    }
+  p {
+    margin: 0;
+    padding: 15px 0;
+  }
 }
 
 .pane-views-exp-absence-list-page {
 
-    .views-exposed-widget {
+  .views-exposed-widget {
 
-        .chr_action--icon--responsive {
+    .chr_action--icon--responsive {
 
-            @media(min-width: $screen-md-min) {
-                span {
-                    display: none;
-                }
-            }
-
-            @media(min-width: $screen-lg-min) {
-                span {
-                    display: inline;
-                }
-            }
+      @media(min-width: $screen-md-min) {
+        span {
+          display: none;
         }
+      }
+
+      @media(min-width: $screen-lg-min) {
+        span {
+          display: inline;
+        }
+      }
     }
+  }
 }
 
 
 // ## TEMPORARY ##
 /* Manager absence approval */
 .pane-views-approvals-block-1 {
-    position: relative;
+  position: relative;
 }
 
 .view-Tasks,
 .view-approvals {
 
-    .view-empty {
-        padding: 0 20px;
-    }
+  .view-empty {
+    padding: 0 20px;
+  }
 }
 // ## END TEMPORARY ##
 
 #civihr-employee-portal-document-form {
   .drop-zone {
-    margin: 10px 0;
-    padding: 30px;
+  margin: 10px 0;
+  padding: 30px;
   }
   .help-block {
-    clear: left;
-    font-size: 12px;
-    float: left;
+  clear: left;
+  font-size: 12px;
+  float: left;
   }
 
   .form-type-date-popup {
-    width: 100%;
+  width: 100%;
 
-    .date-padding {
-      padding: 0;
-    }
+  .date-padding {
+    padding: 0;
+  }
 
-    .form-type-textfield {
-      label {
-        display: none;
-      }
+  .form-type-textfield {
+    label {
+    display: none;
     }
+  }
   }
 
   .table-upload {
-    table-layout: fixed;
+  table-layout: fixed;
 
-    .col-index {
-      width: 60px;
-    }
+  .col-index {
+    width: 60px;
+  }
 
-    .col-name {
-      width: 45%;
-    }
+  .col-name {
+    width: 45%;
+  }
 
-    .col-size {
-      width: 95px;
-    }
+  .col-size {
+    width: 95px;
+  }
 
-    .col-action {
-      width: 130px;
-    }
+  .col-action {
+    width: 130px;
+  }
 
-    td {
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   }
 }
 
 /* Footer */
 
 .footer {
-    background: $gray-light;
-    color: $gray;
-    padding: 50px 0;
+  background: $gray-light;
+  color: $gray;
+  padding: 50px 0;
 
-    .footer-logo {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-    }
-    .copyright {
-        font-size: 1.3rem;
-        font-weight: 300;
-    }
+  .footer-logo {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  .copyright {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
 }
 .page-dashboard {
-    .footer {
-        margin-top: -30px;
-    }
+  .footer {
+    margin-top: -30px;
+  }
 }
 
 /* Page: HR Vacancies */
 .content {
-    & > .view-hr-vacancies {
-        @extend .view-hr-documents;
+  & > .view-hr-vacancies {
+    @extend .view-hr-documents;
 
-        .view-filters {
-            .views-widget {
-                width: 40%;
-            }
-        }
-        .views-exposed-widget {
-            @include clearfix;
-        }
-        .views-submit-button {
-            border-top: 1px solid $gray-light;
-            margin-top: 20px;
-
-            .form-submit {
-                margin-top: 10px;
-            }
-        }
-        .view-content {
-            font-size: 1.3rem;
-        }
-        .views-row {
-            @include clearfix;
-
-            margin: 0 -20px;
-            padding: 20px;
-
-            & > .views-field:first-of-type {
-                .field-content {
-                    color: $brand-primary;
-                }
-            }
-        }
-        .views-row-odd {
-            background: $gray-lighter;
-            border-top: 1px solid $gray-light;
-            border-bottom: 1px solid $gray-light;
-        }
-        .field-content {
-            margin-top: 10px;
-
-            .btn {
-                background: none;
-                padding: 0;
-                color: $brand-primary;
-            }
-        }
-        .vacancy-wrapper {
-            margin: 0;
-
-            &:last-of-type {
-                text-align: right;
-                float: right;
-
-                .field-content {
-                    margin-top: 0;
-                }
-            }
-        }
-
-        .fieldset-legend {
-            margin-left: -6px;
-        }
-        .fieldset-title {
-            color: $gray;
-            font-size: 1.3rem;
-            margin-left: 5px;
-        }
-        fieldset {
-            padding: 0;
-            border: 0;
-            margin-top: 20px;
-        }
-        .fieldset-wrapper {
-            margin-top: 20px;
-            background: $crm-gray-light-alt;
-            padding: 15px 20px;
-
-            .views-field {
-                margin-bottom: 15px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-            .views-label {
-                width: 16.6%;
-                display: inline-block;
-            }
-        }
+    .view-filters {
+      .views-widget {
+        width: 40%;
+      }
     }
+    .views-exposed-widget {
+      @include clearfix;
+    }
+    .views-submit-button {
+      border-top: 1px solid $gray-light;
+      margin-top: 20px;
+
+      .form-submit {
+        margin-top: 10px;
+      }
+    }
+    .view-content {
+      font-size: 1.3rem;
+    }
+    .views-row {
+      @include clearfix;
+
+      margin: 0 -20px;
+      padding: 20px;
+
+      & > .views-field:first-of-type {
+        .field-content {
+          color: $brand-primary;
+        }
+      }
+    }
+    .views-row-odd {
+      background: $gray-lighter;
+      border-top: 1px solid $gray-light;
+      border-bottom: 1px solid $gray-light;
+    }
+    .field-content {
+      margin-top: 10px;
+
+      .btn {
+        background: none;
+        padding: 0;
+        color: $brand-primary;
+      }
+    }
+    .vacancy-wrapper {
+      margin: 0;
+
+      &:last-of-type {
+        text-align: right;
+        float: right;
+
+        .field-content {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .fieldset-legend {
+      margin-left: -6px;
+    }
+    .fieldset-title {
+      color: $gray;
+      font-size: 1.3rem;
+      margin-left: 5px;
+    }
+    fieldset {
+      padding: 0;
+      border: 0;
+      margin-top: 20px;
+    }
+    .fieldset-wrapper {
+      margin-top: 20px;
+      background: $crm-gray-light-alt;
+      padding: 15px 20px;
+
+      .views-field {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .views-label {
+        width: 16.6%;
+        display: inline-block;
+      }
+    }
+  }
 }
 
 /* Print leave report */
 .page-print-leave-report {
-    .view-absence-entitlement {
-        margin: 0;
-        padding: 0;
-    }
-    .table-responsive {
-    }
-    .entitlement-date-row + tr {
-        border-top: 1px solid $gray-light;
-    }
+  .view-absence-entitlement {
+    margin: 0;
+    padding: 0;
+  }
+  .table-responsive {
+  }
+  .entitlement-date-row + tr {
+    border-top: 1px solid $gray-light;
+  }
 }
 
 /* hide slider nav arrows when inactive */
 .jcarousel-container [disabled] {
-    display: none;
+  display: none;
 }
 
 /* Styling the exposed filters on reports page. */
 #edit-absence-date-filter-wrapper,
 #edit-between-date-filter-wrapper {
   .form-inline {
-    .form-control {
-      display: inline-block;
-      width: auto;
-      vertical-align: middle;
-    }
-    .form-group {
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
+  .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
   }
 }
 

@@ -1178,6 +1178,11 @@ form {
       margin-bottom: 0;
       vertical-align: middle;
     }
+
+    header.form-group {
+      display: block;
+      margin-bottom: 1em;
+    }
   }
 }
 

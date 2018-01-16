@@ -423,46 +423,10 @@ h2.pane-title {
 
 }
 
-/* Alerts/Messages */
+/* Messages */
 
 #messages {
   padding: 15px 0 0;
-}
-.alert {
-  padding: 20px;
-  margin-bottom: 20px;
-  color: $light;
-  position: relative;
-
-  button {
-    color: $gray-dark !important;
-    margin-right: 10px;
-
-  }
-  .close {
-    color: $light !important;
-    border: 0;
-    background: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-weight: bold;
-    line-height: 1;
-    font-size: 2.2rem;
-    padding: 0;
-  }
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-.alert-danger {
-  background: $brand-danger;
-}
-.alert-success {
-  background: $brand-success;
-}
-.alert-warning {
-  background: $brand-warning;
 }
 
 /* Modal: My details, Emergency contact */

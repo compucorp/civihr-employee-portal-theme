@@ -1,0 +1,15 @@
+.alert {
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  button:not(.close) {
+    color: $gray-dark !important;
+    margin-right: 10px;
+  }
+
+  .close {
+    text-shadow: none;
+  }
+}

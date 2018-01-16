@@ -6,6 +6,8 @@
 $crm-box-shadow-global: 0 3px 10px 0 rgba(0, 0, 0, 0.035), 0 4px 8px 0 rgba(0, 0, 0, 0.035) !default;
 $crm-header-height:     60px !default;
 
+$alert-border-color: transparent;
+
 // Global values
 // -----------------------------------------------------------------------------
 
@@ -198,3 +200,27 @@ $crm-wizard-primary-color: #767b8e;
 $crm-wizard-secondary-color : #42afcb;
 $crm-wizard-active-bg-color: #E9EDF3;
 $crm-wizard-active-font-color: $crm-wizard-secondary-color;
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+$alert-padding:        19px; // 19px is used since the border adds 1px and makes 20px in total
+$alert-border-radius:  0;
+
+$alert-success-bg:     $brand-success;
+$alert-success-text:   $light;
+$alert-success-border: $alert-border-color;
+
+$alert-info-bg:        $brand-primary;
+$alert-info-text:      $light;
+$alert-info-border:    $alert-border-color;
+
+$alert-warning-bg:     $brand-warning;
+$alert-warning-text:   $light;
+$alert-warning-border: $alert-border-color;
+
+$alert-danger-bg:      $brand-danger;
+$alert-danger-text:    $light;
+$alert-danger-border:  $alert-border-color;
+
+$close-color:          $light;

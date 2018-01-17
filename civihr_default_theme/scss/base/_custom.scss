@@ -249,18 +249,14 @@ body {
   position: relative;
 }
 
-/**
- * Vacancy list view page default styling
- */
+// Vacancy list view page default styling
 .vacancy-wrapper {
   float: left;
   margin: 1%;
   width: 18%;
 }
 
-/**
- * Views exposed form styling
- */
+// Views exposed form styling
 @mixin exposed-form-default-style($width) {
   display: block;
   float: none;
@@ -275,10 +271,8 @@ body {
   }
 }
 
-/**
- * Customization of the standard Bootstrap form group
- * This version has a smaller gap between columns (label and field)
- */
+// Customization of the standard Bootstrap form group
+// This version has a smaller gap between columns (label and field)
 .form-horizontal {
 
   .form-group--smaller-gutter {
@@ -300,9 +294,7 @@ body {
   }
 }
 
-/**
- * Manager AJAX filters block / inline settings
- */
+// Manager AJAX filters block / inline settings
 .btn-custom-block {
 
   @media screen and (min-width: $screen-tablet) {
@@ -315,7 +307,7 @@ body {
 // Author: Cezar Derevlean
 // --------------------------------
 
-/* Overwrite inherited styles */
+// Overwrite inherited styles
 
 .views-exposed-form .views-exposed-widget {
   padding: 0;
@@ -325,7 +317,7 @@ body {
   margin: 0;
 }
 
-/* Helpers */
+// Helpers
 
 .relative {
   position: relative;
@@ -355,7 +347,7 @@ body {
   float: none;
 }
 
-/* Lists */
+// Lists
 
 ul {
   list-style: none;
@@ -363,7 +355,7 @@ ul {
   padding: 0;
 }
 
-/* Links */
+// Links
 
 a {
   color: $brand-primary;
@@ -380,7 +372,7 @@ a {
   }
 }
 
-/* Headings */
+// Headings
 
 .block__title {
   padding: 0 15px;
@@ -416,7 +408,7 @@ h2.pane-title {
   padding: 0;
 }
 
-/* Selects */
+// Selects
 
 .hasCustomSelect {
   z-index: 10;
@@ -447,7 +439,7 @@ h2.pane-title {
 
 }
 
-/* Alerts/Messages */
+// Alerts/Messages
 
 #messages {
   padding: 15px 0 0;
@@ -494,7 +486,7 @@ h2.pane-title {
   background: $brand-warning;
 }
 
-/* Modal: My details, Emergency contact */
+// Modal: My details, Emergency contact
 
 .modal-body article {
   margin: 0 auto;
@@ -611,7 +603,7 @@ h2.pane-title {
   }
 }
 
-/* Splitters */
+// Splitters
 
 .vertical-splitter {
   border-left: 1px solid $gray-light;
@@ -626,7 +618,7 @@ h2.pane-title {
   padding-top: 20px;
 }
 
-/* Buttons */
+// Buttons
 
 .btn {
   @include button-size(0.7rem, 1.1rem, 1.3rem, $line-height-base, $border-radius-base);
@@ -661,7 +653,7 @@ h2.pane-title {
   }
 }
 
-/* Dropdowns */
+// Dropdowns
 
 .dropdown-menu {
   padding: 0;
@@ -680,7 +672,7 @@ h2.pane-title {
   }
 }
 
-/* Forms */
+// Forms
 
 form {
 
@@ -699,10 +691,6 @@ form {
 
   margin: 0 0 20px 0;
   position: relative;
-
-  label {
-    /*display: none;*/
-  }
 
   .form-item {
     margin-bottom: 0;
@@ -733,13 +721,13 @@ form {
 }
 
 
-/* Main / Dashboard */
+// Main / Dashboard
 
 .main {
   background: $gray-light;
 }
 
-/* Panels / Dashboard Carousel */
+// Panels / Dashboard Carousel
 
 .pane-block,
 .view {
@@ -829,7 +817,7 @@ form {
   }
 }
 
-/* My details */
+// My details
 
 .profile-image {
   border-radius: 50%;
@@ -903,7 +891,7 @@ form {
   }
 }
 
-/* Absencies */
+// Absencies
 
 .block-civihr-employee-portal {
   text-align: right;
@@ -1041,7 +1029,7 @@ form {
 
 
 // ## TEMPORARY ##
-/* Manager absence approval */
+// Manager absence approval
 .pane-views-approvals-block-1 {
   position: relative;
 }
@@ -1107,7 +1095,7 @@ form {
   }
 }
 
-/* Footer */
+// Footer
 
 .footer {
   background: $gray-light;
@@ -1132,7 +1120,7 @@ form {
   }
 }
 
-/* Page: HR Vacancies */
+// Page: HR Vacancies
 .content {
 
   & > .view-hr-vacancies {
@@ -1243,7 +1231,7 @@ form {
   }
 }
 
-/* Print leave report */
+// Print leave report
 .page-print-leave-report {
   .view-absence-entitlement {
     margin: 0;
@@ -1255,12 +1243,12 @@ form {
   }
 }
 
-/* hide slider nav arrows when inactive */
+// Hide slider nav arrows when inactive
 .jcarousel-container [disabled] {
   display: none;
 }
 
-/* Styling the exposed filters on reports page. */
+// Styling the exposed filters on reports page.
 #edit-absence-date-filter-wrapper,
 #edit-between-date-filter-wrapper {
 

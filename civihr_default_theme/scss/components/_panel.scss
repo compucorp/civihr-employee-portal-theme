@@ -152,11 +152,13 @@ form {
     padding: 0;
     position: absolute;
     right: 20px;
-    top: 17px;
+    top: 13px;
 
     > [class*="chr_panel__toolbar__"] {
       display: inline-block;
+      line-height: 34px;
       position: static;
+      vertical-align: middle;
     }
 
     > .chr_panel__toolbar__filter {
@@ -191,15 +193,18 @@ form {
 .chr_panel__toolbar__filter {
 
   .btn.input-group-addon {
+    border: 0;
+    box-shadow: none;
     position: absolute;
-    top: 4px;
-    right: 2px;
-    padding: 6px;
+    right: 0;
+    padding: 0;
     font-size: 1.1rem;
-    line-height: 1;
+    line-height: 34px;
     background: none;
     color: $crm-color-neutral;
     cursor: default;
+    z-index: 4;
+    width: 34px;
   }
 
   .form-control {
@@ -212,12 +217,8 @@ form {
   }
 
   @media(min-width: $screen-sm-min) {
-    .btn.input-group-addon {
-      top: 0;
-    }
-
     .form-control {
-      padding: 2px 8px;
+      padding: 2px 34px 2px 8px
     }
   }
 }

@@ -181,3 +181,15 @@
     }
   }
 }
+
+#reportPivotTableConfiguration {
+  @media (max-width: $screen-sm-max) {
+    .form-item:first-child {
+      padding-left: 0;
+    }
+
+    input[type='button'] {
+      margin-top: 1em;
+    }
+  }
+}

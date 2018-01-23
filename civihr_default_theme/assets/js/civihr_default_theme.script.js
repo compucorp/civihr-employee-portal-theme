@@ -53,7 +53,7 @@
       addVerticalLineInCustomizeOnboardingPage();
       applyCustomSelectOnRadioClick();
       handleWebformCalendar();
-      hideSSNLabelOnCheckboxClick();
+      hideSSNFieldOnSkipCheckboxClick();
       removeTextFromCarouselPager();
       Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
       Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
@@ -275,8 +275,8 @@
   /**
    * Hide the SSN Label of Onboarding page when the checkbox is checked
    */
-  function hideSSNLabelOnCheckboxClick () {
-    var ssnCheckbox = $('.onboarding_wizard_payroll_ssin_checkbox input.form-checkbox');
+  function hideSSNFieldOnSkipCheckboxClick () {
+    var ssnCheckbox = $('.onboarding_wizard_payroll_skip_checkbox input.form-checkbox');
     var ssnLabel = $('.onboarding_wizard_payroll_ssin_textfield');
 
     // set initial state of the label, based on checkbox's value

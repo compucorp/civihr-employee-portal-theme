@@ -54,8 +54,8 @@ form {
 
 .chr_panel__header--with-border {
   border-bottom: 1px solid $gray-light;
-  padding-bottom: 20px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .chr_panel__header--w-actions {
@@ -72,7 +72,8 @@ form {
 
   .form-type-select {
     @include fa('\f0d7');
-    display: inline-table; // Safari *shrugs*
+
+    display: inline-table; // Fix for Safari
     padding: 0;
 
     &:before {
@@ -193,18 +194,18 @@ form {
 .chr_panel__toolbar__filter {
 
   .btn.input-group-addon {
+    background: none;
     border: 0;
     box-shadow: none;
-    position: absolute;
-    right: 0;
-    padding: 0;
-    font-size: 1.1rem;
-    line-height: $input-height-base;
-    background: none;
     color: $crm-color-neutral;
     cursor: default;
-    z-index: 4;
+    font-size: 1.1rem;
+    line-height: $input-height-base;
+    padding: 0;
+    position: absolute;
+    right: 0;
     width: $input-height-base;
+    z-index: 4;
   }
 
   .form-control {
@@ -222,7 +223,6 @@ form {
     }
   }
 }
-
 
 
 /* [modifier] Panel containing user's details */

@@ -2,6 +2,15 @@
 // --------------------------------------------------
 
 .pvtTable-civi {
+  table {
+    table-layout: fixed;
+    width: 100%;
+
+    td {
+      padding: 8px 20px;
+    }
+  }
+
   .pvtAxisContainer {
     width: 80%;
 
@@ -183,6 +192,25 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+
+    .report-field-columns table {
+      bottom: 0;
+      min-height: 80px;
+      position: absolute;
+      width: calc(100% - 30px);
+    }
+
+    .report-fields-selection table {
+      display: block;
+      max-height: 50vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .report-field-rows table {
+      min-height: 50vh;
     }
   }
 

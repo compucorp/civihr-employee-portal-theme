@@ -152,11 +152,11 @@ form {
     padding: 0;
     position: absolute;
     right: 20px;
-    top: 13px;
+    top: 12px;
 
     > [class*="chr_panel__toolbar__"] {
       display: inline-block;
-      line-height: 34px;
+      line-height: $input-height-base;
       position: static;
       vertical-align: middle;
     }
@@ -199,12 +199,12 @@ form {
     right: 0;
     padding: 0;
     font-size: 1.1rem;
-    line-height: 34px;
+    line-height: $input-height-base;
     background: none;
     color: $crm-color-neutral;
     cursor: default;
     z-index: 4;
-    width: 34px;
+    width: $input-height-base;
   }
 
   .form-control {
@@ -218,7 +218,7 @@ form {
 
   @media(min-width: $screen-sm-min) {
     .form-control {
-      padding: 2px 34px 2px 8px
+      padding: 2px $input-height-base 2px 8px
     }
   }
 }

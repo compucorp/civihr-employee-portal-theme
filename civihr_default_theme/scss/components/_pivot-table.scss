@@ -180,6 +180,18 @@
       }
     }
   }
+
+  @media (max-width: $screen-sm-max) {
+    .report-field-columns,
+    .report-field-rows,
+    .report-function.form-group {
+      margin: 15px;
+    }
+
+    .report-field-columns {
+      padding: 0;
+    }
+  }
 }
 
 #reportPivotTableConfiguration {

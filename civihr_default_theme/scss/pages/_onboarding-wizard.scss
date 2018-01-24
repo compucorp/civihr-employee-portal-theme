@@ -28,6 +28,17 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     box-shadow: none;
   }
 
+  .chr_onboarding-wizard_remind-me-later {
+    border: none;
+    float: none;
+    margin-top: 15px;
+
+    &:hover {
+      background-color: $gray;
+      color: $crm-white !important;
+    }
+  }
+
   .crm_wizard__mobile {
     display: none;
   }

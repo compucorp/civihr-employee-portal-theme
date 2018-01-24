@@ -278,10 +278,11 @@
   function hideSSNFieldOnSkipRadioChange () {
     var skipRadio = $('.onboarding_wizard_payroll_skip_radio input.form-radio');
     var ssnField = $('.onboarding_wizard_payroll_ssin_textfield');
-    var skipStep = 1;
+    var addLater = '1';
+    var selected = $('.onboarding_wizard_payroll_skip_radio input.form-radio:checked');
 
     // set initial state of the label, based on radio button value
-    skipRadio.val() === skipStep ? ssnField.hide() : ssnField.show();
+    selected.val() === addLater ? ssnField.hide() : ssnField.show();
     skipRadio.change(function () {
       ssnField.toggle();
     });

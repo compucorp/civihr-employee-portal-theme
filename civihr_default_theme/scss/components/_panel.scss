@@ -54,8 +54,8 @@ form {
 
 .chr_panel__header--with-border {
   border-bottom: 1px solid $gray-light;
-  padding-bottom: 20px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .chr_panel__header--w-actions {
@@ -72,7 +72,8 @@ form {
 
   .form-type-select {
     @include fa('\f0d7');
-    display: inline-table; // Safari *shrugs*
+
+    display: inline-table; // Fix for Safari
     padding: 0;
 
     &:before {
@@ -152,11 +153,13 @@ form {
     padding: 0;
     position: absolute;
     right: 20px;
-    top: 17px;
+    top: 12px;
 
     > [class*="chr_panel__toolbar__"] {
       display: inline-block;
+      line-height: $input-height-base;
       position: static;
+      vertical-align: middle;
     }
 
     > .chr_panel__toolbar__filter {
@@ -191,15 +194,18 @@ form {
 .chr_panel__toolbar__filter {
 
   .btn.input-group-addon {
-    position: absolute;
-    top: 4px;
-    right: 2px;
-    padding: 6px;
-    font-size: 1.1rem;
-    line-height: 1;
     background: none;
+    border: 0;
+    box-shadow: none;
     color: $crm-color-neutral;
     cursor: default;
+    font-size: 1.1rem;
+    line-height: $input-height-base;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: $input-height-base;
+    z-index: 4;
   }
 
   .form-control {
@@ -212,16 +218,11 @@ form {
   }
 
   @media(min-width: $screen-sm-min) {
-    .btn.input-group-addon {
-      top: 0;
-    }
-
     .form-control {
-      padding: 2px 8px;
+      padding: 2px $input-height-base 2px 8px
     }
   }
 }
-
 
 
 /* [modifier] Panel containing user's details */

@@ -741,6 +741,10 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 
     $wrapperAttr = CRM_Utils_Array::value('#wrapper_attributes', $value, []);
     $wrappperClasses = CRM_Utils_Array::value('class', $wrapperAttr, []);
+
+    // Without this the prefix will not be hidden by conditionals
+    $wrappperClasses[] = 'webform-component--' . str_replace('_', '-', $key);
+
     $wrappperClasses = implode(' ', $wrappperClasses);
     unset($fields_structure[$key]['#wrapper_attributes']); // once is enough
 

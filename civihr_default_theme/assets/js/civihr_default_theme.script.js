@@ -273,7 +273,7 @@
   }
 
   /**
-   * Hide the SSN Label of Onboarding page when the checkbox is checked
+   * Hide the SSN field of Onboarding page when the radio button is "Add Later"
    */
   function hideSSNFieldOnSkipRadioChange () {
     var skipRadio = $('.onboarding_wizard_payroll_skip_radio input.form-radio');

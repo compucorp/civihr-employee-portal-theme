@@ -53,7 +53,7 @@
       addVerticalLineInCustomizeOnboardingPage();
       applyCustomSelectOnRadioClick();
       handleWebformCalendar();
-      hideSSNLabelOnCheckboxClick();
+      hideSSNFieldOnSkipRadioChange();
       removeTextFromCarouselPager();
       Drupal.civihr_theme.createDragAndDrop('.onboarding_wizard_profile_pic_upload_image input[type="file"]');
       Drupal.civihr_theme.createDragAndDrop('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper input[type="file"]');
@@ -273,16 +273,18 @@
   }
 
   /**
-   * Hide the SSN Label of Onboarding page when the checkbox is checked
+   * Hide the SSN field of Onboarding page when the radio button is "Add Later"
    */
-  function hideSSNLabelOnCheckboxClick () {
-    var ssnCheckbox = $('.onboarding_wizard_payroll_ssin_checkbox input.form-checkbox');
-    var ssnLabel = $('.onboarding_wizard_payroll_ssin_textfield');
+  function hideSSNFieldOnSkipRadioChange () {
+    var skipRadio = $('.onboarding_wizard_payroll_skip_radio input.form-radio');
+    var ssnField = $('.onboarding_wizard_payroll_ssin_textfield');
+    var addLater = '1';
+    var selected = $('.onboarding_wizard_payroll_skip_radio input.form-radio:checked');
 
-    // set initial state of the label, based on checkbox's value
-    ssnCheckbox.is(':checked') ? ssnLabel.hide() : ssnLabel.show();
-    ssnCheckbox.click(function () {
-      ssnLabel.toggle();
+    // set initial state of the label, based on radio button value
+    selected.val() === addLater ? ssnField.hide() : ssnField.show();
+    skipRadio.change(function () {
+      ssnField.toggle();
     });
   }
 

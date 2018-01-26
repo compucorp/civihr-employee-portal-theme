@@ -2,8 +2,21 @@
 // --------------------------------------------------
 
 .pvtTable-civi {
+  table {
+    table-layout: fixed;
+    width: 100%;
+
+    td {
+      padding: 8px 20px;
+    }
+  }
+
   .pvtAxisContainer {
     width: 80%;
+
+    .instructions {
+      margin: 0;
+    }
   }
 
   .pvtTable {
@@ -11,9 +24,9 @@
 
     th,
     td {
-      padding: 10px;
-      font-size: 13px;
       border-color: $gray-light;
+      font-size: 13px;
+      padding: 10px;
     }
 
     th {
@@ -34,8 +47,8 @@
     .pvtVal,
     .pvtTotal,
     .pvtGrandTotal {
-      border-right: 0;
       border-left: 0;
+      border-right: 0;
       text-align: right;
     }
 
@@ -56,18 +69,18 @@
 
   li {
     span.pvtAttr {
-      padding: 0 15px;
-      line-height: 33px;
-      color: $crm-gray-light-blue;
       background-color: $gray-lighter;
-      border-radius: 0;
       border: 1px solid $light-gray;
+      border-radius: 0;
+      color: $crm-gray-light-blue;
+      line-height: 33px;
+      padding: 0 15px;
     }
 
     .pvtTriangle {
       color: $crm-gray-light-blue;
-      margin-left: 10px;
       margin-bottom: 2px;
+      margin-left: 10px;
     }
   }
 
@@ -77,16 +90,36 @@
     padding: 20px;
   }
 
+  .pvtRendererArea {
+    display: block;
+
+    .c3 {
+      height: 0;
+      padding: 0 0 100% 0;
+      position: relative;
+      width: 100%;
+    }
+
+    .c3 svg {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
   .pvtVals,
   .pvtAxisContainer.pvtRows {
     border-left: 0;
   }
 
   .pvtUi {
+
     > tbody,
     .pvtAxisContainer.pvtHorizList {
-      border-top: 0;
       border-right: 0;
+      border-top: 0;
     }
 
     tr:nth-child(2) {
@@ -99,8 +132,8 @@
   }
 
   .pvtFilterBox {
-    border-radius: 0;
     border: 1px solid $light-gray;
+    border-radius: 0;
     padding: 10px;
 
     > h4,
@@ -109,8 +142,8 @@
     }
 
     .pvtFilterSelectAllWrap {
-      color: $gray-darker;
       border-bottom: 1px solid $light-gray;
+      color: $gray-darker;
     }
 
     label {
@@ -120,6 +153,7 @@
     button {
       @extend .btn;
       @extend .btn-primary;
+
       margin: 10px 0 0 0;
     }
 
@@ -133,14 +167,74 @@
     }
 
     .form-text {
-      position: relative;
-      height: 25px;
-      padding: 4px 20px 4px 10px;
       @include placeholder-color($gray);
 
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVDhP5ZI9C4MwEIb7//+BEDgICA6C4OQgBJy6dRIEB6EgCNkEJ4e3iT2oHzH9wHbpAwfyJvfkJDnhYH4kHDVKlSAigSAQoCiBKjVGXvaxFXZnxBQYkSlBICII+22K4jM63rbHSthCSdsskVX9Y6KxR5XJSSpVy6GbpbBKp6aw0BzM0ShCe1iKihMXC6EuQtMQwukzPFu3fFd4+C+/cimUNxy6WQkNnmdzL3NYPfDmLVuhZf2wZYz80qDkKX1St3CXAfVMqq4cz3hTaGEpmctxDPmB0M/fCYEbAwZYyVKYcroAAAAASUVORK5CYII=);
       background-position: 99% 3px;
       background-repeat: no-repeat;
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVDhP5ZI9C4MwEIb7//+BEDgICA6C4OQgBJy6dRIEB6EgCNkEJ4e3iT2oHzH9wHbpAwfyJvfkJDnhYH4kHDVKlSAigSAQoCiBKjVGXvaxFXZnxBQYkSlBICII+22K4jM63rbHSthCSdsskVX9Y6KxR5XJSSpVy6GbpbBKp6aw0BzM0ShCe1iKihMXC6EuQtMQwukzPFu3fFd4+C+/cimUNxy6WQkNnmdzL3NYPfDmLVuhZf2wZYz80qDkKX1St3CXAfVMqq4cz3hTaGEpmctxDPmB0M/fCYEbAwZYyVKYcroAAAAASUVORK5CYII=);
+      height: 25px;
+      padding: 4px 20px 4px 10px;
+      position: relative;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .row {
+      display: table;
+      margin-bottom: 15px;
+
+      & > [class*='col-'] {
+        display: table-cell;
+        float: none;
+        vertical-align: top;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .report-field-columns table {
+      bottom: 0;
+      min-height: 80px;
+      position: absolute;
+      width: calc(100% - 30px);
+    }
+
+    .report-fields-selection table {
+      display: block;
+      max-height: 50vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .report-field-rows table {
+      min-height: 50vh;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .report-field-columns,
+    .report-field-rows,
+    .report-function.form-group {
+      margin: 15px;
+    }
+
+    .report-field-columns {
+      padding: 0;
+    }
+  }
+}
+
+#reportPivotTableConfiguration {
+  @media (max-width: $screen-sm-max) {
+    .form-item:first-child {
+      padding-left: 0;
+    }
+
+    input[type='button'] {
+      margin-top: 1em;
     }
   }
 }

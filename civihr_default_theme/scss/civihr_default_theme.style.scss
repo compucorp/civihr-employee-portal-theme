@@ -63,7 +63,7 @@
 // Bootstrap components w/ JavaScript
 // -----------------------------------------------------------------------------
 @import "bootstrap/modals";
-//@import "bootstrap/tooltip";
+@import "bootstrap/tooltip";
 //@import "bootstrap/popovers";
 //@import "bootstrap/carousel";
 
@@ -141,3 +141,6 @@
 
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/prefix";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wizard";
+
+// Overrides
+@import "overrides/**/*";

@@ -494,19 +494,25 @@ function _build_cog_menu_markup() {
 function _get_cog_menu_items() {
   $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
 
+  $options = ['html' => TRUE];
+
   return [
     [
       'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', ['html' => TRUE]),
+      'link' => l(t('Manage HR Resources'), 'admin/content', $options),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', ['html' => TRUE]),
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', $options),
       'separator' => TRUE,
     ],
     [
       'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage Users'), 'admin/people', ['html' => TRUE]),
+      'link' => l(t('Manage Users'), 'admin/people', $options),
+    ],
+    [
+      'permissions' => ['customize welcome wizard'],
+      'link' => l(t('Customize Welcome Wizard'), 'customize-onboarding-wizard', $options),
     ],
   ];
 }
@@ -735,6 +741,10 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 
     $wrapperAttr = CRM_Utils_Array::value('#wrapper_attributes', $value, []);
     $wrappperClasses = CRM_Utils_Array::value('class', $wrapperAttr, []);
+
+    // Without this the prefix will not be hidden by conditionals
+    $wrappperClasses[] = 'webform-component--' . str_replace('_', '-', $key);
+
     $wrappperClasses = implode(' ', $wrappperClasses);
     unset($fields_structure[$key]['#wrapper_attributes']); // once is enough
 
@@ -841,7 +851,7 @@ function _add_unique_class_to_menu_link(&$link) {
 function _hide_admin_menu_link_to_basic_users(&$link) {
   $adminAccess = user_access("administer CiviCRM");
   $localOptions = $link['#localized_options'];
-  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_civihr-admin:civicrm';
+  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_hr-admin:civicrm';
 
   if ($isAdminLink && !$adminAccess) {
     $link['#attributes']['class'][] = 'hidden';

@@ -741,6 +741,10 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
 
     $wrapperAttr = CRM_Utils_Array::value('#wrapper_attributes', $value, []);
     $wrappperClasses = CRM_Utils_Array::value('class', $wrapperAttr, []);
+
+    // Without this the prefix will not be hidden by conditionals
+    $wrappperClasses[] = 'webform-component--' . str_replace('_', '-', $key);
+
     $wrappperClasses = implode(' ', $wrappperClasses);
     unset($fields_structure[$key]['#wrapper_attributes']); // once is enough
 
@@ -847,7 +851,7 @@ function _add_unique_class_to_menu_link(&$link) {
 function _hide_admin_menu_link_to_basic_users(&$link) {
   $adminAccess = user_access("administer CiviCRM");
   $localOptions = $link['#localized_options'];
-  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_civihr-admin:civicrm';
+  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_hr-admin:civicrm';
 
   if ($isAdminLink && !$adminAccess) {
     $link['#attributes']['class'][] = 'hidden';

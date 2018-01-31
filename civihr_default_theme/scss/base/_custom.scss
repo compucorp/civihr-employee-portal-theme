@@ -415,11 +415,21 @@ h2.pane-title {
 }
 
 .customSelect {
-  @extend .form-text;
   @include fa('\f0d7');
 
+  border: 1px solid $input-border;
+  color: $gray;
+  font-size: 1.3rem;
+  line-height: 1.5;
   margin: 0;
+  padding: 7px 10px;
   position: relative;
+  width: 100%;
+
+  &:focus {
+    border-color: $brand-primary;
+    outline: 0 none;
+  }
 
   &:before {
     position: absolute;

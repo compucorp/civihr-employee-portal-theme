@@ -446,7 +446,15 @@ h2.pane-title {
     top: 0;
     width: 0;
   }
+}
 
+.customSelectInner {
+  display: block !important;
+  overflow: hidden;
+  padding-right: 38px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto !important;
 }
 
 // Alerts/Messages

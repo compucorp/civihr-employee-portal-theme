@@ -6,4 +6,4 @@
 .DS_Store
 bower_components
 node_modules
-extensions/compass_radix
+**/extensions/compass_radix

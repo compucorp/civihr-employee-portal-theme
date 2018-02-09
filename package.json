@@ -1,4 +1,14 @@
 {
+  "name": "civihr-default-theme",
+  "description": "CiviHR employee portal custom Drupal theme",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/compucorp/civihr-employee-portal-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/compucorp/civihr-employee-portal-theme/issues"
+  },
   "scripts": {
     "precommit": "lint-staged"
   },

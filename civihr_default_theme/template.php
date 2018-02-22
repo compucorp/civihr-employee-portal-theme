@@ -406,6 +406,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
   // Adds the theme path to Javascript variable.
   $path = drupal_get_path('theme', 'civihr_default_theme');
   drupal_add_js(array('civihr_default_theme' => array('path' => $path)), 'setting');
+  drupal_add_library('system', 'ui.datepicker');
 
   // Add custom copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {

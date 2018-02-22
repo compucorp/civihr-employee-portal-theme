@@ -21,11 +21,11 @@
 
 
 /**
- * Staff Directory filters, HR Resources filters
+ * Staff Directory filters, HR Resources filters, Users List
  */
+#views-exposed-form-users-list-page,
 #views-exposed-form-civihr-staff-directory-page,
 #views-exposed-form-hr-documents-hr-resources {
-
   .form-item {
     margin-bottom: 20px;
   }
@@ -43,7 +43,34 @@
   }
 }
 
+#views-exposed-form-users-list-page {
+  .views-exposed-widget:not(:last-child) {
+    float: left;
+    width: 50%;
 
+    &:nth-child(odd) {
+      padding-right: 20px;
+    }
+  }
+
+  @media(max-width: $screen-sm-min) {
+    .views-exposed-widget:not(:last-child) {
+      width: 100%;
+
+      &:nth-child(odd) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+#views-form-users-list-page {
+  @media(max-width: $screen-sm-min) {
+    .form-submit {
+      margin-top: 20px;
+    }
+  }
+}
 
 /**
  * # TEMPORARY #
@@ -51,13 +78,12 @@
  * This is a reset of all the style applied by default by .container-inline-date
  */
 .civihr_container-inline-date--reset {
-
   > .container-inline-date {
     clear: initial;
 
     .date-padding {
-      padding: 0;
       float: initial;
+      padding: 0;
 
       .form-control {
         margin-right: 0;
@@ -89,7 +115,6 @@
 
   // Boostrap override
   &.form-horizontal {
-
     .control-label {
       font-weight: normal;
       text-align: left;
@@ -97,14 +122,12 @@
   }
 
   .civihr_form__fieldset {
-
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
 
   .form-actions {
-
     > .form-submit {
       padding: 0.8rem 6rem;
     }
@@ -119,7 +142,6 @@
   // Adds calendar icon, remove additional labels and help tips
   // and overrides bootstrap styles for internal elements
   .form-type-date-popup {
-
     .date-padding {
       position: relative;
 
@@ -164,14 +186,12 @@
     }
 
     &.select2-dropdown-open {
-
       .select2-arrow b {
         background-position: -18px 5px;
       }
     }
 
     &:not(.select2-dropdown-open) {
-
       .select2-arrow b {
         background-position: 0 5px;
       }
@@ -209,7 +229,6 @@
   // Fixes a IE9 bug with <span> containing block elements
   // that resulted in Bootstrap cols being misaligned
   .ie9 & {
-
     .field-prefix {
       display: none;
     }
@@ -217,7 +236,6 @@
 
   @media(min-width: $screen-sm-min) {
     .webform-datepicker {
-
       .form-item {
         margin-bottom: 0;
       }
@@ -248,13 +266,12 @@
   box-shadow: none;
 
   &.collapsed {
-
     > legend {
       margin-bottom: 0;
     }
 
     .fieldset-legend {
-      @include fa("\f054", 10);
+      @include fa('\f054', 10);
     }
   }
 
@@ -265,7 +282,7 @@
   }
 
   .fieldset-legend {
-    @include fa("\f078", 10);
+    @include fa('\f078', 10);
 
     background: none !important;
     font-size: 1.6rem;
@@ -310,7 +327,6 @@
   }
 
   .form-item {
-
     label {
       color: $gray-darker;
       float: left;
@@ -326,7 +342,6 @@
   }
 
   .form-type-select {
-
     .customSelect {
       display: block !important;
       overflow: auto;
@@ -335,7 +350,6 @@
   }
 
   .form-type-textarea {
-
     .form-textarea-wrapper {
       overflow: auto;
     }
@@ -363,7 +377,6 @@
 
 /* [modifier] Resets any margin/padding applied by default */
 .civihr_form--reset {
-
   .form-actions,
   .form-item {
     margin: 0;
@@ -373,9 +386,9 @@
 /* SSP Document form */
 #civihr-employee-portal-document-form {
   #drop-target {
+    background-color: #e8eef0;
+    border: 1px dashed #727e8a;
     box-shadow: none;
-    background-color: #E8EEF0;
-    border: 1px dashed #727E8A;
     color: #525966;
   }
 

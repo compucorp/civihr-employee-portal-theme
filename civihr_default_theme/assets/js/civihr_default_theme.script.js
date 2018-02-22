@@ -16,6 +16,7 @@
         Drupal.civihr_theme.applyCustomSelect();
         Drupal.civihr_theme.initMobileNav();
         Drupal.civihr_theme.onBoardingWizard();
+        usersListPage();
       });
 
       // on ajax complete (ie: when opening modals)
@@ -76,7 +77,7 @@
       dropHelper = 'Select Image';
     }
 
-    var dropLayer = inputFieldSelector+ '+.drop-zone-overlay';
+    var dropLayer = inputFieldSelector + '+.drop-zone-overlay';
     if (!$(dropLayer).length) {
       inputField.after('<div class="drop-zone-overlay">' + dropHelper + '</div>');
 
@@ -113,7 +114,7 @@
     });
   };
 
-  Drupal.civihr_theme.initMobileNav = function() {
+  Drupal.civihr_theme.initMobileNav = function () {
     var $header = $('.chr_header');
     var $nav = $header.find('.chr_header__nav');
 
@@ -168,15 +169,15 @@
     var onBoardingWizardImageDirectory = '../../' + Drupal.settings.civihr_default_theme.path + '/assets/images/onboarding_wizard/';
 
     if (!$('.onboarding-customize-logo').length) {
-      $('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper').before('<img class="onboarding-customize-logo" src="'+ onBoardingWizardImageDirectory +'logo-img.jpg"/>');
+      $('#edit-civihr-onboarding-organization-logo-fid-ajax-wrapper').before('<img class="onboarding-customize-logo" src="' + onBoardingWizardImageDirectory + 'logo-img.jpg"/>');
     }
 
     if (!$('.onboarding-customize-features').length) {
-      $('.form-item-civihr-onboarding-carousel-options').before('<img class="onboarding-customize-features" src="'+ onBoardingWizardImageDirectory +'/features-img.jpg"/>')
+      $('.form-item-civihr-onboarding-carousel-options').before('<img class="onboarding-customize-features" src="' + onBoardingWizardImageDirectory + '/features-img.jpg"/>');
     }
 
     if (!$('.onboarding-customize-welcome').length) {
-      $('.form-item-civihr-onboarding-intro-text').before('<img class="onboarding-customize-welcome" src="'+ onBoardingWizardImageDirectory +'/welcome-img.jpg"/>')
+      $('.form-item-civihr-onboarding-intro-text').before('<img class="onboarding-customize-welcome" src="' + onBoardingWizardImageDirectory + '/welcome-img.jpg"/>');
     }
   }
 
@@ -184,13 +185,13 @@
    * Add Vertical Line in Customize Onboarding Page
    */
   function addVerticalLineInCustomizeOnboardingPage () {
-    if(!$('.form-item-civihr-onboarding-welcome-text+hr').length) {
+    if (!$('.form-item-civihr-onboarding-welcome-text+hr').length) {
       $('.form-item-civihr-onboarding-welcome-text').after('<hr/>');
     }
-    if(!$('.form-item-civihr-onboarding-intro-text+hr').length) {
+    if (!$('.form-item-civihr-onboarding-intro-text+hr').length) {
       $('.form-item-civihr-onboarding-intro-text').after('<hr/>');
     }
-    if(!$('.form-item-civihr-onboarding-carousel-options+hr').length) {
+    if (!$('.form-item-civihr-onboarding-carousel-options+hr').length) {
       $('.form-item-civihr-onboarding-carousel-options').after('<hr/>');
     }
   }
@@ -224,14 +225,14 @@
       month: fullDate.getMonth() + 1,
       date: fullDate.getDate(),
       year: fullDate.getFullYear()
-    }
+    };
   }
 
   /**
    * Get values from Webform's SELECT input type calendar values and set it to
    * Native Datepicker
    */
-  function getWebformCalendarValues() {
+  function getWebformCalendarValues () {
     var day = $('#' + this.id + '-' + 'day').val();
     day = (day < 10 ? '0' : '') + day;
 
@@ -261,13 +262,13 @@
 
       $('body:not(.mobile) .mobile-webform-calendar').remove();
 
-      if(desktopCalendar.length) {
+      if (desktopCalendar.length) {
         desktopCalendar.each(getWebformCalendarValues);
-        desktopCalendar.datepicker("option", "dateFormat", "dd/mm/yy");
-        desktopCalendar.datepicker("option", "beforeShow", null);
-        desktopCalendar.datepicker("option", "changeMonth", true);
-        desktopCalendar.datepicker("option", "changeYear", true);
-        desktopCalendar.datepicker("option", "onSelect", setWebformCalendarValues);
+        desktopCalendar.datepicker('option', 'dateFormat', 'dd/mm/yy');
+        desktopCalendar.datepicker('option', 'beforeShow', null);
+        desktopCalendar.datepicker('option', 'changeMonth', true);
+        desktopCalendar.datepicker('option', 'changeYear', true);
+        desktopCalendar.datepicker('option', 'onSelect', setWebformCalendarValues);
       }
     }
   }
@@ -309,5 +310,22 @@
     $('#' + this.id + '-' + 'month').val(dateValues.month).trigger('change');
     $('#' + this.id + '-' + 'day').val(dateValues.date).trigger('change');
     $('#' + this.id + '-' + 'year').val(dateValues.year).trigger('change');
+  }
+
+  /**
+   * Do the stuff related to Users List Page
+   */
+  function usersListPage () {
+    var isUsersListPage = $('.page-users-list').length;
+
+    if (!isUsersListPage) {
+      return;
+    }
+
+    var calendarIcon = '<span class="input-group-addon pointer"><i class="fa fa-calendar"></i></span>';
+    $('#edit-access-min').datepicker();
+    $('#edit-access-min').after(calendarIcon);
+    $('#edit-access-max').datepicker();
+    $('#edit-access-max').after(calendarIcon);
   }
 })(jQuery);

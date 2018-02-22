@@ -24,7 +24,7 @@
   },
   "semistandard": {
     "globals": [
-      "CRM"
+      "CRM", "Drupal", "location"
     ]
   },
   "stylelint": {

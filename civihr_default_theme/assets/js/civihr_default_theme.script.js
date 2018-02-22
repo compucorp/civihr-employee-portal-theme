@@ -16,7 +16,7 @@
         Drupal.civihr_theme.applyCustomSelect();
         Drupal.civihr_theme.initMobileNav();
         Drupal.civihr_theme.onBoardingWizard();
-        usersListPage();
+        onUsersListPage();
       });
 
       // on ajax complete (ie: when opening modals)
@@ -114,6 +114,9 @@
     });
   };
 
+  /**
+   * Initialize navigation header for mobile
+   */
   Drupal.civihr_theme.initMobileNav = function () {
     var $header = $('.chr_header');
     var $nav = $header.find('.chr_header__nav');
@@ -313,9 +316,9 @@
   }
 
   /**
-   * Do the stuff related to Users List Page
+   * Users List Page realted modifications
    */
-  function usersListPage () {
+  function onUsersListPage () {
     var isUsersListPage = $('.page-users-list').length;
 
     if (!isUsersListPage) {

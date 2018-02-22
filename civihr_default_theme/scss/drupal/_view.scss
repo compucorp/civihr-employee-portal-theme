@@ -44,11 +44,11 @@
   > .view-content {
     @include clearfix;
 
-    background: #fff;
+    background: $crm-white;
   }
 
   > .view-filters {
-    background: #fff;
+    background: $crm-white;
     margin-bottom: 20px;
     padding: $panel-body-padding;
   }

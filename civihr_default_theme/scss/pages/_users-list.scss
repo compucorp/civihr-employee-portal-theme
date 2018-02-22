@@ -1,0 +1,37 @@
+.page-users-list {
+  #edit-access-min,
+  #edit-access-max {
+    &+.input-group-addon {
+      background-color: $crm_gray-light-alt;
+      border: 1px solid $crm-color-neutral;
+      bottom: 0;
+      color: $crm-wizard-font-color;
+      display: inline-block;
+      line-height: 20px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      width: 40px;
+    }
+  }
+
+  #edit-actions {
+    margin-bottom: 0;
+
+    #edit-actions-submit {
+      @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+
+      margin-right: 20px;
+    }
+
+    > a {
+      background: #767b8e;
+      border: 0;
+      color: #fff;
+      display: inline-block;
+      margin-left: 20px;
+      padding: 0.7rem 1.1rem;
+    }
+  }
+}

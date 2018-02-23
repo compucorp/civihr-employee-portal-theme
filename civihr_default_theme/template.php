@@ -508,8 +508,8 @@ function _get_cog_menu_items() {
       'separator' => TRUE,
     ],
     [
-      'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage Users'), 'admin/people', $options),
+      'permissions' => ['administer staff accounts'],
+      'link' => l(t('Manage Users'), 'users-list', $options),
     ],
     [
       'permissions' => ['customize welcome wizard'],

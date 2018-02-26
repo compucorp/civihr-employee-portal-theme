@@ -1,1 +1,9 @@
 *.DS_Store
+*.css.map
+*.codekit
+.idea
+.sass-cache
+.DS_Store
+bower_components
+node_modules
+**/extensions/compass_radix

@@ -93,6 +93,7 @@
     $('.modal-title', Drupal.CTools.Modal.modal).html(Drupal.CTools.Modal.currentSettings.loadingText);
     Drupal.CTools.Modal.modalContent(Drupal.CTools.Modal.modal, settings.modalOptions, settings.animation, settings.animationSpeed, settings.modalClass);
     $('#modalContent .modal-body').html(Drupal.theme(settings.throbberTheme));
+    $('#modal-content').addClass('ctools-modal-loading');
   };
 
   Drupal.CTools.Modal.dismiss = function() {

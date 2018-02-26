@@ -22,6 +22,8 @@ $light:               #ffffff !default; // well bg, text on dark bg hover
 $light-pale:          #c3cbd6 !default; // text on dark bg
 $light-gray:          #eeeded !default;
 
+$text-muted:          rgba($gray, 0.6);
+
 $crm-gray-light-alt:  #f0f1f4 !default; // carousel item bg, hr resource bg
 $crm-gray-light-blue: #757b8e !default; // scrollbar thumb, pivot table text
 $crm-gray-darker-alt: #404454 !default; // page title

@@ -406,6 +406,7 @@ function civihr_default_theme_preprocess_page(&$variables) {
   // Adds the theme path to Javascript variable.
   $path = drupal_get_path('theme', 'civihr_default_theme');
   drupal_add_js(array('civihr_default_theme' => array('path' => $path)), 'setting');
+  drupal_add_library('system', 'ui.datepicker');
 
   // Add custom copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {
@@ -507,8 +508,8 @@ function _get_cog_menu_items() {
       'separator' => TRUE,
     ],
     [
-      'permissions' => ["administer users", "access users overview"],
-      'link' => l(t('Manage Users'), 'admin/people', $options),
+      'permissions' => ['administer staff accounts'],
+      'link' => l(t('Manage Users'), 'users-list', $options),
     ],
     [
       'permissions' => ['customize welcome wizard'],

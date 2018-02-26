@@ -1,0 +1,11 @@
+.page-tasks-and-documents {
+  &.modal-open {
+    > [class*="modal-civihr-custom"] {
+      .modal-content {
+        .view-Tasks {
+          background: none;
+        }
+      }
+    }
+  }
+}

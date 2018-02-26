@@ -21,3 +21,12 @@
 .pointer {
   cursor: pointer !important;
 }
+
+.chr_divider {
+  margin: 0 5px;
+
+  @media(max-width: $screen-sm-min) {
+    display: block;
+    visibility: hidden;
+  }
+}

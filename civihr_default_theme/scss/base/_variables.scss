@@ -1,10 +1,10 @@
-@import url(//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+@import url('//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic');
 
 // Variables
 // -----------------------------------------------------------------------------
 
 $crm-box-shadow-global: 0 3px 10px 0 rgba(0, 0, 0, 0.035), 0 4px 8px 0 rgba(0, 0, 0, 0.035) !default;
-$crm-header-height:     60px !default;
+$crm-header-height: 60px !default;
 
 // Global values
 // -----------------------------------------------------------------------------
@@ -12,54 +12,54 @@ $crm-header-height:     60px !default;
 // Grays
 // -----------------------------------------------------------------------------
 
-$gray-dark:           #555862 !default; // menu bg
-$gray-darker:         #4c4c5d !default; // text darker
-$gray:                #757b8e !default; // main text/lighter, menu item bg hover, footer logo
-$gray-light:          #ecedee !default; // body bg
-$gray-lighter:        #fbfbfc !default; // table odd row
+$gray-dark: #555862 !default; // menu bg
+$gray-darker: #4c4c5d !default; // text darker
+$gray: #757b8e !default; // main text/lighter, menu item bg hover, footer logo
+$gray-light: #ecedee !default; // body bg
+$gray-lighter: #fbfbfc !default; // table odd row
 
-$light:               #ffffff !default; // well bg, text on dark bg hover
-$light-pale:          #c3cbd6 !default; // text on dark bg
-$light-gray:          #eeeded !default;
+$light: #fff !default; // well bg, text on dark bg hover
+$light-pale: #c3cbd6 !default; // text on dark bg
+$light-gray: #eeeded !default;
 
-$text-muted:          rgba($gray, 0.6);
+$text-muted: rgba($gray, 0.6);
 
-$crm-gray-light-alt:  #f0f1f4 !default; // carousel item bg, hr resource bg
+$crm-gray-light-alt: #f0f1f4 !default; // carousel item bg, hr resource bg
 $crm-gray-light-blue: #757b8e !default; // scrollbar thumb, pivot table text
 $crm-gray-darker-alt: #404454 !default; // page title
-$crm-grizzly:         #dcdddd !default;
-$crm-color-neutral:   #949caa !default; // gray shade
-$crm-grayish-blue:    #f4f7f8 !default;
-$crm-gray-matte:      $crm-color-neutral; // disabled font
+$crm-grizzly: #dcdddd !default;
+$crm-color-neutral: #949caa !default; // gray shade
+$crm-grayish-blue: #f4f7f8 !default;
+$crm-gray-matte: $crm-color-neutral; // disabled font
 
 // Brand colors
 // -----------------------------------------------------------------------------
 
-$brand-primary:       #42afcb !default;
-$brand-success:       #7dc4a7 !default;
-$brand-warning:       #DABB24 !default;
-$brand-danger:        #da6b86 !default;
+$brand-primary: #42afcb !default;
+$brand-success: #7dc4a7 !default;
+$brand-warning: #dabb24 !default;
+$brand-danger: #da6b86 !default;
 $crm-brand-secondary: #db6c86; // submenu hover
 
 // Scaffolding
 // -----------------------------------------------------------------------------
-$body-bg:    $gray-light !default;
+$body-bg: $gray-light !default;
 $text-color: $gray !default;
 
 
 // Typography
 // -----------------------------------------------------------------------------
-$fa-font-path:        "../fonts";
+$fa-font-path: '../fonts';
 
-$font-family-sans-serif:  'Lato', sans-serif;
-$headings-color:          $gray-darker !default;
+$font-family-sans-serif: 'Lato', sans-serif;
+$headings-color: $gray-darker !default;
 
 $crm-font-size-small: 12px;
 $crm-font-size-large: 18px;
 
-$crm-font-weight-light:   300;
+$crm-font-weight-light: 300;
 $crm-font-weight-regular: 400;
-$crm-font-weight-bold:    700;
+$crm-font-weight-bold: 700;
 
 
 // Iconography
@@ -67,80 +67,80 @@ $crm-font-weight-bold:    700;
 $icon-font-path: '../fonts/' !default;
 
 $crm-icon-image-path: '../images/icon/' !default;
-$crm-icon-asc:        'asc.gif' !default;
-$crm-icon-desc:       'desc.gif' !default;
+$crm-icon-asc: 'asc.gif' !default;
+$crm-icon-desc: 'desc.gif' !default;
 
 
 // Components
 // -----------------------------------------------------------------------------
 
-$border-radius-base:             0 !default;
-$border-radius-large:            0 !default;
-$border-radius-small:            0 !default;
+$border-radius-base: 0 !default;
+$border-radius-large: 0 !default;
+$border-radius-small: 0 !default;
 
 
 // Tables
 // -----------------------------------------------------------------------------
-$table-bg:                       $light !default;
-$table-border-color:             #ededed !default;
-$table-cell-padding:             8px 20px !default;
-$table-condensed-cell-padding:   8px 5px !default;
+$table-bg: $light !default;
+$table-border-color: #ededed !default;
+$table-cell-padding: 8px 20px !default;
+$table-condensed-cell-padding: 8px 5px !default;
 
-$crm-table-heading-padding:      13px 20px !default;
-$crm-table-heading-bg:           #f7f7f9 !default;
+$crm-table-heading-padding: 13px 20px !default;
+$crm-table-heading-bg: #f7f7f9 !default;
 $crm-table-heading-border-color: #dadcde !default;
 
-$crm-table-nested-indent-color:  #dbdddf !default;
-$crm-table-nested-indent-width:  10px !default;
+$crm-table-nested-indent-color: #dbdddf !default;
+$crm-table-nested-indent-width: 10px !default;
 
 
 // Buttons
 // -----------------------------------------------------------------------------
 
-$btn-primary-border:             transparent !default;
-$btn-success-border:             transparent !default;
-$btn-warning-border:             transparent !default;
-$btn-danger-border:              transparent !default;
+$btn-primary-border: transparent !default;
+$btn-success-border: transparent !default;
+$btn-warning-border: transparent !default;
+$btn-danger-border: transparent !default;
 
 
 // Dropdown
 // -----------------------------------------------------------------------------
-$dropdown-border:        transparent !default;
-$dropdown-link-color:    $text-color !default;
+$dropdown-border: transparent !default;
+$dropdown-link-color: $text-color !default;
 $dropdown-link-hover-bg: #f7f7f9 !default;
 
 
 // Navs
 // -----------------------------------------------------------------------------
-$nav-tabs-active-link-hover-bg:               $light !default;
+$nav-tabs-active-link-hover-bg: $light !default;
 $nav-tabs-justified-active-link-border-color: $light !default;
 
 
 // Media queries breakpoints
 // ------------------------------------------------------------------------------------------------------
 
-$screen-sm-max:     767px !default;
+$screen-sm-max: 767px !default;
 $crm-screen-lg-max: 1300px;
-$crm-onboarding-wizard-menu-responsive-breakpoint:  1170px;
+$crm-onboarding-wizard-menu-responsive-breakpoint: 1170px;
 
 
 // Modals
 // -----------------------------------------------------------------------------
-$crm-custom-modal-padding:        20 !default;
-$crm-custom-modal-body-padding:   10 !default;
+$crm-custom-modal-padding: 20 !default;
+$crm-custom-modal-body-padding: 10 !default;
 
-$modal-lg:                        945px !default;
-$modal-md:                        555px !default;
-$modal-sm:                        360px !default;
+$modal-lg: 945px !default;
+$modal-md: 555px !default;
+$modal-sm: 360px !default;
 
 
 // Panels
 // -----------------------------------------------------------------------------
-$panel-bg:                    $light !default;
+$panel-bg: $light !default;
 
-$panel-body-padding:            20px;
-$panel-heading-padding:         12px 20px;
-$crm-panel-subheading-padding:  $panel-heading-padding !default;
+$panel-body-padding: 20px;
+$panel-heading-padding: 12px 20px;
+$crm-panel-subheading-padding: $panel-heading-padding !default;
 
 
 // Thumbnails
@@ -150,31 +150,31 @@ $thumbnail-bg: $light !default;
 
 // Badges
 // -----------------------------------------------------------------------------
-$badge-bg:                    $gray !default;
+$badge-bg: $gray !default;
 
 
 // Type
 // -----------------------------------------------------------------------------
-$hr-border:                   $gray-light !default;
+$hr-border: $gray-light !default;
 
 
 // Scrollbar
 // -----------------------------------------------------------------------------
-$crm-scrollbar-size:        10px !default;
-$crm-scrollbar-track-color: #F5F5F7 !default;
+$crm-scrollbar-size: 10px !default;
+$crm-scrollbar-track-color: #f5f5f7 !default;
 $crm-scrollbar-thumb-color: $crm-gray-light-blue !default;
 
 
 // Custom Scrollbar
 // -----------------------------------------------------------------------------
-$crm-customselect-height:        33 !default;
-$crm-customselect-caret-width:   32 !default;
+$crm-customselect-height: 33 !default;
+$crm-customselect-caret-width: 32 !default;
 $crm-customselect-padding-right: $crm-customselect-caret-width + 12 !default;
 
 //== Forms
 //
 //##
-$input-border:              $crm-color-neutral !default;
+$input-border: $crm-color-neutral !default;
 
 $crm-ui-select-top-padding: 7px;
 
@@ -197,6 +197,23 @@ $chr-user-menu-dropdown-link-bg-hover: $gray;
 //##
 $crm-wizard-font-color: #404454;
 $crm-wizard-primary-color: #767b8e;
-$crm-wizard-secondary-color : #42afcb;
-$crm-wizard-active-bg-color: #E9EDF3;
+$crm-wizard-secondary-color: #42afcb;
+$crm-wizard-active-bg-color: #e9edf3;
 $crm-wizard-active-font-color: $crm-wizard-secondary-color;
+
+//== Datepicker
+//
+//##
+
+$crm-uib-datepicker-active-border-radius: 0;
+$crm-uib-datepicker-border: 1px solid $input-border;
+$crm-uib-datepicker-body-bg-color: $crm-grayish-blue;
+$crm-uib-datepicker-body-font-color: $crm-color-neutral;
+$crm-uib-datepicker-cell-padding: 7px 0;
+$crm-uib-datepicker-header-font-color: inherit;
+$crm-uib-datepicker-header-font-size: 14px;
+$crm-uib-datepicker-header-font-weight: $crm-font-weight-regular;
+$crm-uib-datepicker-muted-cell-color: $crm-grizzly;
+$crm-uib-datepicker-today-bg-color: $brand-primary;
+$crm-uib-datepicker-today-font-color: $light;
+$crm-uib-datepicker-active-cell-padding: 7px 9px;

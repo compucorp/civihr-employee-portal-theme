@@ -10,7 +10,7 @@
 // -----------------------------------------------------------------------------
 @import 'base/variables';
 @import 'base/mixins';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/utility';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/ALL';
 
 // Core variables and mixins
 @import 'bootstrap/variables';
@@ -110,13 +110,12 @@
 
 // Imports from other styles
 // --------------------------------------------------
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/prefix';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/text-angular';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/ui-select';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/datepicker';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/uib-datepicker';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen';
 
 @import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/user-menu';

@@ -115,6 +115,7 @@
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/date-picker";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg";
+@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-toolbars";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select";
 @import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen";
 
@@ -128,6 +129,7 @@
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-balance-tab";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-report";
+@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-record-actions";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-calendar";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manager_calendar";
 @import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manage-leave-requests";

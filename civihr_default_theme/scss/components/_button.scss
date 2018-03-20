@@ -2,7 +2,11 @@
   border: transparent;
   padding: 0 10px;
 
-  & + .dropdown-menu > li > a {
+  + .dropdown-menu a {
     color: $brand-primary;
   }
+}
+
+.btn-lg {
+  font-size: inherit;
 }

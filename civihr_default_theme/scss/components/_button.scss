@@ -1,3 +1,10 @@
+.btn {
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
+}
+
 .btn-inline {
   border: transparent;
   padding: 0 10px;

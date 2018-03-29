@@ -20,6 +20,10 @@
   @include button-variant($light, $btn-primary-bg, transparent);
 }
 
+.btn-secondary {
+  @include button-variant($light, $brand-secondary, $btn-secondary-border);
+}
+
 .btn-lg {
   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-large, $border-radius-large);
 }

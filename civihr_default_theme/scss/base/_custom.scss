@@ -24,24 +24,33 @@ label {
 // address browser inconsistencies.
 
 // Override content-box in Normalize (* isn't specific enough)
-input[type="search"] {
+input[type='search'] {
   @include box-sizing(border-box);
 }
 
-// Position radios and checkboxes better
-input[type="checkbox"],
-input[type="radio"] {
+// Position radios and checkboxes better.
+// Apply same disabled cursor tweak as for inputs.
+// Some special care is needed because <label>s don't inherit their parent's `cursor`.
+// @NOTE Neither radios nor checkboxes can be readonly.
+input[type='checkbox'],
+input[type='radio'] {
   line-height: normal;
   margin: 4px 0 0;
   margin-top: 1px \9; // IE8-9
+
+  &[disabled],
+  &.disabled,
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+  }
 }
 
-input[type="file"] {
+input[type='file'] {
   display: block;
 }
 
 // Make range inputs behave like textual form controls
-input[type="range"] {
+input[type='range'] {
   display: block;
   width: 100%;
 }
@@ -53,9 +62,9 @@ select[size] {
 }
 
 // Focus for file, radio, and checkbox
-input[type="checkbox"]:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus {
+input[type='checkbox']:focus,
+input[type='file']:focus,
+input[type='radio']:focus {
   @include tab-focus;
 }
 
@@ -88,6 +97,14 @@ output {
   margin-top: 10px;
   position: relative;
 
+  // These classes are used on elements with <label> descendants
+  &.disabled,
+  fieldset[disabled] & {
+    label {
+      cursor: $cursor-disabled;
+    }
+  }
+
   label {
     cursor: pointer;
     font-weight: normal;
@@ -97,10 +114,10 @@ output {
   }
 }
 
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"],
-.radio input[type="radio"],
-.radio-inline input[type="radio"] {
+.checkbox input[type='checkbox'],
+.checkbox-inline input[type='checkbox'],
+.radio input[type='radio'],
+.radio-inline input[type='radio'] {
   margin-left: -20px;
   margin-top: 4px \9;
   position: absolute;
@@ -121,49 +138,18 @@ output {
   padding-left: 20px;
   position: relative;
   vertical-align: middle;
+
+  // These classes are used directly on <label>s
+  &.disabled,
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+  }
 }
 
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-left: 10px; // space out consecutive inline controls
   margin-top: 0;
-}
-
-// Apply same disabled cursor tweak as for inputs
-// Some special care is needed because <label>s don't inherit their parent's `cursor`.
-//
-// Note: Neither radios nor checkboxes can be readonly.
-input[type="checkbox"],
-input[type="radio"] {
-
-  &[disabled],
-  &.disabled,
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
-  }
-}
-
-// These classes are used directly on <label>s
-.checkbox-inline,
-.radio-inline {
-
-  &.disabled,
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
-  }
-}
-
-// These classes are used on elements with <label> descendants
-.checkbox,
-.radio {
-
-  &.disabled,
-  fieldset[disabled] & {
-
-    label {
-      cursor: $cursor-disabled;
-    }
-  }
 }
 
 // Horizontal forms
@@ -197,17 +183,6 @@ input[type="radio"] {
     @include make-row;
   }
 
-  // Reset spacing and right align labels, but scope to media queries so that
-  // labels on narrow viewports stack the same as a default form example.
-  @media (min-width: $screen-sm-min) {
-
-    .control-label {
-      margin-bottom: 0;
-      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
-      text-align: right;
-    }
-  }
-
   // Validation states
   //
   // Reposition the icon because it's now within a grid column and columns have
@@ -223,7 +198,6 @@ input[type="radio"] {
   .form-group-lg {
 
     @media (min-width: $screen-sm-min) {
-
       .control-label {
         font-size: $font-size-large;
         padding-top: (($padding-large-vertical * $line-height-large) + 1);
@@ -234,11 +208,32 @@ input[type="radio"] {
   .form-group-sm {
 
     @media (min-width: $screen-sm-min) {
-
       .control-label {
         font-size: $font-size-small;
         padding-top: ($padding-small-vertical + 1);
       }
+    }
+  }
+
+  // Customization of the standard Bootstrap form group
+  // This version has a smaller gap between columns (label and field)
+  .form-group--smaller-gutter {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    [class*='col-'] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Reset spacing and right align labels, but scope to media queries so that
+  // labels on narrow viewports stack the same as a default form example.
+  @media (min-width: $screen-sm-min) {
+    .control-label {
+      margin-bottom: 0;
+      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+      text-align: right;
     }
   }
 }
@@ -264,30 +259,17 @@ body {
 }
 
 .views-exposed-form .views-exposed-widget {
+
   @include exposed-form-default-style(50%);
+  padding: 0;
+  width: auto;
 
   @media screen and (max-width: $screen-sm-max) {
     @include exposed-form-default-style(100%);
   }
 }
 
-// Customization of the standard Bootstrap form group
-// This version has a smaller gap between columns (label and field)
-.form-horizontal {
-
-  .form-group--smaller-gutter {
-    margin-left: -10px;
-    margin-right: -10px;
-
-    [class*="col-"] {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-}
-
 .btn-group-sm {
-
   > .btn {
     padding-bottom: 3px !important;
     padding-top: 3px !important;
@@ -308,10 +290,6 @@ body {
 // --------------------------------
 
 // Overwrite inherited styles
-
-.views-exposed-form .views-exposed-widget {
-  padding: 0;
-}
 
 .item-list ul li {
   margin: 0;
@@ -431,15 +409,15 @@ h2.pane-title {
     outline: 0 none;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     right: 14px;
     top: 11px;
   }
 
-  &:after {
+  &::after {
     border-left: 1px solid $input-border;
-    content: "";
+    content: '';
     height: 100%;
     position: absolute;
     right: 37px;
@@ -520,7 +498,6 @@ h2.pane-title {
     padding: 0;
 
     &:first-of-type {
-
       .fieldset-legend {
         margin-top: 0;
       }
@@ -562,7 +539,6 @@ h2.pane-title {
   }
 
   .form-item {
-
     label:not(.element-invisible) {
       color: $gray-darker;
       display: block;
@@ -571,7 +547,7 @@ h2.pane-title {
       padding: 7px 0;
       width: 35%;
 
-      & + .hasCustomSelect {
+      + .hasCustomSelect {
         left: 35%;
       }
     }
@@ -636,28 +612,6 @@ h2.pane-title {
   padding-top: 20px;
 }
 
-// Buttons
-
-.btn {
-  @include button-size(0.7rem, 1.1rem, 1.3rem, $line-height-base, $border-radius-base);
-}
-
-.btn-custom {
-  @include button-variant($light, $btn-primary-bg, transparent);
-}
-
-.btn-lg {
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
-}
-
-.btn-sm {
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
-}
-
-.btn-xs {
-  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
-}
-
 .context-menu-toggle {
   box-shadow: none !important;
   color: $gray;
@@ -681,10 +635,10 @@ h2.pane-title {
     padding: 8px 14px;
   }
 
-  [class^="fa-"],
-  [class*=" fa-"],
-  [class^="glyphicon-"],
-  [class*=" glyphicon-"] {
+  [class^='fa-'],
+  [class*=' fa-'],
+  [class^='glyphicon-'],
+  [class*=' glyphicon-'] {
     text-align: center;
     width: 1.25em;
   }
@@ -693,7 +647,6 @@ h2.pane-title {
 // Forms
 
 form {
-
   hr {
     margin-top: 40px;
   }
@@ -707,7 +660,7 @@ form {
 .form-actions {
   @include clearfix;
 
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
   position: relative;
 
   .form-item {
@@ -752,23 +705,12 @@ form {
   @include clearfix;
 
   background: $panel-bg;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
   padding: 20px;
 }
 
 .pane-block {
   @include box-shadow($crm-box-shadow-global);
-}
-
-.pane-block[class*="absence-list"] {
-  margin: 0;
-}
-
-.view {
-  margin: 0 15px;
-}
-
-.pane-block {
 
   .view {
     margin: 0;
@@ -793,7 +735,7 @@ form {
 
   .jcarousel-prev,
   .jcarousel-next {
-    @include fa("\f104", 24);
+    @include fa('\f104', 24);
 
     background: $light;
     color: $gray;
@@ -805,7 +747,7 @@ form {
     top: 0;
     width: 26px;
 
-    &:before {
+    &::before {
       @include vertical-align;
 
       display: block;
@@ -813,15 +755,19 @@ form {
   }
 
   .jcarousel-next {
-    @include fa("\f105", 24);
+    @include fa('\f105', 24);
 
     left: auto;
     right: 10px;
   }
 }
 
-.views-exposed-form .views-exposed-widget {
-  width: auto;
+.pane-block[class*='absence-list'] {
+  margin: 0;
+}
+
+.view {
+  margin: 0 15px;
 }
 
 .pane-title {
@@ -882,7 +828,6 @@ form {
 
   .view-hr-vacancies,
   .view-hr-documents {
-
     .jcarousel-item {
       padding-bottom: 55px;
       position: relative;
@@ -897,7 +842,6 @@ form {
   }
 
   .view-hr-documents {
-
     .views-field {
       font-size: 1.3rem;
 
@@ -932,10 +876,8 @@ form {
 }
 
 .view-absence-list {
-
-  & > .view-footer,
-  & > .view-header {
-
+  > .view-footer,
+  > .view-header {
     tbody {
       border-top: 0;
 
@@ -946,12 +888,11 @@ form {
     }
   }
 
-  & > .view-header {
+  > .view-header {
     margin: 0 -20px;
   }
 
-  & > .view-content {
-
+  > .view-content {
     tbody {
       border: 0;
     }
@@ -975,7 +916,6 @@ form {
 
 // My sickness report
 .pane-civihr-employee-portal-sick {
-
   td,
   th {
     &:first-child {
@@ -984,7 +924,6 @@ form {
   }
 
   @media(min-width: $screen-xs-min) {
-
     td,
     th {
       &:first-child {
@@ -995,19 +934,20 @@ form {
 }
 
 .calendar-btn {
+
+  @include fa('\f073');
+  background: none;
+  color: $gray;
+  padding-right: 0;
+
+  &::before {
+    margin-right: 8px;
+  }
+
+  &:hover {
     background: none;
     color: $gray;
-    padding-right: 0;
-
-    @include fa("\f073");
-
-    &:before {
-        margin-right: 8px;
-    }
-    &:hover {
-        background: none;
-        color: $gray;
-    }
+  }
 }
 
 .pane-civihr-employee-portal-leave,
@@ -1023,20 +963,16 @@ form {
 }
 
 .pane-views-exp-absence-list-page {
-
   .views-exposed-widget {
-
     .chr_action--icon--responsive {
 
       @media(min-width: $screen-md-min) {
-
         span {
           display: none;
         }
       }
 
       @media(min-width: $screen-lg-min) {
-
         span {
           display: inline;
         }
@@ -1054,7 +990,6 @@ form {
 
 .view-approvals,
 .view-Tasks {
-
   .view-empty {
     padding: 0 20px;
   }
@@ -1132,7 +1067,6 @@ form {
 }
 
 .page-dashboard {
-
   .footer {
     margin-top: -30px;
   }
@@ -1140,13 +1074,11 @@ form {
 
 // Page: HR Vacancies
 .content {
-
-  & > .view-hr-vacancies {
+  > .view-hr-vacancies {
 
     @extend .view-hr-documents;
 
     .view-filters {
-
       .views-widget {
         width: 40%;
       }
@@ -1175,8 +1107,7 @@ form {
       margin: 0 -20px;
       padding: 20px;
 
-      & > .views-field:first-of-type {
-
+      > .views-field:first-of-type {
         .field-content {
           color: $brand-primary;
         }
@@ -1269,9 +1200,7 @@ form {
 // Styling the exposed filters on reports page.
 #edit-absence-date-filter-wrapper,
 #edit-between-date-filter-wrapper {
-
   .form-inline {
-
     .form-control {
       display: inline-block;
       vertical-align: middle;

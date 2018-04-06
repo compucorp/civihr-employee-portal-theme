@@ -609,6 +609,18 @@ function civihr_default_theme_file_icon($variables) {
 }
 
 /**
+ * Implements hook_html_head_alter() - alters html head tags.
+ *
+ * Sets viewport "maximum-scale" to 1 to prevent auto zooming on input focus.
+ * @see https://stackoverflow.com/questions/11064237/prevent-iphone-from-zooming-form
+ *
+ * @param object $head_elements
+ */
+function civihr_default_theme_html_head_alter(&$head_elements) {
+  _set_maximum_scale_to_viewport_meta_tag($head_elements);
+}
+
+/**
  * Gets font-awesome class depending on file's mime-type
  * @param $mime
  * @return string
@@ -903,4 +915,31 @@ function _add_sub_menu_to_link(&$link) {
   $link['#localized_options']['attributes']['data-target'] = '#';
 
   return '<ul class="dropdown-menu">' . drupal_render($link['#below']) . '</ul>';
+}
+
+/**
+ * Sets the maximum viewport scale to 1.
+ * @NOTE this still allows users to pinch/zoom with 2 fingers.
+ * @NOTE this function expects that the Meta Viewport tag is already set.
+ *
+ * @param object $head_elements
+ */
+function _set_maximum_scale_to_viewport_meta_tag(&$head_elements) {
+  // Get the meta tag by reference
+  foreach ($head_elements as $tagKey => $tag) {
+    if (isset($tag['#attributes']['name']) && $tag['#attributes']['name'] === 'viewport') {
+      $viewportTagValue = &$head_elements[$tagKey]['#attributes']['content'];
+    }
+  }
+
+  // Filter out "maximum-scale" property if exists
+  $rules = array_filter(preg_split('/\s*,\s*/', $viewportTagValue), function ($rule) {
+    return !preg_match('/^maximum-scale\s*=/i', $rule);
+  });
+
+  // Push new "maximum-scale" property
+  array_push($rules, 'maximum-scale=1');
+
+  // Set updated rules to the tag
+  $viewportTagValue = implode(', ', $rules);
 }

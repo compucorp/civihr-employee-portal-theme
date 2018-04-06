@@ -439,103 +439,6 @@ function civihr_default_theme_preprocess_page(&$variables) {
 }
 
 /**
- * Uses function from employee portal to check if user should do onboarding.
- *
- * @return bool
- *   TRUE if they have no submissions and can are editing their own account.
- */
-function _civihr_default_theme_should_start_onboarding() {
-  global $user;
-  $shouldDoOnboarding = FALSE;
-  $userEditPath = sprintf('user/%d/edit', $user->uid);
-  $isEditSelfPage = (current_path() === $userEditPath);
-  $onboardingChecker = '_civihr_employee_portal_should_do_onboarding';
-  if (function_exists($onboardingChecker)) {
-    $shouldDoOnboarding = $isEditSelfPage && $onboardingChecker($user);
-  }
-
-  return $shouldDoOnboarding;
-}
-
-/**
- * Check if we are displaying custom Report page.
- *
- * @return boolean
- */
-function _is_hrreports_current_path() {
-  return substr(current_path(), 0, 8) === 'reports/';
-}
-
-/**
- * Builds the markup of the cog menu
- *
- * @return string
- */
-function _build_cog_menu_markup() {
-  $menuItems = _get_cog_menu_items();
-  $markup = "";
-
-  foreach($menuItems as $menuItem) {
-    foreach ($menuItem['permissions'] as $permission) {
-      if (user_access($permission)) {
-        $markup .= _get_cog_menu_item_markup($menuItem);
-        break;
-      }
-    }
-  }
-
-  return $markup;
-}
-
-/**
- * Gets the structure of the cog menu
- *
- * @return array
- */
-function _get_cog_menu_items() {
-  $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
-
-  $options = ['html' => TRUE];
-
-  return [
-    [
-      'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', $options),
-    ],
-    [
-      'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
-      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', $options),
-      'separator' => TRUE,
-    ],
-    [
-      'permissions' => ['administer staff accounts'],
-      'link' => l(t('Manage Users'), 'users-list', $options),
-    ],
-    [
-      'permissions' => ['customize welcome wizard'],
-      'link' => l(t('Customize Welcome Wizard'), 'customize-onboarding-wizard', $options),
-    ],
-  ];
-}
-
-/**
- * Builds and returns the markup of the given menu item
- *
- * @param array $menuItem
- *
- * @return string
- */
-function _get_cog_menu_item_markup($menuItem) {
-  $class = '';
-
-  if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
-    $class = 'chr_header__sub-menu__separator';
-  }
-
-  return "<li class=\"{$class}\">{$menuItem['link']}</li>";
-}
-
-/**
  * Implements hook_js_alter().
  */
 function civihr_default_theme_js_alter(&$javascript) {
@@ -815,6 +718,175 @@ function _add_active_class_if_menu_link_is_current(&$link) {
 }
 
 /**
+ * Builds and returns the markup of the link's submenu
+ *
+ * @param array $link
+ *
+ * @return string
+ */
+function _add_sub_menu_to_link(&$link) {
+  unset($link['#below']['#theme_wrappers']);
+
+  $link['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+  $link['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+
+  // Check if link is nested.
+  if ((!empty($link['#original_link']['depth'])) && ($link['#original_link']['depth'] > 1)) {
+    $link['#attributes']['class'][] = 'dropdown-submenu';
+  } else {
+    $link['#attributes']['class'][] = 'dropdown';
+    $link['#localized_options']['html'] = TRUE;
+    $link['#title'] .= '<span class="caret"></span>';
+  }
+
+  $link['#localized_options']['attributes']['data-target'] = '#';
+
+  return '<ul class="dropdown-menu">' . drupal_render($link['#below']) . '</ul>';
+}
+
+/**
+ * Adds a unique class to a link using its title
+ *
+ * @param array $link
+ */
+function _add_unique_class_to_menu_link(&$link) {
+  $title = strip_tags($link['#title']);
+  $link['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
+}
+
+/**
+ * Builds the markup of the cog menu
+ *
+ * @return string
+ */
+function _build_cog_menu_markup() {
+  $menuItems = _get_cog_menu_items();
+  $markup = "";
+
+  foreach($menuItems as $menuItem) {
+    foreach ($menuItem['permissions'] as $permission) {
+      if (user_access($permission)) {
+        $markup .= _get_cog_menu_item_markup($menuItem);
+        break;
+      }
+    }
+  }
+
+  return $markup;
+}
+
+/**
+ * Uses function from employee portal to check if user should do onboarding.
+ *
+ * @return bool
+ *   TRUE if they have no submissions and can are editing their own account.
+ */
+function _civihr_default_theme_should_start_onboarding() {
+  global $user;
+  $shouldDoOnboarding = FALSE;
+  $userEditPath = sprintf('user/%d/edit', $user->uid);
+  $isEditSelfPage = (current_path() === $userEditPath);
+  $onboardingChecker = '_civihr_employee_portal_should_do_onboarding';
+  if (function_exists($onboardingChecker)) {
+    $shouldDoOnboarding = $isEditSelfPage && $onboardingChecker($user);
+  }
+
+  return $shouldDoOnboarding;
+}
+
+/**
+ * Builds and returns the markup of the given menu item
+ *
+ * @param array $menuItem
+ *
+ * @return string
+ */
+function _get_cog_menu_item_markup($menuItem) {
+  $class = '';
+
+  if (isset($menuItem['separator']) && $menuItem['separator'] == TRUE) {
+    $class = 'chr_header__sub-menu__separator';
+  }
+
+  return "<li class=\"{$class}\">{$menuItem['link']}</li>";
+}
+
+/**
+ * Gets the structure of the cog menu
+ *
+ * @return array
+ */
+function _get_cog_menu_items() {
+  $resourceTypeVocabularyID = taxonomy_vocabulary_machine_name_load('hr_resource_type')->vid;
+
+  $options = ['html' => TRUE];
+
+  return [
+    [
+      'permissions' => ["access content overview"],
+      'link' => l(t('Manage HR Resources'), 'admin/content', $options),
+    ],
+    [
+      'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
+      'link' => l(t('HR Resource Types'), 'hr-resource-types-list', $options),
+      'separator' => TRUE,
+    ],
+    [
+      'permissions' => ['administer staff accounts'],
+      'link' => l(t('Manage Users'), 'users-list', $options),
+    ],
+    [
+      'permissions' => ['customize welcome wizard'],
+      'link' => l(t('Customize Welcome Wizard'), 'customize-onboarding-wizard', $options),
+    ],
+  ];
+}
+
+/**
+ * Build and returns the markup of the given link (and submenu, if present)
+ *
+ * @param array $link
+ *
+ * @return string
+ */
+function _get_menu_link_markup(&$link) {
+  if ($link['#title'] === 'Manager Leave') {
+    $link['#localized_options']['html'] = true;
+    $link['#title'] .= civihr_leave_absences_get_markup('manager-notification-badge');
+  }
+
+  $linkMarkup = l($link['#title'], $link['#href'], $link['#localized_options']);
+  $subMenuMarkup = !empty($link['#below']) ? _add_sub_menu_to_link($link) : '';
+
+  return $linkMarkup . $subMenuMarkup;
+}
+
+/**
+ * Hide the menu link to the admin if the current user does not
+ * have administer access
+ *
+ * @param array $link
+ */
+function _hide_admin_menu_link_to_basic_users(&$link) {
+  $adminAccess = user_access("administer CiviCRM");
+  $localOptions = $link['#localized_options'];
+  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_hr-admin:civicrm';
+
+  if ($isAdminLink && !$adminAccess) {
+    $link['#attributes']['class'][] = 'hidden';
+  }
+}
+
+/**
+ * Check if we are displaying custom Report page.
+ *
+ * @return boolean
+ */
+function _is_hrreports_current_path() {
+  return substr(current_path(), 0, 8) === 'reports/';
+}
+
+/**
  * Checks if the given menu link is the link of the current page
  *
  * @param array $link
@@ -842,79 +914,6 @@ function _is_menu_link_current($link) {
  */
 function _is_menu_link_in_trail($link) {
   return in_array('active-trail', $link['#attributes']['class']);
-}
-
-
-/**
- * Adds a unique class to a link using its title
- *
- * @param array $link
- */
-function _add_unique_class_to_menu_link(&$link) {
-  $title = strip_tags($link['#title']);
-  $link['#attributes']['class'][] = 'menu-link-' . drupal_html_class($title);
-}
-
-/**
- * Hide the menu link to the admin if the current user does not
- * have administer access
- *
- * @param array $link
- */
-function _hide_admin_menu_link_to_basic_users(&$link) {
-  $adminAccess = user_access("administer CiviCRM");
-  $localOptions = $link['#localized_options'];
-  $isAdminLink = isset($localOptions['identifier']) && $localOptions['identifier'] === 'main-menu_hr-admin:civicrm';
-
-  if ($isAdminLink && !$adminAccess) {
-    $link['#attributes']['class'][] = 'hidden';
-  }
-}
-
-/**
- * Build and returns the markup of the given link (and submenu, if present)
- *
- * @param array $link
- *
- * @return string
- */
-function _get_menu_link_markup(&$link) {
-  if ($link['#title'] === 'Manager Leave') {
-    $link['#localized_options']['html'] = true;
-    $link['#title'] .= civihr_leave_absences_get_markup('manager-notification-badge');
-  }
-
-  $linkMarkup = l($link['#title'], $link['#href'], $link['#localized_options']);
-  $subMenuMarkup = !empty($link['#below']) ? _add_sub_menu_to_link($link) : '';
-
-  return $linkMarkup . $subMenuMarkup;
-}
-
-/**
- * Builds and returns the markup of the link's submenu
- *
- * @param array $link
- *
- * @return string
- */
-function _add_sub_menu_to_link(&$link) {
-  unset($link['#below']['#theme_wrappers']);
-
-  $link['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-  $link['#localized_options']['attributes']['data-toggle'] = 'dropdown';
-
-  // Check if link is nested.
-  if ((!empty($link['#original_link']['depth'])) && ($link['#original_link']['depth'] > 1)) {
-    $link['#attributes']['class'][] = 'dropdown-submenu';
-  } else {
-    $link['#attributes']['class'][] = 'dropdown';
-    $link['#localized_options']['html'] = TRUE;
-    $link['#title'] .= '<span class="caret"></span>';
-  }
-
-  $link['#localized_options']['attributes']['data-target'] = '#';
-
-  return '<ul class="dropdown-menu">' . drupal_render($link['#below']) . '</ul>';
 }
 
 /**

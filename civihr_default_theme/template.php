@@ -369,11 +369,15 @@ function civihr_default_theme_css_alter(&$css) {
       'modules/system/system.base.css',
       'modules/system/system.theme.css',
       'sites/all/modules/civicrm/bower_components/font-awesome/css/font-awesome.css',
-      'sites/all/modules/civihr-contrib-required/fancy_login/css/fancy_login.css',
-      'sites/all/modules/civihr-contrib-required/radix_layouts/radix_layouts.css',
-      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/css/civihr_default_theme.style.css',
-      'sites/all/modules/civihr-signup/css/civihr-signup.css'
+      drupal_get_path('module', 'fancy_login') .  '/css/fancy_login.css',
+      drupal_get_path('module', 'radix_layouts') .  '/radix_layouts.css',
+      drupal_get_path('theme', 'civihr_default_theme') .  '/assets/css/civihr_default_theme.style.css',
     ];
+
+    if (module_exists('civihr_signup')) {
+      $requiredCSS[] = drupal_get_path('module', 'civihr_signup') . '/css/civihr-signup.css';
+    }
+
     foreach (array_keys($css) as $file) {
       $found = false;
       foreach ($requiredCSS as $allowedFile) {
@@ -461,29 +465,38 @@ function civihr_default_theme_js_alter(&$javascript) {
 
   // Welcome page optimization
   if (current_path() == 'welcome-page') {
+    // The CiviCRM Drupal module is actually inside the civicrm folder, this is
+    // why we use dirname here, so that we get the civicrm root folder
+    $civicrmPath = dirname(drupal_get_path('module', 'civicrm'));
+    $jqueryUpdatePath = drupal_get_path('module', 'jquery_update');
+
     $requiredJS = [
       'settings',
       'misc/drupal.js',
-      'sites/all/modules/civihr-contrib-required/jquery_update/replace/jquery/1.8/jquery.min.js',
+      $jqueryUpdatePath . '/replace/jquery/1.8/jquery.min.js',
       'misc/jquery.once.js',
-      'sites/all/modules/civicrm/js/noconflict.js',
-      'sites/all/modules/civihr-custom/civihr_employee_portal/js/scripts.js',
-      'sites/all/modules/civihr-contrib-required/ctools/js/modal.js',
-      'sites/all/modules/civicrm/bower_components/jquery/dist/jquery.js',
-      'sites/all/modules/civicrm/bower_components/jquery/dist/jquery.min.js',
-      'sites/all/modules/civicrm/bower_components/jquery-ui/jquery-ui.js',
-      'sites/all/modules/civicrm/bower_components/jquery-ui/jquery-ui.min.js',
-      'sites/all/modules/civicrm/bower_components/lodash-compat/lodash.js',
-      'sites/all/modules/civicrm/bower_components/lodash-compat/lodash.min.js',
-      'sites/all/modules/civicrm/js/crm.ajax.js',
-      'sites/all/modules/civihr-contrib-required/jquery_update/replace/misc/jquery.form.min.js',
+      $civicrmPath . '/js/noconflict.js',
+      $civicrmPath . '/bower_components/jquery/dist/jquery.js',
+      $civicrmPath . '/bower_components/jquery/dist/jquery.min.js',
+      $civicrmPath . '/bower_components/jquery-ui/jquery-ui.js',
+      $civicrmPath . '/bower_components/jquery-ui/jquery-ui.min.js',
+      $civicrmPath . '/bower_components/lodash-compat/lodash.js',
+      $civicrmPath . '/bower_components/lodash-compat/lodash.min.js',
+      $civicrmPath . '/js/crm.ajax.js',
+      $civicrmPath . '/packages/jquery/plugins/jquery.blockUI.min.js',
+      drupal_get_path('module', 'civihr_employee_portal') . '/js/scripts.js',
+      drupal_get_path('module', 'ctools') . '/js/modal.js',
+      $jqueryUpdatePath . '/replace/misc/jquery.form.min.js',
       'misc/ajax.js',
-      'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
-      'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js',
-      'sites/all/modules/civicrm/packages/jquery/plugins/jquery.blockUI.min.js',
-      'sites/all/modules/civihr-signup/js/civihr-signup.js',
+      drupal_get_path('module', 'fancy_login') . '/js/fancy_login.js',
+      drupal_get_path('theme', 'civihr_default_theme') . '/assets/js/radix.modal.js',
+      'https://sdk.yoti.com/clients/browser.js',
       'https://use.typekit.net/mhr5yod.js',
     ];
+
+    if (module_exists('civihr_signup')) {
+      $requiredJS[] = drupal_get_path('module', 'civihr_signup') . '/js/civihr_signup.js';
+    }
 
     if (module_exists('yoti')) {
       require_once drupal_get_path('module', 'yoti') . '/YotiHelper.php';

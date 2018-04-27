@@ -1,6 +1,7 @@
 <?php
 // default view template
-require DRUPAL_ROOT . '/sites/all/modules/contrib/views/theme/views-view.tpl.php';
+$defaultViewTemplate = drupal_get_path('module', 'views') . '/theme/views-view.tpl.php';
+require DRUPAL_ROOT . "/{$defaultViewTemplate}";
 ?>
 
 

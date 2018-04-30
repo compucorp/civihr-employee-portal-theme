@@ -123,6 +123,7 @@
 
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/variables';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/mixins/tables';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/mixins/gradients';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/base/helpers/disabled';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/style/tables';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave';
@@ -130,6 +131,7 @@
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-report';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-record-actions';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-calendar';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/outside-namespace/leave-calendar';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manager_calendar';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manage-leave-requests';
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-modal';

@@ -1,8 +1,37 @@
+.btn {
+  @include button-size(0.7rem, 1.1rem, 1.3rem, $line-height-base, $border-radius-base);
+
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
+}
+
 .btn-inline {
   border: transparent;
   padding: 0 10px;
 
-  & + .dropdown-menu > li > a {
+  + .dropdown-menu a {
     color: $brand-primary;
   }
+}
+
+.btn-custom {
+  @include button-variant($light, $btn-primary-bg, transparent);
+}
+
+.btn-secondary {
+  @include button-variant($light, $brand-secondary, $btn-secondary-border);
+}
+
+.btn-lg {
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-large, $border-radius-large);
+}
+
+.btn-sm {
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
 }

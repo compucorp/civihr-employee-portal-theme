@@ -4,77 +4,77 @@
 
 // Compass mixins for backward compatibility.
 // -----------------------------------------------------------------------------
-@import "compass";
+@import 'compass';
 
 // Bootstrap global partials.
 // -----------------------------------------------------------------------------
-@import "base/variables";
-@import "base/mixins";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/utility";
+@import 'base/variables';
+@import 'base/mixins';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/utility';
 
 // Core variables and mixins
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
 
-@import "base/helpers";
+@import 'base/helpers';
 //@import "radix/mixins";
 
 // Bootstrap reset and dependencies
 // -----------------------------------------------------------------------------
-@import "bootstrap/normalize";
+@import 'bootstrap/normalize';
 //@import "bootstrap/print";
-@import "bootstrap/glyphicons";
+@import 'bootstrap/glyphicons';
 
 // Bootstrap core
 // -----------------------------------------------------------------------------
-@import "bootstrap/scaffolding";
-@import "bootstrap/type";
+@import 'bootstrap/scaffolding';
+@import 'bootstrap/type';
 //@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "bootstrap/tables";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/outlined-buttons";
+@import 'bootstrap/grid';
+@import 'bootstrap/tables';
+@import 'bootstrap/forms';
+@import 'bootstrap/buttons';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/outlined-buttons';
 
 // Bootstrap components
 // -----------------------------------------------------------------------------
 //@import "bootstrap/component-animations";
-@import "bootstrap/dropdowns";
-@import "bootstrap/button-groups";
-@import "bootstrap/input-groups";
-@import "bootstrap/navs";
+@import 'bootstrap/dropdowns';
+@import 'bootstrap/button-groups';
+@import 'bootstrap/input-groups';
+@import 'bootstrap/navs';
 //@import "bootstrap/navbar";
 //@import "bootstrap/breadcrumbs";
-@import "bootstrap/pagination";
+@import 'bootstrap/pagination';
 //@import "bootstrap/pager";
 //@import "bootstrap/labels";
-@import "bootstrap/badges";
+@import 'bootstrap/badges';
 //@import "bootstrap/jumbotron";
 //@import "bootstrap/thumbnails";
 //@import "bootstrap/alerts";
 //@import "bootstrap/progress-bars";
 //@import "bootstrap/media";
 //@import "bootstrap/list-group";
-@import "bootstrap/panels";
-@import "bootstrap/responsive-embed";
+@import 'bootstrap/panels';
+@import 'bootstrap/responsive-embed';
 //@import "bootstrap/wells";
-@import "bootstrap/close";
+@import 'bootstrap/close';
 
 // Bootstrap components w/ JavaScript
 // -----------------------------------------------------------------------------
-@import "bootstrap/modals";
-@import "bootstrap/tooltip";
+@import 'bootstrap/modals';
+@import 'bootstrap/tooltip';
 //@import "bootstrap/popovers";
 //@import "bootstrap/carousel";
 
 // Bootstrap utility classes
 // -----------------------------------------------------------------------------
-@import "bootstrap/utilities";
-@import "bootstrap/responsive-utilities";
+@import 'bootstrap/utilities';
+@import 'bootstrap/responsive-utilities';
 
 // FontAwesome
 // -----------------------------------------------------------------------------
-@import "font-awesome";
+@import 'font-awesome';
 
 
 // Radix styles overrides and fixes.
@@ -94,54 +94,57 @@
 
 // Custom CiviHR Theme CSS
 // --------------------------------------------------
-@import "base/custom";
+@import 'base/custom';
 
 
 // civihr_default_theme partials
 // --------------------------------------------------
-@import "base/typography";
-@import "vendor/**/*";
-@import "pages/**/*";
-@import "layout/**/*";
-@import "partials/**/*";
-@import "components/**/*";
-@import "drupal/**/*";
+@import 'base/typography';
+@import 'vendor/**/*';
+@import 'pages/**/*';
+@import 'layout/**/*';
+@import 'partials/**/*';
+@import 'components/**/*';
+@import 'drupal/**/*';
 
 
 // Imports from other styles
 // --------------------------------------------------
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/date-picker";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen";
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/outside-namespace/date-picker';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen';
 
-@import "SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/scroll-shadows";
-@import "SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/user-menu";
+@import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/scroll-shadows';
+@import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/user-menu';
 
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/variables";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/mixins/tables";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/base/helpers/disabled";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/style/tables";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-balance-tab";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-report";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-calendar";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manager_calendar";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manage-leave-requests";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-modal";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-comment";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-files";
-@import "SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/directives/time-amount-picker";
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/variables';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/mixins/tables';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/mixins/gradients';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/base/helpers/disabled';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/style/tables';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-balance-tab';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-report';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-record-actions';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-calendar';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/outside-namespace/leave-calendar';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manager_calendar';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/manage-leave-requests';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-modal';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-comment';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/components/leave-request-files';
+@import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/directives/time-amount-picker';
 
 // Temporary styles that should be removed ASAP
 // --------------------------------------------------
-@import "base/task-assignments-modal-temp";
+@import 'base/task-assignments-modal-temp';
 
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/prefix";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wizard";
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/prefix';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wizard';
 
 // Overrides
-@import "overrides/**/*";
+@import 'overrides/**/*';

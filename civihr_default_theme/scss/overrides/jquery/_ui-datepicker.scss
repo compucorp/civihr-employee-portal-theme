@@ -1,14 +1,14 @@
 // civicrm datepicker styles form shoreditch
-@import "SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/_fa-icon.scss";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/civicrm/_mixins.scss";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/civicrm/common/_datepickers.scss";
-@import "SCSSROOT/org.civicrm.shoreditch/scss/civicrm/common/_bootstrap-calendar.scss";
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/fa-icon';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/civicrm/mixins';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/jquery/overrides/ui-datepicker';
 
 // Override styles for civicrm datepicker specific to SSP
 .ui-datepicker {
-  .ui-datepicker-calendar thead tr th {
+  .ui-datepicker-calendar th {
     font-size: 12px !important; // Calendar heading font size as in SSP
   }
+
   .ui-datepicker-month,
   .ui-datepicker-year {
     font-size: 14px !important; // Select option font size as in SSP

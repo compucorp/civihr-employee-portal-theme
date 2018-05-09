@@ -10,26 +10,26 @@
 // -----------------------------------------------------------------------------
 @import 'base/variables';
 @import 'base/mixins';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/utility';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/ALL';
 
 // Core variables and mixins
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 
 @import 'base/helpers';
-//@import "radix/mixins";
+//@import 'radix/mixins';
 
 // Bootstrap reset and dependencies
 // -----------------------------------------------------------------------------
 @import 'bootstrap/normalize';
-//@import "bootstrap/print";
+//@import 'bootstrap/print';
 @import 'bootstrap/glyphicons';
 
 // Bootstrap core
 // -----------------------------------------------------------------------------
 @import 'bootstrap/scaffolding';
 @import 'bootstrap/type';
-//@import "bootstrap/code";
+//@import 'bootstrap/code';
 @import 'bootstrap/grid';
 @import 'bootstrap/tables';
 @import 'bootstrap/forms';
@@ -38,34 +38,34 @@
 
 // Bootstrap components
 // -----------------------------------------------------------------------------
-//@import "bootstrap/component-animations";
+//@import 'bootstrap/component-animations';
 @import 'bootstrap/dropdowns';
 @import 'bootstrap/button-groups';
 @import 'bootstrap/input-groups';
 @import 'bootstrap/navs';
-//@import "bootstrap/navbar";
-//@import "bootstrap/breadcrumbs";
+//@import 'bootstrap/navbar';
+//@import 'bootstrap/breadcrumbs';
 @import 'bootstrap/pagination';
-//@import "bootstrap/pager";
-//@import "bootstrap/labels";
+//@import 'bootstrap/pager';
+//@import 'bootstrap/labels';
 @import 'bootstrap/badges';
-//@import "bootstrap/jumbotron";
-//@import "bootstrap/thumbnails";
-//@import "bootstrap/alerts";
-//@import "bootstrap/progress-bars";
-//@import "bootstrap/media";
-//@import "bootstrap/list-group";
+//@import 'bootstrap/jumbotron';
+//@import 'bootstrap/thumbnails';
+//@import 'bootstrap/alerts';
+//@import 'bootstrap/progress-bars';
+//@import 'bootstrap/media';
+//@import 'bootstrap/list-group';
 @import 'bootstrap/panels';
 @import 'bootstrap/responsive-embed';
-//@import "bootstrap/wells";
+//@import 'bootstrap/wells';
 @import 'bootstrap/close';
 
 // Bootstrap components w/ JavaScript
 // -----------------------------------------------------------------------------
 @import 'bootstrap/modals';
 @import 'bootstrap/tooltip';
-//@import "bootstrap/popovers";
-//@import "bootstrap/carousel";
+//@import 'bootstrap/popovers';
+//@import 'bootstrap/carousel';
 
 // Bootstrap utility classes
 // -----------------------------------------------------------------------------
@@ -79,17 +79,17 @@
 
 // Radix styles overrides and fixes.
 // -----------------------------------------------------------------------------
-//@import "radix/admin";
-//@import "radix/comment";
-//@import "radix/form";
-//@import "radix/layout";
-//@import "radix/maintenance";
-//@import "radix/modal";
-//@import "radix/nav";
-//@import "radix/node";
-//@import "radix/panel";
-//@import "radix/structure";
-//@import "radix/view";
+//@import 'radix/admin';
+//@import 'radix/comment';
+//@import 'radix/form';
+//@import 'radix/layout';
+//@import 'radix/maintenance';
+//@import 'radix/modal';
+//@import 'radix/nav';
+//@import 'radix/node';
+//@import 'radix/panel';
+//@import 'radix/structure';
+//@import 'radix/view';
 
 
 // Custom CiviHR Theme CSS
@@ -112,10 +112,10 @@
 // --------------------------------------------------
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/button-groups';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/custom-select';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/outside-namespace/date-picker';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/text-angular';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/components/wysiwyg';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/ui-select';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/text-angular';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/ui-select';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/uib-datepicker';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen';
 
 @import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/scroll-shadows';

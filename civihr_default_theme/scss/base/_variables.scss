@@ -176,3 +176,20 @@ $crm-wizard-primary-color:     #767b8e;
 $crm-wizard-secondary-color:   #42afcb;
 $crm-wizard-active-bg-color:   #e9edf3;
 $crm-wizard-active-font-color: $crm-wizard-secondary-color;
+
+//== Uib-Datepicker
+//
+//##
+$crm-uib-datepicker-active-border-radius:   0;
+$crm-uib-datepicker-active-cell-padding:    7px 9px;
+$crm-uib-datepicker-border:                 1px solid $input-border;
+$crm-uib-datepicker-body-bg-color:          $crm-grayish-blue;
+$crm-uib-datepicker-body-font-color:        $crm-color-neutral;
+$crm-uib-datepicker-cell-padding:           7px 0;
+$crm-uib-datepicker-cell-padding-span:      5px;
+$crm-uib-datepicker-header-font-color:      inherit;
+$crm-uib-datepicker-header-font-size:       14px;
+$crm-uib-datepicker-header-font-weight:     $crm-font-weight-regular;
+$crm-uib-datepicker-muted-cell-color:       $crm-grizzly;
+$crm-uib-datepicker-today-bg-color:         $brand-primary;
+$crm-uib-datepicker-today-font-color:       $light;

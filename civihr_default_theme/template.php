@@ -13,10 +13,6 @@ require_once dirname(__FILE__) . '/includes/panel.inc';
 require_once dirname(__FILE__) . '/includes/user.inc';
 require_once dirname(__FILE__) . '/includes/view.inc';
 
-if (module_exists('yoti')) {
-  require_once drupal_get_path('module', 'yoti') . '/YotiHelper.php';
-}
-
 /**
  * Implements template_preprocess_views_view_table().
  */
@@ -490,7 +486,8 @@ function civihr_default_theme_js_alter(&$javascript) {
     ];
 
     if (module_exists('yoti')) {
-      array_push($requiredJS, YotiHelper::YOTI_SDK_JAVASCRIPT_LIBRARY);
+      require_once drupal_get_path('module', 'yoti') . '/YotiHelper.php';
+      $requiredJS[] = YotiHelper::YOTI_SDK_JAVASCRIPT_LIBRARY;
     }
 
     foreach (array_keys($javascript) as $file) {

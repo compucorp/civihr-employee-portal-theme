@@ -13,6 +13,10 @@ require_once dirname(__FILE__) . '/includes/panel.inc';
 require_once dirname(__FILE__) . '/includes/user.inc';
 require_once dirname(__FILE__) . '/includes/view.inc';
 
+if (module_exists('yoti')) {
+  require_once drupal_get_path('module', 'yoti') . '/YotiHelper.php';
+}
+
 /**
  * Implements template_preprocess_views_view_table().
  */
@@ -481,10 +485,14 @@ function civihr_default_theme_js_alter(&$javascript) {
       'sites/all/modules/civihr-contrib-required/fancy_login/js/fancy_login.js',
       'sites/all/themes/civihr_employee_portal_theme/civihr_default_theme/assets/js/radix.modal.js',
       'sites/all/modules/civicrm/packages/jquery/plugins/jquery.blockUI.min.js',
-      'https://sdk.yoti.com/clients/browser.js',
       'sites/all/modules/civihr-signup/js/civihr-signup.js',
       'https://use.typekit.net/mhr5yod.js',
     ];
+
+    if (module_exists('yoti')) {
+      array_push($requiredJS, YotiHelper::YOTI_SDK_JAVASCRIPT_LIBRARY);
+    }
+
     foreach (array_keys($javascript) as $file) {
       $found = false;
       foreach ($requiredJS as $allowedFile) {

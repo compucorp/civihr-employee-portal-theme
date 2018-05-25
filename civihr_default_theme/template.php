@@ -858,6 +858,9 @@ function _get_menu_link_markup(&$link) {
   if ($link['#title'] === 'Manager Leave') {
     $link['#localized_options']['html'] = true;
     $link['#title'] .= civihr_leave_absences_get_markup('manager-notification-badge');
+  } else if ($link['#title'] === 'Tasks') {
+    $link['#localized_options']['html'] = true;
+    $link['#title'] .= civihr_tasks_documents_get_markup('tasks-notification-badge');
   }
 
   $linkMarkup = l($link['#title'], $link['#href'], $link['#localized_options']);

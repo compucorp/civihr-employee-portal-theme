@@ -828,8 +828,8 @@ function _get_cog_menu_items() {
 
   return [
     [
-      'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', $options),
+      'permissions' => ["create hr_documents content"],
+      'link' => l(t('Manage HR Resources'), 'manage-hr-resources', $options),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
@@ -955,4 +955,20 @@ function _set_maximum_scale_to_viewport_meta_tag(&$head_elements) {
 
   // Set updated rules to the tag
   $viewportTagValue = implode(', ', $rules);
+}
+
+/**
+ * Implements hook_form_alter()
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
+ */
+function civihr_default_theme_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    if ($form_state['view']->name == 'manage_hr_resources' && $form_state['view']->current_display == 'manage_hr_resources_page') {
+      $form['status']['#options']['1'] = t('Published');
+      $form['status']['#options']['0'] = t('Not Published');
+    }
+  }
 }

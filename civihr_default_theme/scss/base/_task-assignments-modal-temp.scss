@@ -290,41 +290,11 @@ fieldset {
     position: relative;
   }
 
-  .ct-spinner-cover {
-    @include border-radius($border-radius-base);
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1039;
-
-    @include animation(fadeIn 0.3s);
-  }
-
-  .ct-spinner-img {
-    background-image: url('../images/loading-overlay.gif') !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-  }
-
+  .ct-spinner-cover,
   .ct-spinner {
-    height: 32px;
-    margin-left: -16px;
-    margin-top: -16px;
-    position: fixed;
-    top: 50%;
     left: 50%;
-    width: 32px;
-    z-index: 1040;
-
-    @include animation(fadeIn 0.3s);
-  }
-
-  .ct-page-loading {
-    .ct-spinner-cover {
-      background-color: rgba(255, 255, 255, 1) !important;
-    }
+    position: absolute;
+    top: 50%;
+    z-index: 999;
   }
 }

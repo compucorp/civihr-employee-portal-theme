@@ -857,7 +857,16 @@ function _get_cog_menu_items() {
 function _get_menu_link_markup(&$link) {
   if ($link['#title'] === 'Manager Leave') {
     $link['#localized_options']['html'] = true;
-    $link['#title'] .= civihr_leave_absences_get_markup('manager-notification-badge');
+    $link['#title'] .= civihr_employee_portal_get_markup_for_extension(
+      'manager-notification-badge',
+      'uk.co.compucorp.civicrm.hrleaveandabsences',
+      'civihr_leave_absences');
+  } else if ($link['#title'] === 'Tasks') {
+    $link['#localized_options']['html'] = true;
+    $link['#title'] .= civihr_employee_portal_get_markup_for_extension(
+      'tasks-notification-badge',
+      'uk.co.compucorp.civicrm.tasksassignments',
+      'civihr_employee_portal');
   }
 
   $linkMarkup = l($link['#title'], $link['#href'], $link['#localized_options']);

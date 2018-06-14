@@ -956,3 +956,16 @@ function _set_maximum_scale_to_viewport_meta_tag(&$head_elements) {
   // Set updated rules to the tag
   $viewportTagValue = implode(', ', $rules);
 }
+
+/**
+ * Implements theme_menu_local_tasks().
+ */
+function civihr_default_theme_menu_local_tasks(&$variable) {
+  // Remove primary and secondary tabs from user_profile_form page
+  if (arg(0) === 'user' && is_numeric(arg(1)) && arg(2) === 'edit') {
+    $variables['primary']['#access'] = false;
+    $variables['secondary']['#access'] = false;
+  }
+
+  return radix_menu_local_tasks($variables);
+}

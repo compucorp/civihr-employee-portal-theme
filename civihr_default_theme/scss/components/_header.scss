@@ -1,9 +1,9 @@
 .chr_header {
   @include clearfix;
 
-  background: $gray-dark;
+  background: linear-gradient(316.71deg, #8a5ffc 0%, #0979c3 87.49%, #0071bd 100%);
   box-shadow: 0 2px 3px 0 rgba(black, 0.15);
-  color: $light-pale;
+  color: $light;
   font-size: 1.3rem;
   height: $crm-header-height;
   line-height: $crm-header-height;
@@ -27,9 +27,9 @@
     min-height: 100%;
     position: absolute;
     top: $crm-header-height;
-    width: 100%;
 
     transition: left 0.2s ease-out;
+    width: 100%;
 
     &.is-open {
       left: 0;
@@ -73,7 +73,7 @@
 }
 
 .chr_header__corner {
-  background: $brand-primary;
+  background: transparent;
   display: table;
   height: 100%;
   text-align: center;
@@ -106,27 +106,24 @@
 
 .chr_header__logo {
   color: $light;
-  font-size: 1.6rem;
   display: inline-block;
+  font-size: 1.6rem;
 }
 
 .chr_header__nav {
-  background: #ffffff;
   font-size: 1.385em;
   z-index: 99;
 
   @media(min-width: $screen-md-max) {
-    background: inherit;
     font-size: inherit;
     padding: 0;
   }
 }
 
 .chr_header__nav__menu {
-
   a {
     border-bottom: 1px solid $crm-grizzly;
-    color: $gray-darker;
+    color: $light;
     display: block;
     margin: 0 25px;
     padding: 0 20px;
@@ -144,9 +141,9 @@
     // (see: https://www.dannyenglander.com/blog/drupal-theming-adding-font-awesome-icons-menu-items)
     &.fa {
       font-family: inherit;
-      line-height: inherit;
       -webkit-font-smoothing: inherit;
       -moz-osx-font-smoothing: inherit;
+      line-height: inherit;
 
       &:before {
         @include fa-icon();
@@ -160,9 +157,9 @@
 
     &.active {
       &:after {
-        content: '';
-        border: 2px solid $brand-primary;
+        border: 2px solid $light;
         bottom: 0;
+        content: '';
         left: 0;
         margin: auto;
         position: absolute;
@@ -183,18 +180,17 @@
 
     a {
       border: 0;
-      color: inherit;
       margin: 0;
       padding: 0 10px;
 
       &:hover,
       &:focus {
-        background: $gray;
+        background-color: rgba(255, 255, 255, 0.1);
         color: $light !important;
       }
 
       &.active {
-        color: inherit;
+        color: $light;
       }
     }
 
@@ -229,14 +225,14 @@
 
 
 .chr_header__settings-menu {
-  float: right;
   display: inline-block;
+  float: right;
   position: relative;
   text-align: center;
   width: 50px;
 
   &:hover {
-    background-color: $gray;
+    background-color: rgba(255, 255, 255, 0.1);
 
     > .chr_header__sub-menu {
       display: block;
@@ -244,7 +240,7 @@
   }
 
   > .fa-cog {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .chr_header__sub-menu {
@@ -253,25 +249,26 @@
 }
 
 .chr_header__sub-menu {
-  background: $crm-gray-darker-alt;
+  background: $light;
   display: none;
+  padding: 10px 0;
   position: absolute;
   z-index: 99;
 
   li {
+    line-height: 41px;
     text-align: left;
   }
 
   a {
-    color: $light-pale;
-    font-size: 1.3rem;
+    color: #4d4d69;
     display: block;
+    font-size: 1.3rem;
     padding: 0 30px 0 20px;
     white-space: nowrap;
 
     &:hover {
-      background: $gray;
-      color: $light;
+      background: #f3f6f7;
     }
 
     > i {
@@ -281,9 +278,8 @@
 }
 
 .chr_header__sub-menu__separator {
-
   &:after {
-    border-top: 1px solid $gray-darker;
+    border-top: 1px solid #e8eef0;
     content: '';
     display: block;
     height: 0;

@@ -162,12 +162,12 @@ $crm-ui-select-top-padding:       7px;
 $chr-user-menu-color:                     $light-pale;
 $chr-user-menu-line-height:               inherit;
 $chr-user-menu-minify-breakpoint:         $crm-screen-lg-max;
-$chr-user-menu-bg-hover:                  $gray;
-$chr-user-menu-dropdown-bg:               $crm-gray-darker-alt;
-$chr-user-menu-dropdown-username-color:   $light;
-$chr-user-menu-dropdown-link-color:       $light-pale;
-$chr-user-menu-dropdown-link-color-hover: $light;
-$chr-user-menu-dropdown-link-bg-hover:    $gray;
+$chr-user-menu-bg-hover:                  rgba(255, 255, 255, 0.1);
+$chr-user-menu-dropdown-bg:               $light;
+$chr-user-menu-dropdown-username-color:   #4d4d69;
+$chr-user-menu-dropdown-link-color:       #4d4d69;
+$chr-user-menu-dropdown-link-color-hover: #4d4d69;
+$chr-user-menu-dropdown-link-bg-hover:    #f3f6f7;
 
 //== Wizard
 // -----------------------------------------------------------------------------

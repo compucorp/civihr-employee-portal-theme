@@ -1,9 +1,9 @@
 .chr_header {
   @include clearfix;
 
-  background: $gray-dark;
+  background: linear-gradient(316.71deg, #8A5FFC 0%, #0979C3 87.49%, #0071BD 100%);
   box-shadow: 0 2px 3px 0 rgba(black, 0.15);
-  color: $light-pale;
+  color: $light;
   font-size: 1.3rem;
   height: $crm-header-height;
   line-height: $crm-header-height;
@@ -73,7 +73,7 @@
 }
 
 .chr_header__corner {
-  background: $brand-primary;
+  background: transparent;
   display: table;
   height: 100%;
   text-align: center;
@@ -111,12 +111,10 @@
 }
 
 .chr_header__nav {
-  background: #ffffff;
   font-size: 1.385em;
   z-index: 99;
 
   @media(min-width: $screen-md-max) {
-    background: inherit;
     font-size: inherit;
     padding: 0;
   }
@@ -126,7 +124,7 @@
 
   a {
     border-bottom: 1px solid $crm-grizzly;
-    color: $gray-darker;
+    color: $light;
     display: block;
     margin: 0 25px;
     padding: 0 20px;
@@ -161,7 +159,7 @@
     &.active {
       &:after {
         content: '';
-        border: 2px solid $brand-primary;
+        border: 2px solid $light;
         bottom: 0;
         left: 0;
         margin: auto;
@@ -183,18 +181,17 @@
 
     a {
       border: 0;
-      color: inherit;
       margin: 0;
       padding: 0 10px;
 
       &:hover,
       &:focus {
-        background: $gray;
+        background-color: rgba(255, 255, 255, 0.1);
         color: $light !important;
       }
 
       &.active {
-        color: inherit;
+        color: $light;
       }
     }
 
@@ -236,7 +233,7 @@
   width: 50px;
 
   &:hover {
-    background-color: $gray;
+    background-color: rgba(255, 255, 255, 0.1);
 
     > .chr_header__sub-menu {
       display: block;
@@ -244,7 +241,7 @@
   }
 
   > .fa-cog {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .chr_header__sub-menu {
@@ -253,25 +250,26 @@
 }
 
 .chr_header__sub-menu {
-  background: $crm-gray-darker-alt;
+  background: $light;
   display: none;
+  padding: 10px 0;
   position: absolute;
   z-index: 99;
 
   li {
+    line-height: 41px;
     text-align: left;
   }
 
   a {
-    color: $light-pale;
+    color: #4D4D69;
     font-size: 1.3rem;
     display: block;
     padding: 0 30px 0 20px;
     white-space: nowrap;
 
     &:hover {
-      background: $gray;
-      color: $light;
+      background: #F3F6F7;
     }
 
     > i {
@@ -283,7 +281,7 @@
 .chr_header__sub-menu__separator {
 
   &:after {
-    border-top: 1px solid $gray-darker;
+    border-top: 1px solid #E8EEF0;
     content: '';
     display: block;
     height: 0;

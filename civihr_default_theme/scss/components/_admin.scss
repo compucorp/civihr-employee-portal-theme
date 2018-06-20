@@ -66,12 +66,20 @@
   }
 
   #edit-submit {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   #edit-body-und-0-format {
     .customSelectInner {
       width: auto !important;
+    }
+  }
+}
+
+.page-node-edit.node-type-hr-documents {
+  #edit-actions {
+    input {
+      margin-left: 10px;
     }
   }
 }

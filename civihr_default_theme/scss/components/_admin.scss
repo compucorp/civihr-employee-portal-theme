@@ -1,5 +1,5 @@
-.page-admin, .page-node-add-hr-documents {
-
+.page-admin,
+.page-node-add-hr-documents {
   .tabs,
   .action-links,
   .nav.nav-pills.secondary {
@@ -7,35 +7,51 @@
   }
 
   .customSelect {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
   }
+
   .panel-title {
     font-size: 14px;
   }
 
   .table-responsive {
-    margin: 0px 3px 5px 3px;
+    margin: 0 3px 5px;
   }
 
-  fieldset.panel-default {
+  .panel-default {
     padding-top: 70px;
     position: relative;
 
     legend {
+      background: $light;
+      left: 0;
+      line-height: 30px;
       position: absolute;
       top: 0;
-      left: 0;
-      background: $light;
-      line-height: 30px;
     }
   }
 
   table {
-    background: $light;
     @include box-shadow($crm-box-shadow-global);
+    background: $light;
 
     th {
       height: 45px;
+    }
+  }
+}
+
+.page-node-edit.node-type-hr-documents,
+.page-node-add-hr-documents {
+  .field-name-body .filter-wrapper {
+    display: none;
+  }
+
+  .form-item-publish-status {
+    margin-top: 20px;
+
+    label {
+      font-weight: 700;
     }
   }
 }
@@ -50,12 +66,20 @@
   }
 
   #edit-submit {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   #edit-body-und-0-format {
     .customSelectInner {
       width: auto !important;
+    }
+  }
+}
+
+.page-node-edit.node-type-hr-documents {
+  #edit-actions {
+    input {
+      margin-left: 10px;
     }
   }
 }

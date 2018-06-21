@@ -1,0 +1,25 @@
+.page-manage-hr-resources {
+  .view-header {
+    margin-bottom: 40px;
+  }
+
+  .views-exposed-widget {
+    float: left;
+    width: calc(50% - 10px);
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+
+  .views-submit-button {
+    clear: both;
+    float: right;
+  }
+
+  @media (max-width: $screen-sm-min) {
+    .views-exposed-widget {
+      width: 100%;
+    }
+  }
+}

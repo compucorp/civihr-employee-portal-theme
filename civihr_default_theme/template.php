@@ -828,8 +828,8 @@ function _get_cog_menu_items() {
 
   return [
     [
-      'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', $options),
+      'permissions' => ["create hr_documents content"],
+      'link' => l(t('Manage HR Resources'), 'manage-hr-resources', $options),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],

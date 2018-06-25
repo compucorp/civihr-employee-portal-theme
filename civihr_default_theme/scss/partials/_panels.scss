@@ -1,7 +1,7 @@
 .panel {
   @include box-shadow($crm-box-shadow-global);
   background: transparent;
-  border: none;
+  border: 0;
 
   &--sliding-body {
     border-bottom: 0;
@@ -10,8 +10,8 @@
 }
 
 .panel-body-wrap {
-  transition: max-height .4s linear;
   max-height: 162px;
+  transition: max-height 0.4s linear;
 
   &--collapse {
     max-height: 0;
@@ -44,10 +44,9 @@
 }
 
 .panel-default {
-
   > .panel-subheading {
     background: $panel-default-heading-bg;
-    border-bottom: 1px solid $crm-grizzly;
+    border-bottom: 1px solid $gray-dark;
     color: $panel-default-text;
   }
 }
@@ -56,7 +55,6 @@
 // (only for .panel-default). If the panel itself is collapsed, the title loses
 // the bottom border
 .panel-heading-plain {
-
   .panel-default > & {
     background: $light;
     border: 0;
@@ -70,7 +68,6 @@
   }
 
   .panel-default.is-collapsed > & {
-
     > .panel-title {
       border-bottom: 0;
       padding-bottom: 0;

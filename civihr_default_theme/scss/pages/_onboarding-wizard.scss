@@ -1,4 +1,4 @@
-$carousel-box-shadow-color: rgba(#3f3c55,0.3);
+$carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
 .mobile {
   #onboarding-customization-page {
@@ -29,7 +29,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 
   .chr_onboarding-wizard_remind-me-later {
-    border: none;
+    border: 0;
     float: none;
     margin-top: 15px;
 
@@ -79,7 +79,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     width: 100%;
 
     > label {
-      color: $crm-wizard-font-color;
       display: block;
       font-size: 13px;
       padding: 0;
@@ -114,10 +113,10 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     > div {
       background-color: transparent !important;
-      padding: 8px 12px;
       border: 1px solid $crm_color-neutral;
-      border-right: none;
+      border-right: 0;
       margin: 0 !important;
+      padding: 8px 12px;
     }
 
     > div:last-child {
@@ -126,14 +125,14 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     > div.checked {
       background-color: $crm-wizard-secondary-color !important;
-      color: $light;
       border-color: transparent;
+      color: $light;
     }
 
     input[type='radio']:checked:after {
+      background-color: $crm-gray-1;
       border: 4px solid $light;
       border-radius: 15px;
-      background-color: #000;
       content: '';
       display: inline-block;
       height: 15px;
@@ -152,8 +151,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   .modal-civihr-custom__section,
   .onboarding-wizard-container {
     margin: -25px auto 25px auto;
+    padding: 90px 0 0;
     width: 475px;
-    padding: 90px 0 0 0;
   }
 
   .onboarding-wizard-container {
@@ -232,8 +231,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .civicrm-remove-file {
       background: $light;
-      border: 1px solid #ccc;
-      padding: .7rem 1.1rem;
+      border: 1px solid $gray-lighter;
+      padding: 0.7rem 1.1rem;
     }
   }
 
@@ -261,12 +260,12 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .webform-calendar,
   .mobile-webform-calendar {
-    padding: 7px 10px;
     -webkit-appearance: none;
+    padding: 7px 10px;
 
     &+.input-group-addon {
-      background-color: $crm_gray-light-alt;
-      border: 1px solid $crm-color-neutral;
+      background-color: $light;
+      border: 1px solid $gray-lighter;
       color: $crm-wizard-font-color;
       display: inline-block;
       height: 100%;
@@ -294,10 +293,10 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .onboarding-fieldset-title,
   #onboarding-welcome-message {
-    color: $crm-wizard-font-color;
-    margin-top: -15px;
+    color: $gray-light;
     font-size: 36px;
     font-weight: $headings-font-weight;
+    margin-top: -15px;
     text-align: center;
   }
 
@@ -311,14 +310,14 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .webform-previous,
   #edit-cancel {
-    background: $crm-wizard-primary-color;
-    border: 0;
-    color: $light;
+    background: transparent;
+    border: 1px solid $gray;
+    color: $gray-dark;
     float: left;
 
     &:focus {
-      background: $crm-wizard-primary-color;
-      color: $light;
+      background: $light;
+      color: $gray-dark;
     }
   }
 
@@ -398,7 +397,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   .onboarding_wizard_features_get_started {
     background: $crm-wizard-secondary-color;
     display: block;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 0;
     text-transform: uppercase;
     width: 200px;
   }
@@ -418,8 +417,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 
   .views-slideshow-cycle-main-frame {
-    margin: 0 30px;
     height: 303px;
+    margin: 0 30px;
 
     .views-slideshow-cycle-main-frame-row {
       width: 100% !important;
@@ -463,16 +462,16 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 
   .views-slideshow-pager-fields {
-    text-align: center;
     margin-top: 40px;
+    text-align: center;
 
     .views-content-title {
-      cursor: pointer;
-      height: 10px;
-      width: 10px;
-      display: inline-block;
       background: $light-pale;
       border-radius: 50%;
+      cursor: pointer;
+      display: inline-block;
+      height: 10px;
+      width: 10px;
     }
 
     .active {
@@ -496,7 +495,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       top: 140px;
 
       a {
-        color: #c2cfd7;
+        color: $gray-lighter;
       }
     }
 
@@ -512,8 +511,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .views-slideshow-cycle-main-frame {
-      margin: 0;
       height: 500px;
+      margin: 0;
 
       .views-slideshow-cycle-main-frame-row {
         .views-slideshow-cycle-main-frame-row-item {
@@ -658,8 +657,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       margin-bottom: 60px;
 
       .form-type-checkbox {
-        margin-bottom: 10px !important;
         height: 20px;
+        margin-bottom: 10px !important;
       }
     }
 
@@ -684,24 +683,24 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .onboarding-customize-logo {
-      width: 440px;
-      margin-right: 90px;
       float: right;
+      margin-right: 90px;
       margin-top: 75px;
+      width: 440px;
     }
 
     .onboarding-customize-features {
-      width: 440px;
-      margin-right: 90px;
       float: right;
+      margin-right: 90px;
       margin-top: 50px;
+      width: 440px;
     }
 
     .onboarding-customize-welcome {
-      width: 440px;
-      margin-right: 90px;
       float: right;
+      margin-right: 90px;
       margin-top: 45px;
+      width: 440px;
     }
 
     @media (max-width: $screen-lg-min) {
@@ -719,7 +718,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       .onboarding-customize-welcome {
         float: none;
         margin: 20px;
-        width: calc( 100% - 40px);
+        width: calc(100% - 40px);
       }
 
       .form-item-civihr-onboarding-welcome-text,
@@ -732,7 +731,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
         margin-bottom: 0;
 
         .form-type-checkbox {
-          border: 1px solid #ececed;
+          border: 1px solid $light-pale;
           height: auto;
           padding: 10px;
         }

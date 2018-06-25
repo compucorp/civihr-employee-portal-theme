@@ -89,11 +89,7 @@
 .view-full-hr-documents {
   .views-row {
     &:not(:last-child) {
-      border-bottom: 1px solid $gray-light;
+      border-bottom: 1px solid $light-pale;
     }
-  }
-
-  .views-row-odd {
-    background: $gray-lighter;
   }
 }

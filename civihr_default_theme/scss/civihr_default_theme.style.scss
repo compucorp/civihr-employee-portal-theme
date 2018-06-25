@@ -9,7 +9,7 @@
 // Bootstrap global partials.
 // -----------------------------------------------------------------------------
 @import 'base/variables';
-@import 'base/mixins';
+@import 'base/mixins/**/*';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/ALL';
 
 // Core variables and mixins

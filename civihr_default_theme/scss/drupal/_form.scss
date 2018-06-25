@@ -386,10 +386,10 @@
 /* SSP Document form */
 #civihr-employee-portal-document-form {
   #drop-target {
-    background-color: #e8eef0;
-    border: 1px dashed #727e8a;
+    background-color: $light-gray;
+    border: 1px dashed $light-pale;
     box-shadow: none;
-    color: #525966;
+    color: $gray;
   }
 
   .col-index {

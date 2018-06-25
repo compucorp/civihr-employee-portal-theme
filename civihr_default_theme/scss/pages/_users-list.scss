@@ -1,9 +1,9 @@
 .page-users-list {
   #edit-access-min,
   #edit-access-max {
-    &+.input-group-addon {
-      background-color: $crm_gray-light-alt;
-      border: 1px solid $crm-color-neutral;
+    +.input-group-addon {
+      background-color: $light;
+      border: 1px solid $gray-lighter;
       bottom: 0;
       color: $crm-wizard-font-color;
       display: inline-block;
@@ -26,9 +26,9 @@
     }
 
     > a {
-      background: #767b8e;
+      background: $gray-light;
       border: 0;
-      color: #fff;
+      color: $light;
       display: inline-block;
       margin-left: 20px;
       padding: 0.7rem 1.1rem;

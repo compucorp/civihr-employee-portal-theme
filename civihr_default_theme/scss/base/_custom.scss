@@ -11,6 +11,7 @@ legend {
 }
 
 label {
+  color: $gray-light;
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
@@ -358,26 +359,26 @@ a {
 
 h1,
 .block__title {
-  color: $crm-gray-darker-alt;
+  color: $gray-light;
   font-size: 3.6rem;
   font-weight: 300;
   margin: 25px 0;
 }
 
 h4 {
-  color: $gray-darker;
+  color: $gray-dark;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
 h5 {
-  color: $gray-darker;
+  color: $gray;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
 h2.pane-title {
-  color: $gray-darker;
+  color: $gray;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -600,14 +601,14 @@ h2.pane-title {
 // Splitters
 
 .vertical-splitter {
-  border-left: 1px solid $gray-light;
+  border-left: 1px solid $light-pale;
   height: 100%;
   position: absolute;
   width: 0;
 }
 
 .splitter-top {
-  border-top: 1px solid $gray-light;
+  border-top: 1px solid $light-pale;
   margin-top: 20px;
   padding-top: 20px;
 }
@@ -695,7 +696,7 @@ form {
 // Main / Dashboard
 
 .main {
-  background: $gray-light;
+  background: $light-pale;
 }
 
 // Panels / Dashboard Carousel
@@ -727,7 +728,7 @@ form {
   }
 
   .jcarousel-item {
-    background: $crm-gray-light-alt;
+    background: $light-gray;
     margin: 0 10px;
     padding: 20px;
     width: 193px;
@@ -771,7 +772,7 @@ form {
 }
 
 .pane-title {
-  border-bottom: 1px solid $gray-light;
+  border-bottom: 1px solid $light-pale;
   line-height: 1;
   margin: 0 -20px 20px;
   padding: 0 20px 20px;
@@ -1051,7 +1052,7 @@ form {
 // Footer
 
 .footer {
-  background: $gray-light;
+  background: $light-pale;
   color: $gray;
   padding: 50px 0;
 
@@ -1089,7 +1090,7 @@ form {
     }
 
     .views-submit-button {
-      border-top: 1px solid $gray-light;
+      border-top: 1px solid $light-pale;
       margin-top: 20px;
 
       .form-submit {
@@ -1115,9 +1116,9 @@ form {
     }
 
     .views-row-odd {
-      background: $gray-lighter;
-      border-bottom: 1px solid $gray-light;
-      border-top: 1px solid $gray-light;
+      background: $light;
+      border-bottom: 1px solid $light-pale;
+      border-top: 1px solid $light-pale;
     }
 
     .field-content {
@@ -1160,7 +1161,7 @@ form {
     }
 
     .fieldset-wrapper {
-      background: $crm-gray-light-alt;
+      background: $light-gray;
       margin-top: 20px;
       padding: 15px 20px;
 

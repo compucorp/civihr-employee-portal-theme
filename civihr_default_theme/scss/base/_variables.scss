@@ -10,38 +10,29 @@ $crm-header-height: 60px !default;
 
 // Grays
 // -----------------------------------------------------------------------------
-$gray-dark:           #555862 !default; // menu bg
-$gray-darker:         #4c4c5d !default; // text darker
-$gray:                #757b8e !default; // main text/lighter, menu item bg hover, footer logo
-$gray-light:          #ecedee !default; // body bg
-$gray-lighter:        #fbfbfc !default; // table odd row
+$gray-darker:         #3e3e54 !default;
+$gray-dark:           #464354 !default;
+$gray:                #4d4d69 !default;
+$gray-light:          #9494a5 !default;
+$gray-lighter:        #c2cfd8 !default;
 
-$light:               #fff !default; // well bg, text on dark bg hover
-$light-pale:          #c3cbd6 !default; // text on dark bg
-$light-gray:          #eeeded !default;
+$light:               #fff !default;
+$light-pale:          #e8eef0 !default;
+$light-gray:          #f3f6f7 !default;
 
-$text-muted:          rgba($gray, 0.6);
-
-$crm-gray-light-alt:  #f0f1f4 !default; // carousel item bg, hr resource bg
-$crm-gray-light-blue: #757b8e !default; // scrollbar thumb, pivot table text
-$crm-gray-darker-alt: #404454 !default; // page title
-$crm-grizzly:         #dcdddd !default;
-$crm-color-neutral:   #949caa !default; // gray shade
-$crm-grayish-blue:    #f4f7f8 !default;
-$crm-gray-matte:      $crm-color-neutral; // disabled font
+$crm-gray-1:          #4e4e78;
 
 // Brand colors
 // -----------------------------------------------------------------------------
-$brand-primary:       #42afcb !default;
-$brand-secondary:     #727e8a !default;
-$brand-success:       #7dc4a7 !default;
-$brand-warning:       #dabb24 !default;
-$brand-danger:        #da6b86 !default;
-$crm-brand-secondary: #db6c86; // submenu hover
+$brand-primary:       #0071bd !default;
+$brand-secondary:     #9494a5 !default;
+$brand-success:       #44cb7e !default;
+$brand-warning:       #e6ab5e !default;
+$brand-danger:        #cf3458 !default;
 
 // Scaffolding
 // -----------------------------------------------------------------------------
-$body-bg:    $gray-light !default;
+$body-bg:    $light-pale !default;
 $text-color: $gray !default;
 
 // Typography
@@ -67,23 +58,16 @@ $crm-icon-desc:       'desc.gif' !default;
 
 // Components
 // -----------------------------------------------------------------------------
-$border-radius-base:  0 !default;
+$border-radius-base:  2px !default;
 $border-radius-large: 0 !default;
 $border-radius-small: 0 !default;
 
 // Tables
 // -----------------------------------------------------------------------------
 $table-bg:                       $light !default;
-$table-border-color:             #ededed !default;
+$table-border-color:             $light-pale !default;
 $table-cell-padding:             8px 20px !default;
 $table-condensed-cell-padding:   8px 5px !default;
-
-$crm-table-heading-padding:      13px 20px !default;
-$crm-table-heading-bg:           #f7f7f9 !default;
-$crm-table-heading-border-color: #dadcde !default;
-
-$crm-table-nested-indent-color:  #dbdddf !default;
-$crm-table-nested-indent-width:  10px !default;
 
 // Buttons
 // -----------------------------------------------------------------------------
@@ -97,10 +81,11 @@ $btn-danger-border:    transparent !default;
 // -----------------------------------------------------------------------------
 $dropdown-border:        transparent !default;
 $dropdown-link-color:    $text-color !default;
-$dropdown-link-hover-bg: #f7f7f9 !default;
+$dropdown-link-hover-bg: $light-gray !default;
 
 // Navs
 // -----------------------------------------------------------------------------
+$nav-link-hover-bg:                           $light-gray !default;
 $nav-tabs-active-link-hover-bg:               $light !default;
 $nav-tabs-justified-active-link-border-color: $light !default;
 
@@ -137,13 +122,13 @@ $badge-bg: $gray !default;
 
 // Type
 // -----------------------------------------------------------------------------
-$hr-border: $gray-light !default;
+$hr-border: $light-pale !default;
 
 // Scrollbar
 // -----------------------------------------------------------------------------
 $crm-scrollbar-size:        10px !default;
-$crm-scrollbar-track-color: #f5f5f7 !default;
-$crm-scrollbar-thumb-color: $crm-gray-light-blue !default;
+$crm-scrollbar-track-color: $light-gray !default;
+$crm-scrollbar-thumb-color: $gray-light !default;
 
 // Custom Scrollbar
 // -----------------------------------------------------------------------------
@@ -153,7 +138,7 @@ $crm-customselect-padding-right: $crm-customselect-caret-width + 12 !default;
 
 // Forms
 // -----------------------------------------------------------------------------
-$input-border: $crm-color-neutral !default;
+$input-border: $gray-lighter !default;
 
 $crm-ui-select-top-padding:       7px;
 
@@ -163,7 +148,7 @@ $chr-user-menu-color:                     $light-pale;
 $chr-user-menu-line-height:               inherit;
 $chr-user-menu-minify-breakpoint:         $crm-screen-lg-max;
 $chr-user-menu-bg-hover:                  $gray;
-$chr-user-menu-dropdown-bg:               $crm-gray-darker-alt;
+$chr-user-menu-dropdown-bg:               $gray-dark;
 $chr-user-menu-dropdown-username-color:   $light;
 $chr-user-menu-dropdown-link-color:       $light-pale;
 $chr-user-menu-dropdown-link-color-hover: $light;
@@ -171,10 +156,10 @@ $chr-user-menu-dropdown-link-bg-hover:    $gray;
 
 //== Wizard
 // -----------------------------------------------------------------------------
-$crm-wizard-font-color:        #404454;
-$crm-wizard-primary-color:     #767b8e;
-$crm-wizard-secondary-color:   #42afcb;
-$crm-wizard-active-bg-color:   #e9edf3;
+$crm-wizard-font-color:        $text-color;
+$crm-wizard-primary-color:     $gray-light;
+$crm-wizard-secondary-color:   $brand-primary;
+$crm-wizard-active-bg-color:   $light-pale;
 $crm-wizard-active-font-color: $crm-wizard-secondary-color;
 
 //== Uib-Datepicker
@@ -183,13 +168,16 @@ $crm-wizard-active-font-color: $crm-wizard-secondary-color;
 $crm-uib-datepicker-active-border-radius:   0;
 $crm-uib-datepicker-active-cell-padding:    7px 9px;
 $crm-uib-datepicker-border:                 1px solid $input-border;
-$crm-uib-datepicker-body-bg-color:          $crm-grayish-blue;
-$crm-uib-datepicker-body-font-color:        $crm-color-neutral;
+$crm-uib-datepicker-body-bg-color:          $gray-dark;
+$crm-uib-datepicker-body-font-color:        $gray-dark;
 $crm-uib-datepicker-cell-padding:           7px 0;
 $crm-uib-datepicker-cell-padding-span:      5px;
 $crm-uib-datepicker-header-font-color:      inherit;
 $crm-uib-datepicker-header-font-size:       14px;
 $crm-uib-datepicker-header-font-weight:     $crm-font-weight-regular;
-$crm-uib-datepicker-muted-cell-color:       $crm-grizzly;
+$crm-uib-datepicker-muted-cell-color:       $gray-dark;
 $crm-uib-datepicker-today-bg-color:         $brand-primary;
 $crm-uib-datepicker-today-font-color:       $light;
+$crm-uib-datepicker-week-border:            $light-pale;
+
+$crm-jquery-datepicker-grid-color:          $light !default;

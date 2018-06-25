@@ -23,7 +23,6 @@
 }
 
 .chr_search-result__footer {
-
   > .chr_search-result__pager--full {
     display: none;
   }
@@ -41,22 +40,21 @@
 }
 
 .chr_search-result__header {
-  border-bottom: 1px solid $gray-light;
+  border-bottom: 1px solid $light-pale;
 
   > .chr_search-result__total {
     display: inline-block;
     vertical-align: sub;
 
     > .chr_search-result__icon {
-      top: 3px;
       font-size: 15px;
       margin-right: 5px;
+      top: 3px;
     }
   }
 }
 
 .chr_search-result__items-per-page {
-
   > .chr_search-result__items-per-page__list {
     margin-left: 10px;
   }
@@ -68,25 +66,24 @@
 
 .chr_search-result__pager {
 
-    // Relies on drupal's .item-list component being present as child element
-    .pager {
-      margin: 0;
+  // Relies on drupal's .item-list component being present as child element
+  .pager {
+    margin: 0;
 
-      a {
-        color: inherit;
-      }
+    a {
+      color: inherit;
+    }
 
-      li {
-        padding: 0 3px;
-      }
+    li {
+      padding: 0 3px;
     }
   }
+}
 
 // The "mini" version of the pager consists of the standard Drupal pager markup
 // with just the "Prev" and "Next" buttons visible.
 // Flexbox is used as the markup can't be changed
 .chr_search-result__pager--mini {
-
   .pager {
     display: flex;
     margin: 0 -10px;
@@ -127,9 +124,9 @@
 
   &:after {
     content: ')';
-}
+  }
 
-&:before {
-  content: '(';
-}
+  &:before {
+    content: '(';
+  }
 }

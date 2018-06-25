@@ -1,17 +1,17 @@
 .drop-zone-overlay {
   align-items: center;
-  background: #ecedee;
+  background: $light-gray;
   color: $crm-wizard-font-color;
   display: flex;
-  justify-content: center;
   height: 180px;
+  justify-content: center;
   min-width: 120px;
-  outline: 1px dashed #7a8084;
+  outline: 1px dashed $gray-light;
   pointer-events: none;
   position: absolute;
   text-align: center;
-  transition: outline-offset .15s ease-in-out, background-color .15s linear;
   top: 0;
+  transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
   width: 100%;
 
   i {
@@ -21,9 +21,9 @@
   }
 
   &.is-dragover {
-    outline-offset: -10px;
-    outline-color: #c8dadf;
     background-color: $light;
+    outline-color: $gray-lighter;
+    outline-offset: -10px;
   }
 }
 

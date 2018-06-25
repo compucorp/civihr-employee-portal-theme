@@ -56,13 +56,13 @@
       border-right: 1px solid $gray-light;
     }
 
-    th.pvtTotalLabel[colspan="2"] {
+    th.pvtTotalLabel[colspan='2'] {
       font-weight: bold;
     }
 
     .rowTotal,
     .pvtVal {
-      color: $crm-gray-light-blue;
+      color: $gray-dark;
       font-weight: normal;
     }
   }
@@ -72,13 +72,13 @@
       background-color: $gray-lighter;
       border: 1px solid $light-gray;
       border-radius: 0;
-      color: $crm-gray-light-blue;
+      color: $gray-dark;
       line-height: 33px;
       padding: 0 15px;
     }
 
     .pvtTriangle {
-      color: $crm-gray-light-blue;
+      color: $gray-dark;
       margin-bottom: 2px;
       margin-left: 10px;
     }
@@ -95,7 +95,7 @@
 
     .c3 {
       height: 0;
-      padding: 0 0 100% 0;
+      padding: 0 0 100%;
       position: relative;
       width: 100%;
     }
@@ -115,7 +115,6 @@
   }
 
   .pvtUi {
-
     > tbody,
     .pvtAxisContainer.pvtHorizList {
       border-right: 0;
@@ -154,7 +153,7 @@
       @extend .btn;
       @extend .btn-primary;
 
-      margin: 10px 0 0 0;
+      margin: 10px 0 0;
     }
 
     .pvtCheckContainer {

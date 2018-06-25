@@ -20,7 +20,7 @@
 .chr_table-w-filters__filters {
 
   @media(min-width: $screen-md-min) {
-    border-right: 1px solid #ECEDEE;
+    border-right: 1px solid $light-pale;
     padding-right: 0;
   }
 }
@@ -82,7 +82,7 @@
   border-top: 1px solid $gray-light;
 
   @media(min-width: $screen-md-min) {
-    border-left: 1px solid #ECEDEE;
+    border-left: 1px solid $light-pale;
     border-top: none;
     padding-left: 0;
   }

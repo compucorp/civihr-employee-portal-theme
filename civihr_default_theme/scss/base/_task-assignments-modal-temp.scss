@@ -2,10 +2,10 @@
 
 // Variables
 $light-black-blue: #586277;
-$light-blue: #41AFCB;
-$light-gray: #F4F7F8;
-$lighter-grey: #ECEDEE;
-$white: #FFFFFF;
+$light-blue: #41afcb;
+$light-gray: #f4f7f8;
+$lighter-grey: #ecedee;
+$white: $light;
 
 // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
 // so we reset that to ensure it behaves more like a standard block element.
@@ -30,10 +30,10 @@ fieldset {
   }
 
   // Required Imports
-  @import "bootstrap/modals";
-  @import "bootstrap/forms";
-  @import "bootstrap/input-groups";
-  @import "bootstrap/list-group";
+  @import 'bootstrap/modals';
+  @import 'bootstrap/forms';
+  @import 'bootstrap/input-groups';
+  @import 'bootstrap/list-group';
 
   // Overriding custom height for modal-content
   .modal-content {
@@ -65,14 +65,14 @@ fieldset {
     }
 
     .drop-zone {
-      border: 1px dashed #727E8A;
+      border: 1px dashed #727e8a;
       padding: 30px;
       text-align: center;
     }
 
     .no-file {
-      color: $brand-danger;
       border-color: $brand-danger !important;
+      color: $brand-danger;
     }
 
     .no-left-margin {
@@ -99,15 +99,15 @@ fieldset {
 
     // help icon
     a.helpicon {
+      background-color: #41afcb;
       border-radius: 50%;
-      background-color: #41AFCB;
-      padding: 1px 6px 1px 6px;
-      text-decoration: none;
       font-size: 12px;
       font-weight: 400;
+      padding: 1px 6px;
+      text-decoration: none;
 
       &:before {
-        color: #FFF;
+        color: #fff;
         content: '?';
       }
     }
@@ -165,8 +165,8 @@ fieldset {
           .btn {
             background-color: #f4f7f8;
             border-radius: 20px;
-            padding: 7px;
             line-height: 1;
+            padding: 7px;
             width: auto !important;
 
             &:active {
@@ -174,8 +174,8 @@ fieldset {
             }
 
             &:focus {
-              outline: 0 none;
               background-color: #f4f7f8;
+              outline: 0 none;
             }
 
             &.active {
@@ -191,8 +191,8 @@ fieldset {
 
         td,
         th {
+          border-bottom: 0 solid #ecedee;
           padding: 7px;
-          border-bottom: 0px solid #ecedee;
         }
 
         thead {
@@ -209,7 +209,7 @@ fieldset {
         }
 
         .text-muted {
-          color: #CCCCCC;
+          color: #ccc;
         }
 
         > thead > tr > th {
@@ -226,15 +226,15 @@ fieldset {
     .civihr-ui-select {
       .select2-choice,
       .select2-arrow {
-        background-color: #FFF;
+        background-color: #fff;
         background-image: none;
       }
 
       .select2-results {
-        color: #727E8A;
+        color: #727e8a;
 
         .select2-highlighted {
-          background: #E8E8E8;
+          background: #e8e8e8;
           color: inherit;
         }
       }
@@ -269,7 +269,7 @@ fieldset {
   form {
     .btn {
       border: 1px solid transparent;
-      border-color:#727E8A;
+      border-color:#727e8a;
       border-radius: 2px;
       float: none;
       font-size: 13px;
@@ -279,9 +279,9 @@ fieldset {
 
     .btn-danger,
     .btn-danger:focus {
-      border: 0;
       background-color: $white;
-      color: #DA6B86;
+      border: 0;
+      color: #da6b86;
     }
   }
 

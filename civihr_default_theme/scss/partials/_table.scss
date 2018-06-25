@@ -7,14 +7,14 @@
     > tr {
       > th,
       > td {
+        border-bottom: 1px solid $light-pale;
         border-top: 0;
-        border-bottom: 1px solid $gray-light;
       }
     }
   }
 
   thead {
-    > tr{
+    > tr {
       > th {
         color: $gray-darker;
         padding: 8px 20px;
@@ -41,7 +41,6 @@ tr {
 
 // Necessary to remove the bottom margin if a table is inside a panel
 .panel {
-
   .table,
   .table-responsive {
     margin-bottom: 0;

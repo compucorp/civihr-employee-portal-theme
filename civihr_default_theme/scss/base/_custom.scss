@@ -3,7 +3,7 @@ legend {
   border-bottom: 1px solid $legend-border-color;
   color: $legend-color;
   display: block;
-  font-size: ($font-size-base * 1.5);
+  font-size: $font-size-base;
   line-height: inherit;
   margin-bottom: $line-height-computed;
   padding: 0;
@@ -13,7 +13,7 @@ legend {
 label {
   color: $gray-light;
   display: block;
-  font-weight: bold;
+  font-weight: $crm-font-weight-regular;
   margin-bottom: 5px;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
 }
@@ -210,7 +210,7 @@ output {
 
     @media (min-width: $screen-sm-min) {
       .control-label {
-        font-size: $font-size-small;
+        font-size: $font-size-base;
         padding-top: ($padding-small-vertical + 1);
       }
     }
@@ -257,6 +257,10 @@ body {
   display: block;
   float: none;
   width: $width;
+}
+
+.views-exposed-form label {
+  font-weight: $crm-font-weight-regular;
 }
 
 .views-exposed-form .views-exposed-widget {
@@ -360,27 +364,27 @@ a {
 h1,
 .block__title {
   color: $gray-light;
-  font-size: 3.6rem;
-  font-weight: 300;
+  font-size: $font-size-h1;
+  font-weight: $crm-font-weight-semi-bold;
   margin: 25px 0;
 }
 
 h4 {
   color: $gray-dark;
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: $font-size-h4;
+  font-weight: $crm-font-weight-regular;
 }
 
 h5 {
   color: $gray;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: $font-size-h5;
+  font-weight: $crm-font-weight-regular;
 }
 
 h2.pane-title {
   color: $gray;
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: $font-size-large;
+  font-weight: $crm-font-weight-semi-bold;
 }
 
 .container.collapse {
@@ -398,7 +402,7 @@ h2.pane-title {
 
   border: 1px solid $input-border;
   color: $gray;
-  font-size: 1.3rem;
+  font-size: $font-size-base;
   line-height: 1.5;
   margin: 0;
   padding: 7px 10px;
@@ -457,7 +461,7 @@ h2.pane-title {
     background: none;
     border: 0;
     color: $light !important;
-    font-size: 2.2rem;
+    font-size: $font-size-large;
     font-weight: bold;
     line-height: 1;
     padding: 0;
@@ -527,7 +531,7 @@ h2.pane-title {
   }
 
   .fieldset-legend {
-    font-size: 1.6rem;
+    font-size: $font-size-base;
 
     a {
       color: $gray-darker;
@@ -544,7 +548,7 @@ h2.pane-title {
       color: $gray-darker;
       display: block;
       float: left;
-      font-size: 1.3rem;
+      font-size: $font-size-base;
       padding: 7px 0;
       width: 35%;
 
@@ -617,7 +621,7 @@ h2.pane-title {
   box-shadow: none !important;
   color: $gray;
   display: inline-block;
-  font-size: 14px;
+  font-size: $font-size-base;
   padding: 0 10px;
   text-align: center;
 
@@ -676,7 +680,7 @@ form {
 .form-text {
   border: 1px solid $input-border;
   color: $gray;
-  font-size: 1.3rem;
+  font-size: $font-size-base;
   line-height: 1.5;
   margin: 0;
   padding: 7px 10px;
@@ -817,7 +821,7 @@ form {
   }
 
   .view-header {
-    font-size: 1.3rem;
+    font-size: $font-size-base;
     position: absolute;
     right: 20px;
     top: 7px;
@@ -844,11 +848,11 @@ form {
 
   .view-hr-documents {
     .views-field {
-      font-size: 1.3rem;
+      font-size: $font-size-base;
 
       &:first-child {
         color: $gray-darker;
-        font-size: 1.6rem;
+        font-size: $font-size-base;
       }
     }
   }
@@ -1006,7 +1010,7 @@ form {
   .help-block {
     clear: left;
     float: left;
-    font-size: 12px;
+    font-size: $font-size-base;
   }
 
   .form-type-date-popup {
@@ -1057,12 +1061,12 @@ form {
   padding: 50px 0;
 
   .footer-logo {
-    font-size: 2.2rem;
+    font-size: $font-size-h1;
     margin-bottom: 20px;
   }
 
   .copyright {
-    font-size: 1.3rem;
+    font-size: $font-size-base;
     font-weight: 300;
   }
 }
@@ -1099,7 +1103,7 @@ form {
     }
 
     .view-content {
-      font-size: 1.3rem;
+      font-size: $font-size-base;
     }
 
     .views-row {
@@ -1150,7 +1154,7 @@ form {
 
     .fieldset-title {
       color: $gray;
-      font-size: 1.3rem;
+      font-size: $font-size-base;
       margin-left: 5px;
     }
 

@@ -41,12 +41,23 @@ $fa-font-path:            '../fonts';
 $font-family-sans-serif:  'Lato', sans-serif;
 $headings-color:          $gray-darker !default;
 
-$crm-font-size-small:     12px;
-$crm-font-size-large:     18px;
+$font-size-base:          13px;
+$font-size-large:         18px;
 
-$crm-font-weight-light:   300;
-$crm-font-weight-regular: 400;
-$crm-font-weight-bold:    700;
+$font-size-h1:            24px;
+$font-size-h2:            24px;
+$font-size-h3:            24px;
+$font-size-h4:            $font-size-large;
+$font-size-h5:            $font-size-large;
+$font-size-h6:            $font-size-large;
+
+$chr-font-size-medium: 14px;
+
+
+$crm-font-weight-light:     300;
+$crm-font-weight-regular:   400;
+$crm-font-weight-semi-bold: 600;
+$crm-font-weight-bold:      700;
 
 // Iconography
 // -----------------------------------------------------------------------------
@@ -173,7 +184,7 @@ $crm-uib-datepicker-body-font-color:        $gray-dark;
 $crm-uib-datepicker-cell-padding:           7px 0;
 $crm-uib-datepicker-cell-padding-span:      5px;
 $crm-uib-datepicker-header-font-color:      inherit;
-$crm-uib-datepicker-header-font-size:       14px;
+$crm-uib-datepicker-header-font-size:       $font-size-base;
 $crm-uib-datepicker-header-font-weight:     $crm-font-weight-regular;
 $crm-uib-datepicker-muted-cell-color:       $gray-dark;
 $crm-uib-datepicker-today-bg-color:         $brand-primary;

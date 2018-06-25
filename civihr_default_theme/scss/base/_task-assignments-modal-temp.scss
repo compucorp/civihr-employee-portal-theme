@@ -283,6 +283,10 @@ fieldset {
       border: 0;
       color: #da6b86;
     }
+
+    .input-group-addon {
+      background-color: $light;
+    }
   }
 
   // Styles for spinner taken forn T&A

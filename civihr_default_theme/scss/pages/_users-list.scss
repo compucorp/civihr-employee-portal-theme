@@ -7,7 +7,7 @@
       bottom: 0;
       color: $crm-wizard-font-color;
       display: inline-block;
-      line-height: 20px;
+      line-height: $line-height-computed;
       pointer-events: none;
       position: absolute;
       right: 0;

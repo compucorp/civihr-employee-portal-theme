@@ -80,7 +80,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
     > label {
       display: block;
-      font-size: 13px;
+      font-size: $font-size-base;
       padding: 0;
       width: 100%;
     }
@@ -294,8 +294,8 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
   .onboarding-fieldset-title,
   #onboarding-welcome-message {
     color: $gray-light;
-    font-size: 36px;
-    font-weight: $headings-font-weight;
+    font-size: $font-size-h1;
+    font-weight: $crm-font-weight-semi-bold;
     margin-top: -15px;
     text-align: center;
   }
@@ -440,7 +440,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
         .views-field-title {
           color: $crm-wizard-font-color;
-          font-size: 26px;
+          font-size: $font-size-base;
           left: 458px;
           position: absolute;
           text-align: center;
@@ -490,7 +490,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
     .views-slideshow-controls-text-previous,
     .views-slideshow-controls-text-next {
-      font-size: 35px;
+      font-size: $font-size-base;
       position: absolute;
       top: 140px;
 

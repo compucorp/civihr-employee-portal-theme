@@ -194,7 +194,7 @@ form {
     box-shadow: none;
     color: $crm-color-neutral;
     cursor: default;
-    font-size: 1.1rem;
+    font-size: $font-size-base;
     line-height: $input-height-base;
     padding: 0;
     position: absolute;
@@ -248,7 +248,7 @@ form {
   .views-label {
     display: block;
     float: left;
-    font-size: 1.3rem;
+    font-size: $font-size-base;
     width: 50%;
   }
 
@@ -275,7 +275,7 @@ form {
   @media(min-width: $screen-sm-min) {
     .field-content,
     .views-label {
-      font-size: 1em;
+      font-size: $font-size-base;
     }
   }
 }

@@ -47,7 +47,7 @@
     vertical-align: sub;
 
     > .chr_search-result__icon {
-      font-size: 15px;
+      font-size: $font-size-base;
       margin-right: 5px;
       top: 3px;
     }
@@ -112,7 +112,7 @@
 
 .chr_search-result__total {
   color: $gray-darker;
-  font-size: 1.286em;
+  font-size: $font-size-large;
 
   > .chr_search-result__total__count {
     margin-left: 5px;

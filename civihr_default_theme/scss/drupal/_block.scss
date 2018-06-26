@@ -43,7 +43,7 @@
   .pane-content {
     color: $gray;
     font-size: $font-size-h1;
-    font-weight: 300;
+    font-weight: $crm-font-weight-light;
     text-align: center;
   }
 }
@@ -54,7 +54,7 @@
 
   .pane-content {
     font-size: $font-size-large;
-    font-weight: 400;
+    font-weight: $crm-font-weight-regular;
     text-align: center;
   }
 }

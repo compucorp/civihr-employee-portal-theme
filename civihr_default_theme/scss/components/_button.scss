@@ -1,5 +1,5 @@
 .btn {
-  @include button-size(10px, 25px, 1.3rem, $font-size-base, $border-radius-base);
+  @include button-size(10px, 25px, $font-size-base, $font-size-base, $border-radius-base);
 
   &:active,
   &.active {

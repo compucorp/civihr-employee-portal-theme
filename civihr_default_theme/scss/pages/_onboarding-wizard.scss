@@ -331,17 +331,17 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
         .crm_wizard__progress-title {
           color: $crm-wizard-active-font-color;
-          font-weight: 700;
+          font-weight: $crm-font-weight-bold;
         }
 
         .crm_wizard__current-step {
           color: $crm-wizard-font-color;
-          font-weight: 300;
+          font-weight: $crm-font-weight-light;
         }
 
         .crm_wizard__total-step {
           color: $crm-color-neutral;
-          font-weight: 300;
+          font-weight: $crm-font-weight-light;
         }
       }
     }
@@ -358,12 +358,12 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
   }
 
   .page-header {
-    font-weight: 700;
+    font-weight: $crm-font-weight-bold;
     margin-top: 80px;
     text-align: center;
 
     .title {
-      font-weight: 500;
+      font-weight: $crm-font-weight-semi-bold;
     }
   }
 

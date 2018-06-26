@@ -30,7 +30,7 @@
     }
 
     th {
-      font-weight: normal;
+      font-weight: $crm-font-weight-regular;
     }
 
     td {
@@ -57,13 +57,13 @@
     }
 
     th.pvtTotalLabel[colspan='2'] {
-      font-weight: bold;
+      font-weight: $crm-font-weight-bold;
     }
 
     .rowTotal,
     .pvtVal {
       color: $gray-dark;
-      font-weight: normal;
+      font-weight: $crm-font-weight-regular;
     }
   }
 

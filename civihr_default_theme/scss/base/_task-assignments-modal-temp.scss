@@ -1,12 +1,5 @@
 // This is the temporary styles to make the new Document modal look similar in SSP
 
-// Variables
-$light-black-blue: #586277;
-$light-blue: #41afcb;
-$light-gray: #f4f7f8;
-$lighter-grey: #ecedee;
-$white: $light;
-
 // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
 // so we reset that to ensure it behaves more like a standard block element.
 // See https://github.com/twbs/bootstrap/issues/12359.
@@ -65,7 +58,7 @@ fieldset {
     }
 
     .drop-zone {
-      border: 1px dashed #727e8a;
+      border: 1px dashed $gray-light;
       padding: 30px;
       text-align: center;
     }
@@ -87,7 +80,7 @@ fieldset {
       }
 
       tbody {
-        border-top: 1px solid $lighter-grey;
+        border-top: 1px solid $light-pale;
 
         tr td:first-child {
           overflow: hidden;
@@ -99,15 +92,15 @@ fieldset {
 
     // help icon
     a.helpicon {
-      background-color: #41afcb;
+      background-color: $brand-primary;
       border-radius: 50%;
-      font-size: 12px;
-      font-weight: 400;
+      font-size: $font-size-base;
+      font-weight: $crm-font-weight-regular;
       padding: 1px 6px;
       text-decoration: none;
 
       &:before {
-        color: #fff;
+        color: $light;
         content: '?';
       }
     }
@@ -121,7 +114,7 @@ fieldset {
       a,
       li {
         background-color: $light-gray;
-        color:  $light-black-blue;
+        color: $gray;
       }
 
       li a {
@@ -131,20 +124,20 @@ fieldset {
         &:hover {
           background-color: $light-gray;
           border-color: $light-gray;
-          color: $light-black-blue;
+          color: $gray;
           margin-right: 0;
         }
       }
 
       li.active a {
-        background-color: $white;
+        background-color: $light;
         border-bottom-color: transparent;
-        color: $light-blue;
+        color: $brand-primary;
 
         &:focus,
         &:hover {
-          background-color: $white;
-          color: $light-blue;
+          background-color: $light;
+          color: $brand-primary;
           cursor: default;
         }
       }
@@ -160,10 +153,10 @@ fieldset {
         }
 
         tbody {
-          background-color: #f4f7f8;
+          background-color: $light-gray;
 
           .btn {
-            background-color: #f4f7f8;
+            background-color: $light-gray;
             border-radius: 20px;
             line-height: 1;
             padding: 7px;
@@ -174,16 +167,16 @@ fieldset {
             }
 
             &:focus {
-              background-color: #f4f7f8;
+              background-color: $light-gray;
               outline: 0 none;
             }
 
             &.active {
               @include box-shadow(none);
-              background-color: #41afcb;
+              background-color: $brand-primary;
 
               span {
-                color: #fff;
+                color: $light;
               }
             }
           }
@@ -191,25 +184,25 @@ fieldset {
 
         td,
         th {
-          border-bottom: 0 solid #ecedee;
+          border-bottom: 0 solid $light-pale;
           padding: 7px;
         }
 
         thead {
           small {
-            color: #525966;
-            font-size: 11px;
+            color: $gray;
+            font-size: $font-size-base;
           }
         }
 
         .btn {
           border-width: 0;
-          font-size: 12px;
-          font-weight: normal;
+          font-size: $font-size-base;
+          font-weight: $crm-font-weight-regular;
         }
 
         .text-muted {
-          color: #ccc;
+          color: $gray-lighter;
         }
 
         > thead > tr > th {
@@ -226,15 +219,15 @@ fieldset {
     .civihr-ui-select {
       .select2-choice,
       .select2-arrow {
-        background-color: #fff;
+        background-color: $light;
         background-image: none;
       }
 
       .select2-results {
-        color: #727e8a;
+        color: $gray-light;
 
         .select2-highlighted {
-          background: #e8e8e8;
+          background: $light-pale;
           color: inherit;
         }
       }
@@ -269,19 +262,19 @@ fieldset {
   form {
     .btn {
       border: 1px solid transparent;
-      border-color:#727e8a;
+      border-color: $gray-light;
       border-radius: 2px;
       float: none;
-      font-size: 13px;
+      font-size: $font-size-base;
       padding: 6px 12px;
       text-transform: uppercase;
     }
 
     .btn-danger,
     .btn-danger:focus {
-      background-color: $white;
+      background-color: $light;
       border: 0;
-      color: #da6b86;
+      color: $brand-danger;
     }
 
     .input-group-addon {

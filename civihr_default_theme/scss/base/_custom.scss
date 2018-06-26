@@ -108,7 +108,7 @@ output {
 
   label {
     cursor: pointer;
-    font-weight: normal;
+    font-weight: $crm-font-weight-regular;
     margin-bottom: 0;
     min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
     padding-left: 20px;
@@ -134,7 +134,7 @@ output {
 .checkbox-inline {
   cursor: pointer;
   display: inline-block;
-  font-weight: normal;
+  font-weight: $crm-font-weight-regular;
   margin-bottom: 0;
   padding-left: 20px;
   position: relative;
@@ -462,7 +462,7 @@ h2.pane-title {
     border: 0;
     color: $light !important;
     font-size: $font-size-large;
-    font-weight: bold;
+    font-weight: $crm-font-weight-bold;
     line-height: 1;
     padding: 0;
     position: absolute;
@@ -888,7 +888,7 @@ form {
 
       tr {
         color: $gray-darker;
-        font-weight: 700;
+        font-weight: $crm-font-weight-bold;
       }
     }
   }
@@ -1067,7 +1067,7 @@ form {
 
   .copyright {
     font-size: $font-size-base;
-    font-weight: 300;
+    font-weight: $crm-font-weight-light;
   }
 }
 

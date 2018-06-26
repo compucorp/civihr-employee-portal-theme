@@ -198,14 +198,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
   .webform-next,
   .webform-submit,
   #edit-submit {
-    background: $crm-wizard-secondary-color;
-    border: 0;
-    color: $light;
-
-    &:focus {
-      background: $crm-wizard-secondary-color;
-      color: $light;
-    }
+    @extend .btn-primary-outline;
   }
 
   #edit-submit {
@@ -265,15 +258,9 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
   .webform-previous,
   #edit-cancel {
-    background: transparent;
-    border: 1px solid $gray;
-    color: $gray-dark;
-    float: left;
+    @extend .btn-secondary-outline;
 
-    &:focus {
-      background: $light;
-      color: $gray-dark;
-    }
+    float: left;
   }
 
   .webform-component-file {

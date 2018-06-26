@@ -1,5 +1,9 @@
 @import url('//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic');
 
+
+$crm-gradient-1: linear-gradient(315deg, #01A2D5 0%, #0070BB 100%);
+$crm-gradient-2: linear-gradient(315deg, #0187B1 0%, #005B97 100%);
+
 // Shadows
 // -----------------------------------------------------------------------------
 $crm-box-shadow-global: 0 3px 10px 0 rgba(0, 0, 0, 0.035), 0 4px 8px 0 rgba(0, 0, 0, 0.035) !default;
@@ -42,6 +46,7 @@ $font-family-sans-serif:  'Lato', sans-serif;
 $headings-color:          $gray-darker !default;
 
 $font-size-base:          13px;
+$font-size-small:         13px;
 $font-size-large:         18px;
 
 $font-size-h1:            24px;
@@ -70,8 +75,8 @@ $crm-icon-desc:       'desc.gif' !default;
 // Components
 // -----------------------------------------------------------------------------
 $border-radius-base:  2px !default;
-$border-radius-large: 0 !default;
-$border-radius-small: 0 !default;
+$border-radius-large: 2px !default;
+$border-radius-small: 2px !default;
 
 // Tables
 // -----------------------------------------------------------------------------

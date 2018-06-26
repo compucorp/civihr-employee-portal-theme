@@ -35,3 +35,16 @@
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
 }
+
+.btn-gradient {
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-large, $border-radius-large);
+
+  background: $crm-gradient-1;
+  border: 0;
+  color: $light;
+
+  &:hover {
+    background: $crm-gradient-2;
+    color: $light;
+  }
+}

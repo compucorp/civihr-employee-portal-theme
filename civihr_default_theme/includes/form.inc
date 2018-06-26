@@ -15,13 +15,16 @@ function civihr_default_theme_button($variables) {
 
     $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
     $element['#attributes']['class'][] = 'btn';
-    $element['#attributes']['class'][] = 'btn-primary-outline';
+
     if (!empty($element['#attributes']['disabled'])) {
       $element['#attributes']['class'][] = 'form-button-disabled';
     }
-
+    // print("<pre>".print_r($element['#parents'], true)."</pre>");
+    // print("<pre>".print_r($element, true)."</pre>");
     // Add a btn-primary-outline class if submit button.
-    if (isset($element['#parents']) && ($element['#parents'][0] == 'submit')) {
+    if ((isset($element['#parents']) && ($element['#parents'][0] == 'submit') && (strpos($element['#ajax']['wrapper'], 'webform-client-form') === 0)) || ($element['#parents'][0] == 'save')) {
+      $element['#attributes']['class'][] = 'btn-gradient';
+    } else {
       $element['#attributes']['class'][] = 'btn-primary-outline';
     }
 

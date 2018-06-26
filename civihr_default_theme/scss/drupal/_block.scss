@@ -2,29 +2,29 @@
 // --------------------------------------------------
 
 #block-welcome-logo {
+  margin-top: 30px;
   padding: {
-    bottom: 0px;
+    bottom: 0;
     top: 20px;
   }
-  margin-top: 30px;
 
   .pane-content {
     @include box-shadow($crm_box-shadow-global);
     background: $light;
-    max-width: 100%;
-    width: 125px;
-    height: 125px;
     border-radius: 125px;
+    height: 125px;
     margin: 0 auto 17px;
-    text-align: center;
+    max-width: 100%;
     position: relative;
+    text-align: center;
+    width: 125px;
 
     img {
-      max-width: 80%;
+      @include transform(translate(-50%, -50%));
       left: 50%;
+      max-width: 80%;
       position: absolute;
       top: 50%;
-      @include transform(translate(-50%, -50%));
 
       &.round {
         border-radius: 50%;
@@ -41,16 +41,16 @@
   margin: 0 0 4px;
 
   .pane-content {
+    color: $gray;
     font-size: $font-size-h1;
     font-weight: 300;
-    color: #404454;
     text-align: center;
   }
 }
 
 #block-welcome-slogan {
-  margin-top: 0px;
   margin-bottom: 45px;
+  margin-top: 0;
 
   .pane-content {
     font-size: $font-size-large;
@@ -61,8 +61,8 @@
 
 //Yoti Account
 #yoti-connect-register {
-  background: $light;
   @include box-shadow($crm_box-shadow-global);
+  background: $light;
   margin: 50px auto 0;
   max-width: 492px;
   padding: 20px 20px 5px;

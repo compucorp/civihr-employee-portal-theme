@@ -401,8 +401,50 @@
   }
 }
 
-.form-type-radio {
-  label {
-    color: $gray;
+.form-radios {
+  background-color: transparent !important;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  .form-type-radio {
+    display: table-cell;
+
+    label {
+      color: $gray;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  > div {
+    background-color: transparent !important;
+    border: 1px solid $crm_color-neutral;
+    border-right: 0;
+    margin: 0 !important;
+    padding: 8px 12px;
+  }
+
+  > div:last-child {
+    border-right: 1px solid $crm_color-neutral;
+  }
+
+  > div.checked {
+    background-color: $light-gray !important;
+    color: $light;
+  }
+
+  input[type='radio']:checked:after {
+    background-color: $crm-gray-1;
+    border: 5px double $light;
+    border-radius: 18px;
+    content: '';
+    display: inline-block;
+    height: 18px;
+    left: -1px;
+    position: relative;
+    top: -3px;
+    visibility: visible;
+    width: 18px;
   }
 }

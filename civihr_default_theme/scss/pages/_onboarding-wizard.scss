@@ -96,52 +96,6 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     }
   }
 
-  .form-radios {
-    background-color: transparent !important;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-
-    .form-type-radio {
-      display: table-cell;
-
-      label {
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
-    > div {
-      background-color: transparent !important;
-      border: 1px solid $crm_color-neutral;
-      border-right: 0;
-      margin: 0 !important;
-      padding: 8px 12px;
-    }
-
-    > div:last-child {
-      border-right: 1px solid $crm_color-neutral;
-    }
-
-    > div.checked {
-      background-color: $crm-wizard-secondary-color !important;
-      border-color: transparent;
-      color: $light;
-    }
-
-    input[type='radio']:checked:after {
-      background-color: $crm-gray-1;
-      border: 4px solid $light;
-      border-radius: 15px;
-      content: '';
-      display: inline-block;
-      height: 15px;
-      position: relative;
-      visibility: visible;
-      width: 15px;
-    }
-  }
-
   .fieldset-legend {
     &:before {
       display: none !important;
@@ -193,6 +147,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
   .onboarding_wizard_payroll_ssin_checkbox {
     label {
+      color: $gray;
       padding-left: 20px !important;
     }
 

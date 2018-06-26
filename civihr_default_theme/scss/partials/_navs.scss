@@ -2,10 +2,10 @@
 // --------------------------------------------------
 
 .tab-pane {
-  padding: 20px;
+  background-color: $light;
   border: 1px solid $nav-tabs-border-color;
   border-top: none;
-  background-color: $light;
+  padding: 20px;
 }
 
 .nav > li {
@@ -22,21 +22,21 @@
 
     li {
       a {
-        font-size: $font-size-large;
-        color: $gray-darker;
+        background-color: $light;
         border: 0;
         border-bottom: 3px solid transparent;
+        color: $gray-darker;
         cursor: pointer;
-        background-color: $light;
+        font-size: $font-size-large;
       }
 
       &.active {
         a,
         a:hover,
         a:focus {
-          color: $brand-primary;
           border: 0;
           border-bottom: 3px solid $brand-primary;
+          color: $brand-primary;
           cursor: auto;
         }
       }

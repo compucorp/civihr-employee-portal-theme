@@ -109,9 +109,13 @@
 
   .views-field-nothing .field-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     white-space: nowrap;
     width: 100%;
+    > * {
+      margin-right: 1rem;
+    }
   }
 
   .views-field-ni-ssn-70 .field-content {
@@ -151,6 +155,10 @@
   .nsi-application-status.not-applying,
   .nsi-application-status.No {
     display: none;
+  }
+
+  .chr_actions-wrapper a {
+    margin: 1rem .5rem;
   }
 }
 

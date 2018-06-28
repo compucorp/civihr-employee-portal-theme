@@ -181,3 +181,9 @@
   background-repeat: no-repeat;
   background-position: right center;
 }
+
+@mixin views-label {
+  color: $gray-darker;
+  font-size: 1.3rem;
+  overflow: hidden;
+}

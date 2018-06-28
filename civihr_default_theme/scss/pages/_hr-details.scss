@@ -191,6 +191,14 @@
     border-top: none;
     margin-top: 0px;
   }
+
+  .views-field-phone-ext {
+    order: 10;
+    &::before {
+      content: "ext. ";
+      margin-left: .5rem;
+    }
+  }
 }
 
 .view-mydetails-emails .views-field-email {

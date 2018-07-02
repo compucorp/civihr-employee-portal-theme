@@ -30,7 +30,7 @@
     }
 
     th {
-      font-weight: $crm-font-weight-regular;
+      font-weight: $chr-font-weight-regular;
     }
 
     td {
@@ -57,20 +57,20 @@
     }
 
     th.pvtTotalLabel[colspan='2'] {
-      font-weight: $crm-font-weight-bold;
+      font-weight: $chr-font-weight-bold;
     }
 
     .rowTotal,
     .pvtVal {
       color: $gray-dark;
-      font-weight: $crm-font-weight-regular;
+      font-weight: $chr-font-weight-regular;
     }
   }
 
   li {
     span.pvtAttr {
       background-color: $gray-lighter;
-      border: 1px solid $light-gray;
+      border: 1px solid $chr-light-gray;
       border-radius: 0;
       color: $gray-dark;
       line-height: 33px;
@@ -131,7 +131,7 @@
   }
 
   .pvtFilterBox {
-    border: 1px solid $light-gray;
+    border: 1px solid $chr-light-gray;
     border-radius: 0;
     padding: 10px;
 
@@ -141,7 +141,7 @@
     }
 
     .pvtFilterSelectAllWrap {
-      border-bottom: 1px solid $light-gray;
+      border-bottom: 1px solid $chr-light-gray;
       color: $gray-darker;
     }
 

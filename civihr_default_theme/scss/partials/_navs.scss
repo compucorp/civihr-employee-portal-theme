@@ -2,7 +2,7 @@
 // --------------------------------------------------
 
 .tab-pane {
-  background-color: $light;
+  background-color: $chr-light;
   border: 1px solid $nav-tabs-border-color;
   border-top: none;
   padding: 20px;
@@ -22,7 +22,7 @@
 
     li {
       a {
-        background-color: $light;
+        background-color: $chr-light;
         border: 0;
         border-bottom: 3px solid transparent;
         color: $gray-darker;

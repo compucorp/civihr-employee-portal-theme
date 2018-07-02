@@ -90,7 +90,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
       width: 100%;
 
       div.form-item {
-        background-color: $light;
+        background-color: $chr-light;
         margin: 0;
       }
     }
@@ -185,7 +185,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     }
 
     .civicrm-remove-file {
-      background: $light;
+      background: $chr-light;
       border: 1px solid $gray-lighter;
       padding: 0.7rem 1.1rem;
     }
@@ -212,7 +212,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     padding: 7px 10px;
 
     &+.input-group-addon {
-      background-color: $light;
+      background-color: $chr-light;
       border: 1px solid $gray-lighter;
       color: $crm-wizard-font-color;
       display: inline-block;
@@ -243,7 +243,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
   #onboarding-welcome-message {
     color: $gray-light;
     font-size: $font-size-h1;
-    font-weight: $crm-font-weight-semi-bold;
+    font-weight: $chr-font-weight-semibold;
     margin-top: -15px;
     text-align: center;
   }
@@ -318,17 +318,17 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
         .crm_wizard__progress-title {
           color: $crm-wizard-active-font-color;
-          font-weight: $crm-font-weight-bold;
+          font-weight: $chr-font-weight-bold;
         }
 
         .crm_wizard__current-step {
           color: $crm-wizard-font-color;
-          font-weight: $crm-font-weight-light;
+          font-weight: $chr-font-weight-light;
         }
 
         .crm_wizard__total-step {
           color: $crm-color-neutral;
-          font-weight: $crm-font-weight-light;
+          font-weight: $chr-font-weight-light;
         }
       }
     }
@@ -345,12 +345,12 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
   }
 
   .page-header {
-    font-weight: $crm-font-weight-bold;
+    font-weight: $chr-font-weight-bold;
     margin-top: 80px;
     text-align: center;
 
     .title {
-      font-weight: $crm-font-weight-semi-bold;
+      font-weight: $chr-font-weight-semibold;
     }
   }
 
@@ -408,7 +408,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     text-align: center;
 
     .views-content-title {
-      background: $light-pale;
+      background: $chr-light-pale;
       border-radius: 50%;
       cursor: pointer;
       display: inline-block;
@@ -524,11 +524,11 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     }
 
     .region {
-      background: $light;
+      background: $chr-light;
     }
 
     .drop-zone-overlay {
-      background: $light;
+      background: $chr-light;
       height: 140px;
       top: 25px;
 
@@ -569,11 +569,11 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
       #edit-cancel {
         background: $crm-wizard-primary-color;
         border: 0;
-        color: $light;
+        color: $chr-light;
 
         &:focus {
           background: $crm-wizard-primary-color;
-          color: $light;
+          color: $chr-light;
         }
       }
     }
@@ -669,7 +669,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
         margin-bottom: 0;
 
         .form-type-checkbox {
-          border: 1px solid $light-pale;
+          border: 1px solid $chr-light-pale;
           height: auto;
           padding: 10px;
         }

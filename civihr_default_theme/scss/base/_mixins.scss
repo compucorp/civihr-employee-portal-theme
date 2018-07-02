@@ -60,8 +60,7 @@
 }
 
 @mixin fa($unicode, $font-size: inherit) {
-  &:before {
-
+  &::before {
     content: $unicode;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;

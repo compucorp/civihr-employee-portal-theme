@@ -13,7 +13,7 @@ legend {
 label {
   color: $gray-light;
   display: block;
-  font-weight: $crm-font-weight-regular;
+  font-weight: $chr-font-weight-regular;
   margin-bottom: 5px;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
 }
@@ -108,7 +108,7 @@ output {
 
   label {
     cursor: pointer;
-    font-weight: $crm-font-weight-regular;
+    font-weight: $chr-font-weight-regular;
     margin-bottom: 0;
     min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
     padding-left: 20px;
@@ -134,7 +134,7 @@ output {
 .checkbox-inline {
   cursor: pointer;
   display: inline-block;
-  font-weight: $crm-font-weight-regular;
+  font-weight: $chr-font-weight-regular;
   margin-bottom: 0;
   padding-left: 20px;
   position: relative;
@@ -259,10 +259,6 @@ body {
   width: $width;
 }
 
-.views-exposed-form label {
-  font-weight: $crm-font-weight-regular;
-}
-
 .views-exposed-form .views-exposed-widget {
 
   @include exposed-form-default-style(50%);
@@ -365,26 +361,26 @@ h1,
 .block__title {
   color: $gray-light;
   font-size: $font-size-h1;
-  font-weight: $crm-font-weight-semi-bold;
+  font-weight: $chr-font-weight-semibold;
   margin: 25px 0;
 }
 
 h4 {
   color: $gray-dark;
   font-size: $font-size-h4;
-  font-weight: $crm-font-weight-regular;
+  font-weight: $chr-font-weight-regular;
 }
 
 h5 {
   color: $gray;
   font-size: $font-size-h5;
-  font-weight: $crm-font-weight-regular;
+  font-weight: $chr-font-weight-regular;
 }
 
 h2.pane-title {
   color: $gray;
   font-size: $font-size-large;
-  font-weight: $crm-font-weight-semi-bold;
+  font-weight: $chr-font-weight-semibold;
 }
 
 .container.collapse {
@@ -447,7 +443,7 @@ h2.pane-title {
 }
 
 .alert {
-  color: $light;
+  color: $chr-light;
   margin-bottom: 20px;
   padding: 20px;
   position: relative;
@@ -460,9 +456,9 @@ h2.pane-title {
   .close {
     background: none;
     border: 0;
-    color: $light !important;
+    color: $chr-light !important;
     font-size: $font-size-large;
-    font-weight: $crm-font-weight-bold;
+    font-weight: $chr-font-weight-bold;
     line-height: 1;
     padding: 0;
     position: absolute;
@@ -605,14 +601,14 @@ h2.pane-title {
 // Splitters
 
 .vertical-splitter {
-  border-left: 1px solid $light-pale;
+  border-left: 1px solid $chr-light-pale;
   height: 100%;
   position: absolute;
   width: 0;
 }
 
 .splitter-top {
-  border-top: 1px solid $light-pale;
+  border-top: 1px solid $chr-light-pale;
   margin-top: 20px;
   padding-top: 20px;
 }
@@ -700,7 +696,7 @@ form {
 // Main / Dashboard
 
 .main {
-  background: $light-pale;
+  background: $chr-light-pale;
 }
 
 // Panels / Dashboard Carousel
@@ -732,7 +728,7 @@ form {
   }
 
   .jcarousel-item {
-    background: $light-gray;
+    background: $chr-light-gray;
     margin: 0 10px;
     padding: 20px;
     width: 193px;
@@ -742,7 +738,7 @@ form {
   .jcarousel-next {
     @include fa('\f104', 24);
 
-    background: $light;
+    background: $chr-light;
     color: $gray;
     display: block;
     height: 100%;
@@ -776,7 +772,7 @@ form {
 }
 
 .pane-title {
-  border-bottom: 1px solid $light-pale;
+  border-bottom: 1px solid $chr-light-pale;
   line-height: 1;
   margin: 0 -20px 20px;
   padding: 0 20px 20px;
@@ -888,7 +884,7 @@ form {
 
       tr {
         color: $gray-darker;
-        font-weight: $crm-font-weight-bold;
+        font-weight: $chr-font-weight-bold;
       }
     }
   }
@@ -1056,7 +1052,7 @@ form {
 // Footer
 
 .footer {
-  background: $light-pale;
+  background: $chr-light-pale;
   color: $gray;
   padding: 50px 0;
 
@@ -1067,7 +1063,7 @@ form {
 
   .copyright {
     font-size: $font-size-base;
-    font-weight: $crm-font-weight-light;
+    font-weight: $chr-font-weight-light;
   }
 }
 
@@ -1094,7 +1090,7 @@ form {
     }
 
     .views-submit-button {
-      border-top: 1px solid $light-pale;
+      border-top: 1px solid $chr-light-pale;
       margin-top: 20px;
 
       .form-submit {
@@ -1120,9 +1116,9 @@ form {
     }
 
     .views-row-odd {
-      background: $light;
-      border-bottom: 1px solid $light-pale;
-      border-top: 1px solid $light-pale;
+      background: $chr-light;
+      border-bottom: 1px solid $chr-light-pale;
+      border-top: 1px solid $chr-light-pale;
     }
 
     .field-content {
@@ -1165,7 +1161,7 @@ form {
     }
 
     .fieldset-wrapper {
-      background: $light-gray;
+      background: $chr-light-gray;
       margin-top: 20px;
       padding: 15px 20px;
 

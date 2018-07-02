@@ -20,7 +20,7 @@
 
 .panel-body {
   @include grid-condensed($panel-body-padding+1px);
-  background: $light;
+  background: $chr-light;
 
   > .row:last-child .form-actions {
     margin-bottom: 0;
@@ -35,7 +35,7 @@
 .panel-title {
   color: $gray-darker;
   font-size: $font-size-h1;
-  font-weight: $crm-font-weight-regular;
+  font-weight: $chr-font-weight-regular;
 }
 
 // Subheading and subtitle
@@ -56,7 +56,7 @@
 // the bottom border
 .panel-heading-plain {
   .panel-default > & {
-    background: $light;
+    background: $chr-light;
     border: 0;
 
     > .panel-title {

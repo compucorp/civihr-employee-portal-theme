@@ -80,7 +80,7 @@ fieldset {
       }
 
       tbody {
-        border-top: 1px solid $light-pale;
+        border-top: 1px solid $chr-light-pale;
 
         tr td:first-child {
           overflow: hidden;
@@ -95,12 +95,12 @@ fieldset {
       background-color: $brand-primary;
       border-radius: 50%;
       font-size: $font-size-base;
-      font-weight: $crm-font-weight-regular;
+      font-weight: $chr-font-weight-regular;
       padding: 1px 6px;
       text-decoration: none;
 
       &:before {
-        color: $light;
+        color: $chr-light;
         content: '?';
       }
     }
@@ -113,7 +113,7 @@ fieldset {
 
       a,
       li {
-        background-color: $light-gray;
+        background-color: $chr-light-gray;
         color: $gray;
       }
 
@@ -122,21 +122,21 @@ fieldset {
 
         &:focus,
         &:hover {
-          background-color: $light-gray;
-          border-color: $light-gray;
+          background-color: $chr-light-gray;
+          border-color: $chr-light-gray;
           color: $gray;
           margin-right: 0;
         }
       }
 
       li.active a {
-        background-color: $light;
+        background-color: $chr-light;
         border-bottom-color: transparent;
         color: $brand-primary;
 
         &:focus,
         &:hover {
-          background-color: $light;
+          background-color: $chr-light;
           color: $brand-primary;
           cursor: default;
         }
@@ -153,10 +153,10 @@ fieldset {
         }
 
         tbody {
-          background-color: $light-gray;
+          background-color: $chr-light-gray;
 
           .btn {
-            background-color: $light-gray;
+            background-color: $chr-light-gray;
             border-radius: 20px;
             line-height: 1;
             padding: 7px;
@@ -167,7 +167,7 @@ fieldset {
             }
 
             &:focus {
-              background-color: $light-gray;
+              background-color: $chr-light-gray;
               outline: 0 none;
             }
 
@@ -176,7 +176,7 @@ fieldset {
               background-color: $brand-primary;
 
               span {
-                color: $light;
+                color: $chr-light;
               }
             }
           }
@@ -184,7 +184,7 @@ fieldset {
 
         td,
         th {
-          border-bottom: 0 solid $light-pale;
+          border-bottom: 0 solid $chr-light-pale;
           padding: 7px;
         }
 
@@ -198,7 +198,7 @@ fieldset {
         .btn {
           border-width: 0;
           font-size: $font-size-base;
-          font-weight: $crm-font-weight-regular;
+          font-weight: $chr-font-weight-regular;
         }
 
         .text-muted {
@@ -219,7 +219,7 @@ fieldset {
     .civihr-ui-select {
       .select2-choice,
       .select2-arrow {
-        background-color: $light;
+        background-color: $chr-light;
         background-image: none;
       }
 
@@ -227,7 +227,7 @@ fieldset {
         color: $gray-light;
 
         .select2-highlighted {
-          background: $light-pale;
+          background: $chr-light-pale;
           color: inherit;
         }
       }
@@ -272,13 +272,13 @@ fieldset {
 
     .btn-danger,
     .btn-danger:focus {
-      background-color: $light;
+      background-color: $chr-light;
       border: 0;
       color: $brand-danger;
     }
 
     .input-group-addon {
-      background-color: $light;
+      background-color: $chr-light;
     }
   }
 

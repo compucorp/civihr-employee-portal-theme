@@ -23,7 +23,7 @@
     position: relative;
 
     legend {
-      background: $light;
+      background: $chr-light;
       left: 0;
       line-height: 30px;
       position: absolute;
@@ -33,7 +33,7 @@
 
   table {
     @include box-shadow($crm-box-shadow-global);
-    background: $light;
+    background: $chr-light;
 
     th {
       height: 45px;
@@ -51,7 +51,7 @@
     margin-top: 20px;
 
     label {
-      font-weight: $crm-font-weight-bold;
+      font-weight: $chr-font-weight-bold;
     }
   }
 }

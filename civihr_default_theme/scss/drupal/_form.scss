@@ -18,7 +18,11 @@
   }
 }
 
-
+.views-exposed-form {
+  label {
+    font-weight: $chr-font-weight-regular;
+  }
+}
 
 /**
  * Staff Directory filters, HR Resources filters, Users List
@@ -116,7 +120,7 @@
   // Boostrap override
   &.form-horizontal {
     .control-label {
-      font-weight: $crm-font-weight-regular;
+      font-weight: $chr-font-weight-regular;
       text-align: left;
     }
   }
@@ -386,8 +390,8 @@
 /* SSP Document form */
 #civihr-employee-portal-document-form {
   #drop-target {
-    background-color: $light-gray;
-    border: 1px dashed $light-pale;
+    background-color: $chr-light-gray;
+    border: 1px dashed $chr-light-pale;
     box-shadow: none;
     color: $gray;
   }
@@ -430,13 +434,13 @@
   }
 
   > div.checked {
-    background-color: $light-gray !important;
-    color: $light;
+    background-color: $chr-light-gray !important;
+    color: $chr-light;
   }
 
   input[type='radio']:checked:after {
-    background-color: $chr-gray-1;
-    border: 5px double $light;
+    background-color: $chr-dark;
+    border: 5px double $chr-light;
     border-radius: 18px;
     content: '';
     display: inline-block;

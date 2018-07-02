@@ -3,7 +3,7 @@
 
   background: $gray-dark;
   box-shadow: 0 2px 3px 0 rgba(black, 0.15);
-  color: $light-pale;
+  color: $chr-light-pale;
   font-size: $font-size-base;
   height: $crm-header-height;
   line-height: $crm-header-height;
@@ -80,7 +80,7 @@
   width: 60px;
 
   &:hover {
-    color: rgba($light, 0.8);
+    color: rgba($chr-light, 0.8);
   }
 
   > .chr_header__logo {
@@ -89,7 +89,7 @@
     text-align: center;
 
     &:hover {
-      color: rgba($light, 0.8);
+      color: rgba($chr-light, 0.8);
     }
   }
 
@@ -105,13 +105,13 @@
 }
 
 .chr_header__logo {
-  color: $light;
+  color: $chr-light;
   display: inline-block;
   font-size: $chr-font-size-medium;
 }
 
 .chr_header__nav {
-  background: $light;
+  background: $chr-light;
   font-size: $chr-font-size-medium;
   z-index: 99;
 
@@ -189,7 +189,7 @@
       &:hover,
       &:focus {
         background: $gray;
-        color: $light !important;
+        color: $chr-light !important;
       }
 
       &.active {
@@ -204,8 +204,8 @@
       text-transform: uppercase;
 
       > a {
-        border: 1px solid $light;
-        color: $light;
+        border: 1px solid $chr-light;
+        color: $chr-light;
       }
     }
   }
@@ -218,7 +218,7 @@
 }
 
 .chr_header__nav__toggle {
-  color: $light;
+  color: $chr-light;
   cursor: pointer;
   display: table-cell;
   height: 100%;
@@ -262,7 +262,7 @@
   }
 
   a {
-    color: $light-pale;
+    color: $chr-light-pale;
     display: block;
     font-size: $font-size-base;
     padding: 0 30px 0 20px;
@@ -270,7 +270,7 @@
 
     &:hover {
       background: $gray;
-      color: $light;
+      color: $chr-light;
     }
 
     > i {

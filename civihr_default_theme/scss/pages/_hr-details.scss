@@ -3,8 +3,8 @@
 .page-hr-details {
   .civihr-employee-portal-my-details-block {
     background: $light;
-    padding: 20px;
     margin: 0 15px;
+    padding: 20px;
 
     .view {
       margin: 0;
@@ -73,7 +73,7 @@
 
   .pane-block {
     border-bottom: 1px solid $gray-light;
-    margin-bottom:0px;
+    margin-bottom: 0;
   }
 
   .views-row {
@@ -83,13 +83,13 @@
   }
 
   .views-field-image-URL {
-    left: 0px;
+    left: 0;
     position: absolute;
-    top: 0px;
+    top: 0;
   }
 
   .no-user-image {
-    background: url(/sites/all/modules/civihr-custom/civihr_employee_portal/images/profile-default.png) center no-repeat;
+    background: url('/sites/all/modules/civihr-custom/civihr_employee_portal/images/profile-default.png') center no-repeat;
     background-size: 80px 80px;
     overflow: hidden;
     text-indent: -1000px;
@@ -103,17 +103,22 @@
   }
 
   .chr_panel__footer {
-    border-top: none;
-    margin-top: 0px;
+    border-top: 0;
+    margin-top: 0;
   }
 
-  .views-field-nothing .field-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    white-space: nowrap;
-    width: 100%;
-    > * {
+  .views-field-nothing {
+    .field-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .contact-id,
+    .gender,
+    .marital-status {
       margin-right: 1rem;
     }
   }
@@ -132,7 +137,7 @@
     }
   }
 
-  div.views-field-display-name {
+  .views-field.views-field-display-name {
     color: $crm-gray-darker-alt;
     font-size: $crm-font-size-large;
     margin-bottom: 5px;
@@ -158,7 +163,7 @@
   }
 
   .chr_actions-wrapper a {
-    margin: 1rem .5rem;
+    margin: 1rem 0.5rem;
   }
 }
 
@@ -166,12 +171,12 @@
 .view-mydetails-myaddress,
 .view-id-mydetails_myrole,
 .view-mydetails-payrollinformation {
-  @extend .my-details-view-panel;
+  @extend %my-details-view-panel;
 }
 
 .view-mydetails-contactdetails {
   .views-field-nick-name {
-    @extend .my-details-view-panel;
+    @extend %my-details-view-panel;
     overflow: hidden;
   }
 
@@ -188,23 +193,26 @@
   }
 
   .chr_panel__footer {
-    border-top: none;
-    margin-top: 0px;
+    border-top: 0;
+    margin-top: 0;
   }
 
   .views-field-phone-ext {
     order: 10;
+
     &::before {
-      content: "ext. ";
-      margin-left: .5rem;
+      content: 'ext. ';
+      margin-left: 0.5rem;
     }
   }
 }
 
-.view-mydetails-emails .views-field-email {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 50%;
+.view-mydetails-emails {
+  .views-field-email {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50%;
+  }
 }
 
 .view-mydetails-emails,
@@ -223,8 +231,10 @@
     @include views-label;
   }
 
-  .field-content p {
-    margin: 0px;
+  .field-content {
+    p {
+      margin: 0;
+    }
   }
 
   .row {
@@ -239,8 +249,8 @@
   }
 
   .views-row.views-row-last {
-    border-bottom: none;
-    margin-bottom: 0rem;
+    border-bottom: 0;
+    margin-bottom: 0;
   }
 
   .views-field-emergency-contact-deletion {
@@ -251,8 +261,10 @@
     text-align: right;
   }
 
-  .col-md-6:first-child .views-field {
-    margin-bottom: 15px;
+  .col-md-6:first-child {
+    .views-field {
+      margin-bottom: 15px;
+    }
   }
 }
 

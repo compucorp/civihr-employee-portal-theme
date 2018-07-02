@@ -11,8 +11,8 @@
     };
   }
 
-  [class^="col-"],
-  [class*=" col-"] {
+  [class^='col-'],
+  [class*=' col-'] {
     padding: {
       left: $gutter;
       right: $gutter;
@@ -21,10 +21,6 @@
 }
 
 @mixin flex() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
 }
 
@@ -32,22 +28,22 @@
 //Custom Mixins for CIVIHR
 // Clearfix
 @mixin cf-content {
-  content: "";
-  display: table;
   clear: both;
+  content: '';
+  display: table;
 }
 @mixin clearfix($where: both) {
   @if $where == 'before' {
-    &:before {
+    &::before {
       @include cf-content;
     }
   } @elseif $where == 'after' {
-    &:after {
+    &::after {
       @include cf-content;
     }
   } @else {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       @include cf-content;
     }
   }
@@ -60,14 +56,14 @@
 }
 
 @mixin fa($unicode, $font-size: inherit) {
-  &:before {
+  &::before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    content: $unicode;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    content: $unicode;
 
     @if $font-size == 'inherit' {
       font-size: inherit;
@@ -80,8 +76,6 @@
 @mixin vertical-align($pos: relative) {
   position: $pos;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -107,15 +101,13 @@
 }
 
 // Necessary instead of @extend because SASS can't handle @extend + media queries
-@mixin custom-modal($custom-modal-modifier: "", $custom-modal-width: 480) {
-
+@mixin custom-modal($custom-modal-modifier: '', $custom-modal-width: 480) {
   .backdrop-civihr-custom#{$custom-modal-modifier} {
     height: 100% !important;
     width: 100% !important;
   }
 
   .modal-civihr-custom#{$custom-modal-modifier} {
-
     .modal-body {
       @include clearfix;
 
@@ -124,7 +116,6 @@
     }
 
     .modal-content {
-
       .table-responsive,
       .view {
         margin: 0;
@@ -134,8 +125,8 @@
 
     .modal-dialog {
       box-sizing: content-box; // Keeps the same width no matter how much the padding is
-      padding: #{$crm-custom-modal-padding}px;
       max-width: #{$custom-modal-width}px;
+      padding: #{$crm-custom-modal-padding}px;
     }
 
     .table-responsive {
@@ -152,14 +143,12 @@
 
     // Necessary for IE, since it can't center a block with just max-width
     @media(min-width: #{$custom-modal-width + $crm-custom-modal-padding * 2}px) {
-
       .modal-dialog {
         padding: 0;
         width: 100%;
       }
 
       .table-responsive {
-
         table {
           min-width: auto;
         }
@@ -178,12 +167,12 @@
 // Sort icon on table header
 @mixin manager-approval-main-table-sort($sort-image) {
   background-image: url(#{$crm-icon-image-path}#{$sort-image});
-  background-repeat: no-repeat;
   background-position: right center;
+  background-repeat: no-repeat;
 }
 
 @mixin views-label {
   color: $gray-darker;
-  font-size: 1.3rem;
+  font-size: 1em;
   overflow: hidden;
 }

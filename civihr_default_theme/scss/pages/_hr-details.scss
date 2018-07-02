@@ -88,15 +88,7 @@
     top: 0;
   }
 
-  .no-user-image {
-    background: url('/sites/all/modules/civihr-custom/civihr_employee_portal/images/profile-default.png') center no-repeat;
-    background-size: 80px 80px;
-    overflow: hidden;
-    text-indent: -1000px;
-  }
-
-  .views-field-image-URL img,
-  .no-user-image {
+  .views-field-image-URL img {
     border-radius: 50%;
     height: 80px;
     width: 80px;

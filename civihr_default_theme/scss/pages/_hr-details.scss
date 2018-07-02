@@ -167,16 +167,9 @@
   }
 }
 
-.view-mydetails-personal,
-.view-mydetails-myaddress,
-.view-id-mydetails_myrole,
-.view-mydetails-payrollinformation {
-  @extend %my-details-view-panel;
-}
 
 .view-mydetails-contactdetails {
   .views-field-nick-name {
-    @extend %my-details-view-panel;
     overflow: hidden;
   }
 

@@ -62,7 +62,7 @@
 
     .rowTotal,
     .pvtVal {
-      color: $gray-dark;
+      color: $gray-darker;
       font-weight: $chr-font-weight-regular;
     }
   }
@@ -70,15 +70,15 @@
   li {
     span.pvtAttr {
       background-color: $gray-lighter;
-      border: 1px solid $chr-light-gray;
+      border: 1px solid $chr-gray-lightest;
       border-radius: 0;
-      color: $gray-dark;
+      color: $gray-darker;
       line-height: 33px;
       padding: 0 15px;
     }
 
     .pvtTriangle {
-      color: $gray-dark;
+      color: $gray-darker;
       margin-bottom: 2px;
       margin-left: 10px;
     }
@@ -131,7 +131,7 @@
   }
 
   .pvtFilterBox {
-    border: 1px solid $chr-light-gray;
+    border: 1px solid $chr-gray-lightest;
     border-radius: 0;
     padding: 10px;
 
@@ -141,8 +141,8 @@
     }
 
     .pvtFilterSelectAllWrap {
-      border-bottom: 1px solid $chr-light-gray;
-      color: $gray-darker;
+      border-bottom: 1px solid $chr-gray-lightest;
+      color: $chr-gray-darkest;
     }
 
     label {

@@ -35,7 +35,7 @@
   @include clearfix;
 
   .field-content {
-    background: $chr-light-gray;
+    background: $chr-gray-lightest;
     padding: 15px;
 
     ul {
@@ -50,7 +50,7 @@
   }
 
   .fieldset-title {
-    color: $gray;
+    color: $gray-dark;
     font-size: $font-size-base;
   }
 }
@@ -70,7 +70,7 @@
 }
 
 .chr_hr-resource__name {
-  color: $gray-dark;
+  color: $gray-darker;
   font-weight: $chr-font-weight-regular;
   line-height: normal;
   margin: 0;

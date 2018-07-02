@@ -332,7 +332,7 @@
 
   .form-item {
     label {
-      color: $gray-darker;
+      color: $chr-gray-darkest;
       float: left;
       padding: 7px 0;
       width: 90px;
@@ -390,10 +390,10 @@
 /* SSP Document form */
 #civihr-employee-portal-document-form {
   #drop-target {
-    background-color: $chr-light-gray;
-    border: 1px dashed $chr-light-pale;
+    background-color: $chr-gray-lightest;
+    border: 1px dashed $chr-gray-pale;
     box-shadow: none;
-    color: $gray;
+    color: $gray-dark;
   }
 
   .col-index {
@@ -415,7 +415,7 @@
     display: table-cell;
 
     label {
-      color: $gray;
+      color: $gray-dark;
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -434,13 +434,13 @@
   }
 
   > div.checked {
-    background-color: $chr-light-gray !important;
-    color: $chr-light;
+    background-color: $chr-gray-lightest !important;
+    color: $chr-white;
   }
 
   input[type='radio']:checked:after {
-    background-color: $chr-dark;
-    border: 5px double $chr-light;
+    background-color: $gray;
+    border: 5px double $chr-white;
     border-radius: 18px;
     content: '';
     display: inline-block;

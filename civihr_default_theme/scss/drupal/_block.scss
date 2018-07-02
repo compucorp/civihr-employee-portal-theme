@@ -10,7 +10,7 @@
 
   .pane-content {
     @include box-shadow($crm_box-shadow-global);
-    background: $chr-light;
+    background: $chr-white;
     border-radius: 125px;
     height: 125px;
     margin: 0 auto 17px;
@@ -41,7 +41,7 @@
   margin: 0 0 4px;
 
   .pane-content {
-    color: $gray;
+    color: $gray-dark;
     font-size: $font-size-h1;
     font-weight: $chr-font-weight-light;
     text-align: center;
@@ -62,7 +62,7 @@
 //Yoti Account
 #yoti-connect-register {
   @include box-shadow($crm_box-shadow-global);
-  background: $chr-light;
+  background: $chr-white;
   margin: 50px auto 0;
   max-width: 492px;
   padding: 20px 20px 5px;

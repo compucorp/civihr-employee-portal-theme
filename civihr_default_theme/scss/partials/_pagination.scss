@@ -6,13 +6,13 @@
 
     > a {
       background: transparent;
-      color: $gray;
+      color: $gray-dark;
       border: none;
       padding: 0 4px;
 
       &:hover,
       &:focus {
-        color: $gray-darker;
+        color: $chr-gray-darkest;
       }
     }
   }
@@ -24,7 +24,7 @@
     > a:focus,
     > span:hover,
     > span:focus {
-      color: $gray-darker;
+      color: $chr-gray-darkest;
       background-color: transparent;
       border-color: transparent;
       font-weight: $chr-font-weight-bold;

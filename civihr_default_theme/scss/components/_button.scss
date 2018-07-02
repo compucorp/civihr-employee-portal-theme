@@ -17,11 +17,11 @@
 }
 
 .btn-custom {
-  @include button-variant($chr-light, $btn-primary-bg, transparent);
+  @include button-variant($chr-white, $btn-primary-bg, transparent);
 }
 
 .btn-secondary {
-  @include button-variant($chr-light, $brand-secondary, $btn-secondary-border);
+  @include button-variant($chr-white, $brand-secondary, $btn-secondary-border);
 }
 
 .btn-lg {
@@ -41,10 +41,10 @@
 
   background: $chr-primary-gradient;
   border: 0;
-  color: $chr-light;
+  color: $chr-white;
 
   &:hover {
     background: $chr-primary-gradient-hover;
-    color: $chr-light;
+    color: $chr-white;
   }
 }

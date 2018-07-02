@@ -1,15 +1,15 @@
 .chr_vertical_tabs.nav {
-  background-color: $gray-dark;
+  background-color: $gray-darker;
 
   > li {
     a {
       background-color: $panel-default-heading-bg;
-      color: $gray;
+      color: $gray-dark;
     }
 
     &.active a {
       background-color: $brand-primary;
-      color: $chr-light;
+      color: $chr-white;
     }
   }
 }

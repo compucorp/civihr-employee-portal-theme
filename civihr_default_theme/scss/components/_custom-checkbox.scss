@@ -32,12 +32,12 @@
       left: 0;
       width: 15px;
       height: 15px;
-      background-color: $chr-light;
-      border: 1px solid $gray-darker;
+      background-color: $chr-white;
+      border: 1px solid $chr-gray-darkest;
       border-radius: 3px;
       line-height: 13px;
       text-align: center;
-      color: $gray-darker;
+      color: $chr-gray-darkest;
     }
 
     &:focus {
@@ -51,7 +51,7 @@
       + span:after,
       + label:after {
         content: '\02714';
-        border-color: $gray-darker;
+        border-color: $chr-gray-darkest;
       }
     }
   }

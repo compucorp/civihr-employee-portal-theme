@@ -2,7 +2,7 @@ $icon-margin: 8px;
 
 .chr_action {
   @extend .btn;
-  @include button-outline-variant($gray-darker, $bg-color: $btn-primary-bg);
+  @include button-outline-variant($chr-gray-darkest, $bg-color: $btn-primary-bg);
 }
 
 .chr_action--icon {

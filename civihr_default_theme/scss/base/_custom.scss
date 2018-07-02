@@ -366,19 +366,19 @@ h1,
 }
 
 h4 {
-  color: $gray-dark;
+  color: $gray-darker;
   font-size: $font-size-h4;
   font-weight: $chr-font-weight-regular;
 }
 
 h5 {
-  color: $gray;
+  color: $gray-dark;
   font-size: $font-size-h5;
   font-weight: $chr-font-weight-regular;
 }
 
 h2.pane-title {
-  color: $gray;
+  color: $gray-dark;
   font-size: $font-size-large;
   font-weight: $chr-font-weight-semibold;
 }
@@ -397,7 +397,7 @@ h2.pane-title {
   @include fa('\f0d7');
 
   border: 1px solid $input-border;
-  color: $gray;
+  color: $gray-dark;
   font-size: $font-size-base;
   line-height: 1.5;
   margin: 0;
@@ -443,20 +443,20 @@ h2.pane-title {
 }
 
 .alert {
-  color: $chr-light;
+  color: $chr-white;
   margin-bottom: 20px;
   padding: 20px;
   position: relative;
 
   button {
-    color: $gray-dark !important;
+    color: $gray-darker !important;
     margin-right: 10px;
   }
 
   .close {
     background: none;
     border: 0;
-    color: $chr-light !important;
+    color: $chr-white !important;
     font-size: $font-size-large;
     font-weight: $chr-font-weight-bold;
     line-height: 1;
@@ -530,7 +530,7 @@ h2.pane-title {
     font-size: $font-size-base;
 
     a {
-      color: $gray-darker;
+      color: $chr-gray-darkest;
       margin-left: 10px;
     }
   }
@@ -541,7 +541,7 @@ h2.pane-title {
 
   .form-item {
     label:not(.element-invisible) {
-      color: $gray-darker;
+      color: $chr-gray-darkest;
       display: block;
       float: left;
       font-size: $font-size-base;
@@ -601,21 +601,21 @@ h2.pane-title {
 // Splitters
 
 .vertical-splitter {
-  border-left: 1px solid $chr-light-pale;
+  border-left: 1px solid $chr-gray-pale;
   height: 100%;
   position: absolute;
   width: 0;
 }
 
 .splitter-top {
-  border-top: 1px solid $chr-light-pale;
+  border-top: 1px solid $chr-gray-pale;
   margin-top: 20px;
   padding-top: 20px;
 }
 
 .context-menu-toggle {
   box-shadow: none !important;
-  color: $gray;
+  color: $gray-dark;
   display: inline-block;
   font-size: $font-size-base;
   padding: 0 10px;
@@ -675,7 +675,7 @@ form {
 
 .form-text {
   border: 1px solid $input-border;
-  color: $gray;
+  color: $gray-dark;
   font-size: $font-size-base;
   line-height: 1.5;
   margin: 0;
@@ -696,7 +696,7 @@ form {
 // Main / Dashboard
 
 .main {
-  background: $chr-light-pale;
+  background: $chr-gray-pale;
 }
 
 // Panels / Dashboard Carousel
@@ -728,7 +728,7 @@ form {
   }
 
   .jcarousel-item {
-    background: $chr-light-gray;
+    background: $chr-gray-lightest;
     margin: 0 10px;
     padding: 20px;
     width: 193px;
@@ -738,8 +738,8 @@ form {
   .jcarousel-next {
     @include fa('\f104', 24);
 
-    background: $chr-light;
-    color: $gray;
+    background: $chr-white;
+    color: $gray-dark;
     display: block;
     height: 100%;
     left: 10px;
@@ -772,7 +772,7 @@ form {
 }
 
 .pane-title {
-  border-bottom: 1px solid $chr-light-pale;
+  border-bottom: 1px solid $chr-gray-pale;
   line-height: 1;
   margin: 0 -20px 20px;
   padding: 0 20px 20px;
@@ -823,7 +823,7 @@ form {
     top: 20px;
 
     a {
-      color: $gray;
+      color: $gray-dark;
     }
   }
 
@@ -847,7 +847,7 @@ form {
       font-size: $font-size-base;
 
       &:first-child {
-        color: $gray-darker;
+        color: $chr-gray-darkest;
         font-size: $font-size-base;
       }
     }
@@ -883,7 +883,7 @@ form {
       border-top: 0;
 
       tr {
-        color: $gray-darker;
+        color: $chr-gray-darkest;
         font-weight: $chr-font-weight-bold;
       }
     }
@@ -938,7 +938,7 @@ form {
 
   @include fa('\f073');
   background: none;
-  color: $gray;
+  color: $gray-dark;
   padding-right: 0;
 
   &::before {
@@ -947,7 +947,7 @@ form {
 
   &:hover {
     background: none;
-    color: $gray;
+    color: $gray-dark;
   }
 }
 
@@ -1052,8 +1052,8 @@ form {
 // Footer
 
 .footer {
-  background: $chr-light-pale;
-  color: $gray;
+  background: $chr-gray-pale;
+  color: $gray-dark;
   padding: 50px 0;
 
   .footer-logo {
@@ -1090,7 +1090,7 @@ form {
     }
 
     .views-submit-button {
-      border-top: 1px solid $chr-light-pale;
+      border-top: 1px solid $chr-gray-pale;
       margin-top: 20px;
 
       .form-submit {
@@ -1116,9 +1116,9 @@ form {
     }
 
     .views-row-odd {
-      background: $chr-light;
-      border-bottom: 1px solid $chr-light-pale;
-      border-top: 1px solid $chr-light-pale;
+      background: $chr-white;
+      border-bottom: 1px solid $chr-gray-pale;
+      border-top: 1px solid $chr-gray-pale;
     }
 
     .field-content {
@@ -1149,7 +1149,7 @@ form {
     }
 
     .fieldset-title {
-      color: $gray;
+      color: $gray-dark;
       font-size: $font-size-base;
       margin-left: 5px;
     }
@@ -1161,7 +1161,7 @@ form {
     }
 
     .fieldset-wrapper {
-      background: $chr-light-gray;
+      background: $chr-gray-lightest;
       margin-top: 20px;
       padding: 15px 20px;
 

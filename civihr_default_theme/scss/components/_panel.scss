@@ -9,7 +9,7 @@
     box-shadow: none;
 
     .chr_search-result__header {
-      border-bottom-color: $chr-light-pale;
+      border-bottom-color: $chr-gray-pale;
     }
   }
 
@@ -24,7 +24,7 @@
   padding-top: 20px;
 
   @media(min-width: $screen-sm-min) {
-    border-top: 1px solid $chr-light-pale;
+    border-top: 1px solid $chr-gray-pale;
     margin-top: 30px;
   }
 }

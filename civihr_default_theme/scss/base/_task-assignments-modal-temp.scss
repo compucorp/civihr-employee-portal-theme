@@ -80,7 +80,7 @@ fieldset {
       }
 
       tbody {
-        border-top: 1px solid $chr-light-pale;
+        border-top: 1px solid $chr-gray-pale;
 
         tr td:first-child {
           overflow: hidden;
@@ -100,7 +100,7 @@ fieldset {
       text-decoration: none;
 
       &:before {
-        color: $chr-light;
+        color: $chr-white;
         content: '?';
       }
     }
@@ -113,8 +113,8 @@ fieldset {
 
       a,
       li {
-        background-color: $chr-light-gray;
-        color: $gray;
+        background-color: $chr-gray-lightest;
+        color: $gray-dark;
       }
 
       li a {
@@ -122,21 +122,21 @@ fieldset {
 
         &:focus,
         &:hover {
-          background-color: $chr-light-gray;
-          border-color: $chr-light-gray;
-          color: $gray;
+          background-color: $chr-gray-lightest;
+          border-color: $chr-gray-lightest;
+          color: $gray-dark;
           margin-right: 0;
         }
       }
 
       li.active a {
-        background-color: $chr-light;
+        background-color: $chr-white;
         border-bottom-color: transparent;
         color: $brand-primary;
 
         &:focus,
         &:hover {
-          background-color: $chr-light;
+          background-color: $chr-white;
           color: $brand-primary;
           cursor: default;
         }
@@ -153,10 +153,10 @@ fieldset {
         }
 
         tbody {
-          background-color: $chr-light-gray;
+          background-color: $chr-gray-lightest;
 
           .btn {
-            background-color: $chr-light-gray;
+            background-color: $chr-gray-lightest;
             border-radius: 20px;
             line-height: 1;
             padding: 7px;
@@ -167,7 +167,7 @@ fieldset {
             }
 
             &:focus {
-              background-color: $chr-light-gray;
+              background-color: $chr-gray-lightest;
               outline: 0 none;
             }
 
@@ -176,7 +176,7 @@ fieldset {
               background-color: $brand-primary;
 
               span {
-                color: $chr-light;
+                color: $chr-white;
               }
             }
           }
@@ -184,13 +184,13 @@ fieldset {
 
         td,
         th {
-          border-bottom: 0 solid $chr-light-pale;
+          border-bottom: 0 solid $chr-gray-pale;
           padding: 7px;
         }
 
         thead {
           small {
-            color: $gray;
+            color: $gray-dark;
             font-size: $font-size-base;
           }
         }
@@ -219,7 +219,7 @@ fieldset {
     .civihr-ui-select {
       .select2-choice,
       .select2-arrow {
-        background-color: $chr-light;
+        background-color: $chr-white;
         background-image: none;
       }
 
@@ -227,7 +227,7 @@ fieldset {
         color: $gray-light;
 
         .select2-highlighted {
-          background: $chr-light-pale;
+          background: $chr-gray-pale;
           color: inherit;
         }
       }
@@ -272,13 +272,13 @@ fieldset {
 
     .btn-danger,
     .btn-danger:focus {
-      background-color: $chr-light;
+      background-color: $chr-white;
       border: 0;
       color: $brand-danger;
     }
 
     .input-group-addon {
-      background-color: $chr-light;
+      background-color: $chr-white;
     }
   }
 

@@ -1,4 +1,4 @@
-$carousel-box-shadow-color: rgba($gray-darker, 0.3);
+$carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
 
 .mobile {
   #onboarding-customization-page {
@@ -52,7 +52,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
         float: none;
 
         a {
-          color: $gray-darker !important;
+          color: $chr-gray-darkest !important;
           padding: 15px 5px 15px 15px;
         }
 
@@ -90,7 +90,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
       width: 100%;
 
       div.form-item {
-        background-color: $chr-light;
+        background-color: $chr-white;
         margin: 0;
       }
     }
@@ -147,7 +147,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
 
   .onboarding_wizard_payroll_ssin_checkbox {
     label {
-      color: $gray;
+      color: $gray-dark;
       padding-left: 20px !important;
     }
 
@@ -185,7 +185,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     }
 
     .civicrm-remove-file {
-      background: $chr-light;
+      background: $chr-white;
       border: 1px solid $gray-lighter;
       padding: 0.7rem 1.1rem;
     }
@@ -212,7 +212,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     padding: 7px 10px;
 
     &+.input-group-addon {
-      background-color: $chr-light;
+      background-color: $chr-white;
       border: 1px solid $gray-lighter;
       color: $crm-wizard-font-color;
       display: inline-block;
@@ -408,7 +408,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     text-align: center;
 
     .views-content-title {
-      background: $chr-light-pale;
+      background: $chr-gray-pale;
       border-radius: 50%;
       cursor: pointer;
       display: inline-block;
@@ -524,11 +524,11 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
     }
 
     .region {
-      background: $chr-light;
+      background: $chr-white;
     }
 
     .drop-zone-overlay {
-      background: $chr-light;
+      background: $chr-white;
       height: 140px;
       top: 25px;
 
@@ -569,11 +569,11 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
       #edit-cancel {
         background: $crm-wizard-primary-color;
         border: 0;
-        color: $chr-light;
+        color: $chr-white;
 
         &:focus {
           background: $crm-wizard-primary-color;
-          color: $chr-light;
+          color: $chr-white;
         }
       }
     }
@@ -669,7 +669,7 @@ $carousel-box-shadow-color: rgba($gray-darker, 0.3);
         margin-bottom: 0;
 
         .form-type-checkbox {
-          border: 1px solid $chr-light-pale;
+          border: 1px solid $chr-gray-pale;
           height: auto;
           padding: 10px;
         }

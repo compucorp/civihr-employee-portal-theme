@@ -1,9 +1,9 @@
 .chr_header {
   @include clearfix;
 
-  background: $gray-dark;
+  background: $gray-darker;
   box-shadow: 0 2px 3px 0 rgba(black, 0.15);
-  color: $chr-light-pale;
+  color: $chr-gray-pale;
   font-size: $font-size-base;
   height: $crm-header-height;
   line-height: $crm-header-height;
@@ -80,7 +80,7 @@
   width: 60px;
 
   &:hover {
-    color: rgba($chr-light, 0.8);
+    color: rgba($chr-white, 0.8);
   }
 
   > .chr_header__logo {
@@ -89,7 +89,7 @@
     text-align: center;
 
     &:hover {
-      color: rgba($chr-light, 0.8);
+      color: rgba($chr-white, 0.8);
     }
   }
 
@@ -105,13 +105,13 @@
 }
 
 .chr_header__logo {
-  color: $chr-light;
+  color: $chr-white;
   display: inline-block;
   font-size: $chr-font-size-medium;
 }
 
 .chr_header__nav {
-  background: $chr-light;
+  background: $chr-white;
   font-size: $chr-font-size-medium;
   z-index: 99;
 
@@ -124,8 +124,8 @@
 
 .chr_header__nav__menu {
   a {
-    border-bottom: 1px solid $gray-dark;
-    color: $gray-darker;
+    border-bottom: 1px solid $gray-darker;
+    color: $chr-gray-darkest;
     display: block;
     margin: 0 25px;
     padding: 0 20px;
@@ -188,8 +188,8 @@
 
       &:hover,
       &:focus {
-        background: $gray;
-        color: $chr-light !important;
+        background: $gray-dark;
+        color: $chr-white !important;
       }
 
       &.active {
@@ -204,8 +204,8 @@
       text-transform: uppercase;
 
       > a {
-        border: 1px solid $chr-light;
-        color: $chr-light;
+        border: 1px solid $chr-white;
+        color: $chr-white;
       }
     }
   }
@@ -218,7 +218,7 @@
 }
 
 .chr_header__nav__toggle {
-  color: $chr-light;
+  color: $chr-white;
   cursor: pointer;
   display: table-cell;
   height: 100%;
@@ -252,7 +252,7 @@
 }
 
 .chr_header__sub-menu {
-  background: $gray-dark;
+  background: $gray-darker;
   display: none;
   position: absolute;
   z-index: 99;
@@ -262,15 +262,15 @@
   }
 
   a {
-    color: $chr-light-pale;
+    color: $chr-gray-pale;
     display: block;
     font-size: $font-size-base;
     padding: 0 30px 0 20px;
     white-space: nowrap;
 
     &:hover {
-      background: $gray;
-      color: $chr-light;
+      background: $gray-dark;
+      color: $chr-white;
     }
 
     > i {
@@ -281,7 +281,7 @@
 
 .chr_header__sub-menu__separator {
   &:after {
-    border-top: 1px solid $gray-darker;
+    border-top: 1px solid $chr-gray-darkest;
     content: '';
     display: block;
     height: 0;

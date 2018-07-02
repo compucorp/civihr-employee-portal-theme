@@ -1,6 +1,6 @@
 .drop-zone-overlay {
   align-items: center;
-  background: $chr-light-gray;
+  background: $chr-gray-lightest;
   color: $crm-wizard-font-color;
   display: flex;
   height: 180px;
@@ -21,7 +21,7 @@
   }
 
   &.is-dragover {
-    background-color: $chr-light;
+    background-color: $chr-white;
     outline-color: $gray-lighter;
     outline-offset: -10px;
   }
@@ -30,7 +30,7 @@
 .mobile {
   .drop-zone-overlay {
     background: $brand-primary !important;
-    color: $chr-light;
+    color: $chr-white;
     height: 40px !important;
     outline: none;
   }

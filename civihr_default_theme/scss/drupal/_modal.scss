@@ -66,7 +66,7 @@ body.modal-open {
 .modal-civihr-custom__section {
   @include clearfix;
 
-  border-bottom: 1px solid $chr-light-pale;
+  border-bottom: 1px solid $chr-gray-pale;
   padding: #{$crm-custom-modal-body-padding * 2}px #{$crm-custom-modal-body-padding}px;
 
   &:last-of-type {
@@ -90,7 +90,7 @@ body.modal-open {
 .modal-civihr-custom__section--strip {
   @extend .modal-civihr-custom__section;
 
-  background: $gray-dark;
+  background: $gray-darker;
   margin: 0 #{-$crm-custom-modal-body-padding}px;
   padding: #{$crm-custom-modal-body-padding * 2}px;
 }
@@ -105,17 +105,17 @@ body.modal-open {
   padding: 0;
 
   .hr-documents-body-block + .views-field-nothing {
-    border-top: 1px solid $chr-light-pale;
+    border-top: 1px solid $chr-gray-pale;
     margin-top: 20px;
     padding-top: 10px;
   }
 
   .resource-uploaded-date {
-    color: $chr-light-pale;
+    color: $chr-gray-pale;
   }
 
   .views-label-body {
-    color: $gray-darker;
+    color: $chr-gray-darkest;
     display: inline-block;
     margin-bottom: 20px;
   }

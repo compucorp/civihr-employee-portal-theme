@@ -20,7 +20,7 @@
 
 .panel-body {
   @include grid-condensed($panel-body-padding+1px);
-  background: $chr-light;
+  background: $chr-white;
 
   > .row:last-child .form-actions {
     margin-bottom: 0;
@@ -33,7 +33,7 @@
 }
 
 .panel-title {
-  color: $gray-darker;
+  color: $chr-gray-darkest;
   font-size: $font-size-h1;
   font-weight: $chr-font-weight-regular;
 }
@@ -46,7 +46,7 @@
 .panel-default {
   > .panel-subheading {
     background: $panel-default-heading-bg;
-    border-bottom: 1px solid $gray-dark;
+    border-bottom: 1px solid $gray-darker;
     color: $panel-default-text;
   }
 }
@@ -56,7 +56,7 @@
 // the bottom border
 .panel-heading-plain {
   .panel-default > & {
-    background: $chr-light;
+    background: $chr-white;
     border: 0;
 
     > .panel-title {

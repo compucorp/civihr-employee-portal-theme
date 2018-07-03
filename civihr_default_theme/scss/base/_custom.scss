@@ -1,3 +1,5 @@
+/* stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors, max-nesting-depth */
+
 legend {
   border: 0;
   border-bottom: 1px solid $legend-border-color;
@@ -266,7 +268,7 @@ body {
   width: auto;
 
   input[type='submit'] {
-    @extend .btn-primary-outline; /* stylelint-disable-line scss/at-extend-no-missing-placeholder, selector-no-qualifying-type */
+    @extend .btn-primary-outline; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
   }
 
   @media screen and (max-width: $screen-sm-max) {
@@ -1081,7 +1083,7 @@ form {
 .content {
   > .view-hr-vacancies {
 
-    @extend .view-hr-documents;
+    @extend .view-hr-documents; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
 
     .view-filters {
       .views-widget {

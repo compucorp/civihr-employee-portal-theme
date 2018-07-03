@@ -1,5 +1,6 @@
 .page-admin,
-.page-node-add-hr-documents {
+.page-node-add-hr-documents,
+.page-node-edit.node-type-hr-documents {
   .tabs,
   .action-links,
   .nav.nav-pills.secondary {
@@ -19,15 +20,10 @@
   }
 
   .panel-default {
-    padding-top: 70px;
-    position: relative;
-
     legend {
       background: $chr-white;
-      left: 0;
       line-height: 30px;
-      position: absolute;
-      top: 0;
+      margin: 0;
     }
   }
 

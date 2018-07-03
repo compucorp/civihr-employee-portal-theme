@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth, selector-no-qualifying-type, selector-max-id */
+
 $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
 
 .mobile {
@@ -5,7 +7,7 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
     #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
       height: auto !important;
 
-      input.form-file {
+      .form-file {
         height: 40px !important;
       }
     }
@@ -13,7 +15,7 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
 
   .onboarding-wizard-page {
     .onboarding_wizard_profile_pic_upload_image {
-      input.form-file {
+      .form-file {
         height: 40px !important;
       }
     }
@@ -97,7 +99,7 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
   }
 
   .fieldset-legend {
-    &:before {
+    &::before {
       display: none !important;
     }
   }
@@ -195,12 +197,6 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
     display: none;
   }
 
-  .webform-next,
-  .webform-submit,
-  #edit-submit {
-    @extend .btn-primary-outline;
-  }
-
   #edit-submit {
     text-transform: uppercase;
     width: 100px;
@@ -208,10 +204,10 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
 
   .webform-calendar,
   .mobile-webform-calendar {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
     padding: 7px 10px;
 
-    &+.input-group-addon {
+    +.input-group-addon {
       background-color: $chr-white;
       border: 1px solid $gray-lighter;
       color: $crm-wizard-font-color;
@@ -258,8 +254,6 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
 
   .webform-previous,
   #edit-cancel {
-    @extend .btn-secondary-outline;
-
     float: left;
   }
 
@@ -387,7 +381,7 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
           position: absolute;
           text-align: center;
           top: 100px;
-          width: calc( 100% - 458px);
+          width: calc(100% - 458px);
         }
 
         .views-field-field-description {
@@ -397,7 +391,7 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
           position: absolute;
           text-align: center;
           top: 150px;
-          width: calc( 100% - 458px);
+          width: calc(100% - 458px);
         }
       }
     }
@@ -564,17 +558,6 @@ $carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
 
       input {
         margin: 0 5px;
-      }
-
-      #edit-cancel {
-        background: $crm-wizard-primary-color;
-        border: 0;
-        color: $chr-white;
-
-        &:focus {
-          background: $crm-wizard-primary-color;
-          color: $chr-white;
-        }
       }
     }
 

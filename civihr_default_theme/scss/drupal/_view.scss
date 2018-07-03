@@ -81,6 +81,12 @@
       }
     }
   }
+
+  fieldset {
+    border-bottom: 1px solid $chr-gray-pale;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
 }
 
 .view-hr-vacancies {

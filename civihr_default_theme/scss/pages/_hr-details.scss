@@ -21,6 +21,13 @@
       background: transparent;
     }
   }
+
+  .panel-display {
+    .view-empty,
+    .view-empty-message {
+      text-align: center;
+    }
+  }
 }
 
 
@@ -67,7 +74,7 @@
 }
 
 .view-mydetails-personal {
-  .contact-id span {
+  .chr_panel--my-details__personal__contact_id span {
     @include views-label;
   }
 
@@ -86,12 +93,12 @@
     left: 0;
     position: absolute;
     top: 0;
-  }
 
-  .views-field-image-URL img {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    img {
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+    }
   }
 
   .chr_panel__footer {
@@ -108,9 +115,9 @@
       width: 100%;
     }
 
-    .contact-id,
-    .gender,
-    .marital-status {
+    .chr_panel--my-details__personal__contact_id,
+    .chr_panel--my-details__personal__gender,
+    .chr_panel--my-details__personal__marital_status {
       margin-right: 1rem;
     }
   }
@@ -119,13 +126,15 @@
     width: 100%;
   }
 
-  .nsi-exists.nsi-application-in-progress-1 {
-    > * {
-      display: none;
-    }
+  .chr_panel--my-details__personal__nsi_exists {
+    &.chr_panel--my-details__personal__nsi_application_in_progress--1 {
+      > * {
+        display: none;
+      }
 
-    .nsi-application-status {
-      display: block;
+      .chr_panel--my-details__personal__application_status {
+        display: block;
+      }
     }
   }
 
@@ -143,15 +152,17 @@
     }
   }
 
-  .nsi-application-status > * {
-    display: inline-block;
-    float: left;
-    width: 50%;
-  }
+  .chr_panel--my-details__personal__application_status {
+    > * {
+      display: inline-block;
+      float: left;
+      width: 50%;
+    }
 
-  .nsi-application-status.not-applying,
-  .nsi-application-status.No {
-    display: none;
+    &.not-applying,
+    &.No {
+      display: none;
+    }
   }
 
   .chr_actions-wrapper a {
@@ -231,11 +242,11 @@
     margin-bottom: 1rem;
     padding: 1rem 3rem 1rem 0;
     position: relative;
-  }
 
-  .views-row.views-row-last {
-    border-bottom: 0;
-    margin-bottom: 0;
+    &.views-row-last {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 
   .views-field-emergency-contact-deletion {
@@ -251,9 +262,4 @@
       margin-bottom: 15px;
     }
   }
-}
-
-.page-hr-details .panel-display .view-empty,
-.page-hr-details .panel-display .view-empty-message {
-  text-align: center;
 }

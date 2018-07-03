@@ -265,6 +265,10 @@ body {
   padding: 0;
   width: auto;
 
+  input[type='submit'] {
+    @extend .btn-primary-outline; /* stylelint-disable-line scss/at-extend-no-missing-placeholder, selector-no-qualifying-type */
+  }
+
   @media screen and (max-width: $screen-sm-max) {
     @include exposed-form-default-style(100%);
   }
@@ -359,7 +363,7 @@ a {
 
 h1,
 .block__title {
-  color: $gray-light;
+  color: $gray-darker;
   font-size: $font-size-h1;
   font-weight: $chr-font-weight-semibold;
   margin: 25px 0;

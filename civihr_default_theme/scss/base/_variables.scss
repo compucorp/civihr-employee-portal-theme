@@ -151,7 +151,8 @@ $crm-customselect-padding-right: $crm-customselect-caret-width + 12 !default;
 
 // Forms
 // -----------------------------------------------------------------------------
-$input-border: $gray-lighter !default;
+$input-border:      $gray-lighter !default;
+$input-bg-disabled: $chr-gray-pale !default;
 
 $crm-ui-select-top-padding:       7px;
 

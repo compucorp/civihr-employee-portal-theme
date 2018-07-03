@@ -27,9 +27,7 @@ function civihr_default_theme_button($variables) {
 
   // Change - Start
   // Add a btn-primary-outline class if submit button.
-  if ((isset($element['#parents']) && ($element['#parents'][0] == 'submit')
-    && (strpos($element['#ajax']['wrapper'], 'webform-client-form') === 0))
-    || ($element['#parents'][0] == 'save')) {
+  if (isset($element['#parents']) && $element['#parents'][0] == 'submit') {
     $element['#attributes']['class'][] = 'btn-gradient';
   } else {
     $element['#attributes']['class'][] = 'btn-primary-outline';

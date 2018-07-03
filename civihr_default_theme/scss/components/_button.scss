@@ -37,10 +37,8 @@
 }
 
 .btn-gradient {
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-large, $border-radius-large);
-
   background: $chr-primary-gradient;
-  border: 0;
+  border: 1px solid transparent;
   color: $chr-white;
 
   &:hover {

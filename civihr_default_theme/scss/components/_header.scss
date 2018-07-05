@@ -2,7 +2,7 @@
   @include clearfix;
 
   background: $gray-dark;
-  box-shadow: 0 2px 3px 0 rgba(black, 0.15);
+  box-shadow: 0 2px 3px 0 rgba(#000, 0.15);
   color: $light-pale;
   font-size: 1.3rem;
   height: $crm-header-height;
@@ -27,9 +27,8 @@
     min-height: 100%;
     position: absolute;
     top: $crm-header-height;
-    width: 100%;
-
     transition: left 0.2s ease-out;
+    width: 100%;
 
     &.is-open {
       left: 0;
@@ -67,7 +66,7 @@
     }
 
     .menu-link-home > a {
-      border-bottom: none !important;
+      border-bottom: 0 !important;
     }
   }
 }
@@ -106,12 +105,12 @@
 
 .chr_header__logo {
   color: $light;
-  font-size: 1.6rem;
   display: inline-block;
+  font-size: 1.6rem;
 }
 
 .chr_header__nav {
-  background: #ffffff;
+  background: #fff;
   font-size: 1.385em;
   z-index: 99;
 
@@ -123,7 +122,6 @@
 }
 
 .chr_header__nav__menu {
-
   a {
     border-bottom: 1px solid $crm-grizzly;
     color: $gray-darker;
@@ -133,7 +131,7 @@
 
     &.active,
     &:hover,
-    &:focus {
+    &:focus { /* stylelint-disable selector-no-qualifying-type */
       color: $brand-primary;
       outline: none;
     }
@@ -144,11 +142,11 @@
     // (see: https://www.dannyenglander.com/blog/drupal-theming-adding-font-awesome-icons-menu-items)
     &.fa {
       font-family: inherit;
-      line-height: inherit;
       -webkit-font-smoothing: inherit;
       -moz-osx-font-smoothing: inherit;
+      line-height: inherit;
 
-      &:before {
+      &::before {
         @include fa-icon();
         margin-right: 5px;
       }
@@ -159,10 +157,10 @@
     position: relative;
 
     &.active {
-      &:after {
-        content: '';
+      &::after {
         border: 2px solid $brand-primary;
         bottom: 0;
+        content: '';
         left: 0;
         margin: auto;
         position: absolute;
@@ -173,7 +171,7 @@
 
     &:last-child {
       > a {
-        border: none;
+        border: 0;
       }
     }
   }
@@ -229,8 +227,8 @@
 
 
 .chr_header__settings-menu {
-  float: right;
   display: inline-block;
+  float: right;
   position: relative;
   text-align: center;
   width: 50px;
@@ -264,8 +262,8 @@
 
   a {
     color: $light-pale;
-    font-size: 1.3rem;
     display: block;
+    font-size: 1.3rem;
     padding: 0 30px 0 20px;
     white-space: nowrap;
 
@@ -281,8 +279,7 @@
 }
 
 .chr_header__sub-menu__separator {
-
-  &:after {
+  &::after {
     border-top: 1px solid $gray-darker;
     content: '';
     display: block;

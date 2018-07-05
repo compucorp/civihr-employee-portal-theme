@@ -85,19 +85,21 @@
 
   .views-row {
     min-height: 80px;
-    padding-left: 100px;
+    padding-left: 0;
     position: relative;
+    @media (min-width: 320px) {
+      padding-left: 100px;
+    }
   }
 
   .views-field-image-URL {
+    display: none;
     left: 0;
     position: absolute;
     top: 0;
-
-    img {
-      border-radius: 50%;
-      height: 80px;
-      width: 80px;
+    width: 80px;
+    @media (min-width: 320px) {
+      display: block;
     }
   }
 
@@ -118,7 +120,7 @@
     .chr_panel--my-details__personal__contact_id,
     .chr_panel--my-details__personal__gender,
     .chr_panel--my-details__personal__marital_status {
-      margin-right: 1rem;
+      margin-right: 10px;
     }
   }
 
@@ -126,15 +128,11 @@
     width: 100%;
   }
 
-  .chr_panel--my-details__personal__nsi_exists {
-    &.chr_panel--my-details__personal__nsi_application_in_progress--1 {
-      > * {
-        display: none;
-      }
+  .chr_panel--my-details__personal__application_status--in-progress {
+    display: flex;
 
-      .chr_panel--my-details__personal__application_status {
-        display: block;
-      }
+    > * {
+      width: 50%;
     }
   }
 
@@ -166,7 +164,7 @@
   }
 
   .chr_actions-wrapper a {
-    margin: 1rem 0.5rem;
+    margin: 10px 5px;
   }
 }
 
@@ -198,7 +196,7 @@
 
     &::before {
       content: 'ext. ';
-      margin-left: 0.5rem;
+      margin-left: 5px;
     }
   }
 }
@@ -239,8 +237,8 @@
 
   .views-row {
     border-bottom: 1px solid $gray-light;
-    margin-bottom: 1rem;
-    padding: 1rem 3rem 1rem 0;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 0;
     position: relative;
 
     &.views-row-last {
@@ -250,10 +248,10 @@
   }
 
   .views-field-emergency-contact-deletion {
-    bottom: 1rem;
+    bottom: 10px;
     font-size: $crm-font-size-large;
     position: absolute;
-    right: 1rem;
+    right: 10px;
     text-align: right;
   }
 

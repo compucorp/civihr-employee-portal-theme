@@ -2,7 +2,7 @@
   @include clearfix;
 
   background: $gray-dark;
-  box-shadow: 0 2px 3px 0 rgba(#000, 0.15);
+  box-shadow: 0 2px 3px 0 rgba($crm-black, 0.15);
   color: $light-pale;
   font-size: 1.3rem;
   height: $crm-header-height;
@@ -43,7 +43,7 @@
     display: none;
   }
 
-  @media(min-width: $screen-md-max) {
+  @media(min-width: $screen-lg-min) {
     > .chr_header__logo {
       display: none;
     }
@@ -91,7 +91,7 @@
     }
   }
 
-  @media(min-width: $screen-md-max) {
+  @media(min-width: $screen-lg-min) {
     > .chr_header__logo {
       display: block;
     }
@@ -109,11 +109,11 @@
 }
 
 .chr_header__nav {
-  background: #fff;
+  background: $light;
   font-size: 1.385em;
   z-index: 99;
 
-  @media(min-width: $screen-md-max) {
+  @media(min-width: $screen-lg-min) {
     background: inherit;
     font-size: inherit;
     padding: 0;
@@ -124,17 +124,19 @@
   display: flex;
 
   a {
-    border-bottom: 1px solid $crm-grizzly;
-    color: $gray-darker;
-    display: block;
-    margin: 0 25px;
-    padding: 0 20px;
+    border: 0;
+    color: inherit;
+    margin: 0;
+    padding: 0 10px;
 
-    &.active,
     &:hover,
-    &:focus { /* stylelint-disable-line selector-no-qualifying-type */
-      color: $brand-primary;
-      outline: none;
+    &:focus {
+      background: $gray;
+      color: $light;
+    }
+
+    &.active { /* stylelint-disable-line selector-no-qualifying-type */
+      color: inherit;
     }
 
     // The fa classes are applied by Drupal to the anchors directly,
@@ -178,35 +180,47 @@
   }
 
   .menu-link-hr-admin {
-    order: 9999;
+    line-height: 33px;
+    order: 9999; // to ensure it appears the last in the list
+    padding: 12px 0 0 15px;
+    text-transform: uppercase;
+
+    > a {
+      border: 1px solid $light;
+      color: $light;
+    }
   }
 
-  @media(min-width: $screen-md-max) {
-    a {
-      border: 0;
-      color: inherit;
-      margin: 0;
-      padding: 0 10px;
+  @media(max-width: $screen-md-max) {
+    flex-direction: column;
 
+    a {
+      border-bottom: 1px solid $crm-grizzly;
+      color: $gray-darker;
+      display: block;
+      margin: 0 25px;
+      padding: 0 20px;
+
+      /* stylelint-disable selector-no-qualifying-type */
+      &.active,
       &:hover,
       &:focus {
-        background: $gray;
-        color: $light !important;
+        background: none;
+        color: $brand-primary;
+        outline: none;
       }
-
-      &.active { /* stylelint-disable-line selector-no-qualifying-type */
-        color: inherit;
-      }
+      /* stylelint-enable selector-no-qualifying-type */
     }
 
     .menu-link-hr-admin {
-      line-height: 33px;
-      padding: 12px 0 0 15px;
-      text-transform: uppercase;
+      border: 1px solid $gray-darker;
+      line-height: 50px;
+      margin: 25px;
+      padding: 0;
+      text-align: center;
 
       > a {
-        border: 1px solid $light;
-        color: $light;
+        color: $gray-darker;
       }
     }
   }
@@ -215,19 +229,6 @@
     a {
       padding: 0 15px;
     }
-  }
-}
-
-@media (max-width: $screen-md-max - 1) {
-  .chr_header__nav__menu {
-    flex-direction: column;
-  }
-
-  .menu-link-hr-admin {
-    border: 1px solid $gray-darker;
-    line-height: 50px;
-    margin: 25px;
-    text-align: center;
   }
 }
 

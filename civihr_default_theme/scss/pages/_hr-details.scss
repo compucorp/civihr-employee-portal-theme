@@ -87,6 +87,7 @@
     min-height: 80px;
     padding-left: 0;
     position: relative;
+
     @media (min-width: 320px) {
       padding-left: 100px;
     }
@@ -98,6 +99,7 @@
     position: absolute;
     top: 0;
     width: 80px;
+
     @media (min-width: 320px) {
       display: block;
     }

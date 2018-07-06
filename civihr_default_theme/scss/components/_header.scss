@@ -2,7 +2,7 @@
   @include clearfix;
 
   background: $gray-dark;
-  box-shadow: 0 2px 3px 0 rgba(black, 0.15);
+  box-shadow: 0 2px 3px 0 rgba($crm-black, 0.15);
   color: $light-pale;
   font-size: 1.3rem;
   height: $crm-header-height;
@@ -27,9 +27,8 @@
     min-height: 100%;
     position: absolute;
     top: $crm-header-height;
-    width: 100%;
-
     transition: left 0.2s ease-out;
+    width: 100%;
 
     &.is-open {
       left: 0;
@@ -44,7 +43,7 @@
     display: none;
   }
 
-  @media(min-width: $screen-md-max) {
+  @media(min-width: $screen-lg-min) {
     > .chr_header__logo {
       display: none;
     }
@@ -60,14 +59,13 @@
   }
 
   @media (max-width: $screen-sm-max) {
-    .menu-link-hr-admin,
     .menu-link-home {
       background-color: $gray-light;
       display: block;
     }
 
     .menu-link-home > a {
-      border-bottom: none !important;
+      border-bottom: 0 !important;
     }
   }
 }
@@ -93,7 +91,7 @@
     }
   }
 
-  @media(min-width: $screen-md-max) {
+  @media(min-width: $screen-lg-min) {
     > .chr_header__logo {
       display: block;
     }
@@ -106,16 +104,16 @@
 
 .chr_header__logo {
   color: $light;
-  font-size: 1.6rem;
   display: inline-block;
+  font-size: 1.6rem;
 }
 
 .chr_header__nav {
-  background: #ffffff;
+  background: $light;
   font-size: 1.385em;
   z-index: 99;
 
-  @media(min-width: $screen-md-max) {
+  @media(min-width: $screen-lg-min) {
     background: inherit;
     font-size: inherit;
     padding: 0;
@@ -123,32 +121,35 @@
 }
 
 .chr_header__nav__menu {
+  display: flex;
 
   a {
-    border-bottom: 1px solid $crm-grizzly;
-    color: $gray-darker;
-    display: block;
-    margin: 0 25px;
-    padding: 0 20px;
+    border: 0;
+    color: inherit;
+    margin: 0;
+    padding: 0 10px;
 
-    &.active,
     &:hover,
     &:focus {
-      color: $brand-primary;
-      outline: none;
+      background: $gray;
+      color: $light;
+    }
+
+    &.active { /* stylelint-disable-line selector-no-qualifying-type */
+      color: inherit;
     }
 
     // The fa classes are applied by Drupal to the anchors directly,
     // so the style on the anchor needs to be resetted and the style
     // of the actual icon needs to be "confirmed" again
     // (see: https://www.dannyenglander.com/blog/drupal-theming-adding-font-awesome-icons-menu-items)
-    &.fa {
+    &.fa { /* stylelint-disable-line selector-no-qualifying-type */
       font-family: inherit;
-      line-height: inherit;
       -webkit-font-smoothing: inherit;
       -moz-osx-font-smoothing: inherit;
+      line-height: inherit;
 
-      &:before {
+      &::before {
         @include fa-icon();
         margin-right: 5px;
       }
@@ -158,11 +159,11 @@
   > li {
     position: relative;
 
-    &.active {
-      &:after {
-        content: '';
+    &.active { /* stylelint-disable-line selector-no-qualifying-type */
+      &::after {
         border: 2px solid $brand-primary;
         bottom: 0;
+        content: '';
         left: 0;
         margin: auto;
         position: absolute;
@@ -173,40 +174,53 @@
 
     &:last-child {
       > a {
-        border: none;
+        border: 0;
       }
     }
   }
 
-  @media(min-width: $screen-md-max) {
-    display: flex;
+  .menu-link-hr-admin {
+    line-height: 33px;
+    order: 9999; // to ensure it appears the last in the list
+    padding: 12px 0 0 15px;
+    text-transform: uppercase;
+
+    > a {
+      border: 1px solid $light;
+      color: $light;
+    }
+  }
+
+  @media(max-width: $screen-md-max) {
+    flex-direction: column;
 
     a {
-      border: 0;
-      color: inherit;
-      margin: 0;
-      padding: 0 10px;
+      border-bottom: 1px solid $crm-grizzly;
+      color: $gray-darker;
+      display: block;
+      margin: 0 25px;
+      padding: 0 20px;
 
+      /* stylelint-disable selector-no-qualifying-type */
+      &.active,
       &:hover,
       &:focus {
-        background: $gray;
-        color: $light !important;
+        background: none;
+        color: $brand-primary;
+        outline: none;
       }
-
-      &.active {
-        color: inherit;
-      }
+      /* stylelint-enable selector-no-qualifying-type */
     }
 
     .menu-link-hr-admin {
-      line-height: 33px;
-      order: 9999;
-      padding: 12px 0 0 15px;
-      text-transform: uppercase;
+      border: 1px solid $gray-darker;
+      line-height: 50px;
+      margin: 25px;
+      padding: 0;
+      text-align: center;
 
       > a {
-        border: 1px solid $light;
-        color: $light;
+        color: $gray-darker;
       }
     }
   }
@@ -229,8 +243,8 @@
 
 
 .chr_header__settings-menu {
-  float: right;
   display: inline-block;
+  float: right;
   position: relative;
   text-align: center;
   width: 50px;
@@ -264,8 +278,8 @@
 
   a {
     color: $light-pale;
-    font-size: 1.3rem;
     display: block;
+    font-size: 1.3rem;
     padding: 0 30px 0 20px;
     white-space: nowrap;
 
@@ -281,8 +295,7 @@
 }
 
 .chr_header__sub-menu__separator {
-
-  &:after {
+  &::after {
     border-top: 1px solid $gray-darker;
     content: '';
     display: block;

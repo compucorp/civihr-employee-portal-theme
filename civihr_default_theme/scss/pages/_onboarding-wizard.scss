@@ -1,11 +1,13 @@
-$carousel-box-shadow-color: rgba(#3f3c55,0.3);
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth, selector-no-qualifying-type, selector-max-id */
+
+$carousel-box-shadow-color: rgba($chr-gray-darkest, 0.3);
 
 .mobile {
   #onboarding-customization-page {
     #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
       height: auto !important;
 
-      input.form-file {
+      .form-file {
         height: 40px !important;
       }
     }
@@ -13,7 +15,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .onboarding-wizard-page {
     .onboarding_wizard_profile_pic_upload_image {
-      input.form-file {
+      .form-file {
         height: 40px !important;
       }
     }
@@ -29,7 +31,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 
   .chr_onboarding-wizard_remind-me-later {
-    border: none;
+    border: 0;
     float: none;
     margin-top: 15px;
 
@@ -52,7 +54,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
         float: none;
 
         a {
-          color: $gray-darker !important;
+          color: $chr-gray-darkest !important;
           padding: 15px 5px 15px 15px;
         }
 
@@ -79,9 +81,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     width: 100%;
 
     > label {
-      color: $crm-wizard-font-color;
       display: block;
-      font-size: 13px;
+      font-size: $font-size-base;
       padding: 0;
       width: 100%;
     }
@@ -91,60 +92,14 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       width: 100%;
 
       div.form-item {
-        background-color: $light;
+        background-color: $chr-white;
         margin: 0;
       }
     }
   }
 
-  .form-radios {
-    background-color: transparent !important;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-
-    .form-type-radio {
-      display: table-cell;
-
-      label {
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
-    > div {
-      background-color: transparent !important;
-      padding: 8px 12px;
-      border: 1px solid $crm_color-neutral;
-      border-right: none;
-      margin: 0 !important;
-    }
-
-    > div:last-child {
-      border-right: 1px solid $crm_color-neutral;
-    }
-
-    > div.checked {
-      background-color: $crm-wizard-secondary-color !important;
-      color: $light;
-      border-color: transparent;
-    }
-
-    input[type='radio']:checked:after {
-      border: 4px solid $light;
-      border-radius: 15px;
-      background-color: #000;
-      content: '';
-      display: inline-block;
-      height: 15px;
-      position: relative;
-      visibility: visible;
-      width: 15px;
-    }
-  }
-
   .fieldset-legend {
-    &:before {
+    &::before {
       display: none !important;
     }
   }
@@ -152,8 +107,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   .modal-civihr-custom__section,
   .onboarding-wizard-container {
     margin: -25px auto 25px auto;
+    padding: 90px 0 0;
     width: 475px;
-    padding: 90px 0 0 0;
   }
 
   .onboarding-wizard-container {
@@ -194,6 +149,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .onboarding_wizard_payroll_ssin_checkbox {
     label {
+      color: $gray-dark;
       padding-left: 20px !important;
     }
 
@@ -231,27 +187,14 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .civicrm-remove-file {
-      background: $light;
-      border: 1px solid #ccc;
-      padding: .7rem 1.1rem;
+      background: $chr-white;
+      border: 1px solid $gray-lighter;
+      padding: 0.7rem 1.1rem;
     }
   }
 
   .page-header {
     display: none;
-  }
-
-  .webform-next,
-  .webform-submit,
-  #edit-submit {
-    background: $crm-wizard-secondary-color;
-    border: 0;
-    color: $light;
-
-    &:focus {
-      background: $crm-wizard-secondary-color;
-      color: $light;
-    }
   }
 
   #edit-submit {
@@ -261,12 +204,12 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .webform-calendar,
   .mobile-webform-calendar {
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
     padding: 7px 10px;
-    -webkit-appearance: none;
 
-    &+.input-group-addon {
-      background-color: $crm_gray-light-alt;
-      border: 1px solid $crm-color-neutral;
+    +.input-group-addon {
+      background-color: $chr-white;
+      border: 1px solid $gray-lighter;
       color: $crm-wizard-font-color;
       display: inline-block;
       height: 100%;
@@ -294,10 +237,10 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .onboarding-fieldset-title,
   #onboarding-welcome-message {
-    color: $crm-wizard-font-color;
+    color: $gray-light;
+    font-size: $font-size-h1;
+    font-weight: $chr-font-weight-semibold;
     margin-top: -15px;
-    font-size: 36px;
-    font-weight: $headings-font-weight;
     text-align: center;
   }
 
@@ -311,15 +254,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
   .webform-previous,
   #edit-cancel {
-    background: $crm-wizard-primary-color;
-    border: 0;
-    color: $light;
     float: left;
-
-    &:focus {
-      background: $crm-wizard-primary-color;
-      color: $light;
-    }
   }
 
   .webform-component-file {
@@ -377,17 +312,17 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
         .crm_wizard__progress-title {
           color: $crm-wizard-active-font-color;
-          font-weight: 700;
+          font-weight: $chr-font-weight-bold;
         }
 
         .crm_wizard__current-step {
           color: $crm-wizard-font-color;
-          font-weight: 300;
+          font-weight: $chr-font-weight-light;
         }
 
         .crm_wizard__total-step {
           color: $crm-color-neutral;
-          font-weight: 300;
+          font-weight: $chr-font-weight-light;
         }
       }
     }
@@ -398,18 +333,18 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   .onboarding_wizard_features_get_started {
     background: $crm-wizard-secondary-color;
     display: block;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 0;
     text-transform: uppercase;
     width: 200px;
   }
 
   .page-header {
-    font-weight: 700;
+    font-weight: $chr-font-weight-bold;
     margin-top: 80px;
     text-align: center;
 
     .title {
-      font-weight: 500;
+      font-weight: $chr-font-weight-semibold;
     }
   }
 
@@ -418,8 +353,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 
   .views-slideshow-cycle-main-frame {
-    margin: 0 30px;
     height: 303px;
+    margin: 0 30px;
 
     .views-slideshow-cycle-main-frame-row {
       width: 100% !important;
@@ -441,12 +376,12 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
         .views-field-title {
           color: $crm-wizard-font-color;
-          font-size: 26px;
+          font-size: $font-size-base;
           left: 458px;
           position: absolute;
           text-align: center;
           top: 100px;
-          width: calc( 100% - 458px);
+          width: calc(100% - 458px);
         }
 
         .views-field-field-description {
@@ -456,23 +391,23 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
           position: absolute;
           text-align: center;
           top: 150px;
-          width: calc( 100% - 458px);
+          width: calc(100% - 458px);
         }
       }
     }
   }
 
   .views-slideshow-pager-fields {
-    text-align: center;
     margin-top: 40px;
+    text-align: center;
 
     .views-content-title {
+      background: $chr-gray-pale;
+      border-radius: 50%;
       cursor: pointer;
+      display: inline-block;
       height: 10px;
       width: 10px;
-      display: inline-block;
-      background: $light-pale;
-      border-radius: 50%;
     }
 
     .active {
@@ -491,12 +426,12 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
 
     .views-slideshow-controls-text-previous,
     .views-slideshow-controls-text-next {
-      font-size: 35px;
+      font-size: $font-size-base;
       position: absolute;
       top: 140px;
 
       a {
-        color: #c2cfd7;
+        color: $gray-lighter;
       }
     }
 
@@ -512,8 +447,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .views-slideshow-cycle-main-frame {
-      margin: 0;
       height: 500px;
+      margin: 0;
 
       .views-slideshow-cycle-main-frame-row {
         .views-slideshow-cycle-main-frame-row-item {
@@ -583,11 +518,11 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .region {
-      background: $light;
+      background: $chr-white;
     }
 
     .drop-zone-overlay {
-      background: $light;
+      background: $chr-white;
       height: 140px;
       top: 25px;
 
@@ -624,21 +559,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       input {
         margin: 0 5px;
       }
-
-      #edit-submit {
-        border: 0;
-      }
-
-      #edit-cancel {
-        background: $crm-wizard-primary-color;
-        border: 0;
-        color: $light;
-
-        &:focus {
-          background: $crm-wizard-primary-color;
-          color: $light;
-        }
-      }
     }
 
     .form-managed-file {
@@ -658,8 +578,8 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       margin-bottom: 60px;
 
       .form-type-checkbox {
-        margin-bottom: 10px !important;
         height: 20px;
+        margin-bottom: 10px !important;
       }
     }
 
@@ -684,24 +604,24 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     .onboarding-customize-logo {
-      width: 440px;
-      margin-right: 90px;
       float: right;
+      margin-right: 90px;
       margin-top: 75px;
+      width: 440px;
     }
 
     .onboarding-customize-features {
-      width: 440px;
-      margin-right: 90px;
       float: right;
+      margin-right: 90px;
       margin-top: 50px;
+      width: 440px;
     }
 
     .onboarding-customize-welcome {
-      width: 440px;
-      margin-right: 90px;
       float: right;
+      margin-right: 90px;
       margin-top: 45px;
+      width: 440px;
     }
 
     @media (max-width: $screen-lg-min) {
@@ -719,7 +639,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       .onboarding-customize-welcome {
         float: none;
         margin: 20px;
-        width: calc( 100% - 40px);
+        width: calc(100% - 40px);
       }
 
       .form-item-civihr-onboarding-welcome-text,
@@ -732,7 +652,7 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
         margin-bottom: 0;
 
         .form-type-checkbox {
-          border: 1px solid #ececed;
+          border: 1px solid $chr-gray-pale;
           height: auto;
           padding: 10px;
         }

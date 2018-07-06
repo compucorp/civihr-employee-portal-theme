@@ -1,5 +1,6 @@
 .page-admin,
-.page-node-add-hr-documents {
+.page-node-add-hr-documents,
+.page-node-edit.node-type-hr-documents {
   .tabs,
   .action-links,
   .nav.nav-pills.secondary {
@@ -11,7 +12,7 @@
   }
 
   .panel-title {
-    font-size: 14px;
+    font-size: $font-size-base;
   }
 
   .table-responsive {
@@ -19,21 +20,16 @@
   }
 
   .panel-default {
-    padding-top: 70px;
-    position: relative;
-
     legend {
-      background: $light;
-      left: 0;
+      background: $chr-white;
       line-height: 30px;
-      position: absolute;
-      top: 0;
+      margin: 0;
     }
   }
 
   table {
     @include box-shadow($crm-box-shadow-global);
-    background: $light;
+    background: $chr-white;
 
     th {
       height: 45px;
@@ -51,7 +47,7 @@
     margin-top: 20px;
 
     label {
-      font-weight: 700;
+      font-weight: $chr-font-weight-bold;
     }
   }
 }
@@ -81,5 +77,11 @@
     input {
       margin-left: 10px;
     }
+  }
+}
+
+.page-user-edit {
+  #edit-submit {
+    margin-left: 10px;
   }
 }

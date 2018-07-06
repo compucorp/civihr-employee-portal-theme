@@ -4,8 +4,7 @@
   padding: $panel-body-padding;
   position: relative;
 
-  [class*="col-sm"] {
-
+  [class*='col-sm'] {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -22,7 +21,7 @@
   }
 
   @media(min-width: $screen-sm-min) {
-    [class*="col-sm"] {
+    [class*='col-sm'] {
       margin-bottom: 0 !important;
     }
 
@@ -36,7 +35,7 @@
   @include clearfix;
 
   .field-content {
-    background: $crm-gray-light-alt;
+    background: $chr-gray-lightest;
     padding: 15px;
 
     ul {
@@ -51,13 +50,12 @@
   }
 
   .fieldset-title {
-    color: $gray;
-    font-size: 0.875em;
+    color: $gray-dark;
+    font-size: $font-size-base;
   }
 }
 
 .chr_hr-resource__description {
-
   > p {
     margin: 0;
   }
@@ -72,8 +70,8 @@
 }
 
 .chr_hr-resource__name {
-  color: $crm-gray-darker-alt;
-  font-weight: normal;
+  color: $gray-darker;
+  font-weight: $chr-font-weight-regular;
   line-height: normal;
   margin: 0;
 

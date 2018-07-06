@@ -1,9 +1,11 @@
+/* stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors, max-nesting-depth */
+
 legend {
   border: 0;
   border-bottom: 1px solid $legend-border-color;
   color: $legend-color;
   display: block;
-  font-size: ($font-size-base * 1.5);
+  font-size: $font-size-base;
   line-height: inherit;
   margin-bottom: $line-height-computed;
   padding: 0;
@@ -11,8 +13,9 @@ legend {
 }
 
 label {
+  color: $gray-light;
   display: block;
-  font-weight: bold;
+  font-weight: $chr-font-weight-regular;
   margin-bottom: 5px;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
 }
@@ -107,7 +110,7 @@ output {
 
   label {
     cursor: pointer;
-    font-weight: normal;
+    font-weight: $chr-font-weight-regular;
     margin-bottom: 0;
     min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
     padding-left: 20px;
@@ -133,7 +136,7 @@ output {
 .checkbox-inline {
   cursor: pointer;
   display: inline-block;
-  font-weight: normal;
+  font-weight: $chr-font-weight-regular;
   margin-bottom: 0;
   padding-left: 20px;
   position: relative;
@@ -209,7 +212,7 @@ output {
 
     @media (min-width: $screen-sm-min) {
       .control-label {
-        font-size: $font-size-small;
+        font-size: $font-size-base;
         padding-top: ($padding-small-vertical + 1);
       }
     }
@@ -263,6 +266,10 @@ body {
   @include exposed-form-default-style(50%);
   padding: 0;
   width: auto;
+
+  input[type='submit'] {
+    @extend .btn-primary-outline; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
+  }
 
   @media screen and (max-width: $screen-sm-max) {
     @include exposed-form-default-style(100%);
@@ -358,28 +365,28 @@ a {
 
 h1,
 .block__title {
-  color: $crm-gray-darker-alt;
-  font-size: 3.6rem;
-  font-weight: 300;
+  color: $gray-darker;
+  font-size: $font-size-h1;
+  font-weight: $chr-font-weight-semibold;
   margin: 25px 0;
 }
 
 h4 {
   color: $gray-darker;
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: $font-size-h4;
+  font-weight: $chr-font-weight-regular;
 }
 
 h5 {
-  color: $gray-darker;
-  font-size: 1.6rem;
-  font-weight: 400;
+  color: $gray-dark;
+  font-size: $font-size-h5;
+  font-weight: $chr-font-weight-regular;
 }
 
 h2.pane-title {
-  color: $gray-darker;
-  font-size: 1.8rem;
-  font-weight: 400;
+  color: $gray-dark;
+  font-size: $font-size-large;
+  font-weight: $chr-font-weight-semibold;
 }
 
 .container.collapse {
@@ -396,8 +403,8 @@ h2.pane-title {
   @include fa('\f0d7');
 
   border: 1px solid $input-border;
-  color: $gray;
-  font-size: 1.3rem;
+  color: $gray-dark;
+  font-size: $font-size-base;
   line-height: 1.5;
   margin: 0;
   padding: 7px 10px;
@@ -442,22 +449,22 @@ h2.pane-title {
 }
 
 .alert {
-  color: $light;
+  color: $chr-white;
   margin-bottom: 20px;
   padding: 20px;
   position: relative;
 
   button {
-    color: $gray-dark !important;
+    color: $gray-darker !important;
     margin-right: 10px;
   }
 
   .close {
     background: none;
     border: 0;
-    color: $light !important;
-    font-size: 2.2rem;
-    font-weight: bold;
+    color: $chr-white !important;
+    font-size: $font-size-large;
+    font-weight: $chr-font-weight-bold;
     line-height: 1;
     padding: 0;
     position: absolute;
@@ -526,10 +533,10 @@ h2.pane-title {
   }
 
   .fieldset-legend {
-    font-size: 1.6rem;
+    font-size: $font-size-base;
 
     a {
-      color: $gray-darker;
+      color: $chr-gray-darkest;
       margin-left: 10px;
     }
   }
@@ -540,10 +547,10 @@ h2.pane-title {
 
   .form-item {
     label:not(.element-invisible) {
-      color: $gray-darker;
+      color: $chr-gray-darkest;
       display: block;
       float: left;
-      font-size: 1.3rem;
+      font-size: $font-size-base;
       padding: 7px 0;
       width: 35%;
 
@@ -600,23 +607,23 @@ h2.pane-title {
 // Splitters
 
 .vertical-splitter {
-  border-left: 1px solid $gray-light;
+  border-left: 1px solid $chr-gray-pale;
   height: 100%;
   position: absolute;
   width: 0;
 }
 
 .splitter-top {
-  border-top: 1px solid $gray-light;
+  border-top: 1px solid $chr-gray-pale;
   margin-top: 20px;
   padding-top: 20px;
 }
 
 .context-menu-toggle {
   box-shadow: none !important;
-  color: $gray;
+  color: $gray-dark;
   display: inline-block;
-  font-size: 14px;
+  font-size: $font-size-base;
   padding: 0 10px;
   text-align: center;
 
@@ -674,8 +681,8 @@ form {
 
 .form-text {
   border: 1px solid $input-border;
-  color: $gray;
-  font-size: 1.3rem;
+  color: $gray-dark;
+  font-size: $font-size-base;
   line-height: 1.5;
   margin: 0;
   padding: 7px 10px;
@@ -695,7 +702,7 @@ form {
 // Main / Dashboard
 
 .main {
-  background: $gray-light;
+  background: $chr-gray-pale;
 }
 
 // Panels / Dashboard Carousel
@@ -727,7 +734,7 @@ form {
   }
 
   .jcarousel-item {
-    background: $crm-gray-light-alt;
+    background: $chr-gray-lightest;
     margin: 0 10px;
     padding: 20px;
     width: 193px;
@@ -737,8 +744,8 @@ form {
   .jcarousel-next {
     @include fa('\f104', 24);
 
-    background: $light;
-    color: $gray;
+    background: $chr-white;
+    color: $gray-dark;
     display: block;
     height: 100%;
     left: 10px;
@@ -771,7 +778,7 @@ form {
 }
 
 .pane-title {
-  border-bottom: 1px solid $gray-light;
+  border-bottom: 1px solid $chr-gray-pale;
   line-height: 1;
   margin: 0 -20px 20px;
   padding: 0 20px 20px;
@@ -816,13 +823,13 @@ form {
   }
 
   .view-header {
-    font-size: 1.3rem;
+    font-size: $font-size-base;
     position: absolute;
     right: 20px;
-    top: 7px;
+    top: 20px;
 
     a {
-      color: $gray;
+      color: $gray-dark;
     }
   }
 
@@ -843,11 +850,11 @@ form {
 
   .view-hr-documents {
     .views-field {
-      font-size: 1.3rem;
+      font-size: $font-size-base;
 
       &:first-child {
-        color: $gray-darker;
-        font-size: 1.6rem;
+        color: $chr-gray-darkest;
+        font-size: $font-size-base;
       }
     }
   }
@@ -882,8 +889,8 @@ form {
       border-top: 0;
 
       tr {
-        color: $gray-darker;
-        font-weight: 700;
+        color: $chr-gray-darkest;
+        font-weight: $chr-font-weight-bold;
       }
     }
   }
@@ -937,7 +944,7 @@ form {
 
   @include fa('\f073');
   background: none;
-  color: $gray;
+  color: $gray-dark;
   padding-right: 0;
 
   &::before {
@@ -946,7 +953,7 @@ form {
 
   &:hover {
     background: none;
-    color: $gray;
+    color: $gray-dark;
   }
 }
 
@@ -1005,7 +1012,7 @@ form {
   .help-block {
     clear: left;
     float: left;
-    font-size: 12px;
+    font-size: $font-size-base;
   }
 
   .form-type-date-popup {
@@ -1051,18 +1058,18 @@ form {
 // Footer
 
 .footer {
-  background: $gray-light;
-  color: $gray;
+  background: $chr-gray-pale;
+  color: $gray-dark;
   padding: 50px 0;
 
   .footer-logo {
-    font-size: 2.2rem;
+    font-size: $font-size-h1;
     margin-bottom: 20px;
   }
 
   .copyright {
-    font-size: 1.3rem;
-    font-weight: 300;
+    font-size: $font-size-base;
+    font-weight: $chr-font-weight-light;
   }
 }
 
@@ -1076,7 +1083,7 @@ form {
 .content {
   > .view-hr-vacancies {
 
-    @extend .view-hr-documents;
+    @extend .view-hr-documents; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
 
     .view-filters {
       .views-widget {
@@ -1089,7 +1096,7 @@ form {
     }
 
     .views-submit-button {
-      border-top: 1px solid $gray-light;
+      border-top: 1px solid $chr-gray-pale;
       margin-top: 20px;
 
       .form-submit {
@@ -1098,7 +1105,7 @@ form {
     }
 
     .view-content {
-      font-size: 1.3rem;
+      font-size: $font-size-base;
     }
 
     .views-row {
@@ -1115,9 +1122,9 @@ form {
     }
 
     .views-row-odd {
-      background: $gray-lighter;
-      border-bottom: 1px solid $gray-light;
-      border-top: 1px solid $gray-light;
+      background: $chr-white;
+      border-bottom: 1px solid $chr-gray-pale;
+      border-top: 1px solid $chr-gray-pale;
     }
 
     .field-content {
@@ -1148,8 +1155,8 @@ form {
     }
 
     .fieldset-title {
-      color: $gray;
-      font-size: 1.3rem;
+      color: $gray-dark;
+      font-size: $font-size-base;
       margin-left: 5px;
     }
 
@@ -1160,7 +1167,7 @@ form {
     }
 
     .fieldset-wrapper {
-      background: $crm-gray-light-alt;
+      background: $chr-gray-lightest;
       margin-top: 20px;
       padding: 15px 20px;
 

@@ -1,12 +1,11 @@
 .form-horizontal {
-
   .control-label {
+    font-weight: $chr-font-weight-regular;
     text-align: left;
-    font-weight: normal;
 
     i {
+      font-size: $font-size-base;
       vertical-align: super;
-      font-size: 0.3em;
     }
   }
 }
@@ -19,10 +18,9 @@
 // @TODO remove this style below as soon as Shoreditch theme is applied
 // Required mark (*)
 .required-mark {
-
   &:after {
-    content:"*";
     color: $brand-danger;
+    content:'*';
     margin-left: 5px;
   }
 }

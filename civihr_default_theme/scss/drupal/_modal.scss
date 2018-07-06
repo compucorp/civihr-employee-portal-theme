@@ -5,7 +5,7 @@ body.modal-open {
   overflow: hidden;
 
   > .modal-default,
-  > [class*="modal-civihr-custom"] {
+  > [class*='modal-civihr-custom'] {
 
     bottom: 0 !important;
     left: 0 !important;
@@ -66,7 +66,7 @@ body.modal-open {
 .modal-civihr-custom__section {
   @include clearfix;
 
-  border-bottom: 1px solid $gray-light;
+  border-bottom: 1px solid $chr-gray-pale;
   padding: #{$crm-custom-modal-body-padding * 2}px #{$crm-custom-modal-body-padding}px;
 
   &:last-of-type {
@@ -80,17 +80,17 @@ body.modal-open {
 }
 
 .modal-civihr-custom__section--no-padding {
- @extend .modal-civihr-custom__section;
+  @extend .modal-civihr-custom__section;
 
- border: 0;
- margin: 0 #{-$crm-custom-modal-body-padding}px;
- padding: 0;
+  border: 0;
+  margin: 0 #{-$crm-custom-modal-body-padding}px;
+  padding: 0;
 }
 
 .modal-civihr-custom__section--strip {
   @extend .modal-civihr-custom__section;
 
-  background: $crm-gray-light-alt;
+  background: $gray-darker;
   margin: 0 #{-$crm-custom-modal-body-padding}px;
   padding: #{$crm-custom-modal-body-padding * 2}px;
 }
@@ -105,19 +105,19 @@ body.modal-open {
   padding: 0;
 
   .hr-documents-body-block + .views-field-nothing {
-    border-top: 1px solid $gray-light;
+    border-top: 1px solid $chr-gray-pale;
     margin-top: 20px;
     padding-top: 10px;
   }
 
   .resource-uploaded-date {
-    color: $light-pale;
+    color: $chr-gray-pale;
   }
 
   .views-label-body {
-    color: $gray-darker;
-    margin-bottom: 20px;
+    color: $chr-gray-darkest;
     display: inline-block;
+    margin-bottom: 20px;
   }
 
   p:first-child {

@@ -40,7 +40,7 @@ form {
   }
   .description {
     margin: 2px 0;
-    color: $gray;
+    color: $gray-dark;
   }
 }
 
@@ -80,7 +80,7 @@ html.js {
   margin-top: 1.8em;
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   form {
     .btn {
       width: 100%;
@@ -93,8 +93,8 @@ html.js {
     select {
       width: 100%;
     }
-    .confirm-parent, 
-    .password-parent, 
+    .confirm-parent,
+    .password-parent,
     .password-suggestions {
       width: auto !important;
     }

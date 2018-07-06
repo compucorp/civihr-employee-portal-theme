@@ -1,12 +1,5 @@
 // This is the temporary styles to make the new Document modal look similar in SSP
 
-// Variables
-$light-black-blue: #586277;
-$light-blue: #41AFCB;
-$light-gray: #F4F7F8;
-$lighter-grey: #ECEDEE;
-$white: #FFFFFF;
-
 // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
 // so we reset that to ensure it behaves more like a standard block element.
 // See https://github.com/twbs/bootstrap/issues/12359.
@@ -30,10 +23,10 @@ fieldset {
   }
 
   // Required Imports
-  @import "bootstrap/modals";
-  @import "bootstrap/forms";
-  @import "bootstrap/input-groups";
-  @import "bootstrap/list-group";
+  @import 'bootstrap/modals';
+  @import 'bootstrap/forms';
+  @import 'bootstrap/input-groups';
+  @import 'bootstrap/list-group';
 
   // Overriding custom height for modal-content
   .modal-content {
@@ -65,14 +58,14 @@ fieldset {
     }
 
     .drop-zone {
-      border: 1px dashed #727E8A;
+      border: 1px dashed $gray-light;
       padding: 30px;
       text-align: center;
     }
 
     .no-file {
-      color: $brand-danger;
       border-color: $brand-danger !important;
+      color: $brand-danger;
     }
 
     .no-left-margin {
@@ -87,7 +80,7 @@ fieldset {
       }
 
       tbody {
-        border-top: 1px solid $lighter-grey;
+        border-top: 1px solid $chr-gray-pale;
 
         tr td:first-child {
           overflow: hidden;
@@ -99,15 +92,15 @@ fieldset {
 
     // help icon
     a.helpicon {
+      background-color: $brand-primary;
       border-radius: 50%;
-      background-color: #41AFCB;
-      padding: 1px 6px 1px 6px;
+      font-size: $font-size-base;
+      font-weight: $chr-font-weight-regular;
+      padding: 1px 6px;
       text-decoration: none;
-      font-size: 12px;
-      font-weight: 400;
 
       &:before {
-        color: #FFF;
+        color: $chr-white;
         content: '?';
       }
     }
@@ -120,8 +113,8 @@ fieldset {
 
       a,
       li {
-        background-color: $light-gray;
-        color:  $light-black-blue;
+        background-color: $chr-gray-lightest;
+        color: $gray-dark;
       }
 
       li a {
@@ -129,22 +122,22 @@ fieldset {
 
         &:focus,
         &:hover {
-          background-color: $light-gray;
-          border-color: $light-gray;
-          color: $light-black-blue;
+          background-color: $chr-gray-lightest;
+          border-color: $chr-gray-lightest;
+          color: $gray-dark;
           margin-right: 0;
         }
       }
 
       li.active a {
-        background-color: $white;
+        background-color: $chr-white;
         border-bottom-color: transparent;
-        color: $light-blue;
+        color: $brand-primary;
 
         &:focus,
         &:hover {
-          background-color: $white;
-          color: $light-blue;
+          background-color: $chr-white;
+          color: $brand-primary;
           cursor: default;
         }
       }
@@ -160,13 +153,13 @@ fieldset {
         }
 
         tbody {
-          background-color: #f4f7f8;
+          background-color: $chr-gray-lightest;
 
           .btn {
-            background-color: #f4f7f8;
+            background-color: $chr-gray-lightest;
             border-radius: 20px;
-            padding: 7px;
             line-height: 1;
+            padding: 7px;
             width: auto !important;
 
             &:active {
@@ -174,16 +167,16 @@ fieldset {
             }
 
             &:focus {
+              background-color: $chr-gray-lightest;
               outline: 0 none;
-              background-color: #f4f7f8;
             }
 
             &.active {
               @include box-shadow(none);
-              background-color: #41afcb;
+              background-color: $brand-primary;
 
               span {
-                color: #fff;
+                color: $chr-white;
               }
             }
           }
@@ -191,25 +184,25 @@ fieldset {
 
         td,
         th {
+          border-bottom: 0 solid $chr-gray-pale;
           padding: 7px;
-          border-bottom: 0px solid #ecedee;
         }
 
         thead {
           small {
-            color: #525966;
-            font-size: 11px;
+            color: $gray-dark;
+            font-size: $font-size-base;
           }
         }
 
         .btn {
           border-width: 0;
-          font-size: 12px;
-          font-weight: normal;
+          font-size: $font-size-base;
+          font-weight: $chr-font-weight-regular;
         }
 
         .text-muted {
-          color: #CCCCCC;
+          color: $gray-lighter;
         }
 
         > thead > tr > th {
@@ -226,15 +219,15 @@ fieldset {
     .civihr-ui-select {
       .select2-choice,
       .select2-arrow {
-        background-color: #FFF;
+        background-color: $chr-white;
         background-image: none;
       }
 
       .select2-results {
-        color: #727E8A;
+        color: $gray-light;
 
         .select2-highlighted {
-          background: #E8E8E8;
+          background: $chr-gray-pale;
           color: inherit;
         }
       }
@@ -269,19 +262,23 @@ fieldset {
   form {
     .btn {
       border: 1px solid transparent;
-      border-color:#727E8A;
+      border-color: $gray-light;
       border-radius: 2px;
       float: none;
-      font-size: 13px;
+      font-size: $font-size-base;
       padding: 6px 12px;
       text-transform: uppercase;
     }
 
     .btn-danger,
     .btn-danger:focus {
+      background-color: $chr-white;
       border: 0;
-      background-color: $white;
-      color: #DA6B86;
+      color: $brand-danger;
+    }
+
+    .input-group-addon {
+      background-color: $chr-white;
     }
   }
 

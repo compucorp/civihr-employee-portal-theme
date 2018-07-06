@@ -10,8 +10,8 @@
   }
 
   #messages {
-    padding: 0;
     margin-bottom: 20px;
+    padding: 0;
 
     .alert {
       padding: {
@@ -35,7 +35,7 @@
 
   .pane-user-login-forgot-password {
     > .row {
-      background-color: #f0f1f4;
+      background-color: $chr-gray-lightest;
     }
 
     .alert {

@@ -1,5 +1,7 @@
+/* stylelint-disable selector-max-compound-selectors, selector-no-qualifying-type */
+
 .table {
-  font-size: 1.3rem;
+  font-size: $font-size-base;
 
   > thead,
   > tbody,
@@ -7,16 +9,16 @@
     > tr {
       > th,
       > td {
+        border-bottom: 1px solid $chr-gray-pale;
         border-top: 0;
-        border-bottom: 1px solid $gray-light;
       }
     }
   }
 
   thead {
-    > tr{
+    > tr {
       > th {
-        color: $gray-darker;
+        color: $chr-gray-darkest;
         padding: 8px 20px;
       }
     }
@@ -40,10 +42,7 @@ tr {
 }
 
 // Necessary to remove the bottom margin if a table is inside a panel
-.panel {
-
-  .table,
-  .table-responsive {
-    margin-bottom: 0;
-  }
+.table,
+.table-responsive {
+  margin-bottom: 0;
 }

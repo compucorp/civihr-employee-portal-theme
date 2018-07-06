@@ -1,7 +1,7 @@
 .panel {
   @include box-shadow($crm-box-shadow-global);
   background: transparent;
-  border: none;
+  border: 0;
 
   &--sliding-body {
     border-bottom: 0;
@@ -10,8 +10,8 @@
 }
 
 .panel-body-wrap {
-  transition: max-height .4s linear;
   max-height: 162px;
+  transition: max-height 0.4s linear;
 
   &--collapse {
     max-height: 0;
@@ -20,7 +20,7 @@
 
 .panel-body {
   @include grid-condensed($panel-body-padding+1px);
-  background: $light;
+  background: $chr-white;
 
   > .row:last-child .form-actions {
     margin-bottom: 0;
@@ -33,9 +33,9 @@
 }
 
 .panel-title {
-  color: $gray-darker;
-  font-size: $crm-font-size-large;
-  font-weight: 400;
+  color: $chr-gray-darkest;
+  font-size: $font-size-h1;
+  font-weight: $chr-font-weight-regular;
 }
 
 // Subheading and subtitle
@@ -44,10 +44,9 @@
 }
 
 .panel-default {
-
   > .panel-subheading {
     background: $panel-default-heading-bg;
-    border-bottom: 1px solid $crm-grizzly;
+    border-bottom: 1px solid $gray-darker;
     color: $panel-default-text;
   }
 }
@@ -56,21 +55,19 @@
 // (only for .panel-default). If the panel itself is collapsed, the title loses
 // the bottom border
 .panel-heading-plain {
-
   .panel-default > & {
-    background: $light;
+    background: $chr-white;
     border: 0;
 
     > .panel-title {
       $padding-y: nth($panel-heading-padding, 1);
 
-      border-bottom: 1px solid $gray-light;
+      border-bottom: 1px solid $chr-gray-pale;
       padding-bottom: $padding-y;
     }
   }
 
   .panel-default.is-collapsed > & {
-
     > .panel-title {
       border-bottom: 0;
       padding-bottom: 0;

@@ -1,10 +1,10 @@
 .chr_header {
   @include clearfix;
 
-  background: $gray-dark;
+  background: $gray-darker;
   box-shadow: 0 2px 3px 0 rgba(black, 0.15);
-  color: $light-pale;
-  font-size: 1.3rem;
+  color: $chr-gray-pale;
+  font-size: $font-size-base;
   height: $crm-header-height;
   line-height: $crm-header-height;
 
@@ -27,9 +27,9 @@
     min-height: 100%;
     position: absolute;
     top: $crm-header-height;
-    width: 100%;
 
     transition: left 0.2s ease-out;
+    width: 100%;
 
     &.is-open {
       left: 0;
@@ -80,7 +80,7 @@
   width: 60px;
 
   &:hover {
-    color: rgba($light, 0.8);
+    color: rgba($chr-white, 0.8);
   }
 
   > .chr_header__logo {
@@ -89,7 +89,7 @@
     text-align: center;
 
     &:hover {
-      color: rgba($light, 0.8);
+      color: rgba($chr-white, 0.8);
     }
   }
 
@@ -105,14 +105,14 @@
 }
 
 .chr_header__logo {
-  color: $light;
-  font-size: 1.6rem;
+  color: $chr-white;
   display: inline-block;
+  font-size: $chr-font-size-medium;
 }
 
 .chr_header__nav {
-  background: #ffffff;
-  font-size: 1.385em;
+  background: $chr-white;
+  font-size: $chr-font-size-medium;
   z-index: 99;
 
   @media(min-width: $screen-md-max) {
@@ -123,10 +123,9 @@
 }
 
 .chr_header__nav__menu {
-
   a {
-    border-bottom: 1px solid $crm-grizzly;
-    color: $gray-darker;
+    border-bottom: 1px solid $gray-darker;
+    color: $chr-gray-darkest;
     display: block;
     margin: 0 25px;
     padding: 0 20px;
@@ -144,9 +143,9 @@
     // (see: https://www.dannyenglander.com/blog/drupal-theming-adding-font-awesome-icons-menu-items)
     &.fa {
       font-family: inherit;
-      line-height: inherit;
       -webkit-font-smoothing: inherit;
       -moz-osx-font-smoothing: inherit;
+      line-height: inherit;
 
       &:before {
         @include fa-icon();
@@ -160,9 +159,9 @@
 
     &.active {
       &:after {
-        content: '';
         border: 2px solid $brand-primary;
         bottom: 0;
+        content: '';
         left: 0;
         margin: auto;
         position: absolute;
@@ -189,8 +188,8 @@
 
       &:hover,
       &:focus {
-        background: $gray;
-        color: $light !important;
+        background: $gray-dark;
+        color: $chr-white !important;
       }
 
       &.active {
@@ -205,8 +204,8 @@
       text-transform: uppercase;
 
       > a {
-        border: 1px solid $light;
-        color: $light;
+        border: 1px solid $chr-white;
+        color: $chr-white;
       }
     }
   }
@@ -219,7 +218,7 @@
 }
 
 .chr_header__nav__toggle {
-  color: $light;
+  color: $chr-white;
   cursor: pointer;
   display: table-cell;
   height: 100%;
@@ -229,8 +228,8 @@
 
 
 .chr_header__settings-menu {
-  float: right;
   display: inline-block;
+  float: right;
   position: relative;
   text-align: center;
   width: 50px;
@@ -244,7 +243,7 @@
   }
 
   > .fa-cog {
-    font-size: 16px;
+    font-size: $font-size-large;
   }
 
   .chr_header__sub-menu {
@@ -253,7 +252,7 @@
 }
 
 .chr_header__sub-menu {
-  background: $crm-gray-darker-alt;
+  background: $gray-darker;
   display: none;
   position: absolute;
   z-index: 99;
@@ -263,15 +262,15 @@
   }
 
   a {
-    color: $light-pale;
-    font-size: 1.3rem;
+    color: $chr-gray-pale;
     display: block;
+    font-size: $font-size-base;
     padding: 0 30px 0 20px;
     white-space: nowrap;
 
     &:hover {
-      background: $gray;
-      color: $light;
+      background: $gray-dark;
+      color: $chr-white;
     }
 
     > i {
@@ -281,9 +280,8 @@
 }
 
 .chr_header__sub-menu__separator {
-
   &:after {
-    border-top: 1px solid $gray-darker;
+    border-top: 1px solid $chr-gray-darkest;
     content: '';
     display: block;
     height: 0;

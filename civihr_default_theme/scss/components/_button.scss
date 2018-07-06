@@ -1,5 +1,5 @@
 .btn {
-  @include button-size(0.7rem, 1.1rem, 1.3rem, $line-height-base, $border-radius-base);
+  @include button-size(0.7rem, 1.1rem, $font-size-base, $line-height-base, $border-radius-base);
 
   &:active,
   &.active {
@@ -17,11 +17,11 @@
 }
 
 .btn-custom {
-  @include button-variant($light, $btn-primary-bg, transparent);
+  @include button-variant($chr-white, $btn-primary-bg, transparent);
 }
 
 .btn-secondary {
-  @include button-variant($light, $brand-secondary, $btn-secondary-border);
+  @include button-variant($chr-white, $brand-secondary, $btn-secondary-border);
 }
 
 .btn-lg {
@@ -34,4 +34,15 @@
 
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+.btn-gradient {
+  background: $chr-primary-gradient;
+  border: 1px solid transparent;
+  color: $chr-white;
+
+  &:hover {
+    background: $chr-primary-gradient-hover;
+    color: $chr-white;
+  }
 }

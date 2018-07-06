@@ -81,6 +81,18 @@
       }
     }
   }
+
+  fieldset {
+    border-bottom: 1px solid $chr-gray-pale;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+}
+
+.view-hr-vacancies {
+  legend {
+    border-bottom: 0;
+  }
 }
 
 /**
@@ -89,11 +101,7 @@
 .view-full-hr-documents {
   .views-row {
     &:not(:last-child) {
-      border-bottom: 1px solid $gray-light;
+      border-bottom: 1px solid $chr-gray-pale;
     }
-  }
-
-  .views-row-odd {
-    background: $gray-lighter;
   }
 }

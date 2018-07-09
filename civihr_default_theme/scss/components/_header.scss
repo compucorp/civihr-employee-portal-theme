@@ -192,13 +192,15 @@
     > li {
       border-bottom: 1px solid $crm-grizzly;
 
-      &.active { /* stylelint-disable-line selector-no-qualifying-type */
+      /* stylelint-disable selector-no-qualifying-type */
+      &.active {
         background-color: $gray-light;
-
-        &::after { /* stylelint-disable-line max-nesting-depth */
-          content: none;
-        }
       }
+
+      &.active::after {
+        content: none;
+      }
+      /* stylelint-enable selector-no-qualifying-type */
     }
 
     a {
@@ -224,7 +226,6 @@
       margin: 25px auto;
       padding: 0;
       text-align: center;
-      width: 300px;
 
       > a {
         color: $gray-darker;

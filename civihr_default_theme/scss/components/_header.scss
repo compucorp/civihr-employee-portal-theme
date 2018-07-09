@@ -221,13 +221,20 @@
     .menu-link-hr-admin {
       border: 1px solid $gray-darker;
       line-height: 50px;
-      margin: 25px;
+      margin: 25px auto;
       padding: 0;
       text-align: center;
+      width: 300px;
 
       > a {
         color: $gray-darker;
       }
+    }
+  }
+
+  @media(max-width: $screen-sm-max) {
+    .menu-link-hr-admin {
+      display: none;
     }
   }
 

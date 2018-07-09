@@ -60,12 +60,7 @@
 
   @media (max-width: $screen-sm-max) {
     .menu-link-home {
-      background-color: $gray-light;
       display: block;
-    }
-
-    .menu-link-home > a {
-      border-bottom: 0 !important;
     }
   }
 }
@@ -194,8 +189,19 @@
   @media(max-width: $screen-md-max) {
     flex-direction: column;
 
-    a {
+    > li {
       border-bottom: 1px solid $crm-grizzly;
+
+      &.active { /* stylelint-disable-line selector-no-qualifying-type */
+        background-color: $gray-light;
+
+        &::after { /* stylelint-disable-line max-nesting-depth */
+          content: none;
+        }
+      }
+    }
+
+    a {
       color: $gray-darker;
       display: block;
       margin: 0 25px;

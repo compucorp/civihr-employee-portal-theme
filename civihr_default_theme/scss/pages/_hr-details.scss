@@ -87,10 +87,6 @@
     min-height: 80px;
     padding-left: 0;
     position: relative;
-
-    @media (min-width: 320px) {
-      padding-left: 100px;
-    }
   }
 
   .views-field-image-URL {
@@ -99,10 +95,6 @@
     position: absolute;
     top: 0;
     width: 80px;
-
-    @media (min-width: 320px) {
-      display: block;
-    }
   }
 
   .chr_panel__footer {
@@ -158,15 +150,20 @@
       float: left;
       width: 50%;
     }
-
-    &.not-applying,
-    &.No {
-      display: none;
-    }
   }
 
   .chr_actions-wrapper a {
     margin: 10px 5px;
+  }
+
+  @media (min-width: $screen-sm-max / 2) {
+    .views-row {
+      padding-left: 100px;
+    }
+
+    .views-field-image-URL {
+      display: block;
+    }
   }
 }
 
@@ -263,3 +260,4 @@
     }
   }
 }
+

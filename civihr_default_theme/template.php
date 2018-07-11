@@ -969,3 +969,29 @@ function civihr_default_theme_menu_local_tasks(&$variable) {
 
   return radix_menu_local_tasks($variables);
 }
+
+/**
+ * Implements theme_preprocess_views_view()
+ */
+function civihr_default_theme_preprocess_views_view(&$vars) {
+
+  if (isset($vars['view']->name)) {
+
+    // Markup generated from views was not integrating well with panels and the
+    // current styling in My Details page.
+    // For views in $views_with_generic_display_output array
+    // is being provided a different template "_views-view--generic-display-output.tpl.php"
+    // to get rid of specifc views HTML structure and classes to take advantage
+    // of existing styles imitating panels blocks structure.
+
+    $views_with_generic_display_output = [
+      'MyDetails_MyAddress',
+      'MyDetails_PayrollInformation',
+      'MyDetails_Personal',
+      'Emergency Contacts',
+    ];
+
+    $vars['view_uses_generic_display_output'] =
+      in_array($vars['view']->get_human_name(), $views_with_generic_display_output);
+  }
+}

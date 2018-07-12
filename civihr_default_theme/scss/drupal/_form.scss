@@ -44,22 +44,38 @@
 }
 
 #views-exposed-form-users-list-page {
-  .views-exposed-widget:not(:last-child) {
+  .views-exposed-widget {
     float: left;
     width: 50%;
+  }
 
-    &:nth-child(odd) {
-      padding-right: 20px;
-    }
+  .views-submit-button {
+    float: none;
+    width: auto;
+  }
+
+  .views-widget-filter-name,
+  .views-widget-filter-rid,
+  .views-widget-filter-access {
+    padding-right: 20px;
+  }
+
+  .views-widget-filter-access,
+  .views-widget-filter-access_1 {
+    width: 25%;
   }
 
   @media(max-width: $screen-sm-min) {
-    .views-exposed-widget:not(:last-child) {
+    .views-exposed-widget {
       width: 100%;
 
       &:nth-child(odd) {
         padding-right: 0;
       }
+    }
+
+    .views-widget-filter-access {
+      padding-right: 0;
     }
   }
 }

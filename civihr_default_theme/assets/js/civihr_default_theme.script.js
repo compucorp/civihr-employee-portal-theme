@@ -1,3 +1,5 @@
+/* globals jQuery */
+
 /**
  * @file
  * Custom scripts for theme.
@@ -326,9 +328,9 @@
     }
 
     var calendarIcon = '<span class="input-group-addon pointer"><i class="fa fa-calendar"></i></span>';
-    $('#edit-access-min').datepicker();
-    $('#edit-access-min').after(calendarIcon);
-    $('#edit-access-max').datepicker();
-    $('#edit-access-max').after(calendarIcon);
+    $('#edit-access-from').datepicker();
+    $('#edit-access-from').after(calendarIcon);
+    $('#edit-access-to').datepicker();
+    $('#edit-access-to').after(calendarIcon);
   }
 })(jQuery);

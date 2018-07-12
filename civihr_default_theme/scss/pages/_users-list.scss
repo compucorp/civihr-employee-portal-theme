@@ -1,6 +1,6 @@
 .page-users-list {
-  #edit-access-min,
-  #edit-access-max {
+  #edit-access-from,
+  #edit-access-to {
     +.input-group-addon {
       background-color: $crm_gray-light-alt;
       border: 1px solid $crm-color-neutral;

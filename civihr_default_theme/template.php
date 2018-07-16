@@ -656,7 +656,7 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
     // Recursively apply bootstrap to fieldset fields
     if (CRM_Utils_Array::value('#type', $value) == 'fieldset') {
       $fields_structure[$key] = array_replace_recursive($fields_structure[$key], civihr_default_theme_form_apply_bootstrap($value, false));
-      $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset--transparent';
+      $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset civihr_form__fieldset--transparent';
       continue;
     }
 

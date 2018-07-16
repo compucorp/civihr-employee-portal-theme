@@ -3,7 +3,7 @@
 
 // Styles for astrisk (required indicator)
 .required-field-indicator {
-  &:after {
+  &::after {
     color: $brand-danger;
     content: '*';
     font-size: 13px;
@@ -44,23 +44,8 @@
 }
 
 #views-exposed-form-users-list-page {
-  .views-exposed-widget:not(:last-child) {
-    float: left;
-    width: 50%;
-
-    &:nth-child(odd) {
-      padding-right: 20px;
-    }
-  }
-
-  @media(max-width: $screen-sm-min) {
-    .views-exposed-widget:not(:last-child) {
-      width: 100%;
-
-      &:nth-child(odd) {
-        padding-right: 0;
-      }
-    }
+  #edit-submit-users-list {
+    margin-right: 15px;
   }
 }
 
@@ -84,16 +69,16 @@
     .date-padding {
       float: initial;
       padding: 0;
+    }
 
-      .form-control {
-        margin-right: 0;
-        width: 100%;
-      }
+    .form-control {
+      margin-right: 0;
+      width: 100%;
+    }
 
-      > .form-group.form-item {
-        float: initial;
-        margin: 0;
-      }
+    .form-group.form-item {
+      float: initial;
+      margin: 0;
     }
 
     > .form-group.form-item {
@@ -145,7 +130,7 @@
     .date-padding {
       position: relative;
 
-      &:before {
+      &::before {
         content: '\f073';
         font-family: FontAwesome;
         position: absolute;
@@ -153,10 +138,12 @@
         top: 7px;
       }
 
+      /* stylelint-disable selector-max-compound-selectors */
       label,
       .help-block {
         display: none !important;
       }
+      /* stylelint-enable selector-max-compound-selectors */
     }
 
     .form-control {
@@ -169,6 +156,7 @@
     }
   }
 
+  /* stylelint-disable selector-max-compound-selectors */
   // Custom style for select2
   .select2-container.form-text {
     border: 0;
@@ -197,19 +185,20 @@
       }
     }
   }
+  /* stylelint-enable selector-max-compound-selectors */
 
   // Place the 3 select dropdowns (DD/MM/YYYY) in columns
   //
   // This is mostly a duplicate of .form-group--smaller-gutter
   // given I couldn't change the markup of the datepicker field itself
   .webform-datepicker {
-    @extend .row;
+    @extend .row; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
 
     margin-left: -10px;
     margin-right: -10px;
 
     .form-item {
-      @extend .col-sm-4;
+      @extend .col-sm-4; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
 
       display: block;
       margin-bottom: 10px;
@@ -260,8 +249,6 @@
 
 // [modifier] Transparent <fieldset> (no borders, paddings, bg colors)
 .civihr_form__fieldset--transparent {
-  @extend .civihr_form__fieldset;
-
   border: 0;
   box-shadow: none;
 
@@ -277,7 +264,7 @@
 
   > legend {
     background: none !important;
-    border: none;
+    border: 0;
     padding: 0;
   }
 
@@ -288,7 +275,7 @@
     font-size: 1.6rem;
     padding-left: 0 !important;
 
-    &:before {
+    &::before {
       width: 10px;
     }
 
@@ -303,100 +290,10 @@
   }
 }
 
-
-/* [modifier] <form> being displayed in a modal */
-.civihr_form--modal {
-  @extend .civihr_form;
-
-  .container-inline-date {
-    clear: none;
-    position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-
-    .form-item {
-      margin: 0;
-    }
-  }
-
-  .date-padding {
-    padding: 0;
-    width: 55%;
-  }
-
-  .form-item {
-    label {
-      color: $gray-darker;
-      float: left;
-      padding: 7px 0;
-      width: 90px;
-    }
-
-    .help-block {
-      clear: both;
-      display: block;
-      font-size: 0.9em;
-    }
-  }
-
-  .form-type-select {
-    .customSelect {
-      display: block !important;
-      overflow: auto;
-      width: auto;
-    }
-  }
-
-  .form-type-textarea {
-    .form-textarea-wrapper {
-      overflow: auto;
-    }
-  }
-
-  @media(min-width: $screen-sm-min) {
-    .container-inline-date {
-      float: left;
-      width: 48%;
-
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
-
-      &:last-child {
-        float: right;
-      }
-    }
-
-    .date-padding {
-      width: 46%;
-    }
-  }
-}
-
 /* [modifier] Resets any margin/padding applied by default */
 .civihr_form--reset {
   .form-actions,
   .form-item {
     margin: 0;
-  }
-}
-
-/* SSP Document form */
-#civihr-employee-portal-document-form {
-  #drop-target {
-    background-color: #e8eef0;
-    border: 1px dashed #727e8a;
-    box-shadow: none;
-    color: #525966;
-  }
-
-  .col-index {
-    width: 5%;
-  }
-
-  .col-name {
-    width: 50%;
   }
 }

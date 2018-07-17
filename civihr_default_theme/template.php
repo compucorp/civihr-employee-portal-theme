@@ -656,7 +656,7 @@ function civihr_default_theme_form_apply_bootstrap($fields_structure, $section_w
     // Recursively apply bootstrap to fieldset fields
     if (CRM_Utils_Array::value('#type', $value) == 'fieldset') {
       $fields_structure[$key] = array_replace_recursive($fields_structure[$key], civihr_default_theme_form_apply_bootstrap($value, false));
-      $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset--transparent';
+      $fields_structure[$key]['#attributes']['class'][] = 'civihr_form__fieldset civihr_form__fieldset--transparent';
       continue;
     }
 
@@ -828,8 +828,8 @@ function _get_cog_menu_items() {
 
   return [
     [
-      'permissions' => ["access content overview"],
-      'link' => l(t('Manage HR Resources'), 'admin/content', $options),
+      'permissions' => ["create hr_documents content"],
+      'link' => l(t('Manage HR Resources'), 'manage-hr-resources', $options),
     ],
     [
       'permissions' => ["edit terms in {$resourceTypeVocabularyID}"],
@@ -955,4 +955,43 @@ function _set_maximum_scale_to_viewport_meta_tag(&$head_elements) {
 
   // Set updated rules to the tag
   $viewportTagValue = implode(', ', $rules);
+}
+
+/**
+ * Implements theme_menu_local_tasks().
+ */
+function civihr_default_theme_menu_local_tasks(&$variable) {
+  // Remove primary and secondary tabs from user_profile_form page
+  if (arg(0) === 'user' && is_numeric(arg(1)) && arg(2) === 'edit') {
+    $variables['primary']['#access'] = false;
+    $variables['secondary']['#access'] = false;
+  }
+
+  return radix_menu_local_tasks($variables);
+}
+
+/**
+ * Implements theme_preprocess_views_view()
+ */
+function civihr_default_theme_preprocess_views_view(&$vars) {
+
+  if (isset($vars['view']->name)) {
+
+    // Markup generated from views was not integrating well with panels and the
+    // current styling in My Details page.
+    // For views in $views_with_generic_display_output array
+    // is being provided a different template "_views-view--generic-display-output.tpl.php"
+    // to get rid of specifc views HTML structure and classes to take advantage
+    // of existing styles imitating panels blocks structure.
+
+    $views_with_generic_display_output = [
+      'MyDetails_MyAddress',
+      'MyDetails_PayrollInformation',
+      'MyDetails_Personal',
+      'Emergency Contacts',
+    ];
+
+    $vars['view_uses_generic_display_output'] =
+      in_array($vars['view']->get_human_name(), $views_with_generic_display_output);
+  }
 }

@@ -5,12 +5,12 @@
   position: relative;
 
   &--without-background {
-   background: none;
-   box-shadow: none;
+    background: none;
+    box-shadow: none;
 
-   .chr_search-result__header {
-     border-bottom-color: $crm-grizzly;
-   }
+    .chr_search-result__header {
+      border-bottom-color: $crm-grizzly;
+    }
   }
 
   &__header-subtitle {
@@ -36,7 +36,6 @@
  * `.form-item` element pushing down 20px because of its `margin-bottom` that needs to be balanced.
  */
 form {
-
   .chr_panel__footer {
     margin-top: -20px;
   }
@@ -64,7 +63,7 @@ form {
   padding-bottom: 10px;
   position: relative;
 
-  [class*="chr_action"] {
+  [class*='chr_action'] {
     float: none;
     margin-left: 15px;
     vertical-align: top;
@@ -76,14 +75,13 @@ form {
     display: inline-table; // Fix for Safari
     padding: 0;
 
-    &:before {
+    &::before {
       float: right;
       margin: 4px 0 0 4px;
     }
 
     > select {
-      -webkit-appearance: none;
-      -moz-appearance: none;
+      appearance: none;
       background: none;
       border: 0;
 
@@ -121,7 +119,7 @@ form {
 
     .views-exposed-widgets {
       background: none;
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
       padding: inherit;
     }
   }
@@ -131,7 +129,7 @@ form {
   margin-bottom: 20px;
   padding: 20px 20px 0;
 
-  > [class*="chr_panel__toolbar__"] {
+  > [class*='chr_panel__toolbar__'] {
     display: block;
   }
 
@@ -142,7 +140,6 @@ form {
   }
 
   > .chr_panel__toolbar__filter {
-
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -155,7 +152,7 @@ form {
     right: 20px;
     top: 12px;
 
-    > [class*="chr_panel__toolbar__"] {
+    > [class*='chr_panel__toolbar__'] {
       display: inline-block;
       line-height: $input-height-base;
       position: static;
@@ -173,8 +170,7 @@ form {
 }
 
 .chr_panel__toolbar__actions {
-
-  [class*="chr_action"] {
+  [class*='chr_action'] {
     margin-left: 10px;
   }
 
@@ -183,8 +179,7 @@ form {
   }
 
   .chr_action--icon--calendar {
-
-    &:before {
+    &::before {
       position: relative;
       top: -1px;
     }
@@ -192,7 +187,6 @@ form {
 }
 
 .chr_panel__toolbar__filter {
-
   .btn.input-group-addon {
     background: none;
     border: 0;
@@ -219,7 +213,7 @@ form {
 
   @media(min-width: $screen-sm-min) {
     .form-control {
-      padding: 2px $input-height-base 2px 8px
+      padding: 2px $input-height-base 2px 8px;
     }
   }
 }
@@ -227,7 +221,6 @@ form {
 
 /* [modifier] Panel containing user's details */
 .chr_panel--my-details {
-
   .chr_panel--my-details__data-group {
     margin-bottom: 30px;
 
@@ -244,14 +237,12 @@ form {
 }
 
 .chr_panel--my-details__data-group {
-
   > .chr_panel--my-details__data-group__title {
     margin-bottom: 20px;
   }
 }
 
-.chr_panel--my-details__data-group__content {
-
+.chr_panel--my-details__view__panel {
   .field-content,
   .views-label {
     display: block;
@@ -271,7 +262,6 @@ form {
   }
 
   .views-field-email {
-
     .field-content {
       word-break: break-all;
     }
@@ -296,7 +286,6 @@ form {
 
 /* [modifier] Panel with no padding applied to its content */
 .chr_panel--no-padding {
-
   .chr_panel__footer {
     margin-top: 0;
     padding: $panel-body-padding;

@@ -36,6 +36,7 @@
  * Staff Directory view, HR Resources view
  */
 .view-id-civihr_staff_directory,
+.view-manage-hr-resources,
 .view-full-hr-documents,
 .view-users-list {
   background: none;
@@ -59,26 +60,8 @@
     display: none;
   }
 
-  .views-widget-filter-access {
-    .col-sm-6:nth-child(1) {
-      padding-left: 0;
-      padding-right: 10px;
-    }
-
-    .col-sm-6:nth-child(2) {
-      padding-left: 10px;
-      padding-right: 0;
-    }
-
-    @media(max-width: $screen-sm-min) {
-      .col-sm-6:nth-child(1) {
-        padding-right: 0;
-      }
-
-      .col-sm-6:nth-child(2) {
-        padding-left: 0;
-      }
-    }
+  > .view-filters {
+    padding: 20px 5px;
   }
 }
 

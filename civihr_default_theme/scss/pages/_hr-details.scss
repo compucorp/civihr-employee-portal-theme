@@ -3,8 +3,8 @@
 .page-hr-details {
   .civihr-employee-portal-my-details-block {
     background: $light;
-    padding: 20px;
     margin: 0 15px;
+    padding: 20px;
 
     .view {
       margin: 0;
@@ -19,6 +19,13 @@
   #modal-content {
     .panel-body {
       background: transparent;
+    }
+  }
+
+  .panel-display {
+    .view-empty,
+    .view-empty-message {
+      text-align: center;
     }
   }
 }
@@ -62,6 +69,198 @@
       margin-bottom: 30px;
       margin-left: 0;
       margin-top: 0;
+    }
+  }
+}
+
+.view-mydetails-personal {
+  .chr_panel--my-details__personal__contact_id span {
+    @include views-label;
+  }
+
+  .pane-block {
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 0;
+  }
+
+  .views-row {
+    min-height: 80px;
+    padding-left: 0;
+    position: relative;
+  }
+
+  .views-field-image-URL {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 80px;
+  }
+
+  .chr_panel__footer {
+    border-top: 0;
+    margin-top: 0;
+  }
+
+  .views-field-nothing {
+    .field-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .chr_panel--my-details__personal__contact_id,
+    .chr_panel--my-details__personal__gender,
+    .chr_panel--my-details__personal__marital_status {
+      margin-right: 10px;
+    }
+  }
+
+  .views-field-ni-ssn-70 .field-content {
+    width: 100%;
+  }
+
+  .chr_panel--my-details__personal__application_status--in-progress {
+    display: flex;
+
+    > * {
+      width: 50%;
+    }
+  }
+
+  .views-field.views-field-display-name {
+    color: $crm-gray-darker-alt;
+    font-size: $crm-font-size-large;
+    margin-bottom: 5px;
+
+    .views-label {
+      display: none;
+    }
+
+    > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+
+  .chr_panel--my-details__personal__application_status {
+    > * {
+      display: inline-block;
+      float: left;
+      width: 50%;
+    }
+  }
+
+  .chr_actions-wrapper a {
+    margin: 10px 5px;
+  }
+
+  @media (min-width: $screen-sm-max / 2) {
+    .views-row {
+      padding-left: 100px;
+    }
+
+    .views-field-image-URL {
+      display: block;
+    }
+  }
+}
+
+
+.view-mydetails-contactdetails {
+  h4 {
+    margin-bottom: 25px;
+  }
+
+  .views-field-nick-name {
+    overflow: hidden;
+  }
+
+  .views-row {
+    margin-bottom: 15px;
+  }
+
+  .view {
+    clear: both;
+
+    .views-row {
+      display: flex;
+    }
+  }
+
+  .chr_panel__footer {
+    border-top: 0;
+    margin-top: 0;
+  }
+
+  .views-field-phone-ext {
+    order: 10;
+
+    &::before {
+      content: 'ext. ';
+      margin-left: 5px;
+    }
+  }
+}
+
+.view-mydetails-emails {
+  .views-field-email {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50%;
+  }
+}
+
+.view-mydetails-emails,
+.view-mydetails-myphones {
+  .views-field-location-type {
+    width: 50%;
+
+    .field-content {
+      @include views-label;
+    }
+  }
+}
+
+.view-emergency-contacts {
+  .views-label {
+    @include views-label;
+  }
+
+  .field-content {
+    p {
+      margin: 0;
+    }
+  }
+
+  .row {
+    margin-bottom: 15px;
+  }
+
+  .views-row {
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 0;
+    position: relative;
+
+    &.views-row-last {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .views-field-emergency-contact-deletion {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+  }
+
+  .col-md-6:first-child {
+    .views-field {
+      margin-bottom: 15px;
     }
   }
 }

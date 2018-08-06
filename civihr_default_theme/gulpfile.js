@@ -19,8 +19,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var scssLint = require('gulp-scss-lint');
 var jshint = require('gulp-jshint');
 
+gulp.task('css:sync', civicrmScssRoot.update);
+
 // CSS.
-gulp.task('css', ['css:sync'], function() {
+gulp.task('css', gulp.series('css:sync', function buildCSS () {
   return gulp.src(config.css.src)
     .pipe(glob())
     .pipe(plumber({
@@ -42,11 +44,7 @@ gulp.task('css', ['css:sync'], function() {
     .pipe(autoprefix('last 2 versions', '> 1%', 'ie 9', 'ie 10'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.css.dest))
-});
-
-gulp.task('css:sync', function(){
-  civicrmScssRoot.updateSync();
-});
+}));
 
 // Compress images.
 gulp.task('images', function () {
@@ -60,13 +58,13 @@ gulp.task('images', function () {
 });
 
 // Fonts.
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
   return gulp.src(config.fonts.src)
     .pipe(gulp.dest(config.fonts.dest));
 });
 
 // Watch task.
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(config.css.src, ['css']);
   gulp.watch(config.images.src, ['images']);
 });
@@ -78,7 +76,7 @@ gulp.task('drush', shell.task([
 ]));
 
 // SCSS Linting.
-gulp.task('scss-lint', function() {
+gulp.task('scss-lint', function () {
   return gulp.src([config.css.src])
     .pipe(scssLint())
     .pipe(scssLint.format())
@@ -86,11 +84,11 @@ gulp.task('scss-lint', function() {
 });
 
 // JS Linting.
-gulp.task('js-lint', function() {
+gulp.task('js-lint', function () {
   return gulp.src(config.js.src)
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
 
 // Default Task
-gulp.task('default', ['css', 'fonts']);
+gulp.task('default', gulp.series('css', 'fonts'));

@@ -18,12 +18,12 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sass-glob": "^1.0.9",
-    "gulp-scss-lint": "^0.6.1",
+    "gulp-scss-lint": "^0.7.0",
     "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^1.12.1",
     "gulp-uglify": "^3.0.0",
     "imagemin-pngcrush": "^5.1.0",
-    "jshint": "^2.9.5",
-    "node-sass": "^4.9.0"
+    "jshint": "^2.9.6",
+    "node-sass": "^4.9.2"
   }
 }

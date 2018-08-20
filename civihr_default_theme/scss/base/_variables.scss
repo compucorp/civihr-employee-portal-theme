@@ -57,11 +57,16 @@ $crm-font-weight-light:   300;
 $crm-font-weight-regular: 400;
 $crm-font-weight-bold:    700;
 
+// Images path
+// -----------------------------------------------------------------------------
+$crm-image-path: '../images/' !default;
+
+
 // Iconography
 // -----------------------------------------------------------------------------
 $icon-font-path:      '../fonts/' !default;
 
-$crm-icon-image-path: '../images/icon/' !default;
+$crm-icon-image-path: $crm-image-path + 'icon/' !default;
 $crm-icon-asc:        'asc.gif' !default;
 $crm-icon-desc:       'desc.gif' !default;
 

@@ -119,7 +119,12 @@
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/outside-namespace/uib-datepicker-mobile';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/variants/modals-xs-screen';
 
+@import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/mixins/spinner';
 @import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/scroll-shadows';
+@import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/logo';
+@import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/modal-scroll-locker';
+@import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/profile-card';
+@import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/spinner';
 @import 'SCSSROOT/org.civicrm.bootstrapcivihr/scss/components/outside-namespace/user-menu';
 
 @import 'SCSSROOT/uk.co.compucorp.civicrm.hrleaveandabsences/scss/overrides/variables';

@@ -597,24 +597,14 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     }
 
     #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+      height: 250px;
+
       input.form-file {
         height: 140px;
         margin-bottom: 15px;
         min-width: 120px;
         width: 100%;
       }
-
-      .help-block {
-        display: none;
-      }
-    }
-
-    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
-    .form-item-civihr-onboarding-carousel-options {
-      height: 250px;
-      margin-left: 100px;
-      padding-top: 50px;
-      width: 350px;
     }
 
     .form-actions {
@@ -651,18 +641,18 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     .form-item-civihr-onboarding-welcome-text,
     .form-item-civihr-onboarding-carousel-options,
     .form-item-civihr-onboarding-intro-text {
-      margin-bottom: 100px;
+      margin-bottom: 60px;
     }
 
     .form-item-civihr-onboarding-carousel-options {
-      margin-bottom: 60px;
-
       .form-type-checkbox {
         margin-bottom: 10px !important;
         height: 20px;
       }
     }
 
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+    .form-item-civihr-onboarding-carousel-options,
     .form-item-civihr-onboarding-welcome-text,
     .form-item-civihr-onboarding-intro-text {
       margin-left: 100px;

@@ -17,7 +17,6 @@ require_once __DIR__ . '/../../includes/header.inc';
     the information text when they complete the wizard.
   </p>
 
-  <?php print $messages ?>
   <?php print drupal_render($page['content']) ?>
 </div>
 

@@ -569,206 +569,204 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 }
 
-.page-customize-onboarding-wizard {
-  #onboarding-customization-page {
-    position: relative;
+#onboarding-customization-page {
+  position: relative;
 
-    h1 {
-      margin-top: 50px;
+  h1 {
+    margin-top: 50px;
+  }
+
+  hr {
+    margin: 0 20px 0;
+  }
+
+  .region {
+    background: $light;
+  }
+
+  .drop-zone-overlay {
+    background: $light;
+    height: 140px;
+    top: 25px;
+
+    i {
+      color: inherit;
     }
+  }
 
-    hr {
-      margin: 0 20px 0;
-    }
+  #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+    height: 250px;
 
-    .region {
-      background: $light;
-    }
-
-    .drop-zone-overlay {
-      background: $light;
+    input.form-file {
       height: 140px;
-      top: 25px;
+      margin-bottom: 15px;
+      min-width: 120px;
+      width: 100%;
+    }
+  }
 
-      i {
-        color: inherit;
-      }
+  .form-actions {
+    padding: 20px 15px 20px 0;
+
+    input {
+      margin: 0 5px;
     }
 
-    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
-      height: 250px;
-
-      input.form-file {
-        height: 140px;
-        margin-bottom: 15px;
-        min-width: 120px;
-        width: 100%;
-      }
+    #edit-submit {
+      border: 0;
     }
 
-    .form-actions {
-      padding: 20px 15px 20px 0;
+    #edit-cancel {
+      background: $crm-wizard-primary-color;
+      border: 0;
+      color: $light;
 
-      input {
-        margin: 0 5px;
-      }
-
-      #edit-submit {
-        border: 0;
-      }
-
-      #edit-cancel {
+      &:focus {
         background: $crm-wizard-primary-color;
-        border: 0;
         color: $light;
-
-        &:focus {
-          background: $crm-wizard-primary-color;
-          color: $light;
-        }
       }
     }
+  }
 
-    .form-managed-file {
-      input[type='submit'],
-      .ajax-progress {
-        float: right;
-      }
+  .form-managed-file {
+    input[type='submit'],
+    .ajax-progress {
+      float: right;
+    }
+  }
+
+  .form-item-civihr-onboarding-carousel-options {
+    .form-type-checkbox {
+      margin-bottom: 10px !important;
+      height: 20px;
+    }
+  }
+
+  #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+  #edit-civihr-onboarding-updates-group,
+  .form-item-civihr-onboarding-carousel-options,
+  .form-item-civihr-onboarding-welcome-text,
+  .form-item-civihr-onboarding-intro-text {
+    margin-left: 100px;
+    padding-top: 45px;
+    width: 350px;
+
+    .help-block {
+      display: none;
     }
 
-    .form-item-civihr-onboarding-carousel-options {
-      .form-type-checkbox {
-        margin-bottom: 10px !important;
-        height: 20px;
-      }
-    }
+    .form-textarea-wrapper {
+      height: 100%;
 
-    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
-    #edit-civihr-onboarding-updates-group,
-    .form-item-civihr-onboarding-carousel-options,
-    .form-item-civihr-onboarding-welcome-text,
-    .form-item-civihr-onboarding-intro-text {
-      margin-left: 100px;
-      padding-top: 45px;
-      width: 350px;
-
-      .help-block {
-        display: none;
-      }
-
-      .form-textarea-wrapper {
+      textarea {
         height: 100%;
+        resize: none;
+      }
+    }
+  }
 
-        textarea {
-          height: 100%;
-          resize: none;
-        }
+  #edit-civihr-onboarding-updates-group,
+  .form-item-civihr-onboarding-welcome-text,
+  .form-item-civihr-onboarding-carousel-options,
+  .form-item-civihr-onboarding-intro-text {
+    margin-bottom: 50px;
+  }
+
+  .onboarding-customize-logo,
+  .onboarding-customize-features,
+  .onboarding-customize-welcome {
+    width: 440px;
+    margin-right: 90px;
+    float: right;
+    margin-top: 50px;
+  }
+
+  .form-item-civihr-onboarding-send-updates {
+    [for='edit-civihr-onboarding-send-updates'] {
+      display: inline-block;
+      height: 20px;
+      padding-left: 50px;
+      position: relative;
+    }
+
+    .chr_switch {
+      display: none;
+
+      &:checked + span {
+        background-color: $brand-primary;
+      }
+
+      &:checked + span::before {
+        transform: translateX(18px);
       }
     }
 
-    #edit-civihr-onboarding-updates-group,
-    .form-item-civihr-onboarding-welcome-text,
+    .chr_switch__toggle {
+      background-color: $light-pale;
+      border-radius: 34px;
+      bottom: 0;
+      cursor: pointer;
+      height: 20px;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      text-indent: -1000px;
+      top: 0;
+      transition: 0.4s;
+      width: 40px;
+
+      &::before {
+        background-color: $light;
+        border-radius: 50%;
+        bottom: 4px;
+        content: '';
+        height: 12px;
+        left: 4px;
+        position: absolute;
+        transition: 0.4s;
+        width: 12px;
+      }
+    }
+  }
+
+  .form-item-civihr-onboarding-email-to-send-updates {
+    &.form-disabled {
+      display: none;
+    }
+  }
+
+  @media (max-width: $screen-lg-min) {
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
     .form-item-civihr-onboarding-carousel-options,
+    .form-item-civihr-onboarding-welcome-text,
     .form-item-civihr-onboarding-intro-text {
-      margin-bottom: 50px;
+      margin: 20px;
+      padding-top: 0;
+      width: auto;
     }
 
     .onboarding-customize-logo,
     .onboarding-customize-features,
     .onboarding-customize-welcome {
-      width: 440px;
-      margin-right: 90px;
-      float: right;
-      margin-top: 50px;
+      float: none;
+      margin: 20px;
+      width: calc( 100% - 40px);
     }
 
-    .form-item-civihr-onboarding-send-updates {
-      [for='edit-civihr-onboarding-send-updates'] {
-        display: inline-block;
-        height: 20px;
-        padding-left: 50px;
-        position: relative;
-      }
-
-      .chr_switch {
-        display: none;
-
-        &:checked + span {
-          background-color: $brand-primary;
-        }
-
-        &:checked + span::before {
-          transform: translateX(18px);
-        }
-      }
-
-      .chr_switch__toggle {
-        background-color: $light-pale;
-        border-radius: 34px;
-        bottom: 0;
-        cursor: pointer;
-        height: 20px;
-        left: 0;
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-        text-indent: -1000px;
-        top: 0;
-        transition: 0.4s;
-        width: 40px;
-
-        &::before {
-          background-color: $light;
-          border-radius: 50%;
-          bottom: 4px;
-          content: '';
-          height: 12px;
-          left: 4px;
-          position: absolute;
-          transition: 0.4s;
-          width: 12px;
-        }
-      }
+    .form-item-civihr-onboarding-welcome-text,
+    .form-item-civihr-onboarding-intro-text {
+      margin-bottom: 60px;
     }
 
-    .form-item-civihr-onboarding-email-to-send-updates {
-      &.form-disabled {
-        display: none;
-      }
-    }
+    .form-item-civihr-onboarding-carousel-options {
+      height: auto;
+      margin-bottom: 0;
 
-    @media (max-width: $screen-lg-min) {
-      #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
-      .form-item-civihr-onboarding-carousel-options,
-      .form-item-civihr-onboarding-welcome-text,
-      .form-item-civihr-onboarding-intro-text {
-        margin: 20px;
-        padding-top: 0;
-        width: auto;
-      }
-
-      .onboarding-customize-logo,
-      .onboarding-customize-features,
-      .onboarding-customize-welcome {
-        float: none;
-        margin: 20px;
-        width: calc( 100% - 40px);
-      }
-
-      .form-item-civihr-onboarding-welcome-text,
-      .form-item-civihr-onboarding-intro-text {
-        margin-bottom: 60px;
-      }
-
-      .form-item-civihr-onboarding-carousel-options {
+      .form-type-checkbox {
+        border: 1px solid #ececed;
         height: auto;
-        margin-bottom: 0;
-
-        .form-type-checkbox {
-          border: 1px solid #ececed;
-          height: auto;
-          padding: 10px;
-        }
+        padding: 10px;
       }
     }
   }

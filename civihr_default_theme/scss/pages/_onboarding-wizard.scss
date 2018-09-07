@@ -612,21 +612,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
     input {
       margin-left: 10px;
     }
-
-    #edit-submit {
-      border: 0;
-    }
-
-    #edit-cancel {
-      background: $crm-wizard-primary-color;
-      border: 0;
-      color: $light;
-
-      &:focus {
-        background: $crm-wizard-primary-color;
-        color: $light;
-      }
-    }
   }
 
   .form-managed-file {

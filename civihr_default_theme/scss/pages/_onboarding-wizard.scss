@@ -606,10 +606,11 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
   }
 
   .form-actions {
-    padding: 20px 15px 20px 0;
+    padding: 20px;
+    margin: 0;
 
     input {
-      margin: 0 5px;
+      margin-left: 10px;
     }
 
     #edit-submit {

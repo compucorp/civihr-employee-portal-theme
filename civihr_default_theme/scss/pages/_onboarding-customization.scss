@@ -1,4 +1,16 @@
-#onboarding-customization-page {
+.mobile {
+  &.page-customize-onboarding-wizard {
+    .form-file {
+      height: 40px !important;
+    }
+
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+      height: auto !important;
+    }
+  }
+}
+
+.page-customize-onboarding-wizard {
   position: relative;
 
   h1 {
@@ -6,7 +18,7 @@
   }
 
   hr {
-    margin: 0 20px 0;
+    margin: 0 20px;
   }
 
   .region {
@@ -23,57 +35,56 @@
     }
   }
 
+  .form-file {
+    height: 140px;
+    margin-bottom: 15px;
+    min-width: 120px;
+    width: 100%;
+  }
+
   #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
     height: 250px;
-
-    input.form-file {
-      height: 140px;
-      margin-bottom: 15px;
-      min-width: 120px;
-      width: 100%;
-    }
-
-    .mobile & {
-      height: auto !important;
-
-      input.form-file {
-        height: 40px !important;
-      }
-    }
   }
 
   .form-actions {
-    padding: 20px;
     margin: 0;
+    padding: 20px;
+  }
 
-    .btn {
-      margin-left: 10px;
-    }
+  .form-submit {
+    margin-left: 10px;
 
     @media (max-width: $screen-sm-min) {
-      .btn {
-        float: none;
-        margin-left: 0;
-        width: 100%;
+      float: none;
+      margin-left: 0;
+      width: 100%;
 
-        &:not(:last-child) {
-          margin-bottom: 10px;
-        }
+      &:not(:last-child) {
+        margin-bottom: 10px;
       }
     }
   }
 
   .form-managed-file {
-    input[type='submit'],
+    [type='submit'],
     .ajax-progress {
       float: right;
     }
   }
 
+  .form-textarea-wrapper {
+    height: 100%;
+
+    textarea {
+      height: 100%;
+      resize: none;
+    }
+  }
+
   .form-item-civihr-onboarding-carousel-options {
     .form-type-checkbox {
-      margin-bottom: 10px !important;
       height: 20px;
+      margin-bottom: 10px !important;
     }
   }
 
@@ -89,15 +100,6 @@
     .help-block {
       display: none;
     }
-
-    .form-textarea-wrapper {
-      height: 100%;
-
-      textarea {
-        height: 100%;
-        resize: none;
-      }
-    }
   }
 
   #edit-civihr-onboarding-updates-group,
@@ -110,64 +112,61 @@
   .onboarding-customize-logo,
   .onboarding-customize-features,
   .onboarding-customize-welcome {
-    width: 440px;
-    margin-right: 90px;
     float: right;
+    margin-right: 90px;
     margin-top: 50px;
+    width: 440px;
   }
 
   .form-item-civihr-onboarding-send-updates {
     [for='edit-civihr-onboarding-send-updates'] {
-      display: inline-block;
-      height: 20px;
       padding-left: 50px;
-      position: relative;
-    }
-
-    .chr_switch {
-      display: none;
-
-      &:checked + span {
-        background-color: $brand-primary;
-      }
-
-      &:checked + span::before {
-        transform: translateX(18px);
-      }
-    }
-
-    .chr_switch__toggle {
-      background-color: $light-pale;
-      border-radius: 34px;
-      bottom: 0;
-      cursor: pointer;
-      height: 20px;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-      text-indent: -1000px;
-      top: 0;
-      transition: 0.4s;
-      width: 40px;
-
-      &::before {
-        background-color: $light;
-        border-radius: 50%;
-        bottom: 4px;
-        content: '';
-        height: 12px;
-        left: 4px;
-        position: absolute;
-        transition: 0.4s;
-        width: 12px;
-      }
     }
   }
 
   .form-item-civihr-onboarding-email-to-send-updates {
     &.form-disabled {
       display: none;
+    }
+  }
+
+  .chr_switch {
+    display: none;
+
+    &:checked + span {
+      background-color: $brand-primary;
+    }
+
+    &:checked + span::before {
+      transform: translateX(18px);
+    }
+  }
+
+  .chr_switch__toggle {
+    background-color: $light-pale;
+    border-radius: 34px;
+    bottom: 0;
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: -1000px;
+    top: 0;
+    transition: 0.4s;
+    width: 40px;
+
+    &::before {
+      background-color: $light;
+      border-radius: 50%;
+      bottom: 4px;
+      content: '';
+      height: 12px;
+      left: 4px;
+      position: absolute;
+      transition: 0.4s;
+      width: 12px;
     }
   }
 
@@ -187,7 +186,7 @@
     .onboarding-customize-welcome {
       float: none;
       margin: 20px;
-      width: calc( 100% - 40px);
+      width: calc(100% - 40px);
     }
 
     .form-item-civihr-onboarding-welcome-text,

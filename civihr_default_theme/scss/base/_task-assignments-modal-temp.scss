@@ -15,8 +15,7 @@ fieldset {
 }
 
 // Opened Modal
-[data-ssp-upload-document],
-[data-ta-documents-manager] {
+[data-ssp-upload-document] {
   .modal {
     overflow-y: scroll !important;
 

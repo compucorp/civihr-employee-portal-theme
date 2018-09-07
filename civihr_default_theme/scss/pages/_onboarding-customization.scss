@@ -1,0 +1,209 @@
+#onboarding-customization-page {
+  position: relative;
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  hr {
+    margin: 0 20px 0;
+  }
+
+  .region {
+    background: $light;
+  }
+
+  .drop-zone-overlay {
+    background: $light;
+    height: 140px;
+    top: 25px;
+
+    i {
+      color: inherit;
+    }
+  }
+
+  #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper {
+    height: 250px;
+
+    input.form-file {
+      height: 140px;
+      margin-bottom: 15px;
+      min-width: 120px;
+      width: 100%;
+    }
+
+    .mobile & {
+      height: auto !important;
+
+      input.form-file {
+        height: 40px !important;
+      }
+    }
+  }
+
+  .form-actions {
+    padding: 20px;
+    margin: 0;
+
+    .btn {
+      margin-left: 10px;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      .btn {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .form-managed-file {
+    input[type='submit'],
+    .ajax-progress {
+      float: right;
+    }
+  }
+
+  .form-item-civihr-onboarding-carousel-options {
+    .form-type-checkbox {
+      margin-bottom: 10px !important;
+      height: 20px;
+    }
+  }
+
+  #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+  #edit-civihr-onboarding-updates-group,
+  .form-item-civihr-onboarding-carousel-options,
+  .form-item-civihr-onboarding-welcome-text,
+  .form-item-civihr-onboarding-intro-text {
+    margin-left: 100px;
+    padding-top: 45px;
+    width: 350px;
+
+    .help-block {
+      display: none;
+    }
+
+    .form-textarea-wrapper {
+      height: 100%;
+
+      textarea {
+        height: 100%;
+        resize: none;
+      }
+    }
+  }
+
+  #edit-civihr-onboarding-updates-group,
+  .form-item-civihr-onboarding-welcome-text,
+  .form-item-civihr-onboarding-carousel-options,
+  .form-item-civihr-onboarding-intro-text {
+    margin-bottom: 50px;
+  }
+
+  .onboarding-customize-logo,
+  .onboarding-customize-features,
+  .onboarding-customize-welcome {
+    width: 440px;
+    margin-right: 90px;
+    float: right;
+    margin-top: 50px;
+  }
+
+  .form-item-civihr-onboarding-send-updates {
+    [for='edit-civihr-onboarding-send-updates'] {
+      display: inline-block;
+      height: 20px;
+      padding-left: 50px;
+      position: relative;
+    }
+
+    .chr_switch {
+      display: none;
+
+      &:checked + span {
+        background-color: $brand-primary;
+      }
+
+      &:checked + span::before {
+        transform: translateX(18px);
+      }
+    }
+
+    .chr_switch__toggle {
+      background-color: $light-pale;
+      border-radius: 34px;
+      bottom: 0;
+      cursor: pointer;
+      height: 20px;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      text-indent: -1000px;
+      top: 0;
+      transition: 0.4s;
+      width: 40px;
+
+      &::before {
+        background-color: $light;
+        border-radius: 50%;
+        bottom: 4px;
+        content: '';
+        height: 12px;
+        left: 4px;
+        position: absolute;
+        transition: 0.4s;
+        width: 12px;
+      }
+    }
+  }
+
+  .form-item-civihr-onboarding-email-to-send-updates {
+    &.form-disabled {
+      display: none;
+    }
+  }
+
+  @media (max-width: $screen-lg-min) {
+    #edit-civihr-onboarding-updates-group,
+    #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
+    .form-item-civihr-onboarding-carousel-options,
+    .form-item-civihr-onboarding-welcome-text,
+    .form-item-civihr-onboarding-intro-text {
+      margin: 20px;
+      padding-top: 0;
+      width: auto;
+    }
+
+    .onboarding-customize-logo,
+    .onboarding-customize-features,
+    .onboarding-customize-welcome {
+      float: none;
+      margin: 20px;
+      width: calc( 100% - 40px);
+    }
+
+    .form-item-civihr-onboarding-welcome-text,
+    .form-item-civihr-onboarding-intro-text {
+      margin-bottom: 60px;
+    }
+
+    .form-item-civihr-onboarding-carousel-options {
+      height: auto;
+      margin-bottom: 0;
+
+      .form-type-checkbox {
+        border: 1px solid #ececed;
+        height: auto;
+        padding: 10px;
+      }
+    }
+  }
+}

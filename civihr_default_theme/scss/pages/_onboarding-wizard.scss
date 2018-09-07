@@ -682,6 +682,61 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
       margin-top: 50px;
     }
 
+    .form-item-civihr-onboarding-send-updates {
+      [for='edit-civihr-onboarding-send-updates'] {
+        display: inline-block;
+        height: 20px;
+        padding-left: 50px;
+        position: relative;
+      }
+
+      .chr_switch {
+        display: none;
+
+        &:checked + span {
+          background-color: $brand-primary;
+        }
+
+        &:checked + span::before {
+          transform: translateX(18px);
+        }
+      }
+
+      .chr_switch__toggle {
+        background-color: $light-pale;
+        border-radius: 34px;
+        bottom: 0;
+        cursor: pointer;
+        height: 20px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        text-indent: -1000px;
+        top: 0;
+        transition: 0.4s;
+        width: 40px;
+
+        &::before {
+          background-color: $light;
+          border-radius: 50%;
+          bottom: 4px;
+          content: '';
+          height: 12px;
+          left: 4px;
+          position: absolute;
+          transition: 0.4s;
+          width: 12px;
+        }
+      }
+    }
+
+    .form-item-civihr-onboarding-email-to-send-updates {
+      &.form-disabled {
+        display: none;
+      }
+    }
+
     @media (max-width: $screen-lg-min) {
       #edit-civihr-onboarding-organization-logo-fid-ajax-wrapper,
       .form-item-civihr-onboarding-carousel-options,
@@ -715,85 +770,6 @@ $carousel-box-shadow-color: rgba(#3f3c55,0.3);
           padding: 10px;
         }
       }
-    }
-  }
-}
-
-.civihr_onboarding_form--container {
-
-  .form-item-civihr-onboarding-email-to-send-updates {
-    height: 90px;
-    margin-bottom: 0;
-    margin-top: 20px;
-    transition: 0.25s;
-
-    .form-text {
-      width: auto;
-    }
-  }
-
-  .form-item-civihr-onboarding-send-updates,
-  .form-item-civihr-onboarding-email-to-send-updates {
-    clear: both;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 960px;
-  }
-}
-
-.civihr_onboarding_form--fieldset--no-updates .form-item-civihr-onboarding-email-to-send-updates,
-.form-item-civihr-onboarding-email-to-send-updates.form-disabled {
-  height: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  opacity: 0;
-}
-
-.form-item-civihr-onboarding-send-updates {
-  [for='edit-civihr-onboarding-send-updates'] {
-    display: inline-block;
-    height: 20px;
-    padding-left: 50px;
-    position: relative;
-  }
-
-  .form-checkbox {
-    display: none;
-
-    &:checked + span {
-      background-color: $brand-primary;
-    }
-
-    &:checked + span::before {
-      transform: translateX(18px);
-    }
-  }
-
-  .civihr_onboarding_form--toggle {
-    background-color: $light-pale;
-    border-radius: 34px;
-    bottom: 0;
-    cursor: pointer;
-    height: 20px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    text-indent: -1000px;
-    top: 0;
-    transition: 0.4s;
-    width: 40px;
-
-    &::before {
-      background-color: $light;
-      border-radius: 50%;
-      bottom: 4px;
-      content: '';
-      height: 12px;
-      left: 4px;
-      position: absolute;
-      transition: 0.4s;
-      width: 12px;
     }
   }
 }

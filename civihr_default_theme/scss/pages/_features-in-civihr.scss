@@ -10,12 +10,12 @@ $carousel-box-shadow-color: rgba(#3f3c55, 0.3);
   }
 
   .page-header {
-    font-weight: 700;
+    font-weight: $crm-font-weight-bold;
     margin-top: 80px;
     text-align: center;
 
     .title {
-      font-weight: 500;
+      font-weight: $crm-font-weight-semibold;
     }
   }
 

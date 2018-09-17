@@ -38,8 +38,9 @@
    * @param {String} id
    */
   Drupal.civihr_theme.deleteEmergencyContactAndRefresh = function (id) {
-    CRM.api3('contact', 'deleteemergencycontact', { 'id': id });
-    location.reload();
+    $.get('emergency_contacts/' + parseInt(id) + '/delete', null, function() {
+      location.reload();
+    });
   };
 
   /**

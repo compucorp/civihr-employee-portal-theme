@@ -14,9 +14,8 @@ fieldset {
   min-width: 0;
 }
 
-// Opened Modal
-[data-ta-documents],
-[data-ta-documents-manager] {
+// Namespaced style for ssp-document-upload AngularJS app
+[data-ssp-upload-document] {
   .modal {
     overflow-y: scroll !important;
 
